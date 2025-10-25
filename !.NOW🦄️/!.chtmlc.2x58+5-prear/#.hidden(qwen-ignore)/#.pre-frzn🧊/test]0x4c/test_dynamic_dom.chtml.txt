@@ -1,0 +1,52 @@
+<window width="800" height="600" color="#222222">
+    <header y="0" width="800" height="50" color="#333333">
+        <text x="10" y="10" value="Dynamic DOM Test Page" color="#FFFFFF"/>
+    </header>
+    
+    <panel x="10" y="60" width="780" height="530" color="#444444">
+        <text x="20" y="20" value="Testing Dynamic DOM Capabilities" color="#FFFFFF" />
+        <text x="20" y="40" value="This page tests the new dynamic event system" color="#FFFFFF" />
+        
+        <!-- Testing different button configurations with new handler names -->
+        <button x="20" y="70" width="120" height="30" id="btn_test1" label="New Handler 1" onClick="new_click_handler_1" />
+        <button x="150" y="70" width="120" height="30" id="btn_test2" label="New Handler 2" onClick="custom_increment_handler_2" />
+        <button x="280" y="70" width="120" height="30" id="btn_test3" label="New Handler 3" onClick="custom_reset_handler_3" />
+        
+        <!-- Testing with different elements -->
+        <text x="20" y="120" value="Element Query Testing:" color="#FFFF00" />
+        <text id="query_result1" x="20" y="140" value="Query Result 1" color="#00FF00" />
+        <text id="query_result2" x="20" y="160" value="Query Result 2" color="#00FF00" />
+        
+        <!-- Testing different input types -->
+        <textfield x="20" y="190" width="200" height="25" id="input_test1" value="Test input field" />
+        <textarea x="20" y="220" width="200" height="50" id="textarea_test1" value="Test&#10;textarea" />
+        
+        <!-- Testing links with different configurations -->
+        <link x="20" y="280" width="200" height="30" id="link_test1" href="other_page.chtml.txt" label="Test Link 1" />
+        <link x="20" y="320" width="200" height="30" id="link_test2" href="test_href_simple.chtml.txt" label="Test Link 2" onClick="custom_link_handler_4" />
+        
+        <!-- Testing canvas with dynamic handler -->
+        <canvas x="400" y="120" width="350" height="200" id="canvas_test1" label="Test Canvas" onClick="custom_canvas_handler_5" view_mode="2d" />
+        
+        <!-- Testing checkboxes and sliders -->
+        <checkbox x="400" y="330" width="15" height="15" id="checkbox_test1" label="Test Checkbox" />
+        <slider x="400" y="360" width="200" height="15" id="slider_test1" min="0" max="100" value="50" step="1" onClick="custom_slider_handler_6" />
+        <slider x="400" y="390" width="15" height="100" id="slider_test2" min="0" max="100" value="30" step="5" onClick="custom_slider_handler_7" />
+        
+        <!-- Testing different menu configurations -->
+        <menu x="20" y="360" width="300" height="30" id="menu_test1" label="Test Menu" color="#666666" onClick="custom_menu_handler_8">
+            <menuitem x="0" y="0" width="80" height="25" label="Item 1" onClick="custom_menuitem_handler_9" />
+            <menuitem x="0" y="0" width="80" height="25" label="Item 2" onClick="custom_menuitem_handler_10" />
+            <menuitem x="0" y="0" width="80" height="25" label="Item 3" onClick="custom_menuitem_handler_11" />
+        </menu>
+        
+        <!-- Testing with dirlist -->
+        <dirlist x="20" y="400" width="300" height="150" id="dirlist_test1" label="Test Dir List" path="." />
+        
+        <!-- Testing various text elements -->
+        <text x="400" y="480" value="Dynamic System Test:" color="#FFFFFF" />
+        <text x="400" y="500" value="No hardcoded handlers needed" color="#00FFFF" />
+        <text x="400" y="520" value="Handlers resolved dynamically" color="#00FFFF" />
+        <text x="400" y="540" value="Custom handler names work" color="#00FFFF" />
+    </panel>
+</window>

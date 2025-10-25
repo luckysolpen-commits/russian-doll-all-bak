@@ -1,0 +1,47 @@
+<window width="800" height="600" color="#222222">
+    <header y="0" width="800" height="50" color="#333333">
+        <text x="10" y="10" value="Dynamic Events Test" color="#FFFFFF"/>
+    </header>
+    
+    <panel x="10" y="60" width="780" height="530" color="#444444">
+        <text x="20" y="20" value="Dynamic Events System Test" color="#FFFFFF" />
+        <text x="20" y="40" value="Testing fully dynamic event handling" color="#FFFFFF" />
+        
+        <!-- Module section using new dynamic module -->
+        <text x="20" y="70" value="Dynamic Events Module:" color="#FFFF00" />
+        <module>module/dynamic_events</module>
+        <text x="20" y="100" value="Counter:" color="#FFFFFF" />
+        <text id="page_counter" x="80" y="100" value="0" color="#00FF00" />
+        <text id="page_status" x="20" y="130" value="Module ready" color="#FFFFFF" />
+        
+        <!-- Buttons with custom handler names -->
+        <button x="20" y="160" width="120" height="30" id="btn_inc1" label="Inc Handler 1" onClick="custom_increment_handler_1" />
+        <button x="150" y="160" width="120" height="30" id="btn_inc2" label="Inc Handler 2" onClick="my_increment_event_2" />
+        <button x="280" y="160" width="120" height="30" id="btn_inc3" label="Inc Handler 3" onClick="increment_action_3" />
+        
+        <button x="20" y="200" width="120" height="30" id="btn_reset1" label="Reset 1" onClick="custom_reset_handler_4" />
+        <button x="150" y="200" width="120" height="30" id="btn_reset2" label="Reset 2" onClick="my_reset_event_5" />
+        <button x="280" y="200" width="120" height="30" id="btn_reset3" label="Reset 3" onClick="reset_action_6" />
+        
+        <button x="20" y="240" width="120" height="30" id="btn_click1" label="Click 1" onClick="custom_click_handler_7" />
+        <button x="150" y="240" width="120" height="30" id="btn_click2" label="Click 2" onClick="my_click_event_8" />
+        <button x="280" y="240" width="120" height="30" id="btn_click3" label="Click 3" onClick="click_action_9" />
+        
+        <text x="20" y="280" value="Features:" color="#FFFF00" />
+        <text x="40" y="300" value="- Dynamic handler names work" color="#FFFFFF" />
+        <text x="40" y="320" value="- No hardcoded handler logic" color="#FFFFFF" />
+        <text x="40" y="340" value="- Module handles all events" color="#FFFFFF" />
+        <text x="40" y="360" value="- New handler names accepted" color="#FFFFFF" />
+        <text x="40" y="380" value="- Event data passed to module" color="#FFFFFF" />
+        
+        <!-- Testing different element types with custom handlers -->
+        <canvas x="420" y="100" width="340" height="200" id="canvas_test" label="Dynamic Canvas" onClick="custom_canvas_handler_10" view_mode="2d" />
+        
+        <link x="420" y="320" width="200" height="30" id="link_test" href="test_href_simple.chtml.txt" label="Test Link" onClick="custom_link_handler_11" />
+        
+        <slider x="420" y="370" width="200" height="15" id="slider_test" min="0" max="100" value="50" step="1" onClick="custom_slider_handler_12" />
+        
+        <text x="420" y="420" value="Current Status:" color="#FFFFFF" />
+        <text id="status_display" x="420" y="440" value="Waiting for events..." color="#FF00FF" />
+    </panel>
+</window>

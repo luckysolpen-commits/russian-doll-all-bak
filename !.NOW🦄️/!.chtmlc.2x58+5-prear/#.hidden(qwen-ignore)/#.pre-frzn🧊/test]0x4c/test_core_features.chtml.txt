@@ -1,0 +1,32 @@
+<window width="800" height="600" color="#222222">
+    <header y="0" width="800" height="50" color="#333333">
+        <text x="10" y="10" value="Comprehensive Test Page" color="#FFFFFF"/>
+    </header>
+    
+    <panel x="10" y="60" width="780" height="530" color="#444444">
+        <text x="20" y="20" value="Testing Core Features:" color="#FFFFFF" />
+        
+        <!-- 2D/3D View Controls -->
+        <button x="20" y="50" width="100" height="30" label="2D View" onClick="switch_to_2d_handler" />
+        <button x="130" y="50" width="100" height="30" label="3D View" onClick="switch_to_3d_handler" />
+        
+        <!-- Navigation Link -->
+        <link x="20" y="90" width="200" height="30" href="other_page.chtml.txt" label="Switch to Other Page" />
+        
+        <text x="20" y="130" value="Arrow Keys Test (Game Module):" color="#FFFF00" />
+        
+        <!-- Game module with canvas for arrow key controls -->
+        <module>module/enhanced_game_ipc</module>
+        <canvas x="20" y="160" width="500" height="300" id="game_canvas" label="Game Canvas" view_mode="2d" />
+        
+        <text x="20" y="480" value="Use arrow keys to move blue square" color="#FFFFFF" />
+        <text x="20" y="500" value="2D/3D buttons should still work" color="#FFFFFF" />
+        <text x="20" y="520" value="Link should navigate to other page" color="#FFFFFF" />
+        
+        <!-- Status display from module -->
+        <text x="540" y="160" id="position_text" value="Player position: (0, 0)" color="#00FFFF" />
+        <text x="540" y="180" id="score" value="Score: 0" color="#00FF00" />
+        <text x="540" y="200" id="health" value="Health: 100" color="#FF0000" />
+        <text x="540" y="220" id="status" value="Status: Ready" color="#FFFF00" />
+    </panel>
+</window>

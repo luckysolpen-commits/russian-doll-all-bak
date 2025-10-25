@@ -1,0 +1,40 @@
+👿️
+this code is in controller. instead of doing w/e html actually does. fuck.
+(do u know why it is , cuz we didn't impliment generic "classes" i think; no
+cuz they do have names, but the names were supposed to be parsed as a module match 
+(like javascript) not in controller, thats INSANE,
+
+/home/no/Desktop/qwen/oct13/1.8.pipe]b2/chtmlc]23d©️™️]0x4C/4.controller.c
+───────────────────────────────────────────────────────────────╯
+void handle_element_event(const char* event_handler) {
+    if (strcmp(event_handler, "button_click_handler") == 0) {
+        printf("Button click handler executed!\n");
+        // Add specific button click logic here
+    } else if (strcmp(event_handler, "canvas_click_handler") == 0) {
+        printf("Canvas click handler executed!\n");
+        // Add specific canvas click logic here
+    } else if (strcmp(event_handler, "menu_click_handler") == 0) {
+        printf("Menu click handler executed!\n");
+        // Add specific menu click logic here
+    } else if (strcmp(event_handler, "switch_to_2d_handler") == 0) {
+        switch_to_2d_view();
+    } else if (strcmp(event_handler, "switch_to_3d_handler") == 0) {
+        switch_to_3d_view();
+    } else if (strcmp(event_handler, "button_increment_handler") == 0) {
+        printf("Increment button clicked!\n");
+        // Send INCREMENT command to the module
+        model_send_input("INCREMENT");
+    } else if (strcmp(event_handler, "button_reset_handler") == 0) {
+        printf("Reset button clicked!\n");
+        // Send RESET command to the module
+        model_send_input("RESET");
+    } else {
+        printf("Unknown event handler: %s\n", event_handler);
+    }
+}
+
+
+
+───────────────────────────────────────────────────────────────╯
+(also 1.event/ isn't using modules correctly . fuck) 
+👿️
