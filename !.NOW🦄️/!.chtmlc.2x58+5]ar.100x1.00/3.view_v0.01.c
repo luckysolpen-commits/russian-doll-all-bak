@@ -3,12 +3,18 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <errno.h>
+#include <sys/mman.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <linux/videodev2.h>
+#include <math.h>
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include <dirent.h>
 #include <sys/stat.h>
-#include <math.h>
-#include <sys/select.h>
 
 #define MAX_ELEMENTS 50
 #define MAX_MODULES 10
@@ -83,9 +89,6 @@ typedef struct {
     char href[512]; // Store href attribute for links
     // Z-level for rendering order (0-99, default 0)
     int z_level;   // Z-level for depth ordering
-    
-    // AR camera support (0=disabled, 1=webcam, 2=USB cam)
-    int ar_mode;
 } UIElement;
 
 // Comparison function for qsort to sort elements by z_level
@@ -97,6 +100,7 @@ int compare_elements_by_z_level(const void* a, const void* b) {
 
 // Forward declaration for canvas render function
 void canvas_render_sample(int x, int y, int width, int height);
+void canvas_render_camera(int x, int y, int width, int height);
 
 // Definition for the renderable shape object provided by the model
 typedef struct {
@@ -113,6 +117,10 @@ typedef struct {
 // Forward declaration for the function to get shapes from the model
 Shape* model_get_shapes(int* count);
 char (*model_get_dir_entries(int* count))[256];
+
+// Forward declaration for camera update function that can be called from main
+int update_camera_frame(void);
+void cleanup_camera(void);
 
 // Structure to store module paths from CHTML file
 typedef struct {
@@ -179,6 +187,17 @@ int is_page_loaded(const char* filename) {
 int window_width = 800;
 int window_height = 600;
 
+// Camera-related variables
+static int cam_fd = -1;
+static void *cam_buffer_start = NULL;
+static unsigned int cam_buffer_length;
+static unsigned char *cam_rgb_data = NULL; // RGBA data for camera
+static unsigned int cam_current_pixelformat = V4L2_PIX_FMT_YUYV;
+static int cam_width = 640;
+static int cam_height = 480;
+static int cam_rgb_size; // Size of RGBA buffer (width * height * 4)
+static int camera_initialized = 0;
+
 
 
 // Emoji texture cache system
@@ -209,417 +228,6 @@ int convert_y_to_opengl(int y) {
 // Calculate absolute Y position with coordinate transformation (used in draw_element)
 int calculate_absolute_y(int parent_y, int element_y, int element_height) {
     return window_height - (parent_y + element_y + element_height);
-}
-
-// Camera-related variables and functions for AR support
-static int camera_enabled = 0;
-static char *dev_names[] = {"/dev/video0", "/dev/video4"}; // Webcam and USB cam
-static int current_dev_index = 0;
-static int fd = -1;
-static void *buffer_start = NULL;
-static unsigned int buffer_length = 0;
-static unsigned char *rgb_data = NULL;
-static int cam_width = 640;
-static int cam_height = 480;
-static int RGB_SIZE; // RGBA
-static struct termios old_termios;
-static unsigned int current_pixelformat = V4L2_PIX_FMT_YUYV;
-
-// Function prototypes for camera operations
-int init_camera_for_element(UIElement* el);
-static void cleanup_camera(void);
-static int read_frame(void);
-static void draw_camera_background_for_element(UIElement* el);
-static void init_mmap(void);
-static void init_device(int device_index);
-static void start_capturing(void);
-static void yuyv_to_rgb(unsigned char *yuyv, unsigned char *rgb, int size);
-static void yuv420_to_rgb(unsigned char *yuv, unsigned char *rgb, int width, int height);
-static void mjpg_to_rgb(unsigned char *mjpg, int size, unsigned char *rgb);
-static int try_format(int width, int height, unsigned int pixelformat);
-static int xioctl(int fh, int request, void *arg);
-static void errno_exit(const char *s);
-static void signal_handler(int sig);
-static const char *pixelformat_to_string(unsigned int format);
-
-// Helper function to convert pixel format to string
-static const char *pixelformat_to_string(unsigned int format) {
-    static char str[5];
-    str[0] = format & 0xFF;
-    str[1] = (format >> 8) & 0xFF;
-    str[2] = (format >> 16) & 0xFF;
-    str[3] = (format >> 24) & 0xFF;
-    str[4] = '\0';
-    return str;
-}
-
-static int xioctl(int fh, int request, void *arg) {
-    int r;
-    do {
-        r = ioctl(fh, request, arg);
-    } while (-1 == r && EINTR == errno);
-    return r;
-}
-
-static void errno_exit(const char *s) {
-    fprintf(stderr, "%s error %d, %s\n", s, errno, strerror(errno));
-    cleanup_camera();
-    exit(EXIT_FAILURE);
-}
-
-static void cleanup_camera(void) {
-    static int cleaned = 0;
-    if (cleaned) return; // Prevent multiple cleanups
-    cleaned = 1;
-
-    if (fd != -1) {
-        enum v4l2_buf_type type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-        xioctl(fd, VIDIOC_STREAMOFF, &type);
-        if (buffer_start) {
-            munmap(buffer_start, buffer_length);
-            buffer_start = NULL;
-        }
-        close(fd);
-        fd = -1;
-    }
-    if (rgb_data) {
-        free(rgb_data);
-        rgb_data = NULL;
-    }
-    // Restore terminal settings if they were changed
-}
-
-static void signal_handler(int sig) {
-    cleanup_camera();
-    exit(0);
-}
-
-static void yuyv_to_rgb(unsigned char *yuyv, unsigned char *rgb, int size) {
-    int i, j;
-    int max_pixels = (RGB_SIZE / 4); // RGBA (4 bytes per pixel)
-    for (i = 0, j = 0; i < size - 3 && j < RGB_SIZE - 7; i += 4, j += 8) {
-        int y0 = yuyv[i + 0];
-        int u  = yuyv[i + 1] - 128;
-        int y1 = yuyv[i + 2];
-        int v  = yuyv[i + 3] - 128;
-
-        // First pixel
-        int r = (298 * y0 + 409 * v + 128) >> 8;
-        int g = (298 * y0 - 100 * u - 208 * v + 128) >> 8;
-        int b = (298 * y0 + 516 * u + 128) >> 8;
-        rgb[j + 0] = (r < 0) ? 0 : (r > 255) ? 255 : r;
-        rgb[j + 1] = (g < 0) ? 0 : (g > 255) ? 255 : g;
-        rgb[j + 2] = (b < 0) ? 0 : (b > 255) ? 255 : b;
-        rgb[j + 3] = 255; // Alpha = 255 (opaque)
-
-        // Second pixel
-        r = (298 * y1 + 409 * v + 128) >> 8;
-        g = (298 * y1 - 100 * u - 208 * v + 128) >> 8;
-        b = (298 * y1 + 516 * u + 128) >> 8;
-        rgb[j + 4] = (r < 0) ? 0 : (r > 255) ? 255 : r;
-        rgb[j + 5] = (g < 0) ? 0 : (g > 255) ? 255 : g;
-        rgb[j + 6] = (b < 0) ? 0 : (b > 255) ? 255 : b;
-        rgb[j + 7] = 255; // Alpha = 255 (opaque)
-    }
-}
-
-static void yuv420_to_rgb(unsigned char *yuv, unsigned char *rgb, int width, int height) {
-    int y_size = width * height;
-    int uv_size = y_size / 4;
-    unsigned char *y = yuv;
-    unsigned char *u = yuv + y_size;
-    unsigned char *v = u + uv_size;
-
-    for (int j = 0; j < height; j++) {
-        for (int i = 0; i < width; i++) {
-            int y_idx = j * width + i;
-            int uv_idx = (j / 2) * (width / 2) + (i / 2);
-            int y_val = y[y_idx];
-            int u_val = u[uv_idx] - 128;
-            int v_val = v[uv_idx] - 128;
-
-            int r = (298 * y_val + 409 * v_val + 128) >> 8;
-            int g = (298 * y_val - 100 * u_val - 208 * v_val + 128) >> 8;
-            int b = (298 * y_val + 516 * u_val + 128) >> 8;
-
-            r = r < 0 ? 0 : (r > 255 ? 255 : r);
-            g = g < 0 ? 0 : (g > 255 ? 255 : g);
-            b = b < 0 ? 0 : (b > 255 ? 255 : b);
-
-            int rgb_idx = (j * width + i) * 4; // RGBA
-            rgb[rgb_idx + 0] = r;
-            rgb[rgb_idx + 1] = g;
-            rgb[rgb_idx + 2] = b;
-            rgb[rgb_idx + 3] = 255; // Alpha = 255 (opaque)
-        }
-    }
-}
-
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
-
-static void mjpg_to_rgb(unsigned char *mjpg, int size, unsigned char *rgb) {
-    int width, height, comp;
-    unsigned char *data = stbi_load_from_memory(mjpg, size, &width, &height, &comp, 3);
-    if (!data || width != cam_width || height != cam_height || comp != 3) {
-        fprintf(stderr, "MJPG decode failed or mismatch: %dx%d, %d components\n", width, height, comp);
-        if (data) stbi_image_free(data);
-        return;
-    }
-    // Convert RGB to RGBA
-    for (int i = 0, j = 0; i < width * height * 3; i += 3, j += 4) {
-        rgb[j + 0] = data[i + 0];
-        rgb[j + 1] = data[i + 1];
-        rgb[j + 2] = data[i + 2];
-        rgb[j + 3] = 255; // Alpha = 255 (opaque)
-    }
-    stbi_image_free(data);
-}
-
-static void init_mmap(void) {
-    struct v4l2_requestbuffers req;
-    memset(&req, 0, sizeof(req));
-    req.count = 1;
-    req.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    req.memory = V4L2_MEMORY_MMAP;
-
-    if (-1 == xioctl(fd, VIDIOC_REQBUFS, &req)) {
-        errno_exit("VIDIOC_REQBUFS");
-    }
-
-    struct v4l2_buffer buf;
-    memset(&buf, 0, sizeof(buf));
-    buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    buf.memory = V4L2_MEMORY_MMAP;
-    buf.index = 0;
-
-    if (-1 == xioctl(fd, VIDIOC_QUERYBUF, &buf)) {
-        errno_exit("VIDIOC_QUERYBUF");
-    }
-
-    buffer_length = buf.length;
-    buffer_start = mmap(NULL, buffer_length, PROT_READ | PROT_WRITE, MAP_SHARED, fd, buf.m.offset);
-    if (MAP_FAILED == buffer_start) errno_exit("mmap");
-}
-
-static int try_format(int width, int height, unsigned int pixelformat) {
-    struct v4l2_format fmt;
-    memset(&fmt, 0, sizeof(fmt));
-    fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    fmt.fmt.pix.width = width;
-    fmt.fmt.pix.height = height;
-    fmt.fmt.pix.pixelformat = pixelformat;
-    fmt.fmt.pix.field = V4L2_FIELD_ANY;
-
-    if (-1 == xioctl(fd, VIDIOC_S_FMT, &fmt)) {
-        fprintf(stderr, "Failed to set format %s at %dx%d\n", 
-                pixelformat_to_string(pixelformat), width, height);
-        return 0;
-    }
-
-    if (-1 == xioctl(fd, VIDIOC_G_FMT, &fmt)) {
-        fprintf(stderr, "VIDIOC_G_FMT error\n");
-        return 0;
-    }
-
-    // Update cam_width, cam_height, and RGB_SIZE if device adjusts resolution
-    if (fmt.fmt.pix.width != width || fmt.fmt.pix.height != height) {
-        fprintf(stderr, "Format adjusted to %ux%u\n", 
-                fmt.fmt.pix.width, fmt.fmt.pix.height);
-        cam_width = fmt.fmt.pix.width;
-        cam_height = fmt.fmt.pix.height;
-        RGB_SIZE = cam_width * cam_height * 4; // RGBA
-        // Reallocate rgb_data
-        unsigned char *new_rgb_data = realloc(rgb_data, RGB_SIZE);
-        if (!new_rgb_data) {
-            fprintf(stderr, "Failed to reallocate rgb_data\n");
-            return 0;
-        }
-        rgb_data = new_rgb_data;
-        memset(rgb_data, 0, RGB_SIZE); // Clear buffer to prevent residual data
-    }
-
-    printf("Using format: %s, size: %ux%u, bytes: %u\n", 
-           pixelformat_to_string(fmt.fmt.pix.pixelformat), 
-           fmt.fmt.pix.width, fmt.fmt.pix.height, fmt.fmt.pix.sizeimage);
-    buffer_length = fmt.fmt.pix.sizeimage;
-    current_pixelformat = fmt.fmt.pix.pixelformat;
-    return 1;
-}
-
-static void init_device(int device_index) {
-    struct v4l2_capability cap;
-    if (-1 == xioctl(fd, VIDIOC_QUERYCAP, &cap)) {
-        errno_exit("VIDIOC_QUERYCAP");
-    }
-
-    if (!(cap.capabilities & V4L2_CAP_VIDEO_CAPTURE)) {
-        fprintf(stderr, "Device is no video capture device\n");
-        cleanup_camera();
-        exit(EXIT_FAILURE);
-    }
-
-    if (!(cap.capabilities & V4L2_CAP_STREAMING)) {
-        fprintf(stderr, "Device does not support streaming i/o\n");
-        cleanup_camera();
-        exit(EXIT_FAILURE);
-    }
-
-    // Try supported formats based on typical USB camera capabilities
-    if (try_format(640, 480, V4L2_PIX_FMT_MJPEG)) {
-        init_mmap();
-        return;
-    }
-    if (try_format(640, 480, V4L2_PIX_FMT_YUYV)) {
-        init_mmap();
-        return;
-    }
-    if (try_format(320, 240, V4L2_PIX_FMT_YUYV)) {
-        init_mmap();
-        return;
-    }
-    if (try_format(1280, 720, V4L2_PIX_FMT_MJPEG)) {
-        init_mmap();
-        return;
-    }
-    if (try_format(320, 240, V4L2_PIX_FMT_MJPEG)) {
-        init_mmap();
-        return;
-    }
-    if (try_format(1280, 720, V4L2_PIX_FMT_YUV420)) {
-        init_mmap();
-        return;
-    }
-    if (try_format(320, 240, V4L2_PIX_FMT_YUV420)) {
-        init_mmap();
-        return;
-    }
-
-    fprintf(stderr, "No supported format/resolution found\n");
-    cleanup_camera();
-    exit(EXIT_FAILURE);
-}
-
-static void start_capturing(void) {
-    struct v4l2_buffer buf;
-    memset(&buf, 0, sizeof(buf));
-    buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    buf.memory = V4L2_MEMORY_MMAP;
-    buf.index = 0;
-
-    if (-1 == xioctl(fd, VIDIOC_QBUF, &buf)) {
-        errno_exit("VIDIOC_QBUF");
-    }
-
-    enum v4l2_buf_type type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    if (-1 == xioctl(fd, VIDIOC_STREAMON, &type)) {
-        errno_exit("VIDIOC_STREAMON");
-    }
-}
-
-int init_camera_for_element(UIElement* el) {
-    if (camera_enabled) {
-        // Already initialized, just return
-        return 1;
-    }
-
-    if (el->ar_mode != 1 && el->ar_mode != 2) {
-        // Invalid AR mode
-        return 0;
-    }
-
-    current_dev_index = el->ar_mode - 1; // 1 -> 0 (webcam), 2 -> 1 (USB cam)
-    
-    // Initialize RGB_SIZE (RGBA)
-    RGB_SIZE = cam_width * cam_height * 4;
-
-    atexit(cleanup_camera); // Ensure cleanup on exit
-    signal(SIGINT, signal_handler); // Handle Ctrl+C
-    
-    fd = open(dev_names[current_dev_index], O_RDWR | O_NONBLOCK, 0);
-    if (-1 == fd) {
-        fprintf(stderr, "Cannot open '%s': %d, %s\n", dev_names[current_dev_index], errno, strerror(errno));
-        return 0;
-    }
-
-    init_device(current_dev_index);
-    start_capturing();
-
-    // Allocate RGB buffer
-    rgb_data = malloc(RGB_SIZE);
-    if (!rgb_data) {
-        fprintf(stderr, "Failed to allocate rgb_data\n");
-        cleanup_camera();
-        return 0;
-    }
-    memset(rgb_data, 0, RGB_SIZE); // Initialize to zero
-
-    camera_enabled = 1;
-    return 1;
-}
-
-static int read_frame(void) {
-    if (!camera_enabled) return 0;
-
-    struct v4l2_buffer buf;
-    memset(&buf, 0, sizeof(buf));
-    buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    buf.memory = V4L2_MEMORY_MMAP;
-    buf.index = 0;
-
-    if (-1 == xioctl(fd, VIDIOC_DQBUF, &buf)) {
-        if (errno == EAGAIN) return 0;
-        errno_exit("VIDIOC_DQBUF");
-    }
-
-    // Clear rgb_data before processing to ensure no residual data
-    memset(rgb_data, 0, RGB_SIZE);
-
-    // Convert frame to RGBA
-    if (current_pixelformat == V4L2_PIX_FMT_YUYV) {
-        yuyv_to_rgb(buffer_start, rgb_data, buf.bytesused);
-    } else if (current_pixelformat == V4L2_PIX_FMT_MJPEG) {
-        mjpg_to_rgb(buffer_start, buf.bytesused, rgb_data);
-    } else if (current_pixelformat == V4L2_PIX_FMT_YUV420) {
-        yuv420_to_rgb(buffer_start, rgb_data, cam_width, cam_height);
-    } else {
-        fprintf(stderr, "Unsupported pixel format: %s\n", pixelformat_to_string(current_pixelformat));
-        cleanup_camera();
-        return 0;
-    }
-
-    if (-1 == xioctl(fd, VIDIOC_QBUF, &buf)) {
-        errno_exit("VIDIOC_QBUF");
-    }
-
-    return 1;
-}
-
-static void draw_camera_background_for_element(UIElement* el) {
-    if (!camera_enabled) return;
-
-    // Update camera frame if needed
-    read_frame();
-
-    // Save current matrix
-    glPushMatrix();
-    
-    // The camera image needs to be scaled to fit the canvas dimensions
-    // We'll draw it at position 0,0 (the canvas origin) with the canvas dimensions
-    float scale_x = (float)el->calculated_width / cam_width;
-    float scale_y = (float)el->calculated_height / cam_height;
-    
-    // Scale appropriately
-    glScalef(scale_x, scale_y, 1.0f);
-    
-    // Draw the camera texture - flip Y-axis to match OpenGL coordinates
-    glRasterPos2i(0, cam_height);
-    glPixelZoom(1.0, -1.0);
-    glDrawPixels(cam_width, cam_height, GL_RGBA, GL_UNSIGNED_BYTE, rgb_data);
-    glPixelZoom(1.0, 1.0);        // Restore zoom
-    
-    // Restore matrix
-    glPopMatrix();
 }
 
 // FreeType initialization for emoji rendering
@@ -1332,7 +940,43 @@ void parse_chtml(const char* filename) {
         }
         else if (strcmp(tag_name, "canvas") == 0) {
             // Assign a default render function to canvas elements
-            elements[num_elements].canvas_render_func = canvas_render_sample;
+            // Check if this canvas has the ar attribute set to "1"
+            int has_ar_attribute = 0;
+            // We need to check the attributes we just parsed
+            // Re-parse attributes to check for 'ar'
+            char* temp_attr_start = tag_end;
+            while (temp_attr_start && (temp_attr_start = strstr(temp_attr_start, " ")) != NULL) {
+                temp_attr_start++; // Move past space
+                char* temp_eq_sign = strchr(temp_attr_start, '=');
+                if (!temp_eq_sign) break; // No more attributes
+
+                char temp_attr_name[50];
+                strncpy(temp_attr_name, temp_attr_start, temp_eq_sign - temp_attr_start);
+                temp_attr_name[temp_eq_sign - temp_attr_start] = '\0';
+
+                char* temp_value_start = temp_eq_sign + 1;
+                if (*temp_value_start != '"') break; // Value not quoted
+                temp_value_start++; // Move past opening quote
+
+                char* temp_value_end = strchr(temp_value_start, '"');
+                if (!temp_value_end) break; // No closing quote
+
+                char temp_attr_value[256];
+                strncpy(temp_attr_value, temp_value_start, temp_value_end - temp_value_start);
+                temp_attr_value[temp_value_end - temp_value_start] = '\0';
+
+                if (strcmp(temp_attr_name, "ar") == 0 && strcmp(temp_attr_value, "1") == 0) {
+                    has_ar_attribute = 1;
+                    break;
+                }
+                temp_attr_start = temp_value_end + 1;
+            }
+            
+            if (has_ar_attribute) {
+                elements[num_elements].canvas_render_func = canvas_render_camera;
+            } else {
+                elements[num_elements].canvas_render_func = canvas_render_sample;
+            }
             stack_top++;
             parent_stack[stack_top] = num_elements;
         }
@@ -1987,6 +1631,349 @@ void draw_element(UIElement* el) {
     }
 }
 
+// Camera-related helper functions
+static int xioctl_cam(int fh, int request, void *arg) {
+    int r;
+    do {
+        r = ioctl(fh, request, arg);
+    } while (-1 == r && EINTR == errno);
+    return r;
+}
+
+static void errno_exit_cam(const char *s) {
+    fprintf(stderr, "%s error %d, %s\n", s, errno, strerror(errno));
+}
+
+static void yuyv_to_rgb_cam(unsigned char *yuyv, unsigned char *rgb, int size) {
+    int i, j;
+    int max_pixels = (cam_rgb_size / 4); // RGBA (4 bytes per pixel)
+    for (i = 0, j = 0; i < size - 3 && j < cam_rgb_size - 7; i += 4, j += 8) {
+        int y0 = yuyv[i + 0];
+        int u  = yuyv[i + 1] - 128;
+        int y1 = yuyv[i + 2];
+        int v  = yuyv[i + 3] - 128;
+
+        // First pixel
+        int r = (298 * y0 + 409 * v + 128) >> 8;
+        int g = (298 * y0 - 100 * u - 208 * v + 128) >> 8;
+        int b = (298 * y0 + 516 * u + 128) >> 8;
+        rgb[j + 0] = (r < 0) ? 0 : (r > 255) ? 255 : r;
+        rgb[j + 1] = (g < 0) ? 0 : (g > 255) ? 255 : g;
+        rgb[j + 2] = (b < 0) ? 0 : (b > 255) ? 255 : b;
+        rgb[j + 3] = 255; // Alpha = 255 (opaque)
+
+        // Second pixel
+        r = (298 * y1 + 409 * v + 128) >> 8;
+        g = (298 * y1 - 100 * u - 208 * v + 128) >> 8;
+        b = (298 * y1 + 516 * u + 128) >> 8;
+        rgb[j + 4] = (r < 0) ? 0 : (r > 255) ? 255 : r;
+        rgb[j + 5] = (g < 0) ? 0 : (g > 255) ? 255 : g;
+        rgb[j + 6] = (b < 0) ? 0 : (b > 255) ? 255 : b;
+        rgb[j + 7] = 255; // Alpha = 255 (opaque)
+    }
+}
+
+static void yuv420_to_rgb_cam(unsigned char *yuv, unsigned char *rgb, int width, int height) {
+    int y_size = width * height;
+    int uv_size = y_size / 4;
+    unsigned char *y = yuv;
+    unsigned char *u = yuv + y_size;
+    unsigned char *v = u + uv_size;
+
+    for (int j = 0; j < height; j++) {
+        for (int i = 0; i < width; i++) {
+            int y_idx = j * width + i;
+            int uv_idx = (j / 2) * (width / 2) + (i / 2);
+            int y_val = y[y_idx];
+            int u_val = u[uv_idx] - 128;
+            int v_val = v[uv_idx] - 128;
+
+            int r = (298 * y_val + 409 * v_val + 128) >> 8;
+            int g = (298 * y_val - 100 * u_val - 208 * v_val + 128) >> 8;
+            int b = (298 * y_val + 516 * u_val + 128) >> 8;
+
+            r = r < 0 ? 0 : (r > 255 ? 255 : r);
+            g = g < 0 ? 0 : (g > 255 ? 255 : g);
+            b = b < 0 ? 0 : (b > 255 ? 255 : b);
+
+            int rgb_idx = (j * width + i) * 4; // RGBA
+            rgb[rgb_idx + 0] = r;
+            rgb[rgb_idx + 1] = g;
+            rgb[rgb_idx + 2] = b;
+            rgb[rgb_idx + 3] = 255; // Alpha = 255 (opaque)
+        }
+    }
+}
+
+// We'll add a placeholder for MJPG handling, but for now just log that it's not supported
+static void mjpeg_to_rgb_cam(unsigned char *mjpeg_data, int size, unsigned char *rgb) {
+    // For now, just fill with a pattern to indicate MJPEG data received
+    // In a real implementation, you'd use libjpeg or stb_image to decode
+    for (int i = 0; i < cam_rgb_size; i += 4) {
+        // Create a simple pattern to show MJPEG was received
+        rgb[i] = (i / 4) % 256;       // R
+        rgb[i+1] = ((i / 4) / 10) % 256; // G  
+        rgb[i+2] = ((i / 4) * 2) % 256;  // B
+        rgb[i+3] = 255;               // A
+    }
+    printf("MJPEG data received but not properly decoded - using placeholder pattern\n");
+}
+
+static int try_camera_format(int width, int height, unsigned int pixelformat) {
+    struct v4l2_format fmt;
+    memset(&fmt, 0, sizeof(fmt));
+    fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    fmt.fmt.pix.width = width;
+    fmt.fmt.pix.height = height;
+    fmt.fmt.pix.pixelformat = pixelformat;
+    fmt.fmt.pix.field = V4L2_FIELD_ANY;
+
+    if (-1 == xioctl_cam(cam_fd, VIDIOC_S_FMT, &fmt)) {
+        fprintf(stderr, "Failed to set format %c%c%c%c at %dx%d\n", 
+                pixelformat & 0xFF, (pixelformat >> 8) & 0xFF, 
+                (pixelformat >> 16) & 0xFF, (pixelformat >> 24) & 0xFF,
+                width, height);
+        return 0;
+    }
+
+    if (-1 == xioctl_cam(cam_fd, VIDIOC_G_FMT, &fmt)) {
+        fprintf(stderr, "VIDIOC_G_FMT error\n");
+        return 0;
+    }
+
+    // Update camera width, height, and rgb_size if device adjusts resolution
+    if (fmt.fmt.pix.width != width || fmt.fmt.pix.height != height) {
+        fprintf(stderr, "Format adjusted to %ux%u\n", 
+                fmt.fmt.pix.width, fmt.fmt.pix.height);
+        cam_width = fmt.fmt.pix.width;
+        cam_height = fmt.fmt.pix.height;
+        cam_rgb_size = cam_width * cam_height * 4; // RGBA
+        // Reallocate cam_rgb_data
+        unsigned char *new_cam_rgb_data = realloc(cam_rgb_data, cam_rgb_size);
+        if (!new_cam_rgb_data) {
+            fprintf(stderr, "Failed to reallocate cam_rgb_data\n");
+            return 0;
+        }
+        cam_rgb_data = new_cam_rgb_data;
+        memset(cam_rgb_data, 0, cam_rgb_size); // Clear buffer to prevent residual data
+    }
+
+    printf("Using camera format: %c%c%c%c, size: %ux%u, bytes: %u\n", 
+           fmt.fmt.pix.pixelformat & 0xFF, (fmt.fmt.pix.pixelformat >> 8) & 0xFF, 
+           (fmt.fmt.pix.pixelformat >> 16) & 0xFF, (fmt.fmt.pix.pixelformat >> 24) & 0xFF,
+           fmt.fmt.pix.width, fmt.fmt.pix.height, fmt.fmt.pix.sizeimage);
+    cam_buffer_length = fmt.fmt.pix.sizeimage;
+    cam_current_pixelformat = fmt.fmt.pix.pixelformat;
+    return 1;
+}
+
+static void init_camera_mmap(void) {
+    struct v4l2_requestbuffers req;
+    memset(&req, 0, sizeof(req));
+    req.count = 1;
+    req.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    req.memory = V4L2_MEMORY_MMAP;
+
+    if (-1 == xioctl_cam(cam_fd, VIDIOC_REQBUFS, &req)) {
+        errno_exit_cam("VIDIOC_REQBUFS");
+    }
+
+    struct v4l2_buffer buf;
+    memset(&buf, 0, sizeof(buf));
+    buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    buf.memory = V4L2_MEMORY_MMAP;
+    buf.index = 0;
+
+    if (-1 == xioctl_cam(cam_fd, VIDIOC_QUERYBUF, &buf)) {
+        errno_exit_cam("VIDIOC_QUERYBUF");
+    }
+
+    cam_buffer_length = buf.length;
+    cam_buffer_start = mmap(NULL, cam_buffer_length, PROT_READ | PROT_WRITE, MAP_SHARED, cam_fd, buf.m.offset);
+    if (MAP_FAILED == cam_buffer_start) errno_exit_cam("mmap");
+}
+
+static void init_camera_device(void) {
+    struct v4l2_capability cap;
+    if (-1 == xioctl_cam(cam_fd, VIDIOC_QUERYCAP, &cap)) {
+        errno_exit_cam("VIDIOC_QUERYCAP");
+    }
+
+    if (!(cap.capabilities & V4L2_CAP_VIDEO_CAPTURE)) {
+        fprintf(stderr, "/dev/video0 is no video capture device\n");
+        exit(EXIT_FAILURE);
+    }
+
+    if (!(cap.capabilities & V4L2_CAP_STREAMING)) {
+        fprintf(stderr, "/dev/video0 does not support streaming i/o\n");
+        exit(EXIT_FAILURE);
+    }
+
+    // Try the format that works on this machine: V4L2_PIX_FMT_YUYV
+    if (try_camera_format(640, 480, V4L2_PIX_FMT_YUYV)) {
+        init_camera_mmap();
+        return;
+    }
+    if (try_camera_format(320, 240, V4L2_PIX_FMT_YUYV)) {
+        init_camera_mmap();
+        return;
+    }
+    if (try_camera_format(1280, 720, V4L2_PIX_FMT_YUYV)) {
+        init_camera_mmap();
+        return;
+    }
+    // Other formats as fallback
+    if (try_camera_format(640, 480, V4L2_PIX_FMT_YUV420)) {
+        init_camera_mmap();
+        return;
+    }
+    if (try_camera_format(320, 240, V4L2_PIX_FMT_YUV420)) {
+        init_camera_mmap();
+        return;
+    }
+    if (try_camera_format(1280, 720, V4L2_PIX_FMT_YUV420)) {
+        init_camera_mmap();
+        return;
+    }
+    if (try_camera_format(1280, 720, V4L2_PIX_FMT_MJPEG)) {
+        init_camera_mmap();
+        return;
+    }
+    if (try_camera_format(320, 240, V4L2_PIX_FMT_MJPEG)) {
+        init_camera_mmap();
+        return;
+    }
+
+    fprintf(stderr, "No supported format/resolution found for /dev/video0\n");
+    exit(EXIT_FAILURE);
+}
+
+static void start_camera_capturing(void) {
+    struct v4l2_buffer buf;
+    memset(&buf, 0, sizeof(buf));
+    buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    buf.memory = V4L2_MEMORY_MMAP;
+    buf.index = 0;
+
+    if (-1 == xioctl_cam(cam_fd, VIDIOC_QBUF, &buf)) {
+        errno_exit_cam("VIDIOC_QBUF");
+    }
+
+    enum v4l2_buf_type type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    if (-1 == xioctl_cam(cam_fd, VIDIOC_STREAMON, &type)) {
+        errno_exit_cam("VIDIOC_STREAMON");
+    }
+}
+
+static int read_camera_frame(void) {
+    struct v4l2_buffer buf;
+    memset(&buf, 0, sizeof(buf));
+    buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    buf.memory = V4L2_MEMORY_MMAP;
+    buf.index = 0;
+
+    if (-1 == xioctl_cam(cam_fd, VIDIOC_DQBUF, &buf)) {
+        if (errno == EAGAIN) return 0;
+        errno_exit_cam("VIDIOC_DQBUF");
+    }
+
+    // Clear cam_rgb_data before processing to ensure no residual data
+    memset(cam_rgb_data, 0, cam_rgb_size);
+
+    // Convert frame to RGBA
+    if (cam_current_pixelformat == V4L2_PIX_FMT_YUYV) {
+        yuyv_to_rgb_cam(cam_buffer_start, cam_rgb_data, buf.bytesused);
+    } else if (cam_current_pixelformat == V4L2_PIX_FMT_YUV420) {
+        yuv420_to_rgb_cam(cam_buffer_start, cam_rgb_data, cam_width, cam_height);
+    } else if (cam_current_pixelformat == V4L2_PIX_FMT_MJPEG) {
+        mjpeg_to_rgb_cam(cam_buffer_start, buf.bytesused, cam_rgb_data);
+    } else {
+        fprintf(stderr, "Unsupported camera pixel format: %c%c%c%c\n", 
+                cam_current_pixelformat & 0xFF, (cam_current_pixelformat >> 8) & 0xFF, 
+                (cam_current_pixelformat >> 16) & 0xFF, (cam_current_pixelformat >> 24) & 0xFF);
+        return 0;
+    }
+
+    if (-1 == xioctl_cam(cam_fd, VIDIOC_QBUF, &buf)) {
+        errno_exit_cam("VIDIOC_QBUF");
+    }
+
+    return 1;
+}
+
+static void init_camera(void) {
+    if (camera_initialized) {
+        return; // Already initialized
+    }
+    
+    // Initialize camera RGB_SIZE (RGBA)
+    cam_rgb_size = cam_width * cam_height * 4;
+
+    cam_fd = open("/dev/video0", O_RDWR | O_NONBLOCK, 0);
+    if (-1 == cam_fd) {
+        fprintf(stderr, "Cannot open '/dev/video0': %d, %s\n", errno, strerror(errno));
+        return;
+    }
+
+    init_camera_device();
+    start_camera_capturing();
+    
+    // Allocate the RGB buffer
+    cam_rgb_data = malloc(cam_rgb_size);
+    if (!cam_rgb_data) {
+        fprintf(stderr, "Failed to allocate cam_rgb_data\n");
+        close(cam_fd);
+        cam_fd = -1;
+        return;
+    }
+    memset(cam_rgb_data, 0, cam_rgb_size); // Initialize to zero
+    
+    camera_initialized = 1;
+    printf("Camera initialized successfully\n");
+}
+
+// Function to cleanup camera resources
+void cleanup_camera(void) {
+    if (cam_fd != -1) {
+        enum v4l2_buf_type type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+        xioctl_cam(cam_fd, VIDIOC_STREAMOFF, &type);
+        if (cam_buffer_start) {
+            munmap(cam_buffer_start, cam_buffer_length);
+            cam_buffer_start = NULL;
+        }
+        close(cam_fd);
+        cam_fd = -1;
+    }
+    if (cam_rgb_data) {
+        free(cam_rgb_data);
+        cam_rgb_data = NULL;
+    }
+    camera_initialized = 0;
+}
+
+// Function to update camera frame - call this periodically from idle function
+int update_camera_frame(void) {
+    if (!camera_initialized) {
+        return 0;
+    }
+    
+    fd_set fds;
+    struct timeval tv = {0, 10000}; // 10ms timeout
+    FD_ZERO(&fds);
+    FD_SET(cam_fd, &fds);
+
+    int r = select(cam_fd + 1, &fds, NULL, NULL, &tv);
+    if (-1 == r && EINTR != errno) {
+        fprintf(stderr, "camera select error %d, %s\n", errno, strerror(errno));
+        return 0;
+    }
+
+    if (FD_ISSET(cam_fd, &fds)) {
+        return read_camera_frame();
+    }
+    return 0;
+}
+
 // Function to cleanup FreeType resources
 
 
@@ -2164,107 +2151,25 @@ void canvas_render_sample(int x, int y, int width, int height) {
                   current_canvas->camera_target[0], current_canvas->camera_target[1], current_canvas->camera_target[2],
                   current_canvas->camera_up[0], current_canvas->camera_up[1], current_canvas->camera_up[2]);
 
-        // Render shapes in 3D
+        // Render shapes in 3D space
         for (int i = 0; i < shape_count; i++) {
             Shape* s = &shapes[i];
-            if (strcmp(s->type, "SQUARE") == 0 || strcmp(s->type, "RECT") == 0) {
-                glPushMatrix();
-                // Map the 2D coordinates from the module to the XZ plane in 3D
-                float x_3d = (s->x / (float)width) * 10.0f - 5.0f;
-                float z_3d = (s->y / (float)height) * 10.0f - 5.0f;
-                glTranslatef(x_3d, 0.5f, z_3d);
-                glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
-                // Use width and height for 3D scaling
-                float size_x = s->width / 10.0f;
-                float size_y = (s->height) / 10.0f;  // Height for the cube
-                float size_z = s->depth / 10.0f;
-                
-                // Draw a rectangular prism
-                glBegin(GL_QUADS);
-                // Front face
-                glVertex3f(-size_x/2, -size_y/2, size_z/2);
-                glVertex3f(size_x/2, -size_y/2, size_z/2);
-                glVertex3f(size_x/2, size_y/2, size_z/2);
-                glVertex3f(-size_x/2, size_y/2, size_z/2);
-                
-                // Back face
-                glVertex3f(-size_x/2, -size_y/2, -size_z/2);
-                glVertex3f(-size_x/2, size_y/2, -size_z/2);
-                glVertex3f(size_x/2, size_y/2, -size_z/2);
-                glVertex3f(size_x/2, -size_y/2, -size_z/2);
-                
-                // Top face
-                glVertex3f(-size_x/2, size_y/2, -size_z/2);
-                glVertex3f(-size_x/2, size_y/2, size_z/2);
-                glVertex3f(size_x/2, size_y/2, size_z/2);
-                glVertex3f(size_x/2, size_y/2, -size_z/2);
-                
-                // Bottom face
-                glVertex3f(-size_x/2, -size_y/2, -size_z/2);
-                glVertex3f(size_x/2, -size_y/2, -size_z/2);
-                glVertex3f(size_x/2, -size_y/2, size_z/2);
-                glVertex3f(-size_x/2, -size_y/2, size_z/2);
-                
-                // Left face
-                glVertex3f(-size_x/2, -size_y/2, -size_z/2);
-                glVertex3f(-size_x/2, -size_y/2, size_z/2);
-                glVertex3f(-size_x/2, size_y/2, size_z/2);
-                glVertex3f(-size_x/2, size_y/2, -size_z/2);
-                
-                // Right face
-                glVertex3f(size_x/2, -size_y/2, -size_z/2);
-                glVertex3f(size_x/2, size_y/2, -size_z/2);
-                glVertex3f(size_x/2, size_y/2, size_z/2);
-                glVertex3f(size_x/2, -size_y/2, size_z/2);
-                glEnd();
-                glPopMatrix();
-            } else if (strcmp(s->type, "TRIANGLE") == 0) {
-                glPushMatrix();
-                // Map the 2D coordinates from the module to the XZ plane in 3D
-                float x_3d = (s->x / (float)width) * 10.0f - 5.0f;
-                float z_3d = (s->y / (float)height) * 10.0f - 5.0f;
-                glTranslatef(x_3d, 0.5f, z_3d);
-                glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
-                // Use width and height for 3D scaling
-                float avg_size = (s->width + s->height) / 2.0f;
-                
-                // Draw a triangle pyramid
-                glBegin(GL_TRIANGLES);
-                // Front face
-                glVertex3f(0.0f, avg_size/10.0f, 0.0f);  // Top
-                glVertex3f(-avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);  // Bottom left
-                glVertex3f(avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);   // Bottom right
-                
-                // Right face
-                glVertex3f(0.0f, avg_size/10.0f, 0.0f);  // Top
-                glVertex3f(avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);   // Bottom right
-                glVertex3f(0.0f, -avg_size/20.0f, -avg_size/20.0f);  // Bottom back
-                
-                // Left face
-                glVertex3f(0.0f, avg_size/10.0f, 0.0f);  // Top
-                glVertex3f(0.0f, -avg_size/20.0f, -avg_size/20.0f);  // Bottom back
-                glVertex3f(-avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);  // Bottom left
-                glEnd();
-                glPopMatrix();
-            }
-        }
+            glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
 
-        // Render shapes in 3D
-        for (int i = 0; i < shape_count; i++) {
-            Shape* s = &shapes[i];
             if (strcmp(s->type, "SQUARE") == 0 || strcmp(s->type, "RECT") == 0) {
                 glPushMatrix();
-                // Map the 2D coordinates from the module to the XZ plane in 3D
+                // Map the 2D coordinates from the module to 3D space with proper depth
+                // X and Y from shape map to X and Y in 3D space, Z represents actual depth
                 float x_3d = (s->x / (float)width) * 10.0f - 5.0f;
-                float z_3d = (s->y / (float)height) * 10.0f - 5.0f;
-                glTranslatef(x_3d, 0.5f, z_3d);
-                glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
+                float y_3d = (s->y / (float)height) * 10.0f - 5.0f;  // Use actual Y coordinate for 3D Y position
+                float z_3d = s->z;  // Use the actual Z coordinate from the shape for real depth
+                glTranslatef(x_3d, y_3d, z_3d); // Position in proper 3D space
                 // Use width and height for 3D scaling
                 float size_x = s->width / 10.0f;
-                float size_y = (s->height) / 10.0f;  // Height for the cube
-                float size_z = s->depth / 10.0f;
+                float size_y = (s->height) / 10.0f;  // Height for the object
+                float size_z = s->depth / 10.0f;     // Use depth parameter for Z dimension
                 
-                // Draw a rectangular prism
+                // Draw a rectangular prism 
                 glBegin(GL_QUADS);
                 // Front face
                 glVertex3f(-size_x/2, -size_y/2, size_z/2);
@@ -2305,30 +2210,76 @@ void canvas_render_sample(int x, int y, int width, int height) {
                 glPopMatrix();
             } else if (strcmp(s->type, "TRIANGLE") == 0) {
                 glPushMatrix();
-                // Map the 2D coordinates from the module to the XZ plane in 3D
+                // Map the 2D coordinates from the module to 3D space with proper depth
                 float x_3d = (s->x / (float)width) * 10.0f - 5.0f;
-                float z_3d = (s->y / (float)height) * 10.0f - 5.0f;
-                glTranslatef(x_3d, 0.5f, z_3d);
-                glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
+                float y_3d = (s->y / (float)height) * 10.0f - 5.0f;  // Use actual Y coordinate for 3D Y position
+                float z_3d = s->z;  // Use the actual Z coordinate from the shape for real depth
+                glTranslatef(x_3d, y_3d, z_3d); // Position in proper 3D space
                 // Use width and height for 3D scaling
                 float avg_size = (s->width + s->height) / 2.0f;
                 
-                // Draw a triangle pyramid
+                // Draw a triangle pyramid with proper 3D positioning
                 glBegin(GL_TRIANGLES);
                 // Front face
-                glVertex3f(0.0f, avg_size/10.0f, 0.0f);  // Top
+                glVertex3f(0.0f, avg_size/10.0f, avg_size/20.0f);  // Top
                 glVertex3f(-avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);  // Bottom left
                 glVertex3f(avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);   // Bottom right
                 
                 // Right face
-                glVertex3f(0.0f, avg_size/10.0f, 0.0f);  // Top
+                glVertex3f(0.0f, avg_size/10.0f, avg_size/20.0f);  // Top
                 glVertex3f(avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);   // Bottom right
-                glVertex3f(0.0f, -avg_size/20.0f, -avg_size/20.0f);  // Bottom back
+                glVertex3f(0.0f, avg_size/20.0f, avg_size/10.0f);  // Top back (corrected)
                 
                 // Left face
-                glVertex3f(0.0f, avg_size/10.0f, 0.0f);  // Top
-                glVertex3f(0.0f, -avg_size/20.0f, -avg_size/20.0f);  // Bottom back
+                glVertex3f(0.0f, avg_size/10.0f, avg_size/20.0f);  // Top
+                glVertex3f(0.0f, avg_size/20.0f, avg_size/10.0f);  // Top back
                 glVertex3f(-avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);  // Bottom left
+                glEnd();
+                glPopMatrix();
+            } else if (strcmp(s->type, "CIRCLE") == 0) {
+                glPushMatrix();
+                // Map the 2D coordinates from the module to proper 3D space
+                float x_3d = (s->x / (float)width) * 10.0f - 5.0f;
+                float y_3d = (s->y / (float)height) * 10.0f - 5.0f;  // Use actual Y coordinate for 3D Y position
+                float z_3d = s->z;  // Use the actual Z coordinate from the shape for real depth
+                glTranslatef(x_3d, y_3d, z_3d); // Position in proper 3D space
+                
+                // Draw a cylinder in 3D space (not just a flat disc)
+                int num_segments = 20;
+                float radius = s->width / 20.0f; // Scale down for 3D space
+                float height = s->height / 20.0f; // Use height parameter for 3D
+                
+                // Draw the cylinder sides
+                glBegin(GL_QUAD_STRIP);
+                for (int j = 0; j <= num_segments; j++) {
+                    float angle = j * 2.0f * 3.14159f / num_segments;
+                    float x_pos = radius * cos(angle);
+                    float z_pos = radius * sin(angle);
+                    glVertex3f(x_pos, height/2, z_pos);  // Top edge
+                    glVertex3f(x_pos, -height/2, z_pos); // Bottom edge
+                }
+                glEnd();
+                
+                // Draw top disc
+                glBegin(GL_TRIANGLE_FAN);
+                glVertex3f(0.0f, height/2, 0.0f); // Center of the top disc
+                for (int j = 0; j <= num_segments; j++) {
+                    float angle = j * 2.0f * 3.14159f / num_segments;
+                    float x_pos = radius * cos(angle);
+                    float z_pos = radius * sin(angle);
+                    glVertex3f(x_pos, height/2, z_pos);
+                }
+                glEnd();
+                
+                // Draw bottom disc
+                glBegin(GL_TRIANGLE_FAN);
+                glVertex3f(0.0f, -height/2, 0.0f); // Center of the bottom disc
+                for (int j = num_segments; j >= 0; j--) {
+                    float angle = j * 2.0f * 3.14159f / num_segments;
+                    float x_pos = radius * cos(angle);
+                    float z_pos = radius * sin(angle);
+                    glVertex3f(x_pos, -height/2, z_pos);
+                }
                 glEnd();
                 glPopMatrix();
             }
@@ -2453,6 +2404,9 @@ void cleanup_view() {
     // Reset other state variables as needed
     // For example, reset text content arrays, etc.
     printf("View cleaned up for reload\n");
+    
+    // Clean up camera resources
+    cleanup_camera();
 }
 
 // Function to clear all cached pages
@@ -2467,4 +2421,383 @@ void clear_page_cache() {
     content_manager.num_pages_loaded = 0;
     content_manager.current_file_path[0] = '\0';
     printf("Page cache cleared\n");
+}
+
+void canvas_render_camera(int x, int y, int width, int height) {
+    // Find the canvas UIElement to check its view_mode
+    UIElement* current_canvas = NULL;
+    for (int i = 0; i < num_elements; i++) {
+        if (strcmp(elements[i].type, "canvas") == 0 && elements[i].calculated_width == width && elements[i].calculated_height == height) {
+            current_canvas = &elements[i];
+            break;
+        }
+    }
+
+    int is_3d = (current_canvas && strcmp(current_canvas->view_mode, "3d") == 0);
+
+    if (is_3d) {
+        // --- 3D Rendering Mode for AR ---
+        glEnable(GL_DEPTH_TEST);
+
+        // Setup projection matrix for 3D (use the same as canvas_render_sample)
+        glMatrixMode(GL_PROJECTION);
+        glPushMatrix();
+        glLoadIdentity();
+        gluPerspective(current_canvas->fov, (double)width / (double)height, 0.1, 100.0);
+
+        // Setup modelview matrix for camera (use the same as canvas_render_sample)
+        glMatrixMode(GL_MODELVIEW);
+        glPushMatrix();
+        glLoadIdentity();
+        gluLookAt(current_canvas->camera_pos[0], current_canvas->camera_pos[1], current_canvas->camera_pos[2],
+                  current_canvas->camera_target[0], current_canvas->camera_target[1], current_canvas->camera_target[2],
+                  current_canvas->camera_up[0], current_canvas->camera_up[1], current_canvas->camera_up[2]);
+
+        // Draw camera frame as background texture in 3D space
+        if (cam_rgb_data && camera_initialized) {
+            // Enable texturing to apply camera feed as background
+            glEnable(GL_TEXTURE_2D);
+            
+            // Create a texture for the camera frame
+            GLuint texture_id;
+            glGenTextures(1, &texture_id);
+            glBindTexture(GL_TEXTURE_2D, texture_id);
+            
+            // Set texture parameters
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+            
+            // Upload camera frame to texture
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, cam_width, cam_height, 0, 
+                         GL_RGBA, GL_UNSIGNED_BYTE, cam_rgb_data);
+            
+            // Draw textured quad at the back of the scene to simulate camera background
+            // Position at the back of the 3D scene
+            glBegin(GL_QUADS);
+            // Use normalized coordinates relative to the canvas size
+            float scale_factor = 5.0f; // Keep similar to original canvas scale
+            glTexCoord2f(0.0f, 1.0f); glVertex3f(-scale_factor, -scale_factor, -5.0f); // Bottom-left (flipped)
+            glTexCoord2f(1.0f, 1.0f); glVertex3f(scale_factor, -scale_factor, -5.0f);  // Bottom-right (flipped)
+            glTexCoord2f(1.0f, 0.0f); glVertex3f(scale_factor, scale_factor, -5.0f);   // Top-right (flipped)
+            glTexCoord2f(0.0f, 0.0f); glVertex3f(-scale_factor, scale_factor, -5.0f);  // Top-left (flipped)
+            glEnd();
+            
+            // Clean up texture
+            glDeleteTextures(1, &texture_id);
+        } else {
+            // Fallback background if no camera data
+            glColor4f(0.0f, 0.0f, 0.2f, 1.0f); // Dark blue background
+            glBegin(GL_QUADS);
+            float scale_factor = 5.0f;
+            glVertex3f(-scale_factor, -scale_factor, -5.0f);
+            glVertex3f(scale_factor, -scale_factor, -5.0f);
+            glVertex3f(scale_factor, scale_factor, -5.0f);
+            glVertex3f(-scale_factor, scale_factor, -5.0f);
+            glEnd();
+        }
+
+        // Initialize camera if not already done
+        if (!camera_initialized) {
+            init_camera();
+            if (!camera_initialized) {
+                // If camera initialization failed, still render 3D shapes
+                glColor4f(1.0f, 1.0f, 1.0f, 1.0f); // Reset color
+                glDisable(GL_TEXTURE_2D);
+                // Restore matrices and state
+                glPopMatrix(); // Pop modelview
+                glMatrixMode(GL_PROJECTION);
+                glPopMatrix(); // Pop projection
+                glMatrixMode(GL_MODELVIEW);
+                glDisable(GL_DEPTH_TEST);
+                return;
+            }
+        }
+        
+        // Update camera frame if camera is initialized
+        update_camera_frame();
+
+        // Get the shapes from the model for 3D rendering
+        int shape_count = 0;
+        Shape* shapes = model_get_shapes(&shape_count);
+
+        // Render shapes in 3D space
+        for (int i = 0; i < shape_count; i++) {
+            Shape* s = &shapes[i];
+            glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
+
+            if (strcmp(s->type, "SQUARE") == 0 || strcmp(s->type, "RECT") == 0) {
+                glPushMatrix();
+                // Map the 2D coordinates from the module to 3D space with proper depth
+                // X and Y from shape map to X and Y in 3D space, Z represents actual depth
+                float x_3d = (s->x / (float)width) * 10.0f - 5.0f;
+                float y_3d = (s->y / (float)height) * 10.0f - 5.0f;  // Use actual Y coordinate for 3D Y position
+                float z_3d = s->z;  // Use the actual Z coordinate from the shape for real depth
+                glTranslatef(x_3d, y_3d, z_3d); // Position in proper 3D space
+                // Use width and height for 3D scaling
+                float size_x = s->width / 10.0f;
+                float size_y = (s->height) / 10.0f;  // Height for the object
+                float size_z = s->depth / 10.0f;     // Use depth parameter for Z dimension
+                
+                // Draw a rectangular prism (like in original canvas_render_sample)
+                glBegin(GL_QUADS);
+                // Front face
+                glVertex3f(-size_x/2, -size_y/2, size_z/2);
+                glVertex3f(size_x/2, -size_y/2, size_z/2);
+                glVertex3f(size_x/2, size_y/2, size_z/2);
+                glVertex3f(-size_x/2, size_y/2, size_z/2);
+                
+                // Back face
+                glVertex3f(-size_x/2, -size_y/2, -size_z/2);
+                glVertex3f(-size_x/2, size_y/2, -size_z/2);
+                glVertex3f(size_x/2, size_y/2, -size_z/2);
+                glVertex3f(size_x/2, -size_y/2, -size_z/2);
+                
+                // Top face
+                glVertex3f(-size_x/2, size_y/2, -size_z/2);
+                glVertex3f(-size_x/2, size_y/2, size_z/2);
+                glVertex3f(size_x/2, size_y/2, size_z/2);
+                glVertex3f(size_x/2, size_y/2, -size_z/2);
+                
+                // Bottom face
+                glVertex3f(-size_x/2, -size_y/2, -size_z/2);
+                glVertex3f(size_x/2, -size_y/2, -size_z/2);
+                glVertex3f(size_x/2, -size_y/2, size_z/2);
+                glVertex3f(-size_x/2, -size_y/2, size_z/2);
+                
+                // Left face
+                glVertex3f(-size_x/2, -size_y/2, -size_z/2);
+                glVertex3f(-size_x/2, -size_y/2, size_z/2);
+                glVertex3f(-size_x/2, size_y/2, size_z/2);
+                glVertex3f(-size_x/2, size_y/2, -size_z/2);
+                
+                // Right face
+                glVertex3f(size_x/2, -size_y/2, -size_z/2);
+                glVertex3f(size_x/2, size_y/2, -size_z/2);
+                glVertex3f(size_x/2, size_y/2, size_z/2);
+                glVertex3f(size_x/2, -size_y/2, size_z/2);
+                glEnd();
+                glPopMatrix();
+            } else if (strcmp(s->type, "TRIANGLE") == 0) {
+                glPushMatrix();
+                // Map the 2D coordinates from the module to 3D space with proper depth
+                float x_3d = (s->x / (float)width) * 10.0f - 5.0f;
+                float y_3d = (s->y / (float)height) * 10.0f - 5.0f;  // Use actual Y coordinate for 3D Y position
+                float z_3d = s->z;  // Use the actual Z coordinate from the shape for real depth
+                glTranslatef(x_3d, y_3d, z_3d); // Position in proper 3D space
+                // Use width and height for 3D scaling
+                float avg_size = (s->width + s->height) / 2.0f;
+                
+                // Draw a triangle pyramid with proper 3D positioning
+                glBegin(GL_TRIANGLES);
+                // Front face
+                glVertex3f(0.0f, avg_size/10.0f, avg_size/20.0f);  // Top
+                glVertex3f(-avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);  // Bottom left
+                glVertex3f(avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);   // Bottom right
+                
+                // Right face
+                glVertex3f(0.0f, avg_size/10.0f, avg_size/20.0f);  // Top
+                glVertex3f(avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);   // Bottom right
+                glVertex3f(0.0f, avg_size/20.0f, avg_size/10.0f);  // Top back (corrected)
+                
+                // Left face
+                glVertex3f(0.0f, avg_size/10.0f, avg_size/20.0f);  // Top
+                glVertex3f(0.0f, avg_size/20.0f, avg_size/10.0f);  // Top back
+                glVertex3f(-avg_size/20.0f, -avg_size/20.0f, avg_size/20.0f);  // Bottom left
+                glEnd();
+                glPopMatrix();
+            } else if (strcmp(s->type, "CIRCLE") == 0) {
+                glPushMatrix();
+                // Map the 2D coordinates from the module to proper 3D space
+                float x_3d = (s->x / (float)width) * 10.0f - 5.0f;
+                float y_3d = (s->y / (float)height) * 10.0f - 5.0f;  // Use actual Y coordinate for 3D Y position
+                float z_3d = s->z;  // Use the actual Z coordinate from the shape for real depth
+                glTranslatef(x_3d, y_3d, z_3d); // Position in proper 3D space
+                
+                // Draw a cylinder in 3D space (not just a flat disc)
+                int num_segments = 20;
+                float radius = s->width / 20.0f; // Scale down for 3D space
+                float height = s->height / 20.0f; // Use height parameter for 3D
+                
+                // Draw the cylinder sides
+                glBegin(GL_QUAD_STRIP);
+                for (int j = 0; j <= num_segments; j++) {
+                    float angle = j * 2.0f * 3.14159f / num_segments;
+                    float x_pos = radius * cos(angle);
+                    float z_pos = radius * sin(angle);
+                    glVertex3f(x_pos, height/2, z_pos);  // Top edge
+                    glVertex3f(x_pos, -height/2, z_pos); // Bottom edge
+                }
+                glEnd();
+                
+                // Draw top disc
+                glBegin(GL_TRIANGLE_FAN);
+                glVertex3f(0.0f, height/2, 0.0f); // Center of the top disc
+                for (int j = 0; j <= num_segments; j++) {
+                    float angle = j * 2.0f * 3.14159f / num_segments;
+                    float x_pos = radius * cos(angle);
+                    float z_pos = radius * sin(angle);
+                    glVertex3f(x_pos, height/2, z_pos);
+                }
+                glEnd();
+                
+                // Draw bottom disc
+                glBegin(GL_TRIANGLE_FAN);
+                glVertex3f(0.0f, -height/2, 0.0f); // Center of the bottom disc
+                for (int j = num_segments; j >= 0; j--) {
+                    float angle = j * 2.0f * 3.14159f / num_segments;
+                    float x_pos = radius * cos(angle);
+                    float z_pos = radius * sin(angle);
+                    glVertex3f(x_pos, -height/2, z_pos);
+                }
+                glEnd();
+                glPopMatrix();
+            }
+        }
+
+        glDisable(GL_TEXTURE_2D);
+
+        // Restore matrices and state (like in original canvas_render_sample)
+        glPopMatrix(); // Pop modelview
+        glMatrixMode(GL_PROJECTION);
+        glPopMatrix(); // Pop projection
+        glMatrixMode(GL_MODELVIEW);
+        glDisable(GL_DEPTH_TEST);
+    } else {
+        // --- 2D Rendering Mode for AR ---
+        // Initialize camera if not already done
+        if (!camera_initialized) {
+            init_camera();
+            if (!camera_initialized) {
+                // If camera initialization failed, render a placeholder
+                glColor4f(0.2f, 0.2f, 0.2f, 1.0f); // Dark gray background
+                glBegin(GL_QUADS);
+                glVertex2i(0, 0);
+                glVertex2i(width, 0);
+                glVertex2i(width, height);
+                glVertex2i(0, height);
+                glEnd();
+                
+                // Draw an "X" to indicate no camera
+                glColor4f(1.0f, 0.0f, 0.0f, 1.0f); // Red color
+                glLineWidth(3.0f);
+                glBegin(GL_LINES);
+                glVertex2i(10, 10);
+                glVertex2i(width - 10, height - 10);
+                glVertex2i(width - 10, 10);
+                glVertex2i(10, height - 10);
+                glEnd();
+                glLineWidth(1.0f);
+                return;
+            }
+        }
+        
+        // Update camera frame if camera is initialized
+        update_camera_frame();
+        
+        // Draw camera frame to canvas as background
+        if (cam_rgb_data && camera_initialized) {
+            // Calculate scale factors to fit camera frame into canvas
+            float cam_aspect = (float)cam_width / (float)cam_height;
+            float canvas_aspect = (float)width / (float)height;
+            
+            float scale_x = 1.0f, scale_y = 1.0f;
+            float offset_x = 0.0f, offset_y = 0.0f;
+            
+            if (cam_aspect > canvas_aspect) {
+                // Camera frame is wider relative to canvas - fit width, center height
+                scale_x = 1.0f;
+                scale_y = (float)width / (float)cam_width * (float)cam_height / (float)height;
+                offset_y = (height - height * scale_y) / 2.0f;
+            } else {
+                // Canvas is wider relative to camera frame - fit height, center width
+                scale_y = 1.0f;
+                scale_x = (float)height / (float)cam_height * (float)cam_width / (float)width;
+                offset_x = (width - width * scale_x) / 2.0f;
+            }
+            
+            glEnable(GL_TEXTURE_2D);
+            
+            // Create a texture for the camera frame
+            GLuint texture_id;
+            glGenTextures(1, &texture_id);
+            glBindTexture(GL_TEXTURE_2D, texture_id);
+            
+            // Set texture parameters
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+            
+            // Upload camera frame to texture
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, cam_width, cam_height, 0, 
+                         GL_RGBA, GL_UNSIGNED_BYTE, cam_rgb_data);
+            
+            // Draw the textured quad with proper scaling and offset
+            glBegin(GL_QUADS);
+            glTexCoord2f(0.0, 0.0); glVertex2f(offset_x, offset_y + height * scale_y);  // Top-left of texture -> top-left of quad
+            glTexCoord2f(1.0, 0.0); glVertex2f(offset_x + width * scale_x, offset_y + height * scale_y);  // Top-right of texture -> top-right of quad
+            glTexCoord2f(1.0, 1.0); glVertex2f(offset_x + width * scale_x, offset_y);  // Bottom-right of texture -> bottom-right of quad
+            glTexCoord2f(0.0, 1.0); glVertex2f(offset_x, offset_y);  // Bottom-left of texture -> bottom-left of quad
+            glEnd();
+            
+            // Clean up texture
+            glDeleteTextures(1, &texture_id);
+            glDisable(GL_TEXTURE_2D);
+        } else {
+            // Fallback if no camera data
+            glColor4f(0.0f, 0.0f, 0.5f, 1.0f); // Dark blue background
+            glBegin(GL_QUADS);
+            glVertex2i(0, 0);
+            glVertex2i(width, 0);
+            glVertex2i(width, height);
+            glVertex2i(0, height);
+            glEnd();
+        }
+        
+        // Render shapes from the model on top of the camera feed (this is the augmented reality part)
+        // Get the shapes from the model
+        int shape_count = 0;
+        Shape* shapes = model_get_shapes(&shape_count);
+
+        // Render each shape in 2D on top of the camera feed
+        for (int i = 0; i < shape_count; i++) {
+            Shape* s = &shapes[i];
+            glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
+
+            if (strcmp(s->type, "SQUARE") == 0 || strcmp(s->type, "RECT") == 0) {
+                glBegin(GL_QUADS);
+                glVertex2f(s->x - s->width / 2, s->y - s->height / 2);
+                glVertex2f(s->x + s->width / 2, s->y - s->height / 2);
+                glVertex2f(s->x + s->width / 2, s->y + s->height / 2);
+                glVertex2f(s->x - s->width / 2, s->y + s->height / 2);
+                glEnd();
+            } else if (strcmp(s->type, "CIRCLE") == 0) {
+                glBegin(GL_TRIANGLE_FAN);
+                glVertex2f(s->x, s->y);
+                for (int j = 0; j <= 20; j++) {
+                    float angle = j * (2.0f * 3.14159f / 20);
+                    float dx = s->width / 2 * cos(angle);
+                    float dy = s->height / 2 * sin(angle);
+                    glVertex2f(s->x + dx, s->y + dy);
+                }
+                glEnd();
+            } else if (strcmp(s->type, "TRIANGLE") == 0) {
+                glBegin(GL_TRIANGLES);
+                // Calculate the three vertices of the triangle
+                // For an equilateral triangle centered at (x, y)
+                float half_width = s->width / 2.0f;
+                float half_height = s->height / 2.0f;
+                
+                // Vertex 1: Top vertex
+                glVertex2f(s->x, s->y + half_height);
+                // Vertex 2: Bottom left
+                glVertex2f(s->x - half_width, s->y - half_height);
+                // Vertex 3: Bottom right
+                glVertex2f(s->x + half_width, s->y - half_height);
+                glEnd();
+            }
+        }
+    }
 }

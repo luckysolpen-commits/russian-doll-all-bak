@@ -35,7 +35,7 @@
 <button id="view_3d_button" x="330" y="50" width="80" height="30" label="3D View" onClick="switch_to_3d_handler" color="#FF0000" />
         
 <!-- Canvas element -->
-        <canvas id="game_canvas" x="320" y="100" width="400" height="300" label="Game Canvas" color="#CCCCCC" />
+        <canvas id="game_canvas" x="320" y="100" width="400" height="300" label="Game Canvas" color="#CCCCCC" ar="1"/>
         
 
  <textfield id="result_display" x="170" y="400" width="60" height="25" value="10" />

@@ -14,6 +14,7 @@ void init_controller();
 void init_view(const char* filename);
 void init_model(const char* module_path);
 int update_model();
+int update_camera_frame(void);  // Added for camera updates
 void get_window_properties(int* x, int* y, int* width, int* height, char* title, int title_size);
 
 void display();
@@ -48,8 +49,9 @@ char next_chtml_file[512];
 
 void idle_func() {
     int updated = update_model();
+    int camera_updated = update_camera_frame();  // Update camera frame if available
     
-    if (updated) {
+    if (updated || camera_updated) {
         update_ui_with_model_variables();  // Update UI with new model data
         glutPostRedisplay();
     }
