@@ -1,0 +1,30 @@
+Create a Master-Slave flip-flop implementation for the HALO:HDLB0 hardware description language system.
+
+CRITERIA for testable pass:
+1. The flip-flop must have 3 inputs: Data (D), Clock (CLK), and Reset (RST)
+2. The flip-flop must have 1 output: Q (and optionally Q_bar)
+3. On the rising edge of the clock, the input D should be captured by the master latch
+4. On the falling edge of the clock, the value from the master latch should be transferred to the slave latch and appear at output Q
+5. When Reset is high, output Q should be forced to 0 regardless of clock or data input
+6. The implementation should use two separate latches synchronized to opposite clock phases
+7. The circuit should preserve state between clock cycles when not actively clocked
+8. The implementation should be provided as either:
+   - A binary program in HALO:HDLB0 format (sequence of 64-bit instructions)
+   - C source code for an external chip program that can be added to chip_bank.txt
+
+TECHNICAL SPECIFICATIONS:
+- D input can be retrieved from switch_0 (value 5), switch_1 (value 6), or RAM address
+- CLK input can be the system clock (value 7) or a RAM-stored clock signal
+- RST input can be from switches or RAM
+- Output Q should be stored in a specific RAM address for monitoring
+- Use RAM addresses for internal state storage between clock phases
+- The implementation should work within the 4-input instruction format of HALO:HDLB0
+
+TEST SCENARIOS:
+1. Verify that Q follows D on the appropriate clock edge
+2. Verify that Q holds state between clock cycles
+3. Verify that reset forces Q to 0 regardless of other inputs
+4. Verify proper Master-Slave timing relationship (master samples on rising edge, slave updates on falling edge)
+5. Verify the circuit works across multiple clock cycles with changing D inputs
+
+The implementation should demonstrate that HALO:HDLB0 can be used to build sequential logic circuits with memory elements, proving its capability for complex digital system design.

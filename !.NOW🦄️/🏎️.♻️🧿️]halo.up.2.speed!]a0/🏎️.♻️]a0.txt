@@ -1,0 +1,73 @@
+🗓️
+make sure everything for halo works. create tests (i believe ms-flip-flop already has a proof)
+and start building out peices for rv-1 
+♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️
+make getting up 2 speed with halo , faster🏎️♻️
+
+🪆️.a0/🪆️.📟️.a0/🧿️/🏎️.♻️]halo.up.2.speed!]a0
+♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️
+🚩️
+0.modem hanging out ? what does it need, can we 'hide wires'? 
+
+1.how does flipflop proof proove? if so we can make more chips NOW!
+{maybe that we got simpler proof pre flipflop (necessary4 flip) then moved on from a messy st8 .norvpu}
+
+2. does loom work right. dox? should we show it 2 qwen? 
+
+3. should we build ai for halo somehow] NOW!?
+
+4. proove flipflop then wait 4 ai wu?
+🎖️
+5. a prompt 2 get qwen up 2 speed fast + helper files 2 prompt "flipflop"
+
+
+🚩️
+5.
+
+a pre prompt : 
+
+read over the files in this dir starting with @0.hdlb0🧿️.☮️16]pr5]#ab]HALO.c . they are for a hardware description language called halo:hdlb0.
+
+then we will create a document 
+
+
+explain what all files do. what files are necessary and what can be moved to other dirs. 
+and how does @program]a0]PROOF.txt proove that hdlb0 works and is ready to make more complex chips
+ms-flipflop for example. and even provide
+
+a prompt_ms.txt for ms-flipflop.txt code + criteria for testable pass 
+(dont create actual flip flop, i just want prompt, so i can use with other ai)
+
+🎖️
+
+📬️
+post prompt question for documentation: 
+
+6. does hdlb0.c have ability to take arg of how many cycles it should run?
+🅰️
+Perfect! Now I can answer the question. Based on my examination of the
+  main function in the HALO.c file, I can see that:
+
+  The current implementation of HALO:HDLB0 does NOT have the ability to
+  take an argument for how many cycles it should run. The main function
+  only accepts one argument (the program file name):
+🅰️
+🆎️
+ Now the code has been updated to remove the initial run
+  completely. The behavior will now be:
+
+   1. If a max_cycles value is provided, the emulator will run
+      exactly that many cycles automatically and then return to
+      interactive mode
+   2. If no max_cycles value is provided, the emulator will go
+      directly to interactive mode without running any cycles
+      automatically
+
+
+/Desktop/qwen/oct-26/☮️.HDLb0.PIECE©️]g10]ϕ+1$
+ ./+x/0.hdlb0]b17.+x program]a0]PROOF.txt 3
+🆎️
+🅾️
+now, is it "really working?" how to know? can we get a "chtml-id'd visual of each chip 4 ez use? "
+🅾️
+
