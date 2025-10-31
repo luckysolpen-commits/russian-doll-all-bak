@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple OS Terminal</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --font-family: monospace;
+
+            --terminal-bg: #000000;
+            --terminal-text: #00ff00;
+            --title-bg: #e0e0e0;
+            --title-text: #000000;
+            --toolbar-bg: #333333;
+            --toolbar-text: #ffffff;
+            --context-bg: #ffffff;
+            --context-text: #000000;
+            --context-hover: #f0f0f0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            height: 100vh;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        #toolbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: var(--toolbar-bg);
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            z-index: 100;
+        }
+
+        #toolbar button {
+            background: #555;
+            color: var(--toolbar-text);
+            border: none;
+            padding: 8px 12px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #toolbar button:hover {
+            background: #666;
+        }
+
+        .terminal-window {
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            resize: both;
+            min-width: 200px;
+            min-height: 150px;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .title-bar {
+            height: 24px;
+            background: var(--title-bg);
+            color: var(--title-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8px;
+            cursor: move;
+            font-size: 12px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .close-btn {
+            background: #ff4444;
+            color: white;
+            border: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            background: #cc0000;
+        }
+
+        .terminal-content {
+            height: calc(100% - 24px);
+            display: flex;
+            flex-direction: column;
+            background: var(--terminal-bg);
+        }
+
+        .output {
+            flex: 1;
+            overflow-y: auto;
+            padding: 8px;
+            color: var(--terminal-text);
+            font-family: monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .output div {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .cmd-input {
+            background: var(--terminal-bg);
+            color: var(--terminal-text);
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-family: monospace;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .cmd-input::placeholder {
+            color: #555;
+        }
+
+        #context-menu {
+            position: absolute;
+            background: var(--context-bg);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            z-index: 1000;
+            min-width: 150px;
+        }
+
+        #context-menu li {
+            padding: 10px 15px;
+            cursor: pointer;
+            color: var(--context-text);
+            border-bottom: 1px solid #eee;
+        }
+
+        #context-menu li:last-child {
+            border-bottom: none;
+        }
+
+        #context-menu li:hover {
+            background: var(--context-hover);
+        }
+
+        #customize-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            min-width: 300px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .modal-content label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .modal-content input, .modal-content select {
+            margin-left: 10px;
+            padding: 4px;
+        }
+
+        .modal-content button {
+            background: #555;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .modal-content button:hover {
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="toolbar">
+        <button id="term-btn">Term</button>
+        <button>Files</button>
+        <button>Settings</button>
+    </div>
+
+    <ul id="context-menu">
+        <li onclick="newTerminal()">New Terminal</li>
+        <li onclick="dummyOption1()">Dummy Option 1</li>
+        <li onclick="dummyOption2()">Dummy Option 2</li>
+        <li onclick="customize()">Customize</li>
+    </ul>
+
+    <div id="customize-panel">
+        <div class="modal-content">
+            <h3>Customize Theme</h3>
+            <label>Desktop Background: <input type="color" id="bg-color" value="#000000" onchange="updateTheme()"></label>
+            <label>Desktop Text: <input type="color" id="text-color" value="#ffffff" onchange="updateTheme()"></label>
+            <label>Font Family: 
+                <select id="font-family" onchange="updateTheme()">
+                    <option value="monospace">Monospace</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+            </label>
+            <h4>Terminal</h4>
+            <label>Terminal Background: <input type="color" id="terminal-bg" value="#000000" onchange="updateTheme()"></label>
+            <label>Terminal Text: <input type="color" id="terminal-text" value="#00ff00" onchange="updateTheme()"></label>
+            <h4>Window</h4>
+            <label>Title Bar Background: <input type="color" id="title-bg" value="#e0e0e0" onchange="updateTheme()"></label>
+            <label>Title Bar Text: <input type="color" id="title-text" value="#000000" onchange="updateTheme()"></label>
+            <h4>Toolbar</h4>
+            <label>Toolbar Background: <input type="color" id="toolbar-bg" value="#333333" onchange="updateTheme()"></label>
+            <label>Toolbar Text: <input type="color" id="toolbar-text" value="#ffffff" onchange="updateTheme()"></label>
+            <h4>Context Menu</h4>
+            <label>Context Background: <input type="color" id="context-bg" value="#ffffff" onchange="updateTheme()"></label>
+            <label>Context Text: <input type="color" id="context-text" value="#000000" onchange="updateTheme()"></label>
+            <label>Context Hover: <input type="color" id="context-hover" value="#f0f0f0" onchange="updateTheme()"></label>
+            <button onclick="closeCustomize()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const terminals = [];
+        const maxTerminals = 10;
+        let currentZ = 10;
+
+        function createTerminal() {
+            if (terminals.length >= maxTerminals) {
+                alert('Maximum of 10 terminals reached.');
+                return;
+            }
+
+            const win = document.createElement('div');
+            win.className = 'terminal-window';
+            win.style.left = (Math.random() * 300 + 50) + 'px';
+            win.style.top = (Math.random() * 300 + 50) + 'px';
+            win.style.zIndex = currentZ++;
+            win.innerHTML = `
+                <div class="title-bar">
+                    Terminal
+                    <button class="close-btn" onclick="closeTerminal(this)">×</button>
+                </div>
+                <div class="terminal-content">
+                    <div class="output">
+                        <div>$ Welcome to the terminal!</div>
+                        <div>> </div>
+                    </div>
+                    <input type="text" class="cmd-input" placeholder="$ " onkeypress="handleCmd(event, this)" autofocus>
+                </div>
+            `;
+            document.body.appendChild(win);
+            makeDraggable(win);
+            addFocusHandler(win);
+            terminals.push(win);
+        }
+
+        function addFocusHandler(win) {
+            win.addEventListener('click', function(e) {
+                if (!e.target.closest('.title-bar') && !e.target.closest('.close-btn')) {
+                    win.style.zIndex = currentZ++;
+                    const input = win.querySelector('.cmd-input');
+                    input.focus();
+                }
+            });
+        }
+
+        function newTerminal() {
+            createTerminal();
+            hideContextMenu();
+        }
+
+        function closeTerminal(btn) {
+            const win = btn.closest('.terminal-window');
+            win.remove();
+            terminals.splice(terminals.indexOf(win), 1);
+        }
+
+        function handleCmd(e, input) {
+            if (e.key === 'Enter') {
+                const cmd = input.value.trim();
+                const output = input.parentElement.querySelector('.output');
+                output.innerHTML += `<div>$${cmd}</div><div>> ${cmd || '(empty command executed)'}</div>`;
+                output.scrollTop = output.scrollHeight;
+                input.value = '';
+            }
+        }
+
+        function makeDraggable(el) {
+            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            const titleBar = el.querySelector('.title-bar');
+            titleBar.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDrag;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                el.style.top = (el.offsetTop - pos2) + 'px';
+                el.style.left = (el.offsetLeft - pos1) + 'px';
+            }
+
+            function closeDrag() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+
+        function dummyOption1() {
+            console.log('Dummy Option 1 clicked');
+            hideContextMenu();
+        }
+
+        function dummyOption2() {
+            console.log('Dummy Option 2 clicked');
+            hideContextMenu();
+        }
+
+        function customize() {
+            document.getElementById('customize-panel').style.display = 'flex';
+            hideContextMenu();
+        }
+
+        function closeCustomize() {
+            document.getElementById('customize-panel').style.display = 'none';
+        }
+
+        function updateTheme() {
+            document.documentElement.style.setProperty('--bg-color', document.getElementById('bg-color').value);
+            document.documentElement.style.setProperty('--text-color', document.getElementById('text-color').value);
+            document.documentElement.style.setProperty('--font-family', document.getElementById('font-family').value);
+            document.documentElement.style.setProperty('--terminal-bg', document.getElementById('terminal-bg').value);
+            document.documentElement.style.setProperty('--terminal-text', document.getElementById('terminal-text').value);
+            document.documentElement.style.setProperty('--title-bg', document.getElementById('title-bg').value);
+            document.documentElement.style.setProperty('--title-text', document.getElementById('title-text').value);
+            document.documentElement.style.setProperty('--toolbar-bg', document.getElementById('toolbar-bg').value);
+            document.documentElement.style.setProperty('--toolbar-text', document.getElementById('toolbar-text').value);
+            document.documentElement.style.setProperty('--context-bg', document.getElementById('context-bg').value);
+            document.documentElement.style.setProperty('--context-text', document.getElementById('context-text').value);
+            document.documentElement.style.setProperty('--context-hover', document.getElementById('context-hover').value);
+        }
+
+        function hideContextMenu() {
+            document.getElementById('context-menu').style.display = 'none';
+        }
+
+        // Event listeners
+        document.getElementById('term-btn').onclick = createTerminal;
+
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            const menu = document.getElementById('context-menu');
+            menu.style.display = 'block';
+            menu.style.left = e.pageX + 'px';
+            menu.style.top = e.pageY + 'px';
+        });
+
+        document.addEventListener('click', hideContextMenu);
+    </script>
+</body>
+</html>

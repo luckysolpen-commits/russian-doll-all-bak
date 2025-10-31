@@ -1,0 +1,446 @@
+const terminals = [];
+const maxTerminals = 10;
+let currentZ = 10;
+
+// Global variable to store current user
+let currentUser = null;
+
+// User authentication functions
+function login(username, password) {
+    // In a real implementation, you would verify credentials
+    // For now, we'll just accept any non-empty username
+    if (username && username.trim() !== '') {
+        currentUser = username.trim();
+        updateUserDisplay();
+        return `Successfully logged in as ${currentUser}`;
+    } else {
+        return 'Username cannot be empty. Usage: login [username] [password]';
+    }
+}
+
+function logout() {
+    const prevUser = currentUser;
+    currentUser = null;
+    updateUserDisplay();
+    return `Successfully logged out from ${prevUser}`;
+}
+
+function getCurrentUser() {
+    return currentUser;
+}
+
+function updateUserDisplay() {
+    const userDisplay = document.getElementById('user-display');
+    if (userDisplay) {
+        if (currentUser) {
+            userDisplay.textContent = currentUser;
+        } else {
+            userDisplay.textContent = 'Guest';
+        }
+    }
+}
+
+function createTerminal() {
+    if (terminals.length >= maxTerminals) {
+        alert('Maximum of 10 terminals reached.');
+        return;
+    }
+
+    const win = document.createElement('div');
+    win.className = 'terminal-window';
+    win.style.left = (Math.random() * 300 + 50) + 'px';
+    win.style.top = (Math.random() * 300 + 50) + 'px';
+    win.style.zIndex = currentZ++;
+    win.innerHTML = `
+        <div class="title-bar">
+            Terminal
+            <button class="close-btn" onclick="closeTerminal(this)">×</button>
+        </div>
+        <div class="terminal-content">
+            <div class="output">
+                <div class="terminal-prompt"><span class="prompt-symbol">></span> Welcome to JS CLI App! Type 'help' for available commands.</div>
+                <div class="terminal-prompt"><span class="prompt-symbol">></span> Current user: ${currentUser || 'Guest'}</div>
+            </div>
+            <div class="input-area">
+                <span class="prompt-symbol">$</span>
+                <span id="cmd-input-span" contenteditable="true" class="cmd-input-span" tabindex="0"></span>
+                <span id="cursor">|</span>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(win);
+    makeDraggable(win);
+    addFocusHandler(win);
+    setupTerminalInput(win);
+    terminals.push(win);
+    
+    // Focus on the input span
+    const inputSpan = win.querySelector('#cmd-input-span');
+    if (inputSpan) {
+        inputSpan.focus();
+        placeCaretAtEnd(inputSpan);
+    }
+}
+
+function addFocusHandler(win) {
+    win.addEventListener('click', function(e) {
+        if (!e.target.closest('.title-bar') && !e.target.closest('.close-btn')) {
+            win.style.zIndex = currentZ++;
+            const input = win.querySelector('.cmd-input-span');
+            if (input) {
+                input.focus();
+                placeCaretAtEnd(input);
+            }
+        }
+    });
+}
+
+function newTerminal() {
+    createTerminal();
+    hideContextMenu();
+}
+
+function closeTerminal(btn) {
+    const win = btn.closest('.terminal-window');
+    win.remove();
+    terminals.splice(terminals.indexOf(win), 1);
+}
+
+// Add command history functionality
+let commandHistory = [];
+let historyIndex = -1;
+
+function setupTerminalInput(terminalWindow) {
+    const inputSpan = terminalWindow.querySelector('.cmd-input-span');
+    const outputDiv = terminalWindow.querySelector('.output');
+    
+    // Function to add a line to the output
+    function addOutputLine(content) {
+        const outputLine = document.createElement('div');
+        outputLine.className = 'terminal-prompt';
+        outputLine.innerHTML = content;
+        outputDiv.appendChild(outputLine);
+        
+        // Scroll to bottom
+        outputDiv.scrollTop = outputDiv.scrollHeight;
+    }
+    
+    inputSpan.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            
+            const command = this.innerText.trim();
+            
+            // Add to command history
+            if (command) {
+                commandHistory.push(command);
+                historyIndex = commandHistory.length; // Set to end of history
+            }
+            
+            // Add command to output as input echo
+            addOutputLine(`<span class="prompt-symbol">$</span> ${command}`);
+            
+            // Process the command
+            processCommand(command, outputDiv);
+            
+            // Clear the input for the next command
+            this.innerText = '';
+            
+            // Ensure cursor is at the end
+            placeCaretAtEnd(this);
+        }
+        else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            // Navigate up in command history
+            if (commandHistory.length > 0) {
+                if (historyIndex <= 0) {
+                    historyIndex = commandHistory.length;
+                }
+                historyIndex--;
+                this.innerText = commandHistory[historyIndex];
+                placeCaretAtEnd(this);
+            }
+        }
+        else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            // Navigate down in command history
+            if (commandHistory.length > 0 && historyIndex < commandHistory.length - 1) {
+                historyIndex++;
+                this.innerText = commandHistory[historyIndex];
+            } else {
+                historyIndex = commandHistory.length;
+                this.innerText = ''; // Clear if at the end of history
+            }
+            placeCaretAtEnd(this);
+        }
+    });
+}
+
+function processCommand(command, outputDiv) {
+    // Split command and potential arguments
+    const parts = command.trim().split(/\s+/);
+    const cmd = parts[0].toLowerCase();
+    const args = parts.slice(1);
+    
+    let response = '';
+    
+    switch (cmd) {
+        case 'list':
+            response = 'Available apps:\n- settings\n- profiles\n- wallet\n- store\n- msr\n- craft';
+            break;
+        case 'help':
+            response = 'Available commands:\n- list: Show available apps\n- help: Show this help message\n- login: Login with username [usage: login username]\n- logout: Logout from current session\n- settings: Open settings panel\n- profiles: Manage profiles\n- wallet: Access wallet\n- store: Access store\n- msr: Run MSR app\n- craft: Open 3D crafting game';
+            break;
+        case 'login':
+            if (args.length >= 1) {
+                response = login(args[0], args[1] || ''); // password is optional in this simple implementation
+            } else {
+                response = 'Usage: login [username] [password]';
+            }
+            break;
+        case 'logout':
+            response = logout();
+            break;
+        case 'settings':
+            if (window.settingsApp) {
+                window.settingsApp.openCustomizePanel();
+                response = 'Opening settings panel...';
+            } else {
+                response = 'Settings app not loaded. Try refreshing the page.';
+            }
+            break;
+        case 'profiles':
+            response = 'Opening profiles app...';
+            // In a real implementation, this would load profiles.js
+            break;
+        case 'wallet':
+            response = 'Opening wallet app...';
+            // In a real implementation, this would load wallet.js
+            break;
+        case 'store':
+            response = 'Opening store app...';
+            // In a real implementation, this would load store.js
+            break;
+        case 'msr':
+            if (window.msrApp) {
+                window.msrApp.showGUI();
+                response = 'MSR application opened.';
+            } else {
+                response = 'MSR app not loaded. Try refreshing the page.';
+            }
+            break;
+        case 'craft':
+            if (window.craftApp) {
+                window.craftApp.showGUI();
+                response = 'Craft application opened. Use ARROWS to move, WASD to look around, SPACE to jump, ESC for picker mode.';
+            } else {
+                response = 'Craft app not loaded. Try refreshing the page.';
+            }
+            break;
+        default:
+            response = `Command '${command}' not recognized. Type 'help' for available commands.`;
+    }
+    
+    // Add the response to the output
+    const responseLines = response.split('\n');
+    responseLines.forEach(line => {
+        if (line.trim() !== '') {  // Only add non-empty lines
+            const responseLine = document.createElement('div');
+            responseLine.className = 'terminal-prompt';
+            responseLine.innerHTML = `<span class="prompt-symbol">></span> ${line}`;
+            outputDiv.appendChild(responseLine);
+        }
+    });
+    
+    // Scroll to bottom
+    outputDiv.scrollTop = outputDiv.scrollHeight;
+}
+
+function placeCaretAtEnd(el) {
+    el.focus();
+    if (typeof window.getSelection != "undefined" && typeof document.createRange != "undefined") {
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        range.collapse(false);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+    }
+}
+
+function handleCmd(e, input) {
+    // This function is kept for compatibility but might not be used with the new interface
+    if (e.key === 'Enter') {
+        const cmd = input.value.trim();
+        const output = input.parentElement.querySelector('.output');
+        output.innerHTML += `<div>$${cmd}</div><div>> ${cmd || '(empty command executed)'}</div>`;
+        output.scrollTop = output.scrollHeight;
+        input.value = '';
+    }
+}
+
+function makeDraggable(el) {
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    const titleBar = el.querySelector('.title-bar');
+    titleBar.onmousedown = dragMouseDown;
+
+    function dragMouseDown(e) {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDrag;
+        document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        el.style.top = (el.offsetTop - pos2) + 'px';
+        el.style.left = (el.offsetLeft - pos1) + 'px';
+    }
+
+    function closeDrag() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+
+function dummyOption1() {
+    console.log('Dummy Option 1 clicked');
+    hideContextMenu();
+}
+
+function dummyOption2() {
+    console.log('Dummy Option 2 clicked');
+    hideContextMenu();
+}
+
+function customize() {
+    document.getElementById('customize-panel').style.display = 'flex';
+    hideContextMenu();
+    
+    // Call the settings app if it exists
+    if (window.settingsApp) {
+        window.settingsApp.openCustomizePanel();
+    }
+}
+
+function closeCustomize() {
+    document.getElementById('customize-panel').style.display = 'none';
+}
+
+function openTestPanel() {
+    document.getElementById('test-panel').style.display = 'flex';
+}
+
+function closeTestPanel() {
+    document.getElementById('test-panel').style.display = 'none';
+}
+
+// Initialize the settings app when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof SettingsApp !== 'undefined') {
+        if (!window.settingsApp) {
+            window.settingsApp = new SettingsApp();
+            window.settingsApp.init();
+        }
+    }
+    
+    // Initialize user display
+    updateUserDisplay();
+});
+
+function updateTheme() {
+    document.documentElement.style.setProperty('--bg-color', document.getElementById('bg-color').value);
+    document.documentElement.style.setProperty('--text-color', document.getElementById('text-color').value);
+    document.documentElement.style.setProperty('--font-family', document.getElementById('font-family').value);
+    document.documentElement.style.setProperty('--terminal-bg', document.getElementById('terminal-bg').value);
+    document.documentElement.style.setProperty('--terminal-text', document.getElementById('terminal-text').value);
+    document.documentElement.style.setProperty('--title-bg', document.getElementById('title-bg').value);
+    document.documentElement.style.setProperty('--title-text', document.getElementById('title-text').value);
+    document.documentElement.style.setProperty('--toolbar-bg', document.getElementById('toolbar-bg').value);
+    document.documentElement.style.setProperty('--toolbar-text', document.getElementById('toolbar-text').value);
+    document.documentElement.style.setProperty('--context-bg', document.getElementById('context-bg').value);
+    document.documentElement.style.setProperty('--context-text', document.getElementById('context-text').value);
+    document.documentElement.style.setProperty('--context-hover', document.getElementById('context-hover').value);
+}
+
+function hideContextMenu() {
+    document.getElementById('context-menu').style.display = 'none';
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded fired');
+    
+    document.getElementById('term-btn').onclick = createTerminal;
+
+    // Add event listener for Settings button
+    const settingsBtn = document.getElementById('settings-btn');
+    console.log('Settings button element:', settingsBtn);
+    if (settingsBtn) {
+        settingsBtn.addEventListener('click', function() {
+            console.log('Settings button clicked!');
+            customize();
+        });
+        console.log('Event listener added to Settings button');
+    } else {
+        console.log('Settings button not found!');
+    }
+
+    // Add event listener for Files button
+    const filesBtn = document.getElementById('files-btn');
+    console.log('Files button element:', filesBtn);
+    if (filesBtn) {
+        filesBtn.addEventListener('click', function() {
+            // You can add files functionality here if needed
+            console.log('Files button clicked');
+        });
+        console.log('Event listener added to Files button');
+    }
+
+    // Add event listener for Test button
+    const testBtn = document.getElementById('test-btn');
+    console.log('Test button element:', testBtn);
+    if (testBtn) {
+        testBtn.addEventListener('click', function() {
+            console.log('Test button clicked!');
+            openTestPanel();
+        });
+        console.log('Event listener added to Test button');
+    } else {
+        console.log('Test button not found!');
+    }
+
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        const menu = document.getElementById('context-menu');
+        menu.style.display = 'block';
+        menu.style.left = e.pageX + 'px';
+        menu.style.top = e.pageY + 'px';
+    });
+
+    document.addEventListener('click', function(e) {
+        const contextMenu = document.getElementById('context-menu');
+        const customizePanel = document.getElementById('customize-panel');
+        const testPanel = document.getElementById('test-panel');
+        
+        // Check if the click is outside the context menu and the menu is visible
+        if (contextMenu.offsetParent !== null && !contextMenu.contains(e.target)) {
+            hideContextMenu();
+        }
+        
+        // Check if the click is outside the customize panel and the panel is visible
+        if (customizePanel.offsetParent !== null && !customizePanel.contains(e.target)) {
+            closeCustomize();
+        }
+        
+        // Check if the click is outside the test panel and the panel is visible
+        if (testPanel.offsetParent !== null && !testPanel.contains(e.target)) {
+            closeTestPanel();
+        }
+    });
+});

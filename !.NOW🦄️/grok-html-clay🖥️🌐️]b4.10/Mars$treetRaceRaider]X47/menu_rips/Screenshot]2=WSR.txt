@@ -1,0 +1,107 @@
+File | Game Options | Settings | Help
+
+
+
+Active Entity Selected:
+(Player or Company)
+
+-Research Menus and Tools:-
+Select Player
+My News
+Entity Info
+Select Corp.
+Select Last
+General
+----------------------------------------
+
+
+-Transactions:-
+Buy Stock
+Buy/Sell
+Financing
+Sell Stock
+Management 
+Other Trans
+-----------------------------------------------------
+Stock Symbol.... N/A Go
+Stock Price.......Start Game!
+Controlled By.....Start Game!
+
+Acting Now.......Start Game!
+---------------------------
+Date: January 1, 2025
+Next Earnings Release Date: N/A 
+Player: ????
+-Other:-
+
+----------------------------------
+End Turn
+Misc. Menu 
+Chart 
+Cheat
+---------------------------------
+
+-Streaming Stock Quotes List:-
+Add/Del. Select Fill Clear
+-----------------------------------------------
+My Balance Sheet: (Millions)
+Cash (DD's).....
+0.00
+Other Assets....
+Total Assets.....
+0.00 0.00
+Less Debt....
+-0.00
+Net Worth........
+0.00
+----------------------------------------------
+TICKER ON/OFF
+------------------------------------------------
+
+Transactions Remaining: 5
+FINANCIAL NEWS HEADLINES
+
+
+
+-Quick Search Functions:-
+Research Report
+List Portfolio Holdings
+List Futures Contracts
+Financial Profile
+List Put and Call Options
+Recall DB Search List
+
+----------------------------------
+Commodity Prices/Indexes/Indicators:
+Stock Index: Market closed 
+Prime Rate: 7.25%
+Long Bond:7.25%
+Short Bond:6.50%
+Spot Crude:
+$100.00
+Silver:
+$20.00
+Spot Gold:$1,200.00 
+Spot Wheat:$5.00
+GDP Growth:2.5%
+Spot Corn:$5.00
+------------------------------------------
+
+
+Earnings Report
+List Shareholders
+My Corporations
+
+
+
+
+
+
+
+
+
+
+
+Click on FILE / NEW GAME to start a new game...
+Or, click on FILE / OPEN SAVED GAME to retrieve a game you saved. Click on SETTINGS/RESELECT CURRENCY to select currency, BEFORE starting a new game if you wish to change currency selection (USA). (Saved games use the currency that was selected for that game.]
+.In W$R, time progresses as the stock ticker moves...

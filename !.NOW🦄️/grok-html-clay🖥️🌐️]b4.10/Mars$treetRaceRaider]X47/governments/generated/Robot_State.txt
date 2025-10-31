@@ -1,0 +1,4 @@
+GOVERNMENT FINANCIAL DATA: Robot State
+---------------------------------------------
+GDP (in millions): 4
+Population: 124

@@ -1,0 +1,3 @@
+i need a very simple html and js that will take in user input like a command line, and "execute functions" based on a list of evals or whatever. for now it can just do nothing and go to new line (a terminal) we will add more features later. heres the catch tho. the original html page should start empty only open cept for a "os like toolbar of apps, one of which is "term") and resizable terminals will appear on page (max 10 ) , also we will let user right click and choose terminal from other dummy option. also another option should be customize, which lets user change colors and fonts
+
+🖥️🌐️

@@ -1,0 +1,4 @@
+GOVERNMENT FINANCIAL DATA: Solar Empire
+---------------------------------------------
+GDP (in millions): 27
+Population: 343

@@ -1,0 +1,27 @@
+🦉️
+[]High Return on equity (at least x%) : [20%]
+[]Low P/E ratio Stocks - P/E Less Than : [10]
+[]Stock Price Less than x% of Net Worth : [95%] {*value/bvp}
+[]Dividend Yield is x % or More : [5%]
+[]Min/Max Market Cap (Millions) : [200][1000]
+[]Earnings up Next Quarter by x % or More [10%]
+[]Earning up last 1,2,3 Years [^change][#1]
+[]Management Rated at least [^change][Poor,Good,AVG]
+[]Credit Rating is at least [^change][AAA,AA,A,BBB,BB,B,CCC,CC,C,D]
+[]Analyst Rating is [^change][StrongBuy,Buy,Hold,Sell,StrongSell]
+[]Industry Supply/Demand Improving (N/A to financial Co's.)
+[]Don't Show if Companys Stock is Not Publically Traded
+[]Has Bonds Issued/Outstanding (Select  for bond research)
+Number of Companies Meeting Search Criteria :[]
+
+[^Display Results][^Clear Checkboxes][^Help][^Close]
+
+(can tab up and down thru boxes 2 select[][*])
+can hit "enter on button"(can color highlight/{word grab} if selected)
+
+
+
+
+
+
+(im guessing ai uses these + weights 2 make moves)

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mojicraft - Floating Pyramid Planet</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main";
+            grid-template-rows: 50px 1fr;
+            grid-template-columns: 15% 85%;
+            height: 100vh;
+        }
+        
+        #header {
+            grid-area: header;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid white;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+        
+        #header button {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        #header button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.1);
+            z-index: 100;
+            border: 1px solid white;
+        }
+
+        .dropdown .dropdown-content .submenu {
+            position: relative;
+        }
+
+        .dropdown .dropdown-content .submenu .submenu-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            min-width: 120px;
+            border: 1px solid white;
+        }
+
+        .dropdown .dropdown-content .submenu:hover .submenu-content {
+            display: block;
+        }
+
+        .dropdown-content button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown:hover > .dropdown-content {
+            display: block;
+        }
+        
+        #sidebar {
+            grid-area: sidebar;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-right: 2px solid white;
+            overflow-y: auto;
+            padding: 10px;
+            color: white;
+        }
+
+        .sidebar-window {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-window h3 {
+            margin-top: 0;
+            font-size: 16px;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+        }
+
+        #color-palette {
+            display: flex;
+            flex-wrap: wrap;
+            width: 110px;
+            height: 120px;
+            overflow-y: auto;
+            border: 1px solid #555;
+            padding: 2px;
+            margin-top: 10px;
+        }
+
+        .palette-item {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            border: 1px solid #555;
+            margin: 2px;
+        }
+
+        .palette-item.selected {
+            border: 2px solid yellow;
+        }
+
+        #color-status {
+            margin-top: 10px;
+            height: 20px;
+            font-size: 12px;
+        }
+
+        #file-viewer {
+            height: 65px; /* Show ~3 items before scrolling */
+            overflow-y: auto;
+            border: 1px solid #555;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        .file-item {
+            padding: 2px 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .file-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        #main {
+            grid-area: main;
+            position: relative;
+        }
+        
+        #gameContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #canvasContainer {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #crosshair {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .crosshair-line {
+            position: absolute;
+            background-color: white;
+        }
+        
+        #horizontal {
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 2px;
+            transform: translate(-50%, -50%);
+        }
+        
+        #vertical {
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            transform: translate(-50%, -50%);
+        }
+        
+        #uiContainer {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid white;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        #minimapCanvas {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #coordinates {
+            position: absolute;
+            top: 220px;
+            right: 20px;
+            color: white;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            font-size: 14px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        #inventory {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid white;
+            color: white;
+            padding: 20px;
+            display: none;
+            pointer-events: all;
+            z-index: 100;
+        }
+
+        #menu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid white;
+            color: white;
+            padding: 20px;
+            display: none;
+            pointer-events: all;
+            z-index: 100;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="dropdown">
+            <button id="fileBtn">File</button>
+            <div id="fileDropdown" class="dropdown-content">
+                <button id="newBtn">New</button>
+                <div class="submenu">
+                    <button>Open Project <span>&gt;</span></button>
+                    <div class="submenu-content">
+                        <button class="project-btn" data-project="default">default</button>
+                        <button class="project-btn" data-project="009">009</button>
+                        <button class="project-btn" data-project="colors">colors</button>
+                    </div>
+                </div>
+                <button id="saveBtn">Save</button>
+            </div>
+        </div>
+        <button id="textBtn">text</button>
+        <button id="platBtn">plat</button>
+        <button id="view2DBtn">2d</button>
+        <button id="view3DBtn">3d</button>
+    </div>
+    
+    <div id="sidebar">
+        <div class="sidebar-window">
+            <h3>Color Picker</h3>
+            <div id="color-palette"></div>
+            <div id="color-status">Select a color!</div>
+        </div>
+        <div class="sidebar-window">
+            <h3>File Viewer</h3>
+            <div id="file-viewer">
+                <!-- File items will be added here by JavaScript -->
+            </div>
+            <!-- Hidden file input for loading maps -->
+            <input type="file" id="mapFileInput" accept=".txt" style="display: none;">
+        </div>
+    </div>
+    
+    <div id="main">
+        <div id="gameContainer">
+            <div id="canvasContainer">
+                <canvas id="view2DCanvas" style="display: none; position: absolute; width: 100%; height: 100%;"></canvas>
+            </div>
+            
+            <div id="crosshair">
+                <div id="horizontal" class="crosshair-line"></div>
+                <div id="vertical" class="crosshair-line"></div>
+            </div>
+            
+            <div id="uiContainer">
+                <canvas id="minimapCanvas" width="200" height="200"></canvas>
+            </div>
+            
+            <div id="coordinates">X: 0.0, Y: 0.0, Z: 0.0</div>
+            
+            <div id="controls">
+                <div>ARROWS: Move (both views)</div>
+                <div>WASD: Look around (3D only)</div>
+                <div>SPACE: Jump</div>
+                <div>ESC: Picker mode</div>
+                <div>CTRL: Control block</div>
+                <div>ENTER: Use item</div>
+                <div>SHIFT: Mine</div>
+                <div>I: Inventory</div>
+                <div>M: Menu</div>
+            </div>
+
+            <div id="inventory">
+                <button class="close-btn" onclick="toggleInventory()">X</button>
+                <h3>Inventory</h3>
+                <p>Empty for now...</p>
+            </div>
+
+            <div id="menu">
+                <button class="close-btn" onclick="toggleMenu()">X</button>
+                <h3>Menu</h3>
+                <p>Game Menu</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.144.0/three.min.js"></script>
+    <script src="1.model.js"></script>
+    <script src="2.view.js"></script>
+    <script src="3.controller.js"></script>
+    <script src="4.project-manager.js"></script>
+
+    <script>
+        // Color Picker Logic
+        const colors = [
+            [255, 0, 0], [0, 255, 0], [0, 0, 255], [255, 255, 0], [0, 255, 255], [255, 0, 255],
+            [255, 255, 255], [0, 0, 0], [128, 0, 0], [0, 128, 0], [0, 0, 128], [128, 128, 0],
+            [128, 0, 128], [0, 128, 128], [192, 192, 192], [128, 128, 128], [255, 165, 0], [255, 192, 203]
+        ];
+        const colorNames = ["Red", "Green", "Blue", "Yellow", "Cyan", "Magenta", "White", "Black", "Maroon", "Dark Green", "Navy", "Olive", "Purple", "Teal", "Silver", "Gray", "Orange", "Pink"];
+        let selectedColor = 0;
+
+        function setupColorPalette() {
+            const colorPalette = document.getElementById('color-palette');
+            colors.forEach((color, i) => {
+                const item = document.createElement('div');
+                item.className = 'palette-item';
+                item.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+                item.dataset.idx = i;
+                item.addEventListener('click', () => {
+                    selectedColor = i;
+                    updateSelections();
+                    console.log(`Color selected: ${colorNames[i]} - RGB(${color[0]}, ${color[1]}, ${color[2]})`);
+                });
+                colorPalette.appendChild(item);
+            });
+            updateSelections();
+        }
+
+        function updateSelections() {
+            document.querySelectorAll('#color-palette .palette-item').forEach((item, i) => {
+                item.classList.toggle('selected', i === selectedColor);
+            });
+            document.getElementById('color-status').textContent = `Selected: ${colorNames[selectedColor]}`;
+        }
+
+        // File Viewer Logic
+        const projectFiles = {
+            'default': ['global_events.txt', 'map_0_events.txt', 'map_0.txt', 'map_1.txt', 'map_2_events.txt', 'map_2.txt', 'map_events_0.txt'],
+            '009': ['global_events.txt', 'map_0_events.txt', 'map_0.txt', 'map_1_events.txt', 'map_1.txt'],
+            'colors': ['global_ev', 'map_0.txt']
+        };
+
+        function updateFileViewer(projectName) {
+            const fileViewer = document.getElementById('file-viewer');
+            fileViewer.innerHTML = ''; // Clear existing files
+
+            const files = projectFiles[projectName] || [];
+            files.forEach(fileName => {
+                const item = document.createElement('div');
+                item.className = 'file-item';
+                item.textContent = fileName;
+                // We'll handle clicks in the event listener we added above
+                fileViewer.appendChild(item);
+            });
+        }
+
+        // Initialize
+        setupColorPalette();
+        updateFileViewer('default');
+
+        // Add event listeners for project selection
+        document.querySelectorAll('.project-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const projectName = e.target.dataset.project;
+                projectManager.setCurrentProject(projectName);
+                updateFileViewer(projectName);
+            });
+        });
+
+        // Add file input handler for loading maps
+        document.getElementById('mapFileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file && file.name.endsWith('.txt')) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const csvData = e.target.result;
+                    // Clear existing blocks
+                    blocks.forEach((blockData) => {
+                        scene.remove(blockData.mesh);
+                    });
+                    blocks.clear();
+                    
+                    // Parse and create blocks from CSV data
+                    if (projectManager.parseCSVAndCreateBlocks(csvData)) {
+                        console.log(`Loaded map from file: ${file.name}`);
+                    } else {
+                        console.error(`Failed to load map from file: ${file.name}`);
+                    }
+                };
+                reader.readAsText(file);
+            }
+            // Reset file input
+            event.target.value = '';
+        });
+
+        // Add click handler to file viewer items to allow loading
+        document.getElementById('file-viewer').addEventListener('click', function(e) {
+            if (e.target.classList.contains('file-item')) {
+                const fileName = e.target.textContent;
+                const projectName = projectManager.getCurrentProject();
+                // Load the selected map file
+                projectManager.loadMapFile(projectName, fileName);
+            }
+        });
+    </script>
+</body>
+</html>
