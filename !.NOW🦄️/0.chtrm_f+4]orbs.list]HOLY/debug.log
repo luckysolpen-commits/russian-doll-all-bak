@@ -1,0 +1,508 @@
+=== CHTM Renderer Started ===
+Starting with file: chtm/index.chtm
+Launching module: modules/+x/canvas_player_v.01.+x
+Module launched successfully, PID: 181840
+Setting focus to element index 1
+In child process, executing module: modules/+x/canvas_player_v.01.+x
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Skipping non-canvas response: Canvas initialized with size 8x8. Player at (0,0)
+Received VAR response: VAR:player_x=0
+Setting variable: player_x = 0
+Created new variable player_x with value 0
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Created new variable player_y with value 0
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Created new variable selected_palette_index with value 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Created new variable selected_symbol with value  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=0
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 5
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=0
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 6
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=0
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 7
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=0
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 1
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=0
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=0
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Sending IPC command: MOVE:R
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=1
+Setting variable: player_x = 1
+Updated existing variable player_x to 1
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Sending IPC command: MOVE:R
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (1, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=2
+Setting variable: player_x = 2
+Updated existing variable player_x to 2
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Sending IPC command: MOVE:R
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (2, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Sending IPC command: MOVE:D
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 0)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=1
+Setting variable: player_y = 1
+Updated existing variable player_y to 1
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Sending IPC command: MOVE:D
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 1)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 2)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 5
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 2)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 6
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 2)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 5
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 2)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 2)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Sending IPC command: PALETTE_MOVE:R
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=0
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Received VAR response: VAR:selected_symbol= 
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 2)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Sending IPC command: PALETTE_MOVE:R
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=1
+Setting variable: selected_palette_index = 1
+Updated existing variable selected_palette_index to 1
+Received VAR response: VAR:selected_symbol=!
+Setting variable: selected_symbol = !
+Updated existing variable selected_symbol to !
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 2)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Sending IPC command: PALETTE_MOVE:R
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=2
+Setting variable: selected_palette_index = 2
+Updated existing variable selected_palette_index to 2
+Received VAR response: VAR:selected_symbol=#
+Setting variable: selected_symbol = #
+Updated existing variable selected_symbol to #
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 2)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY
+Received VAR response: VAR:selected_palette_index=3
+Setting variable: selected_palette_index = 3
+Updated existing variable selected_palette_index to 3
+Received VAR response: VAR:selected_symbol=$
+Setting variable: selected_symbol = $
+Updated existing variable selected_symbol to $
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (3, 2)
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY_PALETTE
+Received VAR response: VAR:player_x=3
+Setting variable: player_x = 3
+Updated existing variable player_x to 3
+Received VAR response: VAR:player_y=2
+Setting variable: player_y = 2
+Updated existing variable player_y to 2
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x

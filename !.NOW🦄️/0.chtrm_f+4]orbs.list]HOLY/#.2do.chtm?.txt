@@ -1,0 +1,19 @@
+🎖️🎖️🎖️🎖️
+this is our framework : chtm
+  we made it from scratch to render chtm gui in cli 
+  (for standardized) cli apps/games .we use it to hold gui 
+  seperately so we can prompt smaller contexts 
+  and get more focused code outputs from llms.
+  its an "mvc" architecture and modules in .c as plugins:
+
+
+🎖️🎖️🎖️🎖️
+
+what about adding a canvas element along with its size               │
+│   (ie width : 4 , height 8 (as in 4char by 8 characters)               │
+│   to be parsed and rendered ? i want this so i can test                │
+│   and see how the arrow keys are handled. we will create               │
+│   a module that puts a "p player at 1x1 coord on canvas,               │
+│   and allow the arrow keys to pass thru ipc and move                   │
+│   player around)       
+🍍️

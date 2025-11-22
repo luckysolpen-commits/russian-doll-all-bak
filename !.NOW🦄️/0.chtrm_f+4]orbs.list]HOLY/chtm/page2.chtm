@@ -1,0 +1,4 @@
+<panel>
+    <text label="This is Page 2." />
+    <link key="1" label="Go back to Main Page" href="chtm/index_with_canvas.chtm" />
+</panel>

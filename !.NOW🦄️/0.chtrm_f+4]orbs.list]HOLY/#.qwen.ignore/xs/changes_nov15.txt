@@ -1,0 +1,42 @@
+Changes made on November 15, 2025:
+
+1.  **Refactored `view.c` for Structured UI Elements:**
+    *   **Introduced `UIElement` Struct:** Defined a `UIElement` struct (containing `type`, `label`, `href`, and `key` fields) to represent interactive elements, particularly links, in a structured manner.
+    *   **Replaced Global Href Arrays:** The old `global_href_targets` character array and `global_href_count` integer were replaced with a `document_elements` array of `UIElement` structs and a `document_element_count` integer.
+    *   **Modified `print_ascii_grid` Function:**
+        *   **Parsing Stage:** The function now first parses the CHTM content to identify numbered links (e.g., "7. <a href="...">File</a>"). It extracts the number, the display text ("File"), and the `href` ("chtm/file.chtm"), storing this information in the `document_elements` array.
+        *   **Rendering Stage:** After parsing, the function processes the CHTM template to replace `<a>` tags with their `[label]` representation for display, ensuring the visual output remains consistent while the underlying data structure is improved.
+
+2.  **Refactored `controller.c` for Consistent Navigation:**
+    *   **Duplicated `UIElement` Struct:** The `UIElement` struct definition was duplicated in `controller.c` to allow access to the structured UI data without introducing new header files, adhering to project conventions.
+    *   **Updated Extern Declarations:** Replaced `extern` declarations for the old `global_href_targets` and `global_href_count` with `extern` declarations for the new `document_elements` and `document_element_count`.
+    *   **Rewrote `process_input` Function:** The input handling logic was significantly revised to provide a consistent "select with number, confirm with Enter" user experience for all numbered menu options. Pressing a number now sets the `menu_selection`, and pressing Enter triggers the corresponding action (navigation for links, confirmation for other menus).
+
+3.  **Corrected Compilation Process:**
+    *   Identified that the initial compilation script was incorrectly compiling each `.c` file into a separate executable.
+    *   Switched to using the `xh.compile.dir.link.+x.sh` script, which correctly compiles all source files into object files and then links them into a single executable, resolving all "undefined reference" errors.
+
+4.  **Architectural Refactor of View Layer:**
+    *   **"Parse Then Render" Architecture:** The `print_ascii_grid` function in `view.c` was completely refactored to use a pure two-stage "parse then render" model.
+    *   **General-Purpose Parser:** The new parsing stage tokenizes the entire CHTM document, creating `UIElement` objects for all content, including plain text, `<a>` links, and special component tags like `<canvas />`.
+    *   **Data-Driven Renderer:** The new rendering stage iterates through the `document_elements` array and prints output based on each element's type, completely separating the application's data model from its presentation.
+    *   **Deprecated Old Logic:** The old, brittle string replacement functions (`replace_tag_content`, `strip_html_tags`) were removed from the rendering pipeline.
+
+---
+### Suggested Next Step
+---
+
+Now that the application has a more robust, DOM-like architecture, the best next step is to implement the "Back" navigation feature, which was part of the original plan.
+
+This will be implemented following the project's established conventions (i.e., without creating new `.h` files).
+
+**Goal:** Allow the user to navigate back to the previously viewed page.
+
+**Implementation Plan:**
+
+1.  **Create Page History Stack:** In `model.c`, define a global array to act as a stack for page history (e.g., `char page_history[20][512];`) and a variable to manage the stack pointer.
+2.  **Update Navigation Logic:** Modify the `switch_to_page` function. When navigating to a new page, it should push the *current* page's path onto the history stack before switching.
+3.  **Implement "Back" Functionality:**
+    *   Create a `navigate_back()` function (e.g., in `controller.c` or `model.c`) that pops the last page from the history stack and calls `switch_to_page` with that path.
+    *   The controller will be updated to recognize a special case. For example, when the user selects a link like `0. <a href="back">Back</a>`, the controller will identify the `href="back"` and call `navigate_back()` instead of trying to navigate to a file named "back".
+4.  **Test Case:** Ensure a page like `chtm/file.chtm` contains a "Back" link (e.g., `0. <a href="back">Back to Main</a>`) so the feature can be fully tested.

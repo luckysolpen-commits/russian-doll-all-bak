@@ -1,0 +1,52 @@
+**Objective:** Refactor the C-MVC application to implement a robust "Parse then Render" architecture for CHTM files, enabling correct `href` navigation and aligning with the project's specifications.
+
+**Phase 1: Setup and Core Data Structures**
+
+1.  **Create Demo Files:**
+    *   Create `chtm/index.chtm` with a link to `page2.chtm` and a button.
+    *   Create `chtm/page2.chtm` with a link back to `index.chtm`.
+2.  **Update `UIElement` Struct:**
+    *   In `view.c`, replace the existing `UIElement` struct with the new, expanded definition provided in the prompt.
+    *   In `controller.c`, duplicate the new `UIElement` struct definition to maintain project conventions.
+
+**Phase 2: Refactoring `view.c`**
+
+1.  **Gut `print_ascii_grid`:**
+    *   Remove the entire existing body of the `print_ascii_grid` function.
+2.  **Implement the CHTM Parser:**
+    *   Inside `print_ascii_grid`, write a new parser that iterates through the CHTM file content.
+    *   The parser will identify tags (e.g., `<link>`) and text content.
+    *   It will parse tag names and their attributes (`href`, `label`, `key`, `onClick`, `value`).
+    *   It will handle container tags (`<panel>`, `<header>`) using a stack to manage parent-child relationships (`parent_index`).
+    *   For each recognized element, it will create and populate a `UIElement` struct in the `document_elements` array.
+    *   It will handle special tags like `<canvas />` and `<module>`.
+3.  **Implement the Renderer:**
+    *   After the parsing logic in `print_ascii_grid`, add the new rendering logic.
+    *   This logic will iterate through the now-populated `document_elements` array.
+    *   It will `printf` output based on each `UIElement`'s `type` (`link`, `button`, `text`).
+    *   Container tags will be parsed but will not produce visual output.
+4.  **Cleanup `view.c`:**
+    *   Delete the now-obsolete helper functions: `replace_tag_content` and `strip_html_tags`.
+
+**Phase 3: Refactoring `controller.c`**
+
+1.  **Update `process_input`:**
+    *   Modify the logic that executes when the user presses Enter.
+    *   Instead of its current method, it will now search the `document_elements` array for an element whose `key` matches the user's `menu_selection`.
+2.  **Implement Action Dispatching:**
+    *   Based on the found `UIElement`'s `type`:
+        *   If `type` is "link", call `switch_to_page(element.href)`.
+        *   If `type` is "button", inspect the `element.onClick` string and print a confirmation message (e.g., "Button clicked: [onClick value]").
+
+**Phase 4: Finalization**
+
+1.  **Update `main.c`:**
+    *   Ensure the application starts by loading `chtm/index.chtm`.
+2.  **Update Build Scripts:**
+    *   Review `compile_modules.sh` or `xsh.compile-all.+x.sh` to ensure all modified files are correctly compiled.
+3.  **Verification:**
+    *   Compile and run the application.
+    *   Verify that `index.chtm` renders correctly.
+    *   Verify that selecting the link navigates to `page2.chtm`.
+    *   Verify that the link on `page2.chtm` navigates back to `index.chtm`.
+    *   Verify that clicking the button on `index.chtm` prints the expected message.

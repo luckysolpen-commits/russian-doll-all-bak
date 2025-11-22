@@ -1,0 +1,27 @@
+
+i have this idea that 
+i wanna use a main html file as the "desktop"
+and beable to open other .html files windows inside of it
+or close them (and use the javascript in them)
+would we need to make a .js library for this or what? 
+how do we accomplish this ? 
+
+(for now we will just have a "file button" in header
+that lets us open whatever .html file from directory
+as a resizable window.
+
+
+
+
+
+
+
+(a crazy update u may wanna make is opening
+"smaller chtml files inside of a big window. 
+
+by creating a "toolbar or doing it programmatically (ref
+in parent-chtml, or module!?),thru module link"
+🤯️
+this is the level of full recursion we really want. 
+also has nothing 2 do with canvas so maybe we do it soon, 
+lets do the html first tho 2 get some "positve vibe momentum"

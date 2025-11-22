@@ -1,0 +1,18 @@
+<module src="modules/emoji_paint/emoji_paint.+x" />
+Emoji Paint (<layers_mode /> Layers)
+----------------------------------------
+0. Canvas: <canvas_status/>
+<canvas />
+----------------------------------------
+1. Emoji Palette: <emoji_palette />
+2. Color Palette: <color_palette />
+3. Tool: <tool_palette />
+4. Maps: Active
+5. Events: Active
+6. Player: [1:Off]2:On
+7. <a href="chtm/file.chtm">File</a>
+Tab Bank: <tab_bank />
+Tool: <tool_name />  Emoji: <emoji_char />  FG: <fg_color_name />  BG: <bg_color_name />  Selector: (<selector_pos />)
+<status_message />
+0-3: Select Menu  SPACE: Paint  F: Fill  R: Rect  S: Save  L: Load  T: Tab  Q: Quit
+Arrows: Move Selector (or navigate menu)  Enter: Place Tile or Confirm Selection

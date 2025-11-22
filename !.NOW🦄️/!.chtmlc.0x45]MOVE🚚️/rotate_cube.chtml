@@ -1,0 +1,12 @@
+<window x="100" y="100" width="800" height="600" color="#000000" label="Rotating Cube Demo">
+    <canvas x="0" y="0" width="800" height="600" color="#111111" alpha="0.8" viewMode="3d" id="main_view" fov="60">
+        <!-- Rotating 3D cube will be rendered here -->
+    </canvas>
+
+    <!-- Instructions -->
+    <text x="10" y="30" value="Controls:" color="#FFFFFF" />
+    <text x="10" y="50" value="UP/DOWN: Zoom in/out | LEFT/RIGHT: Manual rotation" color="#FFFF00" />
+</window>
+
+<!-- Rotating cube module -->
+<module>module/+x/rotate.+x</module>

@@ -1,0 +1,100 @@
+current =
+----------------------------------------
+Emoji Paint (
+Layers)
+----------------------------------------
+Emoji Paint (
+Layers)
+----------------------------------------
+Emoji Paint (
+Layers)
+----------------------------------------
+Emoji Paint (
+Layers)
+----------------------------------------
+0. Canvas:
+                                |
+                                |
+                                |
+Emoji Paint (
+AllLayers)
+----------------------------------------
+0. Canvas:
+Emoji Paint (
+AllLayers)
+----------------------------------------
+0. Canvas:
+Emoji Paint (
+AllLayers)
+----------------------------------------
+0. Canvas:
+Active[]                               |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+----------------------------------------
+1. Emoji Palette:
+0:  [1:🍒] 2:🍋 3:🍊 4:💎 5:🔔 6:💩 7:🎨 2. Color Palette:
+[1:Red] 2:Green 3:Blue 4:Yellow 5:Cyan 6:Magenta 7:White 8:Black 3. Tool:
+[1:Paint] 2:Fill 3:Rectangle 4. Maps: Active
+5. Events: Active
+6. Player: [1:Off]2:On
+7.
+7. [File]
+Tab Bank:
+Tool:
+PaintEmoji:
+🍒FG:
+RedBG:
+BlackSelector: (
+0, 0)
+Selector moved0-3: Select Menu  SPACE: Paint  F: Fill  R: Rect  S: Save  L: Load  T: Tab  Q: Quit
+Arrows: Move Selector (or navigate menu)  Enter: Place Tile or Confirm Selection
+
+
+
+
+previous = 
+Emoji Paint (All Layers)
+----------------------------------------
+0. Canvas: [Active]
+[]                               |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+                                |
+
+----------------------------------------
+1. Emoji Palette: 0:  [1:🍒] 2:🍋 3:🍊 4:💎 5:🔔 6:💩 7:🎨 
+2. Color Palette: [1:Red] 2:Green 3:Blue 4:Yellow 5:Cyan 6:Magenta 7:White 8:Black 
+3. Tool: [1:Paint] 2:Fill 3:Rectangle 
+Tab Bank: ���������>8:�
+Tool: Paint  Emoji: 🍒  FG: Red  BG: Black  Selector: (0, 0)
+Module launched successfully.
+0-3: Select Menu  SPACE: Paint  F: Fill  R: Rect  S: Save  L: Load  T: Tab  Q: Quit
+Arrows: Move Selector (or navigate menu)  Enter: Place Tile or Confirm Selection
+
+

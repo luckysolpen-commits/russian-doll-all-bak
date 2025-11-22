@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Video Editor - MVC</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: #121212; 
+            color: #e0e0e0; 
+        }
+        #dropzone { 
+            border: 2px dashed #666; 
+            padding: 50px; 
+            text-align: center; 
+            margin-bottom: 20px; 
+            background: #1e1e1e; 
+        }
+        #dropzone.dragover { border-color: #4CAF50; background: #2e2e2e; }
+        #timeline { 
+            height: 100px; 
+            border: 1px solid #333; 
+            position: relative; 
+            overflow-x: auto; 
+            white-space: nowrap; 
+            background: #1e1e1e; 
+        }
+        .clip { 
+            height: 80px; 
+            background: #388E3C; 
+            position: absolute; 
+            top: 10px; 
+            cursor: move; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            font-size: 12px; 
+            border: 1px solid #2E7D32; 
+            z-index: 1;
+        }
+        .clip.selected {
+            border: 2px solid #FFD700 !important;  /* Gold border for selected clips */
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+        }
+        .playhead { 
+            width: 10px; 
+            height: 100px; 
+            background: #ff4444; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            pointer-events: auto; 
+            z-index: 20;
+            cursor: pointer;
+        }
+        
+        .playhead::before {
+            content: '▲';
+            position: absolute;
+            top: -10px;
+            left: -5px;
+            color: #ff4444;
+            font-size: 16px;
+            text-shadow: 0 0 2px black;
+        }
+        #preview { 
+            width: 640px; 
+            height: 360px; 
+            border: 1px solid #333; 
+            margin-top: 20px; 
+            background: black; 
+        }
+        button { 
+            margin: 5px; 
+            padding: 10px; 
+            background: #333; 
+            color: #e0e0e0; 
+            border: 1px solid #555; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        }
+        button:hover { background: #444; }
+        #fileInput { display: none; }
+        #controls { margin: 20px 0; }
+        h1 { color: #e0e0e0; }
+        p { color: #b0b0b0; }
+        /* Hide media elements */
+        video, audio { display: none !important; position: absolute !important; left: -9999px; top: 0; }
+    </style>
+</head>
+<body>
+    <h1>Simple Visual Video Editor - MVC Architecture</h1>
+    <p>Drag and drop video or audio files onto the drop zone, or click the button below to select files. Drag clips on the timeline to move them. Click play to preview.</p>
+    <div id="dropzone">Drop videos or audio here</div>
+    <input type="file" id="fileInput" multiple accept="video/*,audio/*">
+    <button id="selectFilesBtn">Select Files</button>
+    <div id="controls">
+        <button id="playBtn">Play</button>
+        <button id="stopBtn">Stop</button>
+        <button id="deleteSelectedBtn">Delete Selected</button>
+        <button id="exportBtn">Export (Basic - Records canvas to webm)</button>
+    </div>
+    <div id="timeline">
+        <div id="playhead" class="playhead"></div>
+    </div>
+    <div style="position: relative; display: inline-block;">
+        <canvas id="preview" width="640" height="360"></canvas>
+        <div id="thumbnailPreview" style="position: absolute; top: 10px; left: 10px; width: 120px; height: 68px; 
+             background: rgba(0,0,0,0.7); border: 1px solid #fff; display: none; z-index: 100;">
+            <canvas id="thumbnailCanvas" width="120" height="68"></canvas>
+        </div>
+    </div>
+
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+    <script>
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', () => {
+            const model = new VideoEditorModel();
+            const view = new VideoEditorView(model);
+            const controller = new VideoEditorController(model, view);
+        });
+    </script>
+</body>
+</html>
