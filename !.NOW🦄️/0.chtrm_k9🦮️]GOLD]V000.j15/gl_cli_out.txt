@@ -1,0 +1,302 @@
+CHTM renderer started. Press 'q' to quit.
+[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[>] 1. Game Canvas
+[31mp . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (0, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[ ] 1. Game Canvas
+[31mp . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (0, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[>] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[ ] 1. Game Canvas
+[31mp . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (0, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[>] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[ ] 1. Game Canvas
+[31mp . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (0, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[>] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[ ] 1. Game Canvas
+[31mp . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (0, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[>] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[>] 1. Game Canvas
+[31mp . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (0, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[ ] 1. Game Canvas
+[31mp . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (0, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[>] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[>] 1. Game Canvas
+[31mp . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (0, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[^] 1. Game Canvas
+[31mp . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (0, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[^] 1. Game Canvas
+[31m. p . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (1, 0)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[^] 1. Game Canvas
+[31m. . . . . . . . 
+. p . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (1, 1)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit[H[JCurrent file: chtm/index_anti.chtm.txt
+
+Welcome to the Canvas Demo anti!
+[^] 1. Game Canvas
+[31m. . . . . . . . 
+. . . . . . . . 
+. p . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+. . . . . . . . 
+[0mPlayer Position: 
+Player position: (1, 2)
+Selected Symbol: [ ] Index: 0
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+[37m > !  #  $  %  ^  &  * 
+[0m[ ] 3. [Go to Page 2]
+[ ] 4. [Click Me]
+[ ] 5. Command: ${command_input}
+modules/+x/canvas_player_v.01.+x
+
+Navigation: Enter element index (1-5) or 'q' to quit

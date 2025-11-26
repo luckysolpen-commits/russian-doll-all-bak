@@ -1,0 +1,54 @@
+# Canvas Primitives Suggestion - November 25, 2025
+
+## Understanding the Double Rendering Issue
+
+In our CHTM framework, we're experiencing performance degradation where placing objects causes the canvas to render multiple times per action instead of once. This occurs because:
+
+1. The module is sending multiple variable updates per single user action
+2. Each variable update potentially triggers a render cycle in the CHTM renderer
+3. The module doesn't batch its state changes, causing redundant updates
+
+## Root Cause Analysis
+
+Looking at the `canvas_player_v.01.c` module:
+
+- When placing an object, the module sends multiple `VAR:` updates:
+  - Frame counter increment
+  - Action type
+  - Placed symbol
+  - Coordinates
+  - Selected symbol/index
+  - Player position
+
+- Each `printf("VAR:...")` call could potentially trigger a render update
+- Multiple `fflush(stdout)` calls ensure immediate output, but don't batch the updates
+
+## Proposed Solution: Batched Updates Architecture
+
+### Pre-Module Send Primitives:
+1. **State Change Queue**: Buffer all state changes until a flush command
+2. **Transaction System**: Group related changes as atomic operations
+3. **Delta Detection**: Only send changes that differ from previous state
+
+### Post-Receive Primitives:
+1. **Single Flush Mechanism**: Module sends all updates at once per action
+2. **Render Token System**: CHTM renderer waits for end-of-batch token
+3. **State Synchronization**: Ensure renderer only updates once per logical action
+
+### Implementation Strategy:
+
+```
+// In module: Instead of multiple printf calls, accumulate changes
+char update_buffer[4096] = {0};
+int buffer_pos = 0;
+
+// Add variables to buffer instead of direct output
+#define ADD_VAR(name, value) buffer_pos += snprintf(update_buffer + buffer_pos, \
+    sizeof(update_buffer) - buffer_pos, "VAR:%s=%s\n", #name, #value)
+
+// At the end of each logical action:
+printf("%s", update_buffer);
+fflush(stdout);  // Single flush per action
+```
+
+This ensures that no matter how many internal operations occur, the renderer receives all changes in one batch, eliminating the double rendering issue.

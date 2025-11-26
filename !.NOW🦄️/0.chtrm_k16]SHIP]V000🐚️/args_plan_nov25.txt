@@ -1,0 +1,48 @@
+# Args Plan - November 25, 2025
+
+## Objective
+Implement an architectural change to batch variable updates in a single string with comma separation and semicolon termination, similar to C function arguments.
+
+## Current Problem
+- Multiple `printf("VAR:...")` calls per action
+- Each call potentially triggers individual renderer updates
+- No guarantee that related variables are processed together
+
+## Proposed Solution: Batched Args Format
+
+### New Format:
+```
+VARS:x=1,y=2,z=3,player_x=5,player_y=10,last_action=move;
+```
+
+### Implementation Plan:
+
+1. **Create a buffer system in modules:**
+   - Define a buffer (e.g., `char var_buffer[4096]`)
+   - Maintain a position tracker (`int buf_pos = 0`)
+
+2. **Create helper macro for adding variables:**
+   ```
+   #define ADD_VAR(name, value) \
+       buf_pos += snprintf(var_buffer + buf_pos, sizeof(var_buffer) - buf_pos, \
+       "%s=%s,", #name, #value)
+   ```
+
+3. **Modify module logic:**
+   - Accumulate all variable changes in buffer during action processing
+   - Replace individual `printf("VAR:...")` calls with `ADD_VAR` macros
+   - At end of action, output: `printf("VARS:%s;", var_buffer);`
+   - Reset buffer after each action
+   - Specifically update modules/canvas_player/canvas_player_v.01.c to use new format
+
+4. **Update CHTM renderer:**
+   - Parse `VARS:...;` format instead of individual `VAR:...` lines
+   - Process all variables in batch before triggering renders
+   - No backward compatibility - full transition to new format (framework is young and flexible)
+
+### Benefits:
+- Guaranteed atomicity per action
+- Reduced I/O operations
+- Clearer separation between actions
+- More efficient parsing
+- Easier debugging (single line per action)

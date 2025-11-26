@@ -1,0 +1,15 @@
+<panel>
+    <text label="Welcome to the Canvas Demo anti!" />
+    <canvas id="game_canvas" width="8" height="8" label="Game Canvas" color="#FF0000"/>
+    <text label="Player Position: " />
+    <text id="player_position_label" label="Player position: (${player_x}, ${player_y})" />
+    <text label="Selected Symbol: [${selected_symbol}] Index: ${selected_palette_index}" />
+    <text label="Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})" />
+    <text label="Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})" />
+    <text label=" Emoji Palette: " />
+    <canvas id="emoji_palette" width="8" height="1" label="Emoji Palette" color="#CCCCCC" key="3"/>
+    <link key="1" label="Go to Page 2" href="chtm/page2.chtm" />
+    <button key="2" label="Click Me" onClick="SHOW_MESSAGE" />
+</panel>
+<cli_io key="0" label="Command: ${command_input}" />
+<module>modules/+x/canvas_player_v.01.+x</module>

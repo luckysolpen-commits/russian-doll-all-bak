@@ -1,0 +1,57 @@
+PLAN FOR RESOLVING FINAL DISPLAY CORRUPTION ISSUE
+===============================================
+
+PROBLEM IDENTIFIED:
+- When placing an 'X' symbol at (0,0), the display becomes corrupted 
+- Player character ('p') is still visible at (0,0) but 'X' was also placed there
+- This creates a layer conflict in the composite canvas generation
+- The renderer doesn't immediately update after placement, causing visual inconsistency
+
+PREVIOUS WISDOMS GAINED:
+1. Layered architecture prevents direct canvas corruption (✓ implemented)
+2. Immediate variable updates solve position reporting lag (✓ implemented) 
+3. Variable updates must not conflict with renderer's display cycle (✗ causing issues)
+4. Frame-based approach bundles operations for auditability (✓ concept understood)
+
+ROOT CAUSE ANALYSIS:
+The issue stems from a timing mismatch between variable updates and display updates:
+- Interactive commands (X placement) immediately update variables 
+- But renderer only updates display when it receives DISPLAY command
+- The renderer might be in the middle of processing when new variables arrive
+- This creates display inconsistency and visual corruption
+
+THE FRAME-BASED SOLUTION:
+As requested, implement a true frame-based architecture where each operation is atomic:
+
+1. OPERATION COMPLETE FRAME UNITS:
+   - Each user action → Update layers → Update variables → Update display (as ONE unit)
+   - Frame counter tracks each complete operation
+   - All components updated simultaneously to prevent state inconsistencies
+
+2. WHY THIS SOLUTION WILL WORK:
+   - Based on layered architecture success: ✓ Layers prevent direct canvas conflicts
+   - Based on variable timing success: ✓ Immediate variables fix position reporting  
+   - Based on timing control success: ✓ Atomic operations prevent partial states
+   - Frame counter provides audit trail for debugging (like roguelike games)
+
+3. IMPLEMENTATION STRATEGY:
+   - Modify interactive commands to send full display content after layer updates
+   - Maintain renderer's DISPLAY command for general refresh cycles
+   - Preserve frame counter for auditability
+   - Keep layered composition logic intact (works well)
+
+4. PREVENTION OF PREVIOUS ISSUES:
+   - No more partial state updates (atomic frames)
+   - No more timing conflicts (synchronous operation per frame)
+   - No more display corruption (complete state per frame)
+   - Maintain variable consistency (all updated together per frame)
+
+5. RELEVANCE OF REQUESTED APPROACH:
+The requested frame-based approach is NOT only relevant but ESSENTIAL for this fix:
+   - "everything should send at the same time" → Atomic frame updates
+   - "moving, updating layer, placing in layer, making composite and updating variables" → All in one frame unit
+   - "should all happen at once each 'turn'" → Frame-based atomicity
+   - "count it as a 'Frame' and keep frame count" → Auditability
+   - "send to renderer when frame operation in module is complete 'as a unit'" → Prevents partial state issues
+
+This solution directly applies the wisdom gained from previous fixes while addressing the core timing issue that causes display corruption.

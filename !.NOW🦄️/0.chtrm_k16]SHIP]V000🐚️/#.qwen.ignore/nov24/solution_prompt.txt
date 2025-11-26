@@ -1,0 +1,31 @@
+PROBLEM DESCRIPTION:
+The CHTM canvas module is experiencing several critical issues:
+1. Slowness after placement operations - likely multiple updates per cycle
+2. Visual corruption of emoji palette - palette showing as dots instead of symbols
+3. Coordinate mismatch - displayed positions don't match reported variables
+4. Perpetual performance degradation after interactions
+
+CURRENT STATE ANALYSIS:
+- Action commands (moving, placing) update internal state correctly
+- Variables are sent correctly per action
+- DISPLAY command properly updates canvas
+- DISPLAY_PALETTE command sends direct output that may conflict
+- Layer priority system (player > placed objects > canvas) is correct
+- Coordinate systems have mapping issues
+
+ROOT CAUSE:
+The DISPLAY_PALETTE command sends output directly during renderer's display cycle, which gets mixed with the canvas display output, causing visual corruption. The slowness is from multiple update cycles triggered by interaction.
+
+SOLUTION REQUIRED:
+Create a unified rendering approach where:
+1. Remove direct palette display output from DISPLAY_PALETTE command
+2. Integrate palette state into the main canvas display function
+3. Ensure coordinate systems are consistent between display and reporting
+4. Eliminate duplicate or conflicting output streams
+5. Maintain single, coordinated update cycle
+
+EXPECTED OUTCOME:
+- No visual corruption of emoji palette after placement
+- Correct alignment between displayed positions and reported variables  
+- Maintain performance after interactions
+- Consistent single update pipeline per renderer request

@@ -1,0 +1,23 @@
+Based on the successful refactoring of the href navigation system, the next task is to implement a page history and "Back" navigation feature. This was an original goal in `href_plan.txt` and the new `UIElement` architecture makes it much more feasible.
+
+The implementation should be inspired by the `ContentManager` and page history stack used in the OpenGL reference version, but adapted for our terminal application.
+
+### Requirements:
+
+1.  **Page History Stack:**
+    *   In `model.c`, create a simple stack (e.g., an array of strings) to store the file paths of the CHTM pages as the user navigates through them.
+    *   This stack should have a reasonable depth (e.g., 20 pages).
+
+2.  **Update Navigation Logic:**
+    *   When `switch_to_page(path)` is called for a *new* page, the *current* page's path should be pushed onto the history stack before switching.
+    *   Do not push onto the stack if the user is navigating back.
+
+3.  **"Back" Navigation Trigger:**
+    *   Implement a `navigate_back()` function in the model or controller that pops the last page from the history stack and navigates to it.
+    *   The primary way to trigger this will be a link in a CHTM file, for example: `0. <a href="back">Back</a>`. Your `view.c` parser should be able to handle a special `href="back"` case.
+
+4.  **Controller Integration:**
+    *   When the user presses '0' and Enter, and the selected UI element has `href="back"`, the controller should call the new `navigate_back()` function.
+
+5.  **Example File:**
+    *   Ensure that `chtm/file.chtm` (the page we navigate to) contains a `0. <a href="back">Back to Main</a>` link so the feature can be tested. You will likely need to create or modify this file.

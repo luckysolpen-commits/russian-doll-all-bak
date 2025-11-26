@@ -1,0 +1,10 @@
+<module src="modules/emoji_paint/emoji_paint.+x" />
+File Operations
+----------------------------------------
+1. <a href="save_action">Save</a>
+2. <a href="save_as_action">Save As</a>
+3. <a href="load_action">Load</a>
+4. <a href="chtm/gui.chtm">Back to Main</a>
+----------------------------------------
+<status_message />
+Select an option (1-4) or Q to quit

@@ -1,0 +1,93 @@
+# Canvas IPC Refactor Plan (Nov 24)
+
+## Understanding the Task
+
+The current canvas implementation is a "dummy canvas fx" that uses simple "." characters and basic spacing. The goal is to create a proper canvas system where:
+- The view only reserves space for the canvas based on size specifications
+- The canvas always stays the same size as specified in the element
+- The module (not the view) has complete control of what is shown in the canvas
+- The view provides a blank space to place the entire canvas as communicated through IPC
+
+## Current Code Analysis
+
+From the `@chtm/index.chtm` file:
+- There's a canvas element with `id="game_canvas" width="8" height="8"`
+- There's another canvas `id="emoji_palette" width="8" height="1"`
+- A module is loaded: `modules/+x/canvas_player_v.01.+x`
+- The canvas elements have labels and color attributes
+
+The current implementation likely just renders placeholder content (like dots) and allows arrow key movement of a player character. The module probably communicates player position and canvas state through IPC.
+
+## Current Arrow Movement System
+
+Based on the template, the current system likely:
+1. Tracks player position (player_x, player_y) 
+2. Updates player position based on arrow key inputs
+3. Updates the canvas content dynamically
+4. Sends position updates through IPC to update the view
+5. May use space key for placing symbols at specific coordinates
+
+## Core API Design Principle
+
+The most important aspect of the new system is that the canvas module should receive ALL key input when the canvas element has focus. The module will implement an API that allows developers to build custom canvas applications without editing the core source code. This means:
+
+- The canvas element in the view receives keyboard focus
+- All key events are routed to the canvas module (not the view)
+- The module handles all key input processing internally
+- The module provides callback hooks for handling different key events
+- Developers can customize canvas behavior by modifying the module code
+- The module maintains its own internal state and rendering logic
+
+This creates a clean API where developers can implement their own canvas applications by extending the module functionality while keeping the core framework unchanged.
+
+## Refactor Plan
+
+### 1. View Layer Changes
+- Remove all dummy canvas rendering logic
+- Only reserve space based on `width` and `height` attributes in canvas elements
+- Create a reserved display area that stays fixed size regardless of content
+- Implement IPC receiver to display canvas content from module
+- Implement keyboard event forwarding to canvas module when canvas has focus
+
+### 2. Module Layer Changes  
+- Create new module `modules/canvas_player/canvas_player_v.02.c`
+- Module receives ALL keyboard input when canvas is focused
+- Module maintains full canvas state (2D array of characters/symbols)
+- Module handles all rendering logic internally
+- Module communicates only the final canvas state to view via IPC
+- Implement input handling API for arrow keys and other inputs
+- Provide customizable callback system for key events
+
+### 3. IPC Communication Protocol
+- Define message format for canvas updates
+- Implement buffer system for sending canvas state to view
+- Module sends full canvas update or delta updates as needed
+- Handle terminal resize events (optional for later)
+- Implement input event communication from view to module
+
+### 4. Canvas State Management
+- Module maintains 2D grid for canvas content
+- Separate rendering from state management
+- Efficient update mechanisms for partial changes
+- Support for different canvas types (frames, no spaces, etc.)
+
+### 5. Implementation Steps
+1. Create new canvas_player_v.02.c module with proper canvas state management
+2. Update view to forward keyboard input to canvas module
+3. Update view to only reserve space and display received canvas content
+4. Implement IPC protocol for canvas data transmission and input events
+5. Implement the API that allows developers to customize canvas behavior
+6. Test with existing index.chtm to verify functionality
+
+## Terminal Resizing
+- Option 1: Detect terminal resize and warn user about canvas display issues
+- Option 2: Make canvas responsive to terminal size changes (more complex)
+- For now, warning user about optimal terminal size is recommended
+
+## Data Structures Needed
+- Canvas buffer (2D array of characters)
+- Canvas metadata (width, height, render flags)
+- IPC message structures for canvas updates
+- Input event structures for key handling
+
+This refactor will make the canvas system properly separated according to MVC architecture where the module has complete control over canvas content while the view just provides the display space. The key innovation is that the module receives all keyboard input when the canvas has focus, allowing developers to build custom applications using the module API without editing the core framework.

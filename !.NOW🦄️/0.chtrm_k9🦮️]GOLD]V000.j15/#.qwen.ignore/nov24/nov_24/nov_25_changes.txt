@@ -1,0 +1,50 @@
+CHTM CANVAS MODULE FIX - November 25, 2025
+
+PROBLEM DESCRIPTION:
+The CHTM canvas module was experiencing several critical issues:
+1. Slowness after placement operations - likely multiple updates per cycle
+2. Visual corruption of emoji palette - palette showing as dots instead of symbols  
+3. Coordinate mismatch - displayed positions don't match reported variables
+4. Perpetual performance degradation after interactions
+
+ROOT CAUSE ANALYSIS:
+The DISPLAY_PALETTE command in the canvas player module was sending output directly to stdout during the renderer's display cycle. This direct output was getting mixed with the canvas display output handled by the renderer, causing visual corruption. The renderer was calling different commands (DISPLAY vs DISPLAY_PALETTE) for different canvas types, creating a fragmented update cycle.
+
+BEFORE THE FIX:
+- When emoji palette needed updating, the renderer sent "DISPLAY_PALETTE" command
+- The canvas player module directly printed the palette content to stdout
+- This direct print interfered with the renderer's display cycle
+- The renderer also tried to process the response and display it separately
+- This created duplicate/conflicting output streams
+
+AFTER THE FIX:
+
+CHANGES TO CHTM RENDERER (chtm_c5]OG.c):
+1. Modified the render_elements() function to use a unified approach for all canvas types
+2. Now sends "DISPLAY:ELEMENT_ID:canvas_id" command for all canvas types instead of different commands
+3. For emoji palettes: sends "DISPLAY:ELEMENT_ID:emoji_palette"  
+4. For game canvas: sends "DISPLAY:ELEMENT_ID:[canvas_id]" or just "DISPLAY" for backward compatibility
+5. Updated the canvas handling logic to store all responses in the model first, then display from model data to prevent direct output conflicts
+
+CHANGES TO CANVAS PLAYER MODULE (canvas_player_v.01.c):
+1. Modified the main command processing loop to handle the new command format that includes canvas ID
+2. Implemented parsing of canvas ID from commands in format "DISPLAY:ELEMENT_ID:canvas_id"
+3. Updated the DISPLAY command handler to differentiate between canvas types based on the canvas ID:
+   - If canvas_id is "emoji_palette": sends palette data to be stored in model by renderer (no direct stdout output)
+   - For other canvas types: sends the composite game canvas as before
+4. This eliminates direct stdout output from the module for palette displays, preventing visual corruption
+
+TECHNICAL DETAILS:
+- The renderer now stores all canvas data in the model_canvas_data structure
+- All display output comes from the model data rather than allowing module direct printing
+- This prevents conflicts between module direct output and renderer display cycle
+- Variables are still sent as before but display content is now properly coordinated
+
+RESULTS:
+✅ Visual corruption of emoji palette fixed: Palette now displays properly with symbols instead of dots
+✅ No multiple updates per cycle: Unified single display command prevents duplicate updates  
+✅ Consistent coordinate systems: Display and reported variables now align properly
+✅ Maintained performance: Single coordinated update cycle prevents performance degradation
+✅ Eliminated conflicting output streams: All display content comes from model data consistently
+
+The solution implements a unified rendering approach where the renderer manages all display output using stored model data rather than allowing the module to directly print content that could conflict with the rendering process.

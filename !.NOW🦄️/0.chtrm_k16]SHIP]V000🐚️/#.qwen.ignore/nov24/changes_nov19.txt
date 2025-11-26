@@ -1,0 +1,58 @@
+## Changes Made to Codebase
+
+### 1. Removed Hardcoded Player Position Functionality
+- Eliminated global variables: `player_x_pos`, `player_y_pos`, `player_pos_valid`
+- Removed hardcoded "player_pos" UI element type from UIElement struct
+- Removed "player_pos" tag parsing in `parse_chtm_file`
+- Removed player position rendering logic in `render_elements`
+- Removed PLAYER_POS parsing from canvas response handling
+
+### 2. Implemented General-Purpose Variable Storage System
+- Added Variable struct with name, value, and active flag
+- Created storage for up to 50 variables (MAX_VARS)
+- Implemented `initialize_variables()`, `set_variable()`, `get_variable()` functions
+- Added variable reset during IPC cleanup
+
+### 3. Updated UIElement to Support Dynamic Content
+- Added support for variable substitution in text, link, and button elements
+- Created `substitute_variables_in_string()` function to handle `${var_name}` syntax
+- Updated render functions to process variable substitution
+
+### 4. Enhanced IPC Communication Protocol
+- Changed from PLAYER_POS format to VAR:name=value format
+- Updated canvas response parsing to handle VAR messages from modules
+- Modified canvas_player.c module to send VAR messages instead of PLAYER_POS
+
+### 5. Fixed Module Lifecycle Management
+- Updated cleanup_ipc() to reset all variables when cleaning up
+- Enhanced switch_to_file() with proper module cleanup and restart
+- Added debug logging to track module launches and navigation
+
+### 6. Added Debugging Capabilities
+- Added comprehensive debug logging to file (debug.log)
+- Tracked module launches, variable updates, IPC commands, and navigation
+- Added logging for variable setting and text element processing
+
+## Expected Behavior After Changes
+
+1. **General-Purpose Variable System**: Modules can send any variable using `VAR:name=value` format instead of hardcoded player positions
+2. **Dynamic Content Display**: Text elements support `${variable_name}` syntax that gets replaced with actual values
+3. **Module Isolation**: Variables are properly reset when navigating between pages
+4. **Navigation Flow**: Modules should start fresh when returning to a page with a module
+5. **Backward Compatibility**: Canvas display functionality remains intact
+
+## The Complaints/Issues Identified
+
+1. **Navigation Issue**: Player position not showing when navigating back to index_with_canvas.chtm after visiting page2.chtm
+2. **Variable Persistence**: Variables are not updating properly after navigation
+3. **Module Lifecycle**: Modules not restarting properly when returning to a page
+4. **Hardcoded Framework Issues**: Player position was hardcoded in framework instead of being passed from module to HTML renderer
+5. **General Purpose Need**: Need for a general-purpose variable system for different apps and games, not just this specific canvas example
+
+## File Modifications
+
+- Modified: `chtm]c4.c` - Main renderer (added variable system, removed hardcoded elements, added debug logging)
+- Modified: `modules/canvas_player.c` - Module (changed from PLAYER_POS to VAR messages)
+- Modified: `chtm/index_with_canvas.chtm` - Updated to use variable substitution syntax
+
+The debug log file (`debug.log`) will now provide detailed information about what happens during navigation and variable updates, helping diagnose the specific issue with player position not showing after navigation.
