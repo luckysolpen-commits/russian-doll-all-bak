@@ -1,5 +1,0 @@
-<panel>
-    <text label="Welcome to the Main Page!" />
-    <link key="1" label="Go to Page 2" href="chtm/page2.chtm" />
-    <button key="2" label="Click Me" onClick="SHOW_MESSAGE" />
-</panel>
