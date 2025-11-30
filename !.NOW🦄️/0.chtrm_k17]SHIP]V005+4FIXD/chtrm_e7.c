@@ -11,6 +11,7 @@
 #include <termios.h>
 #include <sys/select.h>
 #include <sys/wait.h>
+#include <sys/time.h>
 #include <ctype.h>
 #include <stdarg.h>
 #include <signal.h>
@@ -122,6 +123,7 @@ bool nav_input_active = false;  // Whether navigation input is currently active
 
 // Function prototypes
 char* read_file_to_string(const char* filename);
+char* remove_comments_from_chtm(const char* content);
 void parse_chtm_file(const char* content);
 void parse_attributes(UIElement* el, const char* attr_str);
 void render_elements();
@@ -145,6 +147,7 @@ void set_focus(int element_index);
 void initialize_focus();
 int send_ipc_command(const char* command);
 int read_ipc_response(char* buffer, int buffer_size);
+void process_module_responses();
 
 /*
  * =====================
@@ -157,6 +160,39 @@ void model_init_canvas_data(int canvas_idx, int width, int height, const char* i
 void model_update_canvas_data(int canvas_idx, int line_num, const char* line_data);
 CanvasData* model_get_canvas_data(const char* canvas_id);
 CanvasData* model_get_canvas_data_by_index(int canvas_idx);
+
+// Remove HTML-style comments from CHTM content
+char* remove_comments_from_chtm(const char* content) {
+    if (!content) return NULL;
+    
+    size_t content_len = strlen(content);
+    char* result = malloc(content_len + 1);  // Allocate enough space
+    if (!result) return NULL;
+    
+    strcpy(result, content);  // Start with a copy of the original content
+    
+    char* search_pos = result;
+    while ((search_pos = strstr(search_pos, "<!--")) != NULL) {
+        char* end_comment = strstr(search_pos, "-->");
+        if (end_comment != NULL) {
+            // Point to the character after the closing "-->"
+            end_comment += 3;
+            
+            // Calculate how much content remains after the comment
+            size_t remaining_len = strlen(end_comment) + 1; // +1 for null terminator
+            
+            // Move the content after the comment to overwrite the comment
+            memmove(search_pos, end_comment, remaining_len);
+            // Don't advance search_pos, since we want to check for comments
+            // that might have shifted into the current position
+        } else {
+            // No closing --> found, break to avoid infinite loop
+            break;
+        }
+    }
+    
+    return result;
+}
 
 // Read file to string
 char* read_file_to_string(const char* filename) {
@@ -266,8 +302,16 @@ void parse_attributes(UIElement* el, const char* attr_str) {
 
 // Parse CHTM content
 void parse_chtm_file(const char* content) {
+    // First, remove comments from the content
+    char* content_without_comments = remove_comments_from_chtm(content);
+    if (!content_without_comments) {
+        // If memory allocation failed, use original content
+        content_without_comments = strdup(content);
+        if (!content_without_comments) return;  // Out of memory
+    }
+    
     element_count = 0;
-    char* content_copy = strdup(content);
+    char* content_copy = content_without_comments;
     char* cursor = content_copy;
     
     // Reset elements
@@ -379,6 +423,13 @@ void parse_chtm_file(const char* content) {
                 element_count++;
             }
         }
+        else if (strcmp(tag_name, "br") == 0) {
+            if (element_count < MAX_ELEMENTS) {
+                elements[element_count].key = -1;
+                strcpy(elements[element_count].type, "br");
+                element_count++;
+            }
+        }
         else if (strcmp(tag_name, "cli_io") == 0) {
             if (element_count < MAX_ELEMENTS) {
                 elements[element_count].key = -1;
@@ -422,17 +473,20 @@ void render_elements() {
     for (int i = 0; i < element_count; i++) {
         UIElement* el = &elements[i];
         
-        if (strcmp(el->type, "text") == 0) {
+        if (strcmp(el->type, "br") == 0) {
+            printf("\n");
+        }
+        else if (strcmp(el->type, "text") == 0) {
             if (el->label[0] != '\0') {
                 debug_log("Processing text element with label: %s", el->label);
                 // Process variable substitution in the label
                 char processed_label[MAX_LABEL_LEN * 2]; // Allow for expansion
                 substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
                 debug_log("After variable substitution: %s", processed_label);
-                printf("%s\n", processed_label);
+                printf("%s", processed_label);
             } else {
-                // If no label, skip or print just a newline
-                printf("\n");
+                // If no label, do nothing. A <br> tag is now required for a newline.
+                ;
             }
         }
         else if (strcmp(el->type, "link") == 0) {
@@ -442,31 +496,31 @@ void render_elements() {
                 substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
                 interactive_index++;
                 if (i == active_interaction_element) {
-                    printf("[^] %d. [%s]\n", interactive_index, processed_label);
+                    printf("[^] %d. [%s]", interactive_index, processed_label);
                 } else if (el->focused) {
-                    printf("[>] %d. [%s]\n", interactive_index, processed_label);
+                    printf("[>] %d. [%s]", interactive_index, processed_label);
                 } else {
-                    printf("[ ] %d. [%s]\n", interactive_index, processed_label);
+                    printf("[ ] %d. [%s]", interactive_index, processed_label);
                 }
             } else if (el->label[0] != '\0') {
                 char processed_label[MAX_LABEL_LEN * 2];
                 substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
                 interactive_index++;
                 if (i == active_interaction_element) {
-                    printf("[^] %d. [Link: %s]\n", interactive_index, processed_label);
+                    printf("[^] %d. [Link: %s]", interactive_index, processed_label);
                 } else if (el->focused) {
-                    printf("[>] %d. [Link: %s]\n", interactive_index, processed_label);
+                    printf("[>] %d. [Link: %s]", interactive_index, processed_label);
                 } else {
-                    printf("[ ] %d. [Link: %s]\n", interactive_index, processed_label);
+                    printf("[ ] %d. [Link: %s]", interactive_index, processed_label);
                 }
             } else if (el->key > 0) {
                 interactive_index++;
                 if (i == active_interaction_element) {
-                    printf("[^] %d. [Link]\n", interactive_index);
+                    printf("[^] %d. [Link]", interactive_index);
                 } else if (el->focused) {
-                    printf("[>] %d. [Link]\n", interactive_index);
+                    printf("[>] %d. [Link]", interactive_index);
                 } else {
-                    printf("[ ] %d. [Link]\n", interactive_index);
+                    printf("[ ] %d. [Link]", interactive_index);
                 }
             }
             // Skip links without either key or label
@@ -478,31 +532,31 @@ void render_elements() {
                 substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
                 interactive_index++;
                 if (i == active_interaction_element) {
-                    printf("[^] %d. [%s]\n", interactive_index, processed_label);
+                    printf("[^] %d. [%s]", interactive_index, processed_label);
                 } else if (el->focused) {
-                    printf("[>] %d. [%s]\n", interactive_index, processed_label);
+                    printf("[>] %d. [%s]", interactive_index, processed_label);
                 } else {
-                    printf("[ ] %d. [%s]\n", interactive_index, processed_label);
+                    printf("[ ] %d. [%s]", interactive_index, processed_label);
                 }
             } else if (el->label[0] != '\0') {
                 char processed_label[MAX_LABEL_LEN * 2];
                 substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
                 interactive_index++;
                 if (i == active_interaction_element) {
-                    printf("[^] %d. [Button: %s]\n", interactive_index, processed_label);
+                    printf("[^] %d. [Button: %s]", interactive_index, processed_label);
                 } else if (el->focused) {
-                    printf("[>] %d. [Button: %s]\n", interactive_index, processed_label);
+                    printf("[>] %d. [Button: %s]", interactive_index, processed_label);
                 } else {
-                    printf("[ ] %d. [Button: %s]\n", interactive_index, processed_label);
+                    printf("[ ] %d. [Button: %s]", interactive_index, processed_label);
                 }
             } else if (el->key > 0) {
                 interactive_index++;
                 if (i == active_interaction_element) {
-                    printf("[^] %d. [Button]\n", interactive_index);
+                    printf("[^] %d. [Button]", interactive_index);
                 } else if (el->focused) {
-                    printf("[>] %d. [Button]\n", interactive_index);
+                    printf("[>] %d. [Button]", interactive_index);
                 } else {
-                    printf("[ ] %d. [Button]\n", interactive_index);
+                    printf("[ ] %d. [Button]", interactive_index);
                 }
             }
             // Skip buttons without either key or label
@@ -679,15 +733,9 @@ void render_elements() {
                                     }
                                 }
                                 
-                                // For a canvas of width N, we should have N characters and N-1 spaces between them
-                                // Also, most of the content should consist of valid canvas characters, not regular text
-                                if (space_count >= el->width - 1 && valid_char_count >= el->width) {
-                                    // This looks like a canvas line
+                                // This looks like a canvas line
                                     model_update_canvas_data(canvas_element_idx, lines_read, response);
                                     lines_read++;
-                                } else {
-                                    debug_log("Skipping non-canvas response: %s", response);
-                                }
                             } else {
                                 debug_log("Received other response: %s", response);
                             }
@@ -761,17 +809,17 @@ void render_elements() {
                 // CLI element is in active interaction mode (receiving text input)
                 char processed_label[MAX_LABEL_LEN * 2];
                 substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
-                printf("[^] %d. %s\n", interactive_index, processed_label);
+                printf("[^] %d. %s", interactive_index, processed_label);
             } else if (el->focused) {
                 // CLI element has navigation focus (waiting for activation)
                 char processed_label[MAX_LABEL_LEN * 2];
                 substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
-                printf("[>] %d. %s\n", interactive_index, processed_label);
+                printf("[>] %d. %s", interactive_index, processed_label);
             } else {
                 // CLI element is not focused
                 char processed_label[MAX_LABEL_LEN * 2];
                 substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
-                printf("[ ] %d. %s\n", interactive_index, processed_label);
+                printf("[ ] %d. %s", interactive_index, processed_label);
             }
         }
     }
@@ -850,19 +898,6 @@ int read_key_from_log() {
     return -1;  // No new key available
 }
 
-// Log key press to commands.txt
-void log_key_press(int ch) {
-    if (!log_file) {
-        log_file = fopen("commands.txt", "w");
-        if (!log_file) {
-            perror("Error opening log file");
-            return;
-        }
-    }
-    
-    fprintf(log_file, "Key pressed: %d ('%c')\n", ch, isprint(ch) ? ch : '?');
-    fflush(log_file);
-}
 
 // Input buffer for backspace functionality
 char input_buffer[256] = {0};
@@ -908,8 +943,7 @@ void clear_nav_input_buffer() {
 
 // Process input
 bool process_input(int ch) {
-    log_key_press(ch);
-
+  
     // Handle Backspace (for active CLI element or navigation input)
     if (ch == 127 || ch == 8) {
         // If navigation input is active, handle backspace in nav input
@@ -1038,8 +1072,11 @@ bool process_input(int ch) {
                 return true; // Keep element active
             } else if (strcmp(el->type, "button") == 0) {
                 // For buttons, execute the action and keep element active
-                // Future: command processor here. For now, just a message.
-                return true; // Keep element active
+                if (strlen(el->onClick) > 0) {
+                    // Send the onClick command to the active module
+                    send_ipc_command(el->onClick);
+                }
+                return true; // Keep element active and trigger refresh to show variable updates
             }
         }
         // If no element is active but one is focused [>]: Enter activates it
@@ -1147,7 +1184,7 @@ bool process_input(int ch) {
                 nav_input_buffer[nav_input_pos] = '\0';
                 return true; // Redraw to show updated navigation input
             }
-        } 
+        }
         // If no element is active and navigation input isn't active, check if digit starts navigation
         else {
             // Check if the character is a digit to start navigation input mode
@@ -1414,7 +1451,7 @@ void substitute_variables_in_string(const char* src, char* dst, size_t dst_size)
     while (*src_ptr && remaining > 0) {
         // Look for variable pattern ${...}
         if (*src_ptr == '$' && *(src_ptr + 1) == '{') {
-            const char* var_start = src_ptr + 2; // Skip "${"
+            const char* var_start = src_ptr + 2; // Skip "$" and "{"
             const char* var_end = strchr(var_start, '}');
             
             if (var_end) {
@@ -1460,7 +1497,7 @@ void substitute_variables_in_string(const char* src, char* dst, size_t dst_size)
                     }
                 }
             } else {
-                // No closing }, copy the $ character
+                // No closing '}', copy the '$' character
                 *dst_ptr = *src_ptr;
                 dst_ptr++;
                 remaining--;
@@ -1499,7 +1536,6 @@ void debug_log(const char* format, ...) {
     va_list args;
     va_start(args, format);
     vfprintf(debug_file, format, args);
-    va_end(args);
     fprintf(debug_file, "\n");
     fflush(debug_file);
 }
@@ -1609,7 +1645,7 @@ void capture_rendered_frame() {
                     substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
                     interactive_index++;
                     if (el->focused) {
-                        fprintf(file, "[>] %d. [%s]\n", interactive_index, processed_label);
+                        fprintf(file, ">[>] %d. [%s]\n", interactive_index, processed_label);
                     } else {
                         fprintf(file, "[ ] %d. [%s]\n", interactive_index, processed_label);
                     }
@@ -1620,7 +1656,7 @@ void capture_rendered_frame() {
                     if (i == active_interaction_element) {
                         fprintf(file, "[^] %d. [Link: %s]\n", interactive_index, processed_label);
                     } else if (el->focused) {
-                        fprintf(file, "[>] %d. [Link: %s]\n", interactive_index, processed_label);
+                        fprintf(file, ">[>] %d. [Link: %s]\n", interactive_index, processed_label);
                     } else {
                         fprintf(file, "[ ] %d. [Link: %s]\n", interactive_index, processed_label);
                     }
@@ -1629,7 +1665,7 @@ void capture_rendered_frame() {
                     if (i == active_interaction_element) {
                         fprintf(file, "[^] %d. [Link]\n", interactive_index);
                     } else if (el->focused) {
-                        fprintf(file, "[>] %d. [Link]\n", interactive_index);
+                        fprintf(file, ">[>] %d. [Link]\n", interactive_index);
                     } else {
                         fprintf(file, "[ ] %d. [Link]\n", interactive_index);
                     }
@@ -1645,7 +1681,7 @@ void capture_rendered_frame() {
                     if (i == active_interaction_element) {
                         fprintf(file, "[^] %d. [%s]\n", interactive_index, processed_label);
                     } else if (el->focused) {
-                        fprintf(file, "[>] %d. [%s]\n", interactive_index, processed_label);
+                        fprintf(file, ">[>] %d. [%s]\n", interactive_index, processed_label);
                     } else {
                         fprintf(file, "[ ] %d. [%s]\n", interactive_index, processed_label);
                     }
@@ -1656,7 +1692,7 @@ void capture_rendered_frame() {
                     if (i == active_interaction_element) {
                         fprintf(file, "[^] %d. [Button: %s]\n", interactive_index, processed_label);
                     } else if (el->focused) {
-                        fprintf(file, "[>] %d. [Button: %s]\n", interactive_index, processed_label);
+                        fprintf(file, ">[>] %d. [Button: %s]\n", interactive_index, processed_label);
                     } else {
                         fprintf(file, "[ ] %d. [Button: %s]\n", interactive_index, processed_label);
                     }
@@ -1665,7 +1701,7 @@ void capture_rendered_frame() {
                     if (i == active_interaction_element) {
                         fprintf(file, "[^] %d. [Button]\n", interactive_index);
                     } else if (el->focused) {
-                        fprintf(file, "[>] %d. [Button]\n", interactive_index);
+                        fprintf(file, ">[>] %d. [Button]\n", interactive_index);
                     } else {
                         fprintf(file, "[ ] %d. [Button]\n", interactive_index);
                     }
@@ -1689,7 +1725,7 @@ void capture_rendered_frame() {
                             fprintf(file, "[^] %d. %s\n", interactive_index, processed_label);  // Show interaction mode indicator
                         } else if (el->focused) {
                             // Element is just selected (navigation) - show with ">"
-                            fprintf(file, "[>] %d. %s\n", interactive_index, processed_label);  // Show selected indicator
+                            fprintf(file, ">[>] %d. %s\n", interactive_index, processed_label);  // Show selected indicator
                         } else {
                             // Element is not focused - show with regular brackets
                             fprintf(file, "[ ] %d. %s\n", interactive_index, processed_label);  // Show unselected
@@ -1707,7 +1743,7 @@ void capture_rendered_frame() {
                         // Fallback to placeholder if no model data is available
                         for (int r = 0; r < el->height; r++) {
                             for (int c = 0; c < el->width; c++) {
-                                fprintf(file, ". ");
+                                fprintf(file, "."); // Removed hardcoded space
                             }
                             fprintf(file, "\n");
                         }
@@ -1719,6 +1755,119 @@ void capture_rendered_frame() {
         fprintf(file, "Enter key (1-9) or 'q' to quit: \n");
         fprintf(file, "\n");
         fclose(file);
+    }
+}
+
+// Function to process any pending responses from modules
+void process_module_responses() {
+    if (!ipc.active) {
+        return; // No active module to read from
+    }
+    
+    // Use select to check if there's data available to read without blocking
+    fd_set read_fds;
+    struct timeval timeout;
+    int fd = fileno(ipc.read_pipe);
+    
+    FD_ZERO(&read_fds);
+    FD_SET(fd, &read_fds);
+    timeout.tv_sec = 0;  // No seconds
+    timeout.tv_usec = 0; // No microseconds - makes it non-blocking
+    
+    // Check if data is available to read
+    int activity = select(fd + 1, &read_fds, NULL, NULL, &timeout);
+    
+    if (activity > 0 && FD_ISSET(fd, &read_fds)) {
+        // Data is available, read it
+        char response[1024];
+        
+        if (read_ipc_response(response, sizeof(response)) == 0) {
+            // Remove newline from response
+            response[strcspn(response, "\n")] = 0;
+            
+            // Check if this is a variable update
+            bool needs_refresh = false;
+            if (strncmp(response, "VAR:", 4) == 0) {
+                debug_log("Received VAR response: %s", response);
+                // Format: VAR:name=value
+                char *var_part = response + 4; // Skip "VAR:"
+                char *equals = strchr(var_part, '=');
+                if (equals) {
+                    *equals = '\0';
+                    char *name = var_part;
+                    char *value = equals + 1;
+                    set_variable(name, value);
+                    
+                    // Check if this is a status message that should trigger a refresh
+                    if (strcmp(name, "status_message") == 0) {
+                        needs_refresh = true;
+                    }
+                    
+                    // Log frame when important variables change
+                    if (strcmp(name, "last_action") == 0 || 
+                        strcmp(name, "last_input_was_space") == 0 ||
+                        strcmp(name, "player_x") == 0 ||
+                        strcmp(name, "player_y") == 0 ||
+                        strcmp(name, "last_placed_symbol") == 0) {
+                        log_frame_to_debug_file();
+                    }
+                } else {
+                    debug_log("ERROR: Invalid VAR format: %s", response);
+                }
+            }
+            // Check if this is a batched variable update
+            else if (strncmp(response, "VARS:", 5) == 0) {
+                debug_log("Received VARS response: %s", response);
+                // Format: VARS:name1=value1,name2=value2,name3=value3;
+                char *var_list = response + 5; // Skip "VARS:"
+                char *semi_pos = strrchr(var_list, ';'); // Find last semicolon
+                if (semi_pos) {
+                    *semi_pos = '\0'; // Replace semicolon with null terminator
+                } else {
+                    debug_log("ERROR: Invalid VARS format - missing semicolon: %s", response);
+                    return;
+                }
+                
+                // Parse each variable in the comma-separated list
+                char *token = strtok(var_list, ",");
+                while (token != NULL) {
+                    char *equals = strchr(token, '=');
+                    if (equals) {
+                        *equals = '\0';
+                        char *name = token;
+                        char *value = equals + 1;
+                        set_variable(name, value);
+                        
+                        // Check if this is a status message that should trigger a refresh
+                        if (strcmp(name, "status_message") == 0) {
+                            needs_refresh = true;
+                        }
+                        
+                        // Log frame when important variables change
+                        if (strcmp(name, "last_action") == 0 || 
+                            strcmp(name, "last_input_was_space") == 0 ||
+                            strcmp(name, "player_x") == 0 ||
+                            strcmp(name, "player_y") == 0 ||
+                            strcmp(name, "last_placed_symbol") == 0) {
+                            log_frame_to_debug_file();
+                        }
+                    } else {
+                        debug_log("ERROR: Invalid variable format in VARS: %s", token);
+                    }
+                    token = strtok(NULL, ",");
+                }
+            }
+            
+            // If we received a status message, trigger a display refresh
+            if (needs_refresh) {
+                render_elements();
+                capture_rendered_frame();
+            }
+            // Handle other response types as needed
+            else {
+                debug_log("Received other response: %s", response);
+            }
+        }
     }
 }
 
@@ -1904,6 +2053,10 @@ int main(int argc, char** argv) {
                 capture_rendered_frame(); // Capture frame after redraw
             }
         }
+        
+        // Process any pending responses from modules to update variables
+        process_module_responses();
+        
         usleep(10000); // 10ms delay to reduce CPU usage (checking log file more frequently)
     }
     

@@ -1,0 +1,7 @@
+<panel>
+    <text label="File Operations" /><br/>
+    <button key="save" label="Save" onClick="SAVE_FILE" /><br/>
+    <button key="saveas" label="Save As" onClick="SAVE_AS_FILE" /><br/>
+    <button key="load" label="Load" onClick="LOAD_FILE" /><br/>
+    <link key="back" label="Back to Main" href="chtm/index.chtm" />
+</panel>

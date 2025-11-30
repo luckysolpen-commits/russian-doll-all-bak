@@ -1,0 +1,159 @@
+# CHTM Canvas Application - Save/SaveAs/Load Functionality Implementation Plan
+
+## Overview
+This document describes the complete implementation of file save/load functionality for the CHTM canvas application. The system includes canvas state persistence, file operations module, and UI integration allowing users to save current work, save with new names, and load existing projects.
+
+## Architecture Components
+
+### 1. Canvas Player Module (modules/canvas_player/canvas_player_v.01.c)
+- **State Saving**: Automatically saves canvas state to `data/canvas_state.txt` when terminated
+- **State Loading**: Checks for existing state on startup and loads if available
+- **Signal Handling**: Comprehensive signal handlers (SIGINT, SIGTERM, SIGQUIT, SIGHUP, SIGUSR1, SIGUSR2) to ensure state is saved on all termination scenarios
+- **State Format**: Saves as structured text file with metadata and canvas data
+
+#### State File Format:
+```
+WIDTH:8
+HEIGHT:8
+PLAYER_X:0
+PLAYER_Y:0
+SELECTED_INDEX:0
+[canvas rows follow...]
+```
+
+### 2. File Operations Module (modules/file_ops/file_ops_v.01.c)
+- **SAVE Command**: `SAVE:project_name` - copies canvas_state.txt to projects/project_name/
+- **SAVEAS Command**: `SAVEAS:new_project_name` - creates new project with specified name
+- **LOAD Command**: `LOAD:project_name` - copies projects/project_name/canvas_state.txt to data/canvas_state.txt
+- **LIST_PROJECTS Command**: Shows all available projects in projects/ directory
+- **Status Reporting**: Returns success/failure status via CHTM variables
+
+### 3. CHTM File Integration
+- **chtm/file.chtm**: UI for file operations with buttons for save/load functionality
+- **chtm/index.chtm**: Link to file operations page
+- **Variable Integration**: Uses `${variable_name}` syntax for dynamic content display
+
+## Implementation Steps
+
+### Step 1: Enhanced Canvas State Saving
+- Added comprehensive signal handlers to catch termination
+- Implemented state saving to data/canvas_state.txt
+- Used safe signal handling with async-signal-safe functions
+- Registered atexit() handler for normal exits
+
+### Step 2: Canvas State Loading
+- Added load_canvas_state() function to check for existing state
+- Implemented proper parsing of state file format
+- Restored all canvas parameters (dimensions, positions, palette selection)
+- Integrated loading check at module startup
+
+### Step 3: File Operations Module Creation
+- Created modules/file_ops/ directory and file_ops_v.01.c
+- Implemented file copy operations for save/load functionality
+- Added project directory management
+- Added default directory support: creates and uses projects/default/ directory when no specific project name is provided
+- Integrated with CHTM variable system
+
+### Step 4: CHTM Integration
+- Updated file.chtm with UI elements for file operations
+- Added module tag for file operations module
+- Integrated with existing canvas player module
+
+## Key Features
+
+### 1. Automatic State Persistence
+- Canvas state is automatically saved when navigating away from index.chtm
+- All canvas elements (layers, player position, palette selection) are preserved
+- State remains available when returning to the canvas page
+
+### 2. Project Management
+- Save current work to named projects in projects/ directory
+- Save with new names for version control
+- Load previously saved projects
+- List available projects
+
+### 3. Safe Termination Handling
+- Multiple signal types caught to ensure state saving
+- Async-signal-safe operations to prevent corruption
+- Safe use of _exit() instead of exit() in signal handlers
+
+### 4. Error Handling
+- Proper validation of state files before loading
+- Error reporting through CHTM variables
+- Graceful fallback when state files are missing or corrupted
+
+## Technical Details
+
+### Canvas Layered Architecture:
+- Layer 1: `original_canvas[][]` - Static elements (base layer)
+- Layer 2: `placed_objects[][]` - Objects placed by user
+- Layer 3: `player_layer[][]` - Player position indicator
+
+### Communication Protocol:
+- Canvas module: Receives commands via stdin, sends updates via stdout
+- File module: Receives SAVE/SAVEAS/LOAD commands, reports status via VARS
+- CHTM renderer: Manages IPC communication between modules and UI
+
+### State File Location:
+- Current state: `data/canvas_state.txt`
+- Saved projects: `projects/{project_name}/canvas_state.txt`
+
+## Command Format Reference
+
+### Canvas Player Commands:
+- `DISPLAY` - Render current canvas
+- `SIZE:width,height` - Set canvas size
+- `KEY:code` - Handle keyboard input
+- `MOVE:U/D/L/R` - Move player
+- `QUIT` - Terminate with state save
+
+### File Operations Commands:
+- `SAVE:project_name` - Save to existing project
+- `SAVEAS:project_name` - Save as new project
+- `LOAD:project_name` - Load project
+- `LIST_PROJECTS` - Show available projects
+
+### CHTM Variable Format:
+- `VAR:name=value` - Single variable update
+- `VARS:name1=value1,name2=value2;` - Batch variable update
+
+## Directory Structure
+```
+/
+├── chtm/
+│   ├── index.chtm (main canvas page)
+│   ├── file.chtm (file operations page)
+│   └── page2.chtm
+├── modules/
+│   ├── canvas_player/
+│   │   └── canvas_player_v.01.c
+│   ├── file_ops/
+│   │   └── file_ops_v.01.c
+│   └── +x/ (compiled modules)
+├── data/ (current state storage)
+└── projects/ (saved projects)
+```
+
+## Troubleshooting
+
+### If modules fail to load:
+- Check `modules/+x/` directory has executable files
+- Verify file permissions on compiled modules
+- Check `debug.log` and `#.debug/quit.txt` for error messages
+
+### If state saving fails:
+- Ensure `data/` directory exists
+- Check write permissions for data directory
+- Verify signal handlers are registered properly
+
+### If file operations break page loading:
+- Use HTML comments to temporarily disable module: `<!-- <module>...</module> -->`
+- Check the new comment functionality works with `<!-- -->` syntax
+
+## Integration Points
+- Canvas player automatically saves state when stdin closes (navigation away)
+- File operations module launches when file.chtm is loaded
+- State loading occurs on canvas player startup if data/canvas_state.txt exists
+- CHTM renderer manages module lifecycle and variable substitution
+
+This implementation provides a robust, persistent canvas application with proper state management across page navigations and sessions.

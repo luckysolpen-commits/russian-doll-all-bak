@@ -1,0 +1,41 @@
+# CHTM File Architecture Implementation Steps
+
+## Overview
+Implementing file save/load functionality for the canvas application with the following architecture:
+- Canvas state is saved to data/canvas_state.txt when navigating away from canvas module
+- Module checks for default state on load and loads if available
+- File operations page supports save, saveas, and load functionality
+- Project files stored in structured directories
+
+## Step 1: Modify canvas_player_v.01.c for State Saving
+1. Add function to save canvas state to data/canvas_state.txt
+2. Format: Store composite canvas with rows separated by newlines
+3. Include player position, palette selection, and placed objects
+4. Add signal handler to catch termination and save state
+
+## Step 2: Modify canvas_player_v.01.c for State Loading
+1. Add function to check for and load from data/canvas_state.txt on startup
+2. Restore canvas state, player position, and palette selection
+3. Update all relevant variables when loading
+
+## Step 3: Create File Operations Module
+1. Create modules/file_ops/file_ops_v.01.c
+2. Handle save, saveas, and load button actions
+3. For save: copy data/canvas_state.txt to a permanent location
+4. For saveas: prompt for project name, create projects/<project_name>/ directory
+5. For load: copy selected file to data/canvas_state.txt
+
+## Step 4: Update index.chtm and file.chtm
+1. Add navigation handling to trigger state saving
+2. Link file operations to backend module
+
+## Step 5: Enhancements
+1. Add menu element for file selection
+2. Add directory traversal functionality
+3. Implement cleanup process to clear data/ folder
+
+## Context for Continuation
+- Files involved: modules/canvas_player/canvas_player_v.01.c, chtm/file.chtm, chtm/index.chtm
+- Data storage: data/canvas_state.txt, projects/<project_name>/
+- Communication: CHTM variables and commands between modules
+- State components: canvas grid, player position (x,y), palette selection

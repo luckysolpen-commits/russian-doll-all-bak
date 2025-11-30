@@ -3,11 +3,29 @@
 #include <string.h>
 #include <stdbool.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <time.h>
 
 #define MAX_CANVAS_WIDTH 20
 #define MAX_CANVAS_HEIGHT 20
 #define PALETTE_SIZE 8
 #define VAR_BUFFER_SIZE 4096
+
+// Global variables for signal handling
+int g_sig_received = 0;
+int g_sig_num = 0;
+
+// Function to ensure directories exist and save canvas state
+void ensure_data_dir() {
+    // Create data directory if it doesn't exist
+    system("mkdir -p data");
+    // Create debug directory if it doesn't exist
+    system("mkdir -p '#.debug'");
+}
+
+// Function prototype declaration
+bool load_canvas_state();
 
 // Canvas and player data - LAYERED ARCHITECTURE
 char original_canvas[MAX_CANVAS_HEIGHT][MAX_CANVAS_WIDTH];  // Layer 1: Static elements (base layer)
@@ -91,7 +109,7 @@ void display_canvas() {
                 composite_canvas[r][c] = player_layer[r][c];
             }
             
-            printf("%c ", composite_canvas[r][c]);
+            printf("%c", composite_canvas[r][c]); // Removed hardcoded space
         }
         printf("\n");
     }
@@ -129,24 +147,65 @@ void display_palette() {
     
     // Also send the actual palette line content so renderer can store it in model
     for (int c = 0; c < PALETTE_SIZE; c++) {
-        putchar(palette_canvas[0][c]);
         if (c == selected_palette_index) {
-            // Always use navigation indicator (">") for the selected palette item
-            putchar('>');
+            putchar('>'); // Draw '>' in place of selected emoji
         } else {
-            // Add space after unselected symbols to maintain spacing
-            putchar(' ');
+            putchar(palette_canvas[0][c]); // Draw the actual emoji
         }
-        if (c < PALETTE_SIZE - 1) {
-            // Add consistent spacing between elements
-            putchar(' ');
-        }
+        putchar(' '); // Add a single space to separate items
     }
     putchar('\n');
 }
 
 // Global frame counter for auditing
 int frame_count = 0;
+
+// Function to save canvas state to file
+void save_canvas_state() {
+    ensure_data_dir(); // Ensure data directory exists
+    
+    FILE* state_file = fopen("data/canvas_state.txt", "w");
+    if (state_file != NULL) {
+        // Save canvas dimensions
+        fprintf(state_file, "WIDTH:%d\n", canvas_width);
+        fprintf(state_file, "HEIGHT:%d\n", canvas_height);
+        
+        // Save player position
+        fprintf(state_file, "PLAYER_X:%d\n", player_x);
+        fprintf(state_file, "PLAYER_Y:%d\n", player_y);
+        
+        // Save selected palette index
+        fprintf(state_file, "SELECTED_INDEX:%d\n", selected_palette_index);
+        
+        // Save the composite canvas state
+        char composite_canvas[MAX_CANVAS_HEIGHT][MAX_CANVAS_WIDTH];
+        
+        for (int r = 0; r < canvas_height; r++) {
+            for (int c = 0; c < canvas_width; c++) {
+                // Start with original canvas
+                composite_canvas[r][c] = original_canvas[r][c];
+                
+                // Overlay placed objects (if not empty space)
+                if (placed_objects[r][c] != ' ') {
+                    composite_canvas[r][c] = placed_objects[r][c];
+                }
+                
+                // Overlay player on top of everything (highest priority)
+                if (player_layer[r][c] != ' ') {
+                    composite_canvas[r][c] = player_layer[r][c];
+                }
+                
+                fprintf(state_file, "%c", composite_canvas[r][c]);
+            }
+            fprintf(state_file, "\n");
+        }
+        
+        fclose(state_file);
+        printf("Canvas state saved to data/canvas_state.txt\n");
+    } else {
+        printf("Error: Could not save canvas state to data/canvas_state.txt\n");
+    }
+}
 
 // Move player based on command - updates player layer only
 void move_player(char direction) {
@@ -225,7 +284,6 @@ void place_x_symbol() {
     
     // Reset buffer and add variables
     buf_pos = 0;
-    ADD_VAR_INT(frame_count, frame_count);
     ADD_VAR_STR(last_action, "placed_x");
     ADD_VAR_CHAR(last_placed_symbol, 'X');
     ADD_VAR_INT(last_placed_at_x, player_x);
@@ -286,31 +344,205 @@ void move_palette_selection(char direction) {
     fflush(stdout);
 }
 
+// Signal handler to save state when process is terminated
+void signal_handler(int sig) {
+    // Only set flags and use async-signal-safe functions
+    g_sig_received = 1;
+    g_sig_num = sig;
+    
+    // Write directly to file descriptor (async-signal-safe)
+    char msg[256];
+    int fd = open("#.debug/quit.txt", O_WRONLY | O_CREAT | O_APPEND, 0644);
+    
+    if (fd != -1) {
+        int len = snprintf(msg, sizeof(msg), "[Signal handler] Signal %d received\n", sig);
+        write(fd, msg, len);
+        close(fd);
+    }
+    
+    // Don't do complex operations in signal handler - just set flag
+    // Actual saving will happen in main loop
+}
+
+// Function to load canvas state from file
+bool load_canvas_state() {
+    FILE* state_file = fopen("data/canvas_state.txt", "r");
+    if (state_file == NULL) {
+        // No state file exists, return false
+        return false;
+    }
+    
+    char line[512]; // Increased buffer size to handle wide canvases
+    int width = -1, height = -1;
+    int player_x_loaded = -1, player_y_loaded = -1;
+    int selected_index_loaded = -1;
+    int canvas_data_start_line = -1;
+    int current_line = 0;
+    
+    // First pass: Read metadata and determine where canvas data begins
+    while (fgets(line, sizeof(line), state_file)) {
+        current_line++;
+        // Remove newline character
+        line[strcspn(line, "\n")] = 0;
+        
+        // Parse metadata lines
+        if (strncmp(line, "WIDTH:", 6) == 0) {
+            width = atoi(line + 6);
+        } else if (strncmp(line, "HEIGHT:", 7) == 0) {
+            height = atoi(line + 7);
+        } else if (strncmp(line, "PLAYER_X:", 9) == 0) {
+            player_x_loaded = atoi(line + 9);
+        } else if (strncmp(line, "PLAYER_Y:", 9) == 0) {
+            player_y_loaded = atoi(line + 9);
+        } else if (strncmp(line, "SELECTED_INDEX:", 15) == 0) {
+            selected_index_loaded = atoi(line + 15);
+        } else {
+            // First non-metadata line is the start of canvas data
+            canvas_data_start_line = current_line;
+            break;
+        }
+    }
+    fclose(state_file);
+    
+    // Check if we have all required metadata
+    if (width <= 0 || height <= 0 || width > MAX_CANVAS_WIDTH || height > MAX_CANVAS_HEIGHT ||
+        player_x_loaded < 0 || player_y_loaded < 0 || player_x_loaded >= width || player_y_loaded >= height ||
+        selected_index_loaded < 0 || selected_index_loaded >= PALETTE_SIZE) {
+        return false;
+    }
+    
+    // Now load the full file again to get canvas data
+    state_file = fopen("data/canvas_state.txt", "r");
+    if (state_file == NULL) {
+        return false;
+    }
+    
+    // Skip metadata lines by reading them again
+    for (int i = 0; i < canvas_data_start_line - 1; i++) {
+        if (!fgets(line, sizeof(line), state_file)) {
+            fclose(state_file);
+            return false;
+        }
+    }
+    
+    // Initialize canvas with default values
+    canvas_width = width;
+    canvas_height = height;
+    for (int r = 0; r < MAX_CANVAS_HEIGHT; r++) {
+        for (int c = 0; c < MAX_CANVAS_WIDTH; c++) {
+            if (r < height && c < width) {
+                original_canvas[r][c] = '.';      // Default background
+                placed_objects[r][c] = ' ';       // No placed objects initially
+                player_layer[r][c] = ' ';         // No player initially
+            } else {
+                original_canvas[r][c] = '.';      // Default outside bounds
+                placed_objects[r][c] = ' ';       // Default outside bounds
+                player_layer[r][c] = ' ';         // Default outside bounds
+            }
+        }
+    }
+    
+    // Load the canvas data lines
+    int row = 0;
+    while (fgets(line, sizeof(line), state_file) && row < height) {
+        // Remove newline character
+        line[strcspn(line, "\n")] = 0;
+        
+        // Handle lines that may have space-separated characters (e.g., "p . # . !")
+        int col = 0;
+        for (int i = 0; i < strlen(line) && col < width; i++) {
+            char ch = line[i];
+            if (ch != ' ') {  // Only process non-space characters
+                if (col < width) {
+                    original_canvas[row][col] = ch;
+                    col++;
+                }
+            }
+        }
+        
+        row++;
+    }
+    fclose(state_file);
+    
+    // Set player position and selected palette index
+    player_x = player_x_loaded;
+    player_y = player_y_loaded;
+    selected_palette_index = selected_index_loaded;
+    
+    // Update player layer (clear old 'p' and set new position)
+    for (int r = 0; r < canvas_height; r++) {
+        for (int c = 0; c < canvas_width; c++) {
+            player_layer[r][c] = ' ';  // Clear all player positions
+        }
+    }
+    player_layer[player_y][player_x] = 'p';  // Set new position
+    
+    // Debug output
+    FILE* debug_file = fopen("#.debug/quit.txt", "a");
+    if (debug_file != NULL) {
+        time_t current_time = time(NULL);
+        fprintf(debug_file, "[%s] Loaded canvas state: %dx%d, player at (%d,%d), palette index %d\n", 
+               ctime(&current_time), width, height, player_x_loaded, player_y_loaded, selected_index_loaded);
+        fclose(debug_file);
+    }
+    
+    return true;
+}
+
 int main() {
     char input[256];
     
-    // Initialize canvas and palette with default size
-    init_canvas();
-    init_palette();
+    // Debug log when module starts
+    FILE* debug_file = fopen("#.debug/quit.txt", "a");
+    if (debug_file != NULL) {
+        time_t current_time = time(NULL);
+        fprintf(debug_file, "[%s] Canvas Player Module Started\n", ctime(&current_time));
+        fclose(debug_file);
+    }
     
-    printf("Canvas initialized with size %dx%d. Player at (0,0)\n", canvas_width, canvas_height);
-    // Send initial position variables in batch
+    // Check for saved state and load if available
+    bool state_loaded = load_canvas_state();
     
-    // Reset buffer and add initial variables
-    buf_pos = 0;
-    ADD_VAR_INT(player_x, player_x);
-    ADD_VAR_INT(player_y, player_y);
-    ADD_VAR_INT(selected_palette_index, selected_palette_index);
-    ADD_VAR_CHAR(selected_symbol, palette_symbols[selected_palette_index]);
+    if (state_loaded) {
+        // State was loaded, no need to initialize with defaults
+        debug_file = fopen("#.debug/quit.txt", "a");
+        if (debug_file != NULL) {
+            time_t current_time = time(NULL);
+            fprintf(debug_file, "[%s] Canvas state loaded successfully from file\n", ctime(&current_time));
+            fclose(debug_file);
+        }
+    } else {
+        // No saved state, initialize canvas and palette with default size
+        init_canvas();
+        init_palette();
+        debug_file = fopen("#.debug/quit.txt", "a");
+        if (debug_file != NULL) {
+            time_t current_time = time(NULL);
+            fprintf(debug_file, "[%s] No saved state found, initialized with defaults\n", ctime(&current_time));
+            fclose(debug_file);
+        }
+    }
     
-    // Output batched variables
-    printf("VARS:%s;\n", var_buffer);
-    fflush(stdout);
+    // Register signal handlers to save state on termination
+    signal(SIGINT, signal_handler);
+    signal(SIGTERM, signal_handler);
+    signal(SIGQUIT, signal_handler);
+    signal(SIGHUP, signal_handler);
+    signal(SIGUSR1, signal_handler);
+    signal(SIGUSR2, signal_handler);
+    
+    // Register exit function to save state on normal exit
+    atexit(save_canvas_state);
     
     // Main loop to process commands from parent process (CHTM renderer)
-    while (fgets(input, sizeof(input), stdin)) {
+    while (fgets(input, sizeof(input), stdin) && !g_sig_received) {
         // Remove newline character
         input[strcspn(input, "\n")] = 0;
+        
+        // Check if a signal was received that requires termination
+        if (g_sig_received) {
+            break;
+        }
         
         if (strncmp(input, "DISPLAY", 7) == 0) {  // Check if command starts with "DISPLAY"
             // Parse for canvas ID if present in format "DISPLAY:ELEMENT_ID:canvas_id"
@@ -328,18 +560,12 @@ int main() {
             if (strlen(canvas_id) > 0 && strcmp(canvas_id, "emoji_palette") == 0) {
                 // Handle emoji palette - send data to be stored in model by renderer
                 for (int c = 0; c < PALETTE_SIZE; c++) {
-                    putchar(palette_canvas[0][c]);
                     if (c == selected_palette_index) {
-                        // Always use navigation indicator (">") for the selected palette item
-                        putchar('>');
+                        putchar('>'); // Draw '>' in place of selected emoji
                     } else {
-                        // Add space after unselected symbols to maintain spacing
-                        putchar(' ');
+                        putchar(palette_canvas[0][c]); // Draw the actual emoji
                     }
-                    if (c < PALETTE_SIZE - 1) {
-                        // Add consistent spacing between elements
-                        putchar(' ');
-                    }
+                    putchar(' '); // Add a single space to separate items
                 }
                 putchar('\n');
                 
@@ -370,7 +596,6 @@ int main() {
                     canvas_width = new_width;
                     canvas_height = new_height;
                     init_canvas();  // Reinitialize with new size
-                    printf("Canvas resized to %dx%d\n", canvas_width, canvas_height);
                 }
             }
         }
@@ -605,10 +830,66 @@ int main() {
             fflush(stdout);
         }
         else if (strcmp(input, "QUIT") == 0) {
+            // Debug logging to file
+            FILE* debug_file = fopen("#.debug/quit.txt", "a");
+            if (debug_file != NULL) {
+                time_t current_time = time(NULL);
+                fprintf(debug_file, "[%s] Received QUIT command, saving canvas state...\n", ctime(&current_time));
+                fclose(debug_file);
+            }
+            
+            printf("Received QUIT command, saving canvas state...\n");
+            save_canvas_state();  // Save state before quitting
+            printf("Canvas state saved, exiting...\n");
+            
+            // Additional debug logging after save
+            debug_file = fopen("#.debug/quit.txt", "a");
+            if (debug_file != NULL) {
+                time_t current_time = time(NULL);
+                fprintf(debug_file, "[%s] Canvas state saved, exiting...\n", ctime(&current_time));
+                fclose(debug_file);
+            }
+            
             break;
         }
         
         fflush(stdout);
+    }
+    
+    // Check if exit was due to signal
+    if (g_sig_received) {
+        FILE* debug_file = fopen("#.debug/quit.txt", "a");
+        if (debug_file != NULL) {
+            time_t current_time = time(NULL);
+            fprintf(debug_file, "[%s] Signal %d received, saving canvas state...\n", ctime(&current_time), g_sig_num);
+            fclose(debug_file);
+        }
+        
+        save_canvas_state();
+        
+        debug_file = fopen("#.debug/quit.txt", "a");
+        if (debug_file != NULL) {
+            time_t current_time = time(NULL);
+            fprintf(debug_file, "[%s] Canvas state saved from signal %d, exiting...\n", ctime(&current_time), g_sig_num);
+            fclose(debug_file);
+        }
+    } else {
+        // Save state before exiting (in case stdin was closed by parent)
+        FILE* debug_file = fopen("#.debug/quit.txt", "a");
+        if (debug_file != NULL) {
+            time_t current_time = time(NULL);
+            fprintf(debug_file, "[%s] Main loop exited normally, saving canvas state...\n", ctime(&current_time));
+            fclose(debug_file);
+        }
+        
+        save_canvas_state();
+        
+        debug_file = fopen("#.debug/quit.txt", "a");
+        if (debug_file != NULL) {
+            time_t current_time = time(NULL);
+            fprintf(debug_file, "[%s] Canvas state saved from main exit, program ending...\n", ctime(&current_time));
+            fclose(debug_file);
+        }
     }
     
     return 0;

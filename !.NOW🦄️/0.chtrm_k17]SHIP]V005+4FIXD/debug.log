@@ -1,0 +1,193 @@
+=== CHTM Renderer Started ===
+Starting with file: chtm/index.chtm
+Launching module: modules/+x/canvas_player_v.01.+x
+Module launched successfully, PID: 38829
+Setting focus to element index 2
+In child process, executing module: modules/+x/canvas_player_v.01.+x
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY:ELEMENT_ID:game_canvas
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (${player_x}, ${player_y})
+Processing text element with label: Selected Symbol: [${selected_symbol}] Index: ${selected_palette_index}
+After variable substitution: Selected Symbol: [${selected_symbol}] Index: ${selected_palette_index}
+Processing text element with label: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+After variable substitution: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Processing text element with label: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+After variable substitution: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY:ELEMENT_ID:emoji_palette
+Received VARS response: VARS:player_x=0,player_y=0,;
+Setting variable: player_x = 0
+Created new variable player_x with value 0
+Setting variable: player_y = 0
+Created new variable player_y with value 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 14
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY:ELEMENT_ID:game_canvas
+Received VARS response: VARS:selected_palette_index=0,selected_symbol= ,;
+Setting variable: selected_palette_index = 0
+Created new variable selected_palette_index with value 0
+Setting variable: selected_symbol =  
+Created new variable selected_symbol with value  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label: Selected Symbol: [${selected_symbol}] Index: ${selected_palette_index}
+After variable substitution: Selected Symbol: [ ] Index: 0
+Processing text element with label: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+After variable substitution: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Processing text element with label: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+After variable substitution: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY:ELEMENT_ID:emoji_palette
+Received VARS response: VARS:player_x=0,player_y=0,;
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 15
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY:ELEMENT_ID:game_canvas
+Received VARS response: VARS:selected_palette_index=0,selected_symbol= ,;
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label: Selected Symbol: [${selected_symbol}] Index: ${selected_palette_index}
+After variable substitution: Selected Symbol: [ ] Index: 0
+Processing text element with label: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+After variable substitution: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Processing text element with label: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+After variable substitution: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY:ELEMENT_ID:emoji_palette
+Received VARS response: VARS:player_x=0,player_y=0,;
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Setting focus to element index 16
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY:ELEMENT_ID:game_canvas
+Received VARS response: VARS:selected_palette_index=0,selected_symbol= ,;
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label: Selected Symbol: [${selected_symbol}] Index: ${selected_palette_index}
+After variable substitution: Selected Symbol: [ ] Index: 0
+Processing text element with label: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+After variable substitution: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Processing text element with label: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+After variable substitution: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY:ELEMENT_ID:emoji_palette
+Received VARS response: VARS:player_x=0,player_y=0,;
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Processing text element with label: Welcome to the Canvas Demo!
+After variable substitution: Welcome to the Canvas Demo!
+Sending IPC command: DISPLAY:ELEMENT_ID:game_canvas
+Received VARS response: VARS:selected_palette_index=0,selected_symbol= ,;
+Setting variable: selected_palette_index = 0
+Updated existing variable selected_palette_index to 0
+Setting variable: selected_symbol =  
+Updated existing variable selected_symbol to  
+Processing text element with label: Player Position: 
+After variable substitution: Player Position: 
+Processing text element with label: Player position: (${player_x}, ${player_y})
+After variable substitution: Player position: (0, 0)
+Processing text element with label: Selected Symbol: [${selected_symbol}] Index: ${selected_palette_index}
+After variable substitution: Selected Symbol: [ ] Index: 0
+Processing text element with label: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+After variable substitution: Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Processing text element with label: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+After variable substitution: Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+Processing text element with label:  Emoji Palette: 
+After variable substitution:  Emoji Palette: 
+Sending IPC command: DISPLAY:ELEMENT_ID:emoji_palette
+Received VARS response: VARS:player_x=0,player_y=0,;
+Setting variable: player_x = 0
+Updated existing variable player_x to 0
+Setting variable: player_y = 0
+Updated existing variable player_y to 0
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+After variable substitution: modules/+x/canvas_player_v.01.+x
+Switching to file: chtm/file.chtm
+Cleaning up existing IPC before switching
+Module path after parsing: modules/+x/file_ops_v.01.+x
+Launching module: modules/+x/file_ops_v.01.+x
+Module launched successfully, PID: 38871
+Setting focus to element index 4
+In child process, executing module: modules/+x/file_ops_v.01.+x
+Processing text element with label: File Operations
+After variable substitution: File Operations
+Processing text element with label: Status: ${status_message}
+After variable substitution: Status: ${status_message}
+Processing text element with label: modules/+x/file_ops_v.01.+x
+After variable substitution: modules/+x/file_ops_v.01.+x
+Received VARS response: VARS:status_message=File Operations Ready,;
+Setting variable: status_message = File Operations Ready
+Created new variable status_message with value File Operations Ready
+Processing text element with label: File Operations
+After variable substitution: File Operations
+Processing text element with label: Status: ${status_message}
+After variable substitution: Status: File Operations Ready
+Processing text element with label: modules/+x/file_ops_v.01.+x
+After variable substitution: modules/+x/file_ops_v.01.+x
+Processing text element with label: File Operations
+After variable substitution: File Operations
+Processing text element with label: Status: ${status_message}
+After variable substitution: Status: File Operations Ready
+Processing text element with label: modules/+x/file_ops_v.01.+x
+After variable substitution: modules/+x/file_ops_v.01.+x
+Sending IPC command: SAVE_DEFAULT
+Processing text element with label: File Operations
+After variable substitution: File Operations
+Processing text element with label: Status: ${status_message}
+After variable substitution: Status: File Operations Ready
+Processing text element with label: modules/+x/file_ops_v.01.+x
+After variable substitution: modules/+x/file_ops_v.01.+x
+Received other response: File Operations Module Ready
+Received VARS response: VARS:save_status=success,saved_project=default,status_message=Project saved successfully!,;
+Setting variable: save_status = success
+Created new variable save_status with value success
+Setting variable: saved_project = default
+Created new variable saved_project with value default
+Setting variable: status_message = Project saved successfully!
+Updated existing variable status_message to Project saved successfully!
+Processing text element with label: File Operations
+After variable substitution: File Operations
+Processing text element with label: Status: ${status_message}
+After variable substitution: Status: Project saved successfully!
+Processing text element with label: modules/+x/file_ops_v.01.+x
+After variable substitution: modules/+x/file_ops_v.01.+x
