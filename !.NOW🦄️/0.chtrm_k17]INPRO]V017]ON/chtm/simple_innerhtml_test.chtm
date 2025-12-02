@@ -1,0 +1,20 @@
+<text label="Simple innerHTML Test">
+Testing simple innerHTML functionality.
+</text>
+<br/>
+
+<text id="status_display">${status_message}</text>
+<br/>
+
+<menu id="dynamic_content" visibility="1">
+<text>Original content - will be replaced.</text>
+</menu>
+<br/>
+
+<button onClick="CREATE_DYNAMIC_BUTTONS">Create Dynamic Content</button>
+<br/>
+<button onClick="QUIT">Exit</button>
+
+<module>
+modules/+x/simple_test.+x
+</module>

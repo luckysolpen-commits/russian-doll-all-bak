@@ -1,0 +1,28 @@
+=== CHTM Renderer Started ===
+Starting with file: chtm/innerhtml_demo.chtm
+Launching module: 
+modules/+x/canvas_player_v.01.+x
+Module launched successfully, PID: 15046
+Setting focus to element index 4
+Processing text element with label: innerHTML Demo This is a demo of the innerHTML functionality.
+
+In child process, executing module: 
+modules/+x/canvas_player_v.01.+x
+After variable substitution: innerHTML Demo This is a demo of the innerHTML functionality.
+
+Processing text element with label: ${status_message}
+After variable substitution: ${status_message}
+Processing text element with label: This content will be dynamically replaced by innerHTML.
+After variable substitution: This content will be dynamically replaced by innerHTML.
+Processing text element with label: innerHTML Demo - Testing via CLI Input
+After variable substitution: innerHTML Demo - Testing via CLI Input
+Processing text element with label: ${status_message}
+After variable substitution: ${status_message}
+Processing text element with label: This content will be dynamically replaced by innerHTML.
+After variable substitution: This content will be dynamically replaced by innerHTML.
+execl failed for: 
+modules/+x/canvas_player_v.01.+x
+Processing text element with label: modules/+x/canvas_player_v.01.+x
+
+After variable substitution: modules/+x/canvas_player_v.01.+x
+

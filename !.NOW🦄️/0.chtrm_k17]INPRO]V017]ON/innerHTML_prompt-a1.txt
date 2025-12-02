@@ -1,0 +1,70 @@
+# InnerHTML Implementation for CHTM Framework
+
+## Overview
+The goal is to implement proper innerHTML functionality similar to HTML/JavaScript's element.innerHTML = "content" pattern in the CHTM framework. This will allow modules to dynamically update UI elements with new content and interactive components.
+
+## Current State
+- Framework allows modules to communicate with the renderer via IPC
+- Renderer currently parses static CHTM files to create UI elements
+- Need to implement dynamic element creation and DOM manipulation
+
+## Requirements
+
+2. Modules should be able to send commands to update element content dynamically
+3. Content should be treated as HTML-like markup that creates actual UI elements
+4. New elements should be interactive (clickable, etc.) like statically defined elements
+5. Implementation should mirror JavaScript's innerHTML functionality as closely as possible
+
+### Phase 2: Command Protocol
+1. Define INNER_HTML command format: `INNER_HTML:element_id:html_content`
+2. Module sends this command to update specific element's content
+3. Content can include HTML-like tags: buttons, text, etc.
+
+### Phase 2: Renderer Parsing
+1. Add handler for INNER_HTML command in process_module_responses()
+2. Create function to parse HTML-like content and create new UI elements
+3. Remove existing content of target element and replace with new elements
+4. Integrate new elements into the element array
+
+### Phase 3: Dynamic Element Creation
+For HTML content like:
+```
+<button key="1" onClick="ACTION:1">Button 1</button>
+<button key="2" onClick="ACTION:2">Button 2</button>
+```
+The system should:
+1. Parse the content to identify elements and attributes
+2. Create new UIElement structures in memory
+3. Add them to the global elements array
+4. Handle their interactivity like regular elements
+5. Maintain proper indexing for navigation
+
+### Phase 4: Integration
+1. Updated render_elements() to handle dynamically created elements
+2. Ensure dynamic elements participate in focus/navigation system
+3. Test with real examples
+
+## Technical Details
+
+### Menu Element Implementation
+1. Parser should recognize `<menu id="menu_id">`  tags containing interactive elements
+2. Menu should be an interactive element type like button/link/canvas
+3. When activated, menu should allow navigation between its items
+4. Menu items should be treated as interactive elements within the menu context
+
+### Command Format (Step 2+)
+```
+INNER_HTML:target_element_id:<button onClick="SOME_COMMAND">New Button</button><br/><text>Some text</text>
+```
+
+### Element Creation Process (Step 2+) 
+1. Parse HTML-like string to identify tags and attributes
+2. Create new UIElement structures with appropriate properties
+3. Insert into elements array after target element or as children
+4. Update element_count accordingly
+5. Refresh display to show new elements
+
+- process_module_responses(): Add INNER_HTML command handler (Step 2+)
+- parse_html_string_and_create_elements(): Parse HTML and create elements (Step 2+)
+
+This implementation will provide a true innerHTML functionality where modules can dynamically create rich interactive UI elements that behave identically to statically defined ones.

@@ -1,0 +1,35 @@
+<text label="innerHTML Demo">
+This is a demo of the innerHTML functionality.
+</text>
+<br/>
+
+<text id="status_display">${status_message}</text>
+<br/>
+
+<menu id="dynamic_content" visibility="1">
+<text>This content will be dynamically replaced by innerHTML.</text>
+</menu>
+<br/>
+
+<text label="innerHTML Demo - Testing via CLI Input"></text>
+<br/>
+
+<text id="status_display">${status_message}</text>
+<br/>
+
+<menu id="dynamic_content" visibility="1">
+<text>This content will be dynamically replaced by innerHTML.</text>
+</menu>
+<br/>
+
+<cli_io key="0" label="Send INNER_HTML command: " />
+<br/>
+
+<button onClick="GET_POS">Test Canvas Module Command</button>
+<br/>
+<button onClick="QUIT">Exit</button>
+
+<module>
+modules/+x/canvas_player_v.01.+x
+</module>
+</content>

@@ -1,0 +1,14 @@
+<panel>
+    <text label="Menu Element Test - File Operations" /><br/>
+    <text label="Status: ${status_message}" /><br/>
+    <menu id="file_menu" label="File Menu:">
+        <button onClick="COPY_FILE">Copy File</button><br/>
+        <button onClick="MOVE_FILE">Move File</button><br/>
+        <button onClick="DELETE_FILE">Delete File</button><br/>
+        <button onClick="RENAME_FILE">Rename File</button><br/>
+    </menu><br/>
+    <button key="1" label="Activate File Menu" />
+    <button key="2" label="Back to Main" />
+</panel>
+<cli_io key="0" label="Command: ${command_input}" /><br/>
+<module>modules/+x/file_ops_v.01.+x</module>

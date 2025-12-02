@@ -1,0 +1,50 @@
+INNER HTML IMPLEMENTATION PROMPT
+
+We need to implement an innerHTML-like feature for the CHTM framework. This should allow modules to dynamically update content within specific container elements, similar to how JavaScript's innerHTML works.
+
+CURRENT STATE
+- We have a file.chtm page with a projects_container element
+- We want to dynamically populate this container with directory contents from projects/**
+- We want to implement an innerHTML-like mechanism that follows HTML/JS patterns
+
+REQUIRED IMPLEMENTATION
+1. Add INNER_HTML command support to the renderer
+   - Format: INNER_HTML:element_id:new_content
+   - Should replace the content of the element with specified ID
+   - Should parse the new content as CHTM and make child elements interactive
+
+2. Update the file_ops module 
+   - Add functionality to scan projects/** directory
+   - Generate dynamic CHTM content with buttons for each project
+   - Send INNER_HTML command to update projects_container
+
+3. Ensure dynamically created elements are interactive
+   - Buttons/links in the dynamically inserted content should be clickable
+   - They should respond to navigation and input as normal elements
+
+DESIRED FLOW
+1. User navigates to file.chtm
+2. Page shows "Projects will appear here..." 
+3. User clicks "Load Projects (innerHTML test)" button
+4. Module scans projects/** directory
+5. Module generates CHTM with buttons for each project directory
+6. Module sends INNER_HTML:projects_container:... with new content
+7. Renderer updates the element, replacing "Projects will appear here..." with actual project buttons
+8. Project buttons are fully interactive and navigable
+
+TECHNICAL REQUIREMENTS
+- Maintain existing element structure and navigation
+- When INNER_HTML updates content, new elements should be added to the elements array (like DOM elements in browser)
+- Parse new content with same logic as initial page loading and create proper UIElement structures
+- Ensure dynamically created elements become fully interactive and navigable
+- Handle parent-child relationships for dynamically created elements
+- Handle the case where element IDs might conflict
+- Keep security in mind (validate content being inserted)
+
+GOALS
+- Mirror JavaScript innerHTML behavior as closely as possible
+- Maintain the MVC architecture (Module generates content, View renders, Controller handles input)
+- Ensure recursive menu activation works with dynamically created elements
+- Keep it simple and maintainable
+
+IMPORTANT: This is about creating a mechanism similar to JavaScript's element.innerHTML = content, not about creating DOM elements in the traditional sense, but about replacing content inside existing container elements with new CHTM content that gets parsed and made interactive.
