@@ -179,7 +179,8 @@ void initialize_focus();
 int send_ipc_command(const char* command);
 int read_ipc_response(char* buffer, int buffer_size);
 void process_module_responses();
-void parse_html_string_and_create_elements(const char* html_content, int parent_index);
+void replace_element_content(int element_index, const char* new_content);
+int add_chtm_fragment_as_children(int parent_index, const char* fragment_content);
 
 /*
  * =====================
@@ -895,215 +896,262 @@ void parse_chtm_file(const char* content) {
     free(content_copy);
 }
 
-// Parse HTML-like string and create new elements as children of a parent
-void parse_html_string_and_create_elements(const char* html_content, int parent_index) {
-    if (!html_content) return;
-    
-    // Create a copy of the content to work with
-    char* content_copy = strdup(html_content);
-    if (!content_copy) return;
-    
-    char* cursor = content_copy;
-    
-    // Process each tag in the HTML content
-    while (*cursor) {
-        // Find opening tag
-        char* tag_start = strchr(cursor, '<');
-        if (tag_start == NULL) break;  // No more tags
-        
-        // Process text content before tag if any
-        if (tag_start > cursor) {
-            // Extract the text content before the tag
-            char text_content[512];
-            int len = tag_start - cursor;
-            if (len < 512) {
-                strncpy(text_content, cursor, len);
-                text_content[len] = '\0';
-                
-                // Add as a text element if not just whitespace
-                char* trimmed = text_content;
-                while (*trimmed && isspace(*trimmed)) trimmed++;
-                if (*trimmed) {
-                    if (element_count < MAX_ELEMENTS) {
-                        elements[element_count].key = -1;
-                        strcpy(elements[element_count].type, "text");
-                        strncpy(elements[element_count].label, trimmed, MAX_LABEL_LEN - 1);
-                        elements[element_count].parent_index = parent_index;  // Set parent
-                        
-                        // Add to parent's children list
-                        if (parent_index >= 0 && parent_index < MAX_ELEMENTS) {
-                            UIElement* parent = &elements[parent_index];
-                            if (parent->num_children < MAX_CHILDREN) {
-                                parent->children[parent->num_children] = element_count;
-                                parent->num_children++;
-                            }
-                        }
-                        
-                        element_count++;
-                    }
-                }
-            }
-        }
-        
-        // Find closing tag
-        char* tag_end = strchr(tag_start, '>');
-        if (tag_end == NULL) break;
-        
-        // Extract tag
-        char tag[256];
-        int tag_len = tag_end - (tag_start + 1);
-        strncpy(tag, tag_start + 1, tag_len);
-        tag[tag_len] = '\0';
-        
-        // Check if self-closing (ends with /)
-        bool self_closing = false;
-        if (tag[strlen(tag)-1] == '/') {
-            self_closing = true;
-            tag[strlen(tag)-1] = '\0';
-        }
-        
-        // Extract tag name and attributes
-        char tag_name[64];
-        char* attr_start = strchr(tag, ' ');
-        if (attr_start) {
-            int name_len = attr_start - tag;
-            if (name_len < 64) {
-                strncpy(tag_name, tag, name_len);
-                tag_name[name_len] = '\0';
-                attr_start++; // Move past the space
-            } else {
-                strcpy(tag_name, "invalid");
-                attr_start = "";
-            }
-        } else {
-            strncpy(tag_name, tag, 63);
-            tag_name[63] = '\0';
-            attr_start = "";
-        }
-        
-        // Create element based on tag name
-        if (strcmp(tag_name, "button") == 0 || strcmp(tag_name, "BUTTON") == 0) {
-            if (element_count < MAX_ELEMENTS) {
-                elements[element_count].key = -1;
-                strcpy(elements[element_count].type, "button");
-                parse_attributes(&elements[element_count], attr_start);
-                elements[element_count].parent_index = parent_index;  // Set parent
-                
-                // Add to parent's children list
-                if (parent_index >= 0 && parent_index < MAX_ELEMENTS) {
-                    UIElement* parent = &elements[parent_index];
-                    if (parent->num_children < MAX_CHILDREN) {
-                        parent->children[parent->num_children] = element_count;
-                        parent->num_children++;
-                    }
-                }
-                
-                element_count++;
-            }
-        }
-        else if (strcmp(tag_name, "link") == 0 || strcmp(tag_name, "LINK") == 0) {
-            if (element_count < MAX_ELEMENTS) {
-                elements[element_count].key = -1;
-                strcpy(elements[element_count].type, "link");
-                parse_attributes(&elements[element_count], attr_start);
-                elements[element_count].parent_index = parent_index;  // Set parent
-                
-                // Add to parent's children list
-                if (parent_index >= 0 && parent_index < MAX_ELEMENTS) {
-                    UIElement* parent = &elements[parent_index];
-                    if (parent->num_children < MAX_CHILDREN) {
-                        parent->children[parent->num_children] = element_count;
-                        parent->num_children++;
-                    }
-                }
-                
-                element_count++;
-            }
-        }
-        else if (strcmp(tag_name, "text") == 0 || strcmp(tag_name, "TEXT") == 0) {
-            if (element_count < MAX_ELEMENTS) {
-                elements[element_count].key = -1;
-                strcpy(elements[element_count].type, "text");
-                parse_attributes(&elements[element_count], attr_start);
-                elements[element_count].parent_index = parent_index;  // Set parent
-                
-                // Add to parent's children list
-                if (parent_index >= 0 && parent_index < MAX_ELEMENTS) {
-                    UIElement* parent = &elements[parent_index];
-                    if (parent->num_children < MAX_CHILDREN) {
-                        parent->children[parent->num_children] = element_count;
-                        parent->num_children++;
-                    }
-                }
-                
-                element_count++;
-            }
-        }
-        else if (strcmp(tag_name, "canvas") == 0 || strcmp(tag_name, "CANVAS") == 0) {
-            if (element_count < MAX_ELEMENTS) {
-                elements[element_count].key = -1;
-                strcpy(elements[element_count].type, "canvas");
-                parse_attributes(&elements[element_count], attr_start);
-                elements[element_count].parent_index = parent_index;  // Set parent
-                
-                // Add to parent's children list
-                if (parent_index >= 0 && parent_index < MAX_ELEMENTS) {
-                    UIElement* parent = &elements[parent_index];
-                    if (parent->num_children < MAX_CHILDREN) {
-                        parent->children[parent->num_children] = element_count;
-                        parent->num_children++;
-                    }
-                }
-                
-                element_count++;
-            }
-        }
-        else if (strcmp(tag_name, "br") == 0 || strcmp(tag_name, "BR") == 0) {
-            if (element_count < MAX_ELEMENTS) {
-                elements[element_count].key = -1;
-                strcpy(elements[element_count].type, "br");
-                elements[element_count].parent_index = parent_index;  // Set parent - though br tags are typically not interactive
-                
-                // Add to parent's children list
-                if (parent_index >= 0 && parent_index < MAX_ELEMENTS) {
-                    UIElement* parent = &elements[parent_index];
-                    if (parent->num_children < MAX_CHILDREN) {
-                        parent->children[parent->num_children] = element_count;
-                        parent->num_children++;
-                    }
-                }
-                
-                element_count++;
-            }
-        }
-        else if (strcmp(tag_name, "menu") == 0 || strcmp(tag_name, "MENU") == 0) {
-            if (element_count < MAX_ELEMENTS) {
-                elements[element_count].key = -1;
-                strcpy(elements[element_count].type, "menu");
-                parse_attributes(&elements[element_count], attr_start);
-                elements[element_count].parent_index = parent_index;  // Set parent
-                
-                // Initialize menu-specific properties
-                elements[element_count].num_children = 0;
-                elements[element_count].current_child_focus = -1;
-                
-                // Add to parent's children list
-                if (parent_index >= 0 && parent_index < MAX_ELEMENTS) {
-                    UIElement* parent = &elements[parent_index];
-                    if (parent->num_children < MAX_CHILDREN) {
-                        parent->children[parent->num_children] = element_count;
-                        parent->num_children++;
-                    }
-                }
-                
-                element_count++;
-            }
-        }
-        
-        cursor = tag_end + 1;
+// Helper function to add CHTM fragment as children to an existing element
+int add_chtm_fragment_as_children(int parent_index, const char* fragment_content) {
+    if (parent_index < 0 || parent_index >= MAX_ELEMENTS) {
+        debug_log("ERROR: Invalid parent index %d", parent_index);
+        return -1;
     }
     
-    free(content_copy);
+    if (!fragment_content || strlen(fragment_content) == 0) {
+        debug_log("INFO: Empty fragment content provided");
+        return 0;
+    }
+    
+    debug_log("Adding fragment as children to element %d", parent_index);
+    
+    // First, remove any existing children of this element
+    UIElement* parent = &elements[parent_index];
+    
+    // Save original properties that we want to preserve
+    char original_type[MAX_ATTR_LEN];
+    char original_label[MAX_LABEL_LEN];
+    char original_href[MAX_PATH_LEN];
+    char original_onClick[MAX_ATTR_LEN];
+    char original_id[MAX_ATTR_LEN];
+    int original_key = parent->key;
+    int original_width = parent->width;
+    int original_height = parent->height;
+    char original_color[MAX_ATTR_LEN];
+    bool original_focused = parent->focused;
+    int original_parent_index = parent->parent_index;
+    int original_num_children = parent->num_children;
+    int original_current_child_focus = parent->current_child_focus;
+    bool original_visibility = parent->visibility;
+    
+    strcpy(original_type, parent->type);
+    strcpy(original_label, parent->label);
+    strcpy(original_href, parent->href);
+    strcpy(original_onClick, parent->onClick);
+    strcpy(original_id, parent->id);
+    
+    // Temporarily store children indices that we might need to process
+    int temp_children[MAX_CHILDREN];
+    for (int i = 0; i < original_num_children && i < MAX_CHILDREN; i++) {
+        temp_children[i] = parent->children[i];
+    }
+    
+    // Reset the parent's child tracking (but keep other properties)
+    parent->num_children = 0;
+    parent->current_child_focus = -1;
+    
+    // Parse the fragment content, but we need to make sure it's properly formatted
+    // For now, let's handle the parsing similar to how we do in parse_chtm_file
+    char* content_to_parse = strdup(fragment_content);
+    if (!content_to_parse) {
+        debug_log("ERROR: Failed to allocate memory for fragment content");
+        return -1;
+    }
+    
+    // Use tokenization approach to parse the fragment
+    int token_count;
+    Token* tokens = tokenize_chtm(content_to_parse, &token_count);
+    if (!tokens) {
+        debug_log("ERROR: Failed to tokenize fragment content");
+        free(content_to_parse);
+        return -1;
+    }
+    
+    // Stack to track element hierarchy during parsing (for nested elements)
+    int element_stack[STACK_SIZE];
+    int stack_top = -1;
+    
+    // Parse tokens and add elements as children to the parent
+    for (int i = 0; i < token_count && element_count < MAX_ELEMENTS; i++) {
+        Token* token = &tokens[i];
+        
+        if (token->type == TOKEN_OPEN_TAG) {
+            if (element_count >= MAX_ELEMENTS) {
+                debug_log("ERROR: MAX_ELEMENTS reached while parsing fragment");
+                break;
+            }
+            
+            // Create new element
+            elements[element_count].key = -1;  // Reset key initially
+            memset(elements[element_count].type, 0, MAX_ATTR_LEN);
+            memset(elements[element_count].label, 0, MAX_LABEL_LEN);
+            memset(elements[element_count].href, 0, MAX_PATH_LEN);
+            memset(elements[element_count].onClick, 0, MAX_ATTR_LEN);
+            memset(elements[element_count].id, 0, MAX_ATTR_LEN);
+            memset(elements[element_count].color, 0, MAX_ATTR_LEN);
+            elements[element_count].width = 0;
+            elements[element_count].height = 0;
+            elements[element_count].focused = false;
+            elements[element_count].parent_index = parent_index;
+            elements[element_count].num_children = 0;
+            elements[element_count].current_child_focus = -1;
+            elements[element_count].visibility = false;  // Default visibility to false
+            
+            // Parse element type and attributes
+            if (strcmp(token->tag_name, "button") == 0) {
+                strcpy(elements[element_count].type, "button");
+                parse_attributes(&elements[element_count], token->attributes);
+            }
+            else if (strcmp(token->tag_name, "link") == 0) {
+                strcpy(elements[element_count].type, "link"); 
+                parse_attributes(&elements[element_count], token->attributes);
+            }
+            else if (strcmp(token->tag_name, "text") == 0) {
+                strcpy(elements[element_count].type, "text");
+                parse_attributes(&elements[element_count], token->attributes);
+            }
+            else if (strcmp(token->tag_name, "canvas") == 0) {
+                strcpy(elements[element_count].type, "canvas");
+                parse_attributes(&elements[element_count], token->attributes);
+            }
+            else if (strcmp(token->tag_name, "menu") == 0) {
+                strcpy(elements[element_count].type, "menu");
+                parse_attributes(&elements[element_count], token->attributes);
+            }
+            else if (strcmp(token->tag_name, "panel") == 0) {
+                strcpy(elements[element_count].type, "panel");
+                parse_attributes(&elements[element_count], token->attributes);
+            }
+            else if (strcmp(token->tag_name, "br") == 0) {
+                strcpy(elements[element_count].type, "br");
+                elements[element_count].parent_index = parent_index;
+            }
+            else {
+                // Default to text if unknown type
+                strcpy(elements[element_count].type, "text");
+                strncpy(elements[element_count].label, token->tag_name, MAX_LABEL_LEN - 1);
+                parse_attributes(&elements[element_count], token->attributes);
+            }
+            
+            // Establish parent-child relationship
+            if (parent->num_children < MAX_CHILDREN) {
+                parent->children[parent->num_children] = element_count;
+                parent->num_children++;
+            } else {
+                debug_log("ERROR: Parent element %d has reached MAX_CHILDREN", parent_index);
+            }
+            
+            // Push this element onto the stack if it can have children
+            if (strcmp(elements[element_count].type, "menu") == 0 || 
+                strcmp(elements[element_count].type, "panel") == 0 ||
+                strcmp(elements[element_count].type, "text") == 0) {
+                if (stack_top < STACK_SIZE - 1) {
+                    element_stack[++stack_top] = element_count;
+                }
+            }
+            
+            element_count++;
+        }
+        else if (token->type == TOKEN_SELFCLOSE_TAG) {
+            if (element_count >= MAX_ELEMENTS) {
+                debug_log("ERROR: MAX_ELEMENTS reached while parsing fragment");
+                break;
+            }
+            
+            // Create self-closing element (e.g., <br/>)
+            elements[element_count].key = -1;
+            memset(elements[element_count].type, 0, MAX_ATTR_LEN);
+            memset(elements[element_count].label, 0, MAX_LABEL_LEN);
+            memset(elements[element_count].href, 0, MAX_PATH_LEN);
+            memset(elements[element_count].onClick, 0, MAX_ATTR_LEN);
+            memset(elements[element_count].id, 0, MAX_ATTR_LEN);
+            memset(elements[element_count].color, 0, MAX_ATTR_LEN);
+            elements[element_count].width = 0;
+            elements[element_count].height = 0;
+            elements[element_count].focused = false;
+            elements[element_count].parent_index = parent_index;
+            elements[element_count].num_children = 0;
+            elements[element_count].current_child_focus = -1;
+            elements[element_count].visibility = false;  // Default visibility to false
+            
+            if (strcmp(token->tag_name, "br") == 0) {
+                strcpy(elements[element_count].type, "br");
+            }
+            else if (strcmp(token->tag_name, "text") == 0) {
+                strcpy(elements[element_count].type, "text");
+                parse_attributes(&elements[element_count], token->attributes);
+            }
+            else {
+                // For other self-closing tags
+                strcpy(elements[element_count].type, token->tag_name);
+                parse_attributes(&elements[element_count], token->attributes);
+            }
+            
+            // Establish parent-child relationship
+            if (parent->num_children < MAX_CHILDREN) {
+                parent->children[parent->num_children] = element_count;
+                parent->num_children++;
+            }
+            
+            element_count++;
+        }
+        else if (token->type == TOKEN_TEXT) {
+            if (element_count >= MAX_ELEMENTS) {
+                debug_log("ERROR: MAX_ELEMENTS reached while parsing fragment");
+                break;
+            }
+            
+            // Create text element from content
+            elements[element_count].key = -1;
+            strcpy(elements[element_count].type, "text");
+            strncpy(elements[element_count].label, token->content, MAX_LABEL_LEN - 1);
+            elements[element_count].href[0] = '\0';
+            elements[element_count].onClick[0] = '\0';
+            elements[element_count].id[0] = '\0';
+            elements[element_count].width = 0;
+            elements[element_count].height = 0;
+            elements[element_count].focused = false;
+            elements[element_count].parent_index = parent_index;
+            elements[element_count].num_children = 0;
+            elements[element_count].current_child_focus = -1;
+            elements[element_count].visibility = false;  // Default visibility to false
+            
+            // Establish parent-child relationship
+            if (parent->num_children < MAX_CHILDREN) {
+                parent->children[parent->num_children] = element_count;
+                parent->num_children++;
+            }
+            
+            element_count++;
+        }
+        // Note: We're not handling TOKEN_CLOSE_TAG in this simple version
+    }
+    
+    // Clean up
+    free(content_to_parse);
+    free(tokens);
+    
+    debug_log("Successfully added %d elements as children to parent %d", parent->num_children, parent_index);
+    return parent->num_children;
+}
+
+// Function to replace content of an element with new CHTM content
+void replace_element_content(int element_index, const char* new_content) {
+    if (element_index < 0 || element_index >= MAX_ELEMENTS) {
+        debug_log("ERROR: Invalid element index %d for content replacement", element_index);
+        return;
+    }
+    
+    if (!new_content) {
+        debug_log("ERROR: NULL content provided for replacement");
+        return;
+    }
+    
+    debug_log("Replacing content for element %d with new content: %s", element_index, new_content);
+    
+    // Add the new content as children to the specified element
+    int num_added = add_chtm_fragment_as_children(element_index, new_content);
+    
+    if (num_added >= 0) {
+        debug_log("Successfully replaced content, added %d child elements", num_added);
+    } else {
+        debug_log("Failed to replace content");
+    }
 }
 
 // Check if an element is visible (for rendering purposes)
@@ -1181,16 +1229,115 @@ void render_elements() {
             printf("\n");
         }
         else if (strcmp(el->type, "text") == 0) {
-            if (el->label[0] != '\0') {
-                debug_log("Processing text element with label: %s", el->label);
-                // Process variable substitution in the label
-                char processed_label[MAX_LABEL_LEN * 2]; // Allow for expansion
-                substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
-                debug_log("After variable substitution: %s", processed_label);
-                printf("%s", processed_label);
+            // Check if this text element has dynamically added children
+            // If so, render the children instead of the original label
+            if (el->num_children > 0) {
+                // This text element has children, render them instead of the original label
+                // Only render children if this element is currently visible
+                if (is_element_visible(el)) {
+                    for (int child_idx = 0; child_idx < el->num_children; child_idx++) {
+                        int child_element_idx = el->children[child_idx];
+                        if (child_element_idx >= 0 && child_element_idx < element_count) {
+                            UIElement* child_el = &elements[child_element_idx];
+                            // Temporarily increase interactive_index to account for the children being rendered
+                            // as part of this container element
+                            
+                            // Render the child element using the same logic as in the main loop
+                            if (is_interactive_element(child_el)) {
+                                interactive_index++;  // This ensures proper numbering
+                                if (strcmp(child_el->type, "button") == 0) {
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    if (child_element_idx == active_interaction_element) {
+                                        printf("[^] %d. [%s]", interactive_index, processed_label);
+                                    } else if (child_idx == el->current_child_focus) {
+                                        printf("[>] %d. [%s]", interactive_index, processed_label);
+                                    } else if (child_element_idx == execute_on_next_enter) {
+                                        printf("[^] %d. [%s]", interactive_index, processed_label); // Show as pseudo-active
+                                    } else if (child_el->focused) {
+                                        printf("[>] %d. [%s]", interactive_index, processed_label);
+                                    } else {
+                                        printf("[ ] %d. [%s]", interactive_index, processed_label);
+                                    }
+                                }
+                                else if (strcmp(child_el->type, "link") == 0) {
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    if (child_element_idx == active_interaction_element) {
+                                        printf("[^] %d. [%s]", interactive_index, processed_label);
+                                    } else if (child_idx == el->current_child_focus) {
+                                        printf("[>] %d. [%s]", interactive_index, processed_label);
+                                    } else if (child_element_idx == execute_on_next_enter) {
+                                        printf("[^] %d. [%s]", interactive_index, processed_label); // Show as pseudo-active
+                                    } else if (child_el->focused) {
+                                        printf("[>] %d. [%s]", interactive_index, processed_label);
+                                    } else {
+                                        printf("[ ] %d. [%s]", interactive_index, processed_label);
+                                    }
+                                }
+                                else if (strcmp(child_el->type, "text") == 0) {
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    if (child_element_idx == active_interaction_element) {
+                                        printf("[^] %d. %s", interactive_index, processed_label);
+                                    } else if (child_idx == el->current_child_focus) {
+                                        printf("[>] %d. %s", interactive_index, processed_label);
+                                    } else if (child_element_idx == execute_on_next_enter) {
+                                        printf("[^] %d. %s", interactive_index, processed_label); // Show as pseudo-active
+                                    } else if (child_el->focused) {
+                                        printf("[>] %d. %s", interactive_index, processed_label);
+                                    } else {
+                                        printf("[ ] %d. %s", interactive_index, processed_label);
+                                    }
+                                }
+                                else {
+                                    // For other types of interactive child elements
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    if (child_element_idx == active_interaction_element) {
+                                        printf("[^] %d. %s", interactive_index, processed_label);
+                                    } else if (child_idx == el->current_child_focus) {
+                                        printf("[>] %d. %s", interactive_index, processed_label);
+                                    } else if (child_element_idx == execute_on_next_enter) {
+                                        printf("[^] %d. %s", interactive_index, processed_label); // Show as pseudo-active
+                                    } else if (child_el->focused) {
+                                        printf("[>] %d. %s", interactive_index, processed_label);
+                                    } else {
+                                        printf("[ ] %d. %s", interactive_index, processed_label);
+                                    }
+                                }
+                            } else {
+                                // For non-interactive children of this container
+                                if (strcmp(child_el->type, "text") == 0 && child_el->label[0] != '\0') {
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    printf("%s", processed_label);
+                                } else if (strcmp(child_el->type, "br") == 0) {
+                                    printf("\n");
+                                }
+                                // Add other non-interactive child types as needed
+                            }
+                            
+                            // Add a line break or separator between children as appropriate
+                            if (strcmp(child_el->type, "br") != 0) {
+                                printf("\n");
+                            }
+                        }
+                    }
+                }
             } else {
-                // If no label, do nothing. A <br> tag is now required for a newline.
-                ;
+                // Original behavior: render the label if there are no children
+                if (el->label[0] != '\0') {
+                    debug_log("Processing text element with label: %s", el->label);
+                    // Process variable substitution in the label
+                    char processed_label[MAX_LABEL_LEN * 2]; // Allow for expansion
+                    substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
+                    debug_log("After variable substitution: %s", processed_label);
+                    printf("%s", processed_label);
+                } else {
+                    // If no label, do nothing. A <br> tag is now required for a newline.
+                    ;
+                }
             }
         }
         else if (strcmp(el->type, "link") == 0) {
@@ -1416,8 +1563,106 @@ void render_elements() {
             // Skip buttons without either key or label
         }
         else if (strcmp(el->type, "panel") == 0) {
-            // Panel is just a container, may add visual separation later
-            // Don't print panel elements as visible items
+            // Panel is a container that can hold other elements
+            // Check if this panel has dynamically added children
+            if (el->num_children > 0) {
+                // Render children of this panel
+                if (is_element_visible(el)) {
+                    for (int child_idx = 0; child_idx < el->num_children; child_idx++) {
+                        int child_element_idx = el->children[child_idx];
+                        if (child_element_idx >= 0 && child_element_idx < element_count) {
+                            UIElement* child_el = &elements[child_element_idx];
+                            // Render the child element using the same logic as in the main loop
+                            if (is_interactive_element(child_el)) {
+                                interactive_index++;  // This ensures proper numbering
+                                if (strcmp(child_el->type, "button") == 0) {
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    if (child_element_idx == active_interaction_element) {
+                                        printf("[^] %d. [%s]", interactive_index, processed_label);
+                                    } else if (child_idx == el->current_child_focus) {
+                                        printf("[>] %d. [%s]", interactive_index, processed_label);
+                                    } else if (child_element_idx == execute_on_next_enter) {
+                                        printf("[^] %d. [%s]", interactive_index, processed_label); // Show as pseudo-active
+                                    } else if (child_el->focused) {
+                                        printf("[>] %d. [%s]", interactive_index, processed_label);
+                                    } else {
+                                        printf("[ ] %d. [%s]", interactive_index, processed_label);
+                                    }
+                                }
+                                else if (strcmp(child_el->type, "link") == 0) {
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    if (child_element_idx == active_interaction_element) {
+                                        printf("[^] %d. [%s]", interactive_index, processed_label);
+                                    } else if (child_idx == el->current_child_focus) {
+                                        printf("[>] %d. [%s]", interactive_index, processed_label);
+                                    } else if (child_element_idx == execute_on_next_enter) {
+                                        printf("[^] %d. [%s]", interactive_index, processed_label); // Show as pseudo-active
+                                    } else if (child_el->focused) {
+                                        printf("[>] %d. [%s]", interactive_index, processed_label);
+                                    } else {
+                                        printf("[ ] %d. [%s]", interactive_index, processed_label);
+                                    }
+                                }
+                                else if (strcmp(child_el->type, "text") == 0) {
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    if (child_element_idx == active_interaction_element) {
+                                        printf("[^] %d. %s", interactive_index, processed_label);
+                                    } else if (child_idx == el->current_child_focus) {
+                                        printf("[>] %d. %s", interactive_index, processed_label);
+                                    } else if (child_element_idx == execute_on_next_enter) {
+                                        printf("[^] %d. %s", interactive_index, processed_label); // Show as pseudo-active
+                                    } else if (child_el->focused) {
+                                        printf("[>] %d. %s", interactive_index, processed_label);
+                                    } else {
+                                        printf("[ ] %d. %s", interactive_index, processed_label);
+                                    }
+                                }
+                                else {
+                                    // For other types of interactive child elements
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    if (child_element_idx == active_interaction_element) {
+                                        printf("[^] %d. %s", interactive_index, processed_label);
+                                    } else if (child_idx == el->current_child_focus) {
+                                        printf("[>] %d. %s", interactive_index, processed_label);
+                                    } else if (child_element_idx == execute_on_next_enter) {
+                                        printf("[^] %d. %s", interactive_index, processed_label); // Show as pseudo-active
+                                    } else if (child_el->focused) {
+                                        printf("[>] %d. %s", interactive_index, processed_label);
+                                    } else {
+                                        printf("[ ] %d. %s", interactive_index, processed_label);
+                                    }
+                                }
+                            } else {
+                                // For non-interactive children of this container
+                                if (strcmp(child_el->type, "text") == 0 && child_el->label[0] != '\0') {
+                                    char processed_label[MAX_LABEL_LEN * 2];
+                                    substitute_variables_in_string(child_el->label, processed_label, sizeof(processed_label));
+                                    printf("%s", processed_label);
+                                } else if (strcmp(child_el->type, "br") == 0) {
+                                    printf("\n");
+                                }
+                                // Add other non-interactive child types as needed
+                            }
+                            
+                            // Add a line break or separator between children as appropriate
+                            if (strcmp(child_el->type, "br") != 0) {
+                                printf("\n");
+                            }
+                        }
+                    }
+                }
+            } else {
+                // Panel without children - could potentially render its label if it has one
+                if (el->label[0] != '\0') {
+                    char processed_label[MAX_LABEL_LEN * 2];
+                    substitute_variables_in_string(el->label, processed_label, sizeof(processed_label));
+                    printf("%s", processed_label);
+                }
+            }
         }
 
         else if (strcmp(el->type, "canvas") == 0) {
@@ -2475,10 +2720,12 @@ void launch_module() {
 int send_ipc_command(const char* command) {
     if (!ipc.active || !ipc.write_pipe) {
         debug_log("Failed to send IPC command (not active or no write pipe): %s", command);
+        printf("DEBUG: Failed to send IPC command: %s\n", command);  // Console debug
         return -1;
     }
     
     debug_log("Sending IPC command: %s", command);
+    printf("DEBUG: Sending IPC command: %s\n", command);  // Console debug
     fprintf(ipc.write_pipe, "%s\n", command);
     fflush(ipc.write_pipe);
     return 0;
@@ -2952,6 +3199,10 @@ void process_module_responses() {
             // Remove newline from response
             response[strcspn(response, "\n")] = 0;
             
+            // Debug: log what we received from module
+            debug_log("Received from module: %s", response);
+            printf("DEBUG: Received from module: %s\n", response);  // Console debug
+            
             // Check if this is a variable update
             bool needs_refresh = false;
             if (strncmp(response, "VAR:", 4) == 0) {
@@ -3025,53 +3276,77 @@ void process_module_responses() {
                 }
             }
             
-            // Check if this is an innerHTML command
+            // Handle INNER_HTML command to dynamically update element content
             else if (strncmp(response, "INNER_HTML:", 11) == 0) {
                 debug_log("Received INNER_HTML response: %s", response);
-                // Format: INNER_HTML:element_id:html_content
-                char *content_start = response + 11; // Skip "INNER_HTML:"
-                char *id_end = strchr(content_start, ':');
-                if (id_end) {
-                    *id_end = '\0';
-                    char element_id[MAX_ATTR_LEN];
-                    strncpy(element_id, content_start, MAX_ATTR_LEN - 1);
-                    element_id[MAX_ATTR_LEN - 1] = '\0';
+                printf("DEBUG: INNER_HTML command received: %s\n", response); // Console debug
+                // Format: INNER_HTML:element_id:new_content
+                char *element_id_part = response + 11; // Skip "INNER_HTML:"
+                char *colon_pos = strchr(element_id_part, ':');
+                if (colon_pos) {
+                    *colon_pos = '\0'; // Split at the colon
+                    char *element_id = element_id_part;
+                    char *new_content = colon_pos + 1;
                     
-                    char *html_content = id_end + 1; // Everything after the first ':'
+                    debug_log("INNER_HTML - Looking for element ID: %s with content: %s", element_id, new_content);
+                    printf("DEBUG: Looking for element ID '%s' to update with content\n", element_id); // Console debug
                     
-                    // Find the target element by ID and replace its content
-                    int target_index = -1;
+                    // Find the element by ID
+                    int target_element_idx = -1;
                     for (int i = 0; i < element_count; i++) {
-                        if (strcmp(elements[i].id, element_id) == 0) {
-                            target_index = i;
+                        if (strlen(elements[i].id) > 0 && strcmp(elements[i].id, element_id) == 0) {
+                            target_element_idx = i;
+                            debug_log("INNER_HTML - Found target element %s at index %d", element_id, target_element_idx);
+                            printf("DEBUG: Found target element '%s' at index %d\n", element_id, target_element_idx); // Console debug
                             break;
                         }
                     }
                     
-                    if (target_index != -1) {
-                        // Remove children of the target element (they will be replaced)
-                        for (int i = 0; i < elements[target_index].num_children; i++) {
-                            int child_idx = elements[target_index].children[i];
-                            // Mark as inactive by resetting type (this is a simplified approach)
-                            elements[child_idx].type[0] = '\0';
+                    if (target_element_idx != -1) {
+                        debug_log("INNER_HTML - Replacing content for element %d", target_element_idx);
+                        printf("DEBUG: Replacing content for element %d\n", target_element_idx); // Console debug
+                        
+                        // This is a container. We need to:
+                        // 1. Remove existing children of this element (not fully implemented here for simplicity)
+                        // 2. Parse the new content and add as children
+                        // 3. Update parent-child relationships
+                        
+                        // Call our function to replace the element's content
+                        int num_elements = add_chtm_fragment_as_children(target_element_idx, new_content);
+                        if (num_elements >= 0) {
+                            debug_log("INNER_HTML - Successfully added %d child elements", num_elements);
+                            printf("DEBUG: Successfully added %d child elements\n", num_elements); // Console debug
+                        } else {
+                            debug_log("INNER_HTML - Failed to add child elements");
+                            printf("DEBUG: Failed to add child elements\n"); // Console debug
                         }
                         
-                        // Reset the children count
-                        elements[target_index].num_children = 0;
-                        
-                        // Parse the HTML content and create new elements as children
-                        parse_html_string_and_create_elements(html_content, target_index);
-                        
-                        // Refresh the display to show the new content
+                        // Redraw to show the updates
                         render_elements();
                         capture_rendered_frame();
+                        
+                        // Debug: log that re-render happened
+                        printf("DEBUG: Content replacement completed and screen re-rendered\n"); // Console debug
+                        debug_log("Content replacement completed and screen re-rendered");
+                        
+                        // Also log to a separate file for easier tracking
+                        FILE *debug_file = fopen("render_debug.log", "a");
+                        if (debug_file) {
+                            time_t now = time(0);
+                            char* time_str = ctime(&now);
+                            fprintf(debug_file, "RENDER: Content updated and re-rendered at %s", time_str);
+                            fclose(debug_file);
+                        }
                     } else {
-                        debug_log("INNER_HTML: Target element with ID '%s' not found", element_id);
+                        debug_log("ERROR: Could not find element with ID: %s", element_id);
+                        printf("DEBUG ERROR: Could not find element with ID '%s'\n", element_id); // Console debug
                     }
                 } else {
                     debug_log("ERROR: Invalid INNER_HTML format: %s", response);
+                    printf("DEBUG ERROR: Invalid INNER_HTML format: %s\n", response); // Console debug
                 }
             }
+            
             // If we received a status message, trigger a display refresh
             if (needs_refresh) {
                 render_elements();

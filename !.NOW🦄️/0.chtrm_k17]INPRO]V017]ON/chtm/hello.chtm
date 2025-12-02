@@ -1,5 +1,0 @@
-<text label="Hello Test"></text>
-
-<module>
-modules/+x/hello.+x
-</module>

@@ -74232,1512 +74232,7 @@ Status: File Operations Ready
 
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:20 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:21 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:22 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:23 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:23 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:24 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:24 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
->[>] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:25 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
->[>] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:26 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[^] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:26 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
->[>] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:28 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
->[>] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:30 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
->[>] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:32 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[^] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:32 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[^] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:32 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[^] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:33 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
->[>] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:38 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[ ] 1. [Button: Update Content with Buttons]
->[>] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:39 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:39 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:40 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:41 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:42 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:44 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:00:44 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:11 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:12 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:12 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:13 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:14 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:15 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:16 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:16 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:16 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:17 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:18 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:20 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:20 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:21 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:22 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:22 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:23 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:25 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:25 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
->[>] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:26 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[^] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:26 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[^] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:33 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:35 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:10:39 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:16:33 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:16:34 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:16:34 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:16:35 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:16:55 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:16:55 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:16:55 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:16:56 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:23 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:24 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:25 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:25 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:25 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:28 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:28 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:29 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:30 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:30 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:31 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:31 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:31 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:32 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:19:32 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:36 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:37 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:37 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:38 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:38 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
->[>] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:40 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:40 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:40 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:46 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:47 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:50 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:51 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:53 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:53 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:54 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:20:55 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:21:00 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:21:01 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:21:02 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:21:03 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:23:46 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/innerhtml_test
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:25:51 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:26:31 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:53 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:55 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:56 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:56 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:56 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:57 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:58 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:58 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:58 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:27:58 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-/home/no/Desktop/qwen/nov-30/inner-0/0.chtrm_k17]INPRO]V016/modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:32:03 2025 ===
-Current file: chtm/simple_innerhtml_test.chtm
-
-Simple innerHTML Test Testing simple innerHTML functionality.
-
-${status_message}
-Original content - will be replaced.
-[ ] 1. [Button: Create Dynamic Content]
-[ ] 2. [Button: Exit]
-modules/+x/simple_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:33:45 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:33:46 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
->[>] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:33:47 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:33:47 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[^] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:35:25 2025 ===
-Current file: chtm/hello.chtm
-
-Hello Test
-modules/+x/hello.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:35:59 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:04 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
@@ -75764,7 +74259,7 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:35:59 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:08 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
@@ -75791,11 +74286,38 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:36:00 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:10 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
->[>] 1. Game Canvas
+[ ] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (6, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+>[>] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:10 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[ ] 1. Game Canvas
    p.......
    ........
    ........
@@ -75813,16 +74335,16 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 [ ] 2. Emoji Palette
    
 [ ] 3. [Go to Page 2]
-[ ] 4. [File]
+>[>] 4. [File]
 [ ] 5. [Click Me]
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:36:00 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:12 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
-[^] 1. Game Canvas
+[ ] 1. Game Canvas
    p.......
    ........
    ........
@@ -75840,174 +74362,1790 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 [ ] 2. Emoji Palette
    
 [ ] 3. [Go to Page 2]
-[ ] 4. [File]
+>[>] 4. [File]
 [ ] 5. [Click Me]
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:36:01 2025 ===
-Current file: chtm/index.chtm
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:14 2025 ===
+Current file: chtm/file.chtm
 
-Welcome to the Canvas Demo!
-[^] 1. Game Canvas
-   p.......
-   ........
-   ........
-   ...X..X.
-   ......pp
-   ........
-   ........
-   ........
-Player Position: 
-Player position: (7, 4)
-Selected Symbol: [$] Index: 3
-Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
-Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
- Emoji Palette: 
-[ ] 2. Emoji Palette
-   
-[ ] 3. [Go to Page 2]
-[ ] 4. [File]
-[ ] 5. [Click Me]
-modules/+x/canvas_player_v.01.+x
+File Operations
+Status: ${status_message}
+Projects will appear here...
+>[>] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:36:01 2025 ===
-Current file: chtm/index.chtm
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:14 2025 ===
+Current file: chtm/file.chtm
 
-Welcome to the Canvas Demo!
-[^] 1. Game Canvas
-   p.......
-   ........
-   ........
-   ...X..X.
-   ......pp
-   ........
-   ........
-   ........
-Player Position: 
-Player position: (7, 4)
-Selected Symbol: [$] Index: 3
-Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
-Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
- Emoji Palette: 
-[ ] 2. Emoji Palette
-   
-[ ] 3. [Go to Page 2]
-[ ] 4. [File]
-[ ] 5. [Click Me]
-modules/+x/canvas_player_v.01.+x
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+>[>] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:36:01 2025 ===
-Current file: chtm/index.chtm
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:17 2025 ===
+Current file: chtm/file.chtm
 
-Welcome to the Canvas Demo!
-[^] 1. Game Canvas
-   p.......
-   ........
-   ........
-   ...X..X.
-   ......p.
-   ........
-   ........
-   ........
-Player Position: 
-Player position: (6, 4)
-Selected Symbol: [$] Index: 3
-Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
-Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
- Emoji Palette: 
-[ ] 2. Emoji Palette
-   
-[ ] 3. [Go to Page 2]
-[ ] 4. [File]
-[ ] 5. [Click Me]
-modules/+x/canvas_player_v.01.+x
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+>[>] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:36:01 2025 ===
-Current file: chtm/index.chtm
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:18 2025 ===
+Current file: chtm/file.chtm
 
-Welcome to the Canvas Demo!
-[^] 1. Game Canvas
-   p.......
-   ........
-   ........
-   ...X..X.
-   .....pp.
-   ........
-   ........
-   ........
-Player Position: 
-Player position: (5, 4)
-Selected Symbol: [$] Index: 3
-Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
-Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
- Emoji Palette: 
-[ ] 2. Emoji Palette
-   
-[ ] 3. [Go to Page 2]
-[ ] 4. [File]
-[ ] 5. [Click Me]
-modules/+x/canvas_player_v.01.+x
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+>[>] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:36:02 2025 ===
-Current file: chtm/index.chtm
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:18 2025 ===
+Current file: chtm/file.chtm
 
-Welcome to the Canvas Demo!
-[^] 1. Game Canvas
-   p.......
-   ........
-   ........
-   ...X..X.
-   ....p.p.
-   ........
-   ........
-   ........
-Player Position: 
-Player position: (4, 4)
-Selected Symbol: [$] Index: 3
-Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
-Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
- Emoji Palette: 
-[ ] 2. Emoji Palette
-   
-[ ] 3. [Go to Page 2]
-[ ] 4. [File]
-[ ] 5. [Click Me]
-modules/+x/canvas_player_v.01.+x
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+>[>] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:36:02 2025 ===
-Current file: chtm/index.chtm
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:20 2025 ===
+Current file: chtm/file.chtm
 
-Welcome to the Canvas Demo!
-[^] 1. Game Canvas
-   p.......
-   ........
-   ........
-   ...X..X.
-   ...p..p.
-   ........
-   ........
-   ........
-Player Position: 
-Player position: (3, 4)
-Selected Symbol: [$] Index: 3
-Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
-Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
- Emoji Palette: 
-[ ] 2. Emoji Palette
-   
-[ ] 3. [Go to Page 2]
-[ ] 4. [File]
-[ ] 5. [Click Me]
-modules/+x/canvas_player_v.01.+x
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[^] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:36:10 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:20 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[^] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:23 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[^] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:24 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[^] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:24 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+>[>] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:24 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+>[>] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:25 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+>[>] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:25 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+>[>] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:26 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+>[>] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:31 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+>[>] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:32 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[^] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:32 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[^] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:33 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[^] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:33 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+>[>] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:34 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+>[>] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:34 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+>[>] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 07:58:34 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+>[>] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:16 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:17 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:19 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:20 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:21 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+>[>] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:21 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[^] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+>[>] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+>[>] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:23 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[^] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:23 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+>[>] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:24 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+>[>] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:24 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:24 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:24 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:28 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:29 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:29 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+>[>] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:30 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[^] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:31 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+>[>] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:32 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:32 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:04:35 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:20 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:21 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:21 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Updated Content:
+Option 1
+Option 2
+Additional Button
+Content updated dynamically!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:25 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Updated Content:
+Option 1
+Option 2
+Additional Button
+Content updated dynamically!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:26 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Updated Content:
+Option 1
+Option 2
+Additional Button
+Content updated dynamically!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:26 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Updated Content:
+Option 1
+Option 2
+Additional Button
+Content updated dynamically!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:26 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Updated Content:
+Option 1
+Option 2
+Additional Button
+Content updated dynamically!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:27 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Updated Content:
+Option 1
+Option 2
+Additional Button
+Content updated dynamically!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:27 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Updated Content:
+Option 1
+Option 2
+Additional Button
+Content updated dynamically!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:27 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Updated Content:
+Option 1
+Option 2
+Additional Button
+Content updated dynamically!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:08:28 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Updated Content:
+Option 1
+Option 2
+Additional Button
+Content updated dynamically!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:11:03 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:11:04 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:11:05 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:11:06 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:11:06 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:11:07 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:11 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:11 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:11 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:12 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:12 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:13 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:13 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:14 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:14 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:14 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:14 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:13:14 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:15:00 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:15:00 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:15:01 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:15:01 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 08:15:02 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:52 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:53 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:55 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:56 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:56 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:57 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[^] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:58 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:58 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:58 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 19:58:59 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:01:28 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:01:29 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+>[>] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:01:32 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:01:33 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:01:33 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:03:24 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:03:25 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:03:26 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:09:10 2025 ===
+Current file: chtm/menu_test.chtm
+
+Menu System Test
+
+
+[ ] 1. [Button: Option 1]
+[ ] 2. [Button: Option 2]
+[ ] 3. [Button: Option 3]
+[ ] 4. [Button: Item A]
+[ ] 5. [Button: Item B]
+[ ] 6. [Button: Default 1]
+[ ] 7. [Button: Default 2]
+Status: File Operations Ready
+[cli_io label="Command: "]
+
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:09:21 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:09:23 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:09:23 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:15:16 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:15:16 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:15:16 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:15:16 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:09 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:10 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:10 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:21 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:21 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:21 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:23 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:23 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:24 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:24 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:20:25 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:27:09 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:27:11 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:27:11 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:27:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:27:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:27:22 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:40:43 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:40:44 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:40:45 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:41:18 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:41:18 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:41:18 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:21 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
@@ -76034,7 +76172,277 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:37:36 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:22 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[ ] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (6, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+>[>] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:23 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[ ] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (6, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+>[>] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:23 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[ ] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (6, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+>[>] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:24 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+>[>] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (6, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:24 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (6, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:24 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ......pp
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (7, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:24 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ......pp
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (7, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:25 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (6, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:25 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   .....pp.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:25 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ...X..X.
+   ....p.p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (4, 4)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:25 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
@@ -76061,7 +76469,7 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:37:37 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:26 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
@@ -76070,12 +76478,12 @@ Welcome to the Canvas Demo!
    ........
    ........
    ...X..X.
-   ....p.p.
+   ..p...p.
    ........
    ........
    ........
 Player Position: 
-Player position: (4, 4)
+Player position: (2, 4)
 Selected Symbol: [$] Index: 3
 Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
 Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
@@ -76088,7 +76496,7 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:37:38 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:26 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
@@ -76096,13 +76504,13 @@ Welcome to the Canvas Demo!
    p.......
    ........
    ........
-   ...Xp.X.
+   ..pX..X.
    ......p.
    ........
    ........
    ........
 Player Position: 
-Player position: (4, 3)
+Player position: (2, 3)
 Selected Symbol: [$] Index: 3
 Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
 Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
@@ -76115,21 +76523,21 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:37:38 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:26 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
 [^] 1. Game Canvas
    p.......
    ........
-   ........
+   ..p.....
    ...X..X.
-   ....p.p.
+   ......p.
    ........
    ........
    ........
 Player Position: 
-Player position: (4, 4)
+Player position: (2, 2)
 Selected Symbol: [$] Index: 3
 Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
 Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
@@ -76142,21 +76550,21 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:37:39 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:26 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
 [^] 1. Game Canvas
    p.......
-   ........
+   ..p.....
    ........
    ...X..X.
-   ....p.p.
+   ......p.
    ........
    ........
    ........
 Player Position: 
-Player position: (4, 4)
+Player position: (2, 1)
 Selected Symbol: [$] Index: 3
 Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
 Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
@@ -76169,24 +76577,24 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:37:39 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:26 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
 [^] 1. Game Canvas
-   p.......
+   p.p.....
    ........
    ........
    ...X..X.
-   ....p.p.
+   ......p.
    ........
    ........
    ........
 Player Position: 
-Player position: (4, 4)
+Player position: (2, 0)
 Selected Symbol: [$] Index: 3
 Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
-Space Pressed: ${last_input_was_space} at (4, 4)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
  Emoji Palette: 
 [ ] 2. Emoji Palette
    
@@ -76196,7 +76604,699 @@ Space Pressed: ${last_input_was_space} at (4, 4)
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:37:40 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:26 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.p.....
+   ........
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 0)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:27 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..p.....
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 1)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:27 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..p.....
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 1)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (2, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:27 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.....
+   ..p.....
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (2, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:27 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.....
+   ...p....
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (3, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (2, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:28 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..Xp....
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (3, 1)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (2, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:29 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.p...
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (4, 1)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (2, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:30 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.p...
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (4, 1)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:30 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.Xp..
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 1)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:31 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.X...
+   .....p..
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:31 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.X...
+   ........
+   ...X.pX.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 3)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:53 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.X...
+   .....p..
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:54 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.Xp..
+   ........
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 1)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:54 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   p.......
+   ..X.X...
+   .....p..
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:55 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+>[>] 1. Game Canvas
+   p.......
+   ..X.X...
+   .....p..
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:56 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[ ] 1. Game Canvas
+   p.......
+   ..X.X...
+   .....p..
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+>[>] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:56 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[ ] 1. Game Canvas
+   p.......
+   ..X.X...
+   .....p..
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+>[>] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:57 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[ ] 1. Game Canvas
+   p.......
+   ..X.X...
+   .....p..
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+>[>] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:57 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[ ] 1. Game Canvas
+   p.......
+   ..X.X...
+   .....p..
+   ...X..X.
+   ......p.
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (5, 2)
+Selected Symbol: [$] Index: 3
+Last Action: placed_x | Last Placed: [X] at (4, 1)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+>[>] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:58 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: ${status_message}
+Projects will appear here...
+>[>] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:46:58 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+>[>] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:00 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+>[>] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:00 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+>[>] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:01 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+>[>] 4. [Load Projects (innerHTML test)]
+[ ] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:01 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+>[>] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:02 2025 ===
+Current file: chtm/file.chtm
+
+File Operations
+Status: File Operations Ready
+Projects will appear here...
+[ ] 1. [Save to Default]
+[ ] 2. [Load Default]
+[ ] 3. [List Projects]
+[ ] 4. [Load Projects (innerHTML test)]
+[^] 5. [Link: Back to Main]
+modules/+x/file_ops_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:02 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+>[>] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (0, 0)
+Selected Symbol: [${selected_symbol}] Index: ${selected_palette_index}
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:03 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[ ] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (0, 0)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+>[>] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:03 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+>[>] 1. Game Canvas
+   p.......
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (0, 0)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:04 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
@@ -76204,8 +77304,818 @@ Welcome to the Canvas Demo!
    p.......
    ........
    ........
-   ...X..X.
-   ...p..p.
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (0, 0)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:04 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   .p......
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (1, 0)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:04 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   ..p.....
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 0)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:06 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   ........
+   ..p.....
+   ........
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 1)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:06 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   ........
+   ........
+   ..p.....
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 2)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 20:47:07 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+>[>] 1. Game Canvas
+   ........
+   ........
+   ..p.....
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 2)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:02:52 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:02:53 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:02:53 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:02:54 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:02:54 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:02:54 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:03:08 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:03:09 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:03:10 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:03:10 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:03:10 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:03:10 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:31 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:32 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[ ] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+>[>] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:35 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:36 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:38 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:41 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:41 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:41 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:45 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:46 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:47 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:48 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:49 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:49 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:49 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:49 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:40:49 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:41:06 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:26 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:27 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:27 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:28 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:28 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:28 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+h3
+Dynamic Projects List:
+Project 1
+Project 2
+Project 3
+This content was dynamically added!
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:31 2025 ===
+Current file: chtm/inner.chtm
+
+InnerHTML Test Page
+Initial content - waiting for dynamic update...
+>[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]
+modules/+x/test_inner_html.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:39 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+>[>] 1. Game Canvas
+   ........
+   ........
+   ..p.....
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 2)
+Selected Symbol: [${selected_symbol}] Index: ${selected_palette_index}
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:40 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   ........
+   ........
+   ..p.....
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (2, 2)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:41 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   ........
+   ........
+   ..pp....
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (3, 2)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:41 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   ........
+   ........
+   ..p.p...
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (4, 2)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:41 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   ........
+   ........
+   ..pp....
+   ........
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (3, 2)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:42 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   ........
+   ........
+   ..p.....
+   ...p....
+   ........
+   ........
+   ........
+   ........
+Player Position: 
+Player position: (3, 3)
+Selected Symbol: [$] Index: 3
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
+ Emoji Palette: 
+[ ] 2. Emoji Palette
+   
+[ ] 3. [Go to Page 2]
+[ ] 4. [File]
+[ ] 5. [Click Me]
+modules/+x/canvas_player_v.01.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:42 2025 ===
+Current file: chtm/index.chtm
+
+Welcome to the Canvas Demo!
+[^] 1. Game Canvas
+   ........
+   ........
+   ..p.....
+   ........
+   ...p....
    ........
    ........
    ........
@@ -76213,7 +78123,7 @@ Player Position:
 Player position: (3, 4)
 Selected Symbol: [$] Index: 3
 Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
-Space Pressed: ${last_input_was_space} at (4, 4)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
  Emoji Palette: 
 [ ] 2. Emoji Palette
    
@@ -76223,24 +78133,24 @@ Space Pressed: ${last_input_was_space} at (4, 4)
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:37:41 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:42 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
 [^] 1. Game Canvas
-   p.......
    ........
    ........
-   ...X..X.
-   ......p.
-   ...p....
+   ..p.....
+   ........
+   ..p.....
+   ........
    ........
    ........
 Player Position: 
-Player position: (3, 5)
+Player position: (2, 4)
 Selected Symbol: [$] Index: 3
 Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
-Space Pressed: ${last_input_was_space} at (4, 4)
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
  Emoji Palette: 
 [ ] 2. Emoji Palette
    
@@ -76250,24 +78160,24 @@ Space Pressed: ${last_input_was_space} at (4, 4)
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
-=== FRAME CAPTURED AT: Mon Dec  1 08:37:43 2025 ===
+=== FRAME CAPTURED AT: Mon Dec  1 21:46:43 2025 ===
 Current file: chtm/index.chtm
 
 Welcome to the Canvas Demo!
 [^] 1. Game Canvas
-   p.......
    ........
    ........
-   ...X..X.
-   ......p.
-   ...p....
+   ..p.....
+   ........
+   ..p.....
+   ........
    ........
    ........
 Player Position: 
-Player position: (3, 5)
+Player position: (2, 4)
 Selected Symbol: [$] Index: 3
-Last Action: placed_x | Last Placed: [X] at (3, 5)
-Space Pressed: ${last_input_was_space} at (4, 4)
+Last Action: ${last_action} | Last Placed: [${last_placed_symbol}] at (${last_placed_at_x}, ${last_placed_at_y})
+Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_pressed_at_y})
  Emoji Palette: 
 [ ] 2. Emoji Palette
    
@@ -76275,35 +78185,5 @@ Space Pressed: ${last_input_was_space} at (4, 4)
 [ ] 4. [File]
 [ ] 5. [Click Me]
 modules/+x/canvas_player_v.01.+x
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:39:21 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Update Content with Buttons]
-[ ] 2. [Button: Create Dynamic Menu]
-[ ] 3. [Button: Exit]
-modules/+x/innerhtml_test.+x
-
-Enter key (1-9) or 'q' to quit: 
-
-=== FRAME CAPTURED AT: Mon Dec  1 08:41:11 2025 ===
-Current file: chtm/innerhtml_demo.chtm
-
-innerHTML Demo This is a demo of the innerHTML functionality.
-
-${status_message}
-This content will be dynamically replaced by innerHTML.
-innerHTML Demo - Testing via CLI Input
-${status_message}
-This content will be dynamically replaced by innerHTML.
-[ ] 1. [Button: Test Canvas Module Command]
-[ ] 2. [Button: Exit]
-modules/+x/canvas_player_v.01.+x
-
 Enter key (1-9) or 'q' to quit: 
 

@@ -1011,20 +1011,54 @@
 [Signal handler] Signal 2 received
 [Mon Dec  1 06:09:59 2025
 ] File Operations Module Ending
-[Mon Dec  1 08:35:59 2025
+[Mon Dec  1 07:58:04 2025
 ] Canvas Player Module Started
-[Mon Dec  1 08:35:59 2025
+[Mon Dec  1 07:58:04 2025
 ] Loaded canvas state: 8x8, player at (6,4), palette index 3
-[Mon Dec  1 08:35:59 2025
+[Mon Dec  1 07:58:04 2025
 ] Canvas state loaded successfully from file
-[Mon Dec  1 08:36:10 2025
+[Mon Dec  1 07:58:14 2025
+] Main loop exited normally, saving canvas state...
+[Mon Dec  1 07:58:14 2025
+] File Operations Module Started
+[Mon Dec  1 07:58:14 2025
+] Canvas state saved from main exit, program ending...
+[Signal handler] Signal 2 received
+[Mon Dec  1 08:00:54 2025
+] File Operations Module Ending
+[Mon Dec  1 20:46:21 2025
 ] Canvas Player Module Started
-[Mon Dec  1 08:36:10 2025
+[Mon Dec  1 20:46:21 2025
 ] Loaded canvas state: 8x8, player at (6,4), palette index 3
-[Mon Dec  1 08:36:10 2025
+[Mon Dec  1 20:46:21 2025
 ] Canvas state loaded successfully from file
-[Signal handler] Signal 15 received
-[Mon Dec  1 08:36:15 2025
-] Signal 15 received, saving canvas state...
-[Mon Dec  1 08:36:15 2025
-] Canvas state saved from signal 15, exiting...
+[Mon Dec  1 20:46:58 2025
+] Main loop exited normally, saving canvas state...
+[Mon Dec  1 20:46:58 2025
+] File Operations Module Started
+[Mon Dec  1 20:46:58 2025
+] Canvas state saved from main exit, program ending...
+[Mon Dec  1 20:47:02 2025
+] File Operations Module Ending
+[Mon Dec  1 20:47:02 2025
+] Canvas Player Module Started
+[Mon Dec  1 20:47:02 2025
+] Loaded canvas state: 8x8, player at (5,2), palette index 3
+[Mon Dec  1 20:47:02 2025
+] Canvas state loaded successfully from file
+[Signal handler] Signal 2 received
+[Mon Dec  1 20:47:07 2025
+] Signal 2 received, saving canvas state...
+[Mon Dec  1 20:47:07 2025
+] Canvas state saved from signal 2, exiting...
+[Mon Dec  1 21:46:39 2025
+] Canvas Player Module Started
+[Mon Dec  1 21:46:39 2025
+] Loaded canvas state: 8x8, player at (2,2), palette index 3
+[Mon Dec  1 21:46:39 2025
+] Canvas state loaded successfully from file
+[Signal handler] Signal 2 received
+[Mon Dec  1 21:46:44 2025
+] Signal 2 received, saving canvas state...
+[Mon Dec  1 21:46:44 2025
+] Canvas state saved from signal 2, exiting...
