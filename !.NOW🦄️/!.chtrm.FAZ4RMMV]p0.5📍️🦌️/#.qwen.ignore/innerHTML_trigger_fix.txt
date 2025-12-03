@@ -1,0 +1,38 @@
+INNERHTML TRIGGER PROPAGATION FIX PROMPT
+
+CURRENT STATE:
+- InnerHTML functionality is working correctly (DOM elements are added)
+- Dynamic content is successfully added to the elements array
+- Issue: Visual display doesn't refresh after INNER_HTML response processing
+- Requires 3 key presses to see results instead of expected 2
+- The 3rd press triggers display refresh (what 2nd press should have done)
+
+PROBLEM DESCRIPTION:
+When user presses Enter on a button to trigger INNER_HTML:
+1. First press: Activates button [^]
+2. Second press: Sends command to module and receives INNER_HTML response
+3. INNER_HTML response updates DOM structure (adds child elements)
+4. BUT display doesn't refresh - screen still shows old content
+5. Third press: Triggers renderer refresh showing already-updated content
+6. Result: User must press 3 times to see 2nd press effects
+
+ROOT CAUSE ANALYSIS:
+The issue is in the notification system between DOM updates and display rendering. After INNER_HTML processes and adds elements to the DOM, it doesn't trigger a display refresh. The DOM is updated internally but the screen doesn't reflect these changes. This differs from other updates (like canvas/variable updates) that properly signal the renderer to refresh immediately.
+
+Unlike variable updates which set needs_refresh=true and trigger render_elements(), the INNER_HTML response processing doesn't signal that the display needs updating. The DOM changes occur but the renderer doesn't know to redraw with the new elements.
+
+THIRD PRESS MECHANISM:
+The third press triggers the main input loop which calls render_elements() and shows the pre-existing DOM changes. This proves the DOM was already updated after the 2nd press - only the display refresh was missing.
+
+DESIRED OUTCOME:
+Display should refresh immediately after the 2nd press (execution), showing INNER_HTML results without requiring a third input event.
+
+REQUEST:
+Fix the INNER_HTML response processing to properly trigger display refresh following existing conventions. When INNER_HTML command updates the DOM:
+
+1. Identify how existing refresh mechanisms work (e.g., canvas rendering, variable updates)
+2. Follow the same signaling pattern used by other components that trigger immediate refresh
+3. Ensure render_elements() is called immediately after DOM changes from INNER_HTML
+4. Match the existing architecture patterns for renderer notification
+5. Specifically look at variable updates (VAR) and canvas updates to see how they signal renderer
+6. Apply the same refresh signaling methodology to INNER_HTML response processing

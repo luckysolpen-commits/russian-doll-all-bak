@@ -1,0 +1,65 @@
+# Debug Prompt: Missing INNER_HTML Timeline Logs
+
+## Problem
+Current `dom_refresh_debug.log` only shows:
+- Response received from module
+- DOM elements added 
+- UI state refreshed
+
+Missing two critical timeline entries:
+1. When INNER_HTML request is sent from framework to module
+2. When INNER_HTML request is received by module
+
+## Missing Debug Logs to Add
+
+### 1. Framework-Side Request Sending Log
+Location: `send_ipc_command()` function in chtrm_f8.c
+Issue: May not be logging all INNER_HTML variations (INNER_HTML vs INNERHTML)
+Action: Add logging when any command starting with "INNER_H" is sent
+
+### 2. Module-Side Request Receipt Log  
+Location: test_inner_html.c module
+Issue: Current log only captures exact "INNER_HTML:" matches, but the framework may send different format
+Action: Add logging when module receives command starting with "INNER_H" to same dom_refresh_debug.log
+
+## Files to Modify
+
+### File 1: chtrm_f8.c
+In `send_ipc_command()` function, add:
+```c
+// Log any INNER_HTML command variation being sent to module
+if (strncmp(command, "INNER_H", 7) == 0) {  // Covers both INNER_HTML and INNER_HTML
+    FILE *debug_file = fopen("dom_refresh_debug.log", "a");
+    if (debug_file) {
+        time_t now = time(0);
+        char* time_str = ctime(&now);
+        fprintf(debug_file, "INNERHTML: Request sent from framework to module at: %s", time_str);
+        fclose(debug_file);
+    }
+}
+```
+
+### File 2: modules/test_inner_html/test_inner_html.c
+In main loop, add:
+```c
+// Also log to the same debug file used by framework for complete trace
+if (strncmp(input, "INNER_H", 7) == 0) {  // Covers both INNER_HTML and INNER_HTML
+    FILE *framework_debug = fopen("dom_refresh_debug.log", "a");
+    if (framework_debug) {
+        time_t now = time(0);
+        char* time_str = ctime(&now);
+        fprintf(framework_debug, "INNERHTML: Request received by module at: %s", time_str);
+        fclose(framework_debug);
+    }
+}
+```
+
+## Expected Result
+Complete timeline in dom_refresh_debug.log:
+1. Request sent from framework to module (NEW)
+2. Request received by module (NEW) 
+3. Response received from module
+4. DOM elements added  
+5. UI state refreshed
+
+This will reveal if the framework is properly sending commands and if the module is receiving them on the same keypress vs. separate keypresses.

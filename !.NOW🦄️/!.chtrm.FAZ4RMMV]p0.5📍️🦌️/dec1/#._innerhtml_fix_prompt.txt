@@ -1,0 +1,42 @@
+PROMPT: Fix innerHTML trigger propagation issue by closely mirroring VAR/canvas refresh functionality
+
+I need to fix an issue in a custom CHTML framework where innerHTML updates require an extra keypress to refresh the display. The problem is that when a button executes an INNER_HTML command, the DOM is updated but the display doesn't refresh immediately - users must press Enter a third time to see the results of the second press.
+
+**Current behavior:**
+1. First press: Activates button [^]
+2. Second press: Sends INNER_HTML command to module and receives response (DOM gets updated)
+3. BUT display doesn't refresh - screen still shows old content
+4. Third press: Triggers renderer refresh showing already-updated content
+
+**Expected behavior:**
+Display should refresh immediately after the second press shows the updated content.
+
+**Code structure:**
+- Main loop: Reads input → calls process_input() → if redraw=true then render_elements()
+- process_module_responses() is called in main loop and also from button handlers
+- VAR updates work correctly and trigger immediate refresh
+- Canvas updates work correctly and trigger immediate refresh
+- INNER_HTML updates don't trigger immediate refresh
+
+**Key insights that need to be understood:**
+1. VAR responses with "status_message" correctly set a flag that triggers render_elements()
+2. process_module_responses() should process ALL available responses in a single call, not just one
+3. When called from button handlers, process_module_responses() should handle response processing properly without causing double rendering
+4. The refresh mechanism must be consistent between VAR, canvas, and INNER_HTML
+
+**Requirements:**
+- Analyze how VAR and canvas updates trigger immediate refresh
+- Make INNER_HTML follow the exact same pattern as VAR/canvas
+- Ensure process_module_responses() processes all available responses 
+- Ensure display refresh happens immediately after INNER_HTML processing
+- Maintain consistency with existing architecture
+- Use the same signaling mechanism as working components
+- Make sure only one render occurs, not double rendering
+
+**Important constraints:**
+- Module should only need to send one INNER_HTML command (not multiple commands)
+- Keep the same response format: "INNER_HTML:element_id:content"
+- Follow existing code patterns and conventions
+- Don't break existing VAR or canvas functionality
+
+Please analyze the VAR and canvas implementations in detail and implement the exact same refresh signaling mechanism for INNER_HTML responses.

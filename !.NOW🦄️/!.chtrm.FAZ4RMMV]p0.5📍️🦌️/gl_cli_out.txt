@@ -1,0 +1,80 @@
+CHTM renderer started. Press 'q' to quit.
+[H[JCurrent file: chtm/inner.chtm
+
+InnerHTML Test PageInitial content - waiting for dynamic update...[>] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]Menu System Test
+
+[ ] 5. Always Visible Menu:
+    [ ] 1. Option 1
+    [ ] 2. Option 2
+    [ ] 3. Option 3
+[ ] 6. Normal Menu:
+modules/+x/test_inner_html.+x
+Navigation: Enter element index (1-6) or 'q' to quitDEBUG: Received from module: VAR:last_action=InnerHTML Test Module Ready
+[H[JCurrent file: chtm/inner.chtm
+
+InnerHTML Test PageInitial content - waiting for dynamic update...[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]Menu System Test
+
+[ ] 5. Always Visible Menu:
+    [ ] 1. Option 1
+    [ ] 2. Option 2
+    [ ] 3. Option 3
+[ ] 6. Normal Menu:
+modules/+x/test_inner_html.+x
+DEBUG: Sending IPC command: TEST_INNER_HTML
+[H[JCurrent file: chtm/inner.chtm
+
+InnerHTML Test PageInitial content - waiting for dynamic update...[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]Menu System Test
+
+[ ] 5. Always Visible Menu:
+    [ ] 1. Option 1
+    [ ] 2. Option 2
+    [ ] 3. Option 3
+[ ] 6. Normal Menu:
+modules/+x/test_inner_html.+x
+DEBUG: Received from module: VAR:status_message=InnerHTML Test Module Active
+DEBUG: Received from module: INNER_HTML:test_container:<h3>Dynamic Projects List:</h3><button onClick="PROJECT_SELECTED:Project1">Project 1</button><br/><button onClick="PROJECT_SELECTED:Project2">Project 2</button><br/><button onClick="PROJECT_SELECTED:Project3">Project 3</button><br/><text label="This content was dynamically added!"/><br/>
+DEBUG: INNER_HTML command received: INNER_HTML:test_container:<h3>Dynamic Projects List:</h3><button onClick="PROJECT_SELECTED:Project1">Project 1</button><br/><button onClick="PROJECT_SELECTED:Project2">Project 2</button><br/><button onClick="PROJECT_SELECTED:Project3">Project 3</button><br/><text label="This content was dynamically added!"/><br/>
+DEBUG: Looking for element ID 'test_container' to update with content
+DEBUG: Found target element 'test_container' at index 1
+DEBUG: Replacing content for element 1
+DEBUG: Successfully added 13 child elements
+DEBUG: Content replacement completed for innerHTML
+[H[JCurrent file: chtm/inner.chtm
+
+InnerHTML Test Pageh3
+Dynamic Projects List:
+
+Project 1
+
+
+Project 2
+
+
+Project 3
+
+This content was dynamically added!
+
+[^] 1. [Button: Load Dynamic Content]
+[ ] 2. [Button: Load More Content]
+[ ] 3. [Button: Clear Content]
+[ ] 4. [Link: Back to Main]Menu System Test
+
+[ ] 5. Always Visible Menu:
+    [ ] 1. Option 1
+    [ ] 2. Option 2
+    [ ] 3. Option 3
+[ ] 6. Normal Menu:
+modules/+x/test_inner_html.+xh3Dynamic Projects List:Project 1
+Project 2
+Project 3
+This content was dynamically added!
+

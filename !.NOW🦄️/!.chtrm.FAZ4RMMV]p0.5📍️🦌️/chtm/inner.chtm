@@ -1,0 +1,26 @@
+<h2>InnerHTML Test Page</h2>
+
+<text id="test_container" label="Initial content - waiting for dynamic update..." />
+
+<button onClick="TEST_INNER_HTML">Load Dynamic Content</button>
+<br/>
+<button onClick="LOAD_MORE_CONTENT">Load More Content</button>
+<br/>
+<button onClick="CLEAR_CONTENT">Clear Content</button>
+<br/>
+<link label="Back to Main" href="chtm/index.chtm" />
+
+Menu System Test
+
+<menu label="Always Visible Menu:" visibility="1">
+  <button label="Option 1" onClick="echo 'Option 1 selected'" /><br/>
+  <button label="Option 2" onClick="echo 'Option 2 selected'" /><br/>
+  <button label="Option 3" onClick="echo 'Option 3 selected'" /><br/>
+</menu>
+
+<menu label="Normal Menu:" visibility="0">
+  <button label="Item A" onClick="echo 'Item A selected'" />
+  <button label="Item B" onClick="echo 'Item B selected'" />
+</menu>
+
+<module>modules/+x/test_inner_html.+x</module>
