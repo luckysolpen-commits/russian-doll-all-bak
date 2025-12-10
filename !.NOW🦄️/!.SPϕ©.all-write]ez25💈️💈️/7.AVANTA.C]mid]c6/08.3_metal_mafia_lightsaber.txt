@@ -1,13 +1,13 @@
 INT. AVANTA.C - ILLEGAL FURRY SERVER - DARK ALLEY NETWORK - NIGHT
 
-After their victory in the Beat Saber arena, Lucky (dragon form) and Astra (pony form) are approached by three mysterious figures emerging from the shadows. The figures are clearly members of the METAL MAFIA, recognizable by their metallic, armored avatars and glowing red accents.
+After their victory in the Beat Saber arena, Lucky (duck form) and Astra (swan form) are approached by three mysterious figures emerging from the shadows. The figures are clearly members of the METAL MAFIA, recognizable by their metallic, armored avatars and glowing red accents.
 
 METAL MAFIA LEADER
 (A metallic, synthesized voice)
 Well, well... what have we here? Two upstarts thinking they can make names for themselves in our territory?
 
 LUCKY
-(Dragon form tensing up)
+(Duck form tensing up)
 We're not looking for trouble.
 
 METAL MAFIA LEADER
@@ -15,7 +15,7 @@ METAL MAFIA LEADER
 Trouble found you. Word's already spread about your Beat Saber victory. And we don't take kindly to outsiders trying to make a name for themselves without paying the proper... respects.
 
 ASTRA
-(Pony ears alert, defensive stance)
+(Swan neck extended, defensive stance)
 We didn't know this was your territory. We're just trying to survive and level up.
 
 METAL MAFIA LEADER
@@ -41,23 +41,23 @@ METAL MAFIA MEMBER 1
 Think you can hack your way through this, amateur?
 
 LUCKY
-(Dragon form surprisingly agile)
-/ability DragonClawParry
+(Duck form surprisingly agile)
+/ability DuckDodgeParry
 
-Lucky blocks the attack with his lightsaber but uses his dragon claws to add additional defense. He spins away from a follow-up strike.
+Lucky blocks the attack with his lightsaber but uses his webbed feet for enhanced stability. He moves with surprising grace for his new form.
 
 ASTRA
-(Dancing between attacks with her pony agility)
+(Gliding between attacks with her swan agility)
 /spell LightShield
 
-Astra creates a protective barrier of light that deflects attacks while she strategizes. Her enhanced speed from her pony form gives her an edge in evasion.
+Astra creates a protective barrier of light that deflects attacks while she strategizes. Her enhanced speed from her swan form gives her an edge in evasion.
 
 METAL MAFIA MEMBER 2
 (Attacking Astra from behind)
-Got you now, pony!
+Got you now, swan!
 
 ASTRA
-(Flipping away gracefully)
+(Flipping away with elegant movement)
 Not so fast!
 
 She counters with a precise strike that disarms the member temporarily.
@@ -66,7 +66,7 @@ LUCKY
 (Seeing an opening)
 Time to end this!
 
-Lucky combines his dragon strength with his newfound saber skills, engaging in a fierce duel with the leader. Sparks fly as the blue and red sabers clash repeatedly.
+Lucky combines his duck form's stability with his newfound saber skills, engaging in a fierce duel with the leader. Sparks fly as the blue and red sabers clash repeatedly.
 
 The battle intensifies. Despite being outnumbered, Lucky and Astra's teamwork from the Beat Saber battles gives them the edge. They fight back-to-back, covering each other's weaknesses.
 
@@ -75,7 +75,7 @@ LUCKY
 On my mark, we use the combo we practiced!
 
 ASTRA
-(Nodding)
+(Nodding gracefully)
 Now!
 
 They execute a synchronized attack - Astra creates a light distraction while Lucky flanks and disarms the Metal Mafia Leader.
@@ -87,11 +87,11 @@ Impressive. You've got skills. And you work well as a team. The Metal Mafia reme
 The three Metal Mafia members retreat into the shadows, leaving Lucky and Astra standing victorious in the arena.
 
 LUCKY
-(Dragon form breathing heavily)
+(Duck form breathing heavily)
 That was... intense.
 
 ASTRA
-(Pony form nodding)
+(Swan form nodding)
 We're definitely making a name for ourselves. But it sounds like we're on their radar now.
 
 FADE OUT.
