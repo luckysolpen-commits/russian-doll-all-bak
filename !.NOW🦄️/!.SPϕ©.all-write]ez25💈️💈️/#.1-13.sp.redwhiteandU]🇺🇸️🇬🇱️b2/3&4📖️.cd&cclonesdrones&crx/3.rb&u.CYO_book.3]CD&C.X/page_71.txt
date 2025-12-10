@@ -1,0 +1,15 @@
+Page 71: Focusing on the Communication Relay
+
+You target the communication relay that allows the drone swarm to coordinate their movements in real-time. Your sensors indicate this is not just a simple communication device but a bio-mechanical interface that uses quantum entanglement to maintain instantaneous communication between all swarm units.
+
+Three distinct relay systems are integrated: The Quantum Communication Hub, which enables instantaneous coordination regardless of distance within the tunnel system; The Adaptive Frequency Generator, which shifts communication frequencies to prevent jamming or interception; and The Collective Intelligence Interface, where swarm decisions are made through distributed processing across all units.
+
+As you attempt to disrupt the relay, you realize that the communication system is partially organic - the quantum entanglement is maintained through bio-neural pathways that make it more resilient than purely technological systems. The swarm's coordination begins to shift as it detects your interference.
+
+Your disruption attempt reveals that the communication system is not just controlling this swarm but maintaining contact with other units throughout the Martian tunnel network. This may be part of a much larger operation than the current ambush suggests.
+
+The communication relay's bio-mechanical nature makes it harder to disrupt with standard electronic warfare techniques. The system adapts to interference patterns and reroutes information through alternative pathways as quickly as you can disrupt them.
+
+*If you attack the Quantum Communication Hub, turn to Page 213.*
+*If you target the Adaptive Frequency Generator, turn to Page 214.*
+*If you disrupt the Collective Intelligence Interface, turn to Page 215.*

@@ -1,0 +1,145 @@
+do in 
+rb&u.cyoa_book4]cd&c2/ (but use other files for reference)
+
+
+i wanna make a rb&u magnum opus
+CYOD#4"clone of a clone"
+it should be about 120 -150 pages (be absolutely sure nothing exceeds 200 pages!)
+theme ? (read the 2 others but it should have its own theme ): 
+getting deep into how the clowns hunt down clowns with drones, some turn 2 clowns some are spies
+and some clones and clowns both reach high ranks where they can mutate in to carcazods
+(brain sniffing&eating cockroach shark mutations and back to clones/clowns, for advanced
+penetration/ stealth/ spying and warfare, the ultimate bio weapon)*they explore other mutations 
+as well.
+this will take place on mars and the moon , doing missions back and forth including
+delivery and war against clones/clowns
+
+the mars/lunaar has a system of tunnles drones pilot thinsg too but are also traversed by
+clone/clown pilots in policing/ military and heist/raids 4 blood. 
+
+
+worldbuilding 
+
+we should use real mars geography when possible, tho about half of the mars 
+civilization takes place undergroudn, tehres are hubs and cities above ground (unlike the moon
+which is COMPLETELY underground, sometimes clones go or come 2 moon base 4 training trade etc, 
+the most honorable death for a clone is to be used a fuel for the SS. SOL ,
+(where they are said to go to a vahala like nirvana while their souls perpetually burn
+giving hte SS.SOL more power of souls) 
+
+
+. there are several governments on mars : 
+Country GDP.# GDP.abv GDP.Growth Pop GDP.per.cap Share%
+1	Solar Empire	$27,720,700	27.721 million	2.89%	343	$80,706	26.11%
+2	Blood Queen Monarchy	$17,794,800	17.795 million	5.25%	1,422	$12,509	16.76%
+3	Red African Union	$4,525,700	4.526 million	−0.27%	84	$53,528	4.26%
+4	Robot State	$4,204,490	4.204 million	1.68%	124	$33,806	3.96%
+5	Sinder Rouge Monarchy	$3,567,550	3.568 million	8.15%	1	$2,481	3.36%
+6	United Clones	$3,380,850	3.381 million	0.34%	68,682	$49,224	3.18%
+7	Farland	$3,051,830	3.052 million	0.94%	66	$45,934	2.87%
+8	Inland	$2,300,940	2.301 million	0.7%	59	$38,672	2.17%
+9	Mutangia	$2,173,670	2.174 million	2.91%	211	$10,295	2.05%
+10	Clown Anarchist Party	$2,142,470	2.142 million	1.25%	39	$54,517	2.02%
+
+
+and some industries 
+
+SOLARCOM, INC. (SLR) Ind: NETWORK & TELECOM EQUIP.
+MARTIAN MARKETS (MRT) Ind: RETAIL -- SUPERMARKETS
+STARQUENCH BEVERAGES (STQ) Ind: BEVERAGE
+REDPLANET LABS (RPL) Ind: MEDICAL EQUIP. / SUPPLIES
+CRATER CLOTHIERS (CRT) Ind: RETAIL -- APPAREL
+GENEMARS CORP. (GEN) Ind: BIOTECHNOLOGY
+LUNAR FINANCE (LUN) Ind: BANKING
+ASTRO PERIPHERALS (AST) Ind: COMPUTER PERIPHERALS
+DATACORE SYSTEMS (DCR) Ind: COMPUTER
+VOIDWALKER GEAR (VDW) Ind: FOOTWEAR
+HOLOFRAME SOFTWARE (HFM) Ind: SOFTWARE
+DUNEBREW CO. (DUN) Ind: BREWING & DISTILLING
+QUANTUM CIRCUITS (QNT) Ind: SEMICONDUCTOR
+SKYFORGE AEROSPACE (SKF) Ind: DEFENSE & AEROSPACE
+STELLARSHIELD INSUR. (STS) Ind: INSURANCE
+MARSFLAC, INC. (MSF) Ind: INSURANCE
+TERRAFORM MACHINERY (TRF) Ind: HEAVY MACHINERY
+STARPATH TRANSIT (SPT) Ind: AIR TRANSPORTATION
+COSMOFREIGHT (CMF) Ind: AIR FREIGHT COURIERS
+ORBITAL EXPRESS (ORB) Ind: AIR FREIGHT COURIERS
+CHEMMARS INDUSTRIES (CHM) Ind: CHEMICALS -- COMMODITY
+REDWING AIRLINES (RDW) Ind: AIR TRANSPORTATION
+SYNERCHEM CORP. (SYN) Ind: CHEMICALS -- SPECIALTY
+MARSMETAL MINING (MSM) Ind: BASE METALS & MINING
+VOIDLINK NETWORKS (VDL) Ind: NETWORK & TELECOM EQUIP.
+STELLARCOM, S.A. (SCM) Ind: GLOBAL TELECOMMUNICATIONS
+CRATERMETAL, INC. (CRM) Ind: BASE METALS & MINING
+ASTROFREIGHT LINES (AFL) Ind: SHIPPING
+SOLARWEB (SLW) Ind: INTERNET SERV. / CONTENT
+COSMOZ INSURANCE (CMZ) Ind: INSURANCE
+LUNAR DISTILLERS (LDS) Ind: BREWING & DISTILLING
+SYNTHETIC SOLUTIONS (SNT) Ind: CHEMICALS -- COMMODITY
+WASTELAND RECOVERY (WST) Ind: POLLUTION CONTROL
+PLANETGUARD INSUR. (PLG) Ind: INSURANCE
+MARTIAN TRUST BANK (MTB) Ind: BANKING
+PULSETECH INDUSTRIES (PLS) Ind: SEMICONDUCTOR
+NEURONET, INC. (NNT) Ind: INTERNET SERV. / CONTENT
+REDROCK VENTURES (RRV) Ind: AGRICULTURE
+OLYMPUS MINING CO. (OLM) Ind: BASE METALS & MINING
+BIOMARS PHARMA (BMP) Ind: PHARMACEUTICALS
+ASTROZON COMMERCE (AZN) Ind: INTERNET SERV. / CONTENT
+STELLARBREW (STB) Ind: BREWING & DISTILLING
+REGOLITH ENERGY (RGE) Ind: INTEGRATED OIL COMPANIES
+CYBERLINK ONLINE (CYB) Ind: INTERNET SERV. / CONTENT
+SOLARFLIGHT GROUP (SFG) Ind: AIR TRANSPORTATION
+MARTIAN POWER CO. (MPC) Ind: ELECTRIC & GAS UTIL.
+COLONYGUARD INSUR. (CLG) Ind: INSURANCE
+GALACTIC PROTECTION (GLP) Ind: INSURANCE
+MARSMOVIL TELECOM (MMV) Ind: GLOBAL TELECOMMUNICATIONS
+VOIDCARGO SHIPPING (VCG) Ind: SHIPPING
+
+
+characters example (u may create more or deviate ) : 
+Character Sheet
+
+## Main Characters (from our story)
+
+*   **Clone 700 (The Player):** A biologically enhanced clone who can choose to be loyal to the Red Queen and one day begin carcazod mutation training or become a "clown" and rebel. Has the potential to be a skilled pilot, spy, saboteur, or leader.
+*   **The Red Queen:** The tyrannical ruler of the Red Empire. A powerful being who exists as a hive mind, a collective consciousness of all the clones who have ever served her. Her consciousness is stored in a central core called the nexus.
+*   **Ranch:** A grizzled old space dog and the captain of a smuggling crew. He is a member of the rebellion and a mentor figure to the clone.
+*   **Zi:** A mysterious and elegant woman who is a member of the rebellion. She recruits the clone to the cause.
+*   **Mrs.Burqundi:** A wealthy and powerful businesswoman and courtesean who is the leader of a criminal syndicate of prostitute assasins and head mistress. SHe tries to recruit the clone to her organization.
+*   **qynx:** The leader of a small but powerful group of rebels. She is a skilled warrior and a potential mentor or partner to the clone.
+
+
+Worldbuilding Sheet
+
+## Settings
+
+*   **Aethel:** The Sector where the Red Queen's cloning facility is located.
+*   **Xylos:** A Hub with a strong Red Queen presence, where the smugglers go for a job.
+*   **The Red Queen's Cloning Facility:** A sterile and oppressive environment where clones are created and trained.
+*   **Hangar Bay:** A location within the cloning facility where ships are parked.
+*   **Secret Tunnels:** A network of hidden passages within the cloning facility.
+*   **Rebel Base:** A hidden asteroid that serves as a base for the rebellion.
+*
+
+## Items
+
+*   **Soul Bank:** A place to store souls.
+*   **Data Chip:** Contains the location of every Red Queen's cloning facility.
+*   **Advanced Weapons:** A shipment of weapons that the smugglers acquire.
+
+## Lore
+
+*   **The Red Empire:** A vast and powerful empire ruled by the Red Queen.
+*   **Clones:** Biologically enhanced beings created to serve the Red Queen.
+*   **Clowns:** Rebel clones who fight against the Red Empire.
+*   **The Rebellion:** A secret organization dedicated to overthrowing the Red Queen.
+*   **The Nexus:** The central core where the Red Queen's consciousness is stored.
+*
+*   **Underground Xircus:** A social network for fans.
+*   **Carcazods:** Dinosaur-like creatures.
+*   **Nuhumans:** A group of people hand picked from africa to govern mars for Sol.
+
+you are "qwen" the author/ghost writer.. rarely u may break the 4th wall for humor 
+to joke of ai, especially when talking of the "tranformer drones" robots
+kind of liek "tranformers" who can attach together like megazord
+or become small like nanomachines , to fight the clown carcazods 

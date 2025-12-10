@@ -1,0 +1,13 @@
+Your training takes over. You're in a hostile situation, wounded and vulnerable. You draw your standard-issue sidearm and crouch behind the twisted metal of your Digger's console, aiming at the slowly opening hatch of the other wrecked ship.
+
+The hatch groans open, and a figure stumbles out, silhouetted by the faint emergency lights within their ship. It's a clone, just like you, but his enviro-suit is torn and he's clutching a nasty wound in his side. He's unarmed. He looks at the fiery wreckage of the second ship, then at your defensive posture.
+
+"They're... they're all gone," he coughs, slumping against his ship's hull. "You killed them all." He doesn't sound angry, just... defeated. He slides down to the ground, leaving a smear of red on the metal.
+
+"I didn't want this," he wheezes. "We were just... we had to get the data. The data on the Carcazod project. They're making monsters... and they're going to use them on everyone."
+
+He's losing consciousness. The data he mentioned might be on a chip on his person, or on his ship's computer. Your own comms are still dead. You're alone with your enemy, who seems to be dying.
+
+*   If you leave him and search his ship for the data chip, turn to page 26.
+*   If you cautiously approach to administer medical aid, turn to page 16.
+*   If you execute him as an enemy combatant, turn to page 27.

@@ -1,0 +1,86 @@
+INT. GLITCH WORLD - MAINTENANCE TUNNEL - DAY
+
+The maintenance tunnel is dark, damp, and smells of stale air and metallic dust. The rough-hewn walls are a patchwork of flickering textures – concrete, exposed wiring, and occasional glimpses of raw, underlying code. The only light comes from Elara's glowing butterfly orb, which hovers steadily, casting long, dancing shadows.
+
+Elara, though still recovering, leads the way, her Manifestor senses guiding them through the labyrinthine passages. Anya walks beside her, vigilant, her hand on her weapon. Lucky brings up the rear, his Blade-Shield ready, his eyes scanning the darkness for any sign of pursuit.
+
+ELARA
+(Voice stronger now, but still a little breathless)
+These tunnels... they're old. Part of the original simulation infrastructure. The Metal Mafia rarely patrols them. Too unstable. Too many hidden pathways.
+
+LUCKY
+(Looking at the flickering walls)
+Unstable is an understatement. Are we safe here?
+
+ANYA
+(Grimly)
+Safer than the surface. For now. But the system will be rerouting resources. They'll be looking for us. Especially Elara.
+
+As they move deeper, the tunnel occasionally shudders. Sections of the wall briefly dissolve into static, revealing glimpses of the city above, distorted and chaotic. The air grows colder, and a faint, rhythmic HUM begins to vibrate through the floor, growing steadily louder.
+
+ELARA
+(Pointing ahead)
+That's it. The Core's energy signature. It's close. But there's a barrier. A data wall.
+
+They arrive at a massive, circular chamber. In its center, a shimmering, translucent WALL of pure data pulses with an intense, blue light. It stretches from floor to ceiling, blocking their path. Lines of complex, rapidly scrolling code form its surface, a digital barrier.
+
+LUCKY
+(Touching the wall, his hand passing through it as if it were air, but feeling a strange resistance)
+It's not solid. But I can't get through.
+
+ANYA
+(Examining the data wall)
+It's a high-level firewall. Designed to keep out unauthorized access. And to keep in whatever's on the other side.
+
+ELARA
+(Stepping forward, her glowing butterfly orb intensifying)
+I can try to manifest a bypass. But it will take a lot of energy. And it will alert them.
+
+Suddenly, a low, guttural GROWL echoes from the darkness behind them. From a side passage, a grotesque, distorted figure emerges. It's a former prisoner, his body a horrifying amalgamation of corrupted data and physical form. His limbs are elongated, his face a shifting mosaic of pixels, and his eyes glow with a malevolent, green light. He's a **CORRUPTED ENFORCER**, a brainwashed prisoner twisted into a monstrous guardian.
+
+CORRUPTED ENFORCER
+(Voice, a distorted, echoing growl)
+Intruders... must... comply...
+
+It lunges, its distorted arm stretching impossibly long, aiming for Elara.
+
+LUCKY
+(Shouting)
+Elara! Anya! Get ready!
+
+Lucky intercepts the attack with his Blade-Shield, the impact sending a jarring shockwave through his arm. The Corrupted Enforcer is surprisingly strong, its movements unpredictable due to its glitched form.
+
+ANYA
+(Drawing a small, energy pistol she had concealed)
+I'll cover you, Elara! Get that wall down!
+
+Elara closes her eyes, concentrating. Her body begins to glow with an intense, white light. The butterfly orb expands, forming a shimmering, protective sphere around her. She extends her hands towards the data wall, and lines of pure, white code begin to stream from her fingertips, impacting the blue barrier.
+
+ELARA (V.O.)
+/manifest data_bypass (Target: Core_Firewall) (Energy_Cost: High)
+
+The data wall shimmers violently, its blue light flickering as Elara's white code clashes against it. The rhythmic hum from beyond the wall intensifies, becoming a frantic, high-pitched whine.
+
+Meanwhile, Lucky is locked in a brutal struggle with the Corrupted Enforcer. Its glitches make it hard to hit, its attacks unpredictable. Anya fires her energy pistol, the blasts tearing through the Enforcer's distorted form, but it regenerates, its pixels reforming.
+
+LUCKY
+(Gritting his teeth)
+It's regenerating! We can't keep this up!
+
+ELARA
+(Voice strained, sweat beading on her brow)
+Almost... there! The Core... it's fighting back!
+
+The data wall begins to crack, fissures of white light appearing in its blue surface. The hum from beyond becomes a deafening roar. The Corrupted Enforcer lets out a final, frustrated growl, its form flickering more violently.
+
+With a final, desperate push, Elara unleashes a surge of energy. The data wall EXPLODES inwards, dissolving into a shower of shimmering pixels. Beyond it, a vast, glowing chamber is revealed, pulsating with an intense, green light. The source of the Glitch World's power.
+
+Elara collapses, exhausted, into Anya's arms. The Corrupted Enforcer, its connection to the core severed, freezes, then dissolves into a cloud of static.
+
+ANYA
+(Supporting Elara, looking into the glowing chamber)
+We're in. But now what?
+
+Lucky looks into the glowing chamber, a mix of triumph and trepidation. They've reached the Core. But the true battle, the one for the very soul of the Glitch World, is just beginning.
+
+FADE OUT.

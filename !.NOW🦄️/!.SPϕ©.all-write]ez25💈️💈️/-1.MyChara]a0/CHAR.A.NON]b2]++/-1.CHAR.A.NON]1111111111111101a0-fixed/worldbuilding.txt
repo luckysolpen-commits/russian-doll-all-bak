@@ -1,0 +1,39 @@
+# Worldbuilding: Items, Settings, and Concepts
+
+## Key Items:
+
+*   **Quinault Prayer Stick:** An ancient, possibly mystical artifact used by Anonymous. It seems to have paranormal properties, capable of influencing unseen forces or acting as a conduit for communication beyond the digital.
+*   **The Eye of Providence (Orb):** A massive, crystalline orb within the monastery, pulsating with blue light. It is described as holding the collective wisdom of the Order and the secrets of the universe. It requires worthiness (via trials) to access its knowledge.
+*   **Hidden Gun (Chara's):** A small, easily concealed firearm Chara carries, representing her practical, field-agent nature, though often rendered useless by the nature of the challenges she faces.
+*   **Zip-lock Bag with Severed Head:** A macabre, theatrical message left for Chara, containing a human head adorned with clown makeup and resting on shredded classified documents. The makeup contains a unique chemical signature linked to OmniTech.
+*   **Anonymous's Drones/AI:** Small, agile drones used by Anonymous for physical interaction and observation, allowing him to maintain his anonymity.
+
+## Key Settings:
+
+*   **CIA Headquarters (Langley):** The sterile, high-security environment where Chara operates. Represents the conventional world of espionage and government control.
+*   **Anonymous's Apartment:** A high-tech, multi-monitor setup, emphasizing his digital prowess and reclusive nature.
+*   **Chara's Apartment:** Her home workstation, a more personal space where she conducts her independent investigations.
+*   **Old Clock Tower:** An abandoned, gothic landmark, used as a clandestine meeting point. Its architecture features the stylized Eye symbol.
+*   **Old Windmill:** Another isolated, ancient landmark, serving as a gateway to the Order of Providence.
+*   **Ancient Monastery (Order of Providence Stronghold):** The primary base of the Order. A blend of ancient architecture and hidden advanced technology. Contains the Library of the Ancients, trial chambers, and the subterranean server room.
+    *   **Library of the Ancients:** A vast chamber within the monastery filled with ancient texts, scrolls, and glowing artifacts, representing the Order's accumulated knowledge.
+    *   **Trial Chambers:** Specific areas within the monastery designed for the Tests of Courage, Wisdom, and Passion.
+    *   **Basement Server Room:** The hidden, high-tech core of the Order's operations, where they conduct their controversial research and data copying.
+*   **Suburban Houses/Abandoned Warehouse:** Gruesome crime scenes linked to the Order's rituals, characterized by headless victims and ritualistic symbols.
+*   **Hospital:** Where the sole survivor of the seances is recovering, and where Omicorp's direct involvement is first observed.
+*   **Old Warehouse on 5th and Main:** A clandestine meeting point that turns into an ambush and chase scene, revealing Maya and the speedboats.
+*   **Speedboats:** Used for rapid escape and pursuit, symbolizing the fluid and dangerous nature of the conflict.
+
+## Key Concepts/Organizations:
+
+*   **Anonymous (The Hacker):** The elusive, highly skilled hacker who becomes Chara's enigmatic ally. His true identity remains unknown.
+*   **OmniTech:** One of the two powerful corporations involved in the conspiracy. Implicated in advanced, experimental technology and the source of the chemical signature on the severed head.
+*   **NovaSpire:** The second powerful corporation, working in conjunction with OmniTech on "Project Chimera" to manipulate global events.
+*   **Project Chimera:** The codename for the joint venture between OmniTech and NovaSpire, involving advanced technology and unconventional energy sources, aimed at manipulating global events.
+*   **The Whispering Walls:** A cryptic phrase used by Anonymous, possibly referring to a hidden network or a deeper, unseen reality.
+*   **The Shadow Net:** A term for an invisible, untraceable network of compromised computers and servers used for nefarious purposes, a breeding ground for cyber-criminals and nation-state actors.
+*   **The Eye Symbol:** A recurring, stylized symbol associated with Anonymous and the Order of Providence, representing knowledge, power, and hidden truths.
+*   **Order of Providence:** A secret society with ancient origins, possessing vast knowledge and advanced technology. They believe in democratizing knowledge and neutralizing powerful entities like Omnicorp, but employ morally ambiguous and horrifying methods (e.g., biological interfaces with organic matter).
+*   **Seances/Rituals:** The dark practices conducted by the Order, resulting in headless victims, suggesting a connection to paranormal or occult forces.
+*   **Omicorp:** A multi-billion dollar biotech firm with a history of unethical practices (experimental medical procedures, human testing). Their research is being copied by the Order of Providence, and they appear to be involved in the aftermath of the ritualistic murders.
+*   **Web of Deceit and Corruption:** The overarching conspiracy that Maya describes, spanning decades and involving Omicorp, government agencies, and high-ranking officials.

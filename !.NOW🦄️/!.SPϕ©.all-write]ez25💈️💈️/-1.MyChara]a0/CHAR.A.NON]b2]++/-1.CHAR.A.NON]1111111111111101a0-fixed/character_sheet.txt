@@ -1,0 +1,32 @@
+# Character Sheet
+
+## Chara
+*   **Role:** Seasoned CIA Agent, protagonist.
+*   **Key Traits:** Sharp, focused, intelligent, determined, resilient, curious, analytical, resourceful, possesses strong instincts. Initially by-the-book but willing to bend rules for the truth.
+*   **Skills:** Highly skilled in digital forensics, tracking, combat, and analysis. Adaptable and quick-thinking under pressure.
+*   **Journey Arc:** Begins as a hunter of Anonymous, becomes an unwilling ally, and then a target of a vast conspiracy. Her understanding of the world is constantly challenged and expanded.
+*   **Key Relationships:** Agent Miller (handler), Anonymous (enigmatic ally), Arianna (initial guide, later antagonist), Maya (informant/ally).
+
+## Anonymous
+*   **Role:** Enigmatic hacker, unseen ally to Chara.
+*   **Key Traits:** Highly skilled, elusive, mysterious, intelligent, strategic, possesses a dry wit (implied through modulated voice). Operates from the shadows.
+*   **Skills:** Master hacker, capable of infiltrating highly secure systems, manipulating digital environments, and leaving untraceable digital breadcrumbs. Uses drones and AI for physical interaction.
+*   **Physicality:** Never physically seen by Chara or the reader. Communicates via modulated voice, drones, or text. Uses hacking and even paranormal means (Quinault prayer stick, manipulating ghosts/undead) for interaction.
+*   **Motivations:** Seeks to expose truth and manipulate global events, seemingly against powerful corporations like OmniTech and NovaSpire.
+
+## Agent Miller
+*   **Role:** Chara's handler at the CIA.
+*   **Key Traits:** Stern, by-the-book, professional, initially skeptical but trusts Chara's judgment.
+*   **Function:** Provides Chara with missions and resources, represents the official agency perspective.
+
+## Arianna
+*   **Role:** Member of the Order of Providence, Chara's initial guide and later revealed as an antagonist.
+*   **Key Traits:** Mysterious, calm, serene, possesses ancient wisdom, manipulative, zealous in her beliefs.
+*   **Skills:** Deep knowledge of ancient lore, rituals, and advanced technology. Leads the Order of Providence.
+*   **Motivations:** Believes in democratizing knowledge and neutralizing powerful entities like Omnicorp, even through morally ambiguous means.
+
+## Maya
+*   **Role:** Informant, potential ally, part of a larger resistance against Omicorp.
+*   **Key Traits:** Resourceful, knowledgeable about the conspiracy, elusive, pragmatic.
+*   **Skills:** Appears to have access to high-level information and resources, capable of orchestrating escapes.
+*   **Motivations:** Seeks to expose Omicorp and the deeper corruption.

@@ -1,0 +1,66 @@
+CHARACTER SHEET
+
+## Main Characters:
+
+### Lucky:
+- **Role:** Protagonist, leader of The Chaebol, entrepreneur.
+- **Personality:** Charismatic, weary but with a spark, determined, responsible, loyal, initially entrepreneurial, becomes a reluctant hero.
+- **Arc:** From seeking wealth to facing existential threats, making difficult ethical choices, and leading his team through impossible situations.
+- **Key Relationships:** Partner to Astra, friend to Gem, leader to the Korean tear-it users, rival/foil to Edge Danger Man.
+
+### Astra:
+- **Role:** Lucky's partner, perceptive scientist.
+- **Personality:** Sharp, perceptive, empathetic, thrill-seeker, intelligent, often the moral compass.
+- **Arc:** From scientific curiosity to confronting cosmic horrors and making personal sacrifices.
+- **Key Relationships:** Lucky's girlfriend, close friend to Gem, receives warnings from Loona Twilight.
+
+### Gem:
+- **Role:** Lucky's friend, pragmatic, financially astute.
+- **Personality:** Energetic, always looking for an angle, pragmatic, excited by financial prospects, supportive.
+- **Arc:** Initially driven by wealth, becomes a committed member of the team facing grave dangers.
+- **Key Relationships:** Friend to Lucky and Astra.
+
+### Edge Danger Man:
+- **Role:** Reckless stunt devil, guide, later self-serving antagonist/foil.
+- **Personality:** Charismatic, reckless, impulsive, showman, audacious, prideful, ultimately cowardly when faced with true danger, has a hidden past (Australian prison, family).
+- **Arc:** From a flamboyant guide to a desperate individual making dangerous deals to protect himself, ultimately failing and fleeing.
+- **Key Relationships:** Clashes with Lucky, charms Astra and Gem, works with Dr. Patel and The Architect.
+
+### The Architect:
+- **Role:** Mysterious, wealthy venture capitalist, primary antagonist.
+- **Personality:** Shrewd, manipulative, secretive, driven by a desire to exploit advanced technology (warp drives, antimatter) regardless of ethical cost.
+- **Arc:** Seeks to gain control over powerful, dangerous technologies by exploiting others' discoveries and sacrifices.
+- **Key Relationships:** Employs Kofi, manipulates Dr. Patel and Edge, targets Lucky's team.
+
+## Supporting Characters:
+
+### Luna:
+- **Role:** Initiator of the asteroid mining venture.
+- **Personality:** Confident, visionary, persuasive.
+- **Key Relationships:** Presents opportunity to Lucky's team and Mr. Kim.
+
+### Mr. Kim:
+- **Role:** Korean representative, major investor.
+- **Personality:** Impeccably dressed, shrewd, cautious, authoritative, pragmatic.
+- **Key Relationships:** Investor in The Chaebol, sends his team for due diligence.
+
+### Jin, Min, Yoon (Korean Tear-It Users):
+- **Role:** Skilled energy manipulators, part of The Chaebol.
+- **Personality:** Curious, skilled, enjoy gaming and stunts, loyal to Mr. Kim and later Lucky's team.
+- **Key Relationships:** Work closely with Lucky's team, especially on Tear-It technology.
+
+### Loona Twilight:
+- **Role:** Hologram queen, cosmic informant, makes ultimate sacrifice.
+- **Personality:** Ageless, regal, ethereal, wise, somber, provides crucial warnings.
+- **Arc:** Guides Astra and Lucky's team, ultimately sacrifices herself to appease The Diabolus.
+- **Key Relationships:** Communicates with Astra, provides vital information to Lucky's secret team.
+
+### Dr. Patel:
+- **Role:** Stern UN representative.
+- **Personality:** No-nonsense, skeptical, pragmatic, ultimately willing to make deals for results.
+- **Key Relationships:** Negotiates with Edge, works with The Architect's representative.
+
+### Kofi:
+- **Role:** Emissary of The Architect, African warrior.
+- **Personality:** Imposing, deep voice, calm, respectful of ancient power, loyal to The Architect.
+- **Key Relationships:** Leads The Architect's forces into The Diabolus, confronts Edge.

@@ -1,0 +1,100 @@
+INT. AVANTA.C - PLAYER HUB - DAY
+
+After their whirlwind tour of Avanta.C's diverse landscapes, Lucky and Astra find themselves in a quiet corner of a bustling PLAYER HUB, a central meeting point for adventurers. Holographic billboards advertise quests, guilds, and rare items. The air hums with the low thrum of countless data streams.
+
+They decide it's time to get serious about their progression. Astra taps a series of invisible commands in the air, and a translucent, glowing INTERFACE materializes before them. It's the CHARACTER MENU, displaying their current stats and inventory.
+
+LUCKY'S STATS (Holographic Display)
+
+LEVEL: 5
+HP: 120/150 (Health Points)
+MP: 80/100 (Mana Points)
+STRENGTH: 10 (Physical power, melee damage)
+AGILITY: 15 (Movement speed, dodge chance)
+INTELLIGENCE: 8 (Magic power, spell effectiveness)
+
+Lucky studies his numbers. He's a decent all-rounder, leaning slightly towards agility.
+
+LUCKY
+(Muttering)
+Level five. Still a long way to go.
+
+Astra's stats appear next to his, slightly higher.
+
+ASTRA'S STATS (Holographic Display)
+
+LEVEL: 6
+HP: 150/180
+MP: 100/120
+STRENGTH: 12
+AGILITY: 18
+INTELLIGENCE: 10
+
+ASTRA
+(A slight smirk)
+We're still low-level. Too low for any serious guild to consider us. We need to grind.
+
+She navigates to the INVENTORY tab. A grid of glowing icons appears, representing their current gear.
+
+LUCKY'S INVENTORY (Holographic Display)
+
+- QUICK SWORD (Basic attack weapon. +2 Strength)
+- SHIELD OF COURAGE (Basic shield. +5 Defense)
+- HEALING POTION (Restores 20 HP. Quantity: 3)
+- AVANTA.C STARTER PACK (Contains: 50 Gold Coins, Basic Map, Beginner's Guide)
+
+ASTRA'S INVENTORY (Holographic Display)
+
+- WAND OF THE ELEMENTS (Basic magic staff. +3 Intelligence)
+- SPELLBOOK OF SHADOWS (Contains: Fireball, Healing Hands. +5 MP)
+- MANA CRYSTAL (Restores 20 MP. Quantity: 2)
+- AVANTA.C STARTER PACK (Contains: 50 Gold Coins, Basic Map, Beginner's Guide)
+
+LUCKY
+(Sighs)
+Not exactly decked out for a dragon hunt, are we?
+
+As Lucky and Astra are reviewing their gear, Astra's avatar interface suddenly chimes with an incoming message. She opens it, her expression changing as she reads.
+
+ASTRA
+(Reading the message, surprised)
+Lucky... I think our escape route just arrived.
+
+LUCKY
+(Interested)
+What do you mean?
+
+ASTRA
+It's from Pixel, the avatar customizer from the illegal furry server. He's offering us a way to convert our illegal accounts to legal citizenship on Icarus - one of the most prestigious worlds in Avanta.C.
+
+LUCKY
+(Eyes widening)
+How is that possible?
+
+ASTRA
+(Reading further)
+He says there's an underground economy where we can convert regular gold into 'Furry Coins' - a special currency that can be exchanged for citizenship accounts. But we need to build up our reputation and gold reserves first. The process goes through a group called 'Anonymous' - they specialize in account conversions.
+
+LUCKY
+(Studying the message)
+So we need to do quests, earn gold, level up, get better gear... all to fund our account conversion?
+
+ASTRA
+(Nodding)
+Exactly. Pixel says if we can prove ourselves capable in the legal server quests, he can help us with the conversion. But we have to be careful - the Metal Mafia has been tracking anyone trying to make the move from illegal to legal servers. They control a lot of that underground currency exchange.
+
+LUCKY
+(Determined)
+Then we'd better start proving ourselves. Time to get our reputation up legitimately before we attempt that.
+
+She closes the menu and looks at him, a determined glint in her eye.
+
+ASTRA
+Ready to get your hands dirty, Lucky? Our future depends on it.
+
+Lucky grins, a spark of excitement in his eyes. He may be low-level, but with Astra by his side and a clear goal in mind, he feels ready for anything Avanta.C can throw at them.
+
+LUCKY
+Let's do this. For real citizenship on Icarus.
+
+FADE OUT.

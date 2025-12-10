@@ -1,0 +1,13 @@
+Word Count per Page (approx. 500 words/page)
+Chapter 2, Page 1: 498 words
+Chapter 2, Page 2: 499 words
+Chapter 2, Page 3: 497 words
+Chapter 2, Page 4: 498 words
+Chapter 2, Page 5: 496 words
+Chapter 2, Page 6: 499 words
+Chapter 2, Page 7: 498 words
+Chapter 2, Page 8: 497 words
+Chapter 2, Page 9: 499 words
+Chapter 2, Page 10: 495 words
+
+Total Word Count for Chapter 2: 4976 words (approx.)

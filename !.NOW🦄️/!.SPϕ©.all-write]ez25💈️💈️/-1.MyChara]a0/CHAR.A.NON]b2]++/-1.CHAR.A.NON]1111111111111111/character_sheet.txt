@@ -1,0 +1,36 @@
+CHARACTER SHEET:
+
+1.  **CARA:**
+    *   **Role:** Newly promoted Director of Cyber Intelligence at the CIA.
+    *   **Key Traits:** Sharp, intelligent, determined, pragmatic, initially skeptical but open to evidence, deeply committed to truth and justice. Has a strong, unconventional bond with Anon.
+    *   **Motivation:** To protect national security, uncover the truth behind the cyber attacks, and ultimately expose the vast conspiracy.
+
+2.  **ANON:**
+    *   **Role:** Cara's enigmatic and highly skilled hacker contact.
+    *   **Key Traits:** Cryptic, knowledgeable, operates in the shadows, deeply cares for Cara, possesses information far beyond conventional intelligence.
+    *   **Motivation:** To guide Cara towards the truth and warn her of impending dangers, though his ultimate goals remain mysterious.
+
+3.  **VICTOR LAGRAINE:**
+    *   **Role:** A brilliant, ambitious, and morally ambiguous figure with access to advanced technology and deep knowledge of the conspiracy.
+    *   **Key Traits:** Smooth, confident, manipulative, believes in a "managed evolution" for humanity, sees chaos as a necessary catalyst.
+    *   **Motivation:** To accelerate humanity's evolution through controlled revelation of alien technology and knowledge, completing what he believes was General Armstrong's true vision.
+
+4.  **ARIANA:**
+    *   **Role:** A mysterious, ancient being or entity, a "witness" and "guardian" of extraterrestrial truths.
+    *   **Key Traits:** Ethereal, wise, possesses deep knowledge of humanity's true history with aliens, capable of influencing minds.
+    *   **Motivation:** To reveal the full truth about humanity's interaction with extraterrestrial life and provide humanity with a genuine choice for its future, free from manipulation.
+
+5.  **AGENT THOMPSON:**
+    *   **Role:** A seasoned CIA agent under Cara's command.
+    *   **Key Traits:** Grizzled, experienced, initially skeptical but loyal, follows orders.
+    *   **Motivation:** To support Cara and contain the cyber threats, though he struggles with the increasingly bizarre nature of the investigation.
+
+6.  **DR. PATEL:**
+    *   **Role:** A brilliant cryptologist and analyst in Cara's team.
+    *   **Key Traits:** Meticulous, intelligent, calm under pressure.
+    *   **Motivation:** To analyze data and provide technical insights to help Cara understand the attacks and the underlying conspiracy.
+
+7.  **GENERAL ARMSTRONG:**
+    *   **Role:** A deceased (officially) high-ranking government official, architect of Project Nightingale, and Victor LaGraine's mentor.
+    *   **Key Traits:** Powerful, visionary, believed in a "controlled revelation" of alien truths.
+    *   **Motivation:** To guide humanity's evolution through managed exposure to extraterrestrial knowledge, though his methods were secretive and manipulative.

@@ -1,0 +1,15 @@
+Page 192: Targeting the Standard Ordnance Depot
+
+As you target the Standard Ordnance Depot containing conventional weapons from all four factions, your weapons strike at the supply base that's feeding the ambushers with standard military equipment. The depot's destruction cuts off access to conventional weapons, but also triggers automatic distribution systems that may redirect weapons from other locations.
+
+Three targeting outcomes emerge: Supply Chain Disruption, where destroying the depot cuts off the ambushers' access to conventional weapons and ammunition; Automatic Distribution Activation, revealing how the depot is connected to a network that can redirect weapons from other storage locations; and Weapon Type Confusion, demonstrating how the mixing of different faction weapons creates coordination problems for the ambushers.
+
+As the standard ordnance depot is targeted, you observe the immediate effects on the ambush - some attackers lose access to their primary weapons while others must adapt to using weapons from different factions that may not function identically.
+
+Your depot targeting reveals the complexity of the ambushers' logistics system, while also showing how sophisticated organizations maintain distributed supply networks that can compensate for the loss of individual depots.
+
+The ordnance depot targeting provides tactical advantage by reducing the ambushers' firepower, but also triggers automated response systems that may create new tactical challenges or redirect resources to unexpected locations.
+
+*If you disrupt Supply Chains, turn to Page 576.*
+*If you observe Automatic Distribution, turn to Page 577.*
+*If you manage Weapon Type Confusion, turn to Page 578.*

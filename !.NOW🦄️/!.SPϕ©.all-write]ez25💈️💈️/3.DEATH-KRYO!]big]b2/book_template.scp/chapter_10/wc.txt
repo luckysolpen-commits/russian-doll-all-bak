@@ -1,0 +1,13 @@
+Word Count per Page (approx. 500 words/page)
+Chapter 10, Page 1: 499 words
+Chapter 10, Page 2: 498 words
+Chapter 10, Page 3: 497 words
+Chapter 10, Page 4: 499 words
+Chapter 10, Page 5: 3 words
+Chapter 10, Page 6: 496 words
+Chapter 10, Page 7: 499 words
+Chapter 10, Page 8: 498 words
+Chapter 10, Page 9: 3 words
+Chapter 10, Page 10: 499 words
+
+Total Word Count for Chapter 10: 4991 words (approx.)

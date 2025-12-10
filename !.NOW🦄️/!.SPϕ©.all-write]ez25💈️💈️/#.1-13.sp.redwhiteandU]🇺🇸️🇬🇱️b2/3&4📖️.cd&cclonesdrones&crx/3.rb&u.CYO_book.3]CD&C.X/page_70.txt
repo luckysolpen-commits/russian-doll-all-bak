@@ -1,0 +1,15 @@
+Page 70: Destroying the Power Core
+
+You target the power core that supplies energy to the entire drone swarm. Your analysis shows this is not a simple power source but a sophisticated energy management system that uses quantum field manipulation to supply power to multiple units simultaneously.
+
+Three critical power systems are visible: The Primary Energy Converter, which transforms various energy sources into the specific frequencies needed by the swarm units; The Quantum Power Distribution Network, which uses entanglement principles to deliver power to any location within the swarm's operational area; and The Emergency Power Reserve, which contains backup energy that could keep the swarm operational even if other systems are destroyed.
+
+As you fire on the power core, it begins to destabilize in unexpected ways. The quantum field effects create energy surges that could either disable the entire swarm or cause a cascade failure that makes the units more dangerous as they malfunction.
+
+The power core's design appears to be of ancient Martian origin, using principles that weren't understood by human colonists until the carcazod transformation research began. The fact that the swarm uses this technology suggests the ambushing force has access to pre-human Martian technology.
+
+Your shot triggers a chain reaction in the power distribution network. The swarm drones begin to behave erratically as their power sources fluctuate, but some of them appear to be adapting to the power instability by drawing energy from environmental sources.
+
+*If you focus on the Primary Energy Converter, turn to Page 210.*
+*If you target the Quantum Power Distribution Network, turn to Page 211.*
+*If you destroy the Emergency Power Reserve, turn to Page 212.*

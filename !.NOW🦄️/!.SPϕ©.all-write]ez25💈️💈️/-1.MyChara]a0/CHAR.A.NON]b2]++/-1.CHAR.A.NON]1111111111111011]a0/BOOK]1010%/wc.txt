@@ -1,0 +1,196 @@
+Chapter_1:
+page_1.txt: 558
+page_2.txt: 563
+page_3.txt: 578
+page_4.txt: 528
+page_5.txt: 584
+page_6.txt: 568
+page_7.txt: 551
+page_8.txt: 569
+page_9.txt: 526
+page_10.txt: 588
+Total: 5613
+
+Chapter_2:
+page_1.txt: 424
+page_2.txt: 439
+page_3.txt: 484
+page_4.txt: 462
+page_5.txt: 401
+page_6.txt: 434
+page_7.txt: 389
+page_8.txt: 460
+page_9.txt: 497
+page_10.txt: 453
+Total: 4314
+
+Chapter_3:
+page_1.txt: 441
+page_2.txt: 442
+page_3.txt: 468
+page_4.txt: 471
+page_5.txt: 448
+page_6.txt: 497
+page_7.txt: 455
+page_8.txt: 462
+page_9.txt: 422
+page_10.txt: 462
+Total: 4568
+
+Chapter_4:
+page_1.txt: 484
+page_2.txt: 474
+page_3.txt: 462
+page_4.txt: 450
+page_5.txt: 449
+page_6.txt: 468
+page_7.txt: 458
+page_8.txt: 436
+page_9.txt: 414
+page_10.txt: 401
+Total: 4496
+
+Chapter_5:
+page_1.txt: 463
+page_2.txt: 401
+page_3.txt: 477
+page_4.txt: 590
+page_5.txt: 524
+page_6.txt: 463
+page_7.txt: 480
+page_8.txt: 457
+page_9.txt: 447
+page_10.txt: 522
+Total: 4824
+
+Chapter_6:
+page_1.txt: 432
+page_2.txt: 428
+page_3.txt: 488
+page_4.txt: 515
+page_5.txt: 495
+page_6.txt: 419
+page_7.txt: 389
+page_8.txt: 483
+page_9.txt: 608
+page_10.txt: 457
+Total: 4714
+
+Chapter_7:
+page_1.txt: 432
+page_2.txt: 428
+page_3.txt: 488
+page_4.txt: 515
+page_5.txt: 495
+page_6.txt: 419
+page_7.txt: 389
+page_8.txt: 483
+page_9.txt: 608
+page_10.txt: 524
+Total: 4778
+
+Chapter_8:
+page_1.txt: 432
+page_2.txt: 428
+page_3.txt: 488
+page_4.txt: 515
+page_5.txt: 495
+page_6.txt: 419
+page_7.txt: 389
+page_8.txt: 483
+page_9.txt: 608
+page_10.txt: 457
+Total: 4714
+
+Chapter_9:
+page_1.txt: 447
+page_2.txt: 522
+page_3.txt: 432
+page_4.txt: 428
+page_5.txt: 488
+page_6.txt: 515
+page_7.txt: 495
+page_8.txt: 419
+page_9.txt: 389
+page_10.txt: 483
+Total: 4618
+
+Chapter_10:
+page_1.txt: 432
+page_2.txt: 428
+page_3.txt: 488
+page_4.txt: 515
+page_5.txt: 495
+page_6.txt: 419
+page_7.txt: 389
+page_8.txt: 483
+page_9.txt: 608
+page_10.txt: 457
+Total: 4714
+
+Chapter_11:
+page_1.txt: 432
+page_2.txt: 428
+page_3.txt: 488
+page_4.txt: 515
+page_5.txt: 495
+page_6.txt: 419
+page_7.txt: 389
+page_8.txt: 483
+page_9.txt: 608
+page_10.txt: 457
+Total: 4714
+
+Chapter_12:
+page_1.txt: 432
+page_2.txt: 428
+page_3.txt: 488
+page_4.txt: 515
+page_5.txt: 495
+page_6.txt: 419
+page_7.txt: 390
+page_8.txt: 483
+page_9.txt: 608
+page_10.txt: 457
+Total: 4715
+
+Chapter_13:
+page_1.txt: 432
+page_2.txt: 428
+page_3.txt: 488
+page_4.txt: 515
+page_5.txt: 495
+page_6.txt: 419
+page_7.txt: 390
+page_8.txt: 483
+page_9.txt: 608
+page_10.txt: 457
+Total: 4715
+
+Chapter_14:
+page_1.txt: 432
+page_2.txt: 428
+page_3.txt: 488
+page_4.txt: 515
+page_5.txt: 495
+page_6.txt: 419
+page_7.txt: 390
+page_8.txt: 483
+page_9.txt: 608
+page_10.txt: 457
+Total: 4715
+
+Chapter_15:
+page_1.txt: 432
+page_2.txt: 428
+page_3.txt: 488
+page_4.txt: 515
+page_5.txt: 495
+page_6.txt: 419
+page_7.txt: 389
+page_8.txt: 483
+page_9.txt: 608
+page_10.txt: 457
+Total: 4714
+
+Grand Total: 70982

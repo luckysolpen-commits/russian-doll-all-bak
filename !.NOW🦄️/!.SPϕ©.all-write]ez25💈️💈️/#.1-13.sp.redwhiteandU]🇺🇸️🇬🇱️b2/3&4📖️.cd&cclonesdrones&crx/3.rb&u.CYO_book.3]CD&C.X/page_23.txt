@@ -1,0 +1,15 @@
+Page 23: Intercepting the Drone Swarm
+
+You decide to intercept the approaching drone swarm before it can coordinate with the ambush. Your Scout-X7 is designed for combat, but the swarm's coordination suggests it's controlled by something far more sophisticated than simple AI – possibly a collective consciousness or even a partially transformed carcazod entity.
+
+As you engage, your tactical display identifies three key weaknesses in the swarm formation: a command drone that appears to be directing the others, a power core that supplies energy to the entire swarm, and a communication relay that allows for real-time coordination between the units.
+
+The swarm's flight pattern shows elements from all four factions' drone technologies – some units display the geometric precision favored by the Robot State, others show the organic-looking modifications of carcazod research, while still others bear the ornate markings of the Blood Queen Monarchy.
+
+Your weapons systems lock onto the formation as you realize that this is not a random attack but a coordinated operation involving at least three of the major factions. The sophistication of the swarm suggests it may be the result of secret collaboration or, more disturbingly, the work of rogue elements from each faction working together against their own governments.
+
+The Robot State officials in the transport below depend on your success, but the drone swarm's capabilities are unlike anything in your training manual.
+
+*If you target the command drone to break the swarm's coordination, turn to Page 69.*
+*If you attempt to destroy the power core to disable multiple units at once, turn to Page 70.*
+*If you focus on the communication relay to isolate individual drones, turn to Page 71.*

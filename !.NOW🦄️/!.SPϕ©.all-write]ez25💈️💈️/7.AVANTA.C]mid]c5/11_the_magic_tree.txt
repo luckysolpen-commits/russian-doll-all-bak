@@ -1,0 +1,114 @@
+INT. AVANTA.C - PLAYER HUB - DAY
+
+Back in the bustling Player Hub, Lucky and Astra find a quiet corner to review their gains from the Lost Temple. Astra brings up their CHARACTER MENUS again, the translucent interfaces glowing before them.
+
+LUCKY'S STATS (Holographic Display - UPDATED)
+
+LEVEL: 7 (UP!)
+HP: 150/180 (UP!)
+MP: 100/120 (UP!)
+STRENGTH: 15 (UP!)
+AGILITY: 18 (UP!)
+INTELLIGENCE: 10 (UP!)
+
+Lucky grins, seeing the green 'UP!' indicators next to his stats. He feels a noticeable surge of power, a greater responsiveness in his avatar.
+
+LUCKY
+(Whistles)
+That's more like it. Level seven already. And my HP and MP are looking much healthier.
+
+ASTRA'S STATS (Holographic Display - UPDATED)
+
+LEVEL: 8 (UP!)
+HP: 180/200 (UP!)
+MP: 120/140 (UP!)
+STRENGTH: 18 (UP!)
+AGILITY: 20 (UP!)
+INTELLIGENCE: 12 (UP!)
+
+Astra nods, pleased with her own progression. Her avatar seems to shimmer with a slightly stronger aura.
+
+ASTRA
+Excellent. We're making good progress. Now, let's see about that new gear.
+
+She navigates to their INVENTORY tabs. The grid of icons expands, showing their newly acquired items.
+
+LUCKY'S INVENTORY (Holographic Display - UPDATED)
+
+- QUICK SWORD (Basic attack weapon. +2 Strength)
+- SHIELD OF COURAGE (Basic shield. +5 Defense)
+- HEALING POTION (Restores 20 HP. Quantity: 3)
+- AVANTA.C STARTER PACK (Contains: 50 Gold Coins, Basic Map, Beginner's Guide)
+- DRAGON SLAYER ARMOR (Chestpiece): +10 Strength, +15 Defense. (NEW!)
+
+ASTRA'S INVENTORY (Holographic Display - UPDATED)
+
+- WAND OF THE ELEMENTS (Basic magic staff. +3 Intelligence)
+- SPELLBOOK OF SHADOWS (Contains: Fireball, Healing Hands. +5 MP)
+- MANA CRYSTAL (Restores 20 MP. Quantity: 5) (UP!)
+- AVANTA.C STARTER PACK (Contains: 50 Gold Coins, Basic Map, Beginner's Guide)
+
+Lucky immediately equips the Dragon Slayer Armor. His avatar's appearance shifts, the light armor replaced by a more formidable, dark-scaled chestpiece that seems to hum with latent power. He feels an immediate boost to his physical presence.
+
+LUCKY
+(Flexing his arm)
+This feels... powerful. Like I could take on a real dragon now.
+
+ASTRA
+(Smiling)
+Don't get ahead of yourself. But it's a significant upgrade. And speaking of upgrades, did you know you can combine certain items? It's not always obvious, but the system allows for some interesting crafting.
+
+She brings up a CONSOLE COMMAND INTERFACE, a smaller, more technical overlay that appears at the bottom of her main screen. It looks like a command line.
+
+ASTRA
+(Typing rapidly)
+For instance, your Quick Sword and Shield of Courage. They're basic, but together, they have a hidden synergy. Try this:
+
+She gestures for Lucky to try. He opens his own console.
+
+LUCKY (V.O.)
+/combine swordshield
+
+A shimmering animation plays over his Quick Sword and Shield of Courage icons in his inventory. They glow brightly, then merge into a single, new icon: the "Blade-Shield of Valor."
+
+LUCKY'S INVENTORY (Holographic Display - UPDATED)
+
+- BLADE-SHIELD OF VALOR (NEW! Combines Quick Sword and Shield of Courage. +5 Strength, +10 Defense, grants 'Parry' ability)
+- HEALING POTION (Restores 20 HP. Quantity: 3)
+- AVANTA.C STARTER PACK (Contains: 50 Gold Coins, Basic Map, Beginner's Guide)
+- DRAGON SLAYER ARMOR (Chestpiece): +10 Strength, +15 Defense.
+
+LUCKY
+(Amazed)
+Whoa! A new ability too? 'Parry'?
+
+ASTRA
+(Nodding)
+Exactly. And for me, my Spellbook of Shadows can be upgraded. It's a common trick for mages.
+
+ASTRA (V.O.)
+/spellbook upgrade
+
+Her Spellbook of Shadows icon transforms, becoming more ornate, glowing with a deeper magical energy.
+
+ASTRA'S INVENTORY (Holographic Display - UPDATED)
+
+- WAND OF THE ELEMENTS (Basic magic staff. +3 Intelligence)
+- SPELLBOOK OF ANCIENT SHADOWS (NEW! Upgraded Spellbook of Shadows. +10 MP, grants 'Arcane Blast' spell, increases magical damage by 15%)
+- MANA CRYSTAL (Restores 20 MP. Quantity: 5)
+- AVANTA.C STARTER PACK (Contains: 50 Gold Coins, Basic Map, Beginner's Guide)
+
+ASTRA
+(Smiling, a faint magical aura around her)
+Now we're talking. 'Arcane Blast' is a powerful area-of-effect spell. And the increased magical damage will make a huge difference.
+
+Lucky looks at his new Blade-Shield of Valor, then at Astra's upgraded spellbook. The possibilities of Avanta.C seem to expand exponentially with each discovery. They're not just playing a game; they're mastering a complex, living system.
+
+LUCKY
+So, what's next? More quests? Or is there something else we should be looking for?
+
+ASTRA
+(Her eyes gleaming with ambition)
+There's always something else. Avanta.C is full of hidden mechanics, secret areas, and powerful resources. We've only just begun to scratch the surface of what's possible.
+
+FADE OUT.

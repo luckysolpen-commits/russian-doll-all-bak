@@ -1,0 +1,20 @@
+Total Book Word Count:
+
+Chapter 1: 1298 words
+Chapter 2: 1750 words
+Chapter 3: 1649 words
+Chapter 4: 1796 words
+Chapter 5: 2093 words
+Chapter 6: 1745 words
+Chapter 7: 1495 words
+Chapter 8: 1196 words
+Chapter 9: 1196 words
+Chapter 10: 1297 words
+Chapter 11: 1297 words
+Chapter 12: 1196 words
+Chapter 13: 1196 words
+Chapter 14: 899 words
+Chapter 15: 1196 words
+Chapter 16: 1396 words
+
+Total Book Word Count: 22000 words

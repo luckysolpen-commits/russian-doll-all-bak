@@ -1,0 +1,7 @@
+
+read @\#.book_template.scp/gemini_ch_books.txt   , and the other files in that dir 2 get an overview
+of extended lore beyond the screenplay (including "houses" , which should play a role in the books)
+use the  screenplay_outline.txt in this dir to write #.book_template.scp/book_outline.txt  (13 chapters)
+then use the scenes in this dir to help u write each chapter (books are basically a book form of the screenplay so it should be ez)
+
+

@@ -1,0 +1,48 @@
+--- CHARACTER SHEET ---
+
+1.  **CHARA**
+    *   **Role:** Protagonist, skilled CIA operative.
+    *   **Appearance:** Sharp, observant, quiet intensity. Later, weariness replaced by quiet strength and profound purpose.
+    *   **Personality:** Initially focused, disciplined, and somewhat detached. Becomes hardened by betrayal and loss, but driven by a strong sense of justice and a need for truth. Highly resilient and resourceful.
+    *   **Arc:** Starts as an operative following orders, unaware of the deeper conspiracies. Experiences profound loss and betrayal, leading her to uncover a personal connection to the mission. Transforms into an independent seeker of truth, fighting for justice beyond agency directives.
+    *   **Key Relationships:**
+        *   **Giana Nguyen:** Her superior, a source of support and information.
+        *   **ANON:** The mysterious informant who becomes a key ally and reveals crucial truths.
+        *   **Agent Klondike:** Her mentor, whose death and hidden legacy drive much of her actions.
+        *   **Zara:** Leader of the Desert Hawks, an uneasy but vital ally.
+
+2.  **GIANA NGUYEN**
+    *   **Role:** Chara's superior at the CIA.
+    *   **Appearance:** Stern, but with a hint of weary wisdom.
+    *   **Personality:** Professional, pragmatic, and initially bound by agency protocols. Shows genuine concern for Chara and a willingness to bend rules for the greater good, especially after Klondike's death.
+    *   **Arc:** Supports Chara, provides resources, and eventually becomes an internal ally in Chara's pursuit of the truth.
+
+3.  **ANON**
+    *   **Role:** Trusted CIA informant, later revealed as the true "asset" and a key figure in the conspiracy.
+    *   **Appearance:** Mysterious, striking, with an air of quiet authority and unsettling intensity. Later, more urban, but still enigmatic.
+    *   **Personality:** Enigmatic, manipulative (for a greater cause), intelligent, and deeply connected to the Project Little Endians. Carries a burden of knowledge and responsibility.
+    *   **Arc:** Initiates the mission to draw out the conspirators. Reveals crucial truths to Chara, including her personal connection to the events. Becomes a vital, if fleeting, ally.
+
+4.  **AGENT KLONDIKE**
+    *   **Role:** Legendary agent, Chara's mentor, presumed dead, later revealed to be alive and then truly killed.
+    *   **Appearance:** Rugged, weary, but with an undeniable presence. Younger in holographic message.
+    *   **Personality:** Wise, strategic, deeply committed to justice, and protective of Chara. A man who made difficult choices for a long-term goal.
+    *   **Arc:** His past actions (faking his death, hiding Chara) and his final sacrifice drive Chara's investigation. His holographic message serves as a posthumous guide and revelation.
+
+5.  **LOCAL CONTACT**
+    *   **Role:** Grizzled mercenary/local guide in Afrotta.
+    *   **Appearance:** Weathered face, scruffy beard, gruff exterior.
+    *   **Personality:** Pragmatic, resourceful, and loyal to those he helps. Has deep knowledge of the Afrotta terrain.
+    *   **Arc:** Provides initial intel and later helps Chara escape after the village battle.
+
+6.  **ZARA**
+    *   **Role:** Leader of the Desert Hawks, a rebel group in Afrotta.
+    *   **Appearance:** Lean, scarred, fierce, commanding, with eyes that have seen too much war.
+    *   **Personality:** Strong, independent, deeply committed to her people and land. Initially skeptical but swayed by evidence and shared purpose.
+    *   **Arc:** Forms an uneasy alliance with Chara and ANON, providing crucial support and resources in the fight against the conspiracy.
+
+7.  **DIRECTOR THORNE**
+    *   **Role:** High-ranking CIA official, the primary antagonist.
+    *   **Appearance:** Impeccably dressed, silver hair, sharp, intelligent eyes.
+    *   **Personality:** Calm, measured, arrogant, and utterly ruthless. Believes in control and order through power, justifying his actions as for a "greater good."
+    *   **Arc:** The mastermind behind Project Little Endians and the conspiracy. Represents the corrupting influence of power within the system. His defeat signifies the triumph of truth and justice.

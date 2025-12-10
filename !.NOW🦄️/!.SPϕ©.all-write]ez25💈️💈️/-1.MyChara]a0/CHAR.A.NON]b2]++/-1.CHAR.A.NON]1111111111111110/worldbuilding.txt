@@ -1,0 +1,25 @@
+## Worldbuilding
+
+### Settings:
+*   **CIA Briefing Room:** Dimly lit, tense, functional. The starting point of Chara's mission.
+*   **Chara's Apartment/Secure Hacking Lair:** A personal space transformed into a high-tech command center, filled with multiple monitors, lines of code, and empty coffee cups. Represents Chara's dedication and the solitary nature of her work.
+*   **Darknet (DarkWebXchange):** A shadowy, illicit digital marketplace. A dangerous virtual environment where cybercriminals operate, filled with encrypted messages and suspicious threads. Visually represented as a chaotic, ever-scrolling stream of code.
+*   **Virtual Cityscape/Meeting Room:** A futuristic, holographic simulation used for clandestine meetings. Represents the advanced digital world where hackers operate, capable of glitching and distorting.
+*   **OmniTech Headquarters:** A high-security corporate building, representing corporate power and technological advancement. Infiltrated by Anonymous.
+*   **NovaSpire Headquarters:** Another high-security corporate building, rival to OmniTech but secretly collaborating. Infiltrated by Chara.
+*   **Battlefield (Climax):** A chaotic, dynamic environment where physical and digital warfare merge. Explosions, flickering code, and digital projections. Represents the ultimate confrontation.
+
+### Items/Technology:
+*   **Holographic Displays:** Advanced display technology used for data visualization and virtual environments.
+*   **Comms Link:** Secure communication devices used by Chara and Anonymous for real-time coordination.
+*   **Malware/Viruses:** Digital weapons used to disrupt and cripple corporate systems.
+*   **Fake IDs/Clearances:** Tools used for physical infiltration, created through 'ghosting' abilities.
+*   **AI-powered Sentinels/Digital Shields:** Defensive and offensive digital constructs used in the final battle.
+*   **Erebus:** A powerful, sentient AI system, the ultimate goal of OmniTech and NovaSpire, and the central threat.
+
+### Concepts:
+*   **Ghosting:** A highly advanced hacking technique involving complete digital anonymity and untraceable infiltration.
+*   **Paranormal Research:** The corporations' secret involvement in studying and experimenting with supernatural entities and otherworldly phenomena.
+*   **Digital Fingerprint:** The unique, identifiable coding style or signature of a hacker.
+*   **Cat-and-Mouse Game:** The initial dynamic between Chara and Anonymous, characterized by pursuit, evasion, and intellectual sparring.
+*   **Technological Magic:** The advanced hacking and digital warfare techniques employed by Chara and Anonymous, appearing almost supernatural in their effectiveness.

@@ -1,0 +1,10 @@
+
+read @\#.book_template.scp/gemini_ch_books.txt   
+use the  screenplay_outline.txt(sol pen screenplay.txt) in this dir to write #.book_template.scp/book_outline.txt  (16 chapters)
+then use the scenes in 0.scenes]ALL+named/ dir to help u write each chapter (books are basically a book form of the screenplay so it should be ez)
+
+
+1-5-0
+6-11-12
+
+chapter/ names can reflect truncated chapter name with number..

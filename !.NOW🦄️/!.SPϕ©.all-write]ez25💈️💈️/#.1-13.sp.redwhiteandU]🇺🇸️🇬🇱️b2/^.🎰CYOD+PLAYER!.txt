@@ -1,0 +1,11 @@
+💳️
+make these even more gamelike. have hp. items (like zelda) trade? 
+repeat pages like hubs/stores/ pokecenters...
+
+and have ai do them and see what hooks (analystics) etc...
+🎰
+(chtm) 
+i want a cli app that shows u the pages, and turns them for u based on cli input
+and can even keep score, do multiplayer, etc 
+🎰
+

@@ -1,0 +1,15 @@
+Page 195: Assaulting the Forward Observation Post
+
+As you assault the Forward Observation Post monitoring the retreat path, your weapons strike at the location where the transport's attempted escape is tracked. This position provides the ambushers with crucial information about the convoy's movements and intentions, making its destruction vital for the transport's escape.
+
+Three assault outcomes emerge: Surveillance Network Disruption, where destroying the post cuts off the ambushers' real-time intelligence about the transport's escape attempts; Alternative Monitoring Activation, revealing how the observation post is part of a distributed network with backup observation capabilities; and Escape Route Exposure, demonstrating how the post's sensors were mapping the transport's potential escape routes.
+
+As the forward observation post is assaulted, you observe the sophisticated surveillance systems monitoring the retreat path - quantum sensors, bio-neural detection systems, and predictive analysis algorithms that anticipate the transport's movements.
+
+Your post assault reveals the comprehensive nature of the ambushers' intelligence network, while also showing how the retreat monitoring is integrated with other tactical systems throughout the tunnel complex.
+
+The observation post assault provides tactical advantage by cutting off intelligence about escape routes, but also triggers backup surveillance systems and may alert other monitoring positions to the transport's actual escape attempts.
+
+*If you disrupt Surveillance Networks, turn to Page 585.*
+*If you observe Alternative Monitoring, turn to Page 586.*
+*If you manage Escape Route Exposure, turn to Page 587.*

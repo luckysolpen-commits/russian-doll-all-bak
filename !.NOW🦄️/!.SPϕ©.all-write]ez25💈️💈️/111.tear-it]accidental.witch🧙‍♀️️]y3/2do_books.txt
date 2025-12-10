@@ -1,0 +1,16 @@
+
+book files go in :  @\book_template.scp/
+use the  /book_outline.txt  (13 chapter)
+and scenes/loresheets in this dir to help u write each chapter (books are basically a book form of the screenplay so it should be ez)
+
+{ special tip/rule/guide : there should always be "EMOTIONALLY RELEVANT ACTION TAKING PLACE"}
+
+
+write wordcount of each chapter and final book to ./book_wc.txt pls
+
+if u really wanna go crazy try weaving multiple interesting micro threads thruought to keep readers deeply engaged 
+
+1-5-0
+6-11-12
+
+

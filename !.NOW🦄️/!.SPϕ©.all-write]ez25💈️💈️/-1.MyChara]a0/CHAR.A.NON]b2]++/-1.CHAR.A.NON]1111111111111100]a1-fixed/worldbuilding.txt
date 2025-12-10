@@ -1,0 +1,43 @@
+--- WORLD-BUILDING ---
+
+**1. Settings:**
+
+*   **Mothra Base:** An isolated oil strut in the middle of the ocean, serving as a clandestine CIA outpost. It's a hub for covert operations, characterized by its industrial, metallic structure, helipads, and a sense of being disconnected from the mainland. It represents the starting and ending point of Chara's journey, a symbol of the agency's reach and its hidden operations.
+
+*   **Afrotta:** A vast, remote desert region in Africa. It's characterized by:
+    *   **Treacherous Terrain:** Arid, sun-baked landscapes, rocky outcrops, dry riverbeds, and narrow canyons (like the "Serpent's Tooth"). This terrain is both a challenge and a strategic advantage for those who know it.
+    *   **Isolated Villages:** Small, mud-brick settlements, often struggling for resources, where local populations are vulnerable to external forces.
+    *   **Hidden Rebel Bases:** Natural cave systems and rock formations used by groups like the Desert Hawks for their operations, blending into the environment.
+    *   **Harsh Climate:** Intense heat during the day, cool nights, dust storms, and limited water sources, adding to the difficulty of survival and operations.
+
+*   **CIA Headquarters:** A sprawling, sterile, and bureaucratic complex. It represents the institutional side of intelligence, with its briefing rooms, offices, and secure archives. It's a place of order and control, but also where conspiracies can fester beneath the surface.
+
+*   **Clandestine Meeting Locations:** Forgotten warehouses, abandoned industrial sites, or other nondescript urban locations. These are places of shadows and secrets, where illicit meetings and revelations occur, often reflecting the moral ambiguity of the characters' actions.
+
+*   **Conspiracy Headquarters:** A sleek, ultra-modern, and seemingly legitimate facility. It's designed to appear as a corporate office or research lab, masking its true purpose as the operational center for Project Little Endians. Its pristine, sterile environment contrasts sharply with the brutal realities of its objectives.
+
+**2. Organizations/Factions:**
+
+*   **CIA (Central Intelligence Agency):** The primary intelligence agency, ostensibly working for national security. However, it's shown to be infiltrated by a shadowy faction (led by Director Thorne) pursuing its own agenda.
+
+*   **Mercenary Groups:** Various private military contractors operating in Afrotta. They are well-armed, ruthless, and serve as the enforcers for the conspirators, willing to do dirty work for profit.
+
+*   **The Desert Hawks:** A rebel group indigenous to Afrotta, fighting against government corruption and external exploitation of their land and resources. They are fierce, resourceful, and deeply connected to their territory. They represent a force of local resistance and integrity.
+
+*   **The Conspirators (Project Little Endians):** A shadowy, high-level organization operating within and outside the CIA, led by Director Thorne. Their goal is to control global power and resources through a revolutionary energy device, aiming for a new world order built on their terms. They are ruthless, manipulative, and prioritize power and control above all else.
+
+**3. Key Items/Concepts:**
+
+*   **Project Little Endians:** The central MacGuffin of the story. It's initially presented as a classified asset, but is revealed to be a highly advanced, experimental energy device with the potential for both unlimited power generation and devastating weaponization. It symbolizes the ultimate power that the conspirators seek to control.
+
+*   **The Data Chip:** A small, unmarked data chip hidden by Klondike. It contains his final message, his true debriefing, and crucial information about Project Little Endians, including the involvement of Chara's parents. It serves as a key plot device for revealing the deeper conspiracy and Chara's personal connection.
+
+*   **Subsistence-Level Stealth:** A mission parameter emphasizing minimal support and maximum self-reliance. It highlights the dangerous and isolated nature of Chara's initial mission, and later, her independent pursuit of the truth.
+
+*   **The "Asset":** A constantly shifting concept. Initially, it's a vague, classified package. Then, it's revealed to be ANON, the informant. Finally, it's understood to be Agent Klondike himself (or rather, the truth he carried), and ultimately, the Project Little Endians device. This evolving definition underscores the layers of deception and the true stakes of the mission.
+
+*   **The Serpent's Tooth:** A narrow, winding canyon in Afrotta, serving as a strategic choke point and a place for desperate evasion. It's a natural landmark that plays a role in the chase sequences.
+
+*   **Holographic Displays/Projections:** Advanced technology used for briefings, displaying schematics, and playing back recorded messages (like Klondike's final message). It adds a futuristic element to the world.
+
+*   **CIA Mission: Negative One. Negative Four] LITTLE ENDIANS <>:** The cryptic designation for Chara's initial mission, hinting at the deeper, hidden agenda of Project Little Endians from the very beginning.

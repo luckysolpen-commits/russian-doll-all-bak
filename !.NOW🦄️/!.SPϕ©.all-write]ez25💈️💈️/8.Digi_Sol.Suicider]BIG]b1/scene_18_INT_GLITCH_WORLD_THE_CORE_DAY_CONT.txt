@@ -1,0 +1,78 @@
+INT. GLITCH WORLD - THE CORE - DAY (CONT.)
+
+The Core pulses with an angry, blinding green light, its roar deafening. The remaining Soul Guardians, fueled by the Core's desperate power, surge towards Lucky and Anya, their forms flickering with renewed ferocity. Anya cradles the unconscious Elara, her energy pistol spitting desperate, ineffective blasts.
+
+LUCKY
+(Shouting over the din, his voice raw)
+Elara said there were four sub-routines! We only hit two! There must be two more!
+
+He glances at the central crystal, then at the remaining two glowing nodes. One pulses with a chaotic, red light, the other with a cold, blue one. He remembers Elara's earlier words: "Each one controls a different aspect of the Soul Suicider!"
+
+LUCKY
+(To himself, a desperate plan forming)
+If disrupting them weakens the Core... then hitting all of them might expose it!
+
+He dodges a sweeping attack from a Soul Guardian, the data-infused claw narrowly missing his head. He needs to buy time, to create an opening. He remembers Kael's system corruption glitch.
+
+LUCKY (V.O.)
+/glitch_attack system_overload (Target: Soul_Guardian_03)
+
+The Soul Guardian he targeted shudders violently, its movements becoming jerky and uncontrolled. Its optical sensors flash red, then blue, then green, cycling rapidly. It stumbles, momentarily out of the fight.
+
+Lucky sprints towards the red-pulsing node, the third sub-routine. Two more Soul Guardians intercept him. He uses his Blade-Shield, not to attack, but to create a defensive perimeter, deflecting their blows, pushing them back.
+
+LUCKY (V.O.)
+/ability DefensiveStance (Duration: 5_seconds)
+
+His Blade-Shield glows with a powerful, golden aura, deflecting all incoming attacks for a brief period. It's a desperate gamble, draining his stamina, but it buys him the crucial seconds he needs.
+
+He reaches the red node. It pulses with an almost feverish intensity, radiating a sense of raw, uncontrolled emotion. He remembers the man in the library, the one whose mind was breaking under the strain of the Glitch World. This node must control the emotional suppression protocols, the ones that keep prisoners compliant.
+
+LUCKY
+(Gritting his teeth, extending his hand towards the node)
+Time to feel something, you monsters!
+
+He focuses his own glitch power, pushing all his will into disrupting the node. He imagines the raw, unfiltered emotions of every prisoner, every victim of the Digital Soul Suicider, flooding back into the system.
+
+LUCKY (V.O.)
+/glitch_overload emotional_suppression_node (Energy_Cost: Critical)
+
+The red node flares violently, then implodes with a silent, internal SCREAM. The Core's roar falters, replaced by a cacophony of distorted, fragmented human voices – whispers, cries, laughter, screams – all overlapping, all filled with raw, unbridled emotion. The holographic projections of tormented faces around the central crystal flicker, and for a moment, they are clear, filled with agony, then rage, then a desperate, fleeting hope, before they distort again.
+
+Lucky stumbles back, his own mind reeling from the psychic backlash. He feels a wave of overwhelming despair, then a surge of furious anger, then a profound sadness. The emotions of countless victims wash over him, a torrent of suppressed feelings.
+
+His HP bar (visible in his HUD) flashes red, indicating a significant drain. He's pushed himself to the limit.
+
+ANYA
+(Shouting, her voice strained, still protecting Elara)
+Lucky! You're draining yourself! There's one more!
+
+Lucky looks at the last node, pulsing with a cold, blue light. This must be the logic and memory node, the one that maintains the illusion of reality, the one that overwrites identities. He needs to hit it, but he's almost out of energy.
+
+Suddenly, a faint, almost imperceptible WHIRRING sound. From the darkness of the chamber, a small, sleek drone, unlike the Metal Mafia's, darts forward. It's Kael's frequency scrambler, now repurposed. It hovers over Lucky, and a faint, blue energy pulses from it, flowing into him.
+
+KAEL (V.O. - DISTORTED, FROM THE SCRAMBLER)
+Lucky... I'm here... a little... help... from the outside... hit the last one... break the illusion...
+
+It's Kael! He's found a way to project his consciousness, to send a burst of energy, a lifeline, from wherever he is. The energy from the scrambler flows into Lucky, replenishing his MP, stabilizing his system.
+
+LUCKY
+(A surge of renewed determination)
+Thanks, Kael!
+
+He charges towards the last blue node, the Soul Guardians, now even more erratic and glitched, trying to intercept him. He uses his Blade-Shield to bash them aside, his movements fueled by Kael's unexpected aid.
+
+He reaches the final node. He extends his hand, focusing all his remaining will, all the raw emotion he just absorbed, into a final, desperate attack.
+
+LUCKY (V.O.)
+/glitch_shatter reality_protocol_node (Energy_Cost: MAX)
+
+The blue node shatters with a deafening CRACK, dissolving into a shower of pure, white light. The Core's roar dies. The green light that permeated the chamber flickers, then dies, plunging the vast space into near darkness. The holographic projections of tormented faces vanish. The floor beneath them stabilizes, the swirling patterns freezing into a single, coherent image.
+
+The central crystal, the heart of the Digital Soul Suicider, is now dark, inert. It still stands, but its power is gone. The Core is silent.
+
+Lucky stands panting, his body trembling with exhaustion, but a profound sense of triumph washes over him. He looks at the inert Core, then at Anya, who is now looking at him with a mixture of awe and relief. Elara stirs in her arms, a faint, healthy glow returning to her face.
+
+But the silence is short-lived. From the darkness, a new sound emerges. Not the metallic clang of robots, but a faint, almost imperceptible WHISPER. Then another. And another. Hundreds, thousands of whispers, growing louder, coalescing into a collective murmur. The voices of those who are waking up. The voices of those who are remembering.
+
+FADE OUT.

@@ -1,0 +1,73 @@
+INT. GLITCH WORLD - THE CORE - DAY (CONT.)
+
+The roar of the Core fills the chamber, a malevolent symphony of digital processing. The Soul Guardians, sleek and deadly, close in, their forms flickering with corrupted data. Lucky, Anya, and Elara stand their ground, facing overwhelming odds.
+
+LUCKY
+(To Elara, shouting over the roar)
+Which one first?! How do we disrupt them?!
+
+ELARA
+(Pointing to the closest node, her voice strained)
+That one! It controls the illusionary protocols! If we can overload it, we can destabilize their perception! I can manifest a direct data stream, but I'll need cover!
+
+ANYA
+(Nodding, her energy pistol already spitting blue bolts at an approaching Guardian)
+Lucky, keep them off her! I'll provide suppressing fire!
+
+Lucky charges, his Blade-Shield raised. He intercepts the first Soul Guardian, deflecting its data-infused claw. The impact sends a jarring shockwave through him, and he feels a momentary drain on his own energy. He knows he can't defeat them head-on, but he can buy time.
+
+LUCKY (V.O.)
+/ability Parry (Target: Soul_Guardian_01)
+
+He parries a rapid series of strikes, his Blade-Shield humming with defensive energy. The Guardian's attacks become slightly less precise, its form flickering more violently as Lucky's parries disrupt its internal rhythm.
+
+Meanwhile, Elara, with Anya providing covering fire, extends her hands towards the first sub-routine node. Her body glows with an intense, white light, and a torrent of pure, uncorrupted data streams from her fingertips, impacting the node. The node, which was pulsing with a sickly green, begins to flicker with a chaotic mix of white and green.
+
+ELARA (V.O.)
+/manifest data_overload (Target: Illusionary_Protocol_Node) (Energy_Cost: High)
+
+The Soul Guardians react. Their movements become more erratic, their forms distorting wildly. One Guardian, mid-lunge, suddenly appears as a giant, pixelated rabbit, then snaps back to its menacing form, momentarily disoriented. The illusionary protocols are indeed destabilizing.
+
+ANYA
+(Grinning, firing a precise shot that makes a Guardian stumble)
+It's working! They're losing their grip!
+
+But the Core itself reacts. From the central crystal, new tendrils of green light lash out, solidifying into more Soul Guardians. The roar intensifies, and the floor beneath them ripples violently, making it difficult to maintain their footing.
+
+LUCKY
+(Fighting off two Guardians, his breath coming in ragged gasps)
+There are too many! We need to hit another one!
+
+Elara, though visibly drained, pushes herself. She points to the next node.
+
+ELARA
+(Weakly)
+That one... the memory suppression protocols! If we can disrupt it... others might remember!
+
+Lucky, seeing an opening, uses his own glitch power. He focuses on the ground beneath the approaching Guardians, imagining it becoming unstable, like a faulty texture map.
+
+LUCKY (V.O.)
+/glitch_effect terrain_instability (Area: Guardian_Approach_Path)
+
+The floor beneath the Guardians ripples and distorts, causing them to stumble and lose their footing. It's not a physical trap, but a visual and sensory one, disrupting their programmed movements.
+
+As the Guardians struggle, Elara, with Anya's continued support, directs her energy towards the second node. The white data stream from her hands impacts the node, and it too begins to flicker violently, its green light battling against the pure white.
+
+ELARA (V.O.)
+/manifest data_overload (Target: Memory_Suppression_Node) (Energy_Cost: Very_High)
+
+This time, the effect is more profound. The holographic projections of tormented faces around the central crystal flicker, and for a brief moment, some of them clear, revealing expressions of dawning horror, of recognition, before they distort again. A faint, collective WHISPER, like a thousand forgotten voices, echoes through the chamber.
+
+But the cost is immense. Elara cries out, her body convulsing. The glowing butterfly orb around her shrinks, flickering precariously. She collapses, unconscious, into Anya's arms.
+
+ANYA
+(Desperate)
+Elara! She's pushed too hard! We need to get her out of here!
+
+LUCKY
+(Fighting off a renewed assault from the Guardians, who are now moving with renewed, desperate ferocity)
+We can't! Not yet! We have to finish this! We have to hit the Core!
+
+The Core pulses with an angry, blinding green light. The remaining Soul Guardians, now fewer in number but more aggressive, converge on Lucky and Anya. The roar of the Core reaches a crescendo, and the entire chamber begins to shake violently. The Digital Soul Suicider is fighting back, unleashing its full power.
+
+FADE OUT.

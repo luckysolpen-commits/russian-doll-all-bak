@@ -1,0 +1,40 @@
+# Character Sheet
+
+## Anglers
+*   **Commander Jax:** Seasoned leader of the Anglers.
+*   **Lieutenant Kael:** Skilled strategist among the Anglers.
+*   **Ensign Zara:** Ambitious communicator among the Anglers.
+*   **Private Jack:** Mechanic/fighter among the Anglers.
+*   **Dr. Luna:** Brilliant scientist among the Anglers.
+*   **Chief Hana:** Security leader among the Anglers.
+*   **Agent Kato:** Spy among the Anglers.
+
+## Unlit Tribe and Allies
+*   **Jureth:** A young Angler who starts having visions of the "unlit void." Later becomes an aged sage and author of "The Book of Jureth: The Unlit Path." Son of Zorath and Mirah, brother of Tamin.
+*   **Gadreth:** A wanderer who joins the Unlit Tribe, marked by the Shimmering Hosts. Son of Vosh, of the lineage of Pelithar.
+*   **Lirith:** A weaver of winds from the glass sphere of storms. Daughter of Barak, of the house of Ysmera. Mother of Naeth.
+*   **Naeth:** Lirith's daughter, who sings to calm storms and forges spears.
+*   **Zorath:** Keeper of lanterns in Ironfrost, father of Jureth and Tamin, husband of Mirah. Joins the Unlit Tribe.
+*   **Mirah:** Wife of Zorath, mother of Jureth and Tamin. Joins the Unlit Tribe.
+*   **Eshar:** A scout who joins the Unlit Tribe.
+*   **Azel:** Son of Maris, a child of both Nivean and Noahite worlds, destined to lead and bridge the divide.
+*   **Selene:** Wife of Azel, of the snowmen folk.
+
+## Angler Empire and Adversaries
+*   **Vorith:** A rising, ambitious officer in the Angler Empire, later a high-ranking official and author of "The Art of Subtle Dominion." Descendant of Tamin.
+*   **Tamin:** Jureth's brother, who aligns with the Empire and wounds Jureth. Son of Zorath and Mirah.
+*   **Keshar:** A keeper in gray from the lattice.
+*   **Neptara:** Warlord of the Noahites, lord of the tides. Father of Tidal.
+*   **Tidal:** Son of Neptara, who falls in love with Sirah.
+*   **Frostel:** A Nivean of the house of Phinio, who betrays Sirah out of jealousy. Father of Eryndor.
+*   **Eryndor:** Son of Frostel and Liora, who falls in love with Maris.
+*   **Nereis:** Daughter of Tidal by another wife, half-sister of Maris.
+
+## Other Notable Characters
+*   **Phinio:** Prophet of the Niveans, who spent 100 years inside the belly of a giant angler whale god.
+*   **Sirah:** Daughter of Phinio, who falls in love with Tidal. Mother of Maris.
+*   **Maris:** Daughter of Sirah and Tidal, whose mixed heritage makes her a bridge between Niveans and Noahites. Mother of Azel.
+*   **Nihilator:** A nihilistic figure from the Hydroverse, author of "The Book of Nothing."
+*   **Orim:** Lirith's husband, who perished when the shadow breached the glass sphere. His shards retain power.
+*   **Yara:** A yarn-weaver who secretly raises Maris.
+*   **Liora:** Wife of Frostel, mother of Eryndor.

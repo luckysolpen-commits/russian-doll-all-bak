@@ -1,0 +1,38 @@
+MAP OF THE HYDROVERSE
+
+This map provides a guide to the key locations, factions, and cosmic phenomena within the Hydroverse, the setting for our story.
+
+--- KEY LOCATIONS ---
+
+*   **Neutrino Prime:** A vibrant, bioluminescent aquatic world. First planet encountered by the original Anglers, afflicted by the 'Darkness.'
+*   **Xerxes:** A technologically advanced but chaotic world, home to brilliant but volatile inventors. Plagued by the 'Madness,' a psychic amplifier machine.
+*   **Aether:** A gas giant inhabited by non-corporeal, empathic beings. Corrupted by manipulative 'Dreams' orchestrated by a psychic entity.
+*   **Nexus:** A galactic trading hub, its species obsessed with power. Succumbed to an overwhelming 'Power' that transformed them into a hive mind.
+*   **Apex:** A utopian world of avian humanoids, seemingly perfect. Afflicted by a weaponized 'Hope' that induced blissful, unthinking contentment.
+*   **Archon:** A rugged, frontier planet of resilient miners. Re-encountered the 'Darkness,' which had evolved into a more potent, personal storm of fear.
+*   **Pyra:** A world of sentient, crystalline beings. Corrupted by a subtle, seductive 'Control' that promised perfect, sterile order.
+*   **Chronos:** A planet where time is a commodity. Suffered from a 'Temporal Anomaly' due to manipulation of time flow.
+*   **Echo:** A world where memories are currency. Plagued by a 'Mnemonic Anomaly' where past, present, and future memories bleed together.
+*   **Kith:** A desolate, windswept world, a major hub for the Sol Pen’s smuggling operations. Became a battleground for internal Sol Pen civil war.
+*   **Celestia:** A world of ancient, wise, and powerful crystalline beings. Faced a terrifying amalgamation of all previous Sol Pen corruptions.
+
+--- MAJOR FACTIONS ---
+
+*   **The Anglers (Original Seven):** Commander Jax, Lieutenant Kael, Ensign Zara, Private Jack, Dr. Luna, Chief Hana, and Agent Kato. A specialized unit of the XVS, conscripted for critical multiversal missions. Later became leaders of the Unlit Tribe.
+*   **The XVS (Multiversal Government):** The primary police force and governing body of the Hydroverse. Initially rigid and dogmatic, it was later dissolved and reformed by the Unlit Tribe's influence.
+*   **The Sol Pen:** A shadowy, ancient organization operating from the 'Unlit Void.' Architects of the various 'corruptions' (Darkness, Madness, Dreams, Power, Hope, Control, Mnemonic Anomaly, Temporal Anomaly) across the Hydroverse. Masters of psychological warfare and manipulation.
+*   **The Unlit Tribe:** A philosophical movement and loose confederation of worlds and individuals. Founded by Jureth and the original Anglers, embracing balance, acceptance, and chaotic freedom. Opposed to rigid order and single truths.
+*   **Vorith's Faction:** Led by Vorith, a pragmatic XVS officer who sought to restore rigid order and control after the XVS's fall. Advocated 'The Art of Subtle Dominion,' a philosophy of insidious manipulation.
+*   **The New Anglers (Straylight Crew):** A new generation of diverse individuals (Elara, Theron, Lyra, Jaxon, Dr. Aris, Rian, Finn) who pilot the 'Straylight.' They continue the work of the original Anglers, actively shaping the future of the galaxy and fighting the lingering shadows of the old order and the Sol Pen.
+
+--- COSMIC PHENOMENA / CORRUPTIONS ---
+
+*   **The Darkness:** A malevolent entity or pervasive corruption that drains life force and induces fear. Encountered on Neutrino Prime and Archon.
+*   **The Madness:** A psychic plague that amplifies creativity and ambition into self-destructive frenzy. Manifested on Xerxes.
+*   **The Dreams:** Manipulative, hyper-realistic psychic broadcasts that trap beings in bespoke paradises or nightmares. Encountered on Aether.
+*   **The Power:** An overwhelming, corrupting force that transforms individuals into a collective hive mind obsessed with dominance. Manifested on Nexus.
+*   **The Hope:** A weaponized form of optimism that induces blissful, unthinking contentment, eroding individuality. Encountered on Apex.
+*   **The Control:** A subtle, seductive power that promises perfect, sterile order by manipulating reality and bending physics. Encountered on Pyra.
+*   **The Unlit Void:** A concept and a place; a vast, silent ocean of perfect, peaceful black. The source of the Sol Pen and the philosophical foundation of Jureth's 'Unlit Path.'
+*   **Mnemonic Anomaly:** A chaotic state where memories are bought, sold, and manipulated, leading to a bleeding of past, present, and future. Encountered on Echo.
+*   **Temporal Anomaly:** A chaotic state where the flow of time is manipulated, leading to unpredictable shifts and unraveling of reality. Encountered on Chronos.

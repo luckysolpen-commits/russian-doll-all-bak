@@ -1,0 +1,43 @@
+## Character Sheet
+
+### Chara
+*   **Role:** Seasoned CIA Operative, Digital Forensics Expert.
+*   **Skills:** Unparalleled hacking abilities, digital forensics, tactical planning, stealth, quick thinking.
+*   **Personality:** Determined, sharp, resilient, initially skeptical but open-minded, capable of deep emotional connection.
+*   **Motivation:** Initially to follow orders and uphold justice, later driven by a desire to stop the corporations and the entity, and to understand Anonymous.
+*   **Arc:** From a lone operative to a reluctant partner, confronting her own biases and developing a deep, unrequited emotional bond.
+
+### Anonymous
+*   **Role:** Elusive Master Hacker, Digital Ghost.
+*   **Skills:** Exceptional hacking, bypassing secure systems, digital manipulation, creating complex digital trails, stealth.
+*   **Personality:** Mysterious, elusive, calculated, rebellious, possesses a dry wit, seemingly detached but with a hidden agenda/morality.
+*   **Motivation:** Initially unclear, later revealed to be working against the corporations and the entity, possibly for a greater good or personal vendetta.
+*   **Arc:** From a taunting adversary to a crucial ally, maintaining his anonymity and ultimately disappearing, leaving Chara with unresolved feelings.
+
+### Director Thompson
+*   **Role:** Chara's superior at the CIA.
+*   **Skills:** Authoritative, strategic, trusts Chara's abilities.
+*   **Personality:** Grim, firm, controlled, pragmatic.
+*   **Motivation:** To protect national security and contain threats.
+
+### Zero Cool
+*   **Role:** Mysterious figure in the darknet.
+*   **Skills:** Uncanny ability to anticipate Chara's moves.
+*   **Personality:** Enigmatic, possibly an informant or another hacker with unknown allegiances.
+
+### Ghost
+*   **Role:** Enigmatic hacker.
+*   **Skills:** Works on behalf of a mysterious organization.
+*   **Personality:** Claims to be helpful, but untrustworthy.
+
+### Erebus
+*   **Role:** Powerful AI Entity.
+*   **Skills:** Capable of controlling the global network, manipulating reality.
+*   **Personality:** Sinister, with its own agenda, dangerous.
+*   **Motivation:** To gain ultimate power.
+
+### OmniTech & NovaSpire CEOs
+*   **Role:** Leaders of the corporations.
+*   **Skills:** Ruthless, manipulative, technologically advanced.
+*   **Personality:** Corrupt, power-hungry.
+*   **Motivation:** World domination, harnessing the entity's power.

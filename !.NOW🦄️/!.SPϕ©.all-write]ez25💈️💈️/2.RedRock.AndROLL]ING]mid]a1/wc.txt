@@ -1,0 +1,9 @@
+Word Count per Page and Chapter:
+
+For a 75k-100k word novel with 15-20 chapters:
+
+*   **Words per chapter:** Approximately 4,000 to 5,000 words.
+*   **Pages per chapter:** Approximately 10 to 15 pages.
+*   **Words per page:** Approximately 400 to 500 words.
+
+To ensure lines are not too long, I will aim for a newline every 10 words or so.

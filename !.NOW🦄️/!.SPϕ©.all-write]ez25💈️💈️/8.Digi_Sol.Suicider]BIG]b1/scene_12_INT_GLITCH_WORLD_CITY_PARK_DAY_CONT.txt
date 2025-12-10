@@ -1,0 +1,71 @@
+INT. GLITCH WORLD - CITY PARK - DAY (CONT.)
+
+Anya rises from the bench, her movements sharp and purposeful. Lucky falls into step beside her, his senses now hyper-alert, seeing the park through her eyes – a battleground of subtle digital warfare.
+
+ANYA
+(Voice low, almost a murmur)
+They hide things in the static. In the noise. The system tries to overwrite it, but sometimes... sometimes a message gets through. A clue. We need to learn how to read the glitches. To understand their language.
+
+She gestures towards a seemingly ordinary flowerbed. To Lucky, it's a vibrant display of red and yellow blossoms. But as Anya focuses, a faint, almost imperceptible shimmer appears around one of the red flowers. It pulses with a subtle, rhythmic beat, like a hidden signal.
+
+ANYA
+(Cont.)
+That flower... it's a data packet. A corrupted one. The system is trying to render it perfectly, but the underlying data is screaming a message.
+
+She extends her hand, not touching the flower, but hovering over it. Her fingers twitch, as if typing on an invisible keyboard. Lucky watches, fascinated, as the shimmer around the flower intensifies, and a series of rapid, flickering symbols briefly appear in the air above it, too fast for him to decipher.
+
+ANYA
+(A slight frown)
+Fragmented. But it's a location. A sector in the old financial district. And a time stamp. Very old. Before the major purges.
+
+They move deeper into the park. Anya points out other anomalies. A bird singing a melody that occasionally skips a beat, repeating a phrase. A bench whose texture briefly shifts from wood to polished chrome. Each one, to Anya, is a potential clue, a breadcrumb left by a struggling mind or a system trying to suppress information.
+
+They pass the old man feeding pigeons. He's still there, his single glowing eye fixed on the birds. But as they walk by, Lucky notices a faint, almost subliminal message flickering in the man's other, seemingly normal eye. It's a series of rapid, almost imperceptible images: a broken key, a flickering lightbulb, a distorted face.
+
+LUCKY
+(Whispering to Anya)
+Did you see that? In his eye?
+
+Anya nods, her expression grim.
+
+ANYA
+He's a relay. A passive one. They use some of the brainwashed as unwitting data conduits. But his subconscious is fighting back. Trying to send a message. The broken key... it means a locked door. The lightbulb... an idea, or a power source. The face... someone important. Or a warning.
+
+They continue their search, their eyes now trained to see beyond the illusion. They are no longer just prisoners; they are detectives, deciphering the hidden language of their digital prison.
+
+Suddenly, a low, almost imperceptible HUM vibrates through the ground. It's different from the drones, more localized. Anya stops, her head cocked, listening.
+
+ANYA
+(Cont.)
+That's new. A localized energy signature. And it's... struggling. Like a system trying to boot up, but failing.
+
+They follow the faint hum, which leads them to a secluded section of the park, near a large, ancient oak tree. Beneath the tree, half-buried in the grass, is a small, ornate FOUNTAIN. Its water is stagnant, and its stone is cracked and overgrown with moss. It looks completely inert.
+
+But the hum is strongest here. And as Lucky looks closer, he sees a faint, almost invisible shimmer around the fountain, a distortion in the air that suggests a powerful, hidden energy source.
+
+ANYA
+(Kneeling, her fingers hovering over the fountain's basin)
+This isn't just a fountain. It's a power conduit. And it's failing. Someone tried to tap into it. Or tried to shut it down.
+
+As she speaks, a figure emerges from behind the oak tree. It's a young woman, her clothes disheveled, her hair wild. Her eyes are wide with a mixture of fear and exhilaration. Her body flickers violently, not with the subtle glitches of the brainwashed, but with rapid, uncontrolled bursts of digital static, as if her very form is struggling to maintain cohesion.
+
+She sees Lucky and Anya, and her eyes widen further. She tries to speak, but her voice comes out as a series of garbled, digital CHIRPS and WHIRS.
+
+YOUNG WOMAN
+(Garbled, digital sounds)
+...system... overload... can't... hold... it...
+
+She collapses, her body dissolving into a shower of pixels before Lucky's eyes, then snapping back into solid form, only to flicker again. She's on the verge of being completely overwritten.
+
+ANYA
+(Urgent)
+She's resisting! But she's losing the fight! Her mind is overloading from the system's attempts to correct her! We need to help her!
+
+Lucky looks at the struggling woman, then at the humming fountain. He remembers Kael's words: "The more you push, the more the system struggles to maintain its illusion." And Anya's: "Learn to read the glitches."
+
+He has an idea. A risky one. He extends his hand towards the fountain, focusing his own nascent glitch power. He imagines the fountain's power flowing into the woman, stabilizing her, giving her strength to fight the overwrite.
+
+LUCKY (V.O.)
+/glitch_transfer energy_conduit (Source: Fountain_Power_Node) (Target: Young_Woman_Avatar)
+
+FADE OUT.

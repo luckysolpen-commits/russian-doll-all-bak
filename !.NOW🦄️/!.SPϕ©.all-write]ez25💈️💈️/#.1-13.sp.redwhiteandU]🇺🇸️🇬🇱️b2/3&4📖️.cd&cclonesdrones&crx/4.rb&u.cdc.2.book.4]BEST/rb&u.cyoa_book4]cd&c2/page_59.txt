@@ -1,0 +1,12 @@
+Stealth alone is not enough. You need an edge.
+
+You crawl to the edge of the cave entrance and deploy your cyberfare kit. You aim a narrow-beam transmitter at the nearest drone and upload a simple command: a reboot sequence.
+
+The drone shudders to a halt, its lights flickering. The other drone, alerted to the anomaly, turns towards its frozen partner. It approaches, prodding the disabled drone with one of its sharp, metallic limbs.
+
+This is your chance. You have a much larger window now, but the second drone is on high alert. You sprint across the open space and into the mouth of the ice cave. You've made it in.
+
+The inside of the station is a maze of tunnels carved from the ice. You can hear the faint thrum of the broadcast equipment. Your mission is to find the drone command server and plant the virus. You have no map, and patrols could be anywhere.
+
+*   If you proceed with caution, trying to find the server without being detected, turn to page 85.
+*   If you decide to intentionally get captured, hoping to be taken to the command center, turn to page 86.

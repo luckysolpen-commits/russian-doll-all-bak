@@ -1,0 +1,53 @@
+# Beastiary of the Shatterveil World
+
+## Companion Creatures:
+
+*   **Inkling:** Small, shimmering creatures made of living ink. They are highly attuned to magical energies, especially those related to writing and creation. They can subtly shift their form and are often used by scribes or mages as familiar-like companions for sensing magical currents and absorbing residual magical backlash.
+
+*   **Shadow Sprite:** Bat-like creatures composed of condensed shadow. They are silent, agile, and can blend seamlessly into darkness, making them excellent scouts and spies. They are fiercely loyal to their chosen companion and communicate through tiny chitters and subtle shifts in their shadowy forms.
+
+*   **Mischief Gremlin:** Small, quick-footed, and highly intelligent creatures known for their playful, often chaotic, nature. They are attracted to shiny objects and can cause minor disturbances, but are fiercely loyal and surprisingly resourceful when their companion is in danger. They communicate through high-pitched chitters and expressive body language.
+
+*   **Arcane Golem (Miniature):** Small, floating constructs of pure, condensed magical energy. They are typically created by powerful mages as companions or assistants. They can project light, absorb minor magical attacks, and sometimes project small holographic images. Their light pulses in response to magical fluctuations.
+
+*   **Gryphound:** A sturdy, loyal canine-like creature with powerful feathered wings. They possess keen senses, making them excellent trackers and guardians. While intimidating in appearance, they are deeply affectionate with their chosen companions and communicate through barks, growls, and nudges.
+
+## Creatures of the Veil & Dungeons:
+
+*   **Shadow Construct:** Hulking, amorphous entities made of swirling darkness, often with glowing red eyes. They are manifestations of raw chaos from the thinning veil, capable of physical attacks and sometimes able to absorb light or energy. They are difficult to harm with conventional weapons.
+
+*   **Rock Elemental:** Crude, stony figures that animate from the earth itself. They are slow but incredibly durable, capable of powerful, crushing blows. They are often found in mines, caves, or areas with strong earth magic.
+
+*   **Glow Fungi:** Not strictly monsters, but bioluminescent fungi found in damp, dark places like mines. They emit a disorienting hum that can cause nausea and confusion in those sensitive to magic. Some varieties are highly toxic or have hallucinogenic properties.
+
+*   **Veil-Lord:** A towering, monstrous entity that emerges from major rifts in the veil. It is a powerful manifestation of the chaos and instability of the broken boundaries between worlds. Its form shifts and reforms, making it difficult to target, and it can manipulate shadows and raw magical energy.
+
+*   **Whisper Wraiths:** Ethereal, translucent figures that drift through ancient ruins and places touched by sorrow. They feed on emotions, particularly fear and despair, and can induce chilling whispers and illusions in their victims. They are vulnerable to light and strong emotions.
+
+*   **Gloom Stalkers:** Predatory creatures native to the Ashen Wastes. They are lean, fast, and blend seamlessly with the desolate landscape. They hunt by sensing heat and fear, and their bites can induce a temporary paralysis.
+
+*   **Cinder Scorpions:** Large, armored scorpions found in volcanic or ash-filled regions. Their sting delivers a burning venom that causes intense pain and disorientation. They are highly territorial.
+
+*   **Echo Bats:** Large, intelligent bats that inhabit deep caves and ruins. They use advanced echolocation to navigate and can emit sonic screeches that disorient and deafen. Some can mimic voices or sounds they've heard.
+
+*   **Moss Golems:** Slow-moving, plant-based constructs found in overgrown ruins or ancient forests. They are resilient and can regenerate if exposed to sunlight or water. They attack by ensnaring victims with thorny vines.
+
+*   **Spirit Hounds:** Spectral canines that guard ancient burial grounds or places of strong spiritual energy. They are invisible to the naked eye but can be sensed by those with magical abilities. Their howls can induce terror, and they can phase through solid objects.
+
+*   **Ironclad Beetles:** Massive, heavily armored beetles found in rocky terrain. Their carapaces are almost impenetrable, and they can roll into a ball to crush opponents. They are often harvested for their durable shells.
+
+*   **Fey Tricksters:** Mischievous, often malevolent, beings from the wilder parts of the Feywild that sometimes slip through thinning veil points. They delight in illusions, riddles, and leading travelers astray. They are not easily defeated by force, but can be outwitted.
+
+*   **Bog Lurkers:** Amphibious creatures that dwell in swamps and murky waters. They are masters of camouflage, ambushing prey with long, sticky tongues or powerful, crushing jaws. Their skin is often covered in toxic slime.
+
+*   **Stone Sentinels:** Ancient, magically animated statues that guard forgotten treasures or sacred sites. They are slow but incredibly powerful, capable of smashing through obstacles. They are often immune to conventional attacks and require specific magical weaknesses to be exploited.
+
+*   **Whisper Vines:** Not creatures, but sentient, carnivorous plants found in dense, magical forests. They lure prey with soft, alluring whispers before ensnaring them in thorny, constricting vines. Their sap has potent hallucinogenic properties.
+
+*   **Grave Ghouls:** Undead creatures that feast on the flesh of the recently deceased. They are fast, agile, and their claws carry a paralytic toxin. They are often found in old cemeteries or battlefields.
+
+*   **Storm Drakes (Juvenile):** Smaller, less powerful versions of full-grown drakes, but still formidable. They can manipulate localized weather patterns, summoning gusts of wind or small lightning strikes. Their scales are highly resistant to magic.
+
+*   **Dream Weavers (Spiders):** Large, intelligent spiders that spin webs capable of inducing vivid, often terrifying, dreams. They are highly territorial and use their webs to trap prey, then feed on their fear. Their silk is highly prized for its magical properties.
+
+*   **Crystal Golems:** Constructs made of living crystal, often found in geologically active areas or near powerful magical ley lines. They are highly resistant to physical damage and can project shards of crystal as projectiles. Their core often contains valuable magical minerals.

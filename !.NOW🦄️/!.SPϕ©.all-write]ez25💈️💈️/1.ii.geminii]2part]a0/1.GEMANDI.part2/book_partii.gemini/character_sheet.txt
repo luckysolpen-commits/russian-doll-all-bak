@@ -1,0 +1,35 @@
+**GEM&I: Martian Gambit - Character Sheet**
+
+---
+**PROTAGONISTS**
+---
+
+**LUCKY**
+*   **Description:** A man in his early 30s, resourceful and determined with a background in emergency services. He is the de facto leader of the trio, a pragmatist who carries the weight of their survival on his shoulders. His focus is always on the mission, often at the expense of his own well-being. He is the protector.
+*   **Skills:** Survival, combat (shotgun), mechanics, driving, tactical thinking.
+*   **Motivation:** To find a definitive end to the plague on Earth and create a safe world for his friends, who are the only family he has left.
+
+**ASTRA**
+*   **Description:** A woman in her early 30s, a fiercely intelligent scientist. She is the brains of the operation, capable of understanding and manipulating complex systems, from hacking launch sequences to deciphering alien biotech. She is analytical and reserved, but deeply loyal.
+*   **Skills:** Hacking, science (biology, engineering), data analysis, medicine.
+*   **Motivation:** To solve the puzzle of the apocalypse. She is driven by a need to understand how things work and a desire to use that knowledge to fix the broken world.
+
+**GEM**
+*   **Description:** A woman in her late 20s, a free-spirited artist with a wild streak, often visible in her bright pink hair. She is the heart and soul of the group, providing levity and optimism in the darkest of times. While she can seem naive, she possesses a strong moral compass and a surprising resilience.
+*   **Skills:** Scavenging, close-quarters combat (crowbar), morale-boosting, intuition, artistry.
+*   **Motivation:** To live, not just survive. She wants to reclaim not just the planet, but the joy and creativity that were lost.
+
+---
+**ANTAGONISTS**
+---
+
+**ELARA & LYRA (The Twins)**
+*   **Description:** Identical twin women in their 30s who run Olympus Port on behalf of the Black Queen Conglomerate. They are the daughters of the Architect. They are elegant, poised, and unnervingly charming, presenting a facade of benevolent corporate leadership. In reality, they are cold, ruthless, and ambitious, viewing humanity as a flawed project in need of their guidance.
+*   **Skills:** Manipulation, corporate strategy, advanced technology, psychological warfare.
+*   **Motivation:** To "perfect" humanity, using their father's creations and their own advanced technology to impose a new world order, free from the chaos and emotion they despise.
+
+**THE ARCHITECT (Deceased/Mentioned)**
+*   **Description:** The villain of the previous story. A mad scientist who unleashed the Carcazoid/Clown plague on Earth in a misguided attempt to force change. His legacy and technology continue to drive the plot.
+
+**CLOWN THIEVES & CARCAZOIDS**
+*   **Description:** The lingering threats on Earth. The Clowns are feral, insane human survivors who have embraced the madness. The Carcazoids are biomechanical monsters, now mostly dormant but still incredibly dangerous.

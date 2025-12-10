@@ -1,0 +1,26 @@
+read the synopsis, then use it to outline 13-17 chapters
+ and write a full 100k word (200 page) novel 
+
+
+read @screenplay_outline.txt , but we are writing the book         
+│   now. there are to be 15 chapters , make a                          
+│   chapter_outline.txt if u think its wise. then lets begin           
+│   writing each chapter. There's no fixed number of pages for a       
+│   chapter in a science fiction novel, but they generally range       │
+│   from 10 to 15 pages, or around 3,000 to 5,000 words.    
+
+
+10 pages for a 5000k word novels chapter, those are the            │
+│   requirements , (for each dir.) finish chapter_1 dir firs pls  
+
+_________________
+
+. there are at least 500 words per page in a   │
+│    chapter book, can u give me a wordcount for each page and full    │
+│    chapter in wc.txt ?    
+
+
+________
+pls dont make the page lines to long
+make a newline every 10 words or so pls
+______

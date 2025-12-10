@@ -1,0 +1,3 @@
+the scene file names are all numerical only , and generic.  
+  can we put the scene names in the .txt along with their  number?      
+refer to @screenplay_outline.txt   4 ez naming coventions

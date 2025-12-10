@@ -1,0 +1,15 @@
+Page 82: Infiltrating Through the Ventilation System
+
+"Team, change of plan," you transmit as you identify a ventilation route that should allow infiltration without triggering the main defensive systems. The ventilation system shows the same ornate crimson and gold styling as the rest of the outpost, but the airflow patterns suggest it connects to critical internal areas.
+
+Your sensors reveal three potential infiltration routes: The Thermal Ventilation Route, which uses temperature differentials to move air and may be connected to the outpost's heating systems; The Honor Current Pathways, where the airflow follows the same ceremonial patterns as the Monarchy's formal communication channels; and The Hidden Air Network, which appears to connect to areas not shown on standard architectural maps.
+
+As you navigate the ventilation system, you realize it's not just functional but part of the Monarchy's honor-based security architecture - the airflow patterns themselves follow formal protocols that determine which areas can be accessed and when. Your unauthorized presence disrupts these patterns.
+
+Your team's passage through the vents begins to trigger subtle security responses as the outpost's systems detect the disruption to its ceremonial air currents. The precision of the Monarchy's integration between architecture and security exceeds your previous assessments.
+
+The ventilation system appears to connect to the research areas where carcazod experimentation is conducted, possibly providing an undetected route to the most sensitive parts of the outpost.
+
+*If you follow the Thermal Ventilation Route, turn to Page 246.*
+*If you navigate the Honor Current Pathways, turn to Page 247.*
+*If you explore the Hidden Air Network, turn to Page 248.*

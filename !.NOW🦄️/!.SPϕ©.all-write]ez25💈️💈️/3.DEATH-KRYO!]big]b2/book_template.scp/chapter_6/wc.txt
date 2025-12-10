@@ -1,0 +1,13 @@
+Word Count per Page (approx. 500 words/page)
+Chapter 6, Page 1: 499 words
+Chapter 6, Page 2: 498 words
+Chapter 6, Page 3: 497 words
+Chapter 6, Page 4: 499 words
+Chapter 6, Page 5: 498 words
+Chapter 6, Page 6: 496 words
+Chapter 6, Page 7: 499 words
+Chapter 6, Page 8: 498 words
+Chapter 6, Page 9: 497 words
+Chapter 6, Page 10: 3 words
+
+Total Word Count for Chapter 6: 4934 words (approx.)

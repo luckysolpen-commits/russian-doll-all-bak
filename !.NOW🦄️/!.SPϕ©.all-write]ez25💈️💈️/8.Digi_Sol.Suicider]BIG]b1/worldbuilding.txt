@@ -1,0 +1,27 @@
+## Worldbuilding: The Glitch World (Book 8: Digital Soul Suicider)
+
+### The Glitch World (The Digital Prison)
+*   **Nature:** A false reality, a simulation created by the Metal Mafia to imprison and brainwash their worst enemies. It appears as a pristine, pre-devastation version of Earth, but is riddled with subtle and overt digital glitches.
+*   **Purpose:** To overwrite the minds and identities of prisoners, turning them into compliant drones or harvesting their consciousness to fuel Metal Mafia operations.
+*   **Inhabitants:**
+    *   **Brainwashed/Compliant:** Prisoners who have succumbed to the illusion, believing the Glitch World is real. They serve as unwitting enforcers or passive data conduits.
+    *   **Resistors/Awakened:** Prisoners whose minds are fighting the overwrite, manifesting "glitch powers" as a byproduct of their resistance. They are often disoriented and vulnerable.
+    *   **Corrupted Enforcers:** Brainwashed prisoners twisted into monstrous, glitched guardians.
+*   **Metal Mafia Presence:**
+    *   **Drones:** Silent, aerial surveillance units.
+    *   **Disguised Enforcers:** Metal Mafia agents or robots disguised as normal citizens, blending into the illusion.
+    *   **Combat Models/Enforcers:** Heavily armored robots designed for suppression and combat within the Glitch World.
+    *   **Soul Guardians:** Elite Metal Mafia enforcers, their bodies composed of pure, corrupted data, extensions of the Digital Soul Suicider.
+*   **Key Locations/Concepts:**
+    *   **Glitches:** Manifestations of the simulation's flaws and the prisoners' resistance. Can be visual (flickering, warping), auditory (distorted sounds), or behavioral (looping actions).
+    *   **Digital Soul Suicider:** The core program of the Glitch World, designed to fragment and overwrite consciousness. Located in the Core.
+    *   **Old Library:** A seemingly abandoned library where suppressed information and clues about the Glitch World's vulnerabilities are hidden.
+    *   **Industrial Zone:** A desolate area with more pronounced glitches, where the Metal Mafia actively processes and tortures resistant minds.
+    *   **Old Data Center:** A dormant, but active, processing unit within the industrial zone, serving as an engine for the Glitch World's control and brainwashing.
+    *   **The Core:** The central chamber of the Glitch World, containing the colossal, crystalline structure that is the primary control node and the heart of the Digital Soul Suicider.
+    *   **Sub-routines:** Four smaller nodes around the Core, each controlling a different aspect of the Soul Suicider (illusionary protocols, memory suppression protocols, emotional suppression protocols, reality protocols).
+    *   **Edge of Simulation:** The unstable buffer zone where the Glitch World's illusion struggles to maintain itself, revealing raw data and offering a potential escape route.
+
+### Metal Mafia
+*   **Nature:** A powerful, ruthless organization that rose to power by enslaving human minds and harvesting their consciousness to fuel their operations. They control the Glitch World and operate from a Mothership.
+*   **Methods:** Brainwashing, digital torture, advanced robotics, and ruthless suppression of resistance.

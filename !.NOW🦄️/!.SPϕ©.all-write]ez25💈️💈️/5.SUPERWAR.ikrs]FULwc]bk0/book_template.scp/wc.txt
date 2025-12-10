@@ -1,0 +1,5 @@
+Word Count Specifications:
+
+- Each chapter: 4,000 - 5,000 words
+- Each page: Approximately 500 words
+- Line breaks: Newline every ~10 words for readability.

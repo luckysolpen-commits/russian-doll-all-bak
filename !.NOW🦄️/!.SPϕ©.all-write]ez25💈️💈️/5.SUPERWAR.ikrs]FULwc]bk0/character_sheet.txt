@@ -1,0 +1,35 @@
+# Character Sheet: SUPERWAR.ICARUS
+
+## Lucky
+- **Role:** Protagonist, leader of the Earth Alliance team.
+- **Key Traits:** Determined, resourceful, intuitive, skilled pilot (especially with mechs), possesses a strong moral compass. He is driven by a desire to protect humanity and fight against oppression.
+- **Arc:** Initially a reluctant hero, he becomes a symbol of resistance against the Architect's tyranny. He is forced to adapt to new challenges, even taking a modified Mark of the Beast to survive.
+- **Associated Mech:** Dragon Bot Clone (piloted by him), Dragon Fury (sumo-style mech).
+
+## Gem
+- **Role:** Brilliant scientist, engineer, and strategist for the Earth Alliance team.
+- **Key Traits:** Highly intelligent, analytical, pragmatic, quick-thinking, and fiercely loyal. She is the technical backbone of the team.
+- **Arc:** Initially focused on scientific understanding, she is forced to apply her knowledge to survival and resistance. She becomes crucial in deciphering the Architect's technology.
+- **Associated Mech:** Starlight (Manned Riding Horse Robot, piloted by her).
+
+## Astra
+- **Role:** Agile combatant, pilot, and infiltrator for the Earth Alliance team. Later, an unwilling infiltrator on the Icarus.
+- **Key Traits:** Brave, agile, intuitive, emotionally driven, and possesses a strong sense of justice. She is willing to make difficult sacrifices for the greater good.
+- **Arc:** Faces a profound moral dilemma, choosing to infiltrate the Architect's inner circle on the Icarus, leaving Lucky behind. She becomes a key figure in finding a weakness from within.
+- **Associated Mech:** Moonbeam (Manned Riding Horse Robot, piloted by her).
+
+## The Architect / Supreme Emperor Sol by Divine Right
+- **Role:** Primary Antagonist, visionary, and megalomaniac.
+- **Key Traits:** Brilliant, charismatic, manipulative, utterly convinced of his own divine right to rule and guide humanity's evolution. He sees humanity's limitations as a flaw to be transcended, even if it means enslavement.
+- **Arc:** Evolves from a secretive researcher to a self-proclaimed deity, driven by a transhumanist agenda and a desire for ultimate power and control over the universe.
+- **Associated Creations:** Soul Ray, Metal Sun, Icarus, Metal Horses, Black Eyes Metal Dragon, World Police Bots, The Mark of the Beast.
+
+## Edge Dangerman
+- **Role:** Former underworld figure, now leader of the Metal Mafia (laborers on the Metal Sun).
+- **Key Traits:** Cunning, pragmatic, survivor, possesses a network of contacts. He is forced into compliance but retains a desire to fight back.
+- **Arc:** Transforms from a self-serving individual to a reluctant ally, providing crucial intelligence to Lucky's team from within the Architect's operations.
+
+## Loona
+- **Role:** Catalyst for the Architect's research and a symbol of sacrifice.
+- **Key Traits:** Brave, selfless, compassionate (implied from previous context).
+- **Significance:** Her interaction with antimatter technology, which led to her demise, provided the Architect with critical data for his warp drive and Metal Sun research. Her memory inspires the protagonists.

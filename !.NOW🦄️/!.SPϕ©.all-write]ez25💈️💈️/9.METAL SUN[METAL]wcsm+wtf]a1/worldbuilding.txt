@@ -1,0 +1,60 @@
+# Worldbuilding for "The Metal Sun"
+
+## Settings:
+
+### The Metal Sun
+*   **Description:** A celestial anomaly, not an ordinary sun. Its surface is a maze of interconnected cityscapes, but the true life thrives *inside* due to its extreme proximity to the actual sun. It's cooled by extreme quantum fusion to be extremely cold (-200°C) inside, a stark contrast to the searing exterior.
+*   **Society:** A futuristic society where humans have merged with technology. Citizens are augmented with cybernetic limbs and organs. The air is crisp and clean, filled with the hum of zero-point energy and the soft glow of luminescent plants.
+*   **Architecture:** Towering skyscrapers, levitating habitats, floating gardens, crystal forests, iridescent oceans. The Central Spire is a majestic structure that pierces the sky, housing the Council of Elders.
+*   **Underbelly:** The Shadow Net, an underground network of whistleblowers and dissidents, exists outside official channels.
+*   **Quantum Quarter:** A bizarre district within the Metal Sun's core where the laws of physics are mere suggestions. Gravity warps, and quantum mist fills the air. Home to places like "Schrödinger's Diner" and "The Event Horizon Emporium."
+
+### Planet X
+*   **Description:** A desolate, alien planet where Lucky crash-lands. It has twisted metal trees, jagged rock formations, and a sky that burns with an eternal, sickly green fire. The air is thin and acrid.
+*   **Flora/Fauna:** Strange, glowing flora in cave systems. Small, scuttling creatures that glow in the dark.
+
+## Items:
+
+### SoulPen
+*   **Description:** A personal device, likely for communication or interaction with technology. Lucky's is broken after his crash on Planet X.
+
+### Halo
+*   **Description:** A mystical connection that allows Lucky and Astra to share thoughts and emotions across vast distances, even when separated by light-years.
+
+### Unobtainium Particles / Unobtainium
+*   **Description:** Remnants of an ancient, quantum-warped civilization known as the Extremophiles. Surrounds Worm Hole X. A highly sought-after, powerful substance.
+
+### Metal Man Mecha
+*   **Description:** A massive, powerful mecha controlled by Edge, leader of the Metal Mafia. Used to steal Unobtainium and cause destruction.
+
+### Super Son Powersuit
+*   **Description:** A powerful suit worn by Sol, granted to him by his Sol Pen creations after he purges "sin." Enhances his abilities.
+
+### Temporal Resonance Key
+*   **Description:** A small, intricately carved box found by Gem. Allows synchronization of chronologies for more efficient movement through time.
+
+### Soda (Gigishixmix's)
+*   **Description:** A quantum-altering drink provided by Gigishixmix. Amplifies human perceptions of time and space, creating psychedelic experiences.
+
+### Data Crystal
+*   **Description:** Used to transfer information, as seen when Gem's contact in the Shadow Net provides data.
+
+## Concepts:
+
+### Worm Hole X
+*   **Description:** An ancient gateway surrounded by Unobtainium particles. Its existence is hinted at in ancient artifacts. Solenoid Industries is trying to create a stable one.
+
+### Extremophiles
+*   **Description:** An ancient, quantum-warped civilization rumored to have seeded life on Earth itself. Their remnants are Unobtainium particles.
+
+### Solenoid Industries
+*   **Description:** A corporation working on a top-secret project codenamed 'Eclipse,' which involves experimenting with quantum-entangled particles to create a stable wormhole.
+
+### Shadow Net
+*   **Description:** An underground network of whistleblowers and dissidents that exists outside the Metal Sun's official channels. Provides information on Sol's activities.
+
+### Sin
+*   **Description:** A concept used by Sol to justify his actions. He purges those who show signs of "sin," particularly his clone sons.
+
+### The Architect
+*   **Description:** A mysterious, more powerful entity revealed to be the true mastermind behind Sol's rise to power.

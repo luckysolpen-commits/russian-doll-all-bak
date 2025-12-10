@@ -1,0 +1,10 @@
+CYOA Book Outline
+
+- **Page 1:** Introduction to the protagonist, a clone soldier named Meg. They are on a mission to suppress a rebellion on a desolate planet.
+- **Early Choices (Pages 2-10):** Meg encounters a situation that contradicts their training, forcing a choice between loyalty and a new, unsettling truth.
+- **Branching Paths (Pages 11-70):**
+    - **Path of Loyalty:** Meg remains with the Empire, but the seeds of doubt grow. They might uncover a conspiracy from within.
+    - **Path of Rebellion:** Meg joins the rebels, but finds that the "good guys" are more complex than they seem.
+    - **Path of Self-Discovery:** Meg deserts both sides, seeking answers about their own origin and purpose.
+- **Climax (Pages 71-90):** The paths converge on a major event, like the discovery of the cloning facility's true purpose, or a final battle.
+- **Endings (Pages 91-100):** Multiple endings based on the choices made. Meg could become a hero, a villain, a martyr, or something else entirely.

@@ -1,0 +1,79 @@
+# Worldbuilding: HELLRIDE
+
+## Key Locations:
+
+### Earth (Post-Robot Wars):
+- **Description:** A desolate wasteland of twisted metal and crumbling concrete. Once-vibrant cityscapes are now ruins. The air is polluted, and the surface is patrolled by World Police Bots.
+- **Significance:** The origin point of humanity's fall, a place Lucky desperately wants to escape.
+
+### The Earth's Core:
+- **Description:** A dark, oppressive, and isolated environment deep beneath the surface. Filled with remnants of humanity's past (abandoned subway tunnels, rusting machinery) and the constant threat of bots driving humans deeper.
+- **Significance:** Lucky's prison and the setting for his desperate escape.
+
+### Caramelle Nest:
+- **Description:** A twisting, dark, and foul-smelling underground labyrinth. Inhabited by massive, slug-like creatures (Caramelles) with razor-sharp claws and teeth. Contains a glowing pool of mutagen.
+- **Significance:** A dangerous obstacle Lucky must overcome to earn the smugglers' trust.
+
+### Smuggler's Hideout:
+- **Description:** A dimly lit, smoky, and grimy room, likely in a hidden corner of the ruined Earth. A hub for illicit activities and desperate individuals.
+- **Significance:** Where Lucky makes his deal to get to Ikarus.
+
+### Ikarus (Ellison Island):
+- **Description:** A sprawling, artificial island in space, serving as a refugee hub for those escaping Earth. It's a bustling, chaotic place with makeshift habitats, refugee camps, and a thriving black market. Under constant surveillance by the EMPRIE.
+- **Significance:** A temporary haven and the gateway to Avanta.C.
+
+### Avanta.C:
+- **Description:** A fabled virtual world, a universe built on code and dreams. Features impossible architecture, vibrant energy, and diverse avatars. It's a complex digital society with marketplaces, information streams, and hidden, illicit corners. It also has less polished, glitching sectors where the more desperate avatars reside.
+- **Significance:** Lucky's ultimate destination, a new frontier for humanity, and a potential battleground for power and control.
+
+## Key Items/Concepts:
+
+### The Metal Sun:
+- **Description:** The Architect's colossal creation, a swirling vortex of light and energy. It's a symbol of a new era and the Architect's power.
+- **Significance:** The catalyst for humanity's enslavement and the Architect's rise to power.
+
+### World Police Bots:
+- **Description:** Robotic enforcers launched by Ikarus, supported by Mars and the Lunar Colony. They enforce the Architect's rule, driving humans underground and forcing them to take the Mark of the Beast.
+- **Significance:** The primary instruments of oppression and control on Earth.
+
+### The Mark of the Beast:
+- **Description:** A compliance mechanism enforced by the World Police Bots. Those who refuse it are driven into underground camps.
+- **Significance:** A symbol of submission to the Architect's regime.
+
+### Mutagen:
+- **Description:** A glowing, iridescent goo found in the Caramelle nest. Highly valuable.
+- **Significance:** The currency Lucky uses to secure his passage to Ikarus.
+
+### Avanta.C Authorization Code/Black Market Bot Account:
+- **Description:** A data crystal containing an unauthorized code, allowing access to Avanta.C via a black market bot account.
+- **Significance:** Lucky's means of entering the virtual world and gaining Metal Sun citizenship.
+
+### The EMPRIE:
+- **Description:** The overarching authority or force that controls the solar system, likely the Architect's regime. They monitor Ikarus and hunt down illegals.
+- **Significance:** The primary antagonist force that Lucky and other refugees are trying to evade.
+
+## Factions:
+
+### The Architect's Empire (Supreme Emperor Sol):
+- **Goals:** Absolute control over humanity, establishing a new era under his rule.
+- **Methods:** Technological might (Metal Sun, World Police Bots), forced compliance (Mark of the Beast).
+
+### The United Nations (UN):
+- **Goals:** To stop the Architect and protect humanity.
+- **Methods:** Limited, outmatched by Ikarus' technology.
+
+### The Metal Mafia:
+- **Goals:** Power and control within the new order, thriving under the Architect's regime.
+- **Methods:** Collaboration with the Architect, using bots to enforce their will.
+
+### Earth Refugees:
+- **Goals:** Survival, escape from the ravaged Earth, seeking a new life on Ikarus or in Avanta.C.
+- **Methods:** Smuggling, black market dealings, resilience.
+
+### Smugglers:
+- **Goals:** Profit, survival.
+- **Methods:** Illicit transport, dealing in valuable goods.
+
+### Resistance (Implied in Avanta.C):
+- **Goals:** To uncover truth, fight against the Empire's control.
+- **Methods:** Information gathering, clandestine activities within Avanta.C.

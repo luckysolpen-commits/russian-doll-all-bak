@@ -1,0 +1,31 @@
+**Synopsis:**
+
+In a dystopian future, a desperate refugee named Lucky escapes the oppressive EMPRIE on Earth and is forced into indentured servitude in the sprawling virtual world of Avanta.C. He teams up with a mysterious and powerful mage named Astra, and together they navigate the vibrant and dangerous digital landscape. As they level up and uncover the secrets of Avanta.C, they run afoul of the ruthless Metal Mafia guild and its enigmatic leader, Edge Dangerman. Their journey takes an unexpected turn when they ally with Kael, a secret agent of the Nova Spetsnaz, who reveals a deeper conspiracy involving the enslavement of human consciousness. Lucky and Astra must choose a side in a war for the very soul of the virtual world.
+
+**Scene Outline:**
+
+*   **Part 1: The Escape**
+    *   `01_escape_from_earth.txt` (formerly `scene_1.txt` and `scene_2.txt`): Lucky's rescue from the EMPRIE by the Blue Bird Bounty Hunter and his forced entry into Avanta.C.
+    *   `02_arrival_in_avantac.txt` (formerly `scene_3.txt`): Lucky's first moments in the vibrant, overwhelming world of Avanta.C.
+    *   `03_meeting_astra.txt` (formerly `scene_4.txt`): Lucky meets Astra, a mysterious mage who offers to help him.
+
+*   **Part 2: Exploring Avanta.C**
+    *   `04_the_renaissance_faire.txt` (formerly `scene_5.txt`): Lucky and Astra explore a Renaissance Fair, where Lucky is captivated by a rare, wish-granting cat.
+    *   `05_troll_city.txt` (formerly `scene_6.txt`): They visit the industrial and imposing Troll City.
+    *   `06_fairy_city.txt` (formerly `scene_7.txt`): They experience the ethereal beauty of Fairy City.
+    *   `07_the_illegal_furry_server.txt` (formerly `scene_8.txt`): Astra shows Lucky a hidden, anarchic server for players with unique avatars.
+
+*   **Part 3: The Grind**
+    *   `08_leveling_up.txt` (formerly `scene_9.txt`): Lucky and Astra review their stats and decide to start "grinding" for experience and better gear.
+    *   `09_the_lost_temple.txt` (formerly `scene_10.txt`): They complete their first quest together, defeating monsters and earning loot in the Lost Temple.
+    *   `10_upgrades_and_crafting.txt` (formerly `scene_11.txt`): They upgrade their gear and learn about Avanta.C's crafting system.
+    *   `11_the_magic_tree.txt` (formerly `scene_12.txt`): They discover the Magic Tree, a place to craft spells and learn new abilities.
+
+*   **Part 4: The Metal Mafia**
+    *   `12_meeting_kael.txt` (formerly `scene_13.txt`): They are approached by Kael, a mysterious merchant who seems to know a lot about them.
+    *   `13_the_lost_expedition.txt` (formerly `scene_14.txt`): They accept a quest to find a lost expedition, with Kael joining them.
+    *   `14_ambush_in_eldrador.txt` (formerly `scene_15.txt`): They are ambushed by wolves in the ruins of Eldrador.
+    *   `15_the_eldridian_amulet.txt` (formerly `scene_16.txt`): They find a powerful artifact, the Eldridian Amulet, which triggers a trap.
+    *   `16_edge_dangermans_trap.txt` (formerly `scene_17.txt`): They are trapped in a shifting maze and confronted by Edge Dangerman, the leader of the Metal Mafia.
+    *   `17_kaels_betrayal_and_revelation.txt` (formerly `scene_18.txt`): Kael reveals his true identity as a Nova Spetsnaz agent and his mission to take down the Metal Mafia.
+    *   `18_the_avantacy_server_room.txt` (formerly `scene_19.txt`): Kael infiltrates the Metal Mafia's headquarters to activate a teleportation matrix for his people, but something goes wrong.

@@ -1,0 +1,53 @@
+# Worldbuilding: My Chara: CHARANON
+
+## Locations:
+
+*   **Mothra Base:** An isolated oil strut in the African jungle, serving as a clandestine CIA forward operating base. It's functional, metallic, and exposed to the elements, a stark contrast to the lush jungle surrounding it. It features a helipad, living quarters, a debriefing room, and training facilities. It's a place of both intense work and unexpected camaraderie.
+
+*   **African Jungle:** Dense, humid, and treacherous. It's a character in itself, providing cover, obstacles, and a sense of isolation. It's home to hidden facilities and serves as a challenging environment for infiltration and escape.
+
+*   **Rogue Mech Facility:** A sprawling, heavily guarded complex hidden deep within the jungle. It's a manufacturing and research hub for advanced combat mechs, characterized by metallic clangs, humming machinery, and a sterile, industrial atmosphere. It contains server rooms, assembly bays, and various security measures.
+
+*   **Langley, CIA Headquarters:** The central hub of the CIA, a stark, bureaucratic complex of concrete and glass in Virginia. It represents the administrative and analytical side of intelligence work, a stark contrast to the field operations.
+
+*   **Small Airfield:** A remote, dusty airstrip serving as a transfer point between field operations and larger transport.
+
+## Technology & Equipment:
+
+*   **Advanced Combat Mechs:** The primary threat, these are large, heavily armed robotic war machines. The "BEHEMOTH" is a particularly advanced and terrifying model, indicating a significant leap in military technology.
+
+*   **Suppressed Firearms:** Standard issue for stealth operations, allowing for silent eliminations.
+
+*   **Anti-Materiel Rifle:** A powerful sniper rifle capable of penetrating heavy armor, used by Agent Klondike.
+
+*   **Rocket Launcher:** A destructive weapon used for breaching and eliminating fortified targets.
+
+*   **Portable Data Drive:** A secure device for downloading and storing critical intelligence.
+
+*   **Encrypted Tablet:** Used for mapping, communication, and accessing secure data in the field.
+
+*   **Comms Device (Earpiece):** Standard communication tool for field agents.
+
+*   **Specialized EMP Device:** A compact electronic device capable of temporarily disabling electronic systems like security cameras and laser grids.
+
+*   **Stealth Suit (Advanced):** Implied to be part of Chara's standard gear, allowing for exceptional stealth capabilities.
+
+*   **Holographic Displays:** Used in the mech facility and debriefing room for displaying schematics and data.
+
+## Organizations:
+
+*   **CIA (Central Intelligence Agency):** The primary intelligence agency, responsible for gathering, processing, and analyzing national security information from around the world.
+
+*   **PMC (Private Military Company):** Mercenary forces employed by the rogue organization to guard their facilities and operations.
+
+*   **Cerberus:** A shadowy, global organization operating behind the scenes, funding insurgencies and destabilizing regions to create a market for their advanced weaponry, particularly the mechs. They are the overarching antagonist.
+
+## Other Elements:
+
+*   **Green Cigars:** A recurring motif, symbolizing moments of relaxation and camaraderie among the agents.
+
+*   **Alcohol:** Used as a means of unwinding and fostering bonding among the team.
+
+*   **Sniper Fire:** A key plot device that initiates the compromise of the stealth mission and leads to Giana's injury and Chara's solo mission.
+
+*   **Oil Strut Environment:** Provides a unique and isolated setting for the base, emphasizing the clandestine nature of their operations.

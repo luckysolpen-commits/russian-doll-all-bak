@@ -1,0 +1,12 @@
+
+read @\#.book_template.scp/gemini_ch_books.txt   
+use the  screenplay_outline.txt in this dir to write #.book_template.scp/book_outline.txt  (13 chapter)
+then use the scenes in this dir to help u write each chapter (books are basically a book form of the screenplay so it should be ez)
+
+
+1-5-0
+6-11-12
+
+the scene file names are all numerical only , and generic.  
+  can we put the scene names in the .txt along with their  number?      
+refer to @screenplay_outline.txt   4 ez naming coventions

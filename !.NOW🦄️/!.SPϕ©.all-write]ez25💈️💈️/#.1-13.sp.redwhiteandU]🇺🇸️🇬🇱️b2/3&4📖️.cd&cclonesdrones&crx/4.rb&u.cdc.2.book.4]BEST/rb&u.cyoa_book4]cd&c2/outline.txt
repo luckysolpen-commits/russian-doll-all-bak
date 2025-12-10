@@ -1,0 +1,39 @@
+CYOD#4 "Clone of a Clone" - Outline
+
+**Player:** Clone 700, serving in the United Clones force on Mars.
+
+**Core Themes:** Espionage, mutation, rebellion, and the nature of identity. The line between clone and clown is blurred.
+
+**Main Branches:**
+
+1.  **The Loyalty Path (Red Queen / Solar Empire):**
+    *   **Inciting Incident:** Player is a promising pilot/soldier tasked with a mission to hunt down "clown" insurgents in the tunnels of Valles Marineris.
+    *   **Missions:**
+        *   Pilot a state-of-the-art drone to spy on clown activities.
+        *   Engage in urban warfare in one of the underground Martian hubs.
+        *   Go to the Lunar base for advanced training.
+        *   Get involved in corporate espionage between SOLARCOM and VOIDLINK.
+    *   **Mutation:** If the player shows extreme loyalty and prowess, they are offered the "gift" of Carcazod mutation by the Blood Queen Monarchy, a close ally of the Solar Empire. This is a painful and difficult process.
+    *   **Endings (Loyalty):**
+        *   **Ascension:** Become a powerful Carcazod general, a living weapon of the Empire.
+        *   **Fuel:** Fail a critical mission and be "honorably" sacrificed to the S.S. SOL.
+        *   **Betrayal:** Become too powerful as a Carcazod and be eliminated by a jealous superior.
+        *   **Pawns:** Realize you are just a pawn in a larger game between the Martian governments.
+
+2.  **The Rebellion Path (Clown):**
+    *   **Inciting Incident:** During a mission, the player is contacted by a clown agent (Zi or qynx) or witnesses an act of extreme cruelty by the Empire that plants the seeds of rebellion.
+    *   **Missions:**
+        *   Help a smuggling crew (led by Ranch) deliver supplies to a hidden clown outpost.
+        *   Sabotage a Martian Markets distribution center to cause chaos.
+        *   Work as a double agent, feeding false intel to your superiors.
+        *   Engage with Mrs. Burqundi's syndicate for information or passage.
+    *   **Mutation:** The clowns have a different approach to the Carcazod mutation. It's a dangerous, uncontrolled transformation that some see as a path to true freedom and power. The player can choose to undergo this risky process.
+    *   **Endings (Rebellion):**
+        *   **Revolution:** Help lead a successful uprising that topples a key leader.
+        *   **Martyr:** Die for the cause, becoming a legend in the Underground Xircus.
+        *   **Exile:** Be forced to flee to the outer reaches of the system.
+        *   **Monster:** Lose control of the Carcazod mutation and become a feral beast hunted by both sides.
+
+**Mid-Game Twist Idea:**
+*   The "transformer drones" are introduced. These are advanced AI weapons. A fourth-wall break by "qwen" about how they're *totally* not like those old 21st-century toys, wink-wink. Maybe they are powered by a less-refined version of the soul-burning tech from the S.S. SOL, making them ethically horrifying. This could be a turning point for the player's allegiance.
+*   The player discovers that some high-ranking officials in the Solar Empire are secretly clowns, playing a long game.

@@ -1,0 +1,15 @@
+Page 69: Targeting the Command Drone
+
+You lock onto the command drone that appears to be coordinating the entire swarm. Your targeting systems indicate this is no ordinary control unit but a sophisticated command center that's been transformed using carcazod-level bio-mechanical integration, making it both more powerful and more dangerous than standard units.
+
+As you approach firing range, three distinct command systems become apparent: The Neural Command Interface, where the drone processes tactical information using organic computing elements; The Swarm Coordination Matrix, which manages the complex relationships between individual swarm units; and The Adaptive Strategy Core, where the command drone can modify its tactics in real-time based on battlefield conditions.
+
+Your weapons systems target the command drone, but it begins to move with enhanced agility, its bio-mechanical systems providing capabilities far beyond those of normal drones. The swarm's behavior shifts as it anticipates your attack on its command center.
+
+You realize the command drone is not just controlling the swarm but is partially integrated with it - destroying it may cause the other units to scatter or, conversely, may trigger defensive protocols that make them more dangerous. The carcazod-level modifications to this unit suggest it may be operated by a partially transformed being.
+
+The Robot State officials in the transport below depend on your success, but the sophistication of the command drone indicates you're facing technology that exceeds the current faction capabilities.
+
+*If you target the Neural Command Interface, turn to Page 207.*
+*If you destroy the Swarm Coordination Matrix, turn to Page 208.*
+*If you attack the Adaptive Strategy Core, turn to Page 209.*

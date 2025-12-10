@@ -1,0 +1,83 @@
+INT. AVANTA.C - LOST TEMPLE - DAY
+
+Lucky and Astra stand at the crumbling entrance of the Lost Temple, a massive, overgrown structure half-swallowed by ancient jungle. Vines snake around weathered stone pillars, and a faint, eerie GLOW emanates from within. The air is heavy with the scent of damp earth and decay.
+
+ASTRA
+(Consulting a holographic map, projected from her wrist-mounted device)
+"The Lost Temple." Marked as Level 5-7. Should be a good challenge for us. Keep an eye out for traps. These old ruins are always full of them.
+
+They step inside. The interior is dimly lit, dust motes dancing in the few shafts of light that penetrate the canopy. The silence is oppressive, broken only by the drip of water and their own footsteps.
+
+Suddenly, a low, guttural HISS echoes from the shadows. From behind a broken altar, a GIANT SPIDER, its eight eyes glowing red, scuttles forward, its fangs dripping with venom.
+
+LUCKY
+(Drawing his Quick Sword)
+Looks like we've got company!
+
+**COMBAT INITIATED!**
+
+Lucky immediately opens his COMBAT MENU (a transparent overlay appearing before his eyes). He selects his first ability.
+
+LUCKY (V.O.)
+/ability QuickSlice
+
+He lunges forward, executing a "Quick Slice" – a rapid, low-damage strike that leaves a shimmering blue trail. The spider recoils, but is largely unharmed.
+
+ASTRA
+(Chanting, her hands glowing with arcane energy)
+/spell Fireball
+
+Astra unleashes a "Fireball" – a searing orb of flame that streaks across the chamber, impacting the spider with a satisfying EXPLOSION. The creature hisses in pain, its chitinous armor smoking.
+
+Another spider drops from the ceiling, followed by two UNDEAD WARRIORS, their skeletal forms clanking as they shamble forward, rusty swords raised.
+
+LUCKY
+(Gritting his teeth, selecting another ability)
+/ability ThunderousFury
+
+Lucky spins, delivering a powerful "Thunderous Fury" strike. His sword glows with a faint yellow aura, and the impact sends one of the undead warriors stumbling back, momentarily stunned.
+
+ASTRA
+(Seeing Lucky take a hit from the second warrior)
+/spell HealingHands Lucky
+
+A soft, green light emanates from Astra's hands, enveloping Lucky. His HP bar (visible in the corner of his vision) ticks up by 15 points. He feels a surge of renewed energy.
+
+They fight in a coordinated dance. Lucky engages the undead warriors, his sword clashing against their rusty blades, while Astra weaves between them, launching Fireballs and occasionally using "Healing Hands" to keep Lucky in the fight. The console commands flash across their vision, a constant stream of tactical decisions.
+
+After a tense battle, the last undead warrior crumbles to dust. The chamber is silent once more, save for their heavy breathing.
+
+ASTRA
+(Wiping a bead of sweat from her brow)
+Good fight. You're getting better at chaining those abilities.
+
+LUCKY
+(Sheathing his sword)
+Thanks. Couldn't have done it without your healing.
+
+They proceed deeper into the temple, navigating crumbling corridors and solving simple pressure-plate puzzles. Finally, they reach a large, ornate chamber. In the center, bathed in a beam of light from a hole in the ceiling, sits a large, intricately carved TREASURE CHEST.
+
+LUCKY
+(Eyes widening)
+Jackpot!
+
+He approaches the chest and, with a satisfying CLICK, opens it. A shower of golden light erupts.
+
+**QUEST COMPLETE!**
+
+Their screens are flooded with notifications:
+
+**GOLD COINS:** +500
+**EXPERIENCE POINTS:** +1,000 (each)
+
+**RARE ITEMS ACQUIRED:**
+
+- DRAGON SLAYER ARMOR (Chestpiece): +10 Strength, +15 Defense. (Equippable by Warrior-class avatars)
+- MANA CRYSTAL: Restores 20 MP. (Quantity: 3)
+
+Lucky grins, picking up the gleaming chestpiece. It feels solid, powerful. Astra examines the Mana Crystals, her eyes sparkling.
+
+ASTRA
+This is excellent! That armor will be a huge upgrade for you. And these crystals... always useful.
+
+They exit the temple, the setting sun casting long shadows. The air outside feels fresh, victorious. They've faced their first real challenge together, and emerged stronger.

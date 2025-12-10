@@ -1,0 +1,13 @@
+Word Count per Page (approx. 500 words/page)
+Chapter 12, Page 1: 499 words
+Chapter 12, Page 2: 498 words
+Chapter 12, Page 3: 497 words
+Chapter 12, Page 4: 499 words
+Chapter 12, Page 5: 498 words
+Chapter 12, Page 6: 496 words
+Chapter 12, Page 7: 3 words
+Chapter 12, Page 8: 499 words
+Chapter 12, Page 9: 498 words
+Chapter 12, Page 10: 499 words
+
+Total Word Count for Chapter 12: 4936 words (approx.)

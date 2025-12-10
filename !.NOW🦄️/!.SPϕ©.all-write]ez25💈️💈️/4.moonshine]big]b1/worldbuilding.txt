@@ -1,0 +1,60 @@
+WORLDBUILDING
+
+## Key Locations:
+
+### Earth:
+- **Dorchester:** A significant location for Lucky and his team, representing their past and a place they leave behind for their lunar ventures.
+- **African Mine Camp (The Architect's Base):** A hidden, opulent, and technologically advanced underground facility. Serves as The Architect's primary base of operations, disguised as a mine camp. Features polished obsidian walls, ambient lighting, and advanced holographic displays. A nexus of power and secrets.
+
+### Moon:
+- **Hollow Moon Base:** A state-of-the-art lunar facility serving as The Chaebol's primary hub for asteroid mining and operations. Equipped with amenities like a gym, meditation room, zero-gravity sports arena, vast library, and a dedicated gaming room. Also features commercial areas like the "Moonshine Cafe."
+- **Lunar Shuttle Launchpad:** The departure point for travel between Earth and the Moon.
+- **Lunar Base Research Lab:** Where asteroid samples are analyzed using quantum computers and nuclear scanners.
+- **Lunar Base Communications Room:** Where attempts to contact Earth are made and information is controlled.
+- **Lunar Base Recreational Area:** A vibrant space for celebrations and team gatherings.
+- **Lunar Base Temporary UN Conference Room:** Where Edge negotiates his deal with Dr. Patel.
+- **Lunar Base Secure Conference Room/Lab:** Where Lucky's secret team discusses plans and conducts sensitive research.
+
+### Space:
+- **Asteroid Belt:** The primary location for the asteroid mining venture, rich in rare minerals and metals. Contains numerous asteroids, including "Asteroid Alpha-1," "Asteroid Alpha-2," and "Asteroid Gamma-3."
+- **The Diabolus (Asteroid-6):** A hollow, fast-moving celestial body with an anomalous energy signature. Later revealed to be a vessel containing a literal demon. Its interior is a "Demon Realm" with a nightmarish palace, twisted organic structures, and a sickly green sky. It is a place of ancient, malevolent power.
+
+## Key Items/Technologies:
+
+### General:
+- **Space Suits:** Standard gear for lunar and asteroid exploration.
+- **Comms/Communication Devices:** Used for inter-team and Earth-Moon communication, can be jammed.
+- **Holographic Displays/Projectors:** Ubiquitous technology for information display, presentations, and communication (e.g., Loona Twilight).
+
+### Mining/Exploration:
+- **Exploration and Drilling Drones:** Advanced drones used for asteroid exploration and resource extraction, operated by Edge Danger Man.
+- **Gravity Beam:** A technology used by drilling vessels to collect smaller asteroids and rocks.
+- **Drilling Vessels:** Sleek, multi-person spacecraft designed for asteroid exploration and resource extraction.
+
+### Scientific/Research:
+- **Quantum Computers:** Used for advanced analysis of asteroid composition.
+- **Nuclear Scanners:** Used to study asteroid structure and composition.
+- **SoulPens:** Devices used by Lucky's secret team for advanced scanning and analysis, capable of revealing hidden truths (e.g., the demonic nature of The Diabolus).
+
+### Energy/Weapons:
+- **Tear-It Technology:** A high-powered energy source, with new applications potentially involving the sacrifice of clones for immense power. Later considered for use against The Diabolus.
+- **Vintage Laser Cannons and Particle Beams:** Outdated weaponry proposed by Edge for use against The Diabolus.
+- **"Asteroid-Smashing" Robot (Doom-Bot 3000):** An over-the-top, custom-built robot proposed by Edge as a last resort against The Diabolus.
+- **Energy Pistol:** A sleek, futuristic weapon used by Edge.
+
+### Transportation:
+- **Lunar Shuttle:** Used for travel between Earth and the Moon.
+- **The Architect's Advanced Ships:** Sleek, powerful vessels used by The Architect's forces, capable of navigating the Demon Realm.
+
+## Factions/Organizations:
+- **The Chaebol:** The team formed by Lucky, Astra, Gem, and the Korean tear-it users, investing in and leading the asteroid mining venture.
+- **United Nations (UN):** Global governing body, panics over The Diabolus, sends an investigation team, and makes a deal with Edge.
+- **NewKorea Forces:** Initially involved in the galactic war, later become investors and allies in the asteroid mining venture.
+- **The Architect's Organization:** A powerful, secretive entity led by The Architect, focused on exploiting advanced technology and ancient powers.
+
+## Concepts/Phenomena:
+- **Galactic War:** The initial conflict that sets the stage for the story, ending in an uneasy truce.
+- **Black Market Asteroid Mining Venture:** The lucrative, but ethically ambiguous, business opportunity that drives the initial plot.
+- **The Diabolus (Demon Realm):** A literal demon trapped within Asteroid-6, feeding on violence and capable of spawning demon aliens. Its interior is a distinct, malevolent dimension.
+- **Warp Drives and Antimatter Technology:** Advanced concepts that The Architect seeks to research and exploit, linked to Loona's sacrifice.
+- **Trials of Appeasement:** The method by which Lucky's team attempts to calm and understand The Diabolus, involving tests of wit, courage, and self-sacrifice.

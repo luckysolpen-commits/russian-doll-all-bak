@@ -1,0 +1,67 @@
+INT. GLITCH WORLD - OLD LIBRARY - DAY (CONT.)
+
+The rhythmic hum intensifies, vibrating through the very bones of the old library. The Metal Mafia robots, sleek and menacing, advance with chilling precision, their optical sensors glowing like malevolent eyes. Their metallic footsteps echo ominously in the vast hall, a stark contrast to the digital dust that hangs in the air.
+
+LUCKY
+(Drawing his Blade-Shield, a surge of adrenaline)
+Looks like they don't want us reading their history!
+
+KAEL
+(His face grim, already assessing their numbers)
+They're not just enforcers. These are combat models. Designed for suppression. We need to move, and we need to move fast.
+
+The first robot lunges, a blur of chrome and steel. Lucky meets it head-on, his Blade-Shield deflecting its powerful strike. He counters with a "Quick Slice," the blade sparking against the robot's chassis, leaving a faint scorch mark.
+
+Kael, meanwhile, doesn't engage directly. He extends his hand, and a wave of digital distortion ripples outwards. The robot closest to him flickers violently, its movements becoming jerky and erratic, its optical sensors briefly displaying a garbled error message. It's a direct manipulation of its internal programming, a GLITCH ATTACK.
+
+KAEL (V.O.)
+/glitch_attack system_corruption (Target: Robot_Unit_03)
+
+The robot stumbles, giving Kael an opening to slip past it. He's not trying to destroy them, just to disable or disorient.
+
+More robots pour into the hall. Lucky finds himself surrounded, deflecting blows, his Blade-Shield humming with defensive energy. He sees an opening, a brief moment where two robots are too close together.
+
+LUCKY (V.O.)
+/ability ThunderousFury (Target: Multiple)
+
+He unleashes a wide, sweeping attack. The force of the blow, amplified by his glitch-infused strength, sends both robots reeling, their internal mechanisms grinding loudly. One of them sparks violently, its arm hanging limp.
+
+A robot aims a plasma cannon at Lucky. Before it can fire, Kael, from across the hall, focuses. The robot's targeting reticle on Lucky's HUD (visible only to him) flickers wildly, then shifts, aiming at the ceiling.
+
+KAEL (V.O.)
+/glitch_attack targeting_override (Target: Robot_Unit_05)
+
+The robot fires, a blast of plasma scorching the ceiling instead of Lucky. Dust and debris rain down.
+
+Lucky realizes Kael is providing crucial support, manipulating the robots' systems from a distance. He needs to create more openings for Kael.
+
+LUCKY
+(Shouting)
+Kael! Give me a path!
+
+Kael nods. He focuses on a section of the library wall near the main entrance. The wall shimmers, then briefly becomes transparent, revealing the street outside. It's a visual glitch, but it creates a momentary distraction for the robots, whose optical sensors struggle to process the anomaly.
+
+KAEL (V.O.)
+/glitch_effect visual_distortion (Area: Library_Entrance)
+
+LUCKY
+(Grinning, seeing his chance)
+Thanks!
+
+Lucky charges towards the distorted wall, using his Blade-Shield to bash aside a robot that tries to intercept him. He leaps through the flickering transparency, feeling a strange, disorienting sensation as he passes through the corrupted rendering.
+
+Kael follows, his movements fluid, slipping through the chaos. The robots, their systems still struggling with the visual distortion, are momentarily confused.
+
+They burst out onto the street. The library behind them shimmers, its walls briefly dissolving into raw code before snapping back into their glitched marble form. The rhythmic hum of the robots inside slowly fades as they put distance between themselves and the library.
+
+They run through the familiar, yet unsettling, streets of the Glitch World. The coordinates Lucky found burn in his mind. The old data center. Their next destination.
+
+LUCKY
+(Panting)
+That was close! They really didn't want us to find those coordinates.
+
+KAEL
+(Catching his breath, scanning the sky for drones)
+Indeed. Which means whatever is at that data center is even more important. They'll be tracking us now. We need to be careful. And fast.
+
+They continue to move, blending into the seemingly normal flow of the Glitch World's inhabitants, but their eyes are sharp, their senses alert. The city is a maze, but now they have a destination, and a growing understanding of how to navigate its treacherous, digital landscape.

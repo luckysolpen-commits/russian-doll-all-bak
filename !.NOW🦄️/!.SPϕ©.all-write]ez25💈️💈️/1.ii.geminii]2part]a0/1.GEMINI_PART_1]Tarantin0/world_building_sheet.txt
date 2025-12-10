@@ -1,0 +1,40 @@
+**GEM&I: Martian Gambit - World Building Sheet**
+
+---
+**SETTINGS**
+---
+
+**POST-APOCALYPSE EARTH**
+*   **Atmosphere:** A world in the slow process of decay. The initial chaos has passed, leaving behind a desolate, quiet landscape. The sky is often a sickly yellow or bruised purple due to atmospheric dust. Nature is slowly reclaiming the ruins of civilization.
+*   **Key Locations:**
+    *   **The Nexus:** The Architect's former base. A clean, sterile, high-tech bunker that serves as a temporary safe haven for the trio.
+    *   **The Wasteland:** The vast, empty spaces between ruined cities. Broken highways, abandoned towns, and skeletal forests.
+    *   **Ares Launch Facility:** A relic of the pre-apocalypse era, a massive, surprisingly intact complex dedicated to space exploration. A symbol of a lost future.
+
+**MARS - OLYMPUS PORT**
+*   **Atmosphere:** A sterile, hyper-modern, and oppressive utopia. Everything is clean, white, and perfectly designed. The air is filtered, the light is artificial, and there is a constant, low hum of machinery. It is a gilded cage.
+*   **Key Locations:**
+    *   **Docking Bay:** The first impression of Mars. Cavernous, sterile, and intimidating.
+    *   **Conference Room:** A sleek, minimalist room designed for corporate power plays.
+    *   **Guest Quarters:** Luxurious but soulless. A place of comfort that feels like a prison.
+    *   **Robotics Warehouse:** A massive, dark space filled with thousands of dormant robots, a silent army waiting for a command.
+    *   **Control Center:** The heart of the serpent. A dark, circular room where Elara and Lyra watch over their domain.
+
+---
+**ITEMS & TECHNOLOGY**
+---
+
+**THE ARMORED TRUCK**
+*   A heavily modified riot control vehicle. It is a symbol of the trio's resourcefulness and their primary means of survival on Earth. It is ugly, practical, and powerful.
+
+**THE SERAPH'S FOLLY**
+*   The Architect's private spacecraft. A sleek, advanced vessel that represents the hope of escape and the promise of a solution.
+
+**THE MUTAGEN**
+*   The virus created by Gem that is capable of killing the Carcazoids and Clowns. It is the MacGuffin of the story, the key to saving Earth.
+
+**TERRAFORMING ROBOTS**
+*   The army of robots on Mars. They are advanced, multi-limbed machines designed for planetary engineering. They are the delivery system for the mutagen, and the primary object of the trio's quest.
+
+**THE BLACK QUEEN CONGLOMERATE**
+*   A shadowy corporation that specializes in off-the-books biotech and advanced technology. They are the power behind Olympus Port and the main antagonistic force of the story.

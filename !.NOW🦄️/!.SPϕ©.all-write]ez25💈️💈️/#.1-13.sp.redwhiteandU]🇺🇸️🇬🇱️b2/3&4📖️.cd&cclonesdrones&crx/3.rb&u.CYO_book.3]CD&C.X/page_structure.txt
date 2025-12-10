@@ -1,0 +1,15 @@
+CYOD#3: Clones, Drones and Carcazods - Page Structure
+
+ACTUAL PAGES THAT EXIST:
+
+Opening: Page 1
+Early choices: Pages 2-5
+Some path exploration: Pages 6-29 (some of these have choices that go to very high numbers)
+Final convergence section: Pages Final-0 through Final-3
+
+For professional presentation, I need to redirect all the high-numbered choices to converge at a central point before reaching the actual ending.
+
+NEW CONVERGENCE PAGES:
+Page 1000: The Convergence Chamber (where disparate paths unite)
+Page 1001: The Choice of Paths (leading to final endings)
+Page Final-0 through Final-3: Final endings

@@ -1,0 +1,14 @@
+To initiate the book writing process for a new project, please provide me with a `screenplay_outline.txt` file in the root directory of your new book project. This outline should be structured similarly to the one you provided previously, detailing acts, scenes, and key plot points.
+
+Once you have your `screenplay_outline.txt` ready, use the following prompt:
+
+```
+read @screenplay_outline.txt. We are writing a new book now. There are to be 13 chapters, make a chapter_outline.txt if you think it's wise. Then let's begin writing each chapter. Each chapter should have 10 pages, with approximately 500 words per page. Please ensure a newline every ~10 words for readability. Also, update a wc.txt file with word counts for each page, each chapter, and the grand total whenever you finish each.
+```
+
+**Important Notes:**
+-   Ensure your `screenplay_outline.txt` is detailed enough for me to expand upon.
+-   I will create the `chapter_outline.txt` based on the screenplay outline.
+-   I will create subdirectories for each chapter (e.g., `Chapter_1/`, `Chapter_2/`, etc.) and populate them with `page_1.txt` through `page_10.txt` for each chapter.
+-   I will maintain the specified word count (~500 words per page) and line formatting (~10 words per line) for all generated content.
+-   The `wc.txt` file will be continuously updated in the root directory of your book project, providing detailed word counts for each page, each chapter, and a grand total for the entire book.

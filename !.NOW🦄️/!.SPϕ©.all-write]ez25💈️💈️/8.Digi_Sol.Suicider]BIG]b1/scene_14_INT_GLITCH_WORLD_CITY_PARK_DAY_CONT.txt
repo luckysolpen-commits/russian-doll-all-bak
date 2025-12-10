@@ -1,0 +1,70 @@
+INT. GLITCH WORLD - CITY PARK - DAY (CONT.)
+
+The park is dissolving. The vibrant colors bleed into static, the laughter of children warps into a digital scream. Metal Mafia enforcers, no longer subtle, charge through the flickering trees, their red optical sensors locked onto Elara. Drones descend like metallic vultures, their whirring blades cutting through the corrupted air.
+
+ANYA
+(Urgent, supporting Elara)
+We need to move! Now! Elara, can you give us a path? A temporary safe zone?
+
+Elara, still weak, closes her eyes, concentrating. Her body shimmers, and a faint, almost imperceptible map flickers into existence before her, overlaid on the chaotic park. It shows a series of unstable pathways, and a small, flickering green dot in the distance.
+
+ELARA
+(Voice strained, but clearer)
+There... an old maintenance tunnel. Unstable, but it might give us cover. I can... I can try to stabilize it for a short time.
+
+LUCKY
+(Drawing his Blade-Shield, ready to defend)
+Go! I'll cover you!
+
+As Anya helps Elara move, Lucky faces the first wave of enforcers. He uses his Blade-Shield to deflect a volley of energy blasts, the impact sending tremors through his arm. He sees an opening, a brief moment where the simulation struggles to render a group of enforcers, causing them to flicker.
+
+LUCKY (V.O.)
+/glitch_attack visual_disruption (Target: Enforcer_Group_01)
+
+The enforcers' forms distort violently, their movements becoming erratic. It buys them precious seconds. But more are coming, and the drones are closing in.
+
+ANYA
+(To Elara, as they run)
+How do we get you more stable? More power?
+
+ELARA
+(Gasping, pointing to a series of flickering lampposts)
+Those... they're old power conduits. Residual energy. If I can... if I can tap into them...
+
+They reach the first lamppost. Its light flickers erratically, a sign of its instability. Elara reaches out, her hand trembling. Anya places her hand over Elara's, lending her strength. Lucky stands guard, deflecting another energy blast that scorches the ground near them.
+
+ELARA (V.O.)
+/glitch_transfer energy_siphon (Source: Lamppost_Conduit_01) (Target: Elara_Avatar)
+
+A faint, blue energy arcs from the lamppost into Elara. Her body shimmers, and the uncontrolled static around her lessens. Her breathing becomes more even. The holographic butterfly from her hand reappears, larger and more stable, fluttering around her head.
+
+ELARA
+(Stronger)
+It's working! But it's not enough. We need more.
+
+They move from lamppost to lamppost, Elara siphoning residual energy, her Manifestor powers growing with each successful transfer. The butterfly around her grows, becoming a small, glowing orb that illuminates their path through the increasingly chaotic park.
+
+The Metal Mafia's response is escalating. The park's environment is now a maelstrom of glitches. Trees stretch into impossible heights, then shrink to saplings. The ground ripples like water. The drones are firing indiscriminately, their blasts tearing holes in the fabric of the simulation.
+
+They finally reach the old maintenance tunnel. It's a dark, gaping maw in the side of a hill, its entrance flickering with digital instability. Elara, now significantly stronger, extends her hands towards it.
+
+ELARA (V.O.)
+/glitch_stabilize tunnel_entrance (Duration: 60_seconds)
+
+The tunnel entrance shimmers, then solidifies, its flickering edges becoming sharp and defined. The chaotic glitches around it recede, creating a small, stable bubble.
+
+ANYA
+(Urgent)
+Go! Get inside!
+
+Lucky, Anya, and Elara dive into the tunnel just as a massive energy blast from a drone obliterates the ground where they stood moments before. The tunnel entrance shimmers again, then collapses behind them, sealing them in darkness.
+
+They are safe, for now. The air inside the tunnel is cool, damp, and smells of old earth and faint ozone. Elara leans against the rough wall, exhausted but resolute. The glowing butterfly orb hovers steadily beside her.
+
+ELARA
+(Panting)
+That was... close. The Core... it's deep. And heavily guarded. But I can feel it now. The path is clearer.
+
+Lucky looks back at the collapsed entrance, then at Elara. They have a guide, a powerful one. But the Metal Mafia knows they're here. The hunt has begun.
+
+FADE OUT.

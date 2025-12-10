@@ -1,0 +1,55 @@
+# Book Outline: Avanta.C
+
+This outline details the chapter breakdown for the novel, based on the provided screenplay synopsis and scene files. The goal is to create a 75k-100k word novel across 13 chapters, with each chapter approximately 4,000-5,000 words (10-15 pages).
+
+## Chapter 1: The Escape
+*   **Scene:** 01_escape_from_earth.txt
+*   **Summary:** Lucky's desperate escape from the oppressive EMPRIE on Earth, his rescue by the Blue Bird Bounty Hunter, and his forced entry into the virtual world of Avanta.C.
+
+## Chapter 2: Arrival in Avanta.C
+*   **Scene:** 02_arrival_in_avantac.txt
+*   **Summary:** Lucky's initial disorientation and wonder upon experiencing the vibrant, overwhelming, and dangerous digital landscape of Avanta.C for the first time.
+
+## Chapter 3: Meeting Astra
+*   **Scene:** 03_meeting_astra.txt
+*   **Summary:** Lucky's first encounter with Astra, a mysterious and powerful mage who offers him guidance and protection in the unfamiliar virtual world.
+
+## Chapter 4: Exploring the Renaissance Faire
+*   **Scene:** 04_the_renaissance_faire.txt
+*   **Summary:** Lucky and Astra's exploration of a whimsical Renaissance Fair within Avanta.C, where Lucky is captivated by a rare, wish-granting cat.
+
+## Chapter 5: Troll City and Fairy City
+*   **Scenes:** 05_troll_city.txt, 06_fairy_city.txt
+*   **Summary:** Their journey through the contrasting environments of the industrial and imposing Troll City, followed by the ethereal beauty and wonder of Fairy City.
+
+## Chapter 6: The Illegal Furry Server
+*   **Scene:** 07_the_illegal_furry_server.txt
+*   **Summary:** Astra introduces Lucky to a hidden, anarchic server populated by players with unique and often bizarre animalistic avatars, revealing a different side of Avanta.C.
+
+## Chapter 7: Leveling Up
+*   **Scene:** 08_leveling_up.txt
+*   **Summary:** Lucky and Astra assess their current stats and decide to actively pursue "grinding" for experience points and better equipment to enhance their capabilities.
+
+## Chapter 8: The Lost Temple
+*   **Scene:** 09_the_lost_temple.txt
+*   **Summary:** Their first significant quest together, involving navigating the treacherous Lost Temple, defeating various monsters, and acquiring valuable loot.
+
+## Chapter 9: Upgrades and Crafting
+*   **Scene:** 10_upgrades_and_crafting.txt
+*   **Summary:** Lucky and Astra utilize their newly acquired resources to upgrade their gear and delve into the intricate crafting system of Avanta.C, enhancing their combat readiness.
+
+## Chapter 10: The Magic Tree and Meeting Kael
+*   **Scenes:** 11_the_magic_tree.txt, 12_meeting_kael.txt
+*   **Summary:** They discover the mystical Magic Tree, a source of new spells and abilities, and are subsequently approached by the enigmatic merchant Kael, who seems to know more than he lets on.
+
+## Chapter 11: The Lost Expedition and Ambush
+*   **Scenes:** 13_the_lost_expedition.txt, 14_ambush_in_eldrador.txt
+*   **Summary:** Lucky, Astra, and Kael embark on a quest to find a lost expedition, which leads them into a dangerous ambush by wolves in the desolate ruins of Eldrador.
+
+## Chapter 12: The Eldridian Amulet and Edge Dangerman's Trap
+*   **Scenes:** 15_the_eldridian_amulet.txt, 16_edge_dangermans_trap.txt
+*   **Summary:** They uncover the powerful Eldridian Amulet, which inadvertently triggers a trap set by Edge Dangerman, the ruthless leader of the Metal Mafia, leading to a confrontation.
+
+## Chapter 13: Kael's Betrayal and The Avanta.C Server Room
+*   **Scenes:** 17_kaels_betrayal_and_revelation.txt, 18_the_avantacy_server_room.txt
+*   **Summary:** Kael reveals his true identity as a Nova Spetsnaz agent and his mission to dismantle the Metal Mafia, culminating in a critical infiltration of their headquarters and an unexpected turn of events in the Avanta.C server room.

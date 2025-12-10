@@ -1,0 +1,50 @@
+### **WORLDBUILDING BIBLE**
+
+**SETTINGS**
+
+*   **ATLANTIS PRIME**
+    *   **Type:** Primary Human Habitation Zone
+    *   **Description:** A massive, state-of-the-art underwater city, humanity's crown jewel and primary sanctuary after the Carcazod plague. It is a network of enormous, interconnected biodomes and crystalline towers that scrape the seabed.
+    *   **Atmosphere:** Clean, sterile, and corporate. A world of glass and chrome run by the UN Reconstruction Authority. The constant, low HUM of the city's life support and pressure controls is a fact of life.
+    *   **Key Locations:** The Triton Tower (seat of corporate power), Club Nova (the seedy underbelly), UN Council Chambers, high-tech medical bays.
+
+*   **MARS**
+    *   **Type:** Contested Homeworld
+    *   **Description:** A planet in decline. The terraforming projects of a past golden age are failing, leading to an unstable climate and frequent, violent dust storms. The cities are grand but decaying. It is a world bleeding out, fought over by the remnants of its population.
+    *   **Atmosphere:** Tense, desperate, and dangerous. A powder keg of political instability and resource scarcity.
+
+**FACTIONS & GROUPS**
+
+*   **UN RECONSTRUCTION AUTHORITY**
+    *   **The new face of human government.** Bureaucratic, cautious, and focused on maintaining the fragile peace. They control Atlantis Prime and are the ultimate diplomatic prize for the Martian factions.
+
+*   **ZARA'S DOMINION**
+    *   **A rising Martian power.** A disciplined, militaristic faction led by Zara. They believe in order through strength and see the old monarchy as weak. Their forces are well-equipped and highly loyal.
+
+*   **THE QUEEN'S LOYALISTS**
+    *   **The dying monarchy of Mars.** The remnants of the Red Queen's forces. Outnumbered and outgunned, they are fighting a desperate war of survival, their loyalty to their Queen being their primary motivator.
+
+*   **THE CLONES**
+    *   **A Martian underclass.** Genetically engineered beings who formed the backbone of the Martian workforce and army. With the supply of "blood" (a nutrient supplement) failing, many have devolved into "Vampires," feral and desperate, while others like Ratchet have carved out lives in the shadows.
+
+*   **THE CARCAZODS**
+    *   **The original threat.** A species of hyper-aggressive mutants that consumed the surface of Earth, driving humanity into the sea. They were thought to be mindless beasts who couldn't swim.
+    *   **The New Threat:** Under the Architect's influence, they are evolving, showing signs of intelligence, strategic thought, and the ability to test defenses.
+
+**ITEMS & TECHNOLOGY**
+
+*   **THE MUTAGEN**
+    *   **The central MacGuffin.** A highly advanced biological agent. In its pure form, it has the potential to regenerate Earth's biosphere. In its weaponized form, it is a horrific plague.
+    *   **True Origin:** Derived from Carcazod DNA by the Architect, designed as a tool to control both humanity and the Carcazods themselves.
+
+*   **BLOOD PIPES**
+    *   **Martian clone life support.** A network of pipes on Mars that supplied clones with the vital nutrients they needed to survive. Their decay and destruction during the civil war is the direct cause of the "Vampire" problem.
+
+*   **HOLOGRAPHIC COMMS**
+    *   The standard for long-distance communication, projecting life-sized images of the participants.
+
+*   **MAGLEV TRANSIT**
+    *   The primary transportation within Atlantis Prime, with shuttles speeding through transparent tubes connecting the various domes and towers.
+
+*   **THE STARLIGHT SERENADE**
+    *   A small, unarmed, and very fast diplomatic courier ship belonging to the Red Queen. Used by the trio to make the desperate run to the UN Envoy ship.

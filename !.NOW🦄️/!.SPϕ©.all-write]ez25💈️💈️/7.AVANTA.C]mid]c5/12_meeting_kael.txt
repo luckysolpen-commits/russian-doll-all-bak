@@ -1,0 +1,125 @@
+INT. AVANTA.C - ENCHANTED FOREST - DAY
+
+Lucky and Astra trek through a part of Avanta.C's forest they haven't explored before. The trees here are ancient, their branches interwoven to form a natural cathedral. Sunlight filters through the leaves in shifting patterns of gold and emerald. The air hums with a subtle, almost imperceptible energy.
+
+Suddenly, the forest opens into a clearing. In its center stands a colossal, ancient TREE, unlike any they've seen. Its bark is a swirling tapestry of iridescent colors, and its branches, thick as ancient oaks, glow with an otherworldly, pulsating light. Strange, luminous runes are etched into its trunk, shifting and reforming like liquid.
+
+LUCKY
+(Whispering, awestruck)
+What is that?
+
+ASTRA
+(Her eyes wide with recognition)
+The Magic Tree. I've only heard legends. It's said to be the source of all magic in Avanta.C, a place where raw arcane energy can be harnessed.
+
+As they approach, a gentle, resonant VOICE, seemingly emanating from the tree itself, whispers in their minds, a chorus of ancient wisdom.
+
+MAGIC TREE (V.O.)
+Ah, brave adventurers! Welcome to the Magic Tree. Here, you can unlock the secrets of magic and craft your own spells. Choose wisely, for your path will be forged by your decision.
+
+A holographic interface, shimmering with arcane symbols, materializes before them. It presents three distinct, glowing pathways:
+
+**MAGICAL PATHWAYS:**
+
+1.  **ELEMENTAL:** (Symbol: A swirling vortex of fire, water, earth, and air)
+    *   *Focuses on raw destructive and protective forces of nature.*
+
+2.  **ILLUSIONARY:** (Symbol: A shifting, shimmering mirage)
+    *   *Focuses on deception, stealth, and mind manipulation.*
+
+3.  **DIVINE:** (Symbol: A radiant, angelic wing)
+    *   *Focuses on healing, blessings, and holy protection.*
+
+Lucky's curiosity is piqued by the Elemental path. He feels a primal connection to the raw power it represents.
+
+LUCKY
+(To Astra)
+Elemental. I want to control fire and earth.
+
+Astra, ever the strategist, considers the options. Her mage instincts draw her to the Illusionary path.
+
+ASTRA
+(Nodding)
+Illusionary for me. Deception can be a powerful weapon.
+
+They each touch their chosen path on the interface. The Magic Tree pulses, and new sub-menus appear, displaying spell recipes and crafting commands.
+
+**ELEMENTAL PATH - SPELL CRAFTING (LUCKY'S INTERFACE):**
+
+Lucky opens his CONSOLE COMMAND INTERFACE.
+
+LUCKY (V.O.)
+/craft spell Firebolt (Requires: 1x Ember Shard, 1x Wind Essence)
+
+A small, fiery orb appears in his hand, crackling with energy. He aims it at a nearby rock, and it explodes with a satisfying CRACK, leaving a scorch mark.
+
+LUCKY (V.O.)
+/craft spell StoneSkin (Requires: 2x Earth Crystal, 1x Water Droplet)
+
+His skin momentarily hardens, feeling like rough stone. He tests it by punching a tree, and his hand feels impervious.
+
+**ILLUSIONARY PATH - SPELL CRAFTING (ASTRA'S INTERFACE):**
+
+Astra, meanwhile, is already experimenting.
+
+ASTRA (V.O.)
+/craft spell ShadowyDuplicate (Requires: 1x Shadow Silk, 1x Dream Dust)
+
+A perfect, silent replica of Astra shimmers into existence beside her, then fades away. It's so realistic, Lucky almost does a double-take.
+
+ASTRA (V.O.)
+/craft spell SmokeBomb (Requires: 1x Ash Powder, 1x Cloud Vapor)
+
+She throws a small, dark orb to the ground. It erupts in a thick, opaque cloud of smoke, completely obscuring them for a few seconds before dissipating.
+
+**DIVINE PATH - DISCOVERY (LUCKY'S INTERFACE):**
+
+Lucky, intrigued by the Divine path, decides to explore it further, even though he didn't choose it as his primary. He finds that while he can't *craft* Divine spells without choosing the path, he can *learn* them if he finds the right components or scrolls.
+
+LUCKY (V.O.)
+/learn spell HolyHealing (Requires: Holy Scroll, 1x Divine Essence)
+
+(A notification appears: "Holy Scroll not found. Divine Essence not found.")
+
+LUCKY (V.O.)
+/learn spell DivineProtection (Requires: Divine Scroll, 2x Angelic Feather)
+
+(Another notification: "Divine Scroll not found. Angelic Feather not found.")
+
+Lucky makes a mental note to look for these rare components.
+
+**GENERAL CRAFTING ABILITIES:**
+
+Beyond magic, the Magic Tree also reveals the deeper crafting mechanics of Avanta.C. A new tab appears on their interfaces: **GENERAL CRAFTING**.
+
+LUCKY (V.O.)
+/craft tool WoodenStaff (Requires: 3x Wood Log, 1x Leather Strap)
+
+A simple, sturdy wooden staff materializes in his hands. It's basic, but functional.
+
+LUCKY (V.O.)
+/craft armor LeatherArmorSet (Requires: 5x Cured Leather, 2x Iron Ore)
+
+He crafts a full set of light leather armor, which automatically equips, replacing his basic starting gear. His defense stat (visible in his character menu) ticks up.
+
+ASTRA (V.O.)
+/craft potion MinorManaPotion (Requires: 1x Mana Herb, 1x Empty Vial)
+
+A small, glowing blue vial appears in her hand. She adds it to her inventory.
+
+They spend hours at the Magic Tree, experimenting with different combinations, their inventories slowly filling with newly crafted items and their spell lists expanding. The possibilities seem endless, and the depth of Avanta.C's crafting system is truly impressive.
+
+LUCKY
+(Looking at his growing inventory)
+This is amazing. We can make almost anything!
+
+ASTRA
+(Smiling, a faint magical glow around her)
+Indeed. Knowledge is power in Avanta.C. And now, we have a lot more of both. But we're still missing something crucial: information. Information about the world, about potential threats, and about opportunities.
+
+She closes her interface, a thoughtful expression on her face.
+
+ASTRA
+I think it's time we checked the Mission Board. There's always someone looking for help, and often, those quests lead to valuable intel.
+
+FADE OUT.

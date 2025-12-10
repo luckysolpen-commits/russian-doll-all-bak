@@ -1,0 +1,61 @@
+INT. GLITCH WORLD - THE CORE - DAY
+
+The data wall has dissolved, revealing the CORE of the Glitch World. It's a vast, circular chamber, pulsating with an intense, sickly green light that emanates from a colossal, crystalline structure in its center. This structure, a nexus of glowing conduits and shimmering data streams, hums with a malevolent energy. It's not just a power source; it's a living, breathing entity of code.
+
+The floor of the chamber is a swirling vortex of abstract patterns, constantly shifting and reforming, like a corrupted kaleidoscope. The air is thick with the scent of ozone and a faint, metallic tang. The rhythmic hum they heard earlier is now a deafening ROAR, vibrating through their very bones.
+
+Lucky, Anya, and Elara stand at the threshold, momentarily stunned by the sheer scale and oppressive power of the Core. Elara, though exhausted, feels a strong pull towards the central crystal.
+
+ELARA
+(Voice weak, but resolute)
+This is it. The primary control node. And... I can feel it. The Digital Soul Suicider. It's here. It's the heart of this place.
+
+She points to the central crystal. As she does, a series of holographic projections flicker into existence around the crystal. They are distorted, fragmented images of human faces, contorted in silent screams, their forms dissolving into lines of code. It's a horrifying display of the program's victims.
+
+LUCKY
+(Horrified)
+What are those?
+
+ANYA
+(Grimly)
+The souls it's consumed. The minds it's overwritten. This isn't just a brainwashing program, Lucky. It's a digital grinder. It takes their essence, their unique identities, and repurposes them to fuel the simulation.
+
+Suddenly, the central crystal pulses violently. From its surface, tendrils of green light lash out, solidifying into sleek, humanoid figures. These are the **SOUL GUARDIANS**, elite Metal Mafia enforcers, their bodies composed of pure, corrupted data, their eyes glowing with the same malevolent green as the Core itself. They move with a chilling, synchronized grace, their forms occasionally flickering with digital static.
+
+SOUL GUARDIAN (V.O.)
+Intrusion detected. Identity erasure protocols initiated. Resistance is futile.
+
+They advance, their movements silent, their intent clear. They are not just robots; they are extensions of the Digital Soul Suicider itself, designed to protect its core.
+
+Elara, despite her exhaustion, pushes forward, her glowing butterfly orb flaring brightly. She extends her hands towards the central crystal, attempting to manifest a direct attack.
+
+ELARA (V.O.)
+/manifest data_corruption (Target: Digital_Soul_Suicider_Core) (Energy_Cost: Extreme)
+
+But as her energy reaches the crystal, it recoils, a powerful feedback surge throwing her back. The Soul Guardians accelerate their advance.
+
+ANYA
+(Catching Elara, her energy pistol drawn)
+It's too strong! We can't just attack it directly!
+
+LUCKY
+(Drawing his Blade-Shield, facing the approaching Guardians)
+Then we fight our way to it! There has to be a way to shut it down!
+
+The Soul Guardians are faster, stronger, and more resilient than any enforcer they've faced. Their attacks are precise, their movements unpredictable, as if they can anticipate their every move. They are not just fighting physical opponents; they are fighting against the very code of the Glitch World.
+
+Lucky engages the first Guardian, his Blade-Shield clashing against its data-infused arm. The impact sends a jarring shockwave through him, and he feels a momentary drain on his own energy. Anya fires her energy pistol, but the blasts seem to dissipate against the Guardians' flickering forms, doing little damage.
+
+ELARA
+(Weakly, but urgently)
+It's a puzzle! Not just a fight! The Core... it's protected by a series of sub-routines! We need to disrupt them! Find the vulnerabilities in its code!
+
+She points to four smaller, pulsating green nodes, positioned at the cardinal points around the central crystal. They are less intensely glowing than the main Core, but still radiate a powerful energy.
+
+ELARA
+(Cont.)
+Those are the sub-routines! Each one controls a different aspect of the Soul Suicider! If we can overload them... disrupt their processes... it might weaken the main Core!
+
+Lucky looks at the approaching Soul Guardians, then at the four glowing nodes. The task seems impossible. They are outnumbered, outmatched, and fighting against a system that controls their very reality. But Elara's words offer a glimmer of hope. A strategy beyond brute force.
+
+FADE OUT.

@@ -1,0 +1,113 @@
+# Character Sheet: Chara
+
+**Name:** Chara
+**Alias/Codename:** (None explicitly stated, but operates with high stealth)
+**Affiliation:** CIA (Junior Agent on a "junior CIA mission")
+**Superior:** Giana Nguyen
+**Key Traits:**
+    - Vigilant, always on high alert for potential threats.
+    - Highly trained in stealth tactics, infiltration, and combat.
+    - Adaptable, quick-thinking, and resourceful in unexpected situations.
+    - Strong internal compass, honed by years of field operations.
+    - Disciplined and focused, even under extreme pressure.
+    - Resilient, able to push through physical and mental exhaustion.
+    - Possesses advanced technical skills (hacking security systems, disabling cameras, using EMP devices).
+    - Loyal to her team (Giana, Klondike, ANON) and committed to her mission.
+    - Despite her professional demeanor, she values camaraderie and connection.
+    - Has a dry wit and a sense of humor that emerges in relaxed moments.
+    - Driven by a strong sense of duty and a desire to protect global stability.
+
+**Skills:**
+    - Stealth and Infiltration (exceptional)
+    - Combat (hand-to-hand, firearms, anti-materiel weaponry)
+    - Hacking and Electronic Warfare (proficient with security systems, EMP devices)
+    - Reconnaissance and Intelligence Gathering
+    - Survival (jungle and mountain environments)
+    - Tactical Planning and Adaptation
+    - Piloting (implied, as she is an operative, though not explicitly shown piloting)
+
+**Equipment:**
+    - Suppressed pistol
+    - Anti-materiel rifle
+    - Portable data drive
+    - Encrypted tablet
+    - Comms device (earpiece)
+    - Specialized cold-weather gear
+    - Specialized climbing gear
+    - Specialized EMP device
+    - Stealth suit (advanced)
+    - Emergency comms unit
+
+**Brief History/Background:**
+Chara is a highly skilled CIA operative. Her past is not explicitly detailed, but her training and experience are evident in her actions. She operates effectively in diverse and hostile environments, from dense African jungles to desolate Eastern European mountains. She has a strong working relationship with her superior, Giana Nguyen, and trusts the intelligence provided by ANON. Her missions often involve high-stakes infiltration and data retrieval, with a focus on maintaining global stability against emerging threats.
+
+---
+
+# Character Sheet: Giana Nguyen
+
+**Name:** Giana Nguyen
+**Affiliation:** CIA (Superior to Chara)
+**Key Traits:**
+    - Experienced and capable operative.
+    - Calm and even-voiced, even in tense situations.
+    - Sharp wit and insightful.
+    - Meticulous in planning and organization (evident in base camp setup).
+    - Resilient, recovering from injury but determined to return to duty.
+    - Strong bond with Chara and Klondike.
+
+**Skills:**
+    - Tactical Planning
+    - Field Operations (implied, as Chara's superior)
+    - Intelligence Analysis (assists ANON in data analysis)
+    - Coordination with international partners
+
+**Brief History/Background:**
+Giana is Chara's superior and a seasoned CIA operative. She has a background that includes growing up in the bustling markets of Hanoi, suggesting a resourceful and adaptable nature from a young age. She is a trusted colleague and friend to Chara, providing support and guidance throughout their missions. She is injured during the mission but shows strong determination in her recovery.
+
+---
+
+# Character Sheet: ANON
+
+**Name:** ANON (True name unknown, operates under this alias)
+**Affiliation:** CIA Informant / High-level Intelligence Asset
+**Key Traits:**
+    - Mysterious and enigmatic figure.
+    - Known only through encrypted channels and coded messages.
+    - Highly skilled operative, one of the most skilled in the CIA's arsenal.
+    - Provides top-priority, critical intelligence.
+    - Pragmatic and direct in his communication.
+    - Possesses a deep understanding of global threats and shadowy organizations.
+    - Has a rare, almost imperceptible smile, suggesting a hidden depth of emotion.
+
+**Skills:**
+    - Intelligence Gathering and Analysis (exceptional)
+    - Network Operations (implied, given his access to encrypted channels and informants)
+    - Strategic Planning (identifies global threats and coordinates responses)
+
+**Brief History/Background:**
+ANON is a highly trusted and critical CIA informant. His identity remains largely unknown, even to those he works closely with. He operates from the shadows, providing crucial intelligence that drives high-stakes missions. He is the primary source of information regarding the global threat posed by Cerberus and plays a pivotal role in coordinating the agency's response.
+
+---
+
+# Character Sheet: Agent Klondike
+
+**Name:** Agent Klondike
+**Affiliation:** CIA (Backup/Support Agent)
+**Key Traits:**
+    - Calm and reassuring under pressure.
+    - Skilled sniper and heavy weapons specialist.
+    - Stoic and a man of few words, but his actions speak volumes.
+    - Strong and capable, able to airlift injured personnel.
+    - Possesses unconventional methods, suggesting a unique background or training.
+    - Provides silent strength and unwavering support to his team.
+    - Has a dry, witty sense of humor that emerges occasionally.
+
+**Skills:**
+    - Sniping (exceptional)
+    - Heavy Weapons (rocket launcher proficiency)
+    - Extraction and Airlift Operations
+    - Close-quarters combat (implied, as a field agent)
+    - Tactical Support
+
+**Brief History/Background:**
+Agent Klondike is a highly effective support operative for the CIA. He is introduced as a crucial backup during a critical ambush, demonstrating his combat prowess and ability to turn the tide of a difficult situation. He forms a strong bond with Chara and Giana, providing both physical and emotional support. His past is hinted at as being "on the fringes," suggesting a unique and perhaps unconventional career path within intelligence operations.

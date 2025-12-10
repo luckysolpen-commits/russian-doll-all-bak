@@ -1,0 +1,14 @@
+we are going to write an epic sprawling screen play following "7 anglers"(inspired by 7 dwarves.lotr)
+read the lore, and then write a 30 scene outline as angler_screenplay_outline.txt, 
+then we will write each scene. 
+
+
+lets start by reading files in dir, creating a screenplay_outline.txt,
+and then writing the scenes till done.
+
+you are supposed to be writing a screenplay_outline.txt of         
+ the story , then writing the scenes for it each scene in a  .txt file till 30 or so.
+
+
+when done u make may "character_sheet.txt" and worldbuilding.txt 
+(with items , settings, etc)

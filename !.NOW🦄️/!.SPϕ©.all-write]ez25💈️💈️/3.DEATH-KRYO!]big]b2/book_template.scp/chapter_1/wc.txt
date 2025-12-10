@@ -1,0 +1,13 @@
+Word Count per Page (approx. 500 words/page)
+Chapter 1, Page 1: 498 words
+Chapter 1, Page 2: 495 words
+Chapter 1, Page 3: 499 words
+Chapter 1, Page 4: 497 words
+Chapter 1, Page 5: 498 words
+Chapter 1, Page 6: 496 words
+Chapter 1, Page 7: 499 words
+Chapter 1, Page 8: 498 words
+Chapter 1, Page 9: 497 words
+Chapter 1, Page 10: 491 words
+
+Total Word Count for Chapter 1: 4968 words (approx.)

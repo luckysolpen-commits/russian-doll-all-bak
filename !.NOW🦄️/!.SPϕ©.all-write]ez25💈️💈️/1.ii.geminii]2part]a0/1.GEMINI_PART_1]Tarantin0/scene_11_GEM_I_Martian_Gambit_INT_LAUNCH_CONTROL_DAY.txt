@@ -1,0 +1,54 @@
+**GEM&I: Martian Gambit**
+
+**Scene 11**
+
+**INT. LAUNCH CONTROL - DAY**
+
+A cavernous room filled with rows of computer terminals, all dark and silent. A massive screen at the front of the room shows a schematic of the Seraph's Folly.
+
+ASTRA works frantically at the main console, her fingers a blur across the keyboard. The room is filled with the sound of her typing and the hum of the reactivated systems.
+
+<center>ASTRA</center>
+> I'm in. Bypassing the perimeter fence... now.
+
+EXT. PERIMETER FENCE - CONTINUOUS
+
+The armored truck, with LUCKY and GEM inside, speeds towards the fence. The electric hum of the fence dies just as they are about to hit it. The truck smashes through the gate and into the facility.
+
+INT. LAUNCH CONTROL - CONTINUOUS
+
+<center>ASTRA</center>
+> They're in. Now for the drones.
+
+She types another series of commands. On the main screen, a map of the facility shows a series of red dots (the drones) converging on the location of the truck.
+
+<center>ASTRA</center>
+> I can't disable them, but I can... reroute them.
+
+She creates a series of false signals, sending the drones on a wild goose chase to the far side of the facility.
+
+EXT. LAUNCH FACILITY - CONTINUOUS
+
+The truck weaves through the facility, dodging the few drones that haven't been fooled by Astra's trick. LUCKY is driving with a grim determination. GEM is in the back, firing a salvaged machine gun at the pursuing drones.
+
+<center>GEM</center>
+> This is better than video games!
+
+INT. LAUNCH CONTROL - CONTINUOUS
+
+<center>ASTRA</center>
+> Almost there... I'm initiating the launch sequence. It's automated, but it will take a few minutes to cycle.
+
+Suddenly, a new set of alarms blare. A new set of red dots appears on the screen, this time converging on Astra's position.
+
+<center>ASTRA</center>
+> They know I'm here.
+
+She looks at the door to the control room. It is a heavy blast door. She types a command, and the door seals shut.
+
+<center>ASTRA</center>
+> That won't hold them for long.
+
+She turns back to the console, her face illuminated by the glow of the screen. The launch sequence is counting down.
+
+**FADE OUT.**

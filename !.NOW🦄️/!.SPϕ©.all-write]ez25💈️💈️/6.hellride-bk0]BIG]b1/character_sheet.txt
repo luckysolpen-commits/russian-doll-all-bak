@@ -1,0 +1,38 @@
+# Character Sheet: HELLRIDE
+
+## Lucky
+- **Role:** Protagonist, reluctant hero.
+- **Arc:** From pawn to determined survivor, seeking freedom and revenge.
+- **Key Traits:** Resilient, resourceful, determined, adaptable, possesses knowledge of bot programming.
+- **Physicality:** Initially weary and bruised, later agile and stealthy.
+- **Motivation:** Escape Earth, revenge against Edge, find a new life in Avanta.C.
+
+## The Architect / Supreme Emperor Sol
+- **Role:** Antagonist, visionary with a hint of madness.
+- **Key Traits:** Ambitious, powerful, charismatic, believes in a new era under his rule.
+- **Motivation:** To reshape reality with the Metal Sun, establish his empire.
+
+## Edge Dangerman
+- **Role:** Secondary antagonist, betrayer, leader of the Metal Mafia.
+- **Key Traits:** Ruthless, power-hungry, opportunistic, enjoys tormenting Lucky.
+- **Motivation:** Personal gain, control, thriving in the new order.
+
+## Astra
+- **Role:** Supporting character, initially loyal to Lucky, later joins the Architect.
+- **Key Traits:** Strong-willed, protective, but also pragmatic and adaptable.
+- **Motivation:** Survival, possibly seeking to influence the Architect from within.
+
+## Blue Bird Bounty Hunter
+- **Role:** Supporting character, morally ambiguous ally.
+- **Key Traits:** Calculating, mercenary, skilled pilot and smuggler, pragmatic.
+- **Motivation:** Profit, but also seems to have a code of conduct (honoring deals).
+
+## Smugglers
+- **Role:** Minor characters, provide a means to an end for Lucky.
+- **Key Traits:** Wary, opportunistic, operate in the black market.
+- **Motivation:** Profit, survival in the harsh new world.
+
+## Twitch (Avanta.C Avatar)
+- **Role:** New supporting character in Avanta.C, potential ally.
+- **Key Traits:** Distrustful, observant, hints at knowledge of the Empire's true nature.
+- **Motivation:** Unclear, but seems to be part of a resistance or seeking truth.

@@ -1,0 +1,14 @@
+"I can do it," you say, picking up the data chip. You're a pilot, not a slicer, but you were trained in basic computer intrusion. And you're a fast learner.
+
+"Good," Zi says. "Don't disappoint us, 700."
+
+The next day, you find a public access terminal in a crowded market and get to work. The Starpath Transit hub's network is well-protected, but it's a corporate system, not a military one. You find a back door in the public booking system, elevate your privileges, and access the cargo manifests.
+
+You find the flagged shipment of "agricultural equipment." You are about to erase the flag when you notice something else. Another shipment, on the same transport, destined for the same location. It's listed as "medical supplies," and it's being sent by Redplanet Labs.
+
+This could be a coincidence. Or it could be a trap. The rebels are expecting weapons. What if they are walking into an ambush, and the "medical supplies" are actually a biological weapon?
+
+You have a choice to make. You can stick to the plan and just erase the flag on the weapons shipment. Or you can investigate the RPL shipment, a risky and time-consuming move that could expose you.
+
+*   If you stick to the plan and erase the flag, turn to page 93.
+*   If you investigate the Redplanet Labs shipment, turn to page 94.

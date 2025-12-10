@@ -1,0 +1,43 @@
+# Character Sheet for "The Metal Sun"
+
+## Lucky
+*   **Role:** Protagonist, citizen of the Metal Sun.
+*   **Key Traits:** Resourceful, resilient, loyal, initially uneasy about Gem's relationship with Sol.
+*   **Relationships:** Partner to Astra, friend to Gem and Gigishixmix.
+*   **Arc:** Starts in a comfortable life, gets entangled in Sol's schemes, discovers Worm Hole X, is ambushed and driven into the wormhole, crash-lands on Planet X, and learns to survive. Develops an Unobtainium suit.
+
+## Astra
+*   **Role:** Lucky's partner.
+*   **Key Traits:** Supportive, concerned, determined, loyal.
+*   **Relationships:** Partner to Lucky, friend to Gem and Gigishixmix.
+*   **Arc:** Supports Lucky, tries to reach him after he's stranded, struggles with the Metal Mafia's blockade.
+
+## Gem
+*   **Role:** Lucky and Astra's friend, mother of Riley.
+*   **Key Traits:** Complex, conflicted, secretive, determined, ambitious.
+*   **Relationships:** Friend to Lucky and Astra, mother of Riley (with Sol), has a complicated relationship with Sol.
+*   **Arc:** Escapes with Riley, seeks Lucky's help, navigates her feelings for both Lucky and Sol, becomes increasingly uneasy about Riley's rapid growth and Sol's actions, feels guilt over the Metal Sun's destruction.
+
+## Sol
+*   **Role:** Antagonist, leader of the Metal Mafia (secretly), creator of clone sons.
+*   **Key Traits:** Obsessive, manipulative, powerful, ruthless, believes in purging "sin."
+*   **Relationships:** Father of Riley (with Gem), controls the Metal Mafia.
+*   **Arc:** Continues his obsession with creating and killing "sinful" sons, gains a "Super Son Powersuit," becomes a major threat to the Metal Sun. Revealed to be a puppet of "The Architect."
+
+## Riley
+*   **Role:** Sol and Gem's son, rapidly growing clone.
+*   **Key Traits:** Genetically manipulated for rapid growth, increasingly powerful, potentially destabilizing force.
+*   **Relationships:** Son of Sol and Gem.
+*   **Arc:** Escapes with Gem, grows rapidly, becomes incredibly powerful, his existence threatens the Metal Sun's stability.
+
+## Gigishixmix
+*   **Role:** SodaPop-powered Halobody AI Humanoid, ally to Lucky, Astra, and Gem.
+*   **Key Traits:** Affectionate (especially towards Lucky), "drunkenly burps," enthusiastic, surprisingly helpful, can hack systems, provides quantum-altering "Soda."
+*   **Relationships:** Loyal to Lucky, Astra, and Gem.
+*   **Arc:** Joins the group, provides assistance and comic relief, becomes a source of comfort and support.
+
+## Edge
+*   **Role:** Leader of the Metal Mafia, obsessed with Unobtainium.
+*   **Key Traits:** Ambitious, reckless, power-hungry, obsessed with Unobtainium.
+*   **Relationships:** Leads the Metal Mafia.
+*   **Arc:** Learns of Unobtainium, takes control of the Metal Man Mecha, attempts to steal Unobtainium, causes catastrophic damage to the Metal Sun.
