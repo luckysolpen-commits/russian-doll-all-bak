@@ -90287,3 +90287,1037 @@ Space Pressed: ${last_input_was_space} at (${space_pressed_at_x}, ${space_presse
 modules/+x/canvas_player_v.01.+x
 Enter key (1-9) or 'q' to quit: 
 
+=== FRAME CAPTURED AT: Wed Dec 10 23:05:32 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+${message}
+>[>] 1. Hangman
+   . . . . . . . . . . 
+   . . . . . . . . . . 
+   . . . . . . . . . . 
+   . . . . . . . . . . 
+   . . . . . . . . . . 
+   . . . . . . . . . . 
+   . . . . . . . . . . 
+Word: ${display_word}
+Incorrect guesses: ${incorrect_letters}
+Guesses left: ${guesses_left}
+Game status: ${game_status_text}
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:20 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+>[>] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:24 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+>[>] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:26 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[ ] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:28 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[ ] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:31 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Correct! Letter 'a' is in the word.
+[ ] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ a _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:32 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 5 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+          |
+          |
+          |
+   =========
+Word: _ _ _ a _ _
+Incorrect guesses: b
+Guesses left: 5
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:34 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 4 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+      |   |
+          |
+          |
+   =========
+Word: _ _ _ a _ _
+Incorrect guesses: bi
+Guesses left: 4
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:35 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 3 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|   |
+          |
+          |
+   =========
+Word: _ _ _ a _ _
+Incorrect guesses: bin
+Guesses left: 3
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:36 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 2 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+          |
+          |
+   =========
+Word: _ _ _ a _ _
+Incorrect guesses: bing
+Guesses left: 2
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:38 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Letter already guessed!
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+          |
+          |
+   =========
+Word: _ _ _ a _ _
+Incorrect guesses: bing
+Guesses left: 2
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:39 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 1 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     /    |
+          |
+   =========
+Word: _ _ _ a _ _
+Incorrect guesses: bingo
+Guesses left: 1
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:41 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Correct! Letter 'l' is in the word.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     /    |
+          |
+   =========
+Word: _ l _ a _ _
+Incorrect guesses: bingo
+Guesses left: 1
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:43 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Letter already guessed!
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     /    |
+          |
+   =========
+Word: _ l _ a _ _
+Incorrect guesses: bingo
+Guesses left: 1
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:12:45 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Game Over! The word was: please
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     / \  |
+          |
+   =========
+Word: _ l _ a _ _
+Incorrect guesses: bingox
+Guesses left: 0
+Game status: Lost
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:16 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+>[>] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:17 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+>[>] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:18 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[ ] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:18 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[ ] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:21 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 5 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+          |
+          |
+          |
+   =========
+Word: _ _ _
+Incorrect guesses: a
+Guesses left: 5
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:22 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 4 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+      |   |
+          |
+          |
+   =========
+Word: _ _ _
+Incorrect guesses: ae
+Guesses left: 4
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:23 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 3 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|   |
+          |
+          |
+   =========
+Word: _ _ _
+Incorrect guesses: aei
+Guesses left: 3
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:24 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Correct! Letter 'o' is in the word.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|   |
+          |
+          |
+   =========
+Word: _ _ o
+Incorrect guesses: aei
+Guesses left: 3
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:27 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 2 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+          |
+          |
+   =========
+Word: _ _ o
+Incorrect guesses: aeiu
+Guesses left: 2
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:30 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 1 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     /    |
+          |
+   =========
+Word: _ _ o
+Incorrect guesses: aeiur
+Guesses left: 1
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:31 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Game Over! The word was: who
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     / \  |
+          |
+   =========
+Word: _ _ o
+Incorrect guesses: aeiurs
+Guesses left: 0
+Game status: Lost
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:13:32 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Game over! Type 'restart' to play again.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     / \  |
+          |
+   =========
+Word: _ _ o
+Incorrect guesses: aeiurs
+Guesses left: 0
+Game status: Lost
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:18 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+>[>] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:19 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[^] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:20 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[^] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:21 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[^] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:22 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[^] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:24 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+>[>] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:25 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+>[>] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:25 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[ ] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:27 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Guess a letter!
+[ ] 1. Hangman
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: 
+Guesses left: 6
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:28 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 5 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+          |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: a
+Guesses left: 5
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:29 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 4 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+      |   |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: ab
+Guesses left: 4
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:31 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 3 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|   |
+          |
+          |
+   =========
+Word: _ _ _ _ _
+Incorrect guesses: abu
+Guesses left: 3
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:32 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Correct! Letter 'e' is in the word.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|   |
+          |
+          |
+   =========
+Word: _ e _ _ _
+Incorrect guesses: abu
+Guesses left: 3
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:33 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 2 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+          |
+          |
+   =========
+Word: _ e _ _ _
+Incorrect guesses: abui
+Guesses left: 2
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:35 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Correct! Letter 'o' is in the word.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+          |
+          |
+   =========
+Word: _ e _ _ o
+Incorrect guesses: abui
+Guesses left: 2
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:37 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Letter already guessed!
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+          |
+          |
+   =========
+Word: _ e _ _ o
+Incorrect guesses: abui
+Guesses left: 2
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:44 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Wrong guess! 1 attempts left.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     /    |
+          |
+   =========
+Word: _ e _ _ o
+Incorrect guesses: abuir
+Guesses left: 1
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:46 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Correct! Letter 'l' is in the word.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     /    |
+          |
+   =========
+Word: _ e l l o
+Incorrect guesses: abuir
+Guesses left: 1
+Game status: Playing
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:47 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Game Over! The word was: hello
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     / \  |
+          |
+   =========
+Word: _ e l l o
+Incorrect guesses: abuirs
+Guesses left: 0
+Game status: Lost
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:14:50 2025 ===
+Current file: chtm/hangman.chtm
+
+=== HANGMAN GAME ===
+Game over! Type 'restart' to play again.
+[ ] 1. Hangman
+      +---+
+      |   |
+      O   |
+     /|\  |
+     / \  |
+          |
+   =========
+Word: _ e l l o
+Incorrect guesses: abuirs
+Guesses left: 0
+Game status: Lost
+Enter a letter to guess:
+Controls: Enter a single letter to guess, or 'restart' to start a new game
+modules/+x/hangman.+x
+Enter key (1-9) or 'q' to quit: 
+

@@ -1,0 +1,18 @@
+<panel>
+    <text label="=== HANGMAN GAME ===" /><br/>
+    <text label="${message}" /><br/><br/>
+    
+    <canvas id="hangman_canvas" width="10" height="7" label="Hangman" color="#FFFFFF"/>
+    <br/>
+    
+    <text label="Word: ${display_word}" /><br/>
+    <text label="Incorrect guesses: ${incorrect_letters}" /><br/>
+    <text label="Guesses left: ${guesses_left}" /><br/>
+    <text label="Game status: ${game_status_text}" /><br/>
+    
+    <text label="Enter a letter to guess:" /><br/>
+</panel>
+<cli_io key="0" label="Your guess: ${user_input}" /><br/>
+
+<text label="Controls: Enter a single letter to guess, or 'restart' to start a new game" />
+<module>modules/+x/hangman.+x</module>
