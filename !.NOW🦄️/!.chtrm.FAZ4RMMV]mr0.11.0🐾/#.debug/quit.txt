@@ -1402,3 +1402,27 @@
 ] Signal 2 received, saving canvas state...
 [Tue Dec  9 00:40:39 2025
 ] Canvas state saved from signal 2, exiting...
+[Thu Dec 11 00:18:01 2025
+] Roguelike Module Started
+[Thu Dec 11 00:18:01 2025
+] No saved state found, initialized with defaults
+[Thu Dec 11 00:45:48 2025
+] Roguelike Module Started
+[Thu Dec 11 00:45:48 2025
+] No saved state found, initialized with defaults
+[Signal handler] Signal 2 received
+[Thu Dec 11 00:45:55 2025
+] Signal 2 received, saving game state...
+[Thu Dec 11 00:45:55 2025
+] Game state saved from signal 2, exiting...
+[Thu Dec 11 02:10:43 2025
+] Roguelike Module Started
+[Thu Dec 11 02:10:43 2025
+] Loaded game state: 20x20, player at (10,8), HP: 100, hunger: 6, thirst: 6, sleep: 6, game_status: 0
+[Thu Dec 11 02:10:43 2025
+] Game state loaded successfully from file
+[Signal handler] Signal 2 received
+[Thu Dec 11 02:10:45 2025
+] Signal 2 received, saving game state...
+[Thu Dec 11 02:10:45 2025
+] Game state saved from signal 2, exiting...

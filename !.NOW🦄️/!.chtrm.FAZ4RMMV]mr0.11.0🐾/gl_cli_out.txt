@@ -1,0 +1,1332 @@
+CHTM renderer started. Press 'q' to quit.
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[>] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[ ] 1. [Feed Pet][>] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][>] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[ ] 1. [Feed Pet][>] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[>] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[>] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[>] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[>] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[>] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[ ] 1. [Feed Pet][>] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[ ] 1. [Feed Pet][^] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: TRAIN
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+
+Message: ${pet_message}
+
+[ ] 1. [Feed Pet][^] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=1,pet_hunger=30,pet_energy=65,pet_happiness=65,pet_level=1,pet_xp=12,pet_health=100,pet_state=0,turn_count=1,pet_name=Fluffy,pet_message=Training was difficult. Your pet is frustrated.,current_state_text=Awake,status_emoji= 🐾 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Training was difficult. Your pet is frustrated.
+
+[ ] 1. [Feed Pet][^] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Training was difficult. Your pet is frustrated.
+
+[ ] 1. [Feed Pet][^] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Training was difficult. Your pet is frustrated.
+
+[ ] 1. [Feed Pet][>] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Training was difficult. Your pet is frustrated.
+
+[>] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Training was difficult. Your pet is frustrated.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: FEED
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Training was difficult. Your pet is frustrated.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=2,pet_hunger=0,pet_energy=63,pet_happiness=69,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=2,pet_name=Fluffy,pet_message=You fed your pet. It looks happy and satisfied!,current_state_text=Eating,status_emoji= 🐾 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You fed your pet. It looks happy and satisfied!
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You fed your pet. It looks happy and satisfied!
+
+[>] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You fed your pet. It looks happy and satisfied!
+
+[ ] 1. [Feed Pet][>] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You fed your pet. It looks happy and satisfied!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][>] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You fed your pet. It looks happy and satisfied!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][^] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: PLAY
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You fed your pet. It looks happy and satisfied!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][^] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=3,pet_hunger=7,pet_energy=51,pet_happiness=88,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=3,pet_name=Fluffy,pet_message=You played with your pet. It seems very happy!,current_state_text=Eating,status_emoji= 🐾 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You played with your pet. It seems very happy!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][^] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You played with your pet. It seems very happy!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][>] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You played with your pet. It seems very happy!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][>] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You played with your pet. It seems very happy!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][^] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: SLEEP
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You played with your pet. It seems very happy!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][^] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=3,pet_hunger=9,pet_energy=49,pet_happiness=87,pet_level=1,pet_xp=12,pet_health=100,pet_state=1,turn_count=3,pet_name=Fluffy,pet_message=Your pet is now sleeping and will restore energy.,current_state_text=Sleeping,status_emoji= zzz ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][^] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][^] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][>] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][>] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][>] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][>] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][>] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][>] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: PASS_TURN
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=4,pet_hunger=10,pet_energy=64,pet_happiness=86,pet_level=1,pet_xp=12,pet_health=100,pet_state=1,turn_count=4,pet_name=Fluffy,pet_message=Your pet is now sleeping and will restore energy.,current_state_text=Sleeping,status_emoji= zzz ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 4 days | Turn: 4
+
+Hunger: 10/100
+Energy: 64/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: PASS_TURN
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 4 days | Turn: 4
+
+Hunger: 10/100
+Energy: 64/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=5,pet_hunger=11,pet_energy=79,pet_happiness=85,pet_level=1,pet_xp=12,pet_health=100,pet_state=1,turn_count=5,pet_name=Fluffy,pet_message=Your pet is now sleeping and will restore energy.,current_state_text=Sleeping,status_emoji= zzz ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 5 days | Turn: 5
+
+Hunger: 11/100
+Energy: 79/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: PASS_TURN
+DEBUG: Received from module: VARS:pet_age=6,pet_hunger=12,pet_energy=94,pet_happiness=84,pet_level=1,pet_xp=12,pet_health=100,pet_state=1,turn_count=6,pet_name=Fluffy,pet_message=Your pet is now sleeping and will restore energy.,current_state_text=Sleeping,status_emoji= zzz ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 6 days | Turn: 6
+
+Hunger: 12/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 6 days | Turn: 6
+
+Hunger: 12/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: PASS_TURN
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 6 days | Turn: 6
+
+Hunger: 12/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=7,pet_hunger=13,pet_energy=100,pet_happiness=83,pet_level=1,pet_xp=12,pet_health=100,pet_state=1,turn_count=7,pet_name=Fluffy,pet_message=Your pet is now sleeping and will restore energy.,current_state_text=Sleeping,status_emoji= zzz ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][>] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][>] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][>] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][^] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: WAKE
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is now sleeping and will restore energy.
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][^] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=7,pet_hunger=14,pet_energy=100,pet_happiness=82,pet_level=1,pet_xp=12,pet_health=100,pet_state=0,turn_count=7,pet_name=Fluffy,pet_message=Your pet woke up refreshed!,current_state_text=Awake,status_emoji= 😊 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][^] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][^] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][^] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][^] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][^] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][>] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][>] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[ ] 1. [Feed Pet][ ] 2. [Train Pet][>] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[ ] 1. [Feed Pet][>] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[>] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: FEED
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet woke up refreshed!
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=8,pet_hunger=0,pet_energy=98,pet_happiness=86,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=8,pet_name=Fluffy,pet_message=You fed your pet. It looks happy and satisfied!,current_state_text=Eating,status_emoji= 😊 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 0/100
+Energy: 98/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You fed your pet. It looks happy and satisfied!
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: FEED
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 0/100
+Energy: 98/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You fed your pet. It looks happy and satisfied!
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=8,pet_hunger=2,pet_energy=96,pet_happiness=85,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=8,pet_name=Fluffy,pet_message=Your pet is not hungry right now.,current_state_text=Eating,status_emoji= 😊 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 2/100
+Energy: 96/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: FEED
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 2/100
+Energy: 96/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=8,pet_hunger=4,pet_energy=94,pet_happiness=84,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=8,pet_name=Fluffy,pet_message=Your pet is not hungry right now.,current_state_text=Eating,status_emoji= 😊 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 4/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: FEED
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 4/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=8,pet_hunger=6,pet_energy=92,pet_happiness=83,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=8,pet_name=Fluffy,pet_message=Your pet is not hungry right now.,current_state_text=Eating,status_emoji= 😊 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 6/100
+Energy: 92/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 6/100
+Energy: 92/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[>] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 6/100
+Energy: 92/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: FEED
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 6/100
+Energy: 92/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=8,pet_hunger=8,pet_energy=90,pet_happiness=82,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=8,pet_name=Fluffy,pet_message=Your pet is not hungry right now.,current_state_text=Eating,status_emoji= 😊 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 8/100
+Energy: 90/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: FEED
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+
+Hunger: 8/100
+Energy: 90/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=9,pet_hunger=0,pet_energy=88,pet_happiness=86,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=9,pet_name=Fluffy,pet_message=You fed your pet. It looks happy and satisfied!,current_state_text=Eating,status_emoji= 😊 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+
+Hunger: 0/100
+Energy: 88/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: You fed your pet. It looks happy and satisfied!
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: FEED
+DEBUG: Received from module: VARS:pet_age=9,pet_hunger=2,pet_energy=86,pet_happiness=85,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=9,pet_name=Fluffy,pet_message=Your pet is not hungry right now.,current_state_text=Eating,status_emoji= 😊 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+
+Hunger: 2/100
+Energy: 86/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+
+Hunger: 2/100
+Energy: 86/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Sending IPC command: FEED
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+
+Hunger: 2/100
+Energy: 86/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+DEBUG: Received from module: VARS:pet_age=9,pet_hunger=4,pet_energy=84,pet_happiness=84,pet_level=1,pet_xp=12,pet_health=100,pet_state=2,turn_count=9,pet_name=Fluffy,pet_message=Your pet is not hungry right now.,current_state_text=Eating,status_emoji= 😊 ,;
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+
+Hunger: 4/100
+Energy: 84/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[^] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+[H[JCurrent file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+
+Hunger: 4/100
+Energy: 84/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+
+Message: Your pet is not hungry right now.
+
+[>] 1. [Feed Pet][ ] 2. [Train Pet][ ] 3. [Play with Pet][ ] 4. [Put to Sleep][ ] 5. [Wake Up][ ] 6. [Heal Pet][ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:[ ] 8. Command: digital_pet/+x/digi_pet.+x
+Navigation: Enter element index (1-8) or 'q' to quit

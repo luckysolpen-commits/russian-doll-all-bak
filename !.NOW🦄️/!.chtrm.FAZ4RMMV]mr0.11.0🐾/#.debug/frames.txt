@@ -91321,3 +91321,5969 @@ Controls: Enter a single letter to guess, or 'restart' to start a new game
 modules/+x/hangman.+x
 Enter key (1-9) or 'q' to quit: 
 
+=== FRAME CAPTURED AT: Wed Dec 10 23:58:06 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:58:22 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Wed Dec 10 23:58:35 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+   . . . . . . . . . . . . . . . . . . . . 
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:22 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   ####################
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:22 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   ####################
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:23 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:23 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:23 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:23 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:24 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:24 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:24 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:25 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:25 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:25 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:25 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:26 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:27 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:28 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (11, 10) | HP: 100/100
+Hunger: 1/100 | Thirst: 1/100 | Sleep: 1/100
+Turn: 1 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:28 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..........@.......#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (12, 10) | HP: 100/100
+Hunger: 2/100 | Thirst: 2/100 | Sleep: 2/100
+Turn: 2 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:29 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #...........@......#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (13, 10) | HP: 100/100
+Hunger: 3/100 | Thirst: 3/100 | Sleep: 3/100
+Turn: 3 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:29 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #............@.....#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (12, 10) | HP: 100/100
+Hunger: 4/100 | Thirst: 4/100 | Sleep: 4/100
+Turn: 4 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:29 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #...........@......#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (11, 10) | HP: 100/100
+Hunger: 5/100 | Thirst: 5/100 | Sleep: 5/100
+Turn: 5 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:30 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..........@.......#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 6/100 | Thirst: 6/100 | Sleep: 6/100
+Turn: 6 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:30 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (9, 10) | HP: 100/100
+Hunger: 7/100 | Thirst: 7/100 | Sleep: 7/100
+Turn: 7 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:30 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #........@.........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (8, 10) | HP: 100/100
+Hunger: 8/100 | Thirst: 8/100 | Sleep: 8/100
+Turn: 8 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:30 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.......@..........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (7, 10) | HP: 100/100
+Hunger: 9/100 | Thirst: 9/100 | Sleep: 9/100
+Turn: 9 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:30 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #......@...........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (6, 10) | HP: 100/100
+Hunger: 10/100 | Thirst: 10/100 | Sleep: 10/100
+Turn: 10 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:31 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.....@............#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (6, 9) | HP: 100/100
+Hunger: 11/100 | Thirst: 11/100 | Sleep: 11/100
+Turn: 11 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:32 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.....@............#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (6, 8) | HP: 100/100
+Hunger: 12/100 | Thirst: 12/100 | Sleep: 12/100
+Turn: 12 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:32 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.....@............#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (6, 7) | HP: 100/100
+Hunger: 13/100 | Thirst: 13/100 | Sleep: 13/100
+Turn: 13 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:47 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   ####################
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:48 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:49 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (9, 10) | HP: 100/100
+Hunger: 1/100 | Thirst: 1/100 | Sleep: 1/100
+Turn: 1 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:50 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #........@.........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (8, 10) | HP: 100/100
+Hunger: 2/100 | Thirst: 2/100 | Sleep: 2/100
+Turn: 2 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:52 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.......@..........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (9, 10) | HP: 100/100
+Hunger: 3/100 | Thirst: 3/100 | Sleep: 3/100
+Turn: 3 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:53 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #........@.........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 4/100 | Thirst: 4/100 | Sleep: 4/100
+Turn: 4 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:56 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   ####################
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:58 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:03:59 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:04:00 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (9, 10) | HP: 100/100
+Hunger: 1/100 | Thirst: 1/100 | Sleep: 1/100
+Turn: 1 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:04:00 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #........@.........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (8, 10) | HP: 100/100
+Hunger: 2/100 | Thirst: 2/100 | Sleep: 2/100
+Turn: 2 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:04:02 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.......@..........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (9, 10) | HP: 100/100
+Hunger: 3/100 | Thirst: 3/100 | Sleep: 3/100
+Turn: 3 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:12 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   ####################
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:13 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: Playing
+Inventory: Empty
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:14 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.........@........#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (11, 10) | HP: 100/100
+Hunger: 1/100 | Thirst: 1/100 | Sleep: 1/100
+Turn: 1 | Status: Playing
+Inventory: Empty
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:14 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..........@.......#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (12, 10) | HP: 100/100
+Hunger: 2/100 | Thirst: 2/100 | Sleep: 2/100
+Turn: 2 | Status: Playing
+Inventory: Empty
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:14 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #...........@......#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (13, 10) | HP: 100/100
+Hunger: 3/100 | Thirst: 3/100 | Sleep: 3/100
+Turn: 3 | Status: Playing
+Inventory: Empty
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:15 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #............@.....#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (14, 10) | HP: 100/100
+Hunger: 4/100 | Thirst: 4/100 | Sleep: 4/100
+Turn: 4 | Status: Playing
+Inventory: Empty
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:15 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #.............@....#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (13, 10) | HP: 100/100
+Hunger: 5/100 | Thirst: 5/100 | Sleep: 5/100
+Turn: 5 | Status: Playing
+Inventory: Empty
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:15 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #............@.....#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (12, 10) | HP: 100/100
+Hunger: 6/100 | Thirst: 6/100 | Sleep: 6/100
+Turn: 6 | Status: Playing
+Inventory: Empty
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:15 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #...........@......#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (11, 10) | HP: 100/100
+Hunger: 7/100 | Thirst: 7/100 | Sleep: 7/100
+Turn: 7 | Status: Playing
+Inventory: Empty
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:16 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..........@.......#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (11, 9) | HP: 100/100
+Hunger: 8/100 | Thirst: 8/100 | Sleep: 8/100
+Turn: 8 | Status: Playing
+Inventory: Empty
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:13:16 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..........@.......#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   #..................#
+   ####################
+   ####################
+Player: (11, 8) | HP: 100/100
+Hunger: 9/100 | Thirst: 9/100 | Sleep: 9/100
+Turn: 9 | Status: Playing
+Inventory: Empty
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:01 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.....@....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:03 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.....@....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:03 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####......@...#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (11, 10) | HP: 100/100
+Hunger: 1/100 | Thirst: 1/100 | Sleep: 1/100
+Turn: 1 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:04 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.......@..#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (12, 10) | HP: 100/100
+Hunger: 2/100 | Thirst: 2/100 | Sleep: 2/100
+Turn: 2 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:04 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####......@...#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (11, 10) | HP: 100/100
+Hunger: 3/100 | Thirst: 3/100 | Sleep: 3/100
+Turn: 3 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:04 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.....@....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 4/100 | Thirst: 4/100 | Sleep: 4/100
+Turn: 4 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:04 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 10) | HP: 100/100
+Hunger: 5/100 | Thirst: 5/100 | Sleep: 5/100
+Turn: 5 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:05 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 9) | HP: 100/100
+Hunger: 6/100 | Thirst: 6/100 | Sleep: 6/100
+Turn: 6 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:05 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 8) | HP: 100/100
+Hunger: 7/100 | Thirst: 7/100 | Sleep: 7/100
+Turn: 7 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:05 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 7) | HP: 100/100
+Hunger: 8/100 | Thirst: 8/100 | Sleep: 8/100
+Turn: 8 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:05 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 6) | HP: 100/100
+Hunger: 9/100 | Thirst: 9/100 | Sleep: 9/100
+Turn: 9 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:05 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 5) | HP: 100/100
+Hunger: 10/100 | Thirst: 10/100 | Sleep: 10/100
+Turn: 10 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:05 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 5) | HP: 100/100
+Hunger: 10/100 | Thirst: 10/100 | Sleep: 10/100
+Turn: 10 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:06 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 5) | HP: 100/100
+Hunger: 10/100 | Thirst: 10/100 | Sleep: 10/100
+Turn: 10 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Cannot move there - wall blocking the way!
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:06 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 6) | HP: 100/100
+Hunger: 11/100 | Thirst: 11/100 | Sleep: 11/100
+Turn: 11 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:06 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 7) | HP: 100/100
+Hunger: 12/100 | Thirst: 12/100 | Sleep: 12/100
+Turn: 12 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:06 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 8) | HP: 100/100
+Hunger: 13/100 | Thirst: 13/100 | Sleep: 13/100
+Turn: 13 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:06 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 9) | HP: 100/100
+Hunger: 14/100 | Thirst: 14/100 | Sleep: 14/100
+Turn: 14 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:06 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 10) | HP: 100/100
+Hunger: 15/100 | Thirst: 15/100 | Sleep: 15/100
+Turn: 15 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:07 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 11) | HP: 100/100
+Hunger: 16/100 | Thirst: 16/100 | Sleep: 16/100
+Turn: 16 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:07 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 12) | HP: 100/100
+Hunger: 17/100 | Thirst: 17/100 | Sleep: 17/100
+Turn: 17 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:07 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 13) | HP: 100/100
+Hunger: 18/100 | Thirst: 18/100 | Sleep: 18/100
+Turn: 18 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:07 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 14) | HP: 100/100
+Hunger: 19/100 | Thirst: 19/100 | Sleep: 19/100
+Turn: 19 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:07 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 14) | HP: 100/100
+Hunger: 19/100 | Thirst: 19/100 | Sleep: 19/100
+Turn: 19 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:07 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####....@.....#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (9, 14) | HP: 100/100
+Hunger: 19/100 | Thirst: 19/100 | Sleep: 19/100
+Turn: 19 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Cannot move there - wall blocking the way!
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:08 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####...@......#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (8, 14) | HP: 100/100
+Hunger: 20/100 | Thirst: 20/100 | Sleep: 20/100
+Turn: 20 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:08 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..@.......#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (7, 14) | HP: 100/100
+Hunger: 21/100 | Thirst: 21/100 | Sleep: 21/100
+Turn: 21 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:08 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.@........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (6, 14) | HP: 100/100
+Hunger: 22/100 | Thirst: 22/100 | Sleep: 22/100
+Turn: 22 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:08 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####@.........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (5, 14) | HP: 100/100
+Hunger: 23/100 | Thirst: 23/100 | Sleep: 23/100
+Turn: 23 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:09 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####@.........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (5, 13) | HP: 100/100
+Hunger: 24/100 | Thirst: 24/100 | Sleep: 24/100
+Turn: 24 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:09 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####@.........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (5, 12) | HP: 100/100
+Hunger: 25/100 | Thirst: 25/100 | Sleep: 25/100
+Turn: 25 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:09 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####@.........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (5, 11) | HP: 100/100
+Hunger: 26/100 | Thirst: 26/100 | Sleep: 26/100
+Turn: 26 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:09 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.@........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (6, 11) | HP: 100/100
+Hunger: 27/100 | Thirst: 27/100 | Sleep: 27/100
+Turn: 27 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:10 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..@.......#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (7, 11) | HP: 100/100
+Hunger: 28/100 | Thirst: 28/100 | Sleep: 28/100
+Turn: 28 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:18:10 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####...@......#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (8, 11) | HP: 100/100
+Hunger: 29/100 | Thirst: 29/100 | Sleep: 29/100
+Turn: 29 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:45:48 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.....@....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:45:51 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.....@....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 0/100 | Thirst: 0/100 | Sleep: 0/100
+Turn: 0 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: Welcome to the Roguelike! Use arrow keys to move.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:45:52 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####......@...#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (11, 10) | HP: 100/100
+Hunger: 1/100 | Thirst: 1/100 | Sleep: 1/100
+Turn: 1 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:45:52 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.......@..#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (12, 10) | HP: 100/100
+Hunger: 2/100 | Thirst: 2/100 | Sleep: 2/100
+Turn: 2 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:45:52 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####......@...#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (11, 10) | HP: 100/100
+Hunger: 3/100 | Thirst: 3/100 | Sleep: 3/100
+Turn: 3 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:45:53 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.....@....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (10, 10) | HP: 100/100
+Hunger: 4/100 | Thirst: 4/100 | Sleep: 4/100
+Turn: 4 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:45:53 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.....@....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (10, 9) | HP: 100/100
+Hunger: 5/100 | Thirst: 5/100 | Sleep: 5/100
+Turn: 5 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 00:45:53 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+[^] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.....@....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (10, 8) | HP: 100/100
+Hunger: 6/100 | Thirst: 6/100 | Sleep: 6/100
+Turn: 6 | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: You move carefully through the wasteland.
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:10:43 2025 ===
+Current file: chtm/rogue.chtm
+
+=== ROGUELIKE SURVIVAL ===
+>[>] 1. Game Map
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####.....@....#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   #####..........#####
+   ####################
+   ####################
+   ####################
+   ####################
+   ####################
+Player: (${player_x}, ${player_y}) | HP: ${player_hp}/${max_hp}
+Hunger: ${hunger_level}/100 | Thirst: ${thirst_level}/100 | Sleep: ${sleep_level}/100
+Turn: ${turn_count} | Status: ${game_status_text}
+Inventory: ${inventory_string}
+Message: ${game_message}
+Controls:
+Arrow Keys - Move
+R - Restart Game
+modules/+x/rogue.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:45 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:47 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:47 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:47 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 1 days | Turn: 1
+Hunger: 0/100
+Energy: 80/100
+Happiness: 75/100
+Health: 100/100
+Level: 1 | XP: 0/100
+Message: You fed your pet. It looks happy and satisfied!
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:48 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 1 days | Turn: 1
+Hunger: 0/100
+Energy: 80/100
+Happiness: 75/100
+Health: 100/100
+Level: 1 | XP: 0/100
+Message: You fed your pet. It looks happy and satisfied!
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:48 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 1 days | Turn: 1
+Hunger: 0/100
+Energy: 80/100
+Happiness: 75/100
+Health: 100/100
+Level: 1 | XP: 0/100
+Message: You fed your pet. It looks happy and satisfied!
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:49 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 1 days | Turn: 1
+Hunger: 0/100
+Energy: 80/100
+Happiness: 75/100
+Health: 100/100
+Level: 1 | XP: 0/100
+Message: You fed your pet. It looks happy and satisfied!
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:49 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 1 days | Turn: 1
+Hunger: 0/100
+Energy: 80/100
+Happiness: 75/100
+Health: 100/100
+Level: 1 | XP: 0/100
+Message: You fed your pet. It looks happy and satisfied!
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:49 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+Hunger: 2/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was difficult. Your pet is frustrated.
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:52 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+Hunger: 2/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was difficult. Your pet is frustrated.
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:44:52 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+Hunger: 2/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was difficult. Your pet is frustrated.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+>[>] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:26 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:28 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:29 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:29 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:29 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 78/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was successful! Your pet gained experience.
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:31 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 78/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was successful! Your pet gained experience.
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:32 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 78/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was successful! Your pet gained experience.
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:32 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 78/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was successful! Your pet gained experience.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+>[>] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:32 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 78/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was successful! Your pet gained experience.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+>[>] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:33 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 78/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was successful! Your pet gained experience.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+>[>] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:33 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 78/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was successful! Your pet gained experience.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[^] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:34 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 78/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was successful! Your pet gained experience.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[^] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:34 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 2 days | Turn: 2
+Hunger: 37/100
+Energy: 53/100
+Happiness: 97/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You played with your pet. It seems very happy!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[^] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:45:35 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 2 days | Turn: 2
+Hunger: 37/100
+Energy: 53/100
+Happiness: 97/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You played with your pet. It seems very happy!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+>[>] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:45 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:47 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:48 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+>[>] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:48 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:49 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:49 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:52 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:52 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:53 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:54 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:55 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:55 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: ${pet_name}
+Status: ${status_emoji} ${current_state_text}
+Age: ${pet_age} days | Turn: ${turn_count}
+Hunger: ${pet_hunger}/100
+Energy: ${pet_energy}/100
+Happiness: ${pet_happiness}/100
+Health: ${pet_health}/100
+Level: ${pet_level} | XP: ${pet_xp}/100
+Message: ${pet_message}
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:55 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was difficult. Your pet is frustrated.
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:56 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was difficult. Your pet is frustrated.
+[ ] 1. [Feed Pet]
+[^] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:57 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was difficult. Your pet is frustrated.
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:58 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was difficult. Your pet is frustrated.
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:58 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was difficult. Your pet is frustrated.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:58 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Awake
+Age: 1 days | Turn: 1
+Hunger: 30/100
+Energy: 65/100
+Happiness: 65/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Training was difficult. Your pet is frustrated.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:58 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You fed your pet. It looks happy and satisfied!
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:47:59 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You fed your pet. It looks happy and satisfied!
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:00 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You fed your pet. It looks happy and satisfied!
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:00 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You fed your pet. It looks happy and satisfied!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+>[>] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:01 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You fed your pet. It looks happy and satisfied!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[^] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:01 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 2 days | Turn: 2
+Hunger: 0/100
+Energy: 63/100
+Happiness: 69/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You fed your pet. It looks happy and satisfied!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[^] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:01 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You played with your pet. It seems very happy!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[^] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:02 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You played with your pet. It seems very happy!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+>[>] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:03 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You played with your pet. It seems very happy!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+>[>] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:04 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You played with your pet. It seems very happy!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[^] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:05 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  🐾  Eating
+Age: 3 days | Turn: 3
+Hunger: 7/100
+Energy: 51/100
+Happiness: 88/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You played with your pet. It seems very happy!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[^] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:05 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[^] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:06 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[^] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:07 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+>[>] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:07 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+>[>] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:07 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+>[>] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:07 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+>[>] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:08 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+>[>] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:09 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+>[>] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:09 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:09 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 3 days | Turn: 3
+Hunger: 9/100
+Energy: 49/100
+Happiness: 87/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:09 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 4 days | Turn: 4
+Hunger: 10/100
+Energy: 64/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:10 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 4 days | Turn: 4
+Hunger: 10/100
+Energy: 64/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:10 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 5 days | Turn: 5
+Hunger: 11/100
+Energy: 79/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:10 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 6 days | Turn: 6
+Hunger: 12/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:10 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 6 days | Turn: 6
+Hunger: 12/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:11 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 6 days | Turn: 6
+Hunger: 12/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:11 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[^] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:12 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+>[>] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:12 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+>[>] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:12 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+>[>] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:13 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[^] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:14 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  zzz  Sleeping
+Age: 7 days | Turn: 7
+Hunger: 13/100
+Energy: 100/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is now sleeping and will restore energy.
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[^] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:14 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[^] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:14 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[^] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:15 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[^] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:15 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[^] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:15 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[^] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:16 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+>[>] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:16 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+>[>] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:16 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[ ] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+>[>] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:16 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[ ] 1. [Feed Pet]
+>[>] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:16 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:17 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:17 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Awake
+Age: 7 days | Turn: 7
+Hunger: 14/100
+Energy: 100/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet woke up refreshed!
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:17 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 0/100
+Energy: 98/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You fed your pet. It looks happy and satisfied!
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:18 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 0/100
+Energy: 98/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You fed your pet. It looks happy and satisfied!
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:18 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 2/100
+Energy: 96/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:18 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 2/100
+Energy: 96/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:18 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 4/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:19 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 4/100
+Energy: 94/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:19 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 6/100
+Energy: 92/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:19 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 6/100
+Energy: 92/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:19 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 6/100
+Energy: 92/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:20 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 6/100
+Energy: 92/100
+Happiness: 83/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:20 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 8/100
+Energy: 90/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:20 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 8 days | Turn: 8
+Hunger: 8/100
+Energy: 90/100
+Happiness: 82/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:20 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+Hunger: 0/100
+Energy: 88/100
+Happiness: 86/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: You fed your pet. It looks happy and satisfied!
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:20 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+Hunger: 2/100
+Energy: 86/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:20 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+Hunger: 2/100
+Energy: 86/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:21 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+Hunger: 2/100
+Energy: 86/100
+Happiness: 85/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:21 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+Hunger: 4/100
+Energy: 84/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+[^] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+
+=== FRAME CAPTURED AT: Thu Dec 11 02:48:22 2025 ===
+Current file: digital_pet/digi_pet.chtm
+
+Digital Pet: Fluffy
+Status:  😊  Eating
+Age: 9 days | Turn: 9
+Hunger: 4/100
+Energy: 84/100
+Happiness: 84/100
+Health: 100/100
+Level: 1 | XP: 12/100
+Message: Your pet is not hungry right now.
+>[>] 1. [Feed Pet]
+[ ] 2. [Train Pet]
+[ ] 3. [Play with Pet]
+[ ] 4. [Put to Sleep]
+[ ] 5. [Wake Up]
+[ ] 6. [Heal Pet]
+[ ] 7. [Pass Turn]
+To rename your pet, type 'name:NewName' in the input below:
+digital_pet/+x/digi_pet.+x
+Enter key (1-9) or 'q' to quit: 
+

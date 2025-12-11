@@ -12,3 +12,9 @@ COMPOSITE_AFTER_LOAD:
 ...X....
 ....X...
 ........
+init_game() called at: Thu Dec 11 00:18:01 2025
+Position reset to: (10, 10)
+
+init_game() called at: Thu Dec 11 00:45:48 2025
+Position reset to: (10, 10)
+
