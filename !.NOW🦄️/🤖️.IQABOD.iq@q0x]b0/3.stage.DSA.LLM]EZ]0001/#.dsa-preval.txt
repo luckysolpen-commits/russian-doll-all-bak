@@ -1,0 +1,81 @@
+
+This is our handmade DSA (DeepSeek Attention) LLM chatbot
+
+♦️
+Are you familiar with DeepSeek's DSA architecture?
+Yes, I am familiar with the concepts behind DeepSeek Sparse Attention (DSA).
+
+It's an efficient, dynamic attention mechanism primarily introduced in DeepSeek-V3.2 to handle long-context tasks by replacing the computationally expensive O(L^2) dense attention with a dynamic, content-based top-k sparse selection, resulting in complexity closer to O(L·k) (where L is sequence length and k is the small, fixed number of selected tokens).
+
+In our implementation, the attention mechanism works with vocab entries that have embedding, positional encoding (pe), weight, and multiple bias terms (bias1-bias4) for modeling token relationships.
+
+♦️
+
+The system is run like this: 
+sh run_dsa_chat.sh "test apple" 4 1.0
+Example output:
+Running DSA-enhanced chatbot with prompt: 'test apple'
+Length: 4, Temperature: 1.0
+
+Generating response with DSA implementation...
+Loaded 118 words from ./curriculum/corpus]similarity10/corpus]similarity10.txt
+Merged vocabulary size: 118
+Prompt: test apple
+Response: 7 large sun large ens
+
+DSA-enhanced chatbot execution completed!
+
+Our system processes vocabulary through vocab_model.c which generates vocab_model.txt containing structured entries with number, word, embedding, pe (positional encoding), weight, and four bias terms (bias1-bias4). The system uses a curriculum bank (meta_curriculum_bank.txt) to specify which vocabulary files to load during inference.
+
+We have the ability to modify the vocab entries' embeddings, weights, and biases to encourage particular outcomes during training and inference.
+
+Here's what I want us to do:
+
+I want to evaluate our LLM's basic accuracy by making it "guess the word" or "guess the letter". 
+
+For this evaluation, we'll create specific test corpora:
+
+1. guess_the_letter.txt example:
+"f a r m"
+"h e l l o"
+"m a t h"
+(where every letter is treated as a separate token)
+
+2. guess_the_word.txt example:
+"i am happy"
+"it is cold"
+"the cat ran"
+(where whole words are treated as tokens)
+
+Then we will run our tests using incomplete prompts:
+- For letters: sh run_dsa_chat.sh "f a r" 1 1.0 (expecting "m")
+- For words: sh run_dsa_chat.sh "i am" 1 1.0 (expecting "happy")
+
+The pipeline flow is:
+1. Raw text corpus -> vocab_model.c -> vocab_model.txt (structured vocabulary)
+2. vocab_model.txt path listed in meta_curriculum_bank.txt
+3. run_dsa_chat.sh -> chatbot_moe_v1.c -> loads vocab, applies prediction algorithm
+4. During training: trainer.c -> updates vocab_model.txt via forward/backward passes
+
+The evaluation pipeline will be:
+1. KPI MILESTONE ACHIEVED = DATA PREPARED
+   - Create specific corpus files (guess_the_letter.txt, guess_the_word.txt)
+   - Use vocab_model.c to build vocabulary from these files  
+   - Update meta_curriculum_bank.txt to point to the new vocab file
+   - Test current pipeline to make sure it's sound (if not, edit any code that causes issues)
+
+2. KPI MILESTONE ACHIEVED = SOUND PIPELINE
+   - Run simple test cases to verify the system can process the new vocab
+   - Verify the model correctly predicts next tokens based on patterns in the training data
+   - Fine-tune biases if needed to improve performance
+
+3. KPI MILESTONE ACHIEVED = MODEL EVALUATION  
+   - Train the model using trainer.c with the new vocabulary
+   - Evaluate how well the model learns to predict the next token
+   - Measure accuracy on various test cases
+
+Note: The vocabulary model contains embeddings, positional encodings, weights, and bias terms that can be adjusted during training to improve prediction accuracy.
+
+I want you to read over all relevant files (vocab_model.c, chatbot_moe_v1.c, trainer.c, run_dsa_chat.sh, meta_curriculum_bank.txt, and any forward/backward propagation components), and write evaluation_plan_dsa.txt with the detailed steps and files that will be used and created in order to make this happen.
+
+That is your task right now - a fresh LLM context will do the actual steps you write, so be sure your instructions in evaluation_plan_dsa.txt are very clear and comprehensive.

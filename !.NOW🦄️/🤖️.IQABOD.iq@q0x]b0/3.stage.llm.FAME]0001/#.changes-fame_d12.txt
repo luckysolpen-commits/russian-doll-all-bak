@@ -1,0 +1,79 @@
+# Changes Made on December 12, 2025
+
+## Summary
+Fixed gradient communication issue between backward_prop and optimizer modules that was preventing loss from decreasing during training.
+
+## Critical Fixes Applied
+
+### 1. Gradient Format Alignment (backward_prop.c)
+- **Problem**: backward_prop saved gradients in matrix format that didn't match optimizer expectations
+- **Solution**: Modified gradient saving to use same format as optimizer's load functions
+- **Files Affected**: backward_prop.c
+
+### 2. Attention Gradient Format Fix
+- Changed from: `save_matrix(pth,(float*)&g_a,sizeof(g_a)/sizeof(float),1);`
+- Changed to: Proper 3-matrix format (W_q, W_k, W_v) matching load_attention expectations
+
+### 3. MLP Gradient Format Fix  
+- Changed to: Weight matrix + bias vector format matching load_mlp expectations
+
+### 4. Output Gradient Format Fix
+- Changed to: Weight matrix + bias vector format matching load_output expectations
+
+### 5. RoPE Integration Improvements (rope.c)
+- Enhanced RoPE to handle 7-dimensional vocab entries by expanding to 8 dimensions for processing
+- Added proper combination back to single pe value using weighted approach
+
+### 6. Training Loop Structure (trainer.c)
+- Implemented sequence window processing for better context maintenance
+- Maintained proper RoPE → Attention → Loss → Backprop cycle within sequence windows
+
+## Files Modified
+1. backward_prop.c - Fixed gradient saving format
+2. rope.c - Enhanced RoPE implementation 
+3. trainer.c - Improved sequence processing and RoPE integration
+4. codeplan_d12.txt - Documentation of the fix approach
+
+## Expected Impact
+- Loss values should now decrease during training as gradients flow properly between modules
+- Model parameters should update meaningfully based on computed gradients
+- Proper transformer architecture sequence maintained with RoPE integration
+
+## Additional Options to Explore if Loss Still Doesn't Improve
+
+### 1. Learning Rate Tuning
+- Try different learning rates: 0.01, 0.0001, 0.00001
+- Implement learning rate scheduling (decrease over time)
+
+### 2. Gradient Magnitude Analysis
+- Add logging to monitor gradient norms and detect vanishing/exploding gradients
+- Adjust gradient clipping thresholds
+
+### 3. Model Architecture Verification
+- Verify attention mechanism is functioning properly with causal masking
+- Check that positional embeddings (both original pe and RoPE-enhanced) are effective
+
+### 4. Data Quality Check
+- Validate that training data has meaningful patterns to learn
+- Check for data preprocessing issues
+
+### 5. Module Communication Verification
+- Add debugging output to verify each module processes data correctly
+- Validate file synchronization between processes
+
+### 6. Loss Function Analysis
+- Verify cross-entropy loss computation is meaningful
+- Check target token selection is correct
+
+### 7. Parameter Initialization
+- Ensure model parameters are properly initialized to allow gradients to flow
+- Try different initialization strategies
+
+### 8. Sequence Context Issues
+- Verify sequence windows maintain proper temporal relationships
+- Check that context vectors are effectively capturing relationships
+
+## Next Steps
+1. Run training with these fixes to monitor loss reduction
+2. If loss still doesn't improve, implement additional debugging logging
+3. Consider implementing learning rate scheduling if performance is suboptimal

@@ -1,0 +1,101 @@
+# Plan of Action: Updated Training Algorithm with Proper Sequential Learning
+
+## Executive Summary
+Update the current training algorithm to capture meaningful sequential patterns and semantic relationships by implementing proper sequence training, gradient accumulation, and leveraging RoPE for position encoding within actual text contexts.
+
+## Current Issues to Address
+1. Single-word processing instead of sequence processing
+2. Lack of meaningful context for learning
+3. No gradient accumulation across contexts
+4. Vocabulary order not properly utilized with RoPE
+
+## Implementation Plan
+
+### Phase 1: Data Processing Updates
+**Files to modify:** rope.c, trainer.c
+
+**Actions:**
+1. Update rope.c to apply positional encoding based on actual sequence positions in text, not vocabulary indices
+2. Create sequence window generator that creates proper context windows from text data
+3. Modify rope.c to work with sequence positions rather than vocabulary indices
+
+### Phase 2: Sequence-Based Training Loop
+**Files to modify:** trainer.c
+
+**Actions:**
+1. Replace single-word loop with sequence-based training
+2. Create fixed-size sequence windows (e.g., 8-16 tokens) from text corpus
+3. Process each sequence window as coherent unit rather than individual tokens
+4. Maintain RoPE-enhanced position embeddings within each window
+
+### Phase 3: Gradient Accumulation
+**Files to modify:** trainer.c, backward_prop.c
+
+**Actions:**
+1. Accumulate gradients across entire sequence before parameter updates
+2. Modify backward_prop.c to work with sequence-based loss gradients
+3. Implement gradient accumulation buffer in trainer.c
+4. Update optimizer to work with accumulated gradients
+
+### Phase 4: Context-Aware Model Updates
+**Files to modify:** forward_prop.c, backward_prop.c
+
+**Actions:**
+1. Update forward_prop.c to process sequences with proper attention masks
+2. Implement causal masking for autoregressive training
+3. Update attention mechanism to use RoPE for actual sequence positions
+4. Modify context computation to maintain sequence coherence
+
+### Phase 5: Training Pipeline Restructure
+**Files to modify:** trainer.c
+
+**Actions:**
+1. Restructure training into epochs over text sequences, not vocabulary items
+2. Implement proper mini-batch processing with sequence windows
+3. Add validation loop to monitor actual training progress
+4. Update loss reporting to reflect sequence-based learning
+
+## Detailed Implementation Steps
+
+### Step 1: Update RoPE Application
+- Modify rope.c to work with sequence positions: `rope.c sequence <input_file> <output_file> <window_size> <base_freq>`
+- Each sequence window gets RoPE applied based on position within the window, not vocabulary index
+- Maintain 7-column format but with sequence-aware positional embeddings
+
+### Step 2: Sequence Window Generator
+- Create sequence chunks from text corpus
+- Each chunk contains consecutive tokens maintaining semantic relationships
+- Apply RoPE to positions within each chunk (0, 1, 2, ..., window_size-1)
+- Prepare input-target pairs where target is next token in sequence
+
+### Step 3: Modified Training Loop
+- Outer loop: iterate over epochs
+- Middle loop: iterate over sequence windows from corpus
+- Inner loop: process tokens within each sequence window
+- Collect gradients across entire sequence before optimization step
+
+### Step 4: Attention and Context Updates
+- Update attention computation to use RoPE-enhanced positional information
+- Apply causal mask to prevent future token peeking
+- Maintain context vectors that capture sequence relationships
+- Propagate gradients meaningfully across sequence positions
+
+## Expected Outcomes
+1. Loss should decrease consistently as model learns sequential patterns
+2. RoPE properly utilized to capture positional relationships in actual text
+3. Semantic relationships captured through meaningful sequence training
+4. More stable training through gradient accumulation across contexts
+
+## Success Metrics
+- Loss should decrease monotonically over epochs
+- Model should achieve better perplexity on validation sequences
+- Training should show clear improvement in next-token prediction
+- RoPE-enhanced positional awareness should improve sequence modeling
+
+## Timeline
+- Phase 1-2: 1-2 days (data processing and sequence generation)
+- Phase 3-4: 2-3 days (gradient accumulation and attention updates)
+- Phase 5: 1 day (full pipeline integration)
+- Testing: 1 day
+
+Total estimated time: 5-7 days to implement and validate the updated training algorithm.

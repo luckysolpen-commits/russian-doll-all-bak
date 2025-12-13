@@ -1,0 +1,44 @@
+=== Chatbot MOE Debug Log ===
+Prompt: f a r
+Desired length: 1
+Temperature: 1.000000
+Using 1 training sets:
+  1. ./curriculum/guess_the_letter/guess_the_letter.txt
+========================
+
+
+Debug: Using aggregated context from input sequence
+Aggregated context: [0.676656, 0.030769, 0.588074, 0.000000, 0.000000, 0.000000, 0.000000]
+Temperature: 1.000000
+Considering top 10 scores:
+  1. c (index: 62): 0.025873
+  2. t (index: 51): 0.024926
+  3. l (index: 7): 0.024388
+  4. t (index: 31): 0.022948
+  5. t (index: 23): 0.022321
+  6. r (index: 37): 0.021736
+  7. c (index: 49): 0.020688
+  8. s (index: 45): 0.020539
+  9. f (index: 1): 0.020238
+  10. m (index: 46): 0.019671
+Chosen word: f (index: 1)
+
+Debug: Using aggregated context from input sequence
+Aggregated context: [0.783099, 0.015385, 0.798440, 0.000000, 0.000000, 0.000000, 0.000000]
+Temperature: 1.000000
+Considering top 10 scores:
+  1. c (index: 62): 0.028657
+  2. t (index: 51): 0.027492
+  3. l (index: 7): 0.027164
+  4. t (index: 31): 0.024936
+  5. t (index: 23): 0.024405
+  6. r (index: 37): 0.023020
+  7. c (index: 49): 0.022149
+  8. f (index: 1): 0.021629
+  9. s (index: 45): 0.021172
+  10. m (index: 46): 0.020786
+Chosen word: s (index: 45)
+
+=== Final Response ===
+f 
+======================

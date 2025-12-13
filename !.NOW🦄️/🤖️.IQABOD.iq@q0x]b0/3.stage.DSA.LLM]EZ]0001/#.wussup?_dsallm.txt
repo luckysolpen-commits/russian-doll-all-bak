@@ -1,0 +1,41 @@
+
+This is our handmade DSA (DeepSeek Attention) LLM chatbot
+
+♦️
+Are you familiar with DeepSeek's DSA architecture?
+Yes, I am familiar with the concepts behind DeepSeek Sparse Attention (DSA).
+
+It's an efficient, dynamic attention mechanism primarily introduced in DeepSeek-V3.2 to handle long-context tasks by replacing the computationally expensive O(L^2) dense attention with a dynamic, content-based top-k sparse selection, resulting in complexity closer to O(L·k) (where L is sequence length and k is the small, fixed number of selected tokens).
+
+In our implementation, the attention mechanism works with vocab entries that have embedding, positional encoding (pe), weight, and multiple bias terms (bias1-bias4) for modeling token relationships.
+
+♦️
+
+The system is run like this: 
+sh run_dsa_chat.sh "test apple" 4 1.0
+Example output:
+Running DSA-enhanced chatbot with prompt: 'test apple'
+Length: 4, Temperature: 1.0
+
+Generating response with DSA implementation...
+Loaded 118 words from ./curriculum/corpus]similarity10/corpus]similarity10.txt
+Merged vocabulary size: 118
+Prompt: test apple
+Response: 7 large sun large ens
+
+DSA-enhanced chatbot execution completed!
+
+Our system processes vocabulary through vocab_model.c which generates vocab_model.txt containing structured entries with number, word, embedding, pe (positional encoding), weight, and four bias terms (bias1-bias4). The system uses a curriculum bank (meta_curriculum_bank.txt) to specify which vocabulary files to load during inference.
+
+We have the ability to modify the vocab entries' embeddings, weights, and biases to encourage particular outcomes during training and inference.
+💬️
+Here's what I want us to do:
+
+i want to build a "gemini-cli" like application 
+where our chat model is able to select and use "tools" 
+(let me know if u need to see "gemini-cli" source code, 
+or if u are familiar with its architecture. 
+then we can start building simple basics, and we can improve on 
+the foundations later
+
+💬️💬️

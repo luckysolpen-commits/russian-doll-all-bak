@@ -1,0 +1,63 @@
+# Analysis of Current Training Algorithm Issues
+
+## Problem Statement
+The current training algorithm is not showing decreasing loss over time, indicating that learning is not occurring properly. This suggests fundamental issues with the training methodology.
+
+## Issues with Current Approach
+
+### 1. Sequential Single-Word Processing
+- Current method processes one word at a time: forward → loss → backward → optimize
+- Each training step only considers a single word position, not sequence context
+- No meaningful relationship learning between words in the vocabulary
+
+### 2. Missing Sequence Context
+- The model learns to predict the next token after each individual word
+- Without proper sequence context, there's nothing meaningful to learn
+- Each word is treated as an independent prediction problem
+
+### 3. Improper Gradient Accumulation
+- Gradients are computed and applied individually for each word
+- No accumulation across sequences to provide meaningful training signals
+- The model updates parameters based on single examples rather than patterns
+
+### 4. Inadequate Loss Calculation
+- Loss computed from predicting next word in artificial sequence (vocabulary order)
+- No real semantic relationship between consecutive words in vocab file
+- Vocabulary order is arbitrary, not meaningful for training
+
+## How Proper Context Should Fix This
+
+### 1. Process Actual Sequences
+- Instead of processing vocabulary in order, process real text sequences
+- Each training example should be a meaningful sequence of words/sentences
+- Model learns actual patterns rather than vocabulary ordering artifacts
+
+### 2. Batch Processing with Context
+- Process multiple sequence examples together in batches
+- Accumulate gradients across meaningful contexts before parameter updates
+- Enable the model to learn from actual language patterns
+
+### 3. Proper Teacher Forcing
+- Instead of predicting next word in vocabulary order, predict next word in actual text sequence
+- Use proper input-target pairs that have semantic meaning
+- Apply loss to actual text continuation tasks
+
+### 4. Context Window Training
+- Train on sliding windows of actual text rather than single words
+- Enable attention mechanism to learn meaningful relationships between nearby words
+- Provide genuine context where RoPE values can enhance position understanding
+
+## Recommended Architecture Changes
+
+### Before Training Session:
+1. Preprocess training texts into appropriate sequence format
+2. Apply RoPE to vocabulary using the rope.c update functionality
+3. Create training batches from real text sequences
+
+### During Training Loop:
+1. Phase 1: Forward pass on entire batch of sequences
+2. Phase 2: Loss computation on meaningful targets
+3. Phase 3: Backward pass accumulating gradients across batch
+4. Phase 4: Single optimizer step with aggregated gradients
+
+This approach ensures that the model learns from actual sequential patterns in the data, enabling the loss to decrease meaningfully as the model improves at predicting text sequences.

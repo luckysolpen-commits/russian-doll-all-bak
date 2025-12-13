@@ -1,0 +1,103 @@
+# Phase 3: DSA Model Training and Evaluation
+
+## Current Status
+You are接手ing a DSA (DeepSeek Attention) LLM that has successfully completed Phase 1 (Data Preparation) and Phase 2 (Pipeline Validation). The architecture has been fixed to properly handle sequence context, and biases have been validated to prove the prediction pipeline works correctly.
+
+## System Architecture
+The DSA system consists of several components:
+- vocab_model.c: Creates vocabulary with structured entries (number, word, embedding, pe, weight, bias1-4)
+- chatbot_moe_v1.c: Main inference engine with sequence context handling
+- trainer.c: Training pipeline with forward/backward propagation and Adam optimizer
+- forward_prop.c: Forward pass computations
+- backward_prop.c: Backward pass and gradient computation
+- optimizer.c: Parameter updates using Adam algorithm
+
+## Key Achievements from Previous Phases
+1. Fixed fundamental architecture issue: Now aggregates context from all tokens in input sequence instead of just the last token
+2. Created test datasets: corpuses/guess_the_letter.txt and corpuses/guess_the_word.txt
+3. Validated pipeline with biases: "f a r" → "m" with 100% accuracy at low temperature
+4. Added negative bias to reduce interference from unwanted tokens like "start-token"
+5. Made selection more deterministic at low temperatures
+
+## Current Vocabulary
+Currently using biased vocabulary: ./curriculum/guess_the_letter/guess_the_letter_biased.txt
+For training, you'll switch back to: ./curriculum/guess_the_letter/guess_the_letter.txt
+
+## Your Mission: Phase 3 - MODEL TRAINING & EVALUATION
+
+### Step 1: Setup Training Environment
+1. Update meta_curriculum_bank.txt to point back to unbiased dataset:
+   `./curriculum/guess_the_letter/guess_the_letter.txt`
+2. Ensure all executables are properly compiled with xsh.compile-all.+x🥅️🌐️📺️🔘️.sh
+3. Verify trainer.+x, forward_prop.+x, backward_prop.+x, and optimizer.+x exist in +x/ directory
+
+### Step 2: Initialize Training Process
+1. Run the trainer: `./+x/trainer.+x ./curriculum/guess_the_letter/guess_the_letter.txt`
+2. This will use the existing forward_prop, backward_prop, and optimizer components
+3. Monitor loss progression in the output - it should decrease over epochs
+
+### Step 3: Monitor Training Process
+1. Check for loss file generation (should appear in output directory)
+2. Monitor debug_chain.txt for any issues during training
+3. Ensure the training process completes without NaN/infinity errors
+4. Verify model parameters are being updated properly
+
+### Step 4: Evaluate Trained Model
+After training completes:
+1. Test the trained model with the same prompts:
+   - `sh run_dsa_chat.sh "f a r" 1 0.1` (should predict "m" more often now)
+   - `sh run_dsa_chat.sh "h e l" 1 0.1` (should predict "l" from "h e l l o")
+   - `sh run_dsa_chat.sh "c a t" 1 0.1` (should predict "s" from "c a t s")
+
+2. Test with word dataset (update meta_curriculum_bank.txt and run training on word dataset too):
+   - `sh run_dsa_chat.sh "i am" 1 0.1` (should predict "happy" from "i am happy")
+   - `sh run_dsa_chat.sh "it is" 1 0.1` (should predict "cold" from "it is cold")
+
+### Step 5: Training Evaluation Metrics
+1. Accuracy rate for next-token prediction on both letter and word datasets
+2. Training loss reduction over epochs (should show consistent decrease)
+3. Model's ability to learn patterns from training data vs just memorization
+4. Performance comparison between letter-level vs word-level prediction tasks
+
+### Step 6: Iterative Improvement
+If training doesn't work as expected:
+1. Check for NaN/infinity values in gradients or parameters
+2. Examine loss progression - if not decreasing, adjust learning rate in trainer.c
+3. Verify forward_prop and backward_prop are correctly computing gradients
+4. Check optimizer is properly updating parameters
+5. If needed, adjust the Adam optimizer parameters (learning rate, beta values)
+
+### Step 7: Troubleshooting Guide
+- If NaN values appear: Add gradient clipping or check for numerical stability issues
+- If loss doesn't decrease: Check gradient computation and learning rate
+- If model doesn't learn patterns: Ensure the training data is properly formatted
+- If training crashes: Check memory allocation and file path issues
+
+### Expected Output Files During Training
+- loss.txt: Training loss progression
+- Various intermediate files: hidden_state.txt, context.txt, predictions.txt, etc.
+- Updated vocab_model.txt with trained parameters
+- debug_chain.txt with detailed execution traces
+
+### Configuration
+The trainer uses configurable parameters that can be found in a config.txt file in the same directory as the vocab model. Default values include:
+- Epochs: 10
+- Learning rate: 0.001
+- Beta1: 0.9
+- Beta2: 0.999
+- Various dropout and noise parameters
+
+### Success Criteria
+- Training completes without errors
+- Loss values show consistent decrease over epochs
+- Trained model shows improved accuracy on prediction tasks
+- Model demonstrates learning of sequence patterns from training data
+- Both letter and word prediction tasks show improvement after training
+
+## Important Notes
+- The training process may take several minutes depending on data size
+- Monitor the console output for loss values and training progress
+- Use low temperature (0.1) for consistent evaluation after training
+- The architecture has been proven to work with manual biases, now test if it learns naturally through training
+
+Begin with Step 1 and proceed methodically. Document any issues found and work to resolve them before proceeding to the next step.

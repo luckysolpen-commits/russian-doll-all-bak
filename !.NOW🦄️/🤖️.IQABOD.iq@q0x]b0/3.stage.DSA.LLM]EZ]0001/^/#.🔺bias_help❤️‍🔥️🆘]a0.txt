@@ -1,0 +1,146 @@
+# Understanding Bias Manipulation in DSA Architecture
+
+## Overview
+This document explains how bias values in the DSA vocabulary entries control prediction outcomes through vector similarity calculations.
+
+## Vocabulary Structure
+Each vocabulary entry has these fields:
+```
+number word embedding pe weight bias1 bias2 bias3 bias4
+```
+
+For example:
+```
+13 m 0.4 0.6 0.4 0.45 0.5 0.3 0.2
+```
+
+## How Predictions Work
+
+### 1. Vector Representation
+Each word is represented as a 7-dimensional vector:
+```
+[embedding, pe, weight, bias1, bias2, bias3, bias4]
+```
+
+So "m" becomes: `[0.4, 0.6, 0.4, 0.45, 0.5, 0.3, 0.2]`
+
+### 2. Context Aggregation
+When you input "f a r", the system:
+1. Gets vectors for each word: f, a, r
+2. Adds them together and divides by the count (3)
+3. Creates average context vector
+
+Example calculation for "f a r":
+- f: [0.183675, 0.300000, 0.218540, 0.2, 0.25, 0.1, 0.05]
+- a: [0.177670, 0.000000, 0.218534, 0.1, 0.15, 0.05, 0.025]
+- r: [0.192687, 0.750000, 0.218555, 0.15, 0.1, 0.05, 0.025]
+
+Average context = 
+- embedding: (0.183675 + 0.177670 + 0.192687) / 3 = 0.1847
+- pe: (0.300000 + 0.000000 + 0.750000) / 3 = 0.3500
+- weight: (0.218540 + 0.218534 + 0.218555) / 3 = 0.2185
+- bias1: (0.2 + 0.1 + 0.15) / 3 = 0.15
+- bias2: (0.25 + 0.15 + 0.1) / 3 = 0.1667
+- bias3: (0.1 + 0.05 + 0.05) / 3 = 0.0667
+- bias4: (0.05 + 0.025 + 0.025) / 3 = 0.0333
+
+Resulting context vector: [0.1847, 0.3500, 0.2185, 0.15, 0.1667, 0.0667, 0.0333]
+
+### 3. Dot Product Calculation
+To predict the next word, the system calculates a dot product between:
+- Aggregated context vector (from input sequence)
+- Each possible next word's vector
+
+The dot product is calculated as:
+```
+dot_product = context[0]*word[0] + context[1]*word[1] + ... + context[6]*word[6]
+```
+
+For word "m" with vector [0.4, 0.6, 0.4, 0.45, 0.5, 0.3, 0.2]:
+```
+dot_product = 0.1847*0.4 + 0.3500*0.6 + 0.2185*0.4 + 0.15*0.45 + 0.1667*0.5 + 0.0667*0.3 + 0.0333*0.2
+dot_product = 0.0739 + 0.2100 + 0.0874 + 0.0675 + 0.0834 + 0.0200 + 0.0067 = 0.5489
+```
+
+### 4. Softmax and Selection
+After calculating dot products for all words:
+1. Apply softmax to convert scores to probabilities
+2. Select next word based on these probabilities
+3. Higher dot products = higher probability of selection
+
+## Strategy for Effective Bias Manipulation
+
+### Method 1: Make Target Word Stand Out
+**Goal**: Make "m" highly likely after "f a r"
+
+**Approach**: Increase bias values in "m" to create a high dot product with the "f a r" context:
+- Calculate expected "f a r" context values for each bias slot
+- Make "m" bias values similar to or optimized for that context
+- Use high values to make the dot product dominant
+
+### Method 2: Reduce Interference
+**Goal**: Prevent unwanted tokens from being selected
+
+**Approach**: Give interfering tokens (like "start-token") negative bias values:
+```
+start-token 0.05 0.05 0.05 -0.8 -0.8 -0.8 -0.8
+```
+Negative values reduce the dot product, making these tokens less likely to be chosen.
+
+### Method 3: Context Signature Matching
+**Goal**: Create specific patterns that make target sequences more predictable
+
+**Approach**: Give each token in the sequence a unique "signature" in bias values:
+- f: [bias1=0.2, bias2=0.25, bias3=0.1, bias4=0.05]
+- a: [bias1=0.1, bias2=0.15, bias3=0.05, bias4=0.025] 
+- r: [bias1=0.15, bias2=0.1, bias3=0.05, bias4=0.025]
+
+Then make "m" respond to the average of these signatures:
+- Expected bias1: (0.2 + 0.1 + 0.15) / 3 = 0.15
+- Expected bias2: (0.25 + 0.15 + 0.1) / 3 = 0.167
+- etc.
+
+## Step-by-Step Process for Creating Your Own Biases
+
+### Step 1: Identify the Pattern
+Pattern you want: "X Y Z" → "A"
+
+### Step 2: Calculate Expected Context
+Get the vectors for X, Y, Z and compute their average:
+```
+context_embedding = (X_embedding + Y_embedding + Z_embedding) / 3
+context_bias1 = (X_bias1 + Y_bias1 + Z_bias1) / 3
+context_bias2 = (X_bias2 + Y_bias2 + Z_bias2) / 3
+context_bias3 = (X_bias3 + Y_bias3 + Z_bias3) / 3
+context_bias4 = (X_bias4 + Y_bias4 + Z_bias4) / 3
+```
+
+### Step 3: Set Target Word Biases
+Make "A" have bias values that will produce a high dot product with the expected context:
+- Make A_bias1 similar to context_bias1
+- Make A_bias2 similar to context_bias2
+- etc.
+
+### Step 4: Boost Target Word
+Optionally, use higher values to make "A" dominant:
+- A_bias1 = context_bias1 + 0.3 (or higher)
+- A_bias2 = context_bias2 + 0.3 (or higher)
+
+### Step 5: Reduce Interference
+Set negative values for competing tokens that might be predicted instead of "A".
+
+## Example Math for "f a r" → "m":
+- Expected context biases: [0.15, 0.1667, 0.0667, 0.0333]
+- "m" biases: [0.45, 0.5, 0.3, 0.2]
+- This creates a high dot product contribution: 0.15*0.45 + 0.1667*0.5 + 0.0667*0.3 + 0.0333*0.2
+- This makes "m" much more likely to be chosen than other words
+
+## Pro Tips for Success:
+1. **Start Conservative**: Make small bias adjustments first, then increase if needed
+2. **Use Negative Values**: Give competing tokens negative biases to reduce their chances
+3. **Consider All Dimensions**: The dot product uses all 7 values (embedding, pe, weight, bias1-4)
+4. **Test with Low Temperature**: Use temperature 0.1 or lower for more deterministic results during testing
+5. **Balance Values**: Don't make all biases extremely high or you might cause numerical issues
+
+## Remember:
+The key is making the target word's vector align well with the expected aggregated context vector from your input sequence. Higher dot products = higher probability of selection.

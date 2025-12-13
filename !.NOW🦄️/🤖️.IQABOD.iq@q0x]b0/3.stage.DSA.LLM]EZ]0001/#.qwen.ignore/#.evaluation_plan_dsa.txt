@@ -1,0 +1,150 @@
+DSA Model Evaluation Plan - Letter/Word Prediction Task
+
+OBJECTIVE: Evaluate basic accuracy of our DSA LLM by training it on simple letter/word prediction tasks.
+
+PREPARATION:
+- Compile all components using: ./xsh.compile-all.+x🥅️🌐️📺️🔘️.sh
+- Verify executables exist in +x/ directory, particularly: vocab_model.+x, chatbot_moe_v1.+x, trainer.+x, forward_prop.+x, backward_prop.+x, optimizer.+x
+
+PHASE 1: DATA PREPARATION (KPI: DATA PREPARED)
+
+Step 1: Create evaluation datasets
+- Create data/guess_the_letter.txt with content:
+f a r m
+h e l l o  
+c a t s
+d o g s
+b i g f a t
+s m a l l c a t
+b o o k s r e a d
+(Ensure each letter is a separate token separated by spaces)
+
+- Create data/guess_the_word.txt with content:
+i am happy
+it is cold
+the cat ran
+dog is big
+she likes books
+he plays games
+they eat food
+we go home
+(Ensure each word is a separate token separated by spaces)
+
+Step 2: Build vocabulary from the test datasets
+- Run: ./+x/vocab_model.+x data/guess_the_letter.txt
+  This creates curriculum/guess_the_letter/guess_the_letter.txt
+  (vocab_model.c automatically creates the curriculum directory and file structure)
+  
+- Run: ./+x/vocab_model.+x data/guess_the_word.txt  
+  This creates curriculum/guess_the_word/guess_the_word.txt
+
+Step 3: Update curriculum bank
+- Modify meta_curriculum_bank.txt to point to the new vocabulary file
+- For letter prediction: ./curriculum/guess_the_letter/guess_the_letter.txt
+- For word prediction: ./curriculum/guess_the_word/guess_the_word.txt
+- Initially test with just one dataset at a time
+
+Step 4: Test pipeline integrity with basic inference
+- Run simple test: sh run_dsa_chat.sh "f a r" 1 1.0
+- Check debug_chain.txt for detailed execution trace
+- Document any errors and fix pipeline issues before proceeding
+
+PHASE 2: PIPELINE VALIDATION (KPI: SOUND PIPELINE)
+
+Step 5: Verify vocabulary loading
+- Check that vocab file is loaded correctly by examining debug_chain.txt
+- Ensure all tokens from training data appear in vocabulary
+- Verify "start-token" and "end-token" are present in the vocabulary file
+- Confirm vocab_model.txt structure matches expected format: number word embedding pe weight bias1 bias2 bias3 bias4
+
+Step 6: Test basic predictions without training
+- Run various prompts from training data to see baseline (untrained) behavior
+- Examples: "f a r", "h e l", "i am", "the cat" 
+- Record initial accuracy scores for both letter and word prediction
+- Baseline predictions will be based on embedding similarities and initial biases
+
+Step 7: Analyze prediction mechanisms
+- Examine debug_chain.txt to understand how next-token selection works
+- Look at similarity between embeddings of related tokens
+- Check which tokens are appearing in the top N predictions
+- Assess if the model is making reasonably related predictions or just random choices
+
+Step 8: Validate prediction algorithm
+- The model uses dot product similarity between embeddings to predict next tokens
+- Current word embedding is compared against all possible next word embeddings
+- Temperature parameter affects randomness vs determinism of selection
+- Verify the algorithm is working as expected before training
+
+PHASE 3: MODEL TRAINING & EVALUATION (KPI: MODEL EVALUATION)
+
+Step 9: Initialize training process
+- The training system uses forward_prop, backward_prop, and optimizer components
+- Forward pass generates predictions and computes cross-entropy loss
+- Backward pass computes gradients of loss w.r.t. model parameters
+- Optimizer (Adam) updates parameters using gradients
+
+Step 10: Train the model on letter dataset
+- Run: ./+x/trainer.+x ./curriculum/guess_the_letter/guess_the_letter.txt
+- This will automatically use the configured training parameters
+- Monitor loss progression in the output (loss values should decrease over time)
+- Training runs for configured number of epochs (default 10)
+
+Step 11: Evaluate trained letter model
+- After training, run: sh run_dsa_chat.sh "f a r" 1 1.0
+- Test prompts: "f a r", "h e l", "c a", "d o" 
+- Compare predicted outputs against expected completions
+- Calculate accuracy percentage for letter prediction task
+
+Step 12: Train the model on word dataset
+- Update meta_curriculum_bank.txt with word dataset path
+- Run: ./+x/trainer.+x ./curriculum/guess_the_word/guess_the_word.txt
+- Monitor loss reduction during training
+- Assess training effectiveness
+
+Step 13: Evaluate trained word model
+- Test prompts: "i am", "it is", "the cat", "dog is"
+- Compare predicted outputs against expected completions
+- Calculate accuracy percentage for word prediction task
+
+Step 14: Comprehensive evaluation and comparison
+- Test model's ability to generalize on unseen combinations
+- Compare performance between letter-level vs word-level tasks
+- Assess if model learned meaningful patterns or just memorized training sequences
+- Document final accuracy metrics for both prediction tasks
+
+EXPECTED OUTPUT FILES CREATED:
+- data/guess_the_letter.txt
+- data/guess_the_word.txt
+- curriculum/guess_the_letter/guess_the_letter.txt
+- curriculum/guess_the_word/guess_the_word.txt
+- vocab_model.txt (updated with test data vocabulary)
+- debug_chain.txt (contains prediction debugging information)
+- loss.txt (training loss progression in output directory)
+- Updated vocab_model.txt after training (with learned parameters)
+- Various intermediate files during training (hidden_state.txt, context.txt, predictions.txt, etc.)
+
+EXPECTED EXECUTABLES FROM COMPILATION:
+- ./+x/vocab_model.+x (creates vocabulary from raw text)
+- ./+x/chatbot_moe_v1.+x (main inference engine)
+- ./+x/trainer.+x (training loop)
+- ./+x/forward_prop.+x (forward computation)
+- ./+x/backward_prop.+x (backward gradient computation)
+- ./+x/optimizer.+x (parameter updates using Adam optimizer)
+
+VALIDATION METRICS:
+- Accuracy rate for next-token prediction in test set
+- Training loss reduction over epochs (should decrease)
+- Model's ability to memorize vs generalize from training data patterns
+- Performance comparison between letter-level vs word-level prediction tasks
+
+TROUBLESHOOTING NOTES:
+- If vocab building fails, check data file format and permissions
+- If training crashes, check for NaN/infinity values in gradients (system has NaN checking built-in)
+- If predictions remain random after training, check loss progression to ensure learning occurred
+- If predictions remain random after training, we can modify biases to make sure pipeline is working:
+  * Edit the bias values directly in the vocab_model.txt file for specific token relationships
+  * Increase bias values for expected next tokens (e.g., increase bias for 'm' after 'f a r')
+  * Manually edit the text file to boost specific bias values for desired token transitions
+  * Retest with modified biases to verify pipeline functionality
+- Monitor debug_chain.txt for detailed execution traces and potential issues
+- If compilation fails, ensure all required libraries are installed (pthread, math, ssl, graphics libraries, etc.)

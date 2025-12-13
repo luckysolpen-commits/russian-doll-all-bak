@@ -1,0 +1,135 @@
+Model v5 Architecture Analysis Report
+=====================================
+
+1. OVERALL ARCHITECTURE
+-----------------------
+The model implements a lightweight Transformer architecture in C with the following specifications:
+- Vocabulary size: 100 words
+- Embedding dimension: 16
+- Number of attention heads: 2
+- Feed-forward dimension: 32
+- Learning rate: 0.101
+- Training epochs: 150
+
+Architecture Components:
+- Hash-based word embedding layer
+- Rotary Positional Encoding (ROPE)
+- Masked multi-head attention mechanism
+- Feed-forward neural network with ReLU activation
+- Linear layer for output prediction
+
+2. EMBEDDING CREATION PROCESS
+-----------------------------
+The embedding creation uses a hash-based approach:
+
+```c
+float* hash_embedding(char** vocab, int vocab_size, int embed_dim) {
+    float* emb = malloc(vocab_size * embed_dim * sizeof(float));
+    if (!emb) { printf("Malloc failed\n"); exit(1); }
+    for (int i = 0; i < vocab_size; i++) {
+        for (int j = 0; j < embed_dim; j++) 
+            emb[i * embed_dim + j] = ((float)rand() / RAND_MAX - 0.5f) * 0.1f;
+    }
+    return emb;
+}
+```
+
+This creates random embeddings for each word in the vocabulary using a uniform distribution between -0.05 and 0.05. Each word gets its own unique embedding vector of size EMBED_DIM (16).
+
+3. ROPE (ROTARY POSITIONAL ENCODING) IMPLEMENTATION
+---------------------------------------------------
+The ROPE implementation applies rotary positional encoding by:
+
+```c
+float* rope_embedding(float* emb, int seq_len, int embed_dim) {
+    // Creates positionally-encoded embeddings
+    for (int i = 0; i < seq_len; i++) {
+        for (int j = 0; j < embed_dim; j += 2) {
+            if (j + 1 < embed_dim) {
+                float theta = 10000.0f / powf(10000.0f, (float)j / embed_dim);
+                float angle = i * theta;
+                // Apply 2D rotation transformation
+                rope[i * embed_dim + j] = emb[i * embed_dim + j] * cosf(angle) - emb[i * embed_dim + j + 1] * sinf(angle);
+                rope[i * embed_dim + j + 1] = emb[i * embed_dim + j] * sinf(angle) + emb[i * embed_dim + j + 1] * cosf(angle);
+            }
+        }
+    }
+    return rope;
+}
+```
+
+This applies a rotation transformation that encodes position information into embeddings without adding extra parameters, allowing the model to attend differently to tokens based on their positions.
+
+4. ATTENTION MECHANISM AND MASKED ATTENTION
+-------------------------------------------
+The model implements causal (masked) self-attention that prevents attending to future tokens:
+
+- Computes Q, K, V matrices using shared weight matrices
+- Calculates attention scores with causal masking (only attends to positions <= current position)
+- Applies softmax with numerical stability
+- Uses the attention weights to compute the output
+
+The masking ensures the model learns to predict the next token based only on previous tokens, which is crucial for autoregressive language modeling.
+
+5. FEED-FORWARD NETWORK AND PARAMETERS
+--------------------------------------
+The feed-forward network implements a standard position-wise transformation:
+
+- Input: sequence length × embedding dimension (16)
+- Hidden layer: sequence length × feed-forward dimension (32)
+- Output: sequence length × embedding dimension (16)
+- Uses ReLU activation function
+- Two weight matrices: w1 (16×32) and w2 (32×16)
+
+This creates a bottleneck architecture that processes information in a higher-dimensional space before projecting back.
+
+6. TRAINING LOOP AND LOSS CALCULATION
+-------------------------------------
+The model uses next-token prediction training:
+
+- Cross-entropy loss between predicted and actual next tokens
+- Gradient clipping to prevent exploding gradients
+- Standard backpropagation through all layers
+- Parameter updates using stochastic gradient descent
+
+The training iterates through sequences progressively with causal masking.
+
+7. WHY PE/ROPE VALUES ARE NOT EXPORTED TO FILE
+----------------------------------------------
+PE/ROPE values are not exported because ROPE is computed dynamically during the forward pass and is not stored as trainable parameters. The ROPE transformation is applied on-the-fly to input embeddings before attention computation. Since it's a deterministic mathematical function based on position and the embedding dimension, there's no need to store these values as parameters. The same formula can be applied during inference to recompute positional information as needed.
+
+8. DATA EXPORT FUNCTION
+-----------------------
+A data export function was added to the model that exports data in the requested format:
+
+```c
+void export_model_data(char** vocab, int vocab_size, float* word_emb, float* ff_weights1, float* ff_weights2, float* biases, const char* subject)
+```
+
+This function exports:
+- For each word: its index, word string, and 16-dimensional embedding
+- First 32 values from the feed-forward weights
+- 16 bias values
+- The file is saved as curriculum/<subject>/<subject>.txt
+
+9. IMPLEMENTATION NOTE ON SHARED PARAMETERS
+-------------------------------------------
+An important clarification about transformer architecture: 
+- Word embeddings are unique per word (each word has its own embedding vector)
+- Transformation matrices (attention weights, feed-forward weights) are SHARED across all words
+- Bias vectors are also shared across all words
+- Positional encoding (ROPE) is computed on-demand based on position
+
+This means the model does not have separate weight matrices for each word. Instead, it has one set of transformation weights that applies to all words, which is more efficient and allows for generalization. The export function reflects this by including each word's unique embedding but shared model parameters.
+
+10. REASON FOR GOOD LEARNING PERFORMANCE
+----------------------------------------
+The model achieves good learning results due to the combination of:
+- Proper positional encoding (ROPE) that maintains position information
+- Causal masking that ensures autoregressive training
+- Residual connections (implicit in the architecture)
+- Gradient clipping to prevent training instability
+- Appropriate parameter dimensions for the task
+- Adequate training epochs (150)
+
+The lightweight architecture is well-suited for learning patterns in curriculum text data without overfitting.

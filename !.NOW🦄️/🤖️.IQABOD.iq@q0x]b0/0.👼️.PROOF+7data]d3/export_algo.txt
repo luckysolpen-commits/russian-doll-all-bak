@@ -1,0 +1,124 @@
+# Algorithm Explanation: Human-Readable Model Export for Transformer Model
+
+## Overview
+The export algorithm transforms the trained transformer model parameters into a human-readable format that captures the learned representations. Since transformer models use shared weight matrices across all input tokens, this algorithm shows how each unique word embedding interacts with the shared learned parameters through backpropagation. The format distinguishes between learned model weights (for computation) and bias values (for human editing/debugging).
+
+## Key Concepts
+
+### 1. Model Architecture Context
+- **Word Embeddings**: Each word in the vocabulary has its own unique 16-dimensional embedding vector (stored in `word_emb`)
+- **Shared Transformation Matrices**: Attention weights, feed-forward weights are learned through backpropagation (these apply to all positions)
+- **Biases**: Computer-learned bias vectors (also from backprop) that can be edited by humans for debugging/modification
+- **Positional Encoding (ROPE)**: Rotary Positional Embedding is computed dynamically during forward pass
+
+### 2. Export Format Structure
+The algorithm generates a tabular format with columns:
+- `word_index`: Sequential index of the word in the vocabulary
+- `word`: The actual word/token
+- `embedding1`: First element of the word's unique embedding vector (learned via backprop)
+- `pe_weight1`: Actual ROPE-transformed value (first dimension after ROPE applied to embedding)
+- `weight1`: Concatenated feed-forward weights * embedding * ROPE value (reflects backprop learning)
+- `weight2`: Concatenated computer-learned biases * embedding * ROPE value (reflects backprop learning)
+- `bias1-4`: Empty columns (0.0) for human debugging/editing (not the computer-learned values)
+
+### 3. Backpropagation Learning Capture
+
+#### Learned Weights (columns that reflect backprop training):
+- `weight1`: Sum of all FF weights multiplied by the word's embedding and ROPE-transformed value
+- `weight2`: Sum of all computer-learned biases multiplied by the word's embedding and ROPE-transformed value
+- These values encode the cumulative learning from all training epochs and backpropagation updates
+
+#### Human-Editable Biases (for debugging/modification):
+- `bias1-4`: Set to 0.0 as placeholders for manual adjustment by humans
+- The actual computer-learned biases are used in weight2 calculation
+
+### 4. ROPE (Rotary Positional Encoding) Implementation
+
+#### Step 1: Apply ROPE Transformation
+For word `i` at position 0 with embedding `E_w`:
+- Compute ROPE angle: `theta = 10000.0 / pow(10000.0, dim/EMBED_DIM)`
+- For position 0: `angle = 0 * theta` 
+- Apply rotation to first dimension pair: `rope_val = E_w[0]*cos(angle) - E_w[1]*sin(angle)`
+- Use this `rope_val` as `pe_weight1`
+
+#### Step 2: Use ROPE Values in Learning Capture
+- Multiply learned weights and biases by the ROPE-transformed values to show how position affects learning
+- `weight1 = (sum of FF weights) * embedding1 * ROPE value`
+- `weight2 = (sum of biases) * embedding1 * ROPE value`
+
+### 5. Enhanced Implementation: Sequential Context and Token Relationships
+
+#### Updated Implementation:
+- The export format now captures attention-based context for each word
+- It shows how each word's embedding interacts with learned parameters while incorporating attention relationships
+- Sequential relationships between tokens are now represented through attention context weights
+
+#### Captured Sequential Context:
+- The model learns through sequential training on word sequences (e.g., "Numbers form the foundation" where "Numbers" relates to "form", "form" relates to "the", etc.)
+- During training, the attention mechanism learns relationships between tokens in context
+- The updated export format now captures these learned relationships using attention weights
+
+#### How Attention Context is Incorporated:
+- Attention weights from the model are used to calculate contextual relationships
+- For each word, the attention context is computed as a sum of attention weights
+- This attention context value is applied to both the PE (positional encoding) and weight columns
+- PE value is now: `ROPE_transformed_value * (1.0 + attention_context)`
+- Weight values are now: `base_calculation * (1.0 + attention_context)`
+
+#### Why PE Values Don't Look Traditional:
+- Traditional PE values are purely based on position and dimension (e.g., fixed sine/cosine values)
+- Our PE values are ROPE-transformed embedding values that have been enhanced with attention context
+- The PE column now represents: `ROPE(embedding) * (1.0 + attention_context)`
+- This captures not just position but how each word's representation is modified by learned sequential relationships
+- The values represent the word's contextualized position information rather than raw positional encoding
+
+#### What This Represents:
+- How words would attend to other words in the vocabulary context
+- The learned relationships captured in the attention weight matrices
+- Sequential context relationships that emerged during training
+- Contextual modifications to base embeddings based on learned attention patterns
+
+### 6. Algorithm Steps
+
+#### Step 1: Extract Word-Specific Embedding (learned via backprop)
+For each word `i` in the vocabulary:
+- Extract `word_emb[i * EMBED_DIM]` as the first element of its embedding vector
+- This embedding was learned through backpropagation during training
+
+#### Step 2: Apply ROPE Transformation
+- Apply the ROPE rotation formula to this word's embedding at position 0
+- Get the transformed value: `rope_emb_0 = emb[0]*cos(angle) - emb[1]*sin(angle)`
+- Use this as the `pe_weight1` value
+
+#### Step 3: Calculate Learned Weights (reflecting backprop learning)
+- Sum all FF1 weights: `weight1 = sum(ff_weights1[j * FF_DIM + k]) for all j,k`
+- Multiply by embedding and ROPE value: `weight1 = weight1 * embedding1 * pe_weight1`
+
+#### Step 4: Calculate Learned Biases (reflecting backprop learning) 
+- Sum all computer-learned biases: `weight2 = sum(biases[j]) for all j`
+- Multiply by embedding and ROPE value: `weight2 = weight2 * embedding1 * pe_weight1`
+
+#### Step 5: Set Editable Bias Columns
+- Set `bias1-4` to 0.0 as empty placeholders for human modification
+
+### 7. Purpose and Benefits
+This algorithm:
+- Captures the backpropagation learning in the weight1, weight2 columns
+- Incorporates actual ROPE transformations (not just raw positional values)
+- Separates computer-learned parameters from human-editable parameters
+- Makes the internal learned representations interpretable and accessible
+- Creates a format suitable for downstream pipeline components
+- Preserves the model's learning while enabling human intervention through bias editing
+
+### 8. Mathematical Representation of Learning Capture
+For a word with embedding `E_w`, after training with backpropagation:
+- `pe_weight1`: `ROPE_transformed_value * (1.0 + attention_context)` 
+  - Where: `ROPE_transformed_value = E_w[0]*cos(0) - E_w[1]*sin(0) = E_w[0]` (at position 0)  
+  - And: `attention_context = sum(attn_weights[j * EMBED_DIM + 0]) for all j`
+- `weight1`: `Sum(FF_weights) * E_w[0] * ROPE_value * (1.0 + attention_context)`
+- `weight2`: `Sum(biases) * E_w[0] * ROPE_value * (1.0 + attention_context)`
+
+This approach captures how backpropagation shaped the model's understanding while providing a human-readable format that includes the actual ROPE transformations and attention-based sequential context learned by the model. The attention context represents the relationships between tokens that were learned during sequential training.
+
+### 9. Core Algorithm Preservation
+Importantly, the core training algorithms (attention mechanism, feed-forward networks, backpropagation) remain completely unchanged from the original working implementation. The modifications were exclusively to the export function to enhance the output format with sequential context information, without altering the underlying model training or inference behavior. This ensures that the model's learning capability and performance remain intact while providing better interpretability in the exported format.

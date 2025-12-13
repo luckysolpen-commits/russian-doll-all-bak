@@ -1,0 +1,150 @@
+number word embedding1 pe weight1 weight2 bias1 bias2 bias3 bias4
+1 all 0.177670 0.000000 0.218534 0.218522 0.000000 0.000000 0.000000 0.000000
+2 bets 0.178671 0.050000 0.218535 0.218532 0.000000 0.000000 0.000000 0.000000
+3 chip 0.179672 0.100000 0.218537 0.218597 0.000000 0.000000 0.000000 0.000000
+
+(obviously it should use the # of weights and biases, this is just an example, 
+also where are pe ? is it same as embedding or is it excluded from our data export in v5? 
+weights = 32 
+biases = 16 
+hash-embedding(pe?)= 16 
+
+it should export this into curriculum/<model_name>/<model_name.txt>
+(model name is name of dir curricula was in , aka <Astronomy>
+
+
+
+i know that its currently in a 16 x 32 matrix format but is there some way we could
+take that apart with the loss in tact and map it back to the words embeddings pe weights columns
+for consumption from other things in the pipeline? 
+the pipe line shouldn't need to use the 16 x 32 matrix once we transform the values back to word
+by using their embeddings and pe values to get new values, 
+this is possible right? do you get what im asking you? 
+------------------
+(it honestly should have suggested we add more weights , and embeddings
+(even tho i thot they were concatenated or something... ) <u suck at matrix-math ; bro>
+
+
+
+-----------------------
+The model implements a lightweight Transformer architecture in C with the following specifications:
+- Vocabulary size: 100 words
+- Embedding dimension: 16
+- Number of attention heads: 2
+- Feed-forward dimension: 32
+- Learning rate: 0.101
+- Training epochs: 150
+
+Architecture Components:
+- Hash-based word embedding layer
+- Rotary Positional Encoding (ROPE)
+- Masked multi-head attention mechanism
+- Feed-forward neural network with ReLU activation
+- Linear layer for output prediction
+
+
+
+- Word embeddings are unique per word (each word has its own embedding vector)
+- Transformation matrices (attention weights, feed-forward weights) are SHARED across all words
+- Bias vectors are also shared across all words
+- Positional encoding (ROPE) is computed on-demand based on position
+
+This means the model does not have separate weight matrices for each word. Instead, it has one set of transformation weights that applies to all words, which is more efficient and allows for generalization. The export function reflects this by including each word's unique embedding but shared model parameters.
+
+(im asking us to make this model more human readable but keep its captured learnings
+but  i dont know the exact algo to do that , do U ? we can update 
+the code to do this then export the data in the format desired 
+
+
+
+0.model]v5]HOLY👼️]z1.c <- update
+
+
+
+the previous model i asked was confused but i think you will get me. (here is previous promt so you can 
+avoid is misunderstandings if possible, ignore it if u find it confusing) 
+
+
+
+
+> sorry im still confused. what do u mean the transformation matrices are 
+  shared? are u implying they cant be sorted back into weights for each word 
+  based on positional encoding?
+
+✦ Let me clarify this concept. In transformer models like yours:
+
+   1. Word embeddings are unique per word: Each word in the vocabulary has its
+      own unique embedding vector (which is 16-dimensional in your case).
+
+   2. Transformation matrices (weights) are shared: The attention weight matrices
+      and feed-forward network weights are shared across all positions in the
+      sequence. These are model parameters that are learned during training and
+      apply to any input they receive.
+
+  For example, if you have a weight matrix for the feed-forward layer (say
+  16×32), it transforms any 16-dimensional input vector to a 32-dimensional
+  output vector, regardless of which word it came from.
+
+  Positional encoding (like ROPE) is added to the word embeddings to provide
+  position information, but the transformation weights themselves are not
+  unique per word.
+
+  The model doesn't store separate weights for each individual word. Instead,
+  it has one set of weights that applies to all words. This is more efficient
+  and allows the model to generalize to unseen word combinations.
+
+  So when you want to export data, you have:
+   - A unique embedding vector for each word (16 values per word)
+   - Shared weight matrices for transformations (same for all words)
+   - Shared bias vectors (same for all words)
+
+  Would you like the export to duplicate the shared weights for each word, or
+  would you prefer a different format that acknowledges that some parameters
+  are shared across all words?
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│ >   Type your message or @path/to/file                                     │
+╰────────────────────────────────────────────────────────────────────────────╯
+/0.👼️.PROOF+7data]bno       coder-model       | ✖ 1 error (ctrl+o for 
+1                   sandbox  (97%)               details)
+
+
+> what if we modified the training to use the data structure that i prefer? is it 
+  possible? do you know how to rework it so it still trains , based on pe? the pe 
+  rope embeddings are what will signal that they belong to the same model , get it?
+
+
+✦ I think I understand what you're getting at. You want to restructure the model
+  so that there are individualized parameters for each word that incorporate
+  positional information, rather than shared weights. This would be a significant
+   architectural change from the standard transformer model.
+
+  However, this approach would have some challenges:
+   1. It would create a very large number of parameters (each word would need its
+      own weight matrices)
+   2. It would lose the generalization capability of shared weights
+   3. It might overfit to the training data
+
+  If you want each word to have its own parameters that somehow incorporate
+  position information, one approach could be to have each word embedding be
+  combined with position-specific parameters during training. Let me design
+  this differently:
+
+  Actually, I think there might be some confusion. In your model, the ROPE is
+  applied dynamically to the input embeddings at each forward pass. The word
+  embeddings themselves stay the same, but position information is added via
+  ROPE during processing.
+
+  Would you like me to:
+   1. Modify the export function to include representations that combine word
+      embeddings with positional information somehow?
+   2. Or do you want to fundamentally change the model architecture to have
+      different weights per position?
+
+  Could you clarify what you mean by "rework it so it still trains, based on
+  pe" and how you want the PE/ROPE to influence the weights?
+
+
+
+
