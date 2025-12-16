@@ -1,0 +1,703 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+#define MAX_VOCAB_SIZE 100000
+#define EMBED_DIM 16
+#define CONTEXT_SIZE 8  // Number of tokens to use as context
+#define FF_HIDDEN (EMBED_DIM * 4)
+
+// Safe memory freeing macro to prevent double free errors
+#define SAFE_FREE(ptr) do { if (ptr) { free(ptr); ptr = NULL; } } while(0)
+
+// Vocabulary structure to match curriculum format
+typedef struct {
+    char **words;
+    int *word_to_id;
+    float *embeddings;      // [vocab_size * embed_dim] concatenated embeddings
+    float *rope_pos_enc;    // [vocab_size * embed_dim] RoPE positional encodings
+    // Human-readable/usable biases - more meaningful for architecture understanding
+    float *attention_bias;  // [vocab_size] attention bias values (new weight category - human-usable)
+    float *ffn_bias;        // [vocab_size] feed-forward network bias values (new weight category - human-usable)
+    // Internal computer-used weights and biases
+    float *weight1;         // [vocab_size] weight1 values
+    float *weight2;         // [vocab_size] weight2 values
+    float *bias1;           // [vocab_size] bias1 values 
+    float *bias2;           // [vocab_size] bias2 values
+    float *bias3;           // [vocab_size] bias3 values
+    float *bias4;           // [vocab_size] bias4 values
+    // Q, K, V projections for attention mechanism (for shared encoder/decoder use)
+    float *q_proj;          // [vocab_size * embed_dim] query projections
+    float *k_proj;          // [vocab_size * embed_dim] key projections  
+    float *v_proj;          // [vocab_size * embed_dim] value projections
+    char **notes;           // [vocab_size] user notes for each token
+    int vocab_size;
+    int max_size;
+} SimpleVocab;
+
+// FUNCTION DECLARATIONS
+
+void matmul(float *xout, float *x, float *w, int n, int d);
+void swiglu(float* xb, float* hb, float* hb2, int hidden_dim);
+void softmax(float *x, int size);
+float cross_entropy_loss(float* predicted_logits, int actual_token, int vocab_size);
+void compute_logits(float* context_embeddings, int* context_tokens, int context_len, 
+                   SimpleVocab* vocab, float* logits);
+void update_weights_tx(float* weights, float* gradients, int size, float learning_rate);
+int process_feedback_tx_with_curriculum(const char* vocab_file, int* token_sequence, int seq_len, float learning_rate);
+
+// MAIN FUNCTION
+int main(int argc, char *argv[]) {
+    if (argc < 2) {
+        printf("Usage: %s <command> [args...]\n", argv[0]);
+        printf("Commands:\n");
+        printf("  process <vocab_file> <token_sequence_comma_separated> <learning_rate> - Process TX feedback learning\n");
+        printf("  cross_entropy <vocab_size> <actual_token> - Compute cross-entropy loss\n");
+        printf("  update_weights <size> <learning_rate> - Update weights with gradients\n");
+        printf("  softmax <size> - Apply softmax function\n");
+        return 1;
+    }
+    
+    char* command = argv[1];
+    
+    if (strcmp(command, "process") == 0) {
+        if (argc < 4) {
+            printf("Error: Missing vocab_file, token_sequence, and learning_rate\n");
+            printf("Usage: %s process <vocab_file> <token_sequence_comma_separated> <learning_rate>\n", argv[0]);
+            return 1;
+        }
+        
+        char* vocab_file = argv[2];
+        char* tokens_str = argv[3];
+        float learning_rate = atof(argv[4]);
+        
+        printf("Processing TX feedback learning: vocab_file=%s, lr=%.6f\n", vocab_file, learning_rate);
+        printf("Token sequence: %s\n", tokens_str);
+        
+        // Parse token sequence from comma-separated string
+        int token_sequence[100]; // Max 100 tokens for this example
+        int seq_len = 0;
+        
+        char* token_copy = malloc(strlen(tokens_str) + 1);
+        strcpy(token_copy, tokens_str);
+        
+        char* token = strtok(token_copy, ",");
+        while (token != NULL && seq_len < 100) {
+            token_sequence[seq_len] = atoi(token);
+            seq_len++;
+            token = strtok(NULL, ",");
+        }
+        free(token_copy);
+        
+        if (seq_len < CONTEXT_SIZE + 1) {
+            printf("Error: Sequence too short for context size %d\n", CONTEXT_SIZE);
+            return -1;
+        }
+        
+        // Process TX feedback learning using curriculum parameters
+        int result = process_feedback_tx_with_curriculum(vocab_file, token_sequence, seq_len, learning_rate);
+        
+        if (result == 0) {
+            printf("TX feedback learning completed successfully\n");
+        } else {
+            printf("TX feedback learning failed with code %d\n", result);
+        }
+        
+    } else if (strcmp(command, "cross_entropy") == 0) {
+        if (argc < 4) {
+            printf("Error: Missing vocab_size and actual_token\n");
+            return 1;
+        }
+        
+        int vocab_size = atoi(argv[2]);
+        int actual_token = atoi(argv[3]);
+        
+        // Create sample logits (unnormalized probabilities)
+        float* logits = malloc(vocab_size * sizeof(float));
+        
+        // Initialize with sample values
+        for (int i = 0; i < vocab_size; i++) {
+            logits[i] = ((float)(i % 100) / 100.0f) - 0.5f;  // Values between -0.5 and 0.49
+        }
+        
+        printf("Computing cross-entropy loss for vocab_size=%d, actual_token=%d\n", vocab_size, actual_token);
+        
+        // Compute cross-entropy loss
+        float loss = cross_entropy_loss(logits, actual_token, vocab_size);
+        
+        printf("Cross-entropy loss: %.6f\n", loss);
+        
+        free(logits);
+        
+    } else if (strcmp(command, "update_weights") == 0) {
+        if (argc < 4) {
+            printf("Error: Missing size and learning_rate\n");
+            return 1;
+        }
+        
+        int size = atoi(argv[2]);
+        float learning_rate = atof(argv[3]);
+        
+        // Create sample weights and gradients
+        float* weights = malloc(size * sizeof(float));
+        float* gradients = malloc(size * sizeof(float));
+        
+        // Initialize with sample values
+        for (int i = 0; i < size; i++) {
+            weights[i] = (float)(i % 10) * 0.1f - 0.5f;  // Values between -0.5 and 0.4
+            gradients[i] = (float)(i % 5) * 0.05f - 0.1f; // Small gradient values
+        }
+        
+        printf("Updating weights (first 5): ");
+        for (int i = 0; i < 5 && i < size; i++) {
+            printf("%.3f ", weights[i]);
+        }
+        printf("...\n");
+        
+        // Update weights
+        update_weights_tx(weights, gradients, size, learning_rate);
+        
+        printf("Updated weights (first 5): ");
+        for (int i = 0; i < 5 && i < size; i++) {
+            printf("%.3f ", weights[i]);
+        }
+        printf("...\n");
+        
+        free(weights);
+        free(gradients);
+        
+    } else if (strcmp(command, "softmax") == 0) {
+        if (argc < 3) {
+            printf("Error: Missing size\n");
+            return 1;
+        }
+        
+        int size = atoi(argv[2]);
+        
+        // Create sample vector
+        float* x = malloc(size * sizeof(float));
+        
+        // Initialize with sample values
+        for (int i = 0; i < size; i++) {
+            x[i] = (float)(i % 5) * 0.5f - 1.0f;  // Values between -1.0 and 1.0
+        }
+        
+        printf("Input for Softmax (first 5): ");
+        for (int i = 0; i < 5 && i < size; i++) {
+            printf("%.3f ", x[i]);
+        }
+        printf("...\n");
+        
+        // Apply softmax
+        softmax(x, size);
+        
+        printf("Output from Softmax (first 5): ");
+        for (int i = 0; i < 5 && i < size; i++) {
+            printf("%.3f ", x[i]);
+        }
+        printf("...\n");
+        
+        free(x);
+        
+    } else {
+        printf("Error: Unknown command '%s'\n", command);
+        return 1;
+    }
+    
+    return 0;
+}
+
+void matmul(float *xout, float *x, float *w, int n, int d) {
+    // W (d,n) @ x (n,) -> xout (d,)
+    // by far the most amount of time is spent inside this little function
+    for (int i = 0; i < d; i++) {
+        float val = 0.0f;
+        for (int j = 0; j < n; j++) {
+            val += w[i * n + j] * x[j];
+        }
+        xout[i] = val;
+    }
+}
+
+void swiglu(float* xb, float* hb, float* hb2, int hidden_dim) {
+    for (int i = 0; i < hidden_dim; i++) {
+        float val = hb[i];
+        // silu(x)=x*σ(x), where σ(x) is the logistic sigmoid
+        val *= (1.0f / (1.0f + expf(-val)));
+        // elementwise multiply with w3(x)
+        val *= hb2[i];
+        xb[i] = val;
+    }
+}
+
+void softmax(float *x, int size) {
+    // Find max value (for numerical stability)
+    float max_val = x[0];
+    for (int i = 1; i < size; i++) {
+        if (x[i] > max_val) {
+            max_val = x[i];
+        }
+    }
+    // Exp and sum
+    float sum = 0.0f;
+    for (int i = 0; i < size; i++) {
+        x[i] = expf(x[i] - max_val);
+        sum += x[i];
+    }
+    // Normalize
+    for (int i = 0; i < size; i++) {
+        x[i] /= sum;
+    }
+}
+
+// Function to compute logits for next token prediction using attention mechanism
+void compute_logits(float* context_embeddings, int* context_tokens, int context_len, 
+                   SimpleVocab* vocab, float* logits) {
+    // Initialize logits to 0
+    for (int i = 0; i < vocab->vocab_size; i++) {
+        logits[i] = 0.0f;
+    }
+    
+    // Compute attention over context tokens
+    float context_attention[CONTEXT_SIZE];
+    for (int ctx_pos = 0; ctx_pos < context_len && ctx_pos < CONTEXT_SIZE; ctx_pos++) {
+        int token_id = context_tokens[ctx_pos];
+        
+        // Simplified attention: compute attention score based on token properties
+        // In a real transformer, this would be much more sophisticated
+        float attention_score = 0.0f;
+        
+        // Use the attention bias and QKV projections to compute attention
+        for (int d = 0; d < EMBED_DIM; d++) {
+            float q_val = context_embeddings[ctx_pos * EMBED_DIM + d] * vocab->q_proj[token_id * EMBED_DIM + d % EMBED_DIM];
+            float k_val = context_embeddings[ctx_pos * EMBED_DIM + d] * vocab->k_proj[token_id * EMBED_DIM + d % EMBED_DIM];
+            attention_score += q_val * k_val;  // Simplified Q*K attention
+        }
+        
+        // Apply normalization
+        attention_score /= sqrtf(EMBED_DIM);
+        context_attention[ctx_pos] = attention_score;
+    }
+    
+    // Apply softmax to attention scores
+    float temp_attention[CONTEXT_SIZE];
+    for (int i = 0; i < context_len && i < CONTEXT_SIZE; i++) {
+        temp_attention[i] = context_attention[i];
+    }
+    softmax(temp_attention, context_len < CONTEXT_SIZE ? context_len : CONTEXT_SIZE);
+    
+    // Use attention-weighted context to compute logits for each possible next token
+    for (int vocab_idx = 0; vocab_idx < vocab->vocab_size; vocab_idx++) {
+        float weighted_sum = 0.0f;
+        
+        // Weight the context embeddings by attention
+        for (int ctx_pos = 0; ctx_pos < context_len && ctx_pos < CONTEXT_SIZE; ctx_pos++) {
+            float attention_weight = temp_attention[ctx_pos];
+            
+            // Compute similarity between context and possible next token
+            float similarity = 0.0f;
+            for (int d = 0; d < EMBED_DIM; d++) {
+                float ctx_val = context_embeddings[ctx_pos * EMBED_DIM + d];
+                float token_val = vocab->embeddings[vocab_idx * EMBED_DIM + d];
+                similarity += ctx_val * token_val;  // Dot product similarity
+            }
+            
+            weighted_sum += attention_weight * similarity;
+        }
+        
+        // Apply final transformation using vocab parameters
+        logits[vocab_idx] = weighted_sum * vocab->weight1[context_tokens[context_len-1]] + 
+                           vocab->bias1[context_tokens[context_len-1]];
+    }
+}
+
+float cross_entropy_loss(float* predicted_logits, int actual_token, int vocab_size) {
+    // Find max logit for numerical stability
+    float max_logit = predicted_logits[0];
+    for (int j = 1; j < vocab_size; j++) {
+        if (predicted_logits[j] > max_logit) {
+            max_logit = predicted_logits[j];
+        }
+    }
+    
+    // Compute log(sum(exp(logits))) for numerical stability
+    float log_sum_exp = 0.0f;
+    for (int j = 0; j < vocab_size; j++) {
+        log_sum_exp += expf(predicted_logits[j] - max_logit);
+    }
+    log_sum_exp = logf(log_sum_exp) + max_logit;
+    
+    // Calculate negative log probability of correct token
+    float correct_logit = predicted_logits[actual_token];
+    float loss = -(correct_logit - log_sum_exp);
+    
+    return loss;
+}
+
+// Function to update weights with gradients using learning rate
+void update_weights_tx(float* weights, float* gradients, int size, float learning_rate) {
+    for (int i = 0; i < size; i++) {
+        weights[i] -= learning_rate * gradients[i];
+    }
+}
+
+// Function to load model from vocabulary file
+int load_model_from_vocab_file(const char* vocab_file, SimpleVocab* vocab) {
+    printf("Loading model from vocab file: %s\n", vocab_file);
+    
+    FILE *file = fopen(vocab_file, "r");
+    if (!file) {
+        printf("Error: could not open vocabulary file %s\n", vocab_file);
+        return -1;
+    }
+    
+    // Read file content to count lines first (excluding header)
+    char line[1024];
+    int line_count = 0;
+    
+    // Read header line first
+    if (fgets(line, sizeof(line), file) == NULL) {
+        printf("Error: could not read header from vocabulary file\n");
+        fclose(file);
+        return -1;
+    }
+    
+    // Count remaining lines
+    while (fgets(line, sizeof(line), file) != NULL) {
+        line_count++;
+    }
+    rewind(file);
+    
+    // Skip header line
+    if (fgets(line, sizeof(line), file) == NULL) {
+        printf("Error: could not read header from vocabulary file\n");
+        fclose(file);
+        return -1;
+    }
+    
+    // Initialize vocabulary from file
+    vocab->vocab_size = line_count;
+    vocab->max_size = MAX_VOCAB_SIZE;
+    vocab->words = malloc(vocab->vocab_size * sizeof(char*));
+    vocab->word_to_id = malloc(vocab->vocab_size * sizeof(int));
+    vocab->embeddings = malloc(vocab->vocab_size * EMBED_DIM * sizeof(float));
+    vocab->rope_pos_enc = malloc(vocab->vocab_size * EMBED_DIM * sizeof(float));
+    vocab->weight1 = malloc(vocab->vocab_size * sizeof(float));
+    vocab->weight2 = malloc(vocab->vocab_size * sizeof(float));
+    vocab->bias1 = malloc(vocab->vocab_size * sizeof(float));
+    vocab->bias2 = malloc(vocab->vocab_size * sizeof(float));
+    vocab->bias3 = malloc(vocab->vocab_size * sizeof(float));
+    vocab->bias4 = malloc(vocab->vocab_size * sizeof(float));
+    vocab->attention_bias = malloc(vocab->vocab_size * sizeof(float));
+    vocab->ffn_bias = malloc(vocab->vocab_size * sizeof(float));
+    vocab->q_proj = malloc(vocab->vocab_size * EMBED_DIM * sizeof(float));
+    vocab->k_proj = malloc(vocab->vocab_size * EMBED_DIM * sizeof(float));
+    vocab->v_proj = malloc(vocab->vocab_size * EMBED_DIM * sizeof(float));
+    vocab->notes = malloc(vocab->vocab_size * sizeof(char*));
+    
+    // Read vocabulary entries
+    for (int i = 0; i < vocab->vocab_size; i++) {
+        int index;
+        char word[1000];
+        char note_str[1000];  // Buffer for note string
+        float embedding, pe_value, attention_bias_val, ffn_bias_val, weight1_val, weight2_val, bias1_val, bias2_val, bias3_val, bias4_val, q_val, k_val, v_val;
+        
+        if (fscanf(file, "%d %s %f %f %f %f %f %f %f %f %f %f %f %f %f %999s", 
+                   &index, word, &embedding, &pe_value, 
+                   &attention_bias_val, &ffn_bias_val,
+                   &weight1_val, &weight2_val, 
+                   &bias1_val, &bias2_val, &bias3_val, &bias4_val,
+                   &q_val, &k_val, &v_val, note_str) != 16) {
+            printf("Error: could not read vocabulary entry %d properly\n", i);
+            fclose(file);
+            return -1;
+        }
+        
+        // Store word
+        vocab->words[i] = malloc((strlen(word) + 1) * sizeof(char));
+        strcpy(vocab->words[i], word);
+        vocab->word_to_id[i] = i;
+        
+        // Initialize embedding (for now, using the embedding value from file as first dimension)
+        for (int d = 0; d < EMBED_DIM; d++) {
+            if (d == 0) {
+                vocab->embeddings[i * EMBED_DIM + d] = embedding;
+            } else {
+                // For other dimensions, we'll initialize using a deterministic approach
+                unsigned long hash = 5381;
+                int c;
+                const char *str = word;
+                while ((c = *str++))
+                    hash = ((hash << 5) + hash) + c;
+                
+                vocab->embeddings[i * EMBED_DIM + d] = (float)(hash % 1000000) / 1000000.0f + (float)d * 0.001f;
+            }
+        }
+        
+        // Initialize RoPE positional encoding (for now, using the pe value from file as first dimension)
+        for (int d = 0; d < EMBED_DIM; d++) {
+            if (d == 0) {
+                vocab->rope_pos_enc[i * EMBED_DIM + d] = pe_value;
+            } else {
+                // Generate RoPE based on position i and dimension d
+                float freq = 1.0f / powf(10000.0f, (float)(d % (EMBED_DIM/2)) / (EMBED_DIM/2));
+                float angle = i * freq;
+                
+                if (d % 2 == 0) {
+                    vocab->rope_pos_enc[i * EMBED_DIM + d] = sinf(angle);
+                } else {
+                    vocab->rope_pos_enc[i * EMBED_DIM + d] = cosf(angle);
+                }
+            }
+        }
+        
+        // Initialize Q, K, V projections based on the values from file (for first dimension)
+        for (int d = 0; d < EMBED_DIM; d++) {
+            if (d == 0) {
+                vocab->q_proj[i * EMBED_DIM + d] = q_val;
+                vocab->k_proj[i * EMBED_DIM + d] = k_val;
+                vocab->v_proj[i * EMBED_DIM + d] = v_val;
+            } else {
+                // For other dimensions, use deterministic approach based on word content
+                unsigned long hash = 5381;
+                int c;
+                const char *str = word;
+                while ((c = *str++))
+                    hash = ((hash << 5) + hash) + c;
+                
+                vocab->q_proj[i * EMBED_DIM + d] = (float)(hash % 1000000) / 1000000.0f + (float)d * 0.001f;
+                vocab->k_proj[i * EMBED_DIM + d] = (float)(hash % 1000001) / 1000000.0f + (float)d * 0.001f;  // Slightly different hash
+                vocab->v_proj[i * EMBED_DIM + d] = (float)(hash % 1000002) / 1000000.0f + (float)d * 0.001f;  // Slightly different hash
+            }
+        }
+        
+        // Store note string for this token
+        vocab->notes[i] = malloc((strlen(note_str) + 1) * sizeof(char));
+        strcpy(vocab->notes[i], note_str);
+        
+        // Store other values from vocab file in the new order (human-usable biases first)
+        vocab->attention_bias[i] = attention_bias_val;
+        vocab->ffn_bias[i] = ffn_bias_val;
+        vocab->weight1[i] = weight1_val;
+        vocab->weight2[i] = weight2_val;
+        vocab->bias1[i] = bias1_val;
+        vocab->bias2[i] = bias2_val;
+        vocab->bias3[i] = bias3_val;
+        vocab->bias4[i] = bias4_val;
+    }
+    
+    fclose(file);
+    
+    return 0; // Success
+}
+
+// Function to save updated vocabulary back to file
+int save_model_to_vocab_file(const char* vocab_file, SimpleVocab* vocab) {
+    printf("Saving updated model to vocab file: %s\n", vocab_file);
+    
+    // Create a temporary file for updates
+    char temp_file[2048];
+    snprintf(temp_file, sizeof(temp_file), "%s.tmp", vocab_file);
+    
+    FILE *file = fopen(temp_file, "w");
+    if (!file) {
+        printf("Error: could not create temporary vocabulary file %s\n", temp_file);
+        return -1;
+    }
+    
+    // Write header
+    fprintf(file, "number word embedding pe attention_bias ffn_bias weight1 weight2 bias1 bias2 bias3 bias4 q_proj k_proj v_proj note\n");
+    
+    // Write each token and its parameters
+    for (int i = 0; i < vocab->vocab_size; i++) {
+        // Write the first dimension values for embedding and PE (for consistency with examples)
+        float emb_val = vocab->embeddings[i * EMBED_DIM + 0];
+        float pe_val = vocab->rope_pos_enc[i * EMBED_DIM + 0];
+        // Use first dimension of Q, K, V projections
+        float q_val = vocab->q_proj[i * EMBED_DIM + 0];
+        float k_val = vocab->k_proj[i * EMBED_DIM + 0];
+        float v_val = vocab->v_proj[i * EMBED_DIM + 0];
+        // Get note for this token (or empty string if none)
+        const char* note = vocab->notes[i] ? vocab->notes[i] : "";
+        
+        fprintf(file, "%d %s %.6f %.6f %.6f %.6f %.6f %.6f %.6f %.6f %.6f %.6f %.6f %.6f %.6f %s\n",
+                i+1, vocab->words[i], emb_val, pe_val, 
+                vocab->attention_bias[i], vocab->ffn_bias[i],
+                vocab->weight1[i], vocab->weight2[i],
+                vocab->bias1[i], vocab->bias2[i], vocab->bias3[i], vocab->bias4[i],
+                q_val, k_val, v_val, note);
+    }
+    
+    fclose(file);
+    
+    // Replace original file with updated one
+    if (rename(temp_file, vocab_file) != 0) {
+        printf("Error: could not replace original vocabulary file with updated version\n");
+        return -1;
+    }
+    
+    printf("Successfully updated vocabulary file with new parameters\n");
+    return 0; // Success
+}
+
+// Function to process TX (Transformer) feedback learning using parameters from curriculum
+int process_feedback_tx_with_curriculum(const char* vocab_file, int* token_sequence, int seq_len, float learning_rate) {
+    printf("Processing TX feedback learning with curriculum: %s, sequence length: %d, lr: %.6f\n", 
+           vocab_file, seq_len, learning_rate);
+    
+    // Load vocabulary parameters from curriculum file
+    SimpleVocab vocab;
+    int result = load_model_from_vocab_file(vocab_file, &vocab);
+    if (result != 0) {
+        printf("Error loading vocabulary from curriculum\n");
+        return result;
+    }
+    
+    // Process sequence in sliding context windows to predict next token
+    float total_loss = 0.0f;
+    int num_predictions = 0;
+    
+    for (int pos = CONTEXT_SIZE; pos < seq_len; pos++) {
+        // Create context window: tokens [pos-CONTEXT_SIZE] to [pos-1]
+        int context_tokens[CONTEXT_SIZE];
+        float context_embeddings[CONTEXT_SIZE * EMBED_DIM];
+        
+        for (int ctx_offset = 0; ctx_offset < CONTEXT_SIZE; ctx_offset++) {
+            int ctx_pos = pos - CONTEXT_SIZE + ctx_offset;
+            context_tokens[ctx_offset] = token_sequence[ctx_pos];
+            
+            // Validate token ID
+            if (context_tokens[ctx_offset] < 0 || context_tokens[ctx_offset] >= vocab.vocab_size) {
+                context_tokens[ctx_offset] = 0; // Use first token as fallback
+            }
+            
+            // Copy embedding for this context token
+            for (int d = 0; d < EMBED_DIM; d++) {
+                context_embeddings[ctx_offset * EMBED_DIM + d] = 
+                    vocab.embeddings[context_tokens[ctx_offset] * EMBED_DIM + d];
+            }
+        }
+        
+        // Target token to predict
+        int target_token = token_sequence[pos];
+        if (target_token < 0 || target_token >= vocab.vocab_size) {
+            target_token = 0; // Use first token as fallback
+        }
+        
+        // Compute logits for all possible next tokens using attention mechanism
+        float* logits = malloc(vocab.vocab_size * sizeof(float));
+        
+        // Compute attention-based logits
+        compute_logits(context_embeddings, context_tokens, CONTEXT_SIZE, &vocab, logits);
+        
+        // Calculate cross-entropy loss
+        float loss = cross_entropy_loss(logits, target_token, vocab.vocab_size);
+        total_loss += loss;
+        num_predictions++;
+        
+        // Compute gradients for parameter updates
+        // First, compute softmax probabilities
+        float* probs = malloc(vocab.vocab_size * sizeof(float));
+        for (int i = 0; i < vocab.vocab_size; i++) {
+            probs[i] = logits[i];
+        }
+        softmax(probs, vocab.vocab_size);
+        
+        // Update parameters based on loss gradients
+        for (int ctx_offset = 0; ctx_offset < CONTEXT_SIZE; ctx_offset++) {
+            int token_id = context_tokens[ctx_offset];
+            
+            // Update attention-related parameters based on prediction error
+            float grad_factor = (probs[target_token] - (token_id == target_token ? 1.0f : 0.0f)) * learning_rate * 0.1f;
+            
+            // Update attention bias
+            vocab.attention_bias[token_id] -= grad_factor;
+            
+            // Update FFN bias
+            vocab.ffn_bias[token_id] -= grad_factor * 0.5f;
+            
+            // Update weights
+            vocab.weight1[token_id] -= grad_factor * 0.3f;
+            vocab.weight2[token_id] -= grad_factor * 0.3f;
+            
+            // Update biases
+            vocab.bias1[token_id] -= grad_factor * 0.2f;
+            vocab.bias2[token_id] -= grad_factor * 0.2f;
+            
+            // Update QKV projections
+            for (int d = 0; d < EMBED_DIM; d++) {
+                vocab.q_proj[token_id * EMBED_DIM + d] -= grad_factor * 0.1f;
+                vocab.k_proj[token_id * EMBED_DIM + d] -= grad_factor * 0.1f;
+                vocab.v_proj[token_id * EMBED_DIM + d] -= grad_factor * 0.1f;
+            }
+        }
+        
+        printf("Position %d: predicted token %d (target: %d), loss: %.6f\n", 
+               pos, token_sequence[pos-1], target_token, loss);
+        
+        free(logits);
+        free(probs);
+    }
+    
+    if (num_predictions > 0) {
+        float avg_loss = total_loss / num_predictions;
+        printf("Average loss across %d predictions: %.6f\n", num_predictions, avg_loss);
+    }
+    
+    // Save the updated parameters back to the curriculum file
+    result = save_model_to_vocab_file(vocab_file, &vocab);
+    if (result != 0) {
+        printf("Error saving updated vocabulary to curriculum\n");
+        
+        // Free vocabulary memory before returning
+        for (int i = 0; i < vocab.vocab_size; i++) {
+            free(vocab.words[i]);
+            if (vocab.notes[i]) free(vocab.notes[i]);
+        }
+        SAFE_FREE(vocab.words);
+        SAFE_FREE(vocab.word_to_id);
+        SAFE_FREE(vocab.embeddings);
+        SAFE_FREE(vocab.rope_pos_enc);
+        SAFE_FREE(vocab.weight1);
+        SAFE_FREE(vocab.weight2);
+        SAFE_FREE(vocab.bias1);
+        SAFE_FREE(vocab.bias2);
+        SAFE_FREE(vocab.bias3);
+        SAFE_FREE(vocab.bias4);
+        SAFE_FREE(vocab.attention_bias);
+        SAFE_FREE(vocab.ffn_bias);
+        SAFE_FREE(vocab.q_proj);
+        SAFE_FREE(vocab.k_proj);
+        SAFE_FREE(vocab.v_proj);
+        SAFE_FREE(vocab.notes);
+        
+        return result;
+    }
+    
+    printf("TX feedback learning completed for %d prediction steps\n", num_predictions);
+    
+    // Free vocabulary memory
+    for (int i = 0; i < vocab.vocab_size; i++) {
+        free(vocab.words[i]);
+        if (vocab.notes[i]) free(vocab.notes[i]);
+    }
+    SAFE_FREE(vocab.words);
+    SAFE_FREE(vocab.word_to_id);
+    SAFE_FREE(vocab.embeddings);
+    SAFE_FREE(vocab.rope_pos_enc);
+    SAFE_FREE(vocab.weight1);
+    SAFE_FREE(vocab.weight2);
+    SAFE_FREE(vocab.bias1);
+    SAFE_FREE(vocab.bias2);
+    SAFE_FREE(vocab.bias3);
+    SAFE_FREE(vocab.bias4);
+    SAFE_FREE(vocab.attention_bias);
+    SAFE_FREE(vocab.ffn_bias);
+    SAFE_FREE(vocab.q_proj);
+    SAFE_FREE(vocab.k_proj);
+    SAFE_FREE(vocab.v_proj);
+    SAFE_FREE(vocab.notes);
+    
+    return 0; // Success
+}

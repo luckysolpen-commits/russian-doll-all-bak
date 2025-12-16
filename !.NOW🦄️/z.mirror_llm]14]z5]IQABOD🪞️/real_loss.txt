@@ -1,0 +1,29 @@
+# Real Training Context for Modular LLM
+
+## Problem Statement
+Current training implementation produces random loss values because modules are executed independently without creating actual learning connections. The modular architecture (attention, feedforward, rope, backprop modules using curriculum as central data store) is not properly connected to create real training progression.
+
+## Key Data Advantage
+The curriculum files preserve the exact sequence and frequency of words from the original corpus, making next-token prediction training straightforward. Each line represents a token in the original sequence, allowing for proper sequential learning.
+
+## Requirements for Real Training Implementation
+1. Use curriculum files as central data store with fields: number, word, embedding, pe, attention_bias, ffn_bias, weight1-4, bias1-4, q_proj, k_proj, v_proj, note
+2. Maintain the modular architecture pattern where attention_module, feedforward_module, rope_module, and backprop_module are called
+3. Create actual forward-backward training loop that connects module operations with real learning
+4. Use next-token prediction as training objective, leveraging the preserved sequence from corpus in curriculum
+5. Ensure loss values genuinely reflect model learning (decreasing over time as model improves)
+6. Connect module outputs as inputs for subsequent modules in learning pipeline
+
+## Training Architecture Pattern
+- Load curriculum data containing sequential tokens from original corpus (preserved order and frequency)
+- Process sequences through forward pass using modular components (attention, feedforward, rope working together)
+- Compute actual cross-entropy loss based on next-token prediction using the sequential curriculum data
+- Backpropagate gradients through modules to update parameters in curriculum
+- Ensure parameters are updated in curriculum and persist between epochs
+- Create proper connection between all four module types for real learning
+
+## Success Criteria
+- Loss values should decrease over epochs as model learns to predict next tokens in sequence
+- Each epoch should show measurable improvement in prediction accuracy on sequential data
+- Modules should properly update parameters in curriculum that affect subsequent training
+- Training should learn patterns from the preserved corpus sequence in curriculum data

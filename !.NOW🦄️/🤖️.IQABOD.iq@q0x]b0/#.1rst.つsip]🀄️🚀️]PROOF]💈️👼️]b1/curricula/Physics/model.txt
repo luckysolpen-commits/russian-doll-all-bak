@@ -1,2 +1,0 @@
-vocab_size: 72
-embed_dim: 16

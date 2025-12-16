@@ -1,4 +1,0 @@
-❤️‍🔥️0.6667 0.3333 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 
-💯️= normal use.. (can resume training old models , predecessors lack this)
-🔋️💈️q0? = quantum 🔋️uses complex lib bad 4 cpu , gud 4 pure ref💈️ no complex. peaQ
-♾️ = vanilla. but took a long time 2 get working.  (no "resume" can add if prefered loss)
