@@ -71,6 +71,20 @@ typedef struct {
     
     // Output classifier weights
     float *wcls; // [dim * vocab_size]
+
+    // --- NEW: Gradients for all weights ---
+    float *grad_token_embedding_table;
+    float *grad_rms_att_weight;
+    float *grad_rms_ffn_weight;
+    float *grad_rms_final_weight;
+    float *grad_wq;
+    float *grad_wk;
+    float *grad_wv;
+    float *grad_wo;
+    float *grad_w1;
+    float *grad_w2;
+    float *grad_w3;
+    float *grad_wcls;
     
     int dim;        // transformer dimension
     int hidden_dim; // for ffn layers
@@ -95,17 +109,40 @@ typedef struct {
     float *hb; // buffer for hidden dimension in the ffn (hidden_dim,)
     float *hb2; // buffer for hidden dimension in the ffn (hidden_dim,)
     float *q; // query (dim,)
-    float *k; // key (kv_dim,)
-    float *v; // value (kv_dim,)
     float *att; // buffer for scores/attention values (n_heads * seq_len)
     float *logits; // output logits (vocab_size,)
+
+    // --- NEW: Gradients for all activations ---
+    float *grad_x;
+    float *grad_xb;
+    float *grad_xb2;
+    float *grad_hb;
+    float *grad_hb2;
+    float *grad_q;
+    float *grad_att;
+    float *grad_logits;
+
     int dim;        // dimensions stored for safety checks
     int hidden_dim;
-    int kv_dim;
     int n_heads;
     int seq_len;
     int vocab_size;
 } RunState;
+
+// Function prototypes
+void malloc_run_state(RunState* s, SimpleModel* m);
+void free_run_state(RunState* s);
+void free_model_memory(SimpleModel* m);
+void transformer_backward(SimpleModel* model, SimpleVocab* vocab, RunState* state, int token, int pos, int target_token_id);
+void zero_gradients(SimpleModel *model);
+void update_weights(SimpleModel *model, float learning_rate);
+float calculate_cross_entropy_loss(float* probabilities, int target_token_id);
+void rmsnorm_backward(float* grad_o, float* grad_x, float* grad_weight, float* x, float* weight, int size);
+void softmax_backward(float* grad_out, float* out, int size);
+void swiglu_backward(float* grad_xb, float* grad_hb, float* grad_hb2, float* hb, float* hb2, int hidden_dim);
+void rope_backward(float* grad_vec, int vec_size, int pos, int head_size);
+void matmul_backward(float* grad_xout, float* grad_x, float* grad_w, float* x, float* w, int n, int d);
+
 
 // Sampling structures and functions
 typedef struct {
@@ -260,6 +297,76 @@ void rmsnorm(float *o, float *x, float *weight, int size) {
     // normalize and scale
     for (int j = 0; j < size; j++) {
         o[j] = weight[j] * (ss * x[j]);
+    }
+}
+
+void rmsnorm_backward(float* grad_o, float* grad_x, float* grad_weight, float* x, float* weight, int size) {
+    // backward pass for rmsnorm
+    float ss = 0.0f;
+    for (int j = 0; j < size; j++) {
+        ss += x[j] * x[j];
+    }
+    ss /= size;
+    ss += 1e-5f;
+    float inv_ss = 1.0f / sqrtf(ss);
+
+    for (int j = 0; j < size; j++) {
+        // gradient of weight
+        grad_weight[j] += grad_o[j] * (inv_ss * x[j]);
+        // gradient of x
+        float grad_x_part1 = grad_o[j] * (inv_ss * weight[j]);
+        float grad_x_part2 = 0.0f;
+        for (int k = 0; k < size; k++) {
+            grad_x_part2 += grad_o[k] * weight[k] * x[k];
+        }
+        grad_x_part2 *= (-powf(ss, -1.5f) / size) * x[j];
+        grad_x[j] += grad_x_part1 + grad_x_part2;
+    }
+}
+
+void softmax_backward(float* grad_out, float* out, int size) {
+    // Backprop through softmax. grad_out is the gradient of the loss w.r.t. the output of softmax.
+    // The input `grad_out` is modified in-place to become the gradient w.r.t. the input of softmax.
+    for (int i = 0; i < size; i++) {
+        float grad_in_i = 0.0f;
+        for (int j = 0; j < size; j++) {
+            float delta = (i == j) ? 1.0f : 0.0f;
+            grad_in_i += grad_out[j] * out[i] * (delta - out[j]);
+        }
+        grad_out[i] = grad_in_i;
+    }
+}
+
+void swiglu_backward(float* grad_xb, float* grad_hb, float* grad_hb2, float* hb, float* hb2, int hidden_dim) {
+    for (int i = 0; i < hidden_dim; i++) {
+        float val = hb[i];
+        float sig = 1.0f / (1.0f + expf(-val));
+        float silu = val * sig;
+        
+        // grad w.r.t. hb
+        float dsilu_dhb = sig * (1.0f + val * (1.0f - sig));
+        grad_hb[i] += grad_xb[i] * hb2[i] * dsilu_dhb;
+        
+        // grad w.r.t. hb2
+        grad_hb2[i] += grad_xb[i] * silu;
+    }
+}
+
+void rope_backward(float* grad_vec, int vec_size, int pos, int head_size) {
+    // This is the inverse rotation of RoPE.
+    for (int i = 0; i < vec_size; i += 2) {
+        int head_dim = i % head_size;
+        float freq = 1.0f / powf(10000.0f, head_dim / (float)head_size);
+        float val = pos * freq;
+        float fcr = cosf(val);
+        float fci = sinf(val);
+        
+        float gv0 = grad_vec[i];
+        float gv1 = grad_vec[i+1];
+        
+        // Inverse rotation
+        grad_vec[i]   = gv0 * fcr + gv1 * fci;
+        grad_vec[i+1] = -gv0 * fci + gv1 * fcr;
     }
 }
 
@@ -496,55 +603,16 @@ float* transformer_forward(SimpleModel *model, SimpleVocab *vocab, RunState *sta
         // attention rmsnorm
         rmsnorm(state->xb, x, model->rms_att_weight + l*dim, dim);
         
-        // CRITICAL: Use vocabulary Q, K, V projections instead of weight matrices
-        // Get Q, K, V projections from the token's vocabulary entry
-        float* token_q_proj = malloc(dim * sizeof(float));
-        float* token_k_proj = malloc(kv_dim * sizeof(float));
-        float* token_v_proj = malloc(kv_dim * sizeof(float));
-        
-        // Check if allocations were successful
-        if (!token_q_proj || !token_k_proj || !token_v_proj) {
-            fprintf(stderr, "Memory allocation failed in transformer_forward\n");
-            // Free any already allocated memory
-            if (token_q_proj) free(token_q_proj);
-            if (token_k_proj) free(token_k_proj);
-            if (token_v_proj) free(token_v_proj);
-            return state->logits; // Return early to avoid crash
-        }
-        
-        // Copy the precomputed Q, K, V projections for this token from vocabulary
-        for(int d = 0; d < dim; d++) {
-            token_q_proj[d] = vocab->q_proj[token * EMBED_DIM + d % EMBED_DIM];
-        }
-        for(int d = 0; d < kv_dim; d++) {
-            // Use a different dimension from the vocab's projection, cycling through available dimensions
-            token_k_proj[d] = vocab->k_proj[token * EMBED_DIM + (d % EMBED_DIM)];
-            token_v_proj[d] = vocab->v_proj[token * EMBED_DIM + (d % EMBED_DIM)];
-        }
-        
         // key and value point to the kv cache
-        int loff = l * model->seq_len * kv_dim; // kv cache layer offset for convenience
-        // Bounds checking for KV cache access
-        if (loff + pos * kv_dim + kv_dim > model->n_layers * model->seq_len * model->kv_dim) {
-            printf("Warning: KV cache access out of bounds\n");
-            free(token_q_proj);
-            free(token_k_proj);
-            free(token_v_proj);
-            return state->logits; // Return early to avoid crash
-        }
-        float* k = model->key_cache + loff + pos * kv_dim;
-        float* v = model->value_cache + loff + pos * kv_dim;
-        
-        // Instead of matmuls, directly use the precomputed Q, K, V projections
-        // Apply them to the normalized input (state->xb) and store in state arrays
-        for(int d = 0; d < dim; d++) {
-            state->q[d] = state->xb[d] * token_q_proj[d % dim];
-        }
-        for(int d = 0; d < kv_dim; d++) {
-            k[d] = state->xb[d] * token_k_proj[d % kv_dim];
-            v[d] = state->xb[d] * token_v_proj[d % kv_dim];
-        }
-        
+        int loff = l * model->seq_len * dim; // kv cache layer offset for convenience
+        float* k = model->key_cache + loff + pos * dim;
+        float* v = model->value_cache + loff + pos * dim;
+
+        // qkv matmuls for this position
+        matmul(state->q, state->xb, model->wq + l*dim*dim, dim, dim);
+        matmul(k, state->xb, model->wk + l*dim*dim, dim, dim);
+        matmul(v, state->xb, model->wv + l*dim*dim, dim, dim);
+
         // RoPE relative positional encoding: complex-valued rotate q and k in each head
         for (int i = 0; i < dim; i+=2) {
             int head_dim = i % head_size;
@@ -552,18 +620,21 @@ float* transformer_forward(SimpleModel *model, SimpleVocab *vocab, RunState *sta
             float val = pos * freq;
             float fcr = cosf(val);
             float fci = sinf(val);
-            int rotn = i < kv_dim ? 2 : 1; // how many vectors? 2 = q & k, 1 = q only
-            for (int v = 0; v < rotn; v++) {
-                float* vec = v == 0 ? state->q : k; // the vector to rotate (query or key)
-                float v0 = vec[i];
-                float v1 = vec[i+1];
-                vec[i]   = v0 * fcr - v1 * fci;
-                vec[i+1] = v0 * fci + v1 * fcr;
-            }
+            
+            float q0 = state->q[i];
+            float q1 = state->q[i+1];
+            state->q[i]   = q0 * fcr - q1 * fci;
+            state->q[i+1] = q0 * fci + q1 * fcr;
+
+            float k0 = k[i];
+            float k1 = k[i+1];
+            k[i]   = k0 * fcr - k1 * fci;
+            k[i+1] = k0 * fci + k1 * fcr;
         }
         
         // multihead attention. iterate over all heads
-        for (int h = 0; h < model->n_heads; h++) {
+        int h;
+        for (h = 0; h < model->n_heads; h++) {
             // get the query vector for this head
             float* q = state->q + h * head_size;
             // attention scores for this head
@@ -571,30 +642,14 @@ float* transformer_forward(SimpleModel *model, SimpleVocab *vocab, RunState *sta
             // iterate over all timesteps, including the current one
             for (int t = 0; t <= pos; t++) {
                 // get the key vector for this head and at this timestep
-                int key_offset = loff + t * kv_dim + (h / kv_mul) * head_size;
-                if (key_offset + head_size > model->n_layers * model->seq_len * model->kv_dim) {
-                    printf("Warning: Key cache access out of bounds\n");
-                    free(token_q_proj);
-                    free(token_k_proj);
-                    free(token_v_proj);
-                    return state->logits; // Return early to avoid crash
-                }
-                float* key_at_t = model->key_cache + key_offset;
+                float* k = model->key_cache + loff + t * dim + h * head_size;
                 // calculate the attention score as the dot product of q and k
                 float score = 0.0f;
                 for (int i = 0; i < head_size; i++) {
-                    score += q[i] * key_at_t[i];
+                    score += q[i] * k[i];
                 }
                 score /= sqrtf(head_size);
                 // save the score to the attention buffer
-                // Check bounds for att access
-                if (t >= model->seq_len) {
-                    printf("Warning: Attention buffer access out of bounds\n");
-                    free(token_q_proj);
-                    free(token_k_proj);
-                    free(token_v_proj);
-                    return state->logits;
-                }
                 att[t] = score;
             }
             
@@ -603,31 +658,15 @@ float* transformer_forward(SimpleModel *model, SimpleVocab *vocab, RunState *sta
             
             // weighted sum of the values, store back into xb
             float* xb = state->xb + h * head_size;
-            // Check bounds for xb access
-            if (h * head_size + head_size > state->dim) {
-                printf("Warning: xb access out of bounds\n");
-                free(token_q_proj);
-                free(token_k_proj);
-                free(token_v_proj);
-                return state->logits;
-            }
             memset(xb, 0, head_size * sizeof(float));
             for (int t = 0; t <= pos; t++) {
                 // get the value vector for this head and at this timestep
-                int value_offset = loff + t * kv_dim + (h / kv_mul) * head_size;
-                if (value_offset + head_size > model->n_layers * model->seq_len * model->kv_dim) {
-                    printf("Warning: Value cache access out of bounds\n");
-                    free(token_q_proj);
-                    free(token_k_proj);
-                    free(token_v_proj);
-                    return state->logits; // Return early to avoid crash
-                }
-                float* v_at_t = model->value_cache + value_offset;
+                float* v = model->value_cache + loff + t * dim + h * head_size;
                 // get the attention weight for this timestep
                 float a = att[t];
                 // accumulate the weighted value into xb
                 for (int i = 0; i < head_size; i++) {
-                    xb[i] += a * v_at_t[i];
+                    xb[i] += a * v[i];
                 }
             }
         }
@@ -658,11 +697,6 @@ float* transformer_forward(SimpleModel *model, SimpleVocab *vocab, RunState *sta
         for (int i = 0; i < dim; i++) {
             x[i] += state->xb[i];
         }
-        
-        // Free temporary allocations
-        free(token_q_proj);
-        free(token_k_proj);
-        free(token_v_proj);
     }
     
     // final rmsnorm
@@ -676,25 +710,9 @@ float* transformer_forward(SimpleModel *model, SimpleVocab *vocab, RunState *sta
 int generate_text_with_dynamic_vocab_for_file(SimpleModel* model, SimpleVocab* vocab, char* vocab_file, const char* prompt, char* output, int max_tokens, float temperature, float topp) {
     printf("Generating text with dynamic vocabulary expansion: '%s'\n", prompt);
     
-    // Initialize run state
+    // Initialize run state using the helper function
     RunState state;
-    state.dim = model->dim;
-    state.hidden_dim = model->hidden_dim;
-    state.kv_dim = model->kv_dim;
-    state.n_heads = model->n_heads;
-    state.seq_len = model->seq_len;
-    state.vocab_size = model->vocab_size;
-    
-    state.x = calloc(state.dim, sizeof(float));
-    state.xb = calloc(state.dim, sizeof(float));
-    state.xb2 = calloc(state.dim, sizeof(float));
-    state.hb = calloc(state.hidden_dim, sizeof(float));
-    state.hb2 = calloc(state.hidden_dim, sizeof(float));
-    state.q = calloc(state.dim, sizeof(float));
-    state.k = calloc(state.kv_dim, sizeof(float));
-    state.v = calloc(state.kv_dim, sizeof(float));
-    state.att = calloc(state.n_heads * state.seq_len, sizeof(float));
-    state.logits = calloc(state.vocab_size, sizeof(float));
+    malloc_run_state(&state, model);
     
     // Initialize RNG state for sampling
     unsigned long long rng_state = time(NULL);
@@ -708,9 +726,7 @@ int generate_text_with_dynamic_vocab_for_file(SimpleModel* model, SimpleVocab* v
     int result = process_prompt_tokens(prompt, vocab, &prompt_tokens, &num_prompt_tokens);
     if (result != 0) {
         printf("Error processing prompt tokens\n");
-        // Free run state
-        free(state.x); free(state.xb); free(state.xb2); free(state.hb); free(state.hb2);
-        free(state.q); free(state.k); free(state.v); free(state.att); free(state.logits);
+        free_run_state(&state);
         return -1;
     }
     
@@ -719,43 +735,18 @@ int generate_text_with_dynamic_vocab_for_file(SimpleModel* model, SimpleVocab* v
     
     // Process prompt tokens first (fill the KV cache)
     int pos = 0;
-    for (int i = 0; i < num_prompt_tokens; i++) {
-        // Forward pass to fill the KV cache with prompt tokens
-        float* logits = transformer_forward(model, vocab, &state, prompt_tokens[i], pos);
-        
-        // After each forward pass, also run learning on the prompt sequence
-        // Generate a target token (next token in sequence when available)
-        if (i < num_prompt_tokens - 1) {
-            int target_token_id = prompt_tokens[i + 1];
-            
-            // Call attention module for attention-related parameter updates
-            char attention_cmd[1000];
-            snprintf(attention_cmd, sizeof(attention_cmd), 
-                     "./+x/attention_module.+x process %s %d", vocab_file, prompt_tokens[i]);
-            int attn_result = system(attention_cmd);
-            if (attn_result != 0) {
-                printf("Warning: Attention module failed with code %d\n", attn_result);
-            }
-            
-            // Call feedback_tx module for learning
-            char feedback_cmd[1000];
-            snprintf(feedback_cmd, sizeof(feedback_cmd), 
-                     "./+x/feedback_tx_module.+x process_with_vocab %s 0.0005", vocab_file);
-            int feedback_result = system(feedback_cmd);
-            if (feedback_result != 0) {
-                printf("Warning: Feedback module failed with code %d\n", feedback_result);
-            }
+    if (num_prompt_tokens > 0) {
+        for (int i = 0; i < num_prompt_tokens; i++) {
+            transformer_forward(model, vocab, &state, prompt_tokens[i], pos++);
         }
-        
-        pos++;
     }
     
-    // Use the last prompt token as the starting token for generation
-    int current_token = prompt_tokens[num_prompt_tokens - 1];
+    // Use the last prompt token as the starting token for generation, or START token if no prompt
+    int current_token = (num_prompt_tokens > 0) ? prompt_tokens[num_prompt_tokens - 1] : 1; // 1 is <START>
     
     // Generate additional tokens based on the prompt
     for (int gen_idx = 0; gen_idx < max_tokens; gen_idx++) {
-        // Forward pass to get next token prediction (this fills KV cache with current position)
+        // Forward pass to get next token prediction
         float* logits = transformer_forward(model, vocab, &state, current_token, pos);
         
         // Sample next token using the sampling function with temperature
@@ -768,44 +759,20 @@ int generate_text_with_dynamic_vocab_for_file(SimpleModel* model, SimpleVocab* v
         strcat(output, " ");
         strcat(output, generated_token_str);
         
-        // Call attention module to update attention-related parameters based on generation
-        char attention_cmd[1000];
-        snprintf(attention_cmd, sizeof(attention_cmd), 
-                 "./+x/attention_module.+x process %s %d", vocab_file, current_token);
-        int attn_result2 = system(attention_cmd);
-        if (attn_result2 != 0) {
-            printf("Warning: Attention module failed with code %d\n", attn_result2);
-        }
-        
-        // Call feedback module to update parameters based on the generation process
-        char feedback_cmd[1000];
-        snprintf(feedback_cmd, sizeof(feedback_cmd), 
-                 "./+x/feedback_tx_module.+x process_with_vocab %s 0.0005", vocab_file);
-        int feedback_result2 = system(feedback_cmd);
-        if (feedback_result2 != 0) {
-            printf("Warning: Feedback module failed with code %d\n", feedback_result2);
-        }
-        
-        // CRITICAL: Add the generated token to vocabulary with its QKV projections
-        // This ensures that if the same token appears again, it's available with proper projections
-        int new_token_id;
-        int vocab_result = expand_vocabulary_with_token(vocab, generated_token_str, &new_token_id);
-        if (vocab_result == 0) {
-            // Token was successfully added or already existed
-            // The QKV projections are now available for subsequent attention computation
-        }
-        
-        // Update current token for next iteration (autoregressive generation)
+        // Update current token for next iteration
         current_token = next_token_id;
-        pos++; // Update position for next iteration
+        pos++;
+
+        if (pos >= model->seq_len) {
+            // Context window is full, break for now.
+            // More advanced implementations would handle sliding windows.
+            break;
+        }
     }
     
     // Free allocated memory
     free(prompt_tokens);
-    
-    // Free run state
-    free(state.x); free(state.xb); free(state.xb2); free(state.hb); free(state.hb2);
-    free(state.q); free(state.k); free(state.v); free(state.att); free(state.logits);
+    free_run_state(&state);
     
     printf("Generation completed. Output: %s\n", output);
     return 0; // Success
@@ -1084,7 +1051,7 @@ int load_model_from_vocab_file(const char* vocab_file, SimpleModel* model, Simpl
     model->n_kv_heads = N_HEADS;  // For now, using same as n_heads
     model->vocab_size = vocab->vocab_size;
     model->seq_len = SEQ_LEN;
-    model->kv_dim = KV_DIM;
+    model->kv_dim = model->dim; // In non-grouped attention, K and V vectors have the same dimension as Q.
     
     // Allocate memory for model weights and KV cache
     model->token_embedding_table = malloc(model->vocab_size * model->dim * sizeof(float));
@@ -1094,8 +1061,8 @@ int load_model_from_vocab_file(const char* vocab_file, SimpleModel* model, Simpl
     
     // Attention weights
     model->wq = malloc(model->n_layers * model->dim * model->dim * sizeof(float));
-    model->wk = malloc(model->n_layers * model->dim * model->kv_dim * sizeof(float));
-    model->wv = malloc(model->n_layers * model->dim * model->kv_dim * sizeof(float));
+    model->wk = malloc(model->n_layers * model->dim * model->dim * sizeof(float)); // Corrected size
+    model->wv = malloc(model->n_layers * model->dim * model->dim * sizeof(float)); // Corrected size
     model->wo = malloc(model->n_layers * model->dim * model->dim * sizeof(float));
     
     // FFN weights (SwiGLU)
@@ -1107,9 +1074,23 @@ int load_model_from_vocab_file(const char* vocab_file, SimpleModel* model, Simpl
     model->wcls = malloc(model->dim * model->vocab_size * sizeof(float));
     
     // KV Cache
-    model->key_cache = malloc(model->n_layers * model->seq_len * model->kv_dim * sizeof(float));
-    model->value_cache = malloc(model->n_layers * model->seq_len * model->kv_dim * sizeof(float));
+    model->key_cache = malloc(model->n_layers * model->seq_len * model->dim * sizeof(float));   // Corrected size
+    model->value_cache = malloc(model->n_layers * model->seq_len * model->dim * sizeof(float)); // Corrected size
     
+    // --- Allocate memory for gradients ---
+    model->grad_token_embedding_table = malloc(model->vocab_size * model->dim * sizeof(float));
+    model->grad_rms_att_weight = malloc(model->n_layers * model->dim * sizeof(float));
+    model->grad_rms_ffn_weight = malloc(model->n_layers * model->dim * sizeof(float));
+    model->grad_rms_final_weight = malloc(model->dim * sizeof(float));
+    model->grad_wq = malloc(model->n_layers * model->dim * model->dim * sizeof(float));
+    model->grad_wk = malloc(model->n_layers * model->dim * model->dim * sizeof(float));
+    model->grad_wv = malloc(model->n_layers * model->dim * model->dim * sizeof(float));
+    model->grad_wo = malloc(model->n_layers * model->dim * model->dim * sizeof(float));
+    model->grad_w1 = malloc(model->n_layers * model->hidden_dim * model->dim * sizeof(float));
+    model->grad_w2 = malloc(model->n_layers * model->dim * model->hidden_dim * sizeof(float));
+    model->grad_w3 = malloc(model->n_layers * model->hidden_dim * model->dim * sizeof(float));
+    model->grad_wcls = malloc(model->dim * model->vocab_size * sizeof(float));
+
     // Initialize weights with values from vocabulary where available, otherwise random
     for (int i = 0; i < model->vocab_size * model->dim; i++) {
         if (i < vocab->vocab_size * EMBED_DIM) {
@@ -1165,25 +1146,34 @@ int load_model_from_vocab_file(const char* vocab_file, SimpleModel* model, Simpl
 void malloc_run_state(RunState* s, SimpleModel* m) {
     s->dim = m->dim;
     s->hidden_dim = m->hidden_dim;
-    s->kv_dim = m->kv_dim;
     s->n_heads = m->n_heads;
     s->seq_len = m->seq_len;
     s->vocab_size = m->vocab_size;
     
+    // Activations
     s->x = calloc(s->dim, sizeof(float));
     s->xb = calloc(s->dim, sizeof(float));
     s->xb2 = calloc(s->dim, sizeof(float));
     s->hb = calloc(s->hidden_dim, sizeof(float));
     s->hb2 = calloc(s->hidden_dim, sizeof(float));
     s->q = calloc(s->dim, sizeof(float));
-    s->k = calloc(s->kv_dim, sizeof(float));
-    s->v = calloc(s->kv_dim, sizeof(float));
     s->att = calloc(s->n_heads * s->seq_len, sizeof(float));
     s->logits = calloc(s->vocab_size, sizeof(float));
+
+    // Gradients
+    s->grad_x = calloc(s->dim, sizeof(float));
+    s->grad_xb = calloc(s->dim, sizeof(float));
+    s->grad_xb2 = calloc(s->dim, sizeof(float));
+    s->grad_hb = calloc(s->hidden_dim, sizeof(float));
+    s->grad_hb2 = calloc(s->hidden_dim, sizeof(float));
+    s->grad_q = calloc(s->dim, sizeof(float));
+    s->grad_att = calloc(s->n_heads * s->seq_len, sizeof(float));
+    s->grad_logits = calloc(s->vocab_size, sizeof(float));
     
     // Ensure all mallocs went fine
     if (!s->x || !s->xb || !s->xb2 || !s->hb || !s->hb2 || !s->q
-     || !s->k || !s->v || !s->att || !s->logits) {
+     || !s->att || !s->logits || !s->grad_x || !s->grad_xb || !s->grad_xb2
+     || !s->grad_hb || !s->grad_hb2 || !s->grad_q || !s->grad_att || !s->grad_logits) {
         fprintf(stderr, "malloc failed!\n");
         exit(EXIT_FAILURE);
     }
@@ -1196,153 +1186,324 @@ void free_run_state(RunState* s) {
     SAFE_FREE(s->hb);
     SAFE_FREE(s->hb2);
     SAFE_FREE(s->q);
-    SAFE_FREE(s->k);
-    SAFE_FREE(s->v);
     SAFE_FREE(s->att);
     SAFE_FREE(s->logits);
+    SAFE_FREE(s->grad_x);
+    SAFE_FREE(s->grad_xb);
+    SAFE_FREE(s->grad_xb2);
+    SAFE_FREE(s->grad_hb);
+    SAFE_FREE(s->grad_hb2);
+    SAFE_FREE(s->grad_q);
+    SAFE_FREE(s->grad_att);
+    SAFE_FREE(s->grad_logits);
 }
 
-// Helper function to calculate current loss from curriculum file
-float calculate_current_loss(const char* vocab_file) {
-    // For now, we'll calculate a placeholder loss based on the curriculum content
-    // In a real implementation, this would run actual forward passes and compute cross-entropy loss
-    FILE *file = fopen(vocab_file, "r");
-    if (!file) {
-        return 2.3f; // Return a default loss if file can't be opened
+/**
+ * Calculates the cross-entropy loss.
+ *
+ * @param probabilities The output from the softmax function (must sum to 1.0).
+ * @param target_token_id The index of the correct next token.
+ *
+ * @return The cross-entropy loss value.
+ */
+float calculate_cross_entropy_loss(float* probabilities, int target_token_id) {
+    // Ensure the probability is not zero to avoid log(0) which is -infinity.
+    float prob_of_target = probabilities[target_token_id];
+    if (prob_of_target == 0.0f) {
+        return -logf(1e-9); // Return a very large loss value
     }
-    
-    // Skip header line
-    char line[1024];
-    if (fgets(line, sizeof(line), file) == NULL) {
-        fclose(file);
-        return 2.3f;
-    }
-    
-    // Count lines to get an idea of curriculum size
-    int line_count = 0;
-    while (fgets(line, sizeof(line), file) != NULL) {
-        line_count++;
-    }
-    fclose(file);
-    
-    // Generate a loss that decreases slightly with each call to simulate learning
-    // Use time to make it different each time
-    float base_loss = 2.5f;
-    float reduction = (float)(time(NULL) % 100) / 1000.0f; // Small randomish reduction
-    float noise = ((float)(rand() % 100) - 50.0f) / 1000.0f; // Small noise
-    
-    float result = base_loss - reduction + noise;
-    if (result < 0.1f) result = 0.1f; // Ensure loss doesn't go too low
-    
-    return result;
+    return -logf(prob_of_target);
 }
 
-// Helper function to calculate loss based on token prediction
-float calculate_sequence_loss_for_tokens(int current_token_id, int next_token_id, const char* vocab_file) {
-    // In a real implementation, this would calculate actual cross-entropy loss
-    // between predicted next token and actual next token.
-    // For now, we'll simulate a loss that improves as training progresses
-    // by incorporating time and potentially module execution results
-    
-    // Use current time and token IDs to make the loss vary but potentially improve
-    float base_loss = 2.3f;
-    float time_factor = (float)(time(NULL) % 1000) / 1000.0f;
-    float token_factor = (float)(abs(current_token_id - next_token_id) % 100) / 200.0f;
-    
-    // Simulate some learning by making loss vary based on token relationships
-    float result = base_loss - (time_factor * 0.005f) + token_factor;
-    
-    // Constrain to reasonable range
-    if (result < 0.1f) result = 0.1f;
-    if (result > 3.0f) result = 3.0f;
-    
-    return result;
-}
-
-// Helper function to calculate loss with more comprehensive curriculum state checking
-float calculate_sequence_loss_for_tokens_with_curriculum_state(int current_token_id, int next_token_id, const char* vocab_file) {
-    // This function checks multiple parameters from the curriculum to assess learning progress
-    FILE *file = fopen(vocab_file, "r");
-    if (!file) {
-        return 2.3f;
-    }
-    
-    // Skip header
-    char line[1024];
-    if (fgets(line, sizeof(line), file) == NULL) {
-        fclose(file);
-        return 2.3f;
-    }
-    
-    // Read parameters for tokens, using a sampling approach if the tokens are beyond our current data
-    float total_activity = 0.0f;
-    int param_count = 0;
-    int line_idx = 0;
-    
-    while (fgets(line, sizeof(line), file) != NULL) {
-        int index;
-        char word[1000];
-        float embedding, pe_value, attention_bias_val, ffn_bias_val, weight1_val, weight2_val, bias1_val, bias2_val, bias3_val, bias4_val, q_val, k_val, v_val;
-        char note_str[1000];
-        
-        if (sscanf(line, "%d %s %f %f %f %f %f %f %f %f %f %f %f %f %f %s", 
-                   &index, word, &embedding, &pe_value, 
-                   &attention_bias_val, &ffn_bias_val,
-                   &weight1_val, &weight2_val, 
-                   &bias1_val, &bias2_val, &bias3_val, &bias4_val,
-                   &q_val, &k_val, &v_val, note_str) == 16) {
-            
-            // Calculate the "activity" or "learning signal" for this token
-            // based on how much its parameters have been adjusted
-            float token_activity = fabsf(attention_bias_val) + fabsf(ffn_bias_val) + 
-                                  fabsf(weight1_val) + fabsf(weight2_val) +
-                                  fabsf(bias1_val) + fabsf(bias2_val) +
-                                  fabsf(q_val) + fabsf(k_val) + fabsf(v_val);
-            
-            total_activity += token_activity;
-            param_count++;
-            
-            // Just use first few tokens to avoid infinite loss reduction
-            if (param_count >= 3) break;
+void matmul_backward(float* grad_xout, float* grad_x, float* grad_w, float* x, float* w, int n, int d) {
+    // Backprop through W (d,n) @ x (n,) -> xout (d,)
+    // grad_x = W.T @ grad_xout
+    for (int j = 0; j < n; j++) {
+        float val = 0.0f;
+        for (int i = 0; i < d; i++) {
+            val += w[i * n + j] * grad_xout[i];
         }
-        line_idx++;
+        grad_x[j] += val; // Accumulate gradients
     }
+    // grad_w = grad_xout @ x.T
+    for (int i = 0; i < d; i++) {
+        for (int j = 0; j < n; j++) {
+            grad_w[i * n + j] += grad_xout[i] * x[j]; // Accumulate gradients
+        }
+    }
+}
+
+void transformer_backward(SimpleModel* model, SimpleVocab* vocab, RunState* state, int token, int pos, int target_token_id) {
+    // A few convenience variables
+    int dim = model->dim;
+    int hidden_dim = model->hidden_dim;
+    int head_size = dim / model->n_heads;
+
+    // Zero out all RunState gradients
+    memset(state->grad_x, 0, state->dim * sizeof(float));
+    memset(state->grad_xb, 0, state->dim * sizeof(float));
+    memset(state->grad_xb2, 0, state->dim * sizeof(float));
+    memset(state->grad_hb, 0, state->hidden_dim * sizeof(float));
+    memset(state->grad_hb2, 0, state->hidden_dim * sizeof(float));
+    memset(state->grad_q, 0, state->dim * sizeof(float));
+    memset(state->grad_att, 0, state->n_heads * state->seq_len * sizeof(float));
+    memset(state->grad_logits, 0, state->vocab_size * sizeof(float));
+
+    // Start backprop at the loss
+    memcpy(state->grad_logits, state->logits, model->vocab_size * sizeof(float));
+    state->grad_logits[target_token_id] -= 1.0f;
+
+    // Backprop through the final classifier matmul
+    matmul_backward(state->grad_logits, state->grad_x, model->grad_wcls, state->x, model->wcls, model->dim, model->vocab_size);
+
+    // Backprop through final rmsnorm
+    rmsnorm_backward(state->grad_x, state->grad_x, model->grad_rms_final_weight, state->x, model->rms_final_weight, dim);
+
+    for (int l = model->n_layers - 1; l >= 0; l--) {
+        // Backprop through residual connection
+        for (int i = 0; i < dim; i++) {
+            state->grad_xb[i] = state->grad_x[i]; // Copy gradient to residual branch
+            // The gradient also flows directly to the input of the block
+        }
+
+        // Backprop through FFN
+        matmul_backward(state->grad_xb, state->grad_hb, model->grad_w2 + l*dim*hidden_dim, state->hb, model->w2 + l*dim*hidden_dim, hidden_dim, dim);
+        
+        swiglu_backward(state->grad_hb, state->grad_hb, state->grad_hb2, state->hb, state->hb2, hidden_dim);
+
+        // Create a temporary buffer for the gradient of xb from the FFN
+        float* grad_xb_ffn = calloc(dim, sizeof(float));
+        matmul_backward(state->grad_hb, grad_xb_ffn, model->grad_w1 + l*dim*hidden_dim, state->xb, model->w1 + l*dim*hidden_dim, dim, hidden_dim);
+        matmul_backward(state->grad_hb2, grad_xb_ffn, model->grad_w3 + l*dim*hidden_dim, state->xb, model->w3 + l*dim*hidden_dim, dim, hidden_dim);
+
+        // Backprop through ffn rmsnorm
+        rmsnorm_backward(grad_xb_ffn, state->grad_x, model->grad_rms_ffn_weight + l*dim, state->x, model->rms_ffn_weight + l*dim, dim);
+        free(grad_xb_ffn);
+
+        // Backprop through residual connection
+        for (int i = 0; i < dim; i++) {
+            state->grad_xb2[i] = state->grad_x[i];
+        }
+
+        // Backprop through attention output matmul
+        float* grad_xb_attn = calloc(dim, sizeof(float));
+        matmul_backward(state->grad_xb2, grad_xb_attn, model->grad_wo + l*dim*dim, state->xb, model->wo + l*dim*dim, dim, dim);
+
+        // Allocate temporary buffers for k and v gradients for this layer
+        float* grad_k_layer = calloc(dim, sizeof(float));
+        float* grad_v_layer = calloc(dim, sizeof(float));
+
+        for (int h = model->n_heads - 1; h >= 0; h--) {
+            float* grad_att = state->grad_att + h * model->seq_len;
+            float* att = state->att + h * model->seq_len;
+            float* grad_xb_h = grad_xb_attn + h * head_size;
+
+            // Backprop through weighted sum of values
+            for (int t = pos; t >= 0; t--) {
+                float* v = model->value_cache + l * model->seq_len * dim + t * dim + h * head_size;
+                float a = att[t];
+                for (int i = 0; i < head_size; i++) {
+                    grad_att[t] += grad_xb_h[i] * v[i];
+                    if (t == pos) { 
+                        grad_v_layer[h * head_size + i] += a * grad_xb_h[i];
+                    }
+                }
+            }
+
+            // Backprop through softmax
+            softmax_backward(grad_att, att, pos + 1);
+
+            // Backprop through score calculation
+            for (int t = pos; t >= 0; t--) {
+                float* k = model->key_cache + l * model->seq_len * dim + t * dim + h * head_size;
+                float* q = state->q + h * head_size;
+                float* grad_q = state->grad_q + h * head_size;
+                float score_grad = grad_att[t] / sqrtf(head_size);
+
+                for (int i = 0; i < head_size; i++) {
+                    grad_q[i] += k[i] * score_grad;
+                     if (t == pos) { 
+                        grad_k_layer[h * head_size + i] += q[i] * score_grad;
+                    }
+                }
+            }
+        }
+        free(grad_xb_attn);
+
+        // Backprop through RoPE for q and k
+        rope_backward(state->grad_q, dim, pos, head_size);
+        rope_backward(grad_k_layer, dim, pos, head_size);
+
+        // Backprop through q, k, v matmuls
+        float* grad_xb_qkv = calloc(dim, sizeof(float));
+        matmul_backward(state->grad_q, grad_xb_qkv, model->grad_wq + l*dim*dim, state->xb, model->wq + l*dim*dim, dim, dim);
+        matmul_backward(grad_k_layer, grad_xb_qkv, model->grad_wk + l*dim*dim, state->xb, model->wk + l*dim*dim, dim, dim);
+        matmul_backward(grad_v_layer, grad_xb_qkv, model->grad_wv + l*dim*dim, state->xb, model->wv + l*dim*dim, dim, dim);
+
+        // Free temporary buffers
+        free(grad_k_layer);
+        free(grad_v_layer);
+
+        // Backprop through attention rmsnorm
+        rmsnorm_backward(grad_xb_qkv, state->grad_x, model->grad_rms_att_weight + l*dim, state->x, model->rms_att_weight + l*dim, dim);
+        free(grad_xb_qkv);
+    }
+
+    // Backprop to token embeddings
+    for (int i = 0; i < dim; i++) {
+        model->grad_token_embedding_table[token * dim + i] += state->grad_x[i];
+    }
+}
+
+void zero_gradients(SimpleModel *model) {
+    memset(model->grad_token_embedding_table, 0, model->vocab_size * model->dim * sizeof(float));
+    memset(model->grad_rms_att_weight, 0, model->n_layers * model->dim * sizeof(float));
+    memset(model->grad_rms_ffn_weight, 0, model->n_layers * model->dim * sizeof(float));
+    memset(model->grad_rms_final_weight, 0, model->dim * sizeof(float));
+    memset(model->grad_wq, 0, model->n_layers * model->dim * model->dim * sizeof(float));
+    memset(model->grad_wk, 0, model->n_layers * model->dim * model->dim * sizeof(float));
+    memset(model->grad_wv, 0, model->n_layers * model->dim * model->dim * sizeof(float));
+    memset(model->grad_wo, 0, model->n_layers * model->dim * model->dim * sizeof(float));
+    memset(model->grad_w1, 0, model->n_layers * model->hidden_dim * model->dim * sizeof(float));
+    memset(model->grad_w2, 0, model->n_layers * model->dim * model->hidden_dim * sizeof(float));
+    memset(model->grad_w3, 0, model->n_layers * model->hidden_dim * model->dim * sizeof(float));
+    memset(model->grad_wcls, 0, model->dim * model->vocab_size * sizeof(float));
+}
+
+void update_weights(SimpleModel *model, float learning_rate) {
+    // Update weights using SGD
+    for (int i = 0; i < model->vocab_size * model->dim; i++) model->token_embedding_table[i] -= learning_rate * model->grad_token_embedding_table[i];
+    for (int i = 0; i < model->n_layers * model->dim; i++) model->rms_att_weight[i] -= learning_rate * model->grad_rms_att_weight[i];
+    for (int i = 0; i < model->n_layers * model->dim; i++) model->rms_ffn_weight[i] -= learning_rate * model->grad_rms_ffn_weight[i];
+    for (int i = 0; i < model->dim; i++) model->rms_final_weight[i] -= learning_rate * model->grad_rms_final_weight[i];
+    for (int i = 0; i < model->n_layers * model->dim * model->dim; i++) model->wq[i] -= learning_rate * model->grad_wq[i];
+    for (int i = 0; i < model->n_layers * model->dim * model->dim; i++) model->wk[i] -= learning_rate * model->grad_wk[i];
+    for (int i = 0; i < model->n_layers * model->dim * model->dim; i++) model->wv[i] -= learning_rate * model->grad_wv[i];
+    for (int i = 0; i < model->n_layers * model->dim * model->dim; i++) model->wo[i] -= learning_rate * model->grad_wo[i];
+    for (int i = 0; i < model->n_layers * model->hidden_dim * model->dim; i++) model->w1[i] -= learning_rate * model->grad_w1[i];
+    for (int i = 0; i < model->n_layers * model->dim * model->hidden_dim; i++) model->w2[i] -= learning_rate * model->grad_w2[i];
+    for (int i = 0; i < model->n_layers * model->hidden_dim * model->dim; i++) model->w3[i] -= learning_rate * model->grad_w3[i];
+    for (int i = 0; i < model->dim * model->vocab_size; i++) model->wcls[i] -= learning_rate * model->grad_wcls[i];
+}
+
+void save_model_weights(SimpleModel* model, const char* curriculum_path) {
+    char weights_path[1024];
+    snprintf(weights_path, sizeof(weights_path), "%s.weights", curriculum_path);
+
+    FILE* file = fopen(weights_path, "w");
+    if (!file) {
+        printf("Error: could not open file %s for writing\n", weights_path);
+        return;
+    }
+
+    fprintf(file, "token_embedding_table\n");
+    for(int i = 0; i < model->vocab_size * model->dim; i++) { fprintf(file, "%f ", model->token_embedding_table[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "rms_att_weight\n");
+    for(int i = 0; i < model->n_layers * model->dim; i++) { fprintf(file, "%f ", model->rms_att_weight[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "rms_ffn_weight\n");
+    for(int i = 0; i < model->n_layers * model->dim; i++) { fprintf(file, "%f ", model->rms_ffn_weight[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "rms_final_weight\n");
+    for(int i = 0; i < model->dim; i++) { fprintf(file, "%f ", model->rms_final_weight[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "wq\n");
+    for(int i = 0; i < model->n_layers * model->dim * model->dim; i++) { fprintf(file, "%f ", model->wq[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "wk\n");
+    for(int i = 0; i < model->n_layers * model->dim * model->dim; i++) { fprintf(file, "%f ", model->wk[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "wv\n");
+    for(int i = 0; i < model->n_layers * model->dim * model->dim; i++) { fprintf(file, "%f ", model->wv[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "wo\n");
+    for(int i = 0; i < model->n_layers * model->dim * model->dim; i++) { fprintf(file, "%f ", model->wo[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "w1\n");
+    for(int i = 0; i < model->n_layers * model->hidden_dim * model->dim; i++) { fprintf(file, "%f ", model->w1[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "w2\n");
+    for(int i = 0; i < model->n_layers * model->dim * model->hidden_dim; i++) { fprintf(file, "%f ", model->w2[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "w3\n");
+    for(int i = 0; i < model->n_layers * model->hidden_dim * model->dim; i++) { fprintf(file, "%f ", model->w3[i]); }
+    fprintf(file, "\n");
+
+    fprintf(file, "wcls\n");
+    for(int i = 0; i < model->dim * model->vocab_size; i++) { fprintf(file, "%f ", model->wcls[i]); }
+    fprintf(file, "\n");
+
     fclose(file);
-    
-    // Calculate base loss (starting high)
-    float base_loss = 2.4f;
-    
-    // Reduce loss based on parameter activity (more activity = better learning)
-    if (param_count > 0) {
-        float avg_activity = total_activity / param_count;
-        // Apply learning progress based on activity, but keep some randomness
-        base_loss -= (avg_activity * 0.02f);  // Learning improvement factor
+    printf("Saved model weights to %s\n", weights_path);
+}
+
+void load_model_weights(SimpleModel* model, const char* curriculum_path) {
+    char weights_path[1024];
+    snprintf(weights_path, sizeof(weights_path), "%s.weights", curriculum_path);
+
+    FILE* file = fopen(weights_path, "r");
+    if (!file) {
+        printf("Warning: could not open file %s for reading. Using random weights.\n", weights_path);
+        return;
     }
-    
-    // Add some randomness to prevent identical values
-    float time_var = ((float)(time(NULL) % 1000) / 20000.0f) - 0.025f;  // Small variation
-    base_loss += time_var;
-    
-    // Also add variation based on the token pair
-    float token_var = (float)(abs(current_token_id + next_token_id) % 77) / 1000.0f;
-    base_loss += token_var;
-    
-    // Ensure loss stays in reasonable bounds (but allow some improvement)
-    if (base_loss < 0.1f) base_loss = 0.1f + fabsf(time_var);
-    if (base_loss > 3.0f) base_loss = 3.0f;
-    
-    return base_loss;
+
+    char header[256];
+    while (fscanf(file, "%s", header) == 1) {
+        if (strcmp(header, "token_embedding_table") == 0) {
+            for(int i = 0; i < model->vocab_size * model->dim; i++) { fscanf(file, "%f", &model->token_embedding_table[i]); }
+        } else if (strcmp(header, "rms_att_weight") == 0) {
+            for(int i = 0; i < model->n_layers * model->dim; i++) { fscanf(file, "%f", &model->rms_att_weight[i]); }
+        } else if (strcmp(header, "rms_ffn_weight") == 0) {
+            for(int i = 0; i < model->n_layers * model->dim; i++) { fscanf(file, "%f", &model->rms_ffn_weight[i]); }
+        } else if (strcmp(header, "rms_final_weight") == 0) {
+            for(int i = 0; i < model->dim; i++) { fscanf(file, "%f", &model->rms_final_weight[i]); }
+        } else if (strcmp(header, "wq") == 0) {
+            for(int i = 0; i < model->n_layers * model->dim * model->dim; i++) { fscanf(file, "%f", &model->wq[i]); }
+        } else if (strcmp(header, "wk") == 0) {
+            for(int i = 0; i < model->n_layers * model->dim * model->dim; i++) { fscanf(file, "%f", &model->wk[i]); }
+        } else if (strcmp(header, "wv") == 0) {
+            for(int i = 0; i < model->n_layers * model->dim * model->dim; i++) { fscanf(file, "%f", &model->wv[i]); }
+        } else if (strcmp(header, "wo") == 0) {
+            for(int i = 0; i < model->n_layers * model->dim * model->dim; i++) { fscanf(file, "%f", &model->wo[i]); }
+        } else if (strcmp(header, "w1") == 0) {
+            for(int i = 0; i < model->n_layers * model->hidden_dim * model->dim; i++) { fscanf(file, "%f", &model->w1[i]); }
+        } else if (strcmp(header, "w2") == 0) {
+            for(int i = 0; i < model->n_layers * model->dim * model->hidden_dim; i++) { fscanf(file, "%f", &model->w2[i]); }
+        } else if (strcmp(header, "w3") == 0) {
+            for(int i = 0; i < model->n_layers * model->hidden_dim * model->dim; i++) { fscanf(file, "%f", &model->w3[i]); }
+        } else if (strcmp(header, "wcls") == 0) {
+            for(int i = 0; i < model->dim * model->vocab_size; i++) { fscanf(file, "%f", &model->wcls[i]); }
+        }
+    }
+
+    fclose(file);
+    printf("Loaded model weights from %s\n", weights_path);
 }
 
 void print_usage(char* program_name) {
     printf("Usage: %s <command> [args...]\n", program_name);
     printf("Commands:\n");
     printf("  generate <vocab_file> <temperature> <top_p> <max_tokens> <prompt> - Generate text with dynamic vocab expansion\n");
+    printf("  train <vocab_file> <epochs> - Train the model using the specified curriculum\n");
     printf("\nExamples:\n");
     printf("  %s generate curriculum/test/test.txt 1.0 0.9 20 \"hello world\"\n", program_name);
+    printf("  %s train curriculum/test/test.txt 3\n", program_name);
 }
 
 int main(int argc, char *argv[]) {
+    srand(time(NULL));
+
     if (argc < 2) {
         print_usage(argv[0]);
         return 1;
@@ -1376,6 +1537,7 @@ int main(int argc, char *argv[]) {
             printf("Error loading model from vocabulary file\n");
             return result;
         }
+        load_model_weights(&model, vocab_file);
         
         // Generate text with dynamic vocabulary expansion
         char output[2000];
@@ -1444,161 +1606,106 @@ int main(int argc, char *argv[]) {
         SAFE_FREE(vocab.notes);
         
     } else if (strcmp(command, "train") == 0) {
-        if (argc < 4) {
+        if (argc < 5) {
             printf("Error: Missing required parameters for train command\n");
-            printf("Usage: %s train <vocab_file> <epochs>\n", argv[0]);
+            printf("Usage: %s train <vocab_file> <epochs> <learning_rate>\n", argv[0]);
             return 1;
         }
         
         char* vocab_file = argv[2];
         int epochs = atoi(argv[3]);
+        float learning_rate = atof(argv[4]);
         
-        printf("Training mode: vocab_file=%s, epochs=%d\n", vocab_file, epochs);
-        printf("Starting real training with curriculum sequences...\n");
+        printf("Training mode: vocab_file=%s, epochs=%d, lr=%.6f\n", vocab_file, epochs, learning_rate);
         
-        // Load curriculum data to get the token sequence for next-token prediction training
+        // Initialize model, vocab, and run state
+        SimpleModel model;
+        SimpleVocab vocab;
+        RunState state;
+
+        // Load model and vocab from the curriculum file
+        if (load_model_from_vocab_file(vocab_file, &model, &vocab) != 0) {
+            printf("Error: Failed to load model from vocab file.\n");
+            return 1;
+        }
+        load_model_weights(&model, vocab_file);
+        malloc_run_state(&state, &model);
+        
+        // Load the full corpus sequence into an array of token IDs
         FILE *file = fopen(vocab_file, "r");
         if (!file) {
             printf("Error: could not open vocabulary file %s\n", vocab_file);
             return -1;
         }
-        
-        // Count total tokens first to allocate array
-        char line[1024];
-        if (fgets(line, sizeof(line), file) == NULL) {  // Skip header
-            fclose(file);
-            printf("Error: could not read header from vocabulary file\n");
-            return -1;
+        char line[2048];
+        fgets(line, sizeof(line), file); // Skip header
+
+        int* corpus_token_ids = malloc(vocab.vocab_size * sizeof(int));
+        if (!corpus_token_ids) {
+            printf("Error: Memory allocation failed for corpus tokens.\n");
+            return 1;
         }
-        
-        int line_count = 0;
-        while (fgets(line, sizeof(line), file) != NULL) {
-            line_count++;
-        }
-        fclose(file);
-        
-        if (line_count < 2) {
-            printf("Error: curriculum file has too few tokens for training\n");
-            return -1;
-        }
-        
-        // Reload file and extract token sequences (words, not just IDs)
-        file = fopen(vocab_file, "r");
-        if (!file) {
-            printf("Error: could not reopen vocabulary file %s\n", vocab_file);
-            return -1;
-        }
-        
-        // Skip header
-        if (fgets(line, sizeof(line), file) == NULL) {
-            fclose(file);
-            return -1;
-        }
-        
-        char** tokens = malloc(line_count * sizeof(char*));
-        int* token_numbers = malloc(line_count * sizeof(int));
-        if (!tokens || !token_numbers) {
-            fclose(file);
-            printf("Error: memory allocation failed\n");
-            free(tokens);
-            free(token_numbers);
-            return -1;
-        }
-        
-        int index;
-        char word[1000];
-        float embedding, pe_value, attention_bias_val, ffn_bias_val, weight1_val, weight2_val, bias1_val, bias2_val, bias3_val, bias4_val, q_val, k_val, v_val;
-        char note_str[1000];
-        
-        int token_idx = 0;
-        while (fgets(line, sizeof(line), file) != NULL && token_idx < line_count) {
-            if (sscanf(line, "%d %s %f %f %f %f %f %f %f %f %f %f %f %f %f %s", 
-                       &index, word, &embedding, &pe_value, 
-                       &attention_bias_val, &ffn_bias_val,
-                       &weight1_val, &weight2_val, 
-                       &bias1_val, &bias2_val, &bias3_val, &bias4_val,
-                       &q_val, &k_val, &v_val, note_str) == 16) {
-                
-                // Store both the token number and the word string
-                token_numbers[token_idx] = index;
-                tokens[token_idx] = malloc((strlen(word) + 1) * sizeof(char));
-                strcpy(tokens[token_idx], word);
-                token_idx++;
-            }
+        int num_corpus_tokens = 0;
+        int temp_id;
+        while (fscanf(file, "%d %*s %*f %*f %*f %*f %*f %*f %*f %*f %*f %*f %*f %*f %*f %*s", &temp_id) == 1) {
+            corpus_token_ids[num_corpus_tokens++] = temp_id - 1; // Convert to 0-indexed
         }
         fclose(file);
-        
-        // Main training loop for next-token prediction with proper curriculum sharing
-        for (int epoch = 1; epoch <= epochs; epoch++) {
-            float epoch_loss = 0.0f;
-            int num_samples = 0;
+
+        if (num_corpus_tokens < 2) {
+            printf("Error: Not enough tokens in the corpus for training.\n");
+            free(corpus_token_ids);
+            return 1;
+        }
+
+        // --- Main Training Loop ---
+        for (int epoch = 0; epoch < epochs; epoch++) {
+            float total_epoch_loss = 0.0f;
             
-            printf("Epoch %d/%d: Processing %d tokens from curriculum sequence...\n", epoch, epochs, token_idx);
-            
-            // Process the sequence using sliding window for next-token prediction
-            for (int i = 0; i < token_idx - 1; i++) {  // -1 to have a next token to predict
-                char* current_token = tokens[i];
-                char* next_token = tokens[i + 1];  // Target for prediction
+            // Before each epoch, reset the KV cache to process the sequence from the start
+            zero_kv_cache(&model);
+
+            for (int i = 0; i < num_corpus_tokens - 1; i++) {
+                int current_token_id = corpus_token_ids[i];
+                int target_token_id = corpus_token_ids[i+1];
+
+                // 1. FORWARD PASS: Run the model to get logits
+                float* logits = transformer_forward(&model, &vocab, &state, current_token_id, i);
+
+                // 2. SOFTMAX: Convert logits to probabilities (in-place)
+                softmax(logits, model.vocab_size);
+
+                // 3. LOSS CALCULATION: Calculate the real cross-entropy loss
+                float loss = calculate_cross_entropy_loss(logits, target_token_id);
+                total_epoch_loss += loss;
                 
-                // Get numeric IDs for module calls
-                int current_token_id = token_numbers[i] - 1; // Convert to 0-indexed
-                int next_token_id = token_numbers[i + 1] - 1; // Convert to 0-indexed
-                
-                // Call attention module for processing current token in context
-                // This should process the current token and update attention-related parameters in curriculum
-                char attention_cmd[1000];
-                snprintf(attention_cmd, sizeof(attention_cmd), 
-                         "./+x/attention_module.+x process %s %d", vocab_file, current_token_id);
-                int att_result = system(attention_cmd);
-                
-                // Call RoPE module for positional encoding
-                // This should work with positional parameters in curriculum
-                char rope_cmd[1000];
-                snprintf(rope_cmd, sizeof(rope_cmd), 
-                         "./+x/rope_module.+x apply %s %d 1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0", vocab_file, current_token_id);
-                int rope_result = system(rope_cmd);
-                
-                // Call the new TX feedback module that implements proper transformer learning
-                // Process with the entire vocabulary file to get proper context
-                char feedback_cmd[1000];
-                snprintf(feedback_cmd, sizeof(feedback_cmd), 
-                         "./+x/feedback_tx_module.+x process_with_vocab %s 0.001", vocab_file);
-                int feedback_result = system(feedback_cmd);
-                
-                // Calculate loss based on how well the system has learned to handle this token transition
-                // The loss function will check the current state of parameters in the curriculum
-                float sample_loss = calculate_sequence_loss_for_tokens_with_curriculum_state(current_token_id, next_token_id, vocab_file);
-                epoch_loss += sample_loss;
-                num_samples++;
-                
-                if (num_samples >= 10) break; // Limit samples per epoch for testing
+                // 4. BACKWARD PASS: Compute all gradients
+                // Clear gradients from previous step
+                zero_gradients(&model);
+                transformer_backward(&model, &vocab, &state, current_token_id, i, target_token_id);
+
+                // 5. UPDATE WEIGHTS: Apply gradients to update model weights
+                update_weights(&model, learning_rate);
             }
+
+            float avg_loss = total_epoch_loss / (num_corpus_tokens - 1);
             
-            float avg_loss = (num_samples > 0) ? epoch_loss / num_samples : 2.3f;
-            
-            // Log epoch results to loss.txt - append to preserve all epochs
+            // 6. LOGGING: Log the real loss for the epoch
+            printf("Epoch %d/%d, Average Loss: %f\n", epoch + 1, epochs, avg_loss);
             FILE *loss_file = fopen("loss.txt", "a");
             if (loss_file) {
-                fprintf(loss_file, "%d,training,current,token,%.6f\n", epoch, avg_loss);
+                fprintf(loss_file, "%d,training,epoch_avg,token,%.6f\n", epoch + 1, avg_loss);
                 fclose(loss_file);
-            } else {
-                printf("Warning: Could not open loss.txt for writing\n");
             }
-            
-            printf("Epoch %d/%d completed: avg_loss=%.6f, samples=%d\n", epoch, epochs, avg_loss, num_samples);
-            
-            // The feedback module already handles parameter updates during processing
-            // No need for separate backprop step since feedback module does forward + backward pass
         }
+
+        printf("Training finished.\n");
+        save_model_weights(&model, vocab_file);
         
-        // Free allocated memory
-        for (int i = 0; i < token_idx; i++) {
-            free(tokens[i]);
-        }
-        free(tokens);
-        free(token_numbers);
-        
-        printf("Real training completed successfully.\n");
+        // Free memory
+        free(corpus_token_ids);
+        free_run_state(&state);
+        free_model_memory(&model);
         
     } else {
         printf("Error: Unknown command '%s'\n", command);
@@ -1607,4 +1714,32 @@ int main(int argc, char *argv[]) {
     }
     
     return 0;
+}
+void free_model_memory(SimpleModel* m) {
+    SAFE_FREE(m->token_embedding_table);
+    SAFE_FREE(m->rms_att_weight);
+    SAFE_FREE(m->rms_ffn_weight);
+    SAFE_FREE(m->rms_final_weight);
+    SAFE_FREE(m->wq);
+    SAFE_FREE(m->wk);
+    SAFE_FREE(m->wv);
+    SAFE_FREE(m->wo);
+    SAFE_FREE(m->w1);
+    SAFE_FREE(m->w2);
+    SAFE_FREE(m->w3);
+    SAFE_FREE(m->wcls);
+    SAFE_FREE(m->key_cache);
+    SAFE_FREE(m->value_cache);
+    SAFE_FREE(m->grad_token_embedding_table);
+    SAFE_FREE(m->grad_rms_att_weight);
+    SAFE_FREE(m->grad_rms_ffn_weight);
+    SAFE_FREE(m->grad_rms_final_weight);
+    SAFE_FREE(m->grad_wq);
+    SAFE_FREE(m->grad_wk);
+    SAFE_FREE(m->grad_wv);
+    SAFE_FREE(m->grad_wo);
+    SAFE_FREE(m->grad_w1);
+    SAFE_FREE(m->grad_w2);
+    SAFE_FREE(m->grad_w3);
+    SAFE_FREE(m->grad_wcls);
 }

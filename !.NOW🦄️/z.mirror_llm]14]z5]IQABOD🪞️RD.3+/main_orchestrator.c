@@ -309,7 +309,7 @@ int main(int argc, char *argv[]) {
         
         // Use generation module for training (using existing curriculum with preserved duplicates)
         char cmd[2048];
-        snprintf(cmd, sizeof(cmd), "./+x/generation_module.+x train %s %d", curriculum_file, epochs);
+        snprintf(cmd, sizeof(cmd), "./+x/generation_module.+x train %s %d %f", curriculum_file, epochs, conf.learning_rate);
         int result = system(cmd);
         if (result != 0) {
             printf("Error during training with generation module\n");
