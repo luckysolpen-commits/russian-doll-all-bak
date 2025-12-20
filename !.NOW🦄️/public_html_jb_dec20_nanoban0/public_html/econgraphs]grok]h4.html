@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Interactive Microeconomics Graphs (Dark Theme - Fixed Shading)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #121212; color: #e0e0e0; }
+        h1 { text-align: center; color: #ffffff; }
+        .graph-container { margin: 40px auto; max-width: 800px; background: #1e1e1e; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 8px; }
+        canvas { width: 100% !important; height: auto !important; }
+        .controls { margin-bottom: 20px; text-align: center; }
+        label { margin-right: 10px; color: #cccccc; }
+        input[type="range"] { width: 200px; }
+        span { color: #ffffff; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Comprehensive Interactive Microeconomics Graphs (Dark Theme - Fixed Shading)</h1>
+    <p>Enhanced version with additional economic models and properly implemented shading using paired datasets with fill:'-1' to shade between curves.</p>
+
+    <!-- 1. Production Possibilities Frontier -->
+    <div class="graph-container">
+        <h2>Production Possibilities Frontier</h2>
+        <div class="controls">
+            <label for="a">Concavity:</label>
+            <input type="range" id="a" min="0.5" max="3" step="0.1" value="1">
+            <span id="a-value">1.0</span>
+            <label for="max">Max output:</label>
+            <input type="range" id="max" min="80" max="150" step="10" value="100">
+            <span id="max-value">100</span>
+        </div>
+        <canvas id="ppfChart"></canvas>
+    </div>
+
+    <!-- 2. Supply and Demand -->
+    <div class="graph-container">
+        <h2>Supply and Demand (with Tax, CS/PS/DWL)</h2>
+        <div class="controls">
+            <label for="dInt">Demand Intercept:</label>
+            <input type="range" id="dInt" min="20" max="60" step="5" value="40">
+            <span id="dInt-value">40</span>
+            <label for="tax">Tax per unit:</label>
+            <input type="range" id="tax" min="0" max="15" step="1" value="0">
+            <span id="tax-value">0</span>
+        </div>
+        <canvas id="sdChart"></canvas>
+    </div>
+
+    <!-- 3. Monopoly -->
+    <div class="graph-container">
+        <h2>Monopoly vs Perfect Competition (DWL)</h2>
+        <div class="controls">
+            <label for="monDInt">Demand Intercept:</label>
+            <input type="range" id="monDInt" min="15" max="40" step="2" value="30">
+            <span id="monDInt-value">30</span>
+            <label for="mc">MC (constant):</label>
+            <input type="range" id="mc" min="0" max="15" step="1" value="5">
+            <span id="mc-value">5</span>
+        </div>
+        <canvas id="monopolyChart"></canvas>
+    </div>
+
+    <!-- 4. Consumer Theory -->
+    <div class="graph-container">
+        <h2>Consumer Theory (Utility Maximization)</h2>
+        <div class="controls">
+            <label for="income">Income:</label>
+            <input type="range" id="income" min="50" max="200" step="10" value="100">
+            <span id="income-value">100</span>
+            <label for="p1">Price Good 1:</label>
+            <input type="range" id="p1" min="1" max="10" step="1" value="2">
+            <span id="p1-value">2</span>
+            <label for="p2">Price Good 2:</label>
+            <input type="range" id="p2" min="1" max="10" step="1" value="1">
+            <span id="p2-value">1</span>
+        </div>
+        <canvas id="consumerChart"></canvas>
+    </div>
+
+    <!-- 5. Cournot Duopoly -->
+    <div class="graph-container">
+        <h2>Cournot Duopoly Reaction Functions</h2>
+        <div class="controls">
+            <label for="aCournot">Market Intercept (a):</label>
+            <input type="range" id="aCournot" min="30" max="80" step="5" value="50">
+            <span id="aCournot-value">50</span>
+            <label for="cCournot">Marginal Cost:</label>
+            <input type="range" id="cCournot" min="0" max="20" step="1" value="5">
+            <span id="cCournot-value">5</span>
+        </div>
+        <canvas id="cournotChart"></canvas>
+    </div>
+
+    <!-- 6. Cost Curves -->
+    <div class="graph-container">
+        <h2>Firm Cost Curves</h2>
+        <div class="controls">
+            <label for="fc">Fixed Cost:</label>
+            <input type="range" id="fc" min="0" max="100" step="10" value="40">
+            <span id="fc-value">40</span>
+            <label for="vc">Variable coefficient:</label>
+            <input type="range" id="vc" min="0.2" max="2" step="0.1" value="0.5">
+            <span id="vc-value">0.5</span>
+        </div>
+        <canvas id="costChart"></canvas>
+    </div>
+
+    <!-- 7. Price Ceiling -->
+    <div class="graph-container">
+        <h2>Price Ceiling (Shortage & DWL)</h2>
+        <div class="controls">
+            <label for="ceilDInt">Demand Intercept:</label>
+            <input type="range" id="ceilDInt" min="15" max="40" step="2" value="30">
+            <span id="ceilDInt-value">30</span>
+            <label for="ceilingP">Ceiling Price:</label>
+            <input type="range" id="ceilingP" min="2" max="20" step="1" value="8">
+            <span id="ceilingP-value">8</span>
+        </div>
+        <canvas id="ceilingChart"></canvas>
+    </div>
+
+    <!-- 8. Price Floor -->
+    <div class="graph-container">
+        <h2>Price Floor (Surplus & DWL)</h2>
+        <div class="controls">
+            <label for="floorDInt">Demand Intercept:</label>
+            <input type="range" id="floorDInt" min="15" max="40" step="2" value="30">
+            <span id="floorDInt-value">30</span>
+            <label for="floorP">Floor Price:</label>
+            <input type="range" id="floorP" min="10" max="35" step="1" value="20">
+            <span id="floorP-value">20</span>
+        </div>
+        <canvas id="floorChart"></canvas>
+    </div>
+
+    <!-- 9. Elasticity Comparison -->
+    <div class="graph-container">
+        <h2>Elasticity Comparison (Elastic vs Inelastic)</h2>
+        <div class="controls">
+            <label for="elastDIntercept">Demand Intercept:</label>
+            <input type="range" id="elastDIntercept" min="20" max="60" step="5" value="40">
+            <span id="elastDIntercept-value">40</span>
+            <label for="elasticity">Elasticity Factor:</label>
+            <input type="range" id="elasticity" min="0.5" max="3" step="0.1" value="1">
+            <span id="elasticity-value">1.0</span>
+        </div>
+        <canvas id="elasticityChart"></canvas>
+    </div>
+
+    <!-- 10. Externalities -->
+    <div class="graph-container">
+        <h2>Externalities (Positive/Negative)</h2>
+        <div class="controls">
+            <label for="extDInt">Demand Intercept:</label>
+            <input type="range" id="extDInt" min="20" max="50" step="2" value="35">
+            <span id="extDInt-value">35</span>
+            <label for="externalities">Externality Size:</label>
+            <input type="range" id="externalities" min="-10" max="10" step="1" value="0">
+            <span id="externalities-value">0</span>
+        </div>
+        <canvas id="externalityChart"></canvas>
+    </div>
+
+    <!-- 11. IS-LM Model -->
+    <div class="graph-container">
+        <h2>IS-LM Macroeconomic Model</h2>
+        <div class="controls">
+            <label for="isInt">IS Intercept:</label>
+            <input type="range" id="isInt" min="5" max="20" step="1" value="15">
+            <span id="isInt-value">15</span>
+            <label for="lmInt">LM Intercept:</label>
+            <input type="range" id="lmInt" min="1" max="10" step="1" value="5">
+            <span id="lmInt-value">5</span>
+        </div>
+        <canvas id="islmChart"></canvas>
+    </div>
+
+    <!-- 12. Oligopoly - Bertrand Model -->
+    <div class="graph-container">
+        <h2>Bertrand Duopoly Model</h2>
+        <div class="controls">
+            <label for="bertrandDInt">Market Demand Intercept:</label>
+            <input type="range" id="bertrandDInt" min="20" max="60" step="2" value="40">
+            <span id="bertrandDInt-value">40</span>
+            <label for="mcBertrand">Marginal Cost:</label>
+            <input type="range" id="mcBertrand" min="2" max="20" step="1" value="8">
+            <span id="mcBertrand-value">8</span>
+        </div>
+        <canvas id="bertrandChart"></canvas>
+    </div>
+
+    <!-- 13. Game Theory - Prisoner's Dilemma -->
+    <div class="graph-container">
+        <h2>Game Theory - Payoff Matrix Visualization</h2>
+        <div class="controls">
+            <label for="defectReward">Reward for Defection:</label>
+            <input type="range" id="defectReward" min="10" max="50" step="2" value="25">
+            <span id="defectReward-value">25</span>
+            <label for="coopReward">Reward for Cooperation:</label>
+            <input type="range" id="coopReward" min="5" max="30" step="2" value="15">
+            <span id="coopReward-value">15</span>
+        </div>
+        <canvas id="gameChart"></canvas>
+    </div>
+
+    <script>
+        // Update displayed slider values
+        document.querySelectorAll('input[type="range"]').forEach(slider => {
+            const output = document.getElementById(slider.id + '-value');
+            if (output) {
+                output.textContent = slider.value;
+                slider.addEventListener('input', () => output.textContent = slider.value);
+            }
+        });
+
+        // Dark theme defaults
+        Chart.defaults.color = '#e0e0e0';
+        Chart.defaults.borderColor = '#444444';
+
+        const commonOptions = {
+            scales: {
+                x: { grid: { color: '#333333' }, ticks: { color: '#e0e0e0' } },
+                y: { grid: { color: '#333333' }, ticks: { color: '#e0e0e0' } }
+            },
+            plugins: { 
+                legend: { labels: { color: '#e0e0e0' } },
+                tooltip: { 
+                    backgroundColor: '#333333',
+                    titleColor: '#ffffff',
+                    bodyColor: '#ffffff'
+                }
+            }
+        };
+
+        // 1. PPF
+        const ppfLabels = Array.from({length: 151}, (_, i) => i);
+        const ppfChart = new Chart(document.getElementById('ppfChart'), {
+            type: 'line',
+            data: { labels: ppfLabels, datasets: [{ label: 'PPF', borderColor: '#ff77ff', fill: true, backgroundColor: 'rgba(255,119,255,0.2)', tension: 0.4, data: [] }] },
+            options: { ...commonOptions, scales: { x: { min: 0, max: 150, title: { display: true, text: 'Good X' } }, y: { min: 0, max: 150, title: { display: true, text: 'Good Y' } } } }
+        });
+        function updatePPF() {
+            const concavity = parseFloat(document.getElementById('a').value);
+            const maxOut = parseFloat(document.getElementById('max').value);
+            const data = ppfLabels.map(x => x > maxOut ? null : maxOut * Math.pow(1 - Math.pow(x / maxOut, concavity), 1/concavity));
+            ppfChart.data.datasets[0].data = data;
+            ppfChart.update();
+        }
+        updatePPF();
+        document.getElementById('a').addEventListener('input', updatePPF);
+        document.getElementById('max').addEventListener('input', updatePPF);
+
+        // 2. S&D with fixed shading
+        const sdLabels = Array.from({length: 61}, (_, i) => i);
+        const sdChart = new Chart(document.getElementById('sdChart'), {
+            type: 'line',
+            data: { labels: sdLabels, datasets: [
+                { label: 'Demand', borderColor: 'cyan', data: [], pointRadius: 0 },
+                { label: 'Supply', borderColor: 'lime', data: [], pointRadius: 0 },
+                { label: 'Supply + Tax', borderColor: 'red', data: [], hidden: true, pointRadius: 0 },
+                // Shading datasets: lower then upper with fill:'-1', border transparent
+                { id: 'cs_lower', label: 'CS', borderColor: 'transparent', data: [], pointRadius: 0 },
+                { id: 'cs_upper', borderColor: 'transparent', backgroundColor: 'rgba(0,255,255,0.3)', fill: '-1', data: [], pointRadius: 0 },
+                { id: 'ps_lower', label: 'PS', borderColor: 'transparent', data: [], pointRadius: 0 },
+                { id: 'ps_upper', borderColor: 'transparent', backgroundColor: 'rgba(0,255,0,0.3)', fill: '-1', data: [], pointRadius: 0 },
+                { id: 'tax_lower', label: 'Tax Revenue', borderColor: 'transparent', data: [], pointRadius: 0, hidden: true },
+                { id: 'tax_upper', borderColor: 'transparent', backgroundColor: 'rgba(255,255,0,0.3)', fill: '-1', data: [], pointRadius: 0, hidden: true },
+                { id: 'dwl_lower', label: 'DWL', borderColor: 'transparent', data: [], pointRadius: 0, hidden: true },
+                { id: 'dwl_upper', borderColor: 'transparent', backgroundColor: 'rgba(200,200,200,0.4)', fill: '-1', data: [], pointRadius: 0, hidden: true }
+            ] },
+            options: { ...commonOptions, scales: { x: { min: 0, max: 60, title: { display: true, text: 'Quantity' } }, y: { min: 0, max: 70, title: { display: true, text: 'Price' } } } }
+        });
+        function updateSD() {
+            const dInt = parseFloat(document.getElementById('dInt').value);
+            const tax = parseFloat(document.getElementById('tax').value);
+            const demand = sdLabels.map(q => Math.max(0, dInt - q));
+            const supply = sdLabels.map(q => q + 5);
+            const supplyTax = sdLabels.map(q => q + 5 + tax);
+            sdChart.data.datasets[0].data = demand;
+            sdChart.data.datasets[1].data = supply;
+            sdChart.data.datasets[2].data = supplyTax;
+            sdChart.data.datasets[2].hidden = tax === 0;
+
+            const eqNoTax = (dInt - 5) / 2;
+            const pNoTax = eqNoTax + 5;
+            const eqTax = Math.max(0, (dInt - 5 - tax) / 2);
+            const pBuyer = eqTax + 5 + tax;
+            const pSeller = eqTax + 5;
+
+            const hideShading = (index) => {
+                sdChart.data.datasets[index].hidden = true;
+                sdChart.data.datasets[index + 1].hidden = true;
+            };
+            hideShading(3); // CS
+            hideShading(5); // PS
+            hideShading(7); // Tax
+            hideShading(9); // DWL
+
+            if (tax === 0) {
+                // CS: lower pNoTax horizontal, upper demand, 0 to eqNoTax
+                const cs_lower = sdLabels.map(q => q <= eqNoTax ? pNoTax : null);
+                const cs_upper = sdLabels.map(q => q <= eqNoTax ? dInt - q : null);
+                sdChart.data.datasets[3].data = cs_lower;
+                sdChart.data.datasets[4].data = cs_upper;
+                sdChart.data.datasets[3].hidden = false;
+                sdChart.data.datasets[4].hidden = false;
+
+                // PS: lower supply, upper pNoTax horizontal
+                const ps_lower = sdLabels.map(q => q <= eqNoTax ? q + 5 : null);
+                const ps_upper = sdLabels.map(q => q <= eqNoTax ? pNoTax : null);
+                sdChart.data.datasets[5].data = ps_lower;
+                sdChart.data.datasets[6].data = ps_upper;
+                sdChart.data.datasets[5].hidden = false;
+                sdChart.data.datasets[6].hidden = false;
+            } else {
+                // CS: lower pBuyer, upper demand, 0 to eqTax
+                const cs_lower = sdLabels.map(q => q <= eqTax ? pBuyer : null);
+                const cs_upper = sdLabels.map(q => q <= eqTax ? dInt - q : null);
+                sdChart.data.datasets[3].data = cs_lower;
+                sdChart.data.datasets[4].data = cs_upper;
+                sdChart.data.datasets[3].hidden = false;
+                sdChart.data.datasets[4].hidden = false;
+
+                // PS: lower supply, upper pSeller
+                const ps_lower = sdLabels.map(q => q <= eqTax ? q + 5 : null);
+                const ps_upper = sdLabels.map(q => q <= eqTax ? pSeller : null);
+                sdChart.data.datasets[5].data = ps_lower;
+                sdChart.data.datasets[6].data = ps_upper;
+                sdChart.data.datasets[5].hidden = false;
+                sdChart.data.datasets[6].hidden = false;
+
+                // Tax Rev: lower pSeller, upper pBuyer
+                const tax_lower = sdLabels.map(q => q <= eqTax ? pSeller : null);
+                const tax_upper = sdLabels.map(q => q <= eqTax ? pBuyer : null);
+                sdChart.data.datasets[7].data = tax_lower;
+                sdChart.data.datasets[8].data = tax_upper;
+                sdChart.data.datasets[7].hidden = false;
+                sdChart.data.datasets[8].hidden = false;
+
+                // DWL: lower supply, upper demand, eqTax to eqNoTax
+                const dwl_lower = sdLabels.map(q => (q >= eqTax && q <= eqNoTax) ? q + 5 : null);
+                const dwl_upper = sdLabels.map(q => (q >= eqTax && q <= eqNoTax) ? dInt - q : null);
+                sdChart.data.datasets[9].data = dwl_lower;
+                sdChart.data.datasets[10].data = dwl_upper;
+                sdChart.data.datasets[9].hidden = false;
+                sdChart.data.datasets[10].hidden = false;
+            }
+            sdChart.update();
+        }
+        updateSD();
+        document.getElementById('dInt').addEventListener('input', updateSD);
+        document.getElementById('tax').addEventListener('input', updateSD);
+
+        // 3. Monopoly with fixed DWL shading
+        const monLabels = Array.from({length: 51}, (_, i) => i);
+        const monChart = new Chart(document.getElementById('monopolyChart'), {
+            type: 'line',
+            data: { labels: monLabels, datasets: [
+                { label: 'Demand', borderColor: 'cyan', data: [] },
+                { label: 'MR', borderColor: 'orange', borderDash: [6,4], data: [] },
+                { label: 'MC', borderColor: 'lime', data: [] },
+                { id: 'dwl_lower', label: 'DWL', borderColor: 'transparent', data: [] },
+                { id: 'dwl_upper', backgroundColor: 'rgba(200,200,200,0.3)', borderColor: 'transparent', fill: '-1', data: [] }
+            ] },
+            options: { ...commonOptions, scales: { x: { min: 0, max: 50, title: { display: true, text: 'Quantity' } }, y: { min: 0, max: 50, title: { display: true, text: 'Price/Cost' } } } }
+        });
+        function updateMonopoly() {
+            const a = parseFloat(document.getElementById('monDInt').value);
+            const mcVal = parseFloat(document.getElementById('mc').value);
+            const demand = monLabels.map(q => Math.max(0, a - q));
+            const mr = monLabels.map(q => Math.max(0, a - 2*q));
+            const mcLine = monLabels.map(() => mcVal);
+            const qMon = Math.max(0, (a - mcVal)/2);
+            const qComp = Math.max(0, a - mcVal);
+            const dwl_lower = monLabels.map(q => (q >= qMon && q <= qComp) ? mcVal : null);
+            const dwl_upper = monLabels.map(q => (q >= qMon && q <= qComp) ? a - q : null);
+            monChart.data.datasets[0].data = demand;
+            monChart.data.datasets[1].data = mr;
+            monChart.data.datasets[2].data = mcLine;
+            monChart.data.datasets[3].data = dwl_lower;
+            monChart.data.datasets[4].data = dwl_upper;
+            monChart.update();
+        }
+        updateMonopoly();
+        document.getElementById('monDInt').addEventListener('input', updateMonopoly);
+        document.getElementById('mc').addEventListener('input', updateMonopoly);
+
+        // 4. Consumer Theory
+        const consMax = 150;
+        const consLabels = Array.from({length: consMax + 1}, (_, i) => i);
+        const consChart = new Chart(document.getElementById('consumerChart'), {
+            type: 'line',
+            data: { labels: consLabels, datasets: [
+                { label: 'Budget Line', borderColor: '#ff6666', fill: false, data: [] },
+                { label: 'Indifference Curve', borderColor: '#ffaa00', fill: false, data: [] }
+            ] },
+            options: { ...commonOptions, scales: { x: { min: 0, max: consMax, title: { display: true, text: 'Good 1' } }, y: { min: 0, max: 200, title: { display: true, text: 'Good 2' } } } }
+        });
+        function updateConsumer() {
+            const I = parseFloat(document.getElementById('income').value);
+            const p1 = parseFloat(document.getElementById('p1').value);
+            const p2 = parseFloat(document.getElementById('p2').value);
+            const maxX1 = Math.min(I / p1, consMax);
+            const budget = consLabels.map(x => x <= maxX1 ? (I - p1 * x) / p2 : null);
+            const x1opt = 0.5 * I / p1;
+            const x2opt = 0.5 * I / p2;
+            const U = Math.sqrt(x1opt * x2opt);
+            const ic = consLabels.map(x => (x > 0 && x <= consMax) ? Math.pow(U**2 / x, 1) : null); // Fixed exponent for Cobb-Douglas 0.5
+            consChart.data.datasets[0].data = budget;
+            consChart.data.datasets[1].data = ic;
+            consChart.update();
+        }
+        updateConsumer();
+        document.getElementById('income').addEventListener('input', updateConsumer);
+        document.getElementById('p1').addEventListener('input', updateConsumer);
+        document.getElementById('p2').addEventListener('input', updateConsumer);
+
+        // 5. Cournot - fixed reaction functions
+        const cournotLabels = Array.from({length: 61}, (_, i) => i);
+        const cournotChart = new Chart(document.getElementById('cournotChart'), {
+            type: 'line',
+            data: { labels: cournotLabels, datasets: [
+                { label: 'Firm 1 Reaction', borderColor: 'cyan', data: [] },
+                { label: 'Firm 2 Reaction', borderColor: 'lime', data: [] }
+            ] },
+            options: { ...commonOptions, scales: { x: { min: 0, max: 60, title: { display: true, text: 'q2' } }, y: { min: 0, max: 60, title: { display: true, text: 'q1' } } } }
+        });
+        function updateCournot() {
+            const a = parseFloat(document.getElementById('aCournot').value);
+            const c = parseFloat(document.getElementById('cCournot').value);
+            const firm1 = cournotLabels.map(x => Math.max(0, (a - c - x) / 2));
+            const firm2 = cournotLabels.map(x => Math.max(0, a - c - 2 * x));
+            cournotChart.data.datasets[0].data = firm1;
+            cournotChart.data.datasets[1].data = firm2;
+            cournotChart.update();
+        }
+        updateCournot();
+        document.getElementById('aCournot').addEventListener('input', updateCournot);
+        document.getElementById('cCournot').addEventListener('input', updateCournot);
+
+        // 6. Cost Curves
+        const costLabels = Array.from({length: 51}, (_, i) => i);
+        const costChart = new Chart(document.getElementById('costChart'), {
+            type: 'line',
+            data: { labels: costLabels, datasets: [
+                { label: 'TC', borderColor: '#ff77ff', data: [] },
+                { label: 'AC', borderColor: '#ffaa00', data: [] },
+                { label: 'MC', borderColor: 'lime', data: [] }
+            ] },
+            options: { ...commonOptions, scales: { x: { min: 0, max: 50, title: { display: true, text: 'Quantity' } }, y: { min: 0, max: 300, title: { display: true, text: 'Cost' } } } }
+        });
+        function updateCost() {
+            const fc = parseFloat(document.getElementById('fc').value);
+            const vc = parseFloat(document.getElementById('vc').value);
+            const tc = costLabels.map(q => q === 0 ? null : fc + vc * q * q);
+            const ac = costLabels.map(q => q === 0 ? null : (fc + vc * q * q) / q);
+            const mc = costLabels.map(q => q === 0 ? null : 2 * vc * q);
+            costChart.data.datasets[0].data = tc;
+            costChart.data.datasets[1].data = ac;
+            costChart.data.datasets[2].data = mc;
+            costChart.update();
+        }
+        updateCost();
+        document.getElementById('fc').addEventListener('input', updateCost);
+        document.getElementById('vc').addEventListener('input', updateCost);
+
+        // 7. Price Ceiling with fixed shading
+        const ceilingLabels = Array.from({length: 51}, (_, i) => i);
+        const ceilingChart = new Chart(document.getElementById('ceilingChart'), {
+            type: 'line',
+            data: { labels: ceilingLabels, datasets: [
+                { label: 'Demand', borderColor: 'cyan', data: [] },
+                { label: 'Supply', borderColor: 'lime', data: [] },
+                { label: 'Price Ceiling', borderColor: 'red', borderDash: [8,4], data: [] },
+                { id: 'shortage_lower', label: 'Shortage', borderColor: 'transparent', data: [], type: 'line', fill: false, pointRadius: 0, backgroundColor: 'rgba(255,100,100,0.3)' },
+                { id: 'shortage_upper', borderColor: 'transparent', fill: '-1', data: [], pointRadius: 0 },
+                { id: 'dwl_lower', label: 'DWL', borderColor: 'transparent', data: [] },
+                { id: 'dwl_upper', backgroundColor: 'rgba(200,200,200,0.3)', borderColor: 'transparent', fill: '-1', data: [] }
+            ] },
+            options: { ...commonOptions, scales: { x: { min: 0, max: 50, title: { display: true, text: 'Quantity' } }, y: { min: 0, max: 50, title: { display: true, text: 'Price' } } } }
+        });
+        function updateCeiling() {
+            const a = parseFloat(document.getElementById('ceilDInt').value);
+            const pc = parseFloat(document.getElementById('ceilingP').value);
+            const demand = ceilingLabels.map(q => Math.max(0, a - q));
+            const supply = ceilingLabels.map(q => q);
+            const ceilingLine = ceilingLabels.map(() => pc);
+            const eqQ = a / 2;
+            const eqP = a / 2;
+            const qs = Math.min(pc, eqQ);
+            const qd = Math.max(0, a - pc);
+            const isBinding = pc < eqP;
+
+            // DWL: lower supply, upper demand, qs to eqQ if binding
+            const dwl_lower = ceilingLabels.map(q => isBinding && (q >= qs && q <= eqQ) ? q : null);
+            const dwl_upper = ceilingLabels.map(q => isBinding && (q >= qs && q <= eqQ) ? a - q : null);
+            ceilingChart.data.datasets[5].data = dwl_lower;
+            ceilingChart.data.datasets[6].data = dwl_upper;
+
+            // Shortage: horizontal at pc from qs to qd if binding
+            const shortage_lower = ceilingLabels.map(q => isBinding && (q >= qs && q <= qd) ? pc : null);
+            const shortage_upper = ceilingLabels.map(q => isBinding && (q >= qs && q <= qd) ? pc + 0.1 : null); // Tiny height for bar-like
+            ceilingChart.data.datasets[3].data = shortage_lower;
+            ceilingChart.data.datasets[4].data = shortage_upper;
+
+            ceilingChart.data.datasets[0].data = demand;
+            ceilingChart.data.datasets[1].data = supply;
+            ceilingChart.data.datasets[2].data = ceilingLine;
+            ceilingChart.update();
+        }
+        updateCeiling();
+        document.getElementById('ceilDInt').addEventListener('input', updateCeiling);
+        document.getElementById('ceilingP').addEventListener('input', updateCeiling);
+
+        // 8. Price Floor with fixed shading
+        const floorLabels = Array.from({length: 51}, (_, i) => i);
+        const floorChart = new Chart(document.getElementById('floorChart'), {
+            type: 'line',
+            data: { labels: floorLabels, datasets: [
+                { label: 'Demand', borderColor: 'cyan', data: [], pointRadius: 0 },
+                { label: 'Supply', borderColor: 'lime', data: [], pointRadius: 0 },
+                { label: 'Price Floor', borderColor: 'red', borderDash: [8,4], data: [], pointRadius: 0 },
+                { id: 'surplus_lower', label: 'Surplus', borderColor: 'transparent', data: [], type: 'line', fill: false, pointRadius: 0, backgroundColor: 'rgba(255,0,0,0.3)' },
+                { id: 'surplus_upper', borderColor: 'transparent', fill: '-1', data: [], pointRadius: 0 },
+                { id: 'floor_dwl_lower', label: 'DWL', borderColor: 'transparent', data: [], pointRadius: 0 },
+                { id: 'floor_dwl_upper', borderColor: 'transparent', backgroundColor: 'rgba(200,200,200,0.3)', fill: '-1', data: [], pointRadius: 0 }
+            ] },
+            options: { ...commonOptions, scales: { x: { min: 0, max: 50, title: { display: true, text: 'Quantity' } }, y: { min: 0, max: 50, title: { display: true, text: 'Price' } } } }
+        });
+        function updateFloor() {
+            const a = parseFloat(document.getElementById('floorDInt').value);
+            const pf = parseFloat(document.getElementById('floorP').value);
+            const demand = floorLabels.map(q => Math.max(0, a - q));
+            const supply = floorLabels.map(q => q);
+            const floorLine = floorLabels.map(() => pf);
+            const eqQ = a / 2;
+            const eqP = a / 2;
+            const qs = Math.max(0, pf);
+            const qd = Math.max(0, a - pf);
+            const isBinding = pf > eqP;
+
+            // DWL: lower demand, upper supply, qd to eqQ if binding
+            const dwl_lower = floorLabels.map(q => isBinding && (q >= qd && q <= eqQ) ? a - q : null);
+            const dwl_upper = floorLabels.map(q => isBinding && (q >= qd && q <= eqQ) ? q : null);
+            floorChart.data.datasets[5].data = dwl_lower;
+            floorChart.data.datasets[6].data = dwl_upper;
+
+            // Surplus: horizontal at pf from qd to qs if binding
+            const surplus_lower = floorLabels.map(q => isBinding && (q >= qd && q <= qs) ? pf : null);
+            const surplus_upper = floorLabels.map(q => isBinding && (q >= qd && q <= qs) ? pf + 0.1 : null); // Tiny height for bar-like
+            floorChart.data.datasets[3].data = surplus_lower;
+            floorChart.data.datasets[4].data = surplus_upper;
+
+            floorChart.data.datasets[0].data = demand;
+            floorChart.data.datasets[1].data = supply;
+            floorChart.data.datasets[2].data = floorLine;
+            floorChart.update();
+        }
+        updateFloor();
+        document.getElementById('floorDInt').addEventListener('input', updateFloor);
+        document.getElementById('floorP').addEventListener('input', updateFloor);
+
+        // 9. Elasticity Comparison
+        const elastLabels = Array.from({length: 51}, (_, i) => i);
+        const elasticityChart = new Chart(document.getElementById('elasticityChart'), {
+            type: 'line',
+            data: { labels: elastLabels, datasets: [
+                { label: 'Elastic Demand (|ε| > 1)', borderColor: 'cyan', data: [], pointRadius: 0 },
+                { label: 'Inelastic Demand (|ε| < 1)', borderColor: 'blue', data: [], pointRadius: 0 },
+                { label: 'Unit Elastic', borderColor: 'orange', data: [], pointRadius: 0 },
+                { id: 'elastic_rev_lower', label: 'Revenue (Elastic)', borderColor: 'transparent', data: [], pointRadius: 0 },
+                { id: 'elastic_rev_upper', borderColor: 'transparent', backgroundColor: 'rgba(0,255,255,0.2)', fill: '-1', data: [], pointRadius: 0 },
+                { id: 'inelastic_rev_lower', label: 'Revenue (Inelastic)', borderColor: 'transparent', data: [], pointRadius: 0 },
+                { id: 'inelastic_rev_upper', borderColor: 'transparent', backgroundColor: 'rgba(0,0,255,0.2)', fill: '-1', data: [], pointRadius: 0 }
+            ] },
+            options: { 
+                ...commonOptions, 
+                scales: { 
+                    x: { min: 0, max: 50, title: { display: true, text: 'Quantity' } }, 
+                    y: { min: 0, max: 50, title: { display: true, text: 'Price' } } 
+                } 
+            }
+        });
+        function updateElasticity() {
+            const dInt = parseFloat(document.getElementById('elastDIntercept').value);
+            const elasticFac = parseFloat(document.getElementById('elasticity').value);
+            
+            // More realistic demand curves with different elasticities
+            const elasticDemand = elastLabels.map(q => 
+                q < 40 ? dInt - 0.5 * q * elasticFac : null
+            );
+            const inelasticDemand = elastLabels.map(q => 
+                q < 40 ? dInt - 2 * q / elasticFac : null
+            );
+            const unitElastic = elastLabels.map(q => 
+                q > 0 ? 40 / (q + 1) * 10 : null  // Hyperbolic demand curve
+            );
+            
+            // Calculate revenues for the shaded regions
+            const elasticRevenue = elastLabels.map((q, idx) => {
+                if (elasticDemand[idx] !== null) {
+                    return q * elasticDemand[idx];
+                }
+                return null;
+            });
+            
+            const inelasticRevenue = elastLabels.map((q, idx) => {
+                if (inelasticDemand[idx] !== null) {
+                    return q * inelasticDemand[idx];
+                }
+                return null;
+            });
+            
+            // For revenue shading, the lower bound is 0 and the upper bound is the revenue
+            // We need to normalize or scale appropriately
+            const elasticRevLower = elastLabels.map(() => 0);
+            const elasticRevUpper = elasticRevenue.map(rev => rev !== null ? rev / 10 : null); // Scale down revenue
+            const inelasticRevLower = elastLabels.map(() => 0);
+            const inelasticRevUpper = inelasticRevenue.map(rev => rev !== null ? rev / 10 : null); // Scale down revenue
+            
+            elasticityChart.data.datasets[0].data = elasticDemand;
+            elasticityChart.data.datasets[1].data = inelasticDemand;
+            elasticityChart.data.datasets[2].data = unitElastic;
+            elasticityChart.data.datasets[3].data = elasticRevLower;
+            elasticityChart.data.datasets[4].data = elasticRevUpper;
+            elasticityChart.data.datasets[5].data = inelasticRevLower;
+            elasticityChart.data.datasets[6].data = inelasticRevUpper;
+            elasticityChart.update();
+        }
+        updateElasticity();
+        document.getElementById('elastDIntercept').addEventListener('input', updateElasticity);
+        document.getElementById('elasticity').addEventListener('input', updateElasticity);
+
+        // 10. Externalities
+        const extLabels = Array.from({length: 51}, (_, i) => i);
+        const externalityChart = new Chart(document.getElementById('externalityChart'), {
+            type: 'line',
+            data: { labels: extLabels, datasets: [
+                { label: 'Demand (Marginal Social Benefit)', borderColor: 'cyan', data: [], pointRadius: 0 },
+                { label: 'Private Marginal Cost', borderColor: 'lime', data: [], pointRadius: 0 },
+                { label: 'Social Marginal Cost', borderColor: 'red', data: [], pointRadius: 0 },
+                { label: 'Social Marginal Benefit', borderColor: 'purple', data: [], pointRadius: 0 },
+                { id: 'ext_dwl_neg_lower', label: 'DWL Negative', borderColor: 'transparent', data: [], pointRadius: 0 },
+                { id: 'ext_dwl_neg_upper', borderColor: 'transparent', backgroundColor: 'rgba(200,200,200,0.3)', fill: '-1', data: [], pointRadius: 0 },
+                { id: 'ext_dwl_pos_lower', label: 'DWL Positive', borderColor: 'transparent', data: [], pointRadius: 0 },
+                { id: 'ext_dwl_pos_upper', borderColor: 'transparent', backgroundColor: 'rgba(100,255,100,0.3)', fill: '-1', data: [], pointRadius: 0 }
+            ] },
+            options: { 
+                ...commonOptions, 
+                scales: { 
+                    x: { min: 0, max: 50, title: { display: true, text: 'Quantity' } }, 
+                    y: { min: 0, max: 50, title: { display: true, text: 'Price/Cost' } } 
+                } 
+            }
+        });
+        function updateExternality() {
+            const dInt = parseFloat(document.getElementById('extDInt').value);
+            const extSize = parseFloat(document.getElementById('externalities').value);
+            
+            const demand = extLabels.map(q => dInt - q);
+            const privCost = extLabels.map(q => q + 5);
+            const socialCost = extLabels.map(q => q + 5 + extSize);  // ExtSize can be negative for positive externalities
+            const socialBenefit = extLabels.map(q => dInt - q + extSize);  // Adjusted for positive externalities
+            
+            // Calculate equilibrium points
+            const privEq = (dInt - 5) / 2;
+            const socEq = (dInt - 5 - extSize) / 2;
+            
+            // Initialize to hide all shading datasets
+            externalityChart.data.datasets[4].hidden = true;  // DWL Negative
+            externalityChart.data.datasets[5].hidden = true;  // DWL Negative
+            externalityChart.data.datasets[6].hidden = true;  // DWL Positive
+            externalityChart.data.datasets[7].hidden = true;  // DWL Positive
+            
+            let dwlNegLower = [];
+            let dwlNegUpper = [];
+            let dwlPosLower = [];
+            let dwlPosUpper = [];
+            
+            if (extSize < 0) {  // Negative externality
+                dwlNegLower = extLabels.map(q => 
+                    (q > socEq && q <= privEq) ? 
+                        Math.min(privCost[q], demand[q] || 0) : 
+                        null
+                );
+                dwlNegUpper = extLabels.map(q => 
+                    (q > socEq && q <= privEq) ? 
+                        Math.max(privCost[q], demand[q] || 0) : 
+                        null
+                );
+                
+                externalityChart.data.datasets[4].data = dwlNegLower;
+                externalityChart.data.datasets[5].data = dwlNegUpper;
+                externalityChart.data.datasets[4].hidden = false;
+                externalityChart.data.datasets[5].hidden = false;
+            } else if (extSize > 0) {  // Positive externality
+                dwlPosLower = extLabels.map(q => 
+                    (q > privEq && q <= socEq) ? 
+                        Math.min(socialBenefit[q] || 0, privCost[q]) : 
+                        null
+                );
+                dwlPosUpper = extLabels.map(q => 
+                    (q > privEq && q <= socEq) ? 
+                        Math.max(socialBenefit[q] || 0, privCost[q]) : 
+                        null
+                );
+                
+                externalityChart.data.datasets[6].data = dwlPosLower;
+                externalityChart.data.datasets[7].data = dwlPosUpper;
+                externalityChart.data.datasets[6].hidden = false;
+                externalityChart.data.datasets[7].hidden = false;
+            }
+            
+            externalityChart.data.datasets[0].data = demand;
+            externalityChart.data.datasets[1].data = privCost;
+            externalityChart.data.datasets[2].data = socialCost;
+            externalityChart.data.datasets[3].data = socialBenefit;
+            externalityChart.update();
+        }
+        updateExternality();
+        document.getElementById('extDInt').addEventListener('input', updateExternality);
+        document.getElementById('externalities').addEventListener('input', updateExternality);
+
+        // 11. IS-LM Model
+        const islmLabels = Array.from({length: 31}, (_, i) => i);
+        const islmChart = new Chart(document.getElementById('islmChart'), {
+            type: 'line',
+            data: { labels: islmLabels, datasets: [
+                { label: 'IS Curve', borderColor: 'cyan', data: [] },
+                { label: 'LM Curve', borderColor: 'lime', data: [] }
+            ] },
+            options: { 
+                ...commonOptions, 
+                scales: { 
+                    x: { min: 0, max: 30, title: { display: true, text: 'Income (Y)' } }, 
+                    y: { min: 0, max: 20, title: { display: true, text: 'Interest Rate (r)' } } 
+                } 
+            }
+        });
+        function updateISLM() {
+            const isInt = parseFloat(document.getElementById('isInt').value);
+            const lmInt = parseFloat(document.getElementById('lmInt').value);
+            
+            // IS curve: r = IS_intercept - 0.5Y (for simplicity)
+            const isCurve = islmLabels.map(y => isInt - 0.5 * y);
+            
+            // LM curve: r = LM_intercept + 0.2Y (for simplicity)
+            const lmCurve = islmLabels.map(y => lmInt + 0.2 * y);
+            
+            islmChart.data.datasets[0].data = isCurve;
+            islmChart.data.datasets[1].data = lmCurve;
+            islmChart.update();
+        }
+        updateISLM();
+        document.getElementById('isInt').addEventListener('input', updateISLM);
+        document.getElementById('lmInt').addEventListener('input', updateISLM);
+
+        // 12. Bertrand Duopoly Model
+        const bertrandLabels = Array.from({length: 51}, (_, i) => i);
+        const bertrandChart = new Chart(document.getElementById('bertrandChart'), {
+            type: 'line',
+            data: { labels: bertrandLabels, datasets: [
+                { label: 'Market Demand', borderColor: 'cyan', data: [] },
+                { label: 'MC (Marginal Cost)', borderColor: 'lime', data: [] },
+                { label: 'Bertrand Equilibrium Price', borderColor: 'orange', borderDash: [6,4], data: [] }
+            ] },
+            options: { 
+                ...commonOptions, 
+                scales: { 
+                    x: { min: 0, max: 50, title: { display: true, text: 'Quantity' } }, 
+                    y: { min: 0, max: 50, title: { display: true, text: 'Price' } } 
+                } 
+            }
+        });
+        function updateBertrand() {
+            const a = parseFloat(document.getElementById('bertrandDInt').value);
+            const mc = parseFloat(document.getElementById('mcBertrand').value);
+            
+            const demand = bertrandLabels.map(q => Math.max(0, a - q));
+            const mcLine = bertrandLabels.map(() => mc);
+            const bertrandPrice = bertrandLabels.map(() => mc); // In Bertrand, price = MC
+            
+            bertrandChart.data.datasets[0].data = demand;
+            bertrandChart.data.datasets[1].data = mcLine;
+            bertrandChart.data.datasets[2].data = bertrandPrice;
+            bertrandChart.update();
+        }
+        updateBertrand();
+        document.getElementById('bertrandDInt').addEventListener('input', updateBertrand);
+        document.getElementById('mcBertrand').addEventListener('input', updateBertrand);
+
+        // 13. Game Theory - Prisoner's Dilemma Visualization
+        const gameLabels = ['Cooperate', 'Defect'];
+        const gameChart = new Chart(document.getElementById('gameChart'), {
+            type: 'bar',
+            data: {
+                labels: gameLabels,
+                datasets: [
+                    { 
+                        label: 'Player 1 Payoff (when opponent cooperates)', 
+                        backgroundColor: 'rgba(0,255,255,0.5)',
+                        borderColor: 'cyan',
+                        borderWidth: 1,
+                        data: []
+                    },
+                    { 
+                        label: 'Player 1 Payoff (when opponent defects)', 
+                        backgroundColor: 'rgba(255,0,0,0.5)',
+                        borderColor: 'red',
+                        borderWidth: 1,
+                        data: []
+                    }
+                ]
+            },
+            options: { 
+                ...commonOptions,
+                scales: { 
+                    y: { min: 0, max: 60, title: { display: true, text: 'Payoff' } } 
+                },
+                plugins: {
+                    legend: { labels: { color: '#e0e0e0' } }
+                }
+            }
+        });
+        function updateGame() {
+            const defectReward = parseFloat(document.getElementById('defectReward').value);
+            const coopReward = parseFloat(document.getElementById('coopReward').value);
+            
+            // Standard prisoner's dilemma payoffs with our parameters
+            // When opponent cooperates: [coopReward, defectReward]
+            // When opponent defects: [defectReward-10, coopReward-5] // arbitrary adjustment to maintain PD structure
+            const payoffWhenOpponentCooperates = [coopReward, defectReward];
+            const payoffWhenOpponentDefects = [Math.max(0, coopReward - 10), Math.max(0, defectReward - 5)];
+            
+            gameChart.data.datasets[0].data = payoffWhenOpponentCooperates;
+            gameChart.data.datasets[1].data = payoffWhenOpponentDefects;
+            gameChart.update();
+        }
+        updateGame();
+        document.getElementById('defectReward').addEventListener('input', updateGame);
+        document.getElementById('coopReward').addEventListener('input', updateGame);
+    </script>
+</body>
+</html>

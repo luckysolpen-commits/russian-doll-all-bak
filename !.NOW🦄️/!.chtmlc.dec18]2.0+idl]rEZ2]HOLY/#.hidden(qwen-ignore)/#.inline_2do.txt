@@ -1,0 +1,105 @@
+# CHTML Inline Rendering Implementation Plan
+
+## Objective
+Add inline CHTML rendering capability to allow modules to pass and render CHTML elements via shared memory (separate from pipe-based IPC), similar to JavaScript's inline HTML feature.
+
+## Leverage Existing Infrastructure
+
+### 1. Parser Reuse
+- Reuse the existing `parse_chtml()` function from `3.view_v0.01.c`
+- Use the same parsing logic that handles modules via `<module>` tags
+- Utilize the existing `UIElement` structure to store parsed elements
+
+### 2. DOM Array Integration
+- The existing `elements[]` array in view module acts as our DOM
+- Implement a new function `add_chtml_to_dom()` that parses CHTML string and adds to existing DOM
+- Maintain the current element structure (type, id, x, y, width, height, etc.)
+
+### 3. Shared Memory Extension (vs Pipe-based IPC)
+- Your framework supports BOTH pipe-based and shared memory protocols
+- Extend the `ModuleSharedMem` structure specifically for shared memory to support CHTML content transfer
+- Add new buffer field for CHTML content in `ModuleSharedMem`
+- Reuse existing semaphore synchronization mechanism
+- This is DISTINCT from the existing pipe-based communication
+
+## Implementation Steps
+
+### Phase 1: Shared Memory Enhancement
+1. Modify `ModuleSharedMem` structure in model module to include:
+   - `char chtml_content[4096]` - buffer for CHTML content
+   - `int chtml_ready` - flag indicating CHTML content is ready
+   - `int chtml_content_size` - size of CHTML content
+
+2. Update shared memory initialization function to allocate space for CHTML content
+3. Create new shared memory functions:
+   - `send_chtml_to_main()` - for modules to send CHTML content via shared memory
+   - `receive_chtml_from_module()` - for main to receive CHTML content (separate from pipe response)
+   - `is_chtml_ready()` - to check if new CHTML content is available
+
+### Phase 2: DOM Integration
+1. Create `add_chtml_to_dom(const char* chtml_content)` function in view module
+   - Parse CHTML string using a modified version of `parse_chtml()`
+   - Add new elements to the existing `elements[]` array
+   - Handle parent-child relationships in the existing DOM structure
+   - Ensure proper element indexing without conflicts
+
+2. Create `remove_chtml_from_dom(int start_index, int count)` function to remove elements when needed
+
+### Phase 3: Inline Window Function
+1. Implement `createWindow(const char* title, const char* chtmlContent, int width, int height)` function
+   - This function will create a new window/container for the inline CHTML
+   - Use existing panel/element creation patterns
+   - Parse and add the CHTML content to the DOM
+   - Handle window positioning and sizing
+
+### Phase 4: Module Integration
+1. Update module interface to allow sending CHTML content via shared memory
+2. Add example module demonstrating the inline CHTML feature using shared memory protocol
+3. Ensure backward compatibility with existing pipe-based modules
+
+## Technical Details
+
+### Modified ModuleSharedMem Structure
+```
+typedef struct {
+    int module_id;
+    int active;
+    int command_ready;
+    int response_ready;
+    char command_buffer[4096];
+    char response_buffer[4096];
+    int last_command_timestamp;
+    int last_response_timestamp;
+    int sem_id;
+    // New fields for CHTML content via shared memory
+    int chtml_ready;
+    int chtml_content_size;
+    char chtml_content[4096];
+} ModuleSharedMem;
+```
+
+### New API Functions
+- `char* load_chtml_from_file(const char* filename)` - Load CHTML from file
+- `int parse_inline_chtml(const char* chtml_content, int parent_element_index)` - Parse and add to DOM
+- `int createWindow(const char* title, const char* chtmlContent, int width, int height)` - Create container window
+- `void update_inline_elements()` - Update function to process new CHTML from shared memory modules
+- `int send_chtml_to_main(int module_idx, const char* chtml_content)` - Send CHTML via shared memory
+- `int receive_chtml_from_module(char* buffer, int buffer_size, int module_idx)` - Receive CHTML via shared memory
+
+### Integration with Current Flow
+- Modify `update_model()` in model module to check for CHTML content in shared memory (separate from pipe response)
+- When CHTML content is received via shared memory, call view module to add elements to DOM
+- Update render loop to handle new elements in existing DOM array
+- Maintain separate handling for shared memory vs pipe-based communication
+
+## Testing Strategy
+1. Create test module sending simple CHTML content via shared memory protocol
+2. Verify DOM elements are properly added and rendered
+3. Test with complex CHTML including nested elements and modules
+4. Ensure existing pipe-based functionality remains unaffected
+
+## Files to Modify
+1. `2.model_v0.01.c` - Extend shared memory structures and functions (separate from pipe functions)
+2. `3.view_v0.01.c` - Add DOM manipulation functions and inline parsing
+3. `4.controller_v0.01.c` - Add event handling for new elements
+4. Create example module demonstrating the feature using shared memory protocol

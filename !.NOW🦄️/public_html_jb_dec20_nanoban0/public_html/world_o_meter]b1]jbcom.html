@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time World Statistics (Dark Theme)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .stat {
+            font-size: 18px;
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .label {
+            flex: 1;
+        }
+        .value {
+            font-weight: bold;
+            font-size: 24px;
+            text-align: right;
+        }
+        .plus {
+            color: #4caf50;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+        .money { color: #00ff00; }
+        .sub {
+            margin-left: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Real-Time World Statistics</h1>
+
+<div class="section">
+    <h2>World Population</h2>
+    <div class="stat"><span class="label">Current World Population</span><span class="value" id="population">8,264,357,691</span></div>
+    <div class="stat"><span class="label">Births this year</span><span class="value" id="birthsYear">126,750,980 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Births today</span><span class="value" id="birthsToday">148,075 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Deaths this year</span><span class="value" id="deathsYear">59,725,656</span></div>
+    <div class="stat"><span class="label">Deaths today</span><span class="value" id="deathsToday">69,774</span></div>
+    <div class="stat"><span class="label">Net population growth this year</span><span class="value" id="growthYear">67,025,324 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Net population growth today</span><span class="value" id="growthToday">78,301 <span class="plus">[+]</span></span></div>
+</div>
+
+<div class="section">
+    <h2>Government & Economics</h2>
+    <div class="stat"><span class="label">Public Healthcare expenditure today</span><span class="value money" id="healthcare">$7,318,847,032 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Public Education expenditure today</span><span class="value money" id="education">$4,810,686,220 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Public Military expenditure today</span><span class="value money" id="military">$1,957,509,550 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Cars produced this year</span><span class="value" id="cars">86,817,275 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Bicycles produced this year</span><span class="value" id="bicycles">154,078,043 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Computers produced this year</span><span class="value" id="computers">215,554,758 <span class="plus">[+]</span></span></div>
+</div>
+
+<div class="section">
+    <h2>Society & Media</h2>
+    <div class="stat"><span class="label">New book titles published this year</span><span class="value" id="books">2,746,625 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Newspapers circulated today</span><span class="value" id="newspapers">184,929,084 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">TV sets sold worldwide today</span><span class="value" id="tvs">277,079 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Cellular phones sold today</span><span class="value" id="phones">3,332,318 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Money spent on videogames today</span><span class="value money" id="videogames">$139,933,062 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Internet users in the world today</span><span class="value" id="internet">6,958,097,686</span></div>
+    <div class="stat"><span class="label">Emails sent today</span><span class="value" id="emails">132,685,446,857 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Blog posts written today</span><span class="value" id="blogs">5,265,644 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Tweets sent today</span><span class="value" id="tweets">429,296,334 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Google searches today</span><span class="value" id="searches">5,265,675,259 <span class="plus">[+]</span></span></div>
+</div>
+
+<div class="section">
+    <h2>Environment</h2>
+    <div class="stat"><span class="label">Forest loss this year (hectares)</span><span class="value" id="forest">4,978,144 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Land lost to soil erosion this year (ha)</span><span class="value" id="erosion">6,701,929 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">CO2 emissions this year (tons)</span><span class="value" id="co2">38,126,646,404 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Desertification this year (hectares)</span><span class="value" id="desert">11,486,864 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Toxic chemicals released in the environment this year (tons)</span><span class="value" id="toxic">9,373,643 <span class="plus">[+]</span></span></div>
+</div>
+
+<div class="section">
+    <h2>Food</h2>
+    <div class="stat"><span class="label">Undernourished people in the world</span><span class="value" id="undernourished">893,407,547</span></div>
+    <div class="stat"><span class="label">Overweight people in the world</span><span class="value" id="overweight">1,788,219,577</span></div>
+    <div class="stat"><span class="label">Obese people in the world</span><span class="value" id="obese">902,973,077</span></div>
+    <div class="stat"><span class="label">People who died of hunger today</span><span class="value" id="hunger">12,506 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Money spent for obesity related diseases in the USA today</span><span class="value money" id="obesityCost">$289,107,443 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Money spent on weight loss programs in the USA today</span><span class="value money" id="weightLoss">$77,306,706 <span class="plus">[+]</span></span></div>
+</div>
+
+<div class="section">
+    <h2>Water</h2>
+    <div class="stat"><span class="label">Water used this year (million L)</span><span class="value" id="waterUsed">4,553,573,175 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Deaths caused by water related diseases this year</span><span class="value" id="waterDeaths">806,043 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">People with no access to a safe drinking water source</span><span class="value" id="noWater">749,501,190</span></div>
+</div>
+
+<div class="section">
+    <h2>Energy</h2>
+    <div class="stat"><span class="label">Energy used today (MWh), of which:</span><span class="value" id="energyToday">190,868,565 <span class="plus">[+]</span></span></div>
+    <div class="stat sub"><span class="label">- from non-renewable sources (MWh)</span><span class="value" id="nonRenew">162,478,100 <span class="plus">[+]</span></span></div>
+    <div class="stat sub"><span class="label">- from renewable sources (MWh)</span><span class="value" id="renew">28,743,141 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Solar energy striking Earth today (MWh)</span><span class="value" id="solar">1,195,991,915,892 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Oil pumped today (barrels)</span><span class="value" id="oilPumped">39,147,100 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Oil left (barrels)</span><span class="value" id="oilLeft">1,313,030,131,936</span></div>
+    <div class="stat"><span class="label">Days to the end of oil (~38 years)</span><span class="value" id="oilDays">13,693</span></div>
+    <div class="stat"><span class="label">Natural Gas left (boe)</span><span class="value" id="gasLeft">1,057,126,192,924</span></div>
+    <div class="stat"><span class="label">Days to the end of natural gas</span><span class="value" id="gasDays">55,638</span></div>
+    <div class="stat"><span class="label">Coal left (boe)</span><span class="value" id="coalLeft">4,257,356,367,375</span></div>
+    <div class="stat"><span class="label">Days to the end of coal</span><span class="value" id="coalDays">146,805</span></div>
+</div>
+
+<div class="section">
+    <h2>Health</h2>
+    <div class="stat"><span class="label">Communicable disease deaths this year</span><span class="value" id="commDisease">12,425,738 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Seasonal flu deaths this year</span><span class="value" id="flu">494,345 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Deaths of children under 5 this year</span><span class="value" id="childDeaths">7,275,517 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Abortions this year</span><span class="value" id="abortions">43,439,602 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Deaths of mothers during birth this year</span><span class="value" id="motherDeaths">295,851 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">HIV/AIDS infected people</span><span class="value" id="hiv">46,940,483</span></div>
+    <div class="stat"><span class="label">Deaths caused by HIV/AIDS this year</span><span class="value" id="hivDeaths">1,609,067 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Deaths caused by cancer this year</span><span class="value" id="cancer">7,861,181 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Deaths caused by malaria this year</span><span class="value" id="malaria">377,451 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Cigarettes smoked today</span><span class="value" id="cigarettes">6,189,967,726 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Deaths caused by smoking this year</span><span class="value" id="smokingDeaths">4,784,936 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Deaths caused by alcohol this year</span><span class="value" id="alcoholDeaths">2,393,977 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Suicides this year</span><span class="value" id="suicides">1,026,422 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Money spent on illegal drugs this year</span><span class="value money" id="drugs">$382,915,597,374 <span class="plus">[+]</span></span></div>
+    <div class="stat"><span class="label">Road traffic accident fatalities this year</span><span class="value" id="accidents">1,292,084 <span class="plus">[+]</span></span></div>
+</div>
+
+<script>
+    // Realistic rates (per second) based on current global data (~ Dec 2025)
+    const rates = {
+        birthsToday: 4.3,
+        deathsToday: 2.0,
+        netToday: 2.3,  // ~70-80 million net per year → ~2.2-2.5/sec
+
+        // Yearly = daily * ~365.25
+        birthsYear: 4.3 * 365.25,
+        deathsYear: 2.0 * 365.25,
+        growthYear: 2.3 * 365.25,
+
+        // Expenditures today (approximate daily increases)
+        healthcare: 25000,     // rough, based on typical daily spend
+        education: 16000,
+        military: 7000,
+
+        cars: 2.8,              // ~90M/year
+        bicycles: 4.0,
+        computers: 6.0,
+
+        books: 0.15,
+        newspapers: 5000,
+        tvs: 8,
+        phones: 90,
+        videogames: 4000,
+
+        emails: 3600000,        // billions per day
+        blogs: 140,
+        tweets: 11000,
+        searches: 140000,
+
+        forest: 0.4,
+        erosion: 0.5,
+        co2: 1200,
+        desert: 0.35,
+        toxic: 0.3,
+
+        hunger: 0.4,
+
+        obesityCost: 8000,
+        weightLoss: 2200,
+
+        waterUsed: 120,
+        waterDeaths: 0.02,
+
+        energyToday: 7,
+        nonRenew: 6,
+        renew: 1.1,
+        solar: 35000,
+        oilPumped: 1.2,
+
+        commDisease: 0.35,
+        flu: 0.014,
+        childDeaths: 0.2,
+        abortions: 1.2,
+        motherDeaths: 0.008,
+        hivDeaths: 0.045,
+        cancer: 0.22,
+        malaria: 0.01,
+        cigarettes: 170,
+        smokingDeaths: 0.13,
+        alcoholDeaths: 0.066,
+        suicides: 0.03,
+        drugs: 10000,
+        accidents: 0.036
+    };
+
+    let baseTime = Date.now();
+
+    function formatNumber(num) {
+        return num.toLocaleString('en-US');
+    }
+
+    function updateCounters() {
+        const elapsed = (Date.now() - baseTime) / 1000;
+
+        // Helper to update element
+        function upd(id, base, rate, isPlus = false, prefix = '') {
+            const val = Math.floor(parseInt(base.replace(/[^0-9]/g, '')) + rate * elapsed);
+            const el = document.getElementById(id);
+            if (isPlus) {
+                el.innerHTML = prefix + formatNumber(val) + ' <span class="plus">[+]</span>';
+            } else {
+                el.textContent = prefix + formatNumber(val);
+            }
+        }
+
+        // Population section
+        upd('population', '8,264,357,691', rates.netToday);
+        upd('birthsYear', '126,750,980', rates.birthsYear, true);
+        upd('birthsToday', '148,075', rates.birthsToday, true);
+        upd('deathsYear', '59,725,656', rates.deathsYear);
+        upd('deathsToday', '69,774', rates.deathsToday);
+        upd('growthYear', '67,025,324', rates.growthYear, true);
+        upd('growthToday', '78,301', rates.netToday, true);
+
+        // Government & Economics
+        upd('healthcare', '$7,318,847,032', rates.healthcare, true, '$');
+        upd('education', '$4,810,686,220', rates.education, true, '$');
+        upd('military', '$1,957,509,550', rates.military, true, '$');
+        upd('cars', '86,817,275', rates.cars, true);
+        upd('bicycles', '154,078,043', rates.bicycles, true);
+        upd('computers', '215,554,758', rates.computers, true);
+
+        // Society & Media (continuing similarly)
+        upd('books', '2,746,625', rates.books, true);
+        upd('newspapers', '184,929,084', rates.newspapers, true);
+        upd('tvs', '277,079', rates.tvs, true);
+        upd('phones', '3,332,318', rates.phones, true);
+        upd('videogames', '$139,933,062', rates.videogames, true, '$');
+        upd('internet', '6,958,097,686', 0);  // static-ish
+        upd('emails', '132,685,446,857', rates.emails, true);
+        upd('blogs', '5,265,644', rates.blogs, true);
+        upd('tweets', '429,296,334', rates.tweets, true);
+        upd('searches', '5,265,675,259', rates.searches, true);
+
+        // Environment
+        upd('forest', '4,978,144', rates.forest, true);
+        upd('erosion', '6,701,929', rates.erosion, true);
+        upd('co2', '38,126,646,404', rates.co2, true);
+        upd('desert', '11,486,864', rates.desert, true);
+        upd('toxic', '9,373,643', rates.toxic, true);
+
+        // Food (static ones no update)
+        upd('hunger', '12,506', rates.hunger, true);
+        upd('obesityCost', '$289,107,443', rates.obesityCost, true, '$');
+        upd('weightLoss', '$77,306,706', rates.weightLoss, true, '$');
+
+        // Water
+        upd('waterUsed', '4,553,573,175', rates.waterUsed, true);
+        upd('waterDeaths', '806,043', rates.waterDeaths, true);
+
+        // Energy
+        upd('energyToday', '190,868,565', rates.energyToday, true);
+        upd('nonRenew', '162,478,100', rates.nonRenew, true);
+        upd('renew', '28,743,141', rates.renew, true);
+        upd('solar', '1,195,991,915,892', rates.solar, true);
+        upd('oilPumped', '39,147,100', rates.oilPumped, true);
+
+        // Health
+        upd('commDisease', '12,425,738', rates.commDisease, true);
+        upd('flu', '494,345', rates.flu, true);
+        upd('childDeaths', '7,275,517', rates.childDeaths, true);
+        upd('abortions', '43,439,602', rates.abortions, true);
+        upd('motherDeaths', '295,851', rates.motherDeaths, true);
+        upd('hivDeaths', '1,609,067', rates.hivDeaths, true);
+        upd('cancer', '7,861,181', rates.cancer, true);
+        upd('malaria', '377,451', rates.malaria, true);
+        upd('cigarettes', '6,189,967,726', rates.cigarettes, true);
+        upd('smokingDeaths', '4,784,936', rates.smokingDeaths, true);
+        upd('alcoholDeaths', '2,393,977', rates.alcoholDeaths, true);
+        upd('suicides', '1,026,422', rates.suicides, true);
+        upd('drugs', '$382,915,597,374', rates.drugs, true, '$');
+        upd('accidents', '1,292,084', rates.accidents, true);
+
+        // Static ones (oil/gas/coal left, days, etc.) remain unchanged
+    }
+
+    setInterval(updateCounters, 200);  // Update every 200ms for smooth but slower visible changes
+    updateCounters();  // Initial
+</script>
+
+</body>
+</html>

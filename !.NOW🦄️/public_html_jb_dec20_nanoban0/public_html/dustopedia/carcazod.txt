@@ -1,0 +1,186 @@
+# CARCAZOD (Homo sapiens carcharias-arthropoda)
+### Bio-Weapon Classification: Omega-Class Metamorphic Combatant
+
+**SECURITY CLEARANCE: LUNAR COMMAND LEVEL 7 REQUIRED**
+
+---
+
+## Overview
+
+The Carcazod represents the apex of the Blood Queen Monarchy's bio-engineering program: a controlled metamorphic weapon system built upon a human clone chassis. The designation "Carcazod" derives from *Carcharodon* (great white shark) and the suffix "-zod," denoting artificial genesis.
+
+---
+
+## Genetic Architecture
+
+### Base Genome Modification
+
+The Carcazod transformation involves radical resequencing of human DNA through introduction of xenogenic material:
+
+**Primary Genetic Sources:**
+- **Arthropod Integration (47% genetic material):** Primarily *Periplaneta americana* (American cockroach) and *Limulus polyphemus* (horseshoe crab)
+  - Provides chitinous exoskeleton substrate
+  - Enables rapid cellular regeneration
+  - Introduces decentralized nervous system architecture
+  
+- **Chondrichthyes Sequences (31%):** *Carcharodon carcharias* (great white shark) and *Isistius brasiliensis* (cookiecutter shark)
+  - Electroreception organs (ampullae of Lorenzini analogs)
+  - Cartilaginous skeletal reinforcement
+  - Predatory neural pathway enhancement
+  - Continuous tooth regeneration in jaw structures
+
+- **Retained Human Sequences (22%):** Primarily cerebral cortex, prefrontal regions
+  - Maintains higher cognitive function
+  - Preserves tactical reasoning and language centers
+  - Allows voluntary transformation control (with extensive neural conditioning)
+
+### Chromosomal Modifications
+
+The transformation introduces 6 additional chromosomal pairs (total: 29 pairs/58 chromosomes), encoding:
+- **Pair 24:** Chitin synthesis enzymes
+- **Pair 25:** Metamorphic trigger sequences
+- **Pair 26:** Enhanced muscle fiber density protocols
+- **Pair 27:** Sensory amplification genes
+- **Pair 28:** Rage-state neurochemical regulators
+- **Pair 29:** Accelerated healing factors
+
+---
+
+## Transformation Process
+
+### Stage One: Mutagen Introduction (Weeks 1-3)
+
+Subjects undergo continuous immersion in oxygenated bio-gel containing:
+- **CRISPR-Cas9 variant delivery vectors** (atmospheric pressure: 2.1 ATM)
+- **Retroviral gene therapy agents** targeting osteoblasts, myocytes, and dermal cells
+- **Growth hormone cascades** (500x normal human levels)
+- **Pain management insufficient by design** - consciousness maintained to prevent psychological fracture during identity reformation
+
+**Physiological Changes:**
+- Bone marrow conversion to cartilage-generating tissue
+- Epidermis replaced by sub-dermal chitinous layer (2-4mm thick)
+- Muscle fiber density increases 340%
+- Metabolic rate increases 600%
+
+### Stage Two: Neural Conditioning (Weeks 4-8)
+
+Subjects undergo invasive neural mapping and conditioning:
+- **Predatory instinct cultivation** via hypothalamic stimulation
+- **Rage-state management** through amygdala reprogramming
+- **Transformation control training** via voluntary neurochemical release
+
+**Survival Rate:** 61% (39% mortality from neurological rejection or uncontrolled mutation)
+
+### Stage Three: Combat Conditioning (Weeks 9-12)
+
+Surviving subjects trained in:
+- Voluntary transformation triggering
+- Predatory combat techniques
+- Target discrimination under rage influence
+- Metamorphic partial transformations for infiltration
+
+---
+
+## Physiological Specifications
+
+### Dormant State (Human-Passing Form)
+
+**Appearance:** Near-human, with notable differences under close inspection
+- Height: +15-20cm above baseline clone height
+- Weight: +40-60kg (dense muscle and sub-dermal armor)
+- Skin: Slightly gray-tinted, hardened texture
+- Eyes: Nictitating membrane visible in bright light
+- Teeth: Slightly pointed canines, continuous growth
+
+**Sensory Capabilities:**
+- Olfactory sensitivity: 10,000x human baseline (can detect adrenaline in sweat at 50+ meters)
+- Electroreception: Can sense bioelectric fields within 5-meter radius
+- Low-light vision: Tapetum lucidum layer in retinas
+- Auditory range: 10 Hz - 80 kHz
+
+**Physical Performance:**
+- Lifting capacity: 800-1000kg
+- Sprint speed: 45-50 km/h sustained
+- Reaction time: 80ms (vs. 250ms human average)
+
+### Combat State (Full Transformation)
+
+**Transformation Time:** 4-7 seconds (voluntary neural trigger)
+
+**Appearance:** 
+- Height: 2.8-3.2 meters
+- Weight: 400-500kg
+- Chitinous plates (6-12mm thick) erupt from sub-dermal layer
+- Four primary scythe-like appendages extend from forearm/shoulder structures
+- Jaw extends, reveals multiple rows of regenerating teeth
+- Spinal ridge protrudes with serrated plates
+
+**Combat Capabilities:**
+- **Scythe Appendages:** Chitin-carbide composite, can shear through 50mm durasteel
+- **Bite Force:** 18,000 PSI (comparable to *Dunkleosteus*)
+- **Regeneration:** Non-fatal wounds close within minutes; severed limbs regrow in 72-96 hours
+- **Speed:** 80+ km/h sprint, wall-climbing via chitin claw integration
+- **Durability:** Resistant to small arms fire, vulnerable to anti-tank weaponry
+
+**Neurochemical State:**
+- Adrenaline levels: 40x baseline
+- Dopamine flood in predatory centers
+- Serotonin suppression (reduces impulse control)
+- Norepinephrine saturation (hyperawareness state)
+
+**Psychological Profile:** Subjects report experiencing the transformation as "controlled fury" - awareness maintained but impulse control significantly diminished. Extended periods in combat form (>20 minutes) risk permanent psychological damage and loss of voluntary control.
+
+---
+
+## Metabolic Requirements
+
+### Caloric Intake
+- **Dormant State:** 8,000-12,000 calories/day
+- **Post-Transformation:** 20,000-30,000 calories required within 6 hours (primarily protein and calcium)
+
+### Weaknesses
+- **Thermal Regulation:** Poor heat dissipation in combat form (maximum combat duration: 45 minutes before heat exhaustion)
+- **Nutritional Dependency:** Requires specialized diet including chitin precursors
+- **Neural Fatigue:** Each transformation causes 8-12 hour recovery period
+- **Electromagnetic Sensitivity:** Strong EM fields disrupt electroreception, cause disorientation
+- **Psychological Instability:** 23% of subjects experience permanent psychosis after 10+ transformations
+
+---
+
+## Tactical Deployment
+
+### Primary Applications
+- **Assassination:** Infiltrate as human, transform for guaranteed kill
+- **Terror Weapon:** Visual psychological impact on enemy forces
+- **Elite Guard:** Personal protection for high-value Imperial assets
+- **Breach & Clear:** Urban warfare and station assault operations
+
+### Known Countermeasures
+- High-frequency sonic weapons (disrupt electroreception)
+- Thermal overload tactics (force early exhaustion)
+- Armor-piercing munitions targeting joints
+- Psychological warfare (prey on identity instability)
+
+---
+
+## Ethical Considerations
+
+**REDACTED BY ORDER OF THE PROCTOR**
+
+*[Document Fragment Recovered by Underground Xircus Intelligence]:*
+*"The Carcazod program represents the complete dehumanization of clone soldiers. Subjects retain consciousness during the months-long agony of transformation. Many beg for death. The 39% mortality rate is considered 'acceptable losses' by the Blood Queen's bio-engineers. Those who survive are no longer considered persons under Imperial law, but 'biologics' - property of the state. Seven herself encountered three Carcazods during the Liberation of Ganymede Station. She described them as 'broken souls in monster bodies, slaves twice over.' - Xircus Intel Report 2247.09.14"*
+
+---
+
+## Known Individuals
+
+- **Subject Alpha-1 "The Reaper":** First successful transformation (2241). Status: KIA, Battle of Io
+- **Subject Theta-7:** Failed psychological conditioning, went rogue (2243). Hunted by Imperial forces.
+- **Subject designation UNKNOWN:** Infiltrated diplomatic corps, later defected to Rebellion (unconfirmed)
+
+---
+
+**CLASSIFICATION NOTICE:** This document contains information regarding Bio-Weapon Omega-Class assets. Unauthorized distribution is punishable by immediate termination and genetic material reclamation.
+
+**COMPILED BY:** Seven's Intelligence Network, New Republic Archives
+**DATE:** Post-Liberation, 2248.03.22

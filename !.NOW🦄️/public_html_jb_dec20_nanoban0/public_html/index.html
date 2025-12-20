@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to jbmbrooks.com</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin-top: 50px; 
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content {
+            flex: 1;
+        }
+        h1 { 
+            color: #00ff00;
+        }
+        h2 { 
+            color: #ff6200;
+        }
+        h3 {
+            color: #e0e0e0;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .text-container {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: rgba(0, 0, 0, 0.65);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .login-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.35);
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #555;
+            color: #e0e0e0;
+        }
+        .login-container input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #3282e6;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #2567b3;
+        }
+        .guest-container {
+            display: inline-block;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+        }
+        .guest-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00ff00;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .guest-container a:hover {
+            background-color: #00cc00;
+            color: #000000;
+        }
+        .signup-container {
+            display: inline-block;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+        }
+        .signup-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3282e6;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .signup-container a:hover {
+            background-color: #2567b3;
+            color: #ffffff;
+        }
+        #visitor-counter {
+            font-size: 18px;
+            color: #e0e0e0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-bottom: 20px;
+        }
+        .applications-container {
+            display: none;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.35);
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .applications-container input,
+        .applications-container select,
+        .applications-container textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #555;
+            color: #e0e0e0;
+        }
+        .applications-container textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .applications-container input[type="submit"],
+        .applications-container input[type="button"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #3282e6;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .applications-container input[type="submit"]:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+        .applications-container input[type="submit"]:hover:not(:disabled),
+        .applications-container input[type="button"]:hover {
+            background-color: #2567b3;
+        }
+        .privacy-notice {
+            font-size: 12px;
+            color: #e0e0e0;
+            margin-top: 10px;
+        }
+        .fine-print {
+            font-size: 12px;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+        .fine-print a {
+            color: #3282e6;
+            text-decoration: none;
+        }
+        .fine-print a:hover {
+            color: #2567b3;
+        }
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #e0e0e0;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .cookie-banner button {
+            padding: 8px 16px;
+            margin: 0 5px;
+            background-color: #3282e6;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .cookie-banner button:hover {
+            background-color: #2567b3;
+        }
+        .cookie-banner a {
+            color: #3282e6;
+            text-decoration: none;
+        }
+        .cookie-banner a:hover {
+            color: #2567b3;
+        }
+        .cookie-preferences {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            z-index: 1001;
+        }
+        .cookie-preferences input {
+            margin-right: 10px;
+        }
+        .cookie-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #3282e6;
+            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .cookie-icon:hover {
+            background-color: #2567b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="text-container">
+            <h1>JBMBrooks</h1>
+            <h2>Institutional, Retail, Sovereign : Network Portal </h2>
+            <h4>JBMB is commited to delivering unique and world class trading strategies by orchestrating data-rich research: interactive, multiversal, transparent and most importantly, FUN!</h4>
+            <h5>🧿️🌐️🌎️🏦️🦉️💵️💶️💴️💳️🦉️📇️🌏️🪙️🧿️
+                </h5>
+         
+        </div>
+        <div class="guest-container">
+            <a href="guest.html">Guest</a>
+        </div>
+        <div class="login-container">
+            <form action="login.php" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <div class="signup-container">
+            <a href="signup.php" id="signup-link">Signup</a>
+        </div>
+        <div class="applications-container" id="applications-form">
+            <div class="text-container">
+                <h2>Application</h2>
+                <h3>Applications are reviewed by JBMBrooks. You may be contacted for an interview.</h3>
+            </div>
+            <form id="application-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="number" name="age" placeholder="Age" min="0" required>
+                <select name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <input type="text" name="address" placeholder="Address" required>
+                <input type="text" name="organization" placeholder="Organization" required>
+                <textarea name="comments" placeholder="Comments" required></textarea>
+                <div class="privacy-notice">
+                    By submitting this form, you acknowledge that your data may be shared with the site owner, advertisers, and third parties for analytics and marketing purposes, in accordance with our <a href="privacy-policy.html" style="color: #3282e6;">Privacy Policy</a>.
+                </div>
+                <input type="submit" value="Submit" disabled>
+                <input type="button" value="Cancel" onclick="hideApplicationsForm()">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="visitor-counter"></div>
+        <div class="fine-print">
+            <p>We collect personal information such as IP addresses (anonymized), usernames, and form data (e.g., name, phone, address) to improve our services and for analytics. We use cookies to enhance your experience, including essential cookies for site functionality and optional analytics cookies for tracking user interactions. Your data may be shared with the site owner, advertisers, and third parties for marketing purposes. Under GDPR and CCPA, you have the right to access, delete, or opt out of the sale of your personal information. For more details, review our <a href="privacy-policy.html">Privacy Policy</a> and <a href="cookie-policy.html">Cookie Policy</a> July 8 2025 </p>
+        </div>
+    </div>
+    <div class="cookie-banner" id="cookie-banner">
+        <p>Cookies on this website. We use cookies on jbmbrooks.com to provide you with the best possible experience. If you wish to review the cookies we store, please select the Cookie Preferences option on this banner. After your preferences are saved, you can use the cookie icon at the left to modify your selections at any time. For more information, you can review our <a href="privacy-policy.html">Privacy Policy</a> and <a href="cookie-policy.html">Cookie Policy</a>.</p>
+        <button onclick="acceptCookies()">Accept Cookies</button>
+        <button onclick="showCookiePreferences()">Cookie Preferences</button>
+    </div>
+    <div class="cookie-preferences" id="cookie-preferences">
+        <h3>Cookie Preferences</h3>
+        <label><input type="checkbox" id="essential-cookies" checked disabled> Essential Cookies (Required)</label><br>
+        <label><input type="checkbox" id="analytics-cookies"> Analytics Cookies</label><br>
+        <button onclick="saveCookiePreferences()">Save Preferences</button>
+        <button onclick="hideCookiePreferences()">Cancel</button>
+    </div>
+    <div class="cookie-icon" id="cookie-icon" onclick="showCookiePreferences()" style="display: none;">🍪</div>
+    <script src="counter.php"></script>
+    <script>
+        // Override toggle: 0 = time-based, 1 = day, 2 = night
+        const overrideToggle = 0;
+
+        // Function to set background based on time or override
+        function setBackgroundImage() {
+            let backgroundImage = '';
+            if (overrideToggle === 1) {
+                backgroundImage = 'url("ss.flip]day.png")';
+            } else if (overrideToggle === 2) {
+                backgroundImage = 'url("ss.flip]nite.png")';
+            } else {
+                const now = new Date();
+                const hour = now.toLocaleString('en-US', { 
+                    timeZone: 'America/Los_Angeles', 
+                    hour: 'numeric', 
+                    hour12: false 
+                });
+                const hourNum = parseInt(hour);
+                backgroundImage = (hourNum >= 6 && hourNum < 18) 
+                    ? 'url("ss.flip]day.png")' 
+                    : 'url("ss.flip]nite.png")';
+            }
+            document.body.style.backgroundImage = backgroundImage;
+        }
+
+        // Run on page load
+        setBackgroundImage();
+
+        // Function to send tracking data to track.php
+        function trackAction(action, buttonId, username = '', password = '') {
+            const data = `action=${encodeURIComponent(action)}&button_id=${encodeURIComponent(buttonId)}` +
+                         `&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
+            fetch('track.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: data
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Function to show applications form
+        function showApplicationsForm() {
+            document.getElementById('applications-form').style.display = 'block';
+            document.getElementById('signup-link').style.display = 'none';
+        }
+
+        // Function to hide applications form
+        function hideApplicationsForm() {
+            document.getElementById('applications-form').style.display = 'none';
+            document.getElementById('signup-link').style.display = 'inline-block';
+            document.getElementById('application-form').reset();
+            updateSubmitButton();
+        }
+
+        // Function to validate form and enable/disable submit button
+        function updateSubmitButton() {
+            const form = document.getElementById('application-form');
+            const inputs = form.querySelectorAll('input:not([type="submit"]):not([type="button"]), select, textarea');
+            const submitButton = form.querySelector('input[type="submit"]');
+            const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+            submitButton.disabled = !allFilled;
+        }
+
+        // Cookie consent functions
+        function setCookie(name, value, days) {
+            const expires = new Date();
+            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null;
+        }
+
+        function acceptCookies() {
+            setCookie('cookie_consent', 'essential,analytics', 365);
+            document.getElementById('cookie-banner').style.display = 'none';
+            document.getElementById('cookie-icon').style.display = 'flex';
+        }
+
+        function showCookiePreferences() {
+            document.getElementById('cookie-preferences').style.display = 'block';
+            const consent = getCookie('cookie_consent');
+            if (consent) {
+                document.getElementById('analytics-cookies').checked = consent.includes('analytics');
+            }
+        }
+
+        function hideCookiePreferences() {
+            document.getElementById('cookie-preferences').style.display = 'none';
+        }
+
+        function saveCookiePreferences() {
+            const analytics = document.getElementById('analytics-cookies').checked;
+            const consent = `essential${analytics ? ',analytics' : ''}`;
+            setCookie('cookie_consent', consent, 365);
+            document.getElementById('cookie-banner').style.display = 'none';
+            document.getElementById('cookie-preferences').style.display = 'none';
+            document.getElementById('cookie-icon').style.display = 'flex';
+        }
+
+        // Check cookie consent on page load
+        if (!getCookie('cookie_consent')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        } else {
+            document.getElementById('cookie-icon').style.display = 'flex';
+        }
+
+        // Track Login button click with form data
+        document.querySelector('.login-container input[type="submit"]').addEventListener('click', () => {
+            const username = document.querySelector('.login-container input[name="username"]').value;
+            const password = document.querySelector('.login-container input[name="password"]').value;
+            if (getCookie('cookie_consent')?.includes('analytics')) {
+                trackAction('button_click', 'login-btn', username, password);
+            }
+        });
+
+        // Track Signup link click and show applications form
+        document.getElementById('signup-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (getCookie('cookie_consent')?.includes('analytics')) {
+                trackAction('button_click', 'signup-btn');
+            }
+            showApplicationsForm();
+        });
+
+        // Track visit duration on page unload
+        window.addEventListener('beforeunload', () => {
+            if (getCookie('cookie_consent')?.includes('analytics')) {
+                navigator.sendBeacon('track.php', `action=end_session&button_id=none`);
+            }
+        });
+
+        // Handle applications form submission
+        document.getElementById('application-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Array.from(formData.entries()).map(([key, value]) => 
+                `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+            ).join('&');
+            fetch('applications.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: data
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    hideApplicationsForm();
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        // Validate form on input
+        document.getElementById('application-form').addEventListener('input', updateSubmitButton);
+    </script>
+</body>
+</html>

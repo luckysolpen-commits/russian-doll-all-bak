@@ -1,0 +1,7 @@
+
+
+it looks like its working (maybe not spec window size yet) and 
+ofc w.e canvas elements are jank. 
+just push forth and fix as u desire the funcitons , ur good <3
+its not that hard or bad and its nearly done
+(before it was like 45% pre jank , now we thnk its like 🕵🏽‍♂️️80-99%🕵🏻‍♀️️🔍️

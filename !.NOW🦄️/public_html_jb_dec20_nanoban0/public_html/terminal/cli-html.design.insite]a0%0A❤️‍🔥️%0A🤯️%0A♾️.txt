@@ -1,0 +1,69 @@
+🤯️♾️
+🗓️
+📅️nov2: 
+❤️‍🔥️
+we shouldn't even have "2d/3d" "BUTTONS"
+(for html-cli version especially (ofc should serve as model of chtml)
+
+we should have a 2d_editor and 3d_editor command
+and we can operate on same or even differnt map in tabs
+and they can update dynamically , unless saveas-forked 
+
+same for paint tool etc, i REALLY like this way of doing things.
+
+(however i do think there should be an option 2 open a 'tool suite'
+that is 'grid snapped)
+
+🤯️
+(a crazy update u may wanna make is opening
+"smaller chtml files inside of a big window. 
+
+by creating a "toolbar or doing it programmatically (ref
+in parent-chtml, or module!?),thru module link"
+🤯️
+this is the level of full recursion we really want. 
+also has nothing 2 do with canvas so maybe we do it soon, 
+lets do the html first tho 2 get some "positve vibe momentum"
+⁉️
+is there a way we can (without i-frames) do this in html 2 ? 
+even if we had 2 make a "library" or something? 
+🇬🇮️
+🇬🇮️
+⁉️
+🤯️
+❤️‍🔥️
+📅️
+
+🗓️
+🖥️🪟️📟️
+in rmmv-wsr. we can just open clis. 
+
+those things can even open screens, that have x marks on them .
+that will open over rmmvc. 
+honestly rmmvc shouldnt even be open it should just be a "DESKTOP LOOKING THING" (like a vm) 
+and the panels u should have to open with cli first (not have 2 but yea) 
+and then u can pull in levels blah blah blah. not like gui but like cli tools. 
+(BUT ALL IN 1 WINDOW , NOT NEW WINDOWS . it could be but were not gonna, cuz  2 match "HTML" INSIGHTFUL HUH?
+
+(that way if user DOES do other windows, for a diff account or w/e it wont be confusing terminals everywhere
+
+{and if u dont do this right, its gonna be trash , but w/e its all good .; yes we rather even do 
+cli stuff in chtml , even wsr etc... so ... we will see about translating it over...maybe hold off on more mods?(OF WSR , cuz we may do in GL, get it? ) yea i get it but i still like supporting headless. and even hooking into head sessions with a cli, giving best of both worlds, get it? 💞️}
+
+❤️‍🔥️
+SHOULD BE SPECIFIC MODULE FOR 'MAPS'.C
+SPECIFIC MODULE FOR 'PICKER' .C 
+SPECIFIC MODULE FOR CLI , ETC (EVENTS W/E 
+❤️‍🔥️
+🤯️remember. the ultimate goal of this was/is always 2 recurse 'desktop.c' and open more clis♾️
+♾️
+
+❤️‍🔥️
+🤯️
+♾️
+🫐️
+practically ? 
+
+id like to make a "doom clone" but still beable 2 open editor, map thingi etc, 
+(but just have different game mechanix. thats wut im into , and we can even pull the nnex out (not bluprints but @least pull them out as plugins
+🫐️
