@@ -1,4 +1,5 @@
 
+#define STB_IMAGE_IMPLEMENTATION
 #include <GL/glut.h>
 #include <stdio.h>
 #include <string.h>
@@ -15,6 +16,141 @@
 #include FT_FREETYPE_H
 #include <dirent.h>
 #include <sys/stat.h>
+#include "stb_image.h"
+
+// Define function pointers for modern GL functions not in standard headers (for texture loading)
+typedef void (APIENTRYP PFNGLGENTEXTURESPROC) (GLsizei n, GLuint *textures);
+typedef void (APIENTRYP PFNGLBINDTEXTUREPROC) (GLenum target, GLuint texture);
+typedef void (APIENTRYP PFNGLTEXIMAGE2DPROC) (GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const void *pixels);
+typedef void (APIENTRYP PFNGLDELETETEXTURESPROC) (GLsizei n, const GLuint *textures);
+
+PFNGLGENTEXTURESPROC my_glGenTextures;
+PFNGLBINDTEXTUREPROC my_glBindTexture;
+PFNGLTEXIMAGE2DPROC  my_glTexImage2D;
+PFNGLDELETETEXTURESPROC my_glDeleteTextures;
+
+void load_gl_pointers() {
+    // Manually fetch addresses from the driver - try different methods
+    // First try using glXGetProcAddress if available (X11/GLX context)
+    // The function pointers are actually available directly in the OpenGL library
+    // For GLUT applications, these functions should be available directly
+    my_glGenTextures = glGenTextures;
+    my_glBindTexture = glBindTexture;
+    my_glTexImage2D  = glTexImage2D;
+    my_glDeleteTextures = glDeleteTextures;
+}
+
+// Texture cache entry structure
+#define MAX_CACHED_TEXTURES 100
+typedef struct {
+    char path[512];
+    GLuint texture_id;
+    int width;
+    int height;
+    int loaded;     // Whether this cache entry is populated
+} TextureCacheEntry;
+
+TextureCacheEntry texture_cache[MAX_CACHED_TEXTURES];
+int texture_cache_size = 0;
+
+// Initialize texture cache
+void init_texture_cache() {
+    for (int i = 0; i < MAX_CACHED_TEXTURES; i++) {
+        texture_cache[i].loaded = 0;
+        texture_cache[i].texture_id = 0;
+        texture_cache[i].path[0] = '\0';
+        texture_cache[i].width = 0;
+        texture_cache[i].height = 0;
+    }
+    texture_cache_size = 0;
+}
+
+// Find a texture in the cache
+int find_texture_in_cache(const char* path) {
+    for (int i = 0; i < texture_cache_size && i < MAX_CACHED_TEXTURES; i++) {
+        if (texture_cache[i].loaded && strcmp(texture_cache[i].path, path) == 0) {
+            return i;
+        }
+    }
+    return -1; // Not found
+}
+
+// Add a texture to the cache
+int add_texture_to_cache(const char* path, GLuint texture_id, int width, int height) {
+    // Check if texture is already in cache (avoid duplicates)
+    int existing_index = find_texture_in_cache(path);
+    if (existing_index != -1) {
+        return existing_index;
+    }
+    
+    // If cache is full, we could implement a replacement strategy
+    // For now, just return if cache is full
+    if (texture_cache_size >= MAX_CACHED_TEXTURES) {
+        // Optional: Implement LRU or other cache replacement strategy
+        return -1;
+    }
+    
+    // Add to cache
+    strncpy(texture_cache[texture_cache_size].path, path, sizeof(texture_cache[texture_cache_size].path) - 1);
+    texture_cache[texture_cache_size].path[sizeof(texture_cache[texture_cache_size].path) - 1] = '\0';
+    texture_cache[texture_cache_size].texture_id = texture_id;
+    texture_cache[texture_cache_size].width = width;
+    texture_cache[texture_cache_size].height = height;
+    texture_cache[texture_cache_size].loaded = 1;
+    
+    int index = texture_cache_size;
+    texture_cache_size++;
+    
+    return index;
+}
+
+// Load texture from file using stb_image
+GLuint load_texture_from_file(const char* path) {
+    // Check if texture is already in cache
+    int cache_index = find_texture_in_cache(path);
+    if (cache_index != -1) {
+        // Texture is in cache, use it
+        return texture_cache[cache_index].texture_id;
+    }
+
+    // Flip image vertically on load to match OpenGL coordinate system (for static images only)
+    // Removed stbi_set_flip_vertically_on_load(1) to prevent image flipping
+    // Images are now loaded in their original orientation and handled properly with texture coordinates
+    
+    // Load image using stb_image
+    int width, height, channels;
+    unsigned char *data = stbi_load(path, &width, &height, &channels, 4); // Force RGBA
+    if (!data) {
+        printf("Failed to load image: %s\n", path);
+        return 0; // Return 0 for failed texture
+    }
+    printf("Loaded image %s (%dx%d)\n", path, width, height);
+
+    // Create OpenGL texture
+    GLuint texture_id;
+    my_glGenTextures(1, &texture_id);
+    my_glBindTexture(GL_TEXTURE_2D, texture_id);
+
+    // Set unpack alignment to prevent row padding issues
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+    
+    // Set filtering parameters (required to see the texture)
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    // Upload raw pixel data to GPU
+    my_glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+
+    stbi_image_free(data);
+    printf("Texture generated successfully with ID: %u\n", texture_id);
+
+    // Add to cache
+    add_texture_to_cache(path, texture_id, width, height);
+
+    return texture_id;
+}
 
 // Definition for the renderable shape object provided by the model
 typedef struct {
@@ -28,6 +164,11 @@ typedef struct {
     int active;      // Added active flag
     float rotation_x, rotation_y, rotation_z; // Rotation angles in degrees
     float scale_x, scale_y, scale_z; // Scale factors
+    // Texture fields for module shapes
+    char texture_src[256];    // path from module SHAPE command
+    GLuint texture_id;        // OpenGL texture ID
+    int texture_loaded;       // flag to indicate if texture has been loaded
+    int texture_loading;      // flag to prevent multiple loading attempts
 } Shape;
 
 // Coordinate transformation utilities
@@ -105,26 +246,89 @@ static inline float radians_to_degrees(float radians) {
 
 // Render 2D shapes
 static inline void render_2d_shape(Shape* s) {
+    // Check if shape has texture and load it if necessary
+    if (s->texture_src[0] != '\0') {  // Check if texture source provided
+        if (!s->texture_loaded && !s->texture_loading) {
+            // Mark as loading to prevent race conditions
+            s->texture_loading = 1;
+            s->texture_id = load_texture_from_file(s->texture_src);
+            if (s->texture_id != 0) {
+                s->texture_loaded = 1;
+                printf("Loaded texture for shape: %s from %s\n", s->label, s->texture_src);
+            }
+            s->texture_loading = 0;
+        }
+    }
+    
+    // Set color and alpha
+    glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
+    
     if (strcmp(s->type, "SQUARE") == 0 || strcmp(s->type, "RECT") == 0) {
-        // Apply scaling in 2D space only if scale differs from default to maintain backward compatibility
-        if (s->scale_x != 1.0f || s->scale_y != 1.0f) {
-            float scaled_width = s->width * s->scale_x;
-            float scaled_height = s->height * s->scale_y;
+        // Check if we have a loaded texture to apply
+        if (s->texture_loaded && s->texture_id != 0) {
+            // Save the current OpenGL state
+            glPushAttrib(GL_ENABLE_BIT | GL_TEXTURE_BIT | GL_COLOR_BUFFER_BIT);
             
-            glBegin(GL_QUADS);
-            glVertex2f(s->x - scaled_width / 2, s->y - scaled_height / 2);
-            glVertex2f(s->x + scaled_width / 2, s->y - scaled_height / 2);
-            glVertex2f(s->x + scaled_width / 2, s->y + scaled_height / 2);
-            glVertex2f(s->x - scaled_width / 2, s->y + scaled_height / 2);
-            glEnd();
+            // Enable texture and blending
+            glEnable(GL_TEXTURE_2D);
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            
+            // Bind the texture
+            glBindTexture(GL_TEXTURE_2D, s->texture_id);
+            
+            // Set texture parameters for proper rendering
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+            
+            // Apply scaling in 2D space only if scale differs from default to maintain backward compatibility
+            if (s->scale_x != 1.0f || s->scale_y != 1.0f) {
+                float scaled_width = s->width * s->scale_x;
+                float scaled_height = s->height * s->scale_y;
+                
+                glBegin(GL_QUADS);
+                // Apply texture coordinates to the quad
+                glTexCoord2f(0.0f, 0.0f); glVertex2f(s->x - scaled_width / 2, s->y - scaled_height / 2);  // Bottom-left
+                glTexCoord2f(1.0f, 0.0f); glVertex2f(s->x + scaled_width / 2, s->y - scaled_height / 2);  // Bottom-right
+                glTexCoord2f(1.0f, 1.0f); glVertex2f(s->x + scaled_width / 2, s->y + scaled_height / 2);  // Top-right
+                glTexCoord2f(0.0f, 1.0f); glVertex2f(s->x - scaled_width / 2, s->y + scaled_height / 2);  // Top-left
+                glEnd();
+            } else {
+                // For backward compatibility - render without scaling when values are defaults
+                glBegin(GL_QUADS);
+                // Apply texture coordinates to the quad
+                glTexCoord2f(0.0f, 0.0f); glVertex2f(s->x - s->width / 2, s->y - s->height / 2);  // Bottom-left
+                glTexCoord2f(1.0f, 0.0f); glVertex2f(s->x + s->width / 2, s->y - s->height / 2);  // Bottom-right
+                glTexCoord2f(1.0f, 1.0f); glVertex2f(s->x + s->width / 2, s->y + s->height / 2);  // Top-right
+                glTexCoord2f(0.0f, 1.0f); glVertex2f(s->x - s->width / 2, s->y + s->height / 2);  // Top-left
+                glEnd();
+            }
+            
+            // Restore the previous OpenGL state
+            glPopAttrib();
         } else {
-            // For backward compatibility - render without scaling when values are defaults
-            glBegin(GL_QUADS);
-            glVertex2f(s->x - s->width / 2, s->y - s->height / 2);
-            glVertex2f(s->x + s->width / 2, s->y - s->height / 2);
-            glVertex2f(s->x + s->width / 2, s->y + s->height / 2);
-            glVertex2f(s->x - s->width / 2, s->y + s->height / 2);
-            glEnd();
+            // Apply scaling in 2D space only if scale differs from default to maintain backward compatibility
+            if (s->scale_x != 1.0f || s->scale_y != 1.0f) {
+                float scaled_width = s->width * s->scale_x;
+                float scaled_height = s->height * s->scale_y;
+                
+                glBegin(GL_QUADS);
+                glVertex2f(s->x - scaled_width / 2, s->y - scaled_height / 2);
+                glVertex2f(s->x + scaled_width / 2, s->y - scaled_height / 2);
+                glVertex2f(s->x + scaled_width / 2, s->y + scaled_height / 2);
+                glVertex2f(s->x - scaled_width / 2, s->y + scaled_height / 2);
+                glEnd();
+            } else {
+                // For backward compatibility - render without scaling when values are defaults
+                glBegin(GL_QUADS);
+                glVertex2f(s->x - s->width / 2, s->y - s->height / 2);
+                glVertex2f(s->x + s->width / 2, s->y - s->height / 2);
+                glVertex2f(s->x + s->width / 2, s->y + s->height / 2);
+                glVertex2f(s->x - s->width / 2, s->y + s->height / 2);
+                glEnd();
+            }
         }
     } else if (strcmp(s->type, "CIRCLE") == 0) {
         // Apply scaling in 2D space only if scale differs from default to maintain backward compatibility
@@ -191,7 +395,7 @@ static inline void render_2d_shape(Shape* s) {
     }
 }
 
-// Render 3D rectangular prism
+// Render 3D rectangular prism with optional texture support
 static inline void render_3d_rect_prism(float x_3d, float y_3d, float z_3d, float size_x, float size_y, float size_z) {
     glPushMatrix();
     glTranslatef(x_3d, y_3d, z_3d); // Position in proper 3D space
@@ -199,40 +403,40 @@ static inline void render_3d_rect_prism(float x_3d, float y_3d, float z_3d, floa
     // Draw a rectangular prism 
     glBegin(GL_QUADS);
     // Front face
-    glVertex3f(-size_x/2, -size_y/2, size_z/2);
-    glVertex3f(size_x/2, -size_y/2, size_z/2);
-    glVertex3f(size_x/2, size_y/2, size_z/2);
-    glVertex3f(-size_x/2, size_y/2, size_z/2);
+    glTexCoord2f(0.0f, 0.0f); glVertex3f(-size_x/2, -size_y/2, size_z/2);
+    glTexCoord2f(1.0f, 0.0f); glVertex3f(size_x/2, -size_y/2, size_z/2);
+    glTexCoord2f(1.0f, 1.0f); glVertex3f(size_x/2, size_y/2, size_z/2);
+    glTexCoord2f(0.0f, 1.0f); glVertex3f(-size_x/2, size_y/2, size_z/2);
     
     // Back face
-    glVertex3f(-size_x/2, -size_y/2, -size_z/2);
-    glVertex3f(-size_x/2, size_y/2, -size_z/2);
-    glVertex3f(size_x/2, size_y/2, -size_z/2);
-    glVertex3f(size_x/2, -size_y/2, -size_z/2);
+    glTexCoord2f(0.0f, 0.0f); glVertex3f(-size_x/2, -size_y/2, -size_z/2);
+    glTexCoord2f(1.0f, 0.0f); glVertex3f(-size_x/2, size_y/2, -size_z/2);
+    glTexCoord2f(1.0f, 1.0f); glVertex3f(size_x/2, size_y/2, -size_z/2);
+    glTexCoord2f(0.0f, 1.0f); glVertex3f(size_x/2, -size_y/2, -size_z/2);
     
     // Top face
-    glVertex3f(-size_x/2, size_y/2, -size_z/2);
-    glVertex3f(-size_x/2, size_y/2, size_z/2);
-    glVertex3f(size_x/2, size_y/2, size_z/2);
-    glVertex3f(size_x/2, size_y/2, -size_z/2);
+    glTexCoord2f(0.0f, 0.0f); glVertex3f(-size_x/2, size_y/2, -size_z/2);
+    glTexCoord2f(1.0f, 0.0f); glVertex3f(-size_x/2, size_y/2, size_z/2);
+    glTexCoord2f(1.0f, 1.0f); glVertex3f(size_x/2, size_y/2, size_z/2);
+    glTexCoord2f(0.0f, 1.0f); glVertex3f(size_x/2, size_y/2, -size_z/2);
     
     // Bottom face
-    glVertex3f(-size_x/2, -size_y/2, -size_z/2);
-    glVertex3f(size_x/2, -size_y/2, -size_z/2);
-    glVertex3f(size_x/2, -size_y/2, size_z/2);
-    glVertex3f(-size_x/2, -size_y/2, size_z/2);
+    glTexCoord2f(0.0f, 0.0f); glVertex3f(-size_x/2, -size_y/2, -size_z/2);
+    glTexCoord2f(1.0f, 0.0f); glVertex3f(size_x/2, -size_y/2, -size_z/2);
+    glTexCoord2f(1.0f, 1.0f); glVertex3f(size_x/2, -size_y/2, size_z/2);
+    glTexCoord2f(0.0f, 1.0f); glVertex3f(-size_x/2, -size_y/2, size_z/2);
     
     // Left face
-    glVertex3f(-size_x/2, -size_y/2, -size_z/2);
-    glVertex3f(-size_x/2, -size_y/2, size_z/2);
-    glVertex3f(-size_x/2, size_y/2, size_z/2);
-    glVertex3f(-size_x/2, size_y/2, -size_z/2);
+    glTexCoord2f(0.0f, 0.0f); glVertex3f(-size_x/2, -size_y/2, -size_z/2);
+    glTexCoord2f(1.0f, 0.0f); glVertex3f(-size_x/2, -size_y/2, size_z/2);
+    glTexCoord2f(1.0f, 1.0f); glVertex3f(-size_x/2, size_y/2, size_z/2);
+    glTexCoord2f(0.0f, 1.0f); glVertex3f(-size_x/2, size_y/2, -size_z/2);
     
     // Right face
-    glVertex3f(size_x/2, -size_y/2, -size_z/2);
-    glVertex3f(size_x/2, size_y/2, -size_z/2);
-    glVertex3f(size_x/2, size_y/2, size_z/2);
-    glVertex3f(size_x/2, -size_y/2, size_z/2);
+    glTexCoord2f(0.0f, 0.0f); glVertex3f(size_x/2, -size_y/2, -size_z/2);
+    glTexCoord2f(1.0f, 0.0f); glVertex3f(size_x/2, size_y/2, -size_z/2);
+    glTexCoord2f(1.0f, 1.0f); glVertex3f(size_x/2, size_y/2, size_z/2);
+    glTexCoord2f(0.0f, 1.0f); glVertex3f(size_x/2, -size_y/2, size_z/2);
     glEnd();
     glPopMatrix();
 }
@@ -306,6 +510,20 @@ static inline void render_3d_cylinder(float x_3d, float y_3d, float z_3d, float 
 
 // Render 3D shape based on type
 static inline void render_3d_shape(Shape* s, int canvas_width, int canvas_height) {
+    // Check if shape has texture and load it if necessary
+    if (s->texture_src[0] != '\0') {  // Check if texture source provided
+        if (!s->texture_loaded && !s->texture_loading) {
+            // Mark as loading to prevent race conditions
+            s->texture_loading = 1;
+            s->texture_id = load_texture_from_file(s->texture_src);
+            if (s->texture_id != 0) {
+                s->texture_loaded = 1;
+                printf("Loaded texture for 3D shape: %s from %s\n", s->label, s->texture_src);
+            }
+            s->texture_loading = 0;
+        }
+    }
+    
     if (strcmp(s->type, "SQUARE") == 0 || strcmp(s->type, "RECT") == 0) {
         // Map the 2D coordinates from the module to 3D space with proper depth
         Point3D pos_3d = map_2d_to_3d_coords(s->x, s->y, s->z, canvas_width, canvas_height);
@@ -324,11 +542,71 @@ static inline void render_3d_shape(Shape* s, int canvas_width, int canvas_height
             if (s->rotation_y != 0.0f) glRotatef(s->rotation_y, 0.0f, 1.0f, 0.0f); // Rotate around Y-axis
             if (s->rotation_z != 0.0f) glRotatef(s->rotation_z, 0.0f, 0.0f, 1.0f); // Rotate around Z-axis
             if (s->scale_x != 1.0f || s->scale_y != 1.0f || s->scale_z != 1.0f) glScalef(s->scale_x, s->scale_y, s->scale_z); // Apply scaling
-            render_3d_rect_prism(0.0f, 0.0f, 0.0f, size_x, size_y, size_z);
+            
+            // Check if we have a loaded texture to apply to the 3D rectangular prism
+            if (s->texture_loaded && s->texture_id != 0) {
+                // Save the current OpenGL state
+                glPushAttrib(GL_ENABLE_BIT | GL_TEXTURE_BIT | GL_COLOR_BUFFER_BIT);
+                
+                // Enable texture and blending
+                glEnable(GL_TEXTURE_2D);
+                glEnable(GL_BLEND);
+                glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+                
+                // Bind the texture
+                glBindTexture(GL_TEXTURE_2D, s->texture_id);
+                
+                // Set texture parameters for proper rendering
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                
+                // Render textured 3D rectangular prism
+                glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
+                render_3d_rect_prism(0.0f, 0.0f, 0.0f, size_x, size_y, size_z);
+                
+                // Restore the previous OpenGL state
+                glPopAttrib();
+            } else {
+                // Render without texture
+                glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
+                render_3d_rect_prism(0.0f, 0.0f, 0.0f, size_x, size_y, size_z);
+            }
             glPopMatrix();
         } else {
             // For backward compatibility - render without transformations when values are defaults
-            render_3d_rect_prism(pos_3d.x, pos_3d.y, pos_3d.z, size_x, size_y, size_z);
+            
+            // Check if we have a loaded texture to apply to the 3D rectangular prism
+            if (s->texture_loaded && s->texture_id != 0) {
+                // Save the current OpenGL state
+                glPushAttrib(GL_ENABLE_BIT | GL_TEXTURE_BIT | GL_COLOR_BUFFER_BIT);
+                
+                // Enable texture and blending
+                glEnable(GL_TEXTURE_2D);
+                glEnable(GL_BLEND);
+                glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+                
+                // Bind the texture
+                glBindTexture(GL_TEXTURE_2D, s->texture_id);
+                
+                // Set texture parameters for proper rendering
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                
+                // Render textured 3D rectangular prism
+                glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
+                render_3d_rect_prism(pos_3d.x, pos_3d.y, pos_3d.z, size_x, size_y, size_z);
+                
+                // Restore the previous OpenGL state
+                glPopAttrib();
+            } else {
+                // Render without texture
+                glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
+                render_3d_rect_prism(pos_3d.x, pos_3d.y, pos_3d.z, size_x, size_y, size_z);
+            }
         }
     } else if (strcmp(s->type, "TRIANGLE") == 0) {
         // Map the 2D coordinates from the module to 3D space with proper depth
@@ -346,10 +624,12 @@ static inline void render_3d_shape(Shape* s, int canvas_width, int canvas_height
             if (s->rotation_y != 0.0f) glRotatef(s->rotation_y, 0.0f, 1.0f, 0.0f); // Rotate around Y-axis
             if (s->rotation_z != 0.0f) glRotatef(s->rotation_z, 0.0f, 0.0f, 1.0f); // Rotate around Z-axis
             if (s->scale_x != 1.0f || s->scale_y != 1.0f || s->scale_z != 1.0f) glScalef(s->scale_x, s->scale_y, s->scale_z); // Apply scaling
+            glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
             render_3d_triangle_pyramid(0.0f, 0.0f, 0.0f, avg_size);
             glPopMatrix();
         } else {
             // For backward compatibility - render without transformations when values are defaults
+            glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
             render_3d_triangle_pyramid(pos_3d.x, pos_3d.y, pos_3d.z, avg_size);
         }
     } else if (strcmp(s->type, "CIRCLE") == 0) {
@@ -369,10 +649,12 @@ static inline void render_3d_shape(Shape* s, int canvas_width, int canvas_height
             if (s->rotation_y != 0.0f) glRotatef(s->rotation_y, 0.0f, 1.0f, 0.0f); // Rotate around Y-axis
             if (s->rotation_z != 0.0f) glRotatef(s->rotation_z, 0.0f, 0.0f, 1.0f); // Rotate around Z-axis
             if (s->scale_x != 1.0f || s->scale_y != 1.0f || s->scale_z != 1.0f) glScalef(s->scale_x, s->scale_y, s->scale_z); // Apply scaling
+            glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
             render_3d_cylinder(0.0f, 0.0f, 0.0f, radius, height);
             glPopMatrix();
         } else {
             // For backward compatibility - render without transformations when values are defaults
+            glColor4f(s->color[0], s->color[1], s->color[2], s->alpha);
             render_3d_cylinder(pos_3d.x, pos_3d.y, pos_3d.z, radius, height);
         }
     }
@@ -451,6 +733,17 @@ typedef struct {
     char href[512]; // Store href attribute for links
     // Z-level for rendering order (0-99, default 0)
     int z_level;   // Z-level for depth ordering
+    // Image-specific properties
+    char image_src[512];  // Store image source file path
+    GLuint texture_id;    // Store texture ID for the image
+    int texture_loaded;   // Flag to indicate if texture has been loaded
+    int texture_loading;  // Flag to indicate if texture is currently loading (to prevent multiple attempts)
+    // Video-specific properties
+    char video_src[512];  // Store video source file path
+    int video_loaded;     // Flag to indicate if video has been loaded
+    int video_playing;    // Flag to indicate if video is playing
+    int video_autoplay;   // Flag for autoplay
+    int video_loop;       // Flag for loop
 } UIElement;
 
 // Comparison function for qsort to sort elements by z_level
@@ -471,6 +764,37 @@ char (*model_get_dir_entries(int* count))[256];
 // Forward declaration for camera update function that can be called from main
 int update_camera_frame(void);
 void cleanup_camera(void);
+
+// Forward declarations for audio functionality
+void init_audio_system();
+int play_audio(const char* filepath);
+int stop_audio(const char* filepath);
+int pause_audio(const char* filepath);
+int resume_audio(const char* filepath);
+int is_audio_playing(const char* filepath);
+double get_audio_time(const char* filepath);
+void cleanup_audio();
+
+// Forward declarations for video functionality
+void init_video_system();
+int play_video(const char* filepath, int autoplay, int loop);
+int stop_video(const char* filepath);
+int pause_video(const char* filepath);
+int resume_video(const char* filepath);
+int is_video_playing(const char* filepath);
+int update_video_texture(const char* filepath, GLuint texture_id);
+int get_video_dimensions(const char* filepath, int* width, int* height);
+void cleanup_video();
+int are_any_videos_playing();
+
+// Forward declarations for inline CHTML functionality
+char* load_chtml_from_file(const char* filename);
+int add_chtml_to_dom(const char* chtml_content);
+int remove_chtml_from_dom(int start_index, int count);
+int parse_inline_chtml(const char* chtml_content, int parent_element_index);
+int createWindow(const char* title, const char* chtmlContent, int width, int height);
+int load_chtml_file_to_window(const char* filename, int width, int height);
+void update_inline_elements();
 
 // Structure to store module paths from CHTML file
 typedef struct {
@@ -537,6 +861,9 @@ int is_page_loaded(const char* filename) {
 // Global variables to store window dimensions
 int window_width = 800;
 int window_height = 600;
+
+// Flag to indicate when display should be refreshed after DOM updates
+int display_needs_refresh = 0;
 
 // Camera-related variables
 static int cam_fd = -1;
@@ -1197,6 +1524,11 @@ void parse_chtml(const char* filename) {
         elements[num_elements].dir_entry_selected = -1;
         elements[num_elements].href[0] = '\0'; // Initialize href to empty string
         elements[num_elements].z_level = 0;    // Initialize z-level to default (0)
+        // Initialize image-specific properties
+        elements[num_elements].image_src[0] = '\0';    // Initialize image source to empty string
+        elements[num_elements].texture_id = 0;         // Initialize texture ID to 0
+        elements[num_elements].texture_loaded = 0;     // Initialize texture loaded flag to 0
+        elements[num_elements].texture_loading = 0;    // Initialize texture loading flag to 0
         
         // Initialize flex sizing attributes
         elements[num_elements].width.value = 0;
@@ -1346,6 +1678,48 @@ void parse_chtml(const char* filename) {
                     // Store class in a temporary field, or use it for styling
                 }
             }
+            else if (strcmp(attr_name, "src") == 0) {
+                // For image elements, store the source path
+                if (strcmp(elements[num_elements].type, "img") == 0 || 
+                    strcmp(elements[num_elements].type, "image") == 0) {
+                    strncpy(elements[num_elements].image_src, attr_value, 511);
+                    elements[num_elements].image_src[511] = '\0'; // Ensure null termination
+                    printf("Parsed image source: %s\n", elements[num_elements].image_src);
+            // Initialize the texture loading flag for this new image element
+            elements[num_elements].texture_loading = 0;
+                }
+                // For audio elements, store the source path
+                else if (strcmp(elements[num_elements].type, "audio") == 0) {
+                    // For audio elements, we'll store the source in a new field
+                    strncpy(elements[num_elements].image_src, attr_value, 511); // Reusing image_src field for audio path
+                    elements[num_elements].image_src[511] = '\0'; // Ensure null termination
+                    printf("Parsed audio source: %s\n", elements[num_elements].image_src);
+                }
+                // For video elements, store the source path
+                else if (strcmp(elements[num_elements].type, "video") == 0) {
+                    strncpy(elements[num_elements].video_src, attr_value, 511);
+                    elements[num_elements].video_src[511] = '\0'; // Ensure null termination
+                    printf("Parsed video source: %s\n", elements[num_elements].video_src);
+                }
+            }
+            else if (strcmp(attr_name, "autoplay") == 0) {
+                if (strcmp(elements[num_elements].type, "video") == 0) {
+                    if (strcmp(attr_value, "true") == 0 || strcmp(attr_value, "1") == 0) {
+                        elements[num_elements].video_autoplay = 1;
+                    } else {
+                        elements[num_elements].video_autoplay = 0;
+                    }
+                }
+            }
+            else if (strcmp(attr_name, "loop") == 0) {
+                if (strcmp(elements[num_elements].type, "video") == 0) {
+                    if (strcmp(attr_value, "true") == 0 || strcmp(attr_value, "1") == 0) {
+                        elements[num_elements].video_loop = 1;
+                    } else {
+                        elements[num_elements].video_loop = 0;
+                    }
+                }
+            }
             else if (strcmp(attr_name, "z_level") == 0 || strcmp(attr_name, "zlevel") == 0) {
                 int level = atoi(attr_value);
                 // Clamp the z-level to valid range 0-99
@@ -1367,6 +1741,11 @@ void parse_chtml(const char* filename) {
         }
 
         if (strcmp(tag_name, "panel") == 0) {
+            stack_top++;
+            parent_stack[stack_top] = num_elements;
+        }
+        else if (strcmp(tag_name, "img") == 0 || strcmp(tag_name, "image") == 0) {
+            // Image elements can contain other elements (like text overlays), so add to stack
             stack_top++;
             parent_stack[stack_top] = num_elements;
         }
@@ -1427,6 +1806,21 @@ void parse_chtml(const char* filename) {
                 }
             }
         }
+        else if (strcmp(tag_name, "audio") == 0) {
+            // Audio elements should have play/stop buttons by default
+            // Add to the stack so other elements can be contained within it if needed
+            stack_top++;
+            parent_stack[stack_top] = num_elements;
+        }
+        else if (strcmp(tag_name, "video") == 0) {
+            // Video elements - initialize video-specific properties
+            elements[num_elements].video_loaded = 0;
+            elements[num_elements].video_playing = 0;
+            elements[num_elements].video_autoplay = 0;
+            elements[num_elements].video_loop = 0;
+            stack_top++;
+            parent_stack[stack_top] = num_elements;
+        }
         else if (strcmp(tag_name, "a") == 0) {
             // Handle anchor tags with href attribute for navigation
             // This element will be treated as a special text element that can be clicked
@@ -1447,6 +1841,8 @@ void parse_chtml(const char* filename) {
 void init_view(const char* filename) {
     init_freetype();  // Initialize FreeType for emoji rendering
     init_emoji_cache();  // Initialize emoji texture cache
+    load_gl_pointers();  // Load OpenGL function pointers for texture operations
+    init_texture_cache();  // Initialize texture cache
     
     // Initialize content manager if not already initialized
     if (content_manager.num_pages_loaded == 0) {
@@ -1692,9 +2088,12 @@ void draw_element(UIElement* el) {
     int parent_x = 0;
     int parent_y = 0;
 
-    if (el->parent != -1) {
-        parent_x = elements[el->parent].x;
-        parent_y = elements[el->parent].y;
+    // Accumulate all parent positions (not just immediate parent)
+    int current_parent = el->parent;
+    while (current_parent != -1) {
+        parent_x += elements[current_parent].x;
+        parent_y += elements[current_parent].y;
+        current_parent = elements[current_parent].parent;
     }
 
     int abs_x = parent_x + el->calculated_x;
@@ -1879,6 +2278,402 @@ void draw_element(UIElement* el) {
         glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
         glVertex2i(abs_x, abs_y + el->calculated_height);
         glEnd();
+    } else if (strcmp(el->type, "audio") == 0) {
+        // Draw audio player controls (play/stop buttons)
+        // Draw a simple rectangular background for the audio player
+        glColor4f(0.4f, 0.4f, 0.4f, 1.0f); // Dark gray background
+        glBegin(GL_QUADS);
+        glVertex2i(abs_x, abs_y);
+        glVertex2i(abs_x + el->calculated_width, abs_y);
+        glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+        glVertex2i(abs_x, abs_y + el->calculated_height);
+        glEnd();
+        
+        // Draw a label indicating this is an audio file
+        glColor4f(1.0f, 1.0f, 1.0f, 1.0f); // White text
+        int text_offset_x = 5;
+        int text_offset_y = 15;
+        glRasterPos2i(abs_x + text_offset_x, abs_y + text_offset_y);
+        const char* audio_label = "Audio: ";
+        for (const char* c = audio_label; *c != '\0'; c++) {
+            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *c);
+        }
+        
+        // Draw just the filename from the path
+        const char* filename_start = strrchr(el->image_src, '/');
+        if (filename_start == NULL) {
+            filename_start = el->image_src;
+        } else {
+            filename_start++; // Skip the slash
+        }
+        for (const char* c = filename_start; *c != '\0'; c++) {
+            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *c);
+        }
+        
+        // Draw play/stop buttons
+        int button_width = 40;
+        int button_height = 20;
+        int button_y = abs_y + el->calculated_height - button_height - 5;
+        
+        // Play button
+        glColor4f(0.2f, 0.6f, 0.2f, 1.0f); // Green for play button
+        glBegin(GL_QUADS);
+        glVertex2i(abs_x + 10, button_y);
+        glVertex2i(abs_x + 10 + button_width, button_y);
+        glVertex2i(abs_x + 10 + button_width, button_y + button_height);
+        glVertex2i(abs_x + 10, button_y + button_height);
+        glEnd();
+        
+        glColor4f(1.0f, 1.0f, 1.0f, 1.0f); // White text
+        glRasterPos2i(abs_x + 15, button_y + 15);
+        const char* play_label = "PLAY";
+        for (const char* c = play_label; *c != '\0'; c++) {
+            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_10, *c);
+        }
+        
+        // Stop button
+        glColor4f(0.6f, 0.2f, 0.2f, 1.0f); // Red for stop button
+        glBegin(GL_QUADS);
+        glVertex2i(abs_x + 10 + button_width + 10, button_y);
+        glVertex2i(abs_x + 10 + button_width + 10 + button_width, button_y);
+        glVertex2i(abs_x + 10 + button_width + 10 + button_width, button_y + button_height);
+        glVertex2i(abs_x + 10 + button_width + 10, button_y + button_height);
+        glEnd();
+        
+        glColor4f(1.0f, 1.0f, 1.0f, 1.0f); // White text
+        glRasterPos2i(abs_x + 15 + button_width + 10, button_y + 15);
+        const char* stop_label = "STOP";
+        for (const char* c = stop_label; *c != '\0'; c++) {
+            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_10, *c);
+        }
+    } else if (strcmp(el->type, "img") == 0 || strcmp(el->type, "image") == 0) {
+        // Render image element with texture
+        if (el->image_src[0] != '\0') { // Check if image source is provided
+            // Try to load texture if not already loaded, but do it once to avoid blocking
+            if (!el->texture_loaded && !el->texture_loading && el->image_src[0] != '\0') {
+                // Mark as loading to prevent multiple attempts
+                el->texture_loading = 1;
+                el->texture_id = load_texture_from_file(el->image_src);
+                if (el->texture_id != 0) {
+                    el->texture_loaded = 1;
+                    printf("Loaded image texture for element: %s\n", el->image_src);
+                }
+                // Even if loading fails, we've tried now, so don't try again
+                el->texture_loading = 0;
+            }
+            
+            // Render image if texture is loaded
+            if (el->texture_loaded && el->texture_id != 0) {
+                // Save the current OpenGL state to prevent interfering with UI detection
+                glPushAttrib(GL_ENABLE_BIT | GL_TEXTURE_BIT | GL_COLOR_BUFFER_BIT);
+                
+                // Enable texture and blending
+                glEnable(GL_TEXTURE_2D);
+                glEnable(GL_BLEND);
+                glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+                
+                // Bind the texture
+                glBindTexture(GL_TEXTURE_2D, el->texture_id);
+                
+                // Set texture parameters for proper rendering (same as original implementation)
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                
+                // Draw a quad with the texture mapped onto it
+                glColor4f(1.0f, 1.0f, 1.0f, el->alpha); // Use alpha from element
+                glBegin(GL_QUADS);
+                    // Proper texture coordinate mapping for flipped images (due to stbi_set_flip_vertically_on_load)
+                    // Since static images are flipped by stb_image, original top-left content is now at (0,0) in texture
+                    glTexCoord2f(0.0f, 0.0f); glVertex2f((float)abs_x, (float)(abs_y + el->calculated_height));           // Bottom-left tex (orig. top-left) → top-left screen
+                    glTexCoord2f(1.0f, 0.0f); glVertex2f((float)(abs_x + el->calculated_width), (float)(abs_y + el->calculated_height)); // Bottom-right tex (orig. top-right) → top-right screen
+                    glTexCoord2f(1.0f, 1.0f); glVertex2f((float)(abs_x + el->calculated_width), (float)abs_y);             // Top-right tex (orig. bottom-right) → bottom-right screen
+                    glTexCoord2f(0.0f, 1.0f); glVertex2f((float)abs_x, (float)abs_y);                           // Top-left tex (orig. bottom-left) → bottom-left screen
+                glEnd();
+                
+                // Restore the previous OpenGL state
+                glPopAttrib();
+            } else {
+                // Fallback: draw a placeholder rectangle for image if texture not loaded
+                glColor4f(0.8f, 0.8f, 0.8f, 0.5f); // Light gray with transparency as placeholder
+                glBegin(GL_QUADS);
+                glVertex2i(abs_x, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+                glVertex2i(abs_x, abs_y + el->calculated_height);
+                glEnd();
+                
+                // Draw a border around the placeholder
+                glColor4f(0.5f, 0.5f, 0.5f, 1.0f); // Dark gray border
+                glBegin(GL_LINE_LOOP);
+                glVertex2i(abs_x, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+                glVertex2i(abs_x, abs_y + el->calculated_height);
+                glEnd();
+                
+                // Draw image path as text if available (truncated if needed)
+                if (strlen(el->image_src) > 0) {
+                    glColor4f(1.0f, 1.0f, 1.0f, 1.0f); // White text
+                    char display_path[64];
+                    if (strlen(el->image_src) > 60) {
+                        strncpy(display_path, el->image_src, 57);
+                        strcpy(display_path + 57, "...");
+                    } else {
+                        strcpy(display_path, el->image_src);
+                    }
+                    
+                    // Center text vertically and horizontally in the image area
+                    int text_width = 0;
+                    for (char* c = display_path; *c != '\0'; c++) {
+                        text_width += glutBitmapWidth(GLUT_BITMAP_HELVETICA_12, *c);
+                    }
+                    
+                    int text_x = abs_x + (el->calculated_width - text_width) / 2;
+                    int text_y = abs_y + el->calculated_height / 2;
+                    
+                    // Adjust y position to align text better vertically
+                    glRasterPos2i(text_x, text_y);
+                    for (char* c = display_path; *c != '\0'; c++) {
+                        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *c);
+                    }
+                }
+            }
+        } else {
+            // If no image source provided, draw a placeholder rectangle
+            glColor4f(0.9f, 0.9f, 0.9f, 0.5f); // Light gray with transparency as placeholder
+            glBegin(GL_QUADS);
+            glVertex2i(abs_x, abs_y);
+            glVertex2i(abs_x + el->calculated_width, abs_y);
+            glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+            glVertex2i(abs_x, abs_y + el->calculated_height);
+            glEnd();
+        }
+    } else if (strcmp(el->type, "video") == 0) {
+        // Render video element with texture - stripped down version focusing on basic texture mapping
+        if (el->video_src[0] != '\0') { // Check if video source is provided
+            // Initialize video if not already loaded
+            if (!el->video_loaded && el->video_src[0] != '\0') {
+                // Initialize video texture - load a placeholder texture first
+                if (el->texture_id == 0) {
+                    glGenTextures(1, (GLuint*)&el->texture_id);
+                }
+                
+                // Try to load the video file if not already loaded
+                // This is a simplified implementation - in a real app, you'd manage video loading properly
+                el->video_loaded = 1;
+                printf("Loaded video element: %s\n", el->video_src);
+                
+                // Update video texture with a single frame for preview on load
+                if (el->texture_id != 0) {
+                    int result = update_video_texture(el->video_src, el->texture_id);
+                    if (result == 0) {
+                        // If update_video_texture failed on first load, try to get a single frame for preview
+                        int video_width, video_height;
+                        if (get_video_dimensions(el->video_src, &video_width, &video_height) == 1) {
+                            // We have video dimensions, try to extract a single frame for preview
+                            // For now, we'll create a solid color placeholder that matches video aspect ratio
+                            unsigned char *temp_texture = malloc(video_width * video_height * 3);
+                            
+                            // Create a neutral gray preview frame
+                            for (int y = 0; y < video_height; y++) {
+                                for (int x = 0; x < video_width; x++) {
+                                    int idx = (y * video_width + x) * 3;
+                                    temp_texture[idx] = 128;     // R
+                                    temp_texture[idx + 1] = 128; // G
+                                    temp_texture[idx + 2] = 128; // B
+                                }
+                            }
+                            
+                            // Bind and update the texture
+                            glBindTexture(GL_TEXTURE_2D, el->texture_id);
+                            glPixelStorei(GL_UNPACK_ALIGNMENT, 1);  // Prevent row alignment issues
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, video_width, video_height, 0, GL_RGB, GL_UNSIGNED_BYTE, temp_texture);
+                            
+                            free(temp_texture);
+                        }
+                    }
+                }
+                
+                // Start video playback if autoplay is set
+                if (el->video_autoplay && !el->video_playing) {
+                    // In a real implementation, we'd call play_video here
+                    el->video_playing = 1;
+                    printf("Starting autoplay for video: %s\n", el->video_src);
+                }
+            }
+            
+            // Update video texture with current frame
+            if (el->video_loaded && el->texture_id != 0) {
+                // Try to update the video texture with the current frame from the video
+                if (strlen(el->video_src) > 0) {
+                    int result = update_video_texture(el->video_src, el->texture_id);
+                    if (result == 0) {
+                        // If update_video_texture failed on first load, try to get a single frame for preview
+                        // Generate a single frame preview on load instead of a moving pattern
+                        int video_width, video_height;
+                        if (get_video_dimensions(el->video_src, &video_width, &video_height) == 1) {
+                            // We have video dimensions, try to extract a single frame for preview
+                            // For now, we'll create a solid color placeholder that matches video aspect ratio
+                            unsigned char *temp_texture = malloc(video_width * video_height * 3);
+                            
+                            // Create a gradient pattern for the preview that won't interfere with video
+                            for (int y = 0; y < video_height; y++) {
+                                for (int x = 0; x < video_width; x++) {
+                                    int idx = (y * video_width + x) * 3;
+                                    // Create a subtle gradient
+                                    temp_texture[idx] = 30;     // R
+                                    temp_texture[idx + 1] = 30; // G
+                                    temp_texture[idx + 2] = 40; // B
+                                }
+                            }
+                            
+                            // Bind and update the texture
+                            glBindTexture(GL_TEXTURE_2D, el->texture_id);
+                            glPixelStorei(GL_UNPACK_ALIGNMENT, 1);  // Prevent row alignment issues
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, video_width, video_height, 0, GL_RGB, GL_UNSIGNED_BYTE, temp_texture);
+                            
+                            free(temp_texture);
+                        } else {
+                            // Fallback: create a basic placeholder texture if dimensions unavailable
+                            int width = el->calculated_width;
+                            int height = el->calculated_height;
+                            unsigned char *temp_texture = malloc(width * height * 3);
+                            
+                            for (int y = 0; y < height; y++) {
+                                for (int x = 0; x < width; x++) {
+                                    int idx = (y * width + x) * 3;
+                                    temp_texture[idx] = 30;     // R
+                                    temp_texture[idx + 1] = 30; // G 
+                                    temp_texture[idx + 2] = 40; // B
+                                }
+                            }
+                            
+                            // Bind and update the texture
+                            glBindTexture(GL_TEXTURE_2D, el->texture_id);
+                            glPixelStorei(GL_UNPACK_ALIGNMENT, 1);  // Prevent row alignment issues
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, temp_texture);
+                            
+                            free(temp_texture);
+                        }
+                    }
+                }
+                
+                // Save the current OpenGL state to prevent interfering with UI detection
+                glPushAttrib(GL_ENABLE_BIT | GL_TEXTURE_BIT | GL_COLOR_BUFFER_BIT);
+                
+                // Enable texture and blending
+                glEnable(GL_TEXTURE_2D);
+                glEnable(GL_BLEND);
+                glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+                
+                // Bind the texture
+                glBindTexture(GL_TEXTURE_2D, el->texture_id);
+                
+                // Set texture parameters for proper rendering
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                
+                // Draw video with FIXED texture coordinate mapping - ignore all complex positioning
+                glColor4f(1.0f, 1.0f, 1.0f, el->alpha); // Use alpha from element
+
+                // Use BASIC rectangle positioning - ignore aspect ratio for debugging
+                float basic_x = (float)abs_x;
+                float basic_y = (float)abs_y;
+                float basic_width = (float)el->calculated_width;
+                float basic_height = (float)el->calculated_height;
+                
+                // FLIPPED MAPPING: Invert Y-coordinate to correct for top-down video frames.
+                glBegin(GL_QUADS);
+                glTexCoord2f(0.0f, 1.0f); glVertex2f(basic_x, basic_y);                           // Bottom-left Quad -> Bottom-Left Tex
+                glTexCoord2f(1.0f, 1.0f); glVertex2f(basic_x + basic_width, basic_y);             // Bottom-right Quad -> Bottom-Right Tex
+                glTexCoord2f(1.0f, 0.0f); glVertex2f(basic_x + basic_width, basic_y + basic_height); // Top-right Quad -> Top-Right Tex
+                glTexCoord2f(0.0f, 0.0f); glVertex2f(basic_x, basic_y + basic_height);           // Top-left Quad -> Top-Left Tex
+                glEnd();
+                
+                // Restore the previous OpenGL state
+                glPopAttrib();
+            } else {
+                // Fallback: draw a placeholder rectangle for video if not loaded
+                glColor4f(0.1f, 0.1f, 0.1f, 1.0f); // Dark gray background
+                glBegin(GL_QUADS);
+                glVertex2i(abs_x, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+                glVertex2i(abs_x, abs_y + el->calculated_height);
+                glEnd();
+                
+                // Draw a border around the placeholder
+                glColor4f(0.5f, 0.5f, 0.5f, 1.0f); // Gray border
+                glBegin(GL_LINE_LOOP);
+                glVertex2i(abs_x, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+                glVertex2i(abs_x, abs_y + el->calculated_height);
+                glEnd();
+                
+                // Draw video path as text if available
+                if (strlen(el->video_src) > 0) {
+                    glColor4f(1.0f, 1.0f, 1.0f, 1.0f); // White text
+                    char display_path[64];
+                    if (strlen(el->video_src) > 60) {
+                        strncpy(display_path, el->video_src, 57);
+                        strcpy(display_path + 57, "...");
+                    } else {
+                        strcpy(display_path, el->video_src);
+                    }
+                    
+                    // Center text vertically and horizontally in the video area
+                    int text_width = 0;
+                    for (char* c = display_path; *c != '\0'; c++) {
+                        text_width += glutBitmapWidth(GLUT_BITMAP_HELVETICA_12, *c);
+                    }
+                    
+                    int text_x = abs_x + (el->calculated_width - text_width) / 2;
+                    int text_y = abs_y + el->calculated_height / 2;
+                    
+                    // Adjust y position to align text better vertically
+                    glRasterPos2i(text_x, text_y);
+                    for (char* c = display_path; *c != '\0'; c++) {
+                        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *c);
+                    }
+                }
+                
+                // Draw "VIDEO" label
+                glColor4f(1.0f, 0.0f, 0.0f, 1.0f); // Red text for label
+                int label_x = abs_x + (el->calculated_width - glutBitmapWidth(GLUT_BITMAP_HELVETICA_18, 'V')*5) / 2;
+                int label_y = abs_y + el->calculated_height / 2 + 20;
+                glRasterPos2i(label_x, label_y);
+                const char* video_label = "VIDEO";
+                for (const char* c = video_label; *c != '\0'; c++) {
+                    glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *c);
+                }
+            }
+        } else {
+            // If no video source provided, draw a placeholder rectangle
+            glColor4f(0.2f, 0.2f, 0.2f, 0.5f); // Dark gray with transparency as placeholder
+            glBegin(GL_QUADS);
+            glVertex2i(abs_x, abs_y);
+            glVertex2i(abs_x + el->calculated_width, abs_y);
+            glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+            glVertex2i(abs_x, abs_y + el->calculated_height);
+            glEnd();
+        }
     } else if (strcmp(el->type, "header") == 0 || strcmp(el->type, "button") == 0 || strcmp(el->type, "panel") == 0 || strcmp(el->type, "checkbox") == 0 || strcmp(el->type, "slider") == 0) {
         if (strcmp(el->type, "checkbox") == 0) {
             glColor4f(0.8f, 0.8f, 0.8f, 1.0f); // Light background for checkbox square
@@ -2662,6 +3457,24 @@ void get_window_properties(int* x, int* y, int* width, int* height, char* title,
 }
 
 void cleanup_view() {
+    // Clean up any loaded textures to prevent memory leaks
+    for (int i = 0; i < num_elements; i++) {
+        if ((strcmp(elements[i].type, "img") == 0 || strcmp(elements[i].type, "image") == 0) && 
+            elements[i].texture_loaded && elements[i].texture_id != 0) {
+            glDeleteTextures(1, (GLuint*)&elements[i].texture_id);
+            elements[i].texture_id = 0;
+            elements[i].texture_loaded = 0;
+            printf("Cleaned up texture for image element: %s\n", elements[i].image_src);
+        }
+        // Also clean up video textures
+        else if (strcmp(elements[i].type, "video") == 0 && 
+                 elements[i].video_loaded && elements[i].texture_id != 0) {
+            glDeleteTextures(1, (GLuint*)&elements[i].texture_id);
+            elements[i].texture_id = 0;
+            printf("Cleaned up texture for video element: %s\n", elements[i].video_src);
+        }
+    }
+    
     // Reset elements array
     for (int i = 0; i < MAX_ELEMENTS; i++) {
         memset(&elements[i], 0, sizeof(UIElement));
@@ -2880,12 +3693,12 @@ void canvas_render_camera(int x, int y, int width, int height) {
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, cam_width, cam_height, 0, 
                          GL_RGBA, GL_UNSIGNED_BYTE, cam_rgb_data);
             
-            // Draw the textured quad with proper scaling and offset
+            // FLIPPED MAPPING: Invert Y-coordinate to correct for top-down camera frames.
             glBegin(GL_QUADS);
-            glTexCoord2f(0.0, 0.0); glVertex2f(offset_x, offset_y + height * scale_y);  // Top-left of texture -> top-left of quad
-            glTexCoord2f(1.0, 0.0); glVertex2f(offset_x + width * scale_x, offset_y + height * scale_y);  // Top-right of texture -> top-right of quad
-            glTexCoord2f(1.0, 1.0); glVertex2f(offset_x + width * scale_x, offset_y);  // Bottom-right of texture -> bottom-right of quad
-            glTexCoord2f(0.0, 1.0); glVertex2f(offset_x, offset_y);  // Bottom-left of texture -> bottom-left of quad
+            glTexCoord2f(0.0f, 1.0f); glVertex2f(offset_x, offset_y);
+            glTexCoord2f(1.0f, 1.0f); glVertex2f(offset_x + width * scale_x, offset_y);
+            glTexCoord2f(1.0f, 0.0f); glVertex2f(offset_x + width * scale_x, offset_y + height * scale_y);
+            glTexCoord2f(0.0f, 0.0f); glVertex2f(offset_x, offset_y + height * scale_y);
             glEnd();
             
             // Clean up texture
@@ -2915,3 +3728,262 @@ void canvas_render_camera(int x, int y, int width, int height) {
         }
     }
 }
+
+
+// Function to parse and add inline CHTML content to the DOM
+int parse_inline_chtml(const char* chtml_content, int parent_element_index) {
+    if (!chtml_content) return 0;
+    
+    // Create a temporary file to use the existing parse_chtml function
+    FILE* temp_file = fopen("temp_inline.chtml", "w");
+    if (!temp_file) {
+        printf("Error: Could not create temporary file for inline CHTML parsing\n");
+        return 0;
+    }
+    
+    fprintf(temp_file, "%s", chtml_content);
+    fclose(temp_file);
+    
+    // Store the current number of elements to know where to start adding new ones
+    int original_num_elements = num_elements;
+    
+    // Parse the temporary file using the existing function
+    parse_chtml("temp_inline.chtml");
+    
+    // The new elements have been added to the elements array
+    int new_elements_added = num_elements - original_num_elements;
+    
+    // Update parent indices for newly added elements if a parent is specified
+    if (parent_element_index >= 0 && parent_element_index < MAX_ELEMENTS) {
+        for (int i = original_num_elements; i < num_elements; i++) {
+            elements[i].parent = parent_element_index;
+        }
+    }
+    
+    // Clean up the temporary file
+    remove("temp_inline.chtml");
+    
+    printf("Added %d new elements from inline CHTML\n", new_elements_added);
+    
+    return new_elements_added;
+}
+
+
+// Function to add CHTML content to the DOM
+int add_chtml_to_dom(const char* chtml_content) {
+    if (!chtml_content) return 0;
+    
+    int original_count = num_elements;
+    int added = parse_inline_chtml(chtml_content, -1); // No parent specified
+    
+    // If new elements were added, set flag to refresh display
+    if (added > 0) {
+        display_needs_refresh = 1;
+    }
+    
+    return added;
+}
+
+// Function to remove elements from the DOM
+int remove_chtml_from_dom(int start_index, int count) {
+    if (start_index < 0 || start_index >= num_elements || count <= 0) {
+        return 0;
+    }
+    
+    // Make sure we don't try to remove more elements than exist
+    if (start_index + count > num_elements) {
+        count = num_elements - start_index;
+    }
+    
+    // Shift elements after the removed section to fill the gap
+    for (int i = start_index; i < num_elements - count; i++) {
+        elements[i] = elements[i + count];
+    }
+    
+    // Update the element count
+    num_elements -= count;
+    
+    // Adjust parent indices for elements that were shifted
+    for (int i = 0; i < num_elements; i++) {
+        if (elements[i].parent >= start_index + count) {
+            elements[i].parent -= count;
+        } else if (elements[i].parent >= start_index) {
+            // Parent was removed, set to -1 (no parent)
+            elements[i].parent = -1;
+        }
+    }
+    
+    printf("Removed %d elements from DOM starting at index %d\n", count, start_index);
+    
+    return count;
+}
+
+// Function to load CHTML from file
+char* load_chtml_from_file(const char* filename) {
+    FILE* file = fopen(filename, "r");
+    if (!file) {
+        printf("Error: Could not open CHTML file: %s\n", filename);
+        return NULL;
+    }
+    
+    // Get file size
+    fseek(file, 0, SEEK_END);
+    long file_size = ftell(file);
+    fseek(file, 0, SEEK_SET);
+    
+    // Allocate memory for content
+    char* content = (char*)malloc(file_size + 1);
+    if (!content) {
+        printf("Error: Could not allocate memory for CHTML content from file: %s\n", filename);
+        fclose(file);
+        return NULL;
+    }
+    
+    // Read file contents
+    size_t bytes_read = fread(content, 1, file_size, file);
+    content[bytes_read] = '\0';  // Null-terminate
+    
+    fclose(file);
+    
+    return content;
+}
+
+// Function to create a window/container for inline CHTML
+int createWindow(const char* title, const char* chtmlContent, int width, int height) {
+    if (num_elements >= MAX_ELEMENTS) {
+        printf("Error: Cannot create window, maximum elements reached\n");
+        return -1;
+    }
+    
+    // Create a panel element to act as the window container
+    int window_index = num_elements;
+    strcpy(elements[window_index].type, "panel");
+    strcpy(elements[window_index].id, "inline_window");
+    strcpy(elements[window_index].label, title);
+    elements[window_index].x = 100;  // Default position
+    elements[window_index].y = 100;  // Default position
+    elements[window_index].width.value = width;
+    elements[window_index].width.unit = FLEX_UNIT_PIXEL;
+    elements[window_index].height.value = height;
+    elements[window_index].height.unit = FLEX_UNIT_PIXEL;
+    elements[window_index].calculated_width = width;
+    elements[window_index].calculated_height = height;
+    elements[window_index].color[0] = 0.2f;  // Dark gray background
+    elements[window_index].color[1] = 0.2f;
+    elements[window_index].color[2] = 0.2f;
+    elements[window_index].alpha = 0.9f;
+    elements[window_index].parent = -1;  // Top-level element
+    elements[window_index].is_active = 0;
+    elements[window_index].is_checked = 0;
+    elements[window_index].slider_value = 0;
+    elements[window_index].slider_min = 0;
+    elements[window_index].slider_max = 100;
+    elements[window_index].slider_step = 1;
+    elements[window_index].canvas_initialized = 0;
+    elements[window_index].canvas_render_func = NULL;
+    strcpy(elements[window_index].view_mode, "2d");
+    strcpy(elements[window_index].onClick, "");
+    elements[window_index].menu_items_count = 0;
+    elements[window_index].is_open = 0;
+    strcpy(elements[window_index].dir_path, ".");
+    elements[window_index].dir_entry_count = 0;
+    elements[window_index].dir_entry_selected = -1;
+    strcpy(elements[window_index].href, "");
+    elements[window_index].z_level = 10;  // Higher z-level for windows
+    
+    // Initialize flex sizing attributes
+    elements[window_index].calculated_x = 0;
+    elements[window_index].calculated_y = 0;
+    
+    num_elements++;
+    
+    // Now parse and add the CHTML content as children of this window
+    if (chtmlContent) {
+        // Check if chtmlContent is a file path by checking for .chtml extension
+        if (strstr(chtmlContent, ".chtml") != NULL) {
+            // Load from file
+            char* file_content = load_chtml_from_file(chtmlContent);
+            if (file_content) {
+                // Parse the loaded CHTML content and add as children of the window
+                int original_num_elements = num_elements;
+                parse_inline_chtml(file_content, window_index);
+                
+                // Preload textures for any image elements that were added
+                for (int i = original_num_elements; i < num_elements; i++) {
+                    if ((strcmp(elements[i].type, "img") == 0 || strcmp(elements[i].type, "image") == 0) && 
+                        strlen(elements[i].image_src) > 0) {
+                        printf("Loading image for inline element: %s\n", elements[i].image_src);
+                        elements[i].texture_id = load_texture_from_file(elements[i].image_src);
+                        if (elements[i].texture_id != 0) {
+                            elements[i].texture_loaded = 1;
+                            elements[i].texture_loading = 0;
+                        } else {
+                            elements[i].texture_loading = 0; // Mark as not loading if failed
+                        }
+                    }
+                }
+                
+                printf("Created window '%s' with %d child elements from file: %s\n", 
+                       title, num_elements - original_num_elements, chtmlContent);
+                
+                free(file_content); // Free the loaded content
+            } else {
+                printf("Failed to load CHTML from file: %s\n", chtmlContent);
+            }
+        } else {
+            // Parse as inline content string
+            int original_num_elements = num_elements;
+            parse_inline_chtml(chtmlContent, window_index);
+            
+            // Preload textures for any image elements that were added
+            for (int i = original_num_elements; i < num_elements; i++) {
+                if ((strcmp(elements[i].type, "img") == 0 || strcmp(elements[i].type, "image") == 0) && 
+                    strlen(elements[i].image_src) > 0) {
+                    printf("Loading image for inline element: %s\n", elements[i].image_src);
+                    elements[i].texture_id = load_texture_from_file(elements[i].image_src);
+                    if (elements[i].texture_id != 0) {
+                        elements[i].texture_loaded = 1;
+                        elements[i].texture_loading = 0;
+                    } else {
+                        elements[i].texture_loading = 0; // Mark as not loading if failed
+                    }
+                }
+            }
+            
+            printf("Created window '%s' with %d child elements from inline content\n", 
+                   title, num_elements - original_num_elements);
+        }
+    }
+    
+    return window_index;
+}
+
+// Function to load and display CHTML file in a new window
+int load_chtml_file_to_window(const char* filename, int width, int height) {
+    if (!filename) return 0;
+    
+    printf("Loading CHTML file: %s to window %dx%d\n", filename, width, height);
+    
+    // Create a window with the loaded content
+    int window_id = createWindow("Loaded Window", filename, width, height);
+    
+    // Set the refresh flag to ensure display gets updated
+    display_needs_refresh = 1;
+    
+    return window_id;
+}
+
+// Function to check if display needs refresh after DOM updates
+int view_needs_refresh() {
+    int needs_refresh = display_needs_refresh;
+    display_needs_refresh = 0; // Reset the flag after checking
+    return needs_refresh;
+}
+
+// Function to update inline elements (to be called periodically)
+void update_inline_elements() {
+    // This function is called periodically to check for new CHTML content
+    // from modules and update the DOM accordingly
+    // For now, this is a placeholder since it's handled in the model's update_model function
+}
+

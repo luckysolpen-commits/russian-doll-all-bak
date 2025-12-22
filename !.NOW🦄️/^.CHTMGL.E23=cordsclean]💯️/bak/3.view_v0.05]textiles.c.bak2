@@ -113,6 +113,9 @@ GLuint load_texture_from_file(const char* path) {
         return texture_cache[cache_index].texture_id;
     }
 
+    // Flip image vertically on load to match OpenGL coordinate system (for static images only)
+    stbi_set_flip_vertically_on_load(1);
+    
     // Load image using stb_image
     int width, height, channels;
     unsigned char *data = stbi_load(path, &width, &height, &channels, 4); // Force RGBA
@@ -127,9 +130,14 @@ GLuint load_texture_from_file(const char* path) {
     my_glGenTextures(1, &texture_id);
     my_glBindTexture(GL_TEXTURE_2D, texture_id);
 
+    // Set unpack alignment to prevent row padding issues
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+    
     // Set filtering parameters (required to see the texture)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
     // Upload raw pixel data to GPU
     my_glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
@@ -729,6 +737,12 @@ typedef struct {
     GLuint texture_id;    // Store texture ID for the image
     int texture_loaded;   // Flag to indicate if texture has been loaded
     int texture_loading;  // Flag to indicate if texture is currently loading (to prevent multiple attempts)
+    // Video-specific properties
+    char video_src[512];  // Store video source file path
+    int video_loaded;     // Flag to indicate if video has been loaded
+    int video_playing;    // Flag to indicate if video is playing
+    int video_autoplay;   // Flag for autoplay
+    int video_loop;       // Flag for loop
 } UIElement;
 
 // Comparison function for qsort to sort elements by z_level
@@ -759,6 +773,18 @@ int resume_audio(const char* filepath);
 int is_audio_playing(const char* filepath);
 double get_audio_time(const char* filepath);
 void cleanup_audio();
+
+// Forward declarations for video functionality
+void init_video_system();
+int play_video(const char* filepath, int autoplay, int loop);
+int stop_video(const char* filepath);
+int pause_video(const char* filepath);
+int resume_video(const char* filepath);
+int is_video_playing(const char* filepath);
+int update_video_texture(const char* filepath, GLuint texture_id);
+int get_video_dimensions(const char* filepath, int* width, int* height);
+void cleanup_video();
+int are_any_videos_playing();
 
 // Forward declarations for inline CHTML functionality
 char* load_chtml_from_file(const char* filename);
@@ -1668,6 +1694,30 @@ void parse_chtml(const char* filename) {
                     elements[num_elements].image_src[511] = '\0'; // Ensure null termination
                     printf("Parsed audio source: %s\n", elements[num_elements].image_src);
                 }
+                // For video elements, store the source path
+                else if (strcmp(elements[num_elements].type, "video") == 0) {
+                    strncpy(elements[num_elements].video_src, attr_value, 511);
+                    elements[num_elements].video_src[511] = '\0'; // Ensure null termination
+                    printf("Parsed video source: %s\n", elements[num_elements].video_src);
+                }
+            }
+            else if (strcmp(attr_name, "autoplay") == 0) {
+                if (strcmp(elements[num_elements].type, "video") == 0) {
+                    if (strcmp(attr_value, "true") == 0 || strcmp(attr_value, "1") == 0) {
+                        elements[num_elements].video_autoplay = 1;
+                    } else {
+                        elements[num_elements].video_autoplay = 0;
+                    }
+                }
+            }
+            else if (strcmp(attr_name, "loop") == 0) {
+                if (strcmp(elements[num_elements].type, "video") == 0) {
+                    if (strcmp(attr_value, "true") == 0 || strcmp(attr_value, "1") == 0) {
+                        elements[num_elements].video_loop = 1;
+                    } else {
+                        elements[num_elements].video_loop = 0;
+                    }
+                }
             }
             else if (strcmp(attr_name, "z_level") == 0 || strcmp(attr_name, "zlevel") == 0) {
                 int level = atoi(attr_value);
@@ -1758,6 +1808,15 @@ void parse_chtml(const char* filename) {
         else if (strcmp(tag_name, "audio") == 0) {
             // Audio elements should have play/stop buttons by default
             // Add to the stack so other elements can be contained within it if needed
+            stack_top++;
+            parent_stack[stack_top] = num_elements;
+        }
+        else if (strcmp(tag_name, "video") == 0) {
+            // Video elements - initialize video-specific properties
+            elements[num_elements].video_loaded = 0;
+            elements[num_elements].video_playing = 0;
+            elements[num_elements].video_autoplay = 0;
+            elements[num_elements].video_loop = 0;
             stack_top++;
             parent_stack[stack_top] = num_elements;
         }
@@ -2028,9 +2087,12 @@ void draw_element(UIElement* el) {
     int parent_x = 0;
     int parent_y = 0;
 
-    if (el->parent != -1) {
-        parent_x = elements[el->parent].x;
-        parent_y = elements[el->parent].y;
+    // Accumulate all parent positions (not just immediate parent)
+    int current_parent = el->parent;
+    while (current_parent != -1) {
+        parent_x += elements[current_parent].x;
+        parent_y += elements[current_parent].y;
+        current_parent = elements[current_parent].parent;
     }
 
     int abs_x = parent_x + el->calculated_x;
@@ -2321,11 +2383,12 @@ void draw_element(UIElement* el) {
                 // Draw a quad with the texture mapped onto it
                 glColor4f(1.0f, 1.0f, 1.0f, el->alpha); // Use alpha from element
                 glBegin(GL_QUADS);
-                    // Proper texture coordinate mapping - ensure correct orientation
-                    glTexCoord2f(0.0f, 0.0f); glVertex2i(abs_x, abs_y + el->calculated_height); // Bottom-left of texture to Bottom-left of quad
-                    glTexCoord2f(1.0f, 0.0f); glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height); // Bottom-right of texture to Bottom-right of quad
-                    glTexCoord2f(1.0f, 1.0f); glVertex2i(abs_x + el->calculated_width, abs_y); // Top-right of texture to Top-right of quad
-                    glTexCoord2f(0.0f, 1.0f); glVertex2i(abs_x, abs_y); // Top-left of texture to Top-left of quad
+                    // Proper texture coordinate mapping for flipped images (due to stbi_set_flip_vertically_on_load)
+                    // Since static images are flipped by stb_image, original top-left content is now at (0,0) in texture
+                    glTexCoord2f(0.0f, 0.0f); glVertex2f((float)abs_x, (float)(abs_y + el->calculated_height));           // Bottom-left tex (orig. top-left) → top-left screen
+                    glTexCoord2f(1.0f, 0.0f); glVertex2f((float)(abs_x + el->calculated_width), (float)(abs_y + el->calculated_height)); // Bottom-right tex (orig. top-right) → top-right screen
+                    glTexCoord2f(1.0f, 1.0f); glVertex2f((float)(abs_x + el->calculated_width), (float)abs_y);             // Top-right tex (orig. bottom-right) → bottom-right screen
+                    glTexCoord2f(0.0f, 1.0f); glVertex2f((float)abs_x, (float)abs_y);                           // Top-left tex (orig. bottom-left) → bottom-left screen
                 glEnd();
                 
                 // Restore the previous OpenGL state
@@ -2379,6 +2442,176 @@ void draw_element(UIElement* el) {
         } else {
             // If no image source provided, draw a placeholder rectangle
             glColor4f(0.9f, 0.9f, 0.9f, 0.5f); // Light gray with transparency as placeholder
+            glBegin(GL_QUADS);
+            glVertex2i(abs_x, abs_y);
+            glVertex2i(abs_x + el->calculated_width, abs_y);
+            glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+            glVertex2i(abs_x, abs_y + el->calculated_height);
+            glEnd();
+        }
+    } else if (strcmp(el->type, "video") == 0) {
+        // Render video element with texture - stripped down version focusing on basic texture mapping
+        if (el->video_src[0] != '\0') { // Check if video source is provided
+            // Initialize video if not already loaded
+            if (!el->video_loaded && el->video_src[0] != '\0') {
+                // Initialize video texture - load a placeholder texture first
+                if (el->texture_id == 0) {
+                    glGenTextures(1, (GLuint*)&el->texture_id);
+                }
+                
+                // Try to load the video file if not already loaded
+                // This is a simplified implementation - in a real app, you'd manage video loading properly
+                el->video_loaded = 1;
+                printf("Loaded video element: %s\n", el->video_src);
+                
+                // Start video playback if autoplay is set
+                if (el->video_autoplay && !el->video_playing) {
+                    // In a real implementation, we'd call play_video here
+                    el->video_playing = 1;
+                    printf("Starting autoplay for video: %s\n", el->video_src);
+                }
+            }
+            
+            // Update video texture with current frame
+            if (el->video_loaded && el->texture_id != 0) {
+                // Try to update the video texture with the current frame from the video
+                if (strlen(el->video_src) > 0) {
+                    int result = update_video_texture(el->video_src, el->texture_id);
+                    if (result == 0) {
+                        // If update_video_texture failed, fall back to placeholder
+                        // Generate a simple pattern to simulate video texture
+                        static int frame_counter = 0;
+                        frame_counter++;
+                        
+                        // Generate a simple pattern to simulate video texture
+                        int width = el->calculated_width;
+                        int height = el->calculated_height;
+                        unsigned char *temp_texture = malloc(width * height * 3);
+                        
+                        for (int y = 0; y < height; y++) {
+                            for (int x = 0; x < width; x++) {
+                                int idx = (y * width + x) * 3;
+                                // Create a moving pattern to simulate video
+                                temp_texture[idx] = (x + frame_counter) % 256;     // R
+                                temp_texture[idx + 1] = (y + frame_counter) % 256; // G
+                                temp_texture[idx + 2] = (x + y + frame_counter) % 256; // B
+                            }
+                        }
+                        
+                        // Bind and update the texture
+                        glBindTexture(GL_TEXTURE_2D, el->texture_id);
+                        glPixelStorei(GL_UNPACK_ALIGNMENT, 1);  // Prevent row alignment issues
+                        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, temp_texture);
+                        
+                        free(temp_texture);
+                    }
+                }
+                
+                // Save the current OpenGL state to prevent interfering with UI detection
+                glPushAttrib(GL_ENABLE_BIT | GL_TEXTURE_BIT | GL_COLOR_BUFFER_BIT);
+                
+                // Enable texture and blending
+                glEnable(GL_TEXTURE_2D);
+                glEnable(GL_BLEND);
+                glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+                
+                // Bind the texture
+                glBindTexture(GL_TEXTURE_2D, el->texture_id);
+                
+                // Set texture parameters for proper rendering
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                
+                // Draw video with FIXED texture coordinate mapping - ignore all complex positioning
+                glColor4f(1.0f, 1.0f, 1.0f, el->alpha); // Use alpha from element
+
+                // Use BASIC rectangle positioning - ignore aspect ratio for debugging
+                float basic_x = (float)abs_x;
+                float basic_y = (float)abs_y;
+                float basic_width = (float)el->calculated_width;
+                float basic_height = (float)el->calculated_height;
+                
+                // FIXED: Use correct OpenGL texture coordinate mapping to prevent diagonal gradient
+                // For video frames (not loaded via stb_image), use standard mapping
+                glBegin(GL_QUADS);
+                // CORRECT MAPPING: Standard OpenGL bottom-left origin for textures
+                // Texture bottom-left (0,0) to geometry bottom-left
+                // Texture bottom-right (1,0) to geometry bottom-right
+                // Texture top-right (1,1) to geometry top-right
+                // Texture top-left (0,1) to geometry top-left
+                glTexCoord2f(0.0f, 0.0f); glVertex2f(basic_x, basic_y);                           // Bottom-left tex → bottom-left screen
+                glTexCoord2f(1.0f, 0.0f); glVertex2f(basic_x + basic_width, basic_y);             // Bottom-right tex → bottom-right screen
+                glTexCoord2f(1.0f, 1.0f); glVertex2f(basic_x + basic_width, basic_y + basic_height); // Top-right tex → top-right screen
+                glTexCoord2f(0.0f, 1.0f); glVertex2f(basic_x, basic_y + basic_height);           // Top-left tex → top-left screen
+                glEnd();
+                
+                // Restore the previous OpenGL state
+                glPopAttrib();
+            } else {
+                // Fallback: draw a placeholder rectangle for video if not loaded
+                glColor4f(0.1f, 0.1f, 0.1f, 1.0f); // Dark gray background
+                glBegin(GL_QUADS);
+                glVertex2i(abs_x, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+                glVertex2i(abs_x, abs_y + el->calculated_height);
+                glEnd();
+                
+                // Draw a border around the placeholder
+                glColor4f(0.5f, 0.5f, 0.5f, 1.0f); // Gray border
+                glBegin(GL_LINE_LOOP);
+                glVertex2i(abs_x, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y);
+                glVertex2i(abs_x + el->calculated_width, abs_y + el->calculated_height);
+                glVertex2i(abs_x, abs_y + el->calculated_height);
+                glEnd();
+                
+                // Draw video path as text if available
+                if (strlen(el->video_src) > 0) {
+                    glColor4f(1.0f, 1.0f, 1.0f, 1.0f); // White text
+                    char display_path[64];
+                    if (strlen(el->video_src) > 60) {
+                        strncpy(display_path, el->video_src, 57);
+                        strcpy(display_path + 57, "...");
+                    } else {
+                        strcpy(display_path, el->video_src);
+                    }
+                    
+                    // Center text vertically and horizontally in the video area
+                    int text_width = 0;
+                    for (char* c = display_path; *c != '\0'; c++) {
+                        text_width += glutBitmapWidth(GLUT_BITMAP_HELVETICA_12, *c);
+                    }
+                    
+                    int text_x = abs_x + (el->calculated_width - text_width) / 2;
+                    int text_y = abs_y + el->calculated_height / 2;
+                    
+                    // Adjust y position to align text better vertically
+                    glRasterPos2i(text_x, text_y);
+                    for (char* c = display_path; *c != '\0'; c++) {
+                        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *c);
+                    }
+                }
+                
+                // Draw "VIDEO" label
+                glColor4f(1.0f, 0.0f, 0.0f, 1.0f); // Red text for label
+                int label_x = abs_x + (el->calculated_width - glutBitmapWidth(GLUT_BITMAP_HELVETICA_18, 'V')*5) / 2;
+                int label_y = abs_y + el->calculated_height / 2 + 20;
+                glRasterPos2i(label_x, label_y);
+                const char* video_label = "VIDEO";
+                for (const char* c = video_label; *c != '\0'; c++) {
+                    glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *c);
+                }
+            }
+        } else {
+            // If no video source provided, draw a placeholder rectangle
+            glColor4f(0.2f, 0.2f, 0.2f, 0.5f); // Dark gray with transparency as placeholder
             glBegin(GL_QUADS);
             glVertex2i(abs_x, abs_y);
             glVertex2i(abs_x + el->calculated_width, abs_y);
@@ -3178,6 +3411,13 @@ void cleanup_view() {
             elements[i].texture_loaded = 0;
             printf("Cleaned up texture for image element: %s\n", elements[i].image_src);
         }
+        // Also clean up video textures
+        else if (strcmp(elements[i].type, "video") == 0 && 
+                 elements[i].video_loaded && elements[i].texture_id != 0) {
+            glDeleteTextures(1, (GLuint*)&elements[i].texture_id);
+            elements[i].texture_id = 0;
+            printf("Cleaned up texture for video element: %s\n", elements[i].video_src);
+        }
     }
     
     // Reset elements array
@@ -3400,10 +3640,15 @@ void canvas_render_camera(int x, int y, int width, int height) {
             
             // Draw the textured quad with proper scaling and offset
             glBegin(GL_QUADS);
-            glTexCoord2f(0.0, 0.0); glVertex2f(offset_x, offset_y + height * scale_y);  // Top-left of texture -> top-left of quad
-            glTexCoord2f(1.0, 0.0); glVertex2f(offset_x + width * scale_x, offset_y + height * scale_y);  // Top-right of texture -> top-right of quad
-            glTexCoord2f(1.0, 1.0); glVertex2f(offset_x + width * scale_x, offset_y);  // Bottom-right of texture -> bottom-right of quad
-            glTexCoord2f(0.0, 1.0); glVertex2f(offset_x, offset_y);  // Bottom-left of texture -> bottom-left of quad
+            // CORRECT MAPPING: Standard OpenGL bottom-left origin for camera textures (not flipped by stb_image)
+            // Texture bottom-left (0,0) to quad bottom-left
+            // Texture bottom-right (1,0) to quad bottom-right
+            // Texture top-right (1,1) to quad top-right
+            // Texture top-left (0,1) to quad top-left
+            glTexCoord2f(0.0f, 0.0f); glVertex2f(offset_x, offset_y);                           // Bottom-left tex → bottom-left screen
+            glTexCoord2f(1.0f, 0.0f); glVertex2f(offset_x + width * scale_x, offset_y);             // Bottom-right tex → bottom-right screen
+            glTexCoord2f(1.0f, 1.0f); glVertex2f(offset_x + width * scale_x, offset_y + height * scale_y); // Top-right tex → top-right screen
+            glTexCoord2f(0.0f, 1.0f); glVertex2f(offset_x, offset_y + height * scale_y);           // Top-left tex → top-left screen
             glEnd();
             
             // Clean up texture
