@@ -1,0 +1,73 @@
+# Blueprint for RV-I: A 1-bit RISC-V Computer
+
+This document outlines the implementation plan for Project RV-I, a 1-bit educational processor built entirely from NAND gates within the HDLb0 emulator.
+
+## 1. Objective
+
+To build and test a functional 1-bit CPU with the following specifications:
+*   **Architecture:** 1-bit datapath.
+*   **Registers:** 4 x 1-bit general-purpose registers (r0-r3).
+*   **Memory:** 16 x 1-bit RAM locations.
+*   **Program Counter (PC):** 4-bit.
+*   **ISA:** NAND, LOAD, STORE, JUMP.
+
+All work, including chip designs, tests, and documentation, will be located in the `@rv-i-32]a0/rv1/` directory.
+
+## 2. HDLb0 Memory Map (Corrected)
+
+**CRITICAL RULE:** General-purpose RAM begins at address 16. Addresses 0-15 are reserved.
+
+*   **RAM[16-19]:** General-purpose registers r0-r3.
+*   **RAM[20-35]:** Main memory mem[0-15].
+*   **RAM[36-39]:** 4-bit Program Counter (PC).
+*   **RAM[40+]:** Reserved for temporary calculations and control signals during chip execution.
+
+## 3. Implementation Plan & Chip Creation Order
+
+For each chip created, we must provide the following accompanying files:
+* `<chip>_TT.txt` - Truth Table documentation showing all possible input/output combinations
+* `<chip>_commands.txt` - Input commands for testing each truth table entry via switches
+* `<chip>_proof.txt` - CLI-tape output proving the chip works for the truth table (output from arg3 when running the chip)
+* See `@playground/d_latch/**` for examples of this documentation format.
+
+We will build and test each component sequentially.
+
+### Step 1: 1-bit Full Adder (`full_adder.hlo`)
+*   **Purpose:** The fundamental component for all arithmetic.
+*   **Logic:** Takes 3 inputs (A, B, Carry-In) and produces 2 outputs (Sum, Carry-Out). It will be constructed from 9 NAND gates.
+*   **Inputs:** A, B, Cin will be mapped to RAM locations for testing.
+*   **Outputs:** Sum and Cout will be written to RAM locations.
+*   **Testing:** Create `full_adder_TT.txt`, `full_adder_commands.txt`, and `full_adder_proof.txt` to verify its truth table.
+
+### Step 2: 4-bit Adder (`adder_4bit.hlo`)
+*   **Purpose:** To increment the 4-bit Program Counter.
+*   **Logic:** Chain four 1-bit Full Adder modules. The Carry-Out of each bit becomes the Carry-In of the next.
+*   **Testing:** Create `adder_4bit_TT.txt`, `adder_4bit_commands.txt`, and `adder_4bit_proof.txt` to verify its functionality for all input combinations.
+
+### Step 3: 4-bit Register (`register_4bit.hlo`)
+*   **Purpose:** To store the state of the Program Counter.
+*   **Logic:** Adapt the verified D-Latch design (`playground/d_latch.hlo`) into a 4-bit wide register with a single clock and a write-enable signal.
+*   **Testing:** Create `register_4bit_TT.txt`, `register_4bit_commands.txt`, and `register_4bit_proof.txt` to verify that it can load and hold a 4-bit value.
+
+### Step 4: Program Counter (`pc.hlo`)
+*   **Purpose:** To create a functional PC that can be incremented.
+*   **Logic:** Combine the 4-bit Register and the 4-bit Adder. The output of the register will feed into the adder, and the adder's output will be the new input for the register.
+*   **Testing:** Create `pc_TT.txt`, `pc_commands.txt`, and `pc_proof.txt` to ensure it increments correctly on each clock cycle.
+
+### Step 5: Data Path Components (Decoders & MUXes)
+*   **Purpose:** To enable reading from and writing to the correct registers and memory locations.
+*   **Chips to Build:**
+    1.  `decoder_2_to_4.hlo`: For the register file write-select.
+    2.  `mux_4_to_1.hlo`: For the register file read-select.
+    3.  `decoder_4_to_16.hlo`: For main memory write-select.
+    4.  `mux_16_to_1.hlo`: For main memory read-select.
+*   **Testing:** Each component will be tested individually with corresponding TT, commands, and proof files to verify its logic.
+
+### Step 6: Assembly & Control Logic
+*   **Register File (`register_file.hlo`):** Combine four 1-bit registers with the 2-to-4 decoder and 4-to-1 MUX.
+*   **Main Memory (`memory.hlo`):** Combine sixteen 1-bit registers with the 4-to-16 decoder and 16-to-1 MUX.
+*   **Instruction Decoder (`instruction_decoder.hlo`):** A combinatorial logic circuit that takes an opcode as input and outputs the appropriate control signals.
+*   **RV-I CPU (`rv1_cpu.hlo`):** The final assembly. This master program will wire together the PC, Register File, Memory, ALU (NAND chip), and Control Unit to execute programs.
+*   **Testing:** Complete with `rv1_cpu_TT.txt`, `rv1_cpu_commands.txt`, and `rv1_cpu_proof.txt` for comprehensive verification.
+
+By following this step-by-step process of building and testing with comprehensive documentation, we will construct the RV-I processor on a solid foundation.

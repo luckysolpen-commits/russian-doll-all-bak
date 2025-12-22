@@ -1,0 +1,107 @@
+# Roadmap: From 1-bit RV-I to 32-bit RISC-V on HDLb0
+
+## 1. Vision and Goals
+
+### Ultimate Goal
+To design and implement a functional 32-bit RISC-V CPU (RV32I) within the HDLb0 hardware emulator, using only NAND logic as the fundamental building block. This will demonstrate a deep understanding of computer architecture from the ground up.
+
+### Immediate Goal: Project RV-I
+To first build **RV-I**, a simplified 1-bit educational computer inspired by the RISC-V architecture. This project will allow us to create, test, and verify all the essential sub-components of a CPU in a manageable 1-bit environment before scaling up.
+
+---
+
+## 2. A Note on Compatibility and Memory
+
+### Compatibility
+To ensure a smooth transition between stages, a core design principle will be **forward and backward compatibility**. The Instruction Set Architecture (ISA) at each stage (RV-I, RV2, RV4, etc.) will be a proper subset of the final RV32I ISA.
+
+### Memory Map
+A critical rule for all designs is that **general-purpose RAM starts at address 16**. Addresses 0-15 are reserved for special emulator functions. All registers, memory, and temporary values MUST be mapped to addresses 16 or higher.
+
+---
+
+## 3. Phase 1: Building the RV-I (1-bit Educational Computer)
+
+### RV-I Architecture Specification:
+*   **Registers:** 4 x 1-bit general-purpose registers (r0-r3).
+*   **Memory:** 16 x 1-bit RAM locations.
+*   **Program Counter (PC):** 4-bit, to address up to 16 instructions.
+*   **Instruction Set (ISA):**
+    1.  `NAND`: Logic operation.
+    2.  `LOAD`: Data transfer from memory to a register.
+    3.  `STORE`: Data transfer from a register to memory.
+    4.  `JUMP`: Control flow modification.
+
+### RV-I Memory Map (Corrected)
+*   **RAM[16-19]:** Registers `r0-r3`.
+*   **RAM[20-35]:** Main Memory `mem[0-15]`.
+*   **RAM[36-39]:** 4-bit Program Counter (PC).
+*   **RAM[40+]:** Reserved for temporary calculations by chips.
+
+### Required Chips & Components for RV-I (To be built from NAND gates)
+(This section remains the same as the initial plan: D-Latch, 4-bit Register, Decoders, MUXes, 1-bit ALU, Full Adder, 4-bit Adder, Instruction Decoder, and Control Unit).
+
+#### A. Foundational Logic:
+*   **NAND Gate:** (Already complete)
+
+#### B. State & Storage:
+*   **D-Latch / 1-bit Register:** (Already complete - `playground/d_latch.hlo`)
+*   **4-bit Register:** For the Program Counter.
+
+#### C. Register File (4x1-bit):
+*   **2-to-4 Decoder:** To select a register for writing.
+*   **4-to-1 Multiplexer (MUX):** To select a register for reading.
+*   **Register File Chip:** The complete, addressable unit.
+
+#### D. Memory (16x1-bit):
+*   **4-to-16 Decoder:** To select a memory location.
+*   **16-to-1 Multiplexer (MUX):** To read from memory.
+*   **RAM Chip:** The complete main memory module.
+
+#### E. Execution & Control:
+*   **1-bit ALU (Arithmetic Logic Unit):** Initially, just a NAND gate.
+*   **1-bit Full Adder:** For incrementing the PC.
+*   **4-bit Adder:** Built from Full Adders, for the PC.
+*   **Instruction Decoder:** To interpret opcodes and generate control signals.
+*   **Control Unit:** The state machine orchestrating the fetch-decode-execute cycle.
+
+---
+
+## 4. Phase 2: Iterative Scaling (RV2, RV4, RV8, RV16)
+
+### Objective
+To incrementally widen the architecture of RV-I. At each step, we will expand the datapath, registers, ALU, and memory interface to the new bit-width. This ensures that a solid, tested foundation is carried forward to the next stage.
+
+### Stages:
+*   **Project RV2 (2-bit):**
+    *   Expand all datapaths to 2 bits.
+    *   Scale register file to be 2 bits wide (e.g., 4x2-bit registers).
+    *   Create a 2-bit ALU. At this stage, we will introduce a proper `ADD` instruction, built from our Full Adder components.
+
+*   **Project RV4 (4-bit):**
+    *   Scale all components to 4 bits.
+    *   The register file might be expanded (e.g., 8x4-bit registers).
+    *   The ALU will be expanded to a 4-bit version.
+
+*   **Project RV8 (8-bit):**
+    *   Scale to 8 bits. This is a significant milestone, aligning with classic microprocessor architectures.
+    *   We will begin to introduce more RV32I instructions into the ALU and control logic (e.g., bitwise `AND`, `OR`, `XOR`).
+    *   Register file will be scaled (e.g., 16x8-bit).
+
+*   **Project RV16 (16-bit):**
+    *   Scale to 16 bits.
+    *   Introduce more complex instructions and addressing modes, moving closer to the full RISC-V specification. The register file size should approach the final goal (e.g., 32x16-bit).
+
+---
+
+## 5. Phase 3: The Final Goal - RV32I (32-bit RISC-V CPU)
+
+Once the 16-bit model is stable, the final step is to scale all components to 32 bits.
+
+*   **Registers:** Implement the full 32x32-bit Register File.
+*   **ALU:** Evolve the 16-bit ALU into a full 32-bit ALU supporting `ADD`, `SUB`, `AND`, `OR`, `XOR`, `SLT`, shifts, and other core RV32I operations. This remains the most significant design challenge.
+*   **Memory:** Adapt the memory interface to handle 32-bit addresses and data widths.
+*   **Control Unit:** Finalize the control unit and instruction decoder to parse all R, I, S, B, U, and J-type instruction formats of the base integer RISC-V specification.
+*   **Branching Logic:** Implement the full set of comparators for conditional branches (`BEQ`, `BNE`, `BLT`, etc.).
+
+By completing the intermediate phases, we will have a solid, tested foundation of components and a deep understanding of the control flow required, making this final leap achievable.

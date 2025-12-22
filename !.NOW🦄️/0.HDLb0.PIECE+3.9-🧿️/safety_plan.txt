@@ -1,0 +1,79 @@
+# HDLb0 Emulator Safety Plan
+
+## Problem
+The HDLb0 emulator can enter infinite loops when running certain programs, consuming excessive CPU resources and potentially crashing the operating system.
+
+## Root Cause
+The emulator executes programs in a continuous loop without resource limits or termination detection, allowing programs with circular logic to run indefinitely.
+
+## Safety Solutions
+
+### 1. Built-in Cycle Limit
+- Implement a maximum iteration counter in the emulator code
+- Default limit: 10,000 cycles per execution session
+- Configurable via command-line parameter: `--max-cycles N`
+
+### 2. Adaptive Throttling
+- Monitor CPU usage during execution
+- If CPU usage exceeds 90% for more than 10 seconds, automatically slow execution
+- Add 50ms delay every 100 cycles when high usage is detected
+- Gradually return to normal speed when usage drops below 70%
+
+### 3. Memory Usage Monitoring
+- Track memory consumption
+- If memory usage increases beyond threshold (e.g., 1GB), pause execution
+- Warn user and provide option to continue or terminate
+
+### 4. Watchdog Timer
+- Implement a timeout mechanism that kills execution after N seconds
+- Default: 30 seconds for automated runs
+- Configurable: `--timeout N` where N is seconds
+
+### 5. Loop Detection Algorithm
+- Track recent instruction sequences
+- Detect repeating patterns in execution
+- Automatically pause and warn user when potential infinite loop is detected
+
+### 6. Resource Control Implementation
+Modify the emulator code to add:
+
+```c
+// In the main execution loop
+static int iteration_counter = 0;
+static int max_iterations = 10000;  // Configurable
+static time_t start_time;
+
+// Check limits during execution
+if (iteration_counter > max_iterations) {
+    printf("Error: Maximum execution cycles exceeded (%d). Terminating.\n", max_iterations);
+    break;
+}
+
+// Add delay for long-running processes
+if (iteration_counter % 1000 == 0) {
+    // Check system resources and apply throttling if needed
+    check_resource_usage();
+}
+```
+
+### 7. Safe Execution Mode
+- Default mode that enables all safety features
+- Optional 'performance mode' that disables safety but warns user
+- Clear documentation about risks of disabling safety features
+
+### 8. Command-line Safety Options
+- `--safe-mode` (default): Enables all safety features
+- `--max-cycles N`: Set maximum execution cycles
+- `--timeout N`: Set execution timeout in seconds
+- `--disable-safety`: Run without safety features (not recommended)
+
+## Implementation Priority
+1. Immediate: Add basic cycle limit and timeout to prevent system crashes
+2. Short-term: Implement adaptive throttling based on system resources
+3. Long-term: Add sophisticated loop detection algorithms
+
+## User Guidelines
+- Always test programs with small input sets first
+- Monitor system resources during execution
+- Use safety options when running untrusted code
+- Keep system's task manager available during long runs

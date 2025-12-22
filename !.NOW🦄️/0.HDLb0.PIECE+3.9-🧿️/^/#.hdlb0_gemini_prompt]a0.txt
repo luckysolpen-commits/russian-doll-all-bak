@@ -1,0 +1,46 @@
+> @0.hdlb0🧿️.☮️16\]pr5\]\#ab\]HALO.c is our hardware emulator,
+  @\#.ram_switch\]AI.bad@ram.hlo is an example "chip/program" the important
+  thing to understand is that our ram starts at address 16, cause the other
+  addresses are already used. we want to make a simple d flipflop that user
+  can use with switch 0 . that simple. @playground/test_clock shows how
+  clock is used. first lets write a !.hdlb0.api document for future prompt
+  of llm so that it understands these fundamentals , then we will make the
+  d flip flop . heres an example of a program runnign with switch :
+
+
+./+x/0.hdlb0🧿️.☮️16\]pr5\]#ab\]HALO.+x \#.ram_switch\]AI.bad@ram.hlo 
+Parsing instruction 0, part 0: 0000000000000000 -> 0 (binary: 0000000000000000)
+Parsing instruction 0, part 1: 0000000000010000 -> 16 (binary: 0000000000010000)
+Parsing instruction 0, part 2: 0000000000000001 -> 1 (binary: 0000000000000001)
+Parsing instruction 0, part 3: 0000000000000011 -> 3 (binary: 0000000000000011)
+Parsing instruction 1, part 0: 0000000000000001 -> 1 (binary: 0000000000000001)
+Parsing instruction 1, part 1: 0000000000000000 -> 0 (binary: 0000000000000000)
+Parsing instruction 1, part 2: 0000000000010000 -> 16 (binary: 0000000000010000)
+Parsing instruction 1, part 3: 0000000000000101 -> 5 (binary: 0000000000000101)
+Initial run:
+
+Clock cycle 1, clock = 1
+Tape contents: 1
+Switches: switch_0 = 0, switch_1 = 0
+Options: '1' flip switch_0, '2' flip switch_1, 's' step, 'r' run, 'q' quit, [Enter] step: 
+
+Clock cycle 2, clock = 0
+Tape contents: 11
+Switches: switch_0 = 0, switch_1 = 0
+Options: '1' flip switch_0, '2' flip switch_1, 's' step, 'r' run, 'q' quit, [Enter] step: 1
+
+Clock cycle 2, clock = 0
+Tape contents: 11
+Switches: switch_0 = 1, switch_1 = 0
+Options: '1' flip switch_0, '2' flip switch_1, 's' step, 'r' run, 'q' quit, [Enter] step: 
+
+Clock cycle 3, clock = 1
+Tape contents: 011
+Switches: switch_0 = 1, switch_1 = 0
+Options: '1' flip switch_0, '2' flip switch_1, 's' step, 'r' run, 'q' quit, [Enter] step: 
+
+Clock cycle 4, clock = 0
+Tape contents: 0011
+Switches: switch_0 = 1, switch_1 = 0
+Options: '1' flip switch_0, '2' flip switch_1, 's' step, 'r' run, 'q' quit, [Enter] step: 
+

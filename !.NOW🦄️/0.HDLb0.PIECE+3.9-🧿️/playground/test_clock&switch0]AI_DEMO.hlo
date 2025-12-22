@@ -1,0 +1,8 @@
+# Simple NAND: switch_1 AND clock -> output to tape
+# Press '2' flip switch_1
+# Step clock - tape prepends NAND result every cycle
+
+0000000000000001  # chip=1 nand
+0000000000000000  # out addr=0 (tape)
+0000000000000101  # input_a = switch_1 (6)
+0000000000000111  # input_b = clock (7)
