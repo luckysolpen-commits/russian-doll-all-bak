@@ -1,0 +1,85 @@
+# Video Implementation Plan for CHTML Framework
+
+## Overview
+Implement video support in the CHTML framework using FFmpeg for MP4 decoding and OpenGL for rendering, following the existing MVC architecture.
+
+## Components to Implement
+
+### 1. Video Element Structure (Extension to UIElement)
+- Add video-specific properties to UIElement structure in view component
+- x, y, width, height positioning
+- src attribute for video file path
+- autoplay, loop attributes
+- video state management (playing, paused, stopped)
+
+### 2. Video Parser (Extension to CHTML parser)
+- Parse <video> tag with attributes: src, x, y, width, height, autoplay, loop
+- Extract video file path and render properties
+- Create VideoElement representation in DOM
+
+### 3. Video Model Controller
+- Integrate FFmpeg decoding using the reference code patterns
+- Implement frame queuing with timestamp-based rendering
+- Manage video state (play, pause, stop, seek)
+- Handle audio synchronization using PulseAudio
+
+### 4. Video Rendering System
+- OpenGL texture management for video frames
+- Frame-to-texture conversion using swscale
+- Synchronization with audio playback
+- Support for video positioning within canvas
+
+### 5. Integration Points
+
+#### View Component Extensions:
+- Add video element drawing to draw_element() function
+- Handle video texture loading and display
+- Process video-specific attributes (positioning, sizing)
+
+#### Model Component Extensions:
+- Add video state management functions
+- Integrate FFmpeg decoding pipeline
+- Support frame queuing and timestamp rendering
+
+#### Controller Extensions:
+- Handle video playback controls
+- Process video-specific events (play, pause, stop)
+
+## Implementation Steps
+
+1. Extend UIElement structure in view component to include video properties
+2. Update CHTML parser to handle <video> tag
+3. Create video controller module with FFmpeg integration
+4. Implement video rendering in display function
+5. Add video playback controls to controller
+6. Test with sample MP4 files
+
+## Technical Considerations
+
+### Threading
+- Keep video decoding single-threaded as specified
+- Use frame queuing to ensure smooth playback
+- Synchronize video rendering with audio using timestamps
+
+### Memory Management
+- Implement proper texture caching for video frames
+- Clean up OpenGL textures when video elements are removed
+- Manage frame queue size to prevent memory overflow
+
+### FFmpeg Integration
+- Use avformat, avcodec, avutil libraries as in reference
+- Implement proper error handling
+- Follow the existing audio implementation pattern
+
+### Synchronization
+- Use timestamp-based rendering for frame accuracy
+- Synchronize audio and video playback using get_audio_time()
+- Handle end-of-file detection and looping
+
+## Expected <video> Tag Format
+<video src="path.mp4" x="100" y="100" width="400" height="300" autoplay loop />
+
+## Dependencies
+- libavformat, libavcodec, libswscale, libswresample
+- PulseAudio for audio
+- OpenGL for texture rendering

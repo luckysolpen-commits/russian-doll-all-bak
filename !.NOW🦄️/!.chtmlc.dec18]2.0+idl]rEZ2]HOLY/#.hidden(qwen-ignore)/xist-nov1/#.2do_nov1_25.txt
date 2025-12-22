@@ -1,5 +1,0 @@
-
-(get rid of any xs loc-- u can ofc) 
-first ask how that "weird shape " from func-approx , is being generated in gl. 
-then add that to list of things 2 add 2 chtml including (lines/transforms)
-then legit start building the code u want and fix w/e come up
