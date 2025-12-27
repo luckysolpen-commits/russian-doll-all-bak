@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: Settings</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>MARS STREETRACE RAIDER</h1>
+        <div class="separator">================================================</div>
+        <h2 style="color: #ffff00;">GAME SETTINGS</h2>
+        <div class="separator">================================================</div>
+
+        <div style="margin: 20px 0;">
+            <div class="info-line">
+                <label class="info-label">Ticker Speed:</label><br>
+                <select id="ticker-speed">
+                    <option value="sec">Seconds</option>
+                    <option value="min">Minutes</option>
+                    <option value="hour">Hours</option>
+                    <option value="day">Days</option>
+                </select>
+            </div>
+            <!-- Other settings can be added here -->
+        </div>
+
+        <div style="margin: 20px 0;">
+            <button id="save-settings-btn">Save Settings</button>
+            <button id="back-to-game-btn">Back to Game</button>
+        </div>
+        
+        <div id="settings-output" class="output-box" style="height: 100px; overflow-y: scroll;">
+            <div>Ready to adjust settings.</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const tickerSpeedSelect = document.getElementById('ticker-speed');
+            const saveSettingsBtn = document.getElementById('save-settings-btn');
+            const backToGameBtn = document.getElementById('back-to-game-btn');
+            const settingsOutputDiv = document.getElementById('settings-output');
+
+            function addToOutput(message, isError = false) {
+                const line = document.createElement('div');
+                line.textContent = '> ' + message;
+                if (isError) {
+                    line.style.color = '#ff4d4d';
+                }
+                settingsOutputDiv.appendChild(line);
+                settingsOutputDiv.scrollTop = settingsOutputDiv.scrollHeight;
+            }
+
+            // Load current settings
+            async function loadSettings() {
+                try {
+                    const response = await fetch('php/get_gamestate.php');
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const gamestate = await response.json();
+                    
+                    if (gamestate.ticker_speed) {
+                        tickerSpeedSelect.value = gamestate.ticker_speed;
+                    }
+                    addToOutput('Current settings loaded.');
+                } catch (error) {
+                    addToOutput(`Error loading settings: ${error.message}`, true);
+                    console.error("Error loading settings:", error);
+                }
+            }
+
+            // Save settings
+            saveSettingsBtn.addEventListener('click', async () => {
+                addToOutput('Saving settings...');
+                saveSettingsBtn.disabled = true;
+                const newTickerSpeed = tickerSpeedSelect.value;
+
+                const formData = new FormData();
+                formData.append('tickerSpeed', newTickerSpeed);
+
+                try {
+                    const response = await fetch('php/update_settings.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const result = await response.json();
+                    if (result.status === 'success') {
+                        addToOutput('Settings saved successfully!');
+                    } else {
+                        throw new Error(result.message);
+                    }
+                } catch (error) {
+                    addToOutput(`Error saving settings: ${error.message}`, true);
+                    console.error("Error saving settings:", error);
+                } finally {
+                    saveSettingsBtn.disabled = false;
+                }
+            });
+
+            backToGameBtn.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+
+            loadSettings();
+        });
+    </script>
+</body>
+</html>

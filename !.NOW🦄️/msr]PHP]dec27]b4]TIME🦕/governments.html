@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: Governments</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>GOVERNMENTS</h1>
+        <div class="separator">================================================</div>
+        <a href="index.html"><button>Back to Main Menu</button></a>
+
+        <table style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>GOVERNMENT</th>
+                    <th>POPULATION</th>
+                    <th>GDP (Martian Credits)</th>
+                </tr>
+            </thead>
+            <tbody id="governments-table-body">
+                <tr>
+                    <td colspan="3">Loading governments...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="index.html" style="margin-top: 20px; display: inline-block;"><button>Back to Main Menu</button></a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableBody = document.getElementById('governments-table-body');
+            
+            fetch('php/get_governments.php')
+                .then(response => response.json())
+                .then(data => {
+                    tableBody.innerHTML = ''; // Clear loading message
+                    
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
+                    
+                    if (data.length === 0) {
+                        tableBody.innerHTML = '<tr><td colspan="3">No governments found. Please run setup.</td></tr>';
+                        return;
+                    }
+
+                    data.forEach(gov => {
+                        const row = document.createElement('tr');
+                        
+                        const nameCell = document.createElement('td');
+                        nameCell.textContent = gov.name;
+                        row.appendChild(nameCell);
+                        
+                        const popCell = document.createElement('td');
+                        popCell.textContent = gov.population;
+                        row.appendChild(popCell);
+                        
+                        const gdpCell = document.createElement('td');
+                        gdpCell.textContent = gov.gdp;
+                        row.appendChild(gdpCell);
+                        
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    tableBody.innerHTML = `<tr><td colspan="3">Error loading data: ${error.message}</td></tr>`;
+                });
+        });
+    </script>
+</body>
+</html>

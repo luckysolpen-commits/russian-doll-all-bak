@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: Game Setup</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="screen active">
+            <h1>MARS STREETRACE RAIDER</h1>
+            <div class="separator">================================================</div>
+            <h2 style="color: #ffff00;">GAME SETUP</h2>
+            <div class="separator">================================================</div>
+            
+            <div style="margin: 20px 0;">
+                <div class="info-line">
+                    <label class="info-label">Player Name:</label><br>
+                    <input type="text" id="player-name" placeholder="Enter your name" maxlength="50" value="Player1">
+                </div>
+                <div class="info-line">
+                    <label class="info-label">Starting Cash (millions):</label><br>
+                    <input type="number" id="starting-cash" value="10000" min="1000" max="1000000" step="1000">
+                </div>
+                <div class="info-line">
+                    <label class="info-label">Game Length (years):</label><br>
+                    <input type="number" id="game-length" value="10" min="1" max="100">
+                </div>
+                <div class="info-line">
+                    <label class="info-label">Ticker Speed:</label><br>
+                    <select id="ticker-speed">
+                        <option value="sec" selected>Seconds</option>
+                        <option value="min">Minutes</option>
+                        <option value="hour">Hours</option>
+                        <option value="day">Days</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div style="margin: 20px 0;">
+                <button id="start-new-game-btn">START NEW GAME</button>
+            </div>
+            
+            <div id="setup-output" class="output-box" style="height: 150px; overflow-y: scroll;">
+                <div>Awaiting setup...</div>
+            </div>
+
+            <div style="margin-top: 20px; display: none;" id="continue-section">
+                <a href="index.html"><button>Continue to Game</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const startGameBtn = document.getElementById('start-new-game-btn');
+            const outputDiv = document.getElementById('setup-output');
+            const continueSection = document.getElementById('continue-section');
+
+            function addToOutput(message, isError = false) {
+                const line = document.createElement('div');
+                line.textContent = '> ' + message;
+                if (isError) {
+                    line.style.color = '#ff4d4d'; // Red for errors
+                }
+                outputDiv.appendChild(line);
+                outputDiv.scrollTop = outputDiv.scrollHeight;
+            }
+
+            async function runSetup() {
+                startGameBtn.disabled = true;
+                addToOutput('Starting new game setup...');
+                
+                // Clear previous generated data
+                addToOutput('Clearing old game data...');
+                try {
+                    const clearResponse = await fetch('php/clear_temp.php', { method: 'POST' });
+                    const clearData = await clearResponse.json();
+                    if(clearData.status !== 'success') throw new Error(clearData.message);
+                    addToOutput(clearData.message);
+                } catch (error) {
+                    addToOutput(`Error clearing old data: ${error.message}`, true);
+                    startGameBtn.disabled = false;
+                    return;
+                }
+
+                // Step 1: Setup Corporations
+                addToOutput('Setting up corporations...');
+                let corpsSetup = false;
+                try {
+                    const corpResponse = await fetch('php/setup_corporations.php', { method: 'POST' });
+                    if (!corpResponse.ok) throw new Error(`Server responded with status: ${corpResponse.status}`);
+                    const corpData = await corpResponse.json();
+                    if (corpData.status !== 'success') throw new Error(corpData.message);
+                    addToOutput(corpData.message);
+                    corpsSetup = true;
+                } catch (error) {
+                    addToOutput(`Error setting up corporations: ${error.message}`, true);
+                    startGameBtn.disabled = false;
+                    return;
+                }
+
+                // Step 2: Setup Governments
+                addToOutput('Setting up governments...');
+                let govsSetup = false;
+                try {
+                    const govResponse = await fetch('php/setup_governments.php', { method: 'POST' });
+                    if (!govResponse.ok) throw new Error(`Server responded with status: ${govResponse.status}`);
+                    const govData = await govResponse.json();
+                    if (govData.status !== 'success') throw new Error(govData.message);
+                    addToOutput(govData.message);
+                    govsSetup = true;
+                } catch (error) {
+                    addToOutput(`Error setting up governments: ${error.message}`, true);
+                    startGameBtn.disabled = false;
+                    return;
+                }
+                
+                // Step 3: Create Player
+                let playerCreated = false;
+                if (corpsSetup && govsSetup) {
+                    const playerName = document.getElementById('player-name').value;
+                    const startingCash = document.getElementById('starting-cash').value;
+                    const gameLength = document.getElementById('game-length').value;
+                    const tickerSpeed = document.getElementById('ticker-speed').value;
+
+                    // Using localStorage to pass settings to other pages
+                    localStorage.setItem('playerName', playerName);
+                    
+                    addToOutput(`Creating player: ${playerName}...`);
+                    const formData = new FormData();
+                    formData.append('playerName', playerName);
+                    formData.append('startingCash', startingCash);
+                    formData.append('tickerSpeed', tickerSpeed);
+
+                    try {
+                        const playerResponse = await fetch('php/create_player.php', { method: 'POST', body: formData });
+                        if (!playerResponse.ok) throw new Error(`Server responded with status: ${playerResponse.status}`);
+                        const playerData = await playerResponse.json();
+                        if (playerData.status !== 'success') throw new Error(playerData.message);
+                        addToOutput(playerData.message);
+                        playerCreated = true;
+                    } catch (error) {
+                        addToOutput(`Error creating player: ${error.message}`, true);
+                        startGameBtn.disabled = false;
+                        return;
+                    }
+                }
+                
+                // Final step: Enable continue
+                if (playerCreated) {
+                    addToOutput('Setup complete! You can now proceed to the main game.');
+                    continueSection.style.display = 'block';
+                } else {
+                     addToOutput('One or more setup steps failed. Please check the logs.', true);
+                     startGameBtn.disabled = false;
+                }
+            }
+
+            startGameBtn.addEventListener('click', runSetup);
+        });
+    </script>
+</body>
+</html>

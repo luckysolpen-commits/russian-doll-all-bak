@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: Portfolio</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Player Portfolio</h1>
+        <h2 id="player-name-display" style="color: #ffff00;"></h2>
+        <div class="separator">================================================</div>
+        <a href="index.html"><button>Back to Main Menu</button></a>
+        
+        <div style="margin-top: 20px;">
+            <h3 style="color: #ffff00;">Stock Holdings</h3>
+            <div id="stock-portfolio" class="output-box" style="height: 200px;">Loading...</div>
+            <div style="text-align: right; margin-top: 5px;">Total Stock Value: $<span id="total-stock-value">0</span></div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <h3 style="color: #ffff00;">Bond Holdings</h3>
+            <div id="bond-portfolio" class="output-box" style="height: 100px;">Loading...</div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const playerName = localStorage.getItem('playerName') || 'Player1';
+            
+            document.getElementById('player-name-display').textContent = playerName;
+            const stockPortfolioDiv = document.getElementById('stock-portfolio');
+            const bondPortfolioDiv = document.getElementById('bond-portfolio');
+            const totalStockValueEl = document.getElementById('total-stock-value');
+
+            fetch(`php/get_portfolio.php?player=${playerName}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
+
+                    // Display Stocks
+                    stockPortfolioDiv.innerHTML = '';
+                    if (data.stocks && data.stocks.length > 0) {
+                        const pre = document.createElement('pre');
+                        pre.textContent = data.stocks.join('\n');
+                        stockPortfolioDiv.appendChild(pre);
+                    } else {
+                        stockPortfolioDiv.textContent = 'No stock holdings.';
+                    }
+                    totalStockValueEl.textContent = data.total_stock_value.toFixed(2);
+                    
+                    // Display Bonds
+                    bondPortfolioDiv.innerHTML = '';
+                    if (data.bonds && data.bonds.length > 0) {
+                         const pre = document.createElement('pre');
+                        pre.textContent = data.bonds.join('\n');
+                        bondPortfolioDiv.appendChild(pre);
+                    } else {
+                        bondPortfolioDiv.textContent = 'No bond holdings.';
+                    }
+                })
+                .catch(error => {
+                    stockPortfolioDiv.innerHTML = `<span class="error">Error: ${error.message}</span>`;
+                    bondPortfolioDiv.innerHTML = `<span class="error">Error: ${error.message}</span>`;
+                });
+        });
+    </script>
+</body>
+</html>

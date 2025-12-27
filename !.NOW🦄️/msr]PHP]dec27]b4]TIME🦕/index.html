@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: Main Menu</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div id="game-container">
+        <div class="menu-bar">
+            <span>Active Entity: <span class="info-value" id="active-entity">N/A</span></span> |
+            <span>Date: <span class="info-value" id="game-date">01/01/2025</span></span>
+        </div>
+        
+        <div class="separator">================================================</div>
+        
+        <div class="columns">
+            <!-- Left Column -->
+            <div class="column">
+                <div class="balance-sheet">
+                    <div style="color: #ffff00; margin-bottom: 10px;">MY BALANCE SHEET:</div>
+                    <div class="info-line">Cash (CD's)..........<span id="player-cash">0.00</span></div>
+                    <div class="info-line">Stock Portfolio......<span id="portfolio-value">0.00</span></div>
+                    <div class="info-line">Total Assets.........<span id="total-assets">0.00</span></div>
+                    <div class="info-line">Less Debt............<span id="total-debt">-0.00</span></div>
+                    <div class="separator">---</div>
+                    <div class="info-line" style="color: #ffff00;">Net Worth............<span id="net-worth">0.00</span></div>
+                </div>
+                <div class="news-ticker" style="margin-top: 20px;">
+                    <div style="color: #ff0000; margin-bottom: 5px;">FINANCIAL NEWS HEADLINES:</div>
+                    <div id="news-content">Loading news...</div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="column">
+                                 <div class="control-section">
+                                    <h3 style="color: #ffff00;">GAME ACTIONS</h3>
+                                    <button id="next-turn-btn">Advance Game Turn (Next Day)</button>
+                                    <div id="turn-output" class="output-box" style="height: 50px; margin-top: 10px;"></div>
+                                </div>
+                        
+                                <div class="separator">------------------------------------------------</div>
+                        
+                                <div class="control-section">
+                                    <h3 style="color: #ffff00;">MAIN MENU</h3>
+                                     <a href="setup.html"><button>1. Game Setup</button></a>
+                                     <a href="game_options.html"><button>2. Game Options</button></a>
+                                     <a href="settings.html"><button>3. Settings</button></a>
+                                     <a href="help.html"><button>4. Help</button></a>
+                                </div>
+                
+                                <div class="separator">------------------------------------------------</div>
+                                
+                                <div class="control-section">
+                                    <h3 style="color: #ffff00;">PLAYER & ENTITY</h3>
+                                    <button>5. Select Player</button> <!-- Handled by game_turn.php, no separate page -->
+                                    <a href="culture.html"><button>6. Culture</button></a>
+                                    <a href="entity_info.html"><button>7. Entity Info</button></a>
+                                    <a href="corporations.html"><button>8. Select Corp.</button></a>
+                                    <a href="history.html"><button>9. History</button></a>
+                                    <a href="general.html"><button>10. General</button></a>
+                                </div>
+                
+                                <div class="separator">------------------------------------------------</div>
+                
+                                <div class="control-section">
+                                    <h3 style="color: #ffff00;">FINANCIAL ACTIONS</h3>
+                                    <a href="tools.html"><button>11. Tools</button></a>
+                                    <a href="buy_sell.html"><button>12. Buy/Sell</button></a>
+                                    <a href="financing.html"><button>13. Financing</button></a>
+                                    <a href="private.html"><button>14. Private</button></a>
+                                    <a href="management.html"><button>15. Management</button></a>
+                                    <a href="other_trans.html"><button>16. Other Trans</button></a>
+                                </div>
+                
+                                <div class="separator">------------------------------------------------</div>
+                
+                                <div class="control-section">
+                                    <h3 style="color: #ffff00;">GAME FLOW & UTILITIES</h3>
+                                    <button>17. End Turn</button> <!-- Handled by game_turn.php, no separate page -->
+                                    <a href="misc_menu.html"><button>18. Misc. Menu</button></a>
+                                    <a href="chart.html"><button>19. Chart</button></a>
+                                    <a href="auto.html"><button>20. Auto</button></a>
+                                    <a href="watchlist.html"><button>21. Watchlist</button></a>
+                                    <button>22. TICKER <span id="ticker-status">[OFF]</span></button> <!-- Toggle by JS -->
+                                </div>
+                
+                                <div class="separator">------------------------------------------------</div>
+                
+                                <div class="control-section">
+                                    <h3 style="color: #ffff00;">QUICK SEARCH FUNCTIONS</h3>
+                                    <a href="research_report.html"><button>23. Research Report</button></a>
+                                    <a href="portfolio.html"><button>24. List Portfolio Holdings</button></a>
+                                    <a href="list_futures.html"><button>25. List Futures Contracts</button></a>
+                                    <a href="financial_profile.html"><button>26. Financial Profile</button></a>
+                                    <a href="list_options.html"><button>27. List Put and Call Options</button></a>
+                                    <a href="db_search.html"><button>28. Recall DB Search List</button></a>
+                                    <a href="earnings_report.html"><button>29. Earnings Report</button></a>
+                                                                         <a href="shareholder_list.html"><button>30. Shareholder List</button></a>
+                                                                         <a href="my_corporations.html"><button>31. My Corporations</button></a>
+                                                                    </div>
+                                                                    <div class="separator">----------------------------------</div>
+                                                                    <div class="control-section">
+                                                                        <h3 style="color: #ffff00;">COMMODITY PRICES/INDEXES/INDICATORS:</h3>
+                                                                        <div class="info-line">Stock Index: Market closed</div>
+                                                                        <div class="info-line">Prime Rate: 2.50%</div>
+                                                                        <div class="info-line">Long Bond: 7.25%</div>
+                                                                        <div class="info-line">Short Bond: 6.50%</div>
+                                                                        <div class="info-line">Spot Crude: $100.00</div>
+                                                                        <div class="info-line">Silver: $20.00</div>
+                                                                        <div class="info-line">Spot Gold: $1,200.00</div>
+                                                                        <div class="info-line">Spot Wheat: $5.00</div>
+                                                                        <div class="info-line">GDP Growth: 2.5%</div>
+                                                                        <div class="info-line">Spot Corn: $5.00</div>
+                                                                    </div>
+                                                                    <div class="separator">------------------------------------------</div>
+                                                </div>
+                                            </div>
+                                        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const playerName = localStorage.getItem('playerName') || 'Player1'; // This will be the _local_ player.
+            
+            const activeEntityEl = document.getElementById('active-entity');
+            const gameDateEl = document.getElementById('game-date');
+            const playerCashEl = document.getElementById('player-cash');
+            const portfolioValueEl = document.getElementById('portfolio-value');
+            const totalAssetsEl = document.getElementById('total-assets');
+            const totalDebtEl = document.getElementById('total-debt');
+            const netWorthEl = document.getElementById('net-worth');
+            const newsContentEl = document.getElementById('news-content');
+            const nextTurnBtn = document.getElementById('next-turn-btn');
+            const turnOutputEl = document.getElementById('turn-output');
+            const tickerStatusEl = document.getElementById('ticker-status');
+            const tickerBtn = tickerStatusEl.parentElement; // The button containing the span
+
+            let currentPlayerName = playerName; // Initialize with local player, will be updated by gamestate
+            console.log("Initial currentPlayerName:", currentPlayerName);
+            let isTickerOn = false; // Initial state
+
+            let lastKnownGameTime = null;
+            let lastFetchTime = null;
+            let tickerSpeedMultiplier = 3600; // Default: 1 real sec = 1 game hour (in "sec" mode)
+
+            // Function to fetch and display game state (date, current player)
+            async function updateGameInfo() {
+                try {
+                    const response = await fetch('php/get_gamestate.php');
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const gamestate = await response.json();
+
+                    // Calculate the time that has passed since our last update (if we have one)
+                    const currentTime = Date.now();
+                    let gameSecondsElapsed = 0;
+                    
+                    // If this is not the first fetch, calculate the expected game time advance
+                    if (lastKnownGameTime && lastFetchTime) {
+                        const realTimeElapsed = currentTime - lastFetchTime; // in milliseconds
+                        gameSecondsElapsed = (realTimeElapsed / 1000) * tickerSpeedMultiplier;
+                    }
+                    
+                    // Store the new server time and fetch time for next calculation
+                    const newServerTime = {
+                        year: gamestate.year,
+                        month: gamestate.month,
+                        day: gamestate.day,
+                        hour: gamestate.hour,
+                        minute: gamestate.minute,
+                        second: gamestate.second
+                    };
+                    
+                    // Update the ticker speed multiplier based on settings
+                    // sec=3600 (1 sec = 1 hour game time), min=60 (1 sec = 1 min game time), hour=1 (1 sec = 1 sec game time)
+                    const speedSettings = {
+                        'sec': 3600,
+                        'min': 60,
+                        'hour': 1,
+                        'day': 86400
+                    };
+                    tickerSpeedMultiplier = speedSettings[gamestate.ticker_speed] || 3600;
+
+                    // Calculate the display time by adding the elapsed time to the server time
+                    let displayTime = new Date(
+                        newServerTime.year, 
+                        newServerTime.month - 1, // JS months are 0-indexed
+                        newServerTime.day,
+                        newServerTime.hour,
+                        newServerTime.minute,
+                        newServerTime.second
+                    );
+                    
+                    // Add the elapsed time to get to current display time
+                    displayTime = new Date(displayTime.getTime() + (gameSecondsElapsed * 1000));
+                    
+                    // Update last known values for next calculation
+                    lastKnownGameTime = {
+                        year: displayTime.getFullYear(),
+                        month: displayTime.getMonth() + 1, // Convert back to 1-indexed
+                        day: displayTime.getDate(),
+                        hour: displayTime.getHours(),
+                        minute: displayTime.getMinutes(),
+                        second: displayTime.getSeconds()
+                    };
+                    lastFetchTime = currentTime;
+
+                    // Format and update the display
+                    const month = String(lastKnownGameTime.month).padStart(2, '0');
+                    const day = String(lastKnownGameTime.day).padStart(2, '0');
+                    const year = lastKnownGameTime.year;
+                    const hour = String(lastKnownGameTime.hour).padStart(2, '0');
+                    const minute = String(lastKnownGameTime.minute).padStart(2, '0');
+                    const second = String(lastKnownGameTime.second).padStart(2, '0');
+                    
+                    gameDateEl.textContent = `${month}/${day}/${year} ${hour}:${minute}:${second}`;
+                    
+                    if (gamestate.players && gamestate.players.length > 0) {
+                        currentPlayerName = gamestate.players[gamestate.current_player_index];
+                        console.log("updateGameInfo: currentPlayerName resolved to:", currentPlayerName);
+                        activeEntityEl.textContent = currentPlayerName;
+                    } else {
+                        activeEntityEl.textContent = 'N/A';
+                    }
+                    updatePlayerData(); // Update player specific data based on current player
+                } catch (error) {
+                    console.error("Error fetching game state:", error);
+                    // Don't change the display if there's an error - continue using calculated time
+                    // The real-time display will continue to run
+                }
+            }
+
+            // Function to update the displayed time in real-time based on the last known server time
+            function updateRealTimeDisplay() {
+                if (lastKnownGameTime && lastFetchTime) {
+                    const currentTime = Date.now();
+                    const timeElapsed = currentTime - lastFetchTime; // in milliseconds
+                    
+                    // Calculate how much game time has elapsed
+                    const gameSecondsElapsed = (timeElapsed / 1000) * tickerSpeedMultiplier;
+                    
+                    // Create a date object from the last known time and add the elapsed game time
+                    let displayTime = new Date(
+                        lastKnownGameTime.year, 
+                        lastKnownGameTime.month - 1, // JS months are 0-indexed
+                        lastKnownGameTime.day,
+                        lastKnownGameTime.hour,
+                        lastKnownGameTime.minute,
+                        lastKnownGameTime.second
+                    );
+                    
+                    // Add the elapsed time
+                    displayTime = new Date(displayTime.getTime() + (gameSecondsElapsed * 1000));
+                    
+                    // Format and update the display
+                    const month = String(displayTime.getMonth() + 1).padStart(2, '0');
+                    const day = String(displayTime.getDate()).padStart(2, '0');
+                    const year = displayTime.getFullYear();
+                    const hour = String(displayTime.getHours()).padStart(2, '0');
+                    const minute = String(displayTime.getMinutes()).padStart(2, '0');
+                    const second = String(displayTime.getSeconds()).padStart(2, '0');
+                    
+                    gameDateEl.textContent = `${month}/${day}/${year} ${hour}:${minute}:${second}`;
+                }
+            }
+
+            // Set up a separate interval just for updating the time display in real-time
+            setInterval(updateRealTimeDisplay, 1000); // Update time display every second
+
+            // Function to fetch and display player-specific data
+            function updatePlayerData() {
+                fetch(`php/get_player_data.php?player=${currentPlayerName}`) // Use currentPlayerName
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("updatePlayerData: Data received for player:", currentPlayerName, data);
+                        playerCashEl.textContent = data.cash.toFixed(2);
+                        portfolioValueEl.textContent = data.portfolio_value.toFixed(2);
+                        const totalAssets = data.cash + data.portfolio_value;
+                        totalAssetsEl.textContent = totalAssets.toFixed(2);
+                        totalDebtEl.textContent = `-${data.debt.toFixed(2)}`;
+                        netWorthEl.textContent = (totalAssets - data.debt).toFixed(2);
+                        console.log("updatePlayerData: Updated cash:", data.cash.toFixed(2), "net worth:", (totalAssets - data.debt).toFixed(2));
+
+                        // Update ticker status
+                        isTickerOn = data.ticker_on || false;
+                        tickerStatusEl.textContent = isTickerOn ? '[ON]' : '[OFF]';
+                        manageGameTickInterval(); // Re-evaluate game tick interval
+                    })
+                    .catch(error => {
+                        console.error("Error fetching player data:", error);
+                    });
+            }
+            
+            // Variable to hold the interval ID for game tick
+            let gameTickIntervalId;
+
+            // Function to manage the game tick interval based on isTickerOn
+            function manageGameTickInterval() {
+                if (gameTickIntervalId) {
+                    clearInterval(gameTickIntervalId); // Clear existing interval
+                    gameTickIntervalId = null;
+                }
+                if (isTickerOn) {
+                    gameTickIntervalId = setInterval(runGameTick, 5000); // Start new interval if ticker is on
+                }
+            }
+
+            // Function to auto-start ticker if not explicitly turned off
+            function autoStartTicker() {
+                // Check if ticker should be on by default
+                fetch(`php/get_player_data.php?player=${currentPlayerName}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log("autoStartTicker: Data received for player:", currentPlayerName, data);
+                        isTickerOn = data.ticker_on || false;
+                        tickerStatusEl.textContent = isTickerOn ? '[ON]' : '[OFF]';
+                        
+                        // If ticker is not explicitly off, turn it on by default
+                        if (!isTickerOn) {
+                            // Auto-turn on ticker by default for continuous game world simulation
+                            isTickerOn = true;
+                            tickerStatusEl.textContent = '[ON]';
+                            manageGameTickInterval(); // Start the game tick interval
+                            
+                            // Also update the player's ticker status in the backend
+                            fetch('php/toggle_ticker.php', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ player: currentPlayerName })
+                            }).catch(error => {
+                                console.error("Error auto-enabling ticker:", error);
+                            });
+                        } else {
+                            manageGameTickInterval(); // Start the game tick interval if it was already on
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error in autoStartTicker:", error);
+                        // Even if we can't get player data, we'll try to start ticking by default
+                        isTickerOn = true;
+                        tickerStatusEl.textContent = '[ON]';
+                        manageGameTickInterval();
+                    });
+            }
+
+            // Function to fetch and display news
+            function updateNews() {
+                fetch('php/get_news.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        newsContentEl.innerHTML = ''; // Clear
+                        if (data.headlines && data.headlines.length > 0) {
+                            data.headlines.forEach(line => {
+                                const p = document.createElement('p');
+                                p.textContent = line;
+                                newsContentEl.appendChild(p);
+                            });
+                        } else {
+                            newsContentEl.textContent = "No news to report.";
+                        }
+                    })
+                     .catch(error => {
+                        newsContentEl.textContent = "Error loading news.";
+                        console.error("Error fetching news:", error);
+                    });
+            }
+
+            // Function to trigger game turn advancement (player-specific)
+            async function runGameTurn() {
+                turnOutputEl.textContent = `Advancing turn for ${currentPlayerName}...`;
+                nextTurnBtn.disabled = true;
+                try {
+                    const response = await fetch('php/game_turn.php', { method: 'POST' });
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const data = await response.json();
+
+                    if (data.status === 'success') {
+                        turnOutputEl.textContent = `Turn advanced. Now ${data.next_player_name}'s turn.`;
+                        await updateGameInfo(); // Update current player displayed
+                        await updatePlayerData(); // Update player data for the new current player
+                    } else {
+                        throw new Error(data.message);
+                    }
+                } catch (error) {
+                    turnOutputEl.textContent = `Error advancing turn: ${error.message}`;
+                    console.error("Error advancing turn:", error);
+                } finally {
+                    nextTurnBtn.disabled = false;
+                }
+            }
+
+            // Function to trigger the game world simulation (time-based)
+            async function runGameTick() {
+                try {
+                    const response = await fetch('php/game_tick.php', { method: 'POST' });
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const data = await response.json();
+                    
+                    if (data.status === 'success') {
+                        if (data.message.includes('New day processed')) {
+                            console.log('New day processed, updating news and info.');
+                            updateNews();
+                            updateGameInfo(); // Date might have changed
+                        }
+                    } else {
+                        console.error("Error in game tick:", data.message);
+                    }
+                } catch (error) {
+                    console.error("Error calling game tick:", error);
+                }
+            }
+
+            // Event listener for the TICKER button
+            tickerBtn.addEventListener('click', async () => {
+                try {
+                    const response = await fetch('php/toggle_ticker.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ player: currentPlayerName })
+                    });
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const data = await response.json();
+
+                    if (data.status === 'success') {
+                        isTickerOn = data.new_ticker_status;
+                        tickerStatusEl.textContent = isTickerOn ? '[ON]' : '[OFF]';
+                        manageGameTickInterval(); // Re-evaluate game tick interval
+                    } else {
+                        throw new Error(data.message);
+                    }
+                } catch (error) {
+                    console.error("Error toggling ticker:", error);
+                }
+            });
+
+
+            // Initial data load
+            updateGameInfo();
+            updatePlayerData(); // This will initially load data for the local player. The first gametick will update activeEntity.
+            updateNews();
+            autoStartTicker(); // Auto-start the ticker by default
+
+            // Event Listeners
+            nextTurnBtn.addEventListener('click', runGameTurn);
+
+            // Set up intervals for automatic updates
+            setInterval(updateGameInfo, 1000); // Update game date and current player every 1 second
+            // The game tick interval is now managed by manageGameTickInterval()
+            setInterval(updateNews, 10000);    // Update news every 10 seconds (as news is generated daily, no need for faster updates)
+        });
+    </script>
+</body>
+</html>

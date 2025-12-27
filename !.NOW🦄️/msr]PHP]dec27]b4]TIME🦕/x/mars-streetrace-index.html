@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Streetrace Raider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            overflow: hidden;
+        }
+        
+        #game-container {
+            width: 100vw;
+            height: 100vh;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        
+        .screen {
+            display: none;
+        }
+        
+        .screen.active {
+            display: block;
+        }
+        
+        h1 {
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000;
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+            50% { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; }
+        }
+        
+        .separator {
+            color: #ffff00;
+            margin: 10px 0;
+        }
+        
+        .menu-bar {
+            color: #00ffff;
+            border-bottom: 1px solid #00ffff;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .info-line {
+            margin: 5px 0;
+        }
+        
+        .info-label {
+            color: #ffff00;
+        }
+        
+        .info-value {
+            color: #00ff00;
+        }
+        
+        input, select, button {
+            background: #000;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 5px 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 5px;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #ffff00;
+            box-shadow: 0 0 5px #ffff00;
+        }
+        
+        button {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        
+        .error {
+            color: #ff0000;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
+        
+        .news-ticker {
+            background: #1a0000;
+            border: 1px solid #ff0000;
+            padding: 10px;
+            margin: 10px 0;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        
+        .balance-sheet {
+            background: #001a00;
+            border: 1px solid #00ff00;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .command-input {
+            margin-top: 20px;
+        }
+        
+        .command-prompt {
+            color: #00ffff;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10px 0;
+        }
+        
+        th, td {
+            border: 1px solid #00ff00;
+            padding: 5px;
+            text-align: left;
+        }
+        
+        th {
+            background: #001a00;
+            color: #ffff00;
+        }
+        
+        .stock-up {
+            color: #00ff00;
+        }
+        
+        .stock-down {
+            color: #ff0000;
+        }
+        
+        #debug-panel {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid #ff00ff;
+            padding: 10px;
+            color: #ff00ff;
+            font-size: 10px;
+            max-width: 300px;
+            display: none;
+        }
+        
+        #debug-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="screen active">
+            <h1>MARS STREETRACE RAIDER</h1>
+            <div class="separator">================================================</div>
+            <h2 style="color: #ffff00;">GAME SETUP</h2>
+            <div class="separator">================================================</div>
+            
+            <div style="margin: 20px 0;">
+                <div class="info-line">
+                    <label class="info-label">Player Name:</label><br>
+                    <input type="text" id="player-name" placeholder="Enter your name" maxlength="50">
+                </div>
+                
+                <div class="info-line">
+                    <label class="info-label">Starting Cash (millions):</label><br>
+                    <input type="number" id="starting-cash" value="10000" min="1000" max="1000000" step="1000">
+                </div>
+                
+                <div class="info-line">
+                    <label class="info-label">Game Length (years):</label><br>
+                    <input type="number" id="game-length" value="10" min="1" max="100">
+                </div>
+                
+                <div class="info-line">
+                    <label class="info-label">Difficulty:</label><br>
+                    <select id="difficulty">
+                        <option value="easy">Easy (Slow market)</option>
+                        <option value="normal" selected>Normal</option>
+                        <option value="hard">Hard (Volatile market)</option>
+                        <option value="nightmare">Nightmare (Clown gangs everywhere)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div style="margin: 20px 0;">
+                <button onclick="startNewGame()">START NEW GAME</button>
+                <button onclick="showLoadGame()">LOAD SAVED GAME</button>
+            </div>
+            
+            <div id="load-section" style="display: none; margin-top: 20px;">
+                <div class="separator">--- LOAD GAME ---</div>
+                <input type="file" id="save-file-input" accept=".json,.zip">
+                <button onclick="loadSaveFile()">LOAD FILE</button>
+                <button onclick="hideLoadGame()">CANCEL</button>
+            </div>
+            
+            <div id="setup-error" class="error" style="margin-top: 20px;"></div>
+        </div>
+        
+        <!-- Main Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="menu-bar">
+                0.Exit | 1.File | 2.Options | 3.Settings | 4.Help | 5.Player | 6.Portfolio | 7.Market | 8.Corps | 9.Trade
+            </div>
+            
+            <div class="info-line">
+                <span class="info-label">Active Entity:</span> 
+                <span class="info-value" id="active-entity">N/A</span>
+            </div>
+            
+            <div class="info-line">
+                <span class="info-label">Date:</span> 
+                <span class="info-value" id="game-date">01/01/2025</span> | 
+                <span class="info-label">Day:</span> 
+                <span class="info-value" id="game-day">1</span> | 
+                <span class="info-label">Turn:</span> 
+                <span class="info-value" id="game-turn">1</span>
+            </div>
+            
+            <div class="separator">_______________________________________________________</div>
+            
+            <div class="balance-sheet">
+                <div style="color: #ffff00; margin-bottom: 10px;">MY BALANCE SHEET:</div>
+                <div class="info-line">Cash (CD's)..........<span id="player-cash">0.00</span></div>
+                <div class="info-line">Stock Portfolio......<span id="portfolio-value">0.00</span></div>
+                <div class="info-line">Total Assets.........<span id="total-assets">0.00</span></div>
+                <div class="info-line">Less Debt............<span id="total-debt">-0.00</span></div>
+                <div class="separator">---</div>
+                <div class="info-line" style="color: #ffff00;">Net Worth............<span id="net-worth">0.00</span></div>
+            </div>
+            
+            <div class="news-ticker">
+                <div style="color: #ff0000; margin-bottom: 5px;">FINANCIAL NEWS HEADLINES:</div>
+                <div id="news-content">Market opens on Mars. Blood futures stable.</div>
+            </div>
+            
+            <div style="margin: 10px 0;">
+                <span class="info-label">Commodity Prices/Indexes:</span><br>
+                <span class="info-value">
+                    Blood Index: <span id="blood-index">100.00</span> | 
+                    Clone Price: <span id="clone-price">50.00</span> | 
+                    Prime Rate: <span id="prime-rate">10.00</span>%
+                </span>
+            </div>
+            
+            <div class="separator">_______________________________________________________</div>
+            
+            <div class="command-input">
+                <span class="command-prompt">Command> </span>
+                <input type="text" id="command-input" placeholder="Enter command number or 'help'" style="width: 300px;">
+                <button onclick="executeCommand()">EXECUTE</button>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <button onclick="showMenu('file')">1.File Menu</button>
+                <button onclick="showMenu('portfolio')">6.View Portfolio</button>
+                <button onclick="showMenu('market')">7.Market Prices</button>
+                <button onclick="showMenu('trade')">9.Buy/Sell Stocks</button>
+                <button onclick="endTurn()">17.End Turn</button>
+            </div>
+            
+            <div id="command-output" style="margin-top: 20px; border: 1px solid #00ffff; padding: 10px; min-height: 200px;">
+                <div style="color: #00ffff;">SYSTEM READY</div>
+            </div>
+        </div>
+        
+        <!-- Portfolio Screen -->
+        <div id="portfolio-screen" class="screen">
+            <h2 style="color: #ffff00;">STOCK PORTFOLIO</h2>
+            <div class="separator">================================================</div>
+            <table id="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>TICKER</th>
+                        <th>NAME</th>
+                        <th>SHARES</th>
+                        <th>AVG PRICE</th>
+                        <th>CURRENT PRICE</th>
+                        <th>VALUE</th>
+                        <th>GAIN/LOSS</th>
+                    </tr>
+                </thead>
+                <tbody id="portfolio-tbody">
+                    <tr>
+                        <td colspan="7">No holdings</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="showScreen('game-screen')">BACK</button>
+        </div>
+        
+        <!-- Market Screen -->
+        <div id="market-screen" class="screen">
+            <h2 style="color: #ffff00;">MARKET PRICES</h2>
+            <div class="separator">================================================</div>
+            <div>
+                <input type="text" id="market-search" placeholder="Search by ticker or name..." style="width: 300px;">
+                <button onclick="searchMarket()">SEARCH</button>
+            </div>
+            <table id="market-table">
+                <thead>
+                    <tr>
+                        <th>TICKER</th>
+                        <th>NAME</th>
+                        <th>INDUSTRY</th>
+                        <th>PRICE</th>
+                        <th>CHANGE</th>
+                        <th>52W HIGH</th>
+                        <th>52W LOW</th>
+                    </tr>
+                </thead>
+                <tbody id="market-tbody">
+                    <tr>
+                        <td colspan="7">Loading market data...</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="showScreen('game-screen')">BACK</button>
+        </div>
+        
+        <!-- Trade Screen -->
+        <div id="trade-screen" class="screen">
+            <h2 style="color: #ffff00;">BUY/SELL STOCKS</h2>
+            <div class="separator">================================================</div>
+            
+            <div style="margin: 20px 0;">
+                <div class="info-line">
+                    <label class="info-label">Ticker Symbol:</label><br>
+                    <input type="text" id="trade-ticker" placeholder="e.g., RPL" maxlength="10" style="text-transform: uppercase;">
+                    <button onclick="lookupStock()">LOOKUP</button>
+                </div>
+                
+                <div id="stock-info" style="margin: 20px 0; display: none;">
+                    <div class="balance-sheet">
+                        <div class="info-line"><strong id="stock-name-display">N/A</strong> (<span id="stock-ticker-display">N/A</span>)</div>
+                        <div class="info-line">Industry: <span id="stock-industry-display">N/A</span></div>
+                        <div class="info-line">Current Price: $<span id="stock-price-display">0.00</span></div>
+                        <div class="info-line">Available Cash: $<span id="trade-available-cash">0.00</span></div>
+                        <div class="info-line">Owned Shares: <span id="trade-owned-shares">0</span></div>
+                    </div>
+                    
+                    <div style="margin: 20px 0;">
+                        <button onclick="setTradeType('buy')" id="buy-btn">BUY</button>
+                        <button onclick="setTradeType('sell')" id="sell-btn">SELL</button>
+                    </div>
+                    
+                    <div id="trade-form" style="display: none;">
+                        <div class="info-line">
+                            <label class="info-label">Number of Shares:</label><br>
+                            <input type="number" id="trade-shares" min="1" value="1">
+                        </div>
+                        
+                        <div class="info-line">
+                            <span class="info-label">Total Cost:</span> 
+                            $<span id="trade-total">0.00</span>
+                        </div>
+                        
+                        <div style="margin-top: 10px;">
+                            <button onclick="executeTrade()" id="execute-trade-btn">EXECUTE TRADE</button>
+                            <button onclick="cancelTrade()">CANCEL</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="trade-message" style="margin-top: 20px;"></div>
+            </div>
+            
+            <button onclick="showScreen('game-screen')">BACK</button>
+        </div>
+    </div>
+    
+    <!-- Debug Panel -->
+    <div id="debug-panel">
+        <div style="color: #ff00ff; font-weight: bold;">DEBUG PANEL</div>
+        <div id="debug-content"></div>
+    </div>
+
+    <script>
+        // Global Game State
+        const GameState = {
+            player: {
+                name: '',
+                cash: 10000.0,
+                portfolio: [] // {ticker, shares, avgPrice}
+            },
+            gameTime: {
+                year: 2025,
+                month: 1,
+                day: 1,
+                turn: 1
+            },
+            corporations: [],
+            market: {
+                primeRate: 10.0,
+                bloodIndex: 100.0,
+                clonePrice: 50.0
+            },
+            settings: {
+                difficulty: 'normal',
+                gameLength: 10
+            },
+            news: [
+                'Market opens on Mars. Blood futures stable.',
+                'Redplanet Labs announces new clone variant.',
+                'Clown gang activity reported in Sector 7.',
+                'Solar Empire imposes new tariffs on imports.'
+            ]
+        };
+
+        let currentTradeType = null;
+        let currentTradeTicker = null;
+
+        // Initialize game on load
+        window.onload = function() {
+            console.log('Mars Streetrace Raider initialized');
+            // Load corporations from localStorage or default
+            loadDefaultCorporations();
+        };
+
+        // Show/Hide screens
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            document.getElementById(screenId).classList.add('active');
+        }
+
+        // Setup Functions
+        function startNewGame() {
+            const name = document.getElementById('player-name').value.trim();
+            const cash = parseFloat(document.getElementById('starting-cash').value);
+            const gameLength = parseInt(document.getElementById('game-length').value);
+            const difficulty = document.getElementById('difficulty').value;
+            
+            if (!name) {
+                document.getElementById('setup-error').textContent = 'ERROR: Please enter a player name';
+                return;
+            }
+            
+            // Initialize game state
+            GameState.player.name = name;
+            GameState.player.cash = cash;
+            GameState.player.portfolio = [];
+            GameState.settings.gameLength = gameLength;
+            GameState.settings.difficulty = difficulty;
+            
+            // Reset game time
+            GameState.gameTime = {
+                year: 2025,
+                month: 1,
+                day: 1,
+                turn: 1
+            };
+            
+            // Generate or load corporations
+            if (GameState.corporations.length === 0) {
+                generateDefaultCorporations();
+            }
+            
+            // Show game screen
+            showScreen('game-screen');
+            updateGameDisplay();
+            addToOutput('GAME STARTED. Welcome to Mars, ' + name + '!');
+            addToOutput('Starting cash: $' + cash.toFixed(2) + ' million');
+        }
+
+        function showLoadGame() {
+            document.getElementById('load-section').style.display = 'block';
+        }
+
+        function hideLoadGame() {
+            document.getElementById('load-section').style.display = 'none';
+        }
+
+        function loadSaveFile() {
+            const fileInput = document.getElementById('save-file-input');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                alert('Please select a save file');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const saveData = JSON.parse(e.target.result);
+                    GameState.player = saveData.player;
+                    GameState.gameTime = saveData.gameTime;
+                    GameState.corporations = saveData.corporations;
+                    GameState.market = saveData.market;
+                    GameState.settings = saveData.settings;
+                    
+                    showScreen('game-screen');
+                    updateGameDisplay();
+                    addToOutput('GAME LOADED SUCCESSFULLY');
+                } catch (err) {
+                    alert('Error loading save file: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Update game display
+        function updateGameDisplay() {
+            // Update player info
+            document.getElementById('active-entity').textContent = GameState.player.name;
+            document.getElementById('player-cash').textContent = GameState.player.cash.toFixed(2);
+            
+            // Calculate portfolio value
+            let portfolioValue = 0;
+            GameState.player.portfolio.forEach(holding => {
+                const corp = GameState.corporations.find(c => c.ticker === holding.ticker);
+                if (corp) {
+                    portfolioValue += holding.shares * corp.price;
+                }
+            });
+            document.getElementById('portfolio-value').textContent = portfolioValue.toFixed(2);
+            
+            const totalAssets = GameState.player.cash + portfolioValue;
+            document.getElementById('total-assets').textContent = totalAssets.toFixed(2);
+            document.getElementById('total-debt').textContent = '-0.00';
+            document.getElementById('net-worth').textContent = totalAssets.toFixed(2);
+            
+            // Update date
+            const dateStr = String(GameState.gameTime.month).padStart(2, '0') + '/' + 
+                           String(GameState.gameTime.day).padStart(2, '0') + '/' + 
+                           GameState.gameTime.year;
+            document.getElementById('game-date').textContent = dateStr;
+            document.getElementById('game-day').textContent = GameState.gameTime.day;
+            document.getElementById('game-turn').textContent = GameState.gameTime.turn;
+            
+            // Update market data
+            document.getElementById('blood-index').textContent = GameState.market.bloodIndex.toFixed(2);
+            document.getElementById('clone-price').textContent = GameState.market.clonePrice.toFixed(2);
+            document.getElementById('prime-rate').textContent = GameState.market.primeRate.toFixed(2);
+            
+            // Update news
+            const newsIndex = GameState.gameTime.turn % GameState.news.length;
+            document.getElementById('news-content').textContent = GameState.news[newsIndex];
+        }
+
+        // Command system
+        function executeCommand() {
+            const input = document.getElementById('command-input').value.trim();
+            if (!input) return;
+            
+            const cmd = input.toLowerCase();
+            
+            if (cmd === 'help') {
+                addToOutput('Available commands: 1-9, help, save, load, exit');
+            } else if (cmd === 'save') {
+                saveGame();
+            } else if (cmd === 'exit' || cmd === '0') {
+                if (confirm('Exit to main menu?')) {
+                    showScreen('setup-screen');
+                }
+            } else if (cmd === '1') {
+                showMenu('file');
+            } else if (cmd === '6') {
+                showMenu('portfolio');
+            } else if (cmd === '7') {
+                showMenu('market');
+            } else if (cmd === '9') {
+                showMenu('trade');
+            } else if (cmd === '17') {
+                endTurn();
+            } else {
+                addToOutput('Unknown command: ' + input);
+            }
+            
+            document.getElementById('command-input').value = '';
+        }
+
+        function showMenu(menuType) {
+            if (menuType === 'file') {
+                addToOutput('--- FILE MENU ---');
+                addToOutput('1. Save Game');
+                addToOutput('2. Load Game');
+                addToOutput('3. Export Save File');
+            } else if (menuType === 'portfolio') {
+                showScreen('portfolio-screen');
+                updatePortfolioDisplay();
+            } else if (menuType === 'market') {
+                showScreen('market-screen');
+                updateMarketDisplay();
+            } else if (menuType === 'trade') {
+                showScreen('trade-screen');
+                document.getElementById('trade-available-cash').textContent = GameState.player.cash.toFixed(2);
+            }
+        }
+
+        function addToOutput(text) {
+            const output = document.getElementById('command-output');
+            const line = document.createElement('div');
+            line.textContent = '> ' + text;
+            output.appendChild(line);
+            output.scrollTop = output.scrollHeight;
+        }
+
+        // Portfolio display
+        function updatePortfolioDisplay() {
+            const tbody = document.getElementById('portfolio-tbody');
+            tbody.innerHTML = '';
+            
+            if (GameState.player.portfolio.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7">No holdings</td></tr>';
+                return;
+            }
+            
+            GameState.player.portfolio.forEach(holding => {
+                const corp = GameState.corporations.find(c => c.ticker === holding.ticker);
+                if (!corp) return;
+                
+                const value = holding.shares * corp.price;
+                const cost = holding.shares * holding.avgPrice;
+                const gainLoss = value - cost;
+                const gainLossPercent = ((gainLoss / cost) * 100).toFixed(2);
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${corp.ticker}</td>
+                    <td>${corp.name}</td>
+                    <td>${holding.shares}</td>
+                    <td>$${holding.avgPrice.toFixed(2)}</td>
+                    <td>$${corp.price.toFixed(2)}</td>
+                    <td>$${value.toFixed(2)}</td>
+                    <td class="${gainLoss >= 0 ? 'stock-up' : 'stock-down'}">
+                        ${gainLoss >= 0 ? '+' : ''}$${gainLoss.toFixed(2)} (${gainLossPercent}%)
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Market display
+        function updateMarketDisplay() {
+            const tbody = document.getElementById('market-tbody');
+            tbody.innerHTML = '';
+            
+            GameState.corporations.forEach(corp => {
+                const change = corp.priceChange || 0;
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${corp.ticker}</td>
+                    <td>${corp.name}</td>
+                    <td>${corp.industry}</td>
+                    <td>$${corp.price.toFixed(2)}</td>
+                    <td class="${change >= 0 ? 'stock-up' : 'stock-down'}">
+                        ${change >= 0 ? '+' : ''}${change.toFixed(2)}%
+                    </td>
+                    <td>$${corp.week52High.toFixed(2)}</td>
+                    <td>$${corp.week52Low.toFixed(2)}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function searchMarket() {
+            const query = document.getElementById('market-search').value.toLowerCase();
+            const tbody = document.getElementById('market-tbody');
+            tbody.innerHTML = '';
+            
+            const filtered = GameState.corporations.filter(corp => 
+                corp.ticker.toLowerCase().includes(query) || 
+                corp.name.toLowerCase().includes(query)
+            );
+            
+            if (filtered.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7">No results found</td></tr>';
+                return;
+            }
+            
+            filtered.forEach(corp => {
+                const change = corp.priceChange || 0;
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${corp.ticker}</td>
+                    <td>${corp.name}</td>
+                    <td>${corp.industry}</td>
+                    <td>$${corp.price.toFixed(2)}</td>
+                    <td class="${change >= 0 ? 'stock-up' : 'stock-down'}">
+                        ${change >= 0 ? '+' : ''}${change.toFixed(2)}%
+                    </td>
+                    <td>$${corp.week52High.toFixed(2)}</td>
+                    <td>$${corp.week52Low.toFixed(2)}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Trading functions
+        function lookupStock() {
+            const ticker = document.getElementById('trade-ticker').value.toUpperCase().trim();
+            const corp = GameState.corporations.find(c => c.ticker === ticker);
+            
+            if (!corp) {
+                document.getElementById('trade-message').innerHTML = 
+                    '<span class="error">Stock not found: ' + ticker + '</span>';
+                document.getElementById('stock-info').style.display = 'none';
+                return;
+            }
+            
+            currentTradeTicker = ticker;
+            document.getElementById('stock-name-display').textContent = corp.name;
+            document.getElementById('stock-ticker-display').textContent = corp.ticker;
+            document.getElementById('stock-industry-display').textContent = corp.industry;
+            document.getElementById('stock-price-display').textContent = corp.price.toFixed(2);
+            document.getElementById('trade-available-cash').textContent = GameState.player.cash.toFixed(2);
+            
+            const holding = GameState.player.portfolio.find(h => h.ticker === ticker);
+            document.getElementById('trade-owned-shares').textContent = holding ? holding.shares : 0;
+            
+            document.getElementById('stock-info').style.display = 'block';
+            document.getElementById('trade-form').style.display = 'none';
+            document.getElementById('trade-message').textContent = '';
+        }
+
+        function setTradeType(type) {
+            currentTradeType = type;
+            document.getElementById('trade-form').style.display = 'block';
+            document.getElementById('trade-shares').value = 1;
+            updateTradeTotal();
+            
+            const ticker = currentTradeTicker;
+            const holding = GameState.player.portfolio.find(h => h.ticker === ticker);
+            
+            if (type === 'sell') {
+                const maxShares = holding ? holding.shares : 0;
+                document.getElementById('trade-shares').max = maxShares;
+                if (maxShares === 0) {
+                    document.getElementById('trade-message').innerHTML = 
+                        '<span class="error">You don\'t own any shares of ' + ticker + '</span>';
+                    document.getElementById('trade-form').style.display = 'none';
+                }
+            } else {
+                document.getElementById('trade-shares').removeAttribute('max');
+            }
+        }
+
+        function updateTradeTotal() {
+            const shares = parseInt(document.getElementById('trade-shares').value) || 0;
+            const corp = GameState.corporations.find(c => c.ticker === currentTradeTicker);
+            if (!corp) return;
+            
+            const total = shares * corp.price;
+            document.getElementById('trade-total').textContent = total.toFixed(2);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sharesInput = document.getElementById('trade-shares');
+            if (sharesInput) {
+                sharesInput.addEventListener('input', updateTradeTotal);
+            }
+        });
+
+        function executeTrade() {
+            const shares = parseInt(document.getElementById('trade-shares').value) || 0;
+            const ticker = currentTradeTicker;
+            const corp =

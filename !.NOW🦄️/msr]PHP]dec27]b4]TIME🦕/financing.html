@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: Financing</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Financing</h1>
+        <div class="separator">================================================</div>
+        <a href="index.html"><button>Back to Main Menu</button></a>
+
+        <div id="financing-menu">
+            <h3 style="color: #ffff00;">Financing Options</h3>
+            <button id="show-startup-form-btn">1. Startup New Corp</button>
+            <!-- Other financing options will be added here -->
+        </div>
+
+        <div id="startup-form-section" style="display: none; margin-top: 20px;">
+            <h3 style="color: #ffff00;">Startup New Corporation</h3>
+            <form id="startup-form">
+                <div class="info-line">
+                    <label>Corporation Name (5-25 chars):</label>
+                    <input type="text" name="corp_name" required>
+                </div>
+                <div class="info-line">
+                    <label>Ticker Symbol (1-6 chars):</label>
+                    <input type="text" name="ticker" required>
+                </div>
+                <div class="info-line">
+                    <label>Industry:</label>
+                    <select name="industry" required>
+                        <option>Loading...</option>
+                    </select>
+                </div>
+                <div class="info-line">
+                    <label>Country of Incorporation:</label>
+                    <select name="country" required>
+                        <option>Loading...</option>
+                    </select>
+                </div>
+                <div class="info-line">
+                    <label>Funding Amount (millions):</label>
+                    <input type="number" name="funding_amount" min="100" value="1000" required>
+                </div>
+                <button type="submit">Found Corporation</button>
+                <button type="button" id="cancel-startup-btn">Cancel</button>
+            </form>
+            <div id="startup-output" class="output-box" style="height: 100px; margin-top: 10px;"></div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const showStartupBtn = document.getElementById('show-startup-form-btn');
+            const startupFormSection = document.getElementById('startup-form-section');
+            const cancelStartupBtn = document.getElementById('cancel-startup-btn');
+            const startupForm = document.getElementById('startup-form');
+            const startupOutput = document.getElementById('startup-output');
+            const industrySelect = startupForm.querySelector('select[name="industry"]');
+            const countrySelect = startupForm.querySelector('select[name="country"]');
+
+            // --- Show/Hide Form ---
+            showStartupBtn.addEventListener('click', () => {
+                startupFormSection.style.display = 'block';
+                showStartupBtn.style.display = 'none';
+                populateSelects();
+            });
+            cancelStartupBtn.addEventListener('click', () => {
+                startupFormSection.style.display = 'none';
+                showStartupBtn.style.display = 'block';
+            });
+            
+            // --- Populate Selects ---
+            function populateSelects() {
+                // Populate Industries
+                fetch('php/get_industries.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        industrySelect.innerHTML = data.map(i => `<option value="${i.toUpperCase()}">${i}</option>`).join('');
+                    });
+                
+                // Populate Countries
+                fetch('php/get_governments.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.error) throw new Error(data.error);
+                        countrySelect.innerHTML = data.map(g => `<option value="${g.name}">${g.name}</option>`).join('');
+                    });
+            }
+
+            // --- Handle Form Submission ---
+            startupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                startupOutput.textContent = 'Incorporating...';
+
+                const formData = new FormData(this);
+                const playerName = localStorage.getItem('playerName') || 'Player1';
+                formData.append('player_name', playerName);
+
+                fetch('php/incorporation.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        startupOutput.textContent = `Success! ${data.message}`;
+                    } else {
+                        throw new Error(data.message);
+                    }
+                })
+                .catch(error => {
+                    startupOutput.innerHTML = `<span class="error">Error: ${error.message}</span>`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

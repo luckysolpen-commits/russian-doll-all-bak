@@ -1,0 +1,13 @@
+ticker_speed:sec
+currency:usd
+cheat_mode:off
+suppress_popups:off
+suppress_earn_rept:off
+autosave:off
+excersize_options:no
+make_physical_delivery:no
+take_physical_delivery:yes
+sweep_cash_to_repay_margin:yes
+stock_chart_size:small
+autoadd_to_streamlist:on
+autopilot:off

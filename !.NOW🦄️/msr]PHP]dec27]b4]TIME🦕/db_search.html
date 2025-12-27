@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: DB Search</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Database Search</h1>
+        <div class="separator">================================================</div>
+        <a href="index.html"><button>Back to Main Menu</button></a>
+
+        <div class="columns">
+            <!-- Left Column: Search Criteria -->
+            <div class="column">
+                <form id="search-form">
+                    <h3 style="color: #ffff00;">Search Criteria</h3>
+                    <div class="info-line">
+                        <label>Min Market Cap (M):</label>
+                        <input type="number" name="min_market_cap" value="0">
+                    </div>
+                    <div class="info-line">
+                        <label>Max Market Cap (M):</label>
+                        <input type="number" name="max_market_cap" value="100000">
+                    </div>
+                     <div class="info-line">
+                        <label>Publicly Traded Only:</label>
+                        <input type="checkbox" name="publicly_traded_only" value="1">
+                    </div>
+                     <div class="info-line">
+                        <label>Has Bonds Issued:</label>
+                        <input type="checkbox" name="has_bonds_issued" value="1">
+                    </div>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <!-- Right Column: Results -->
+            <div class="column">
+                <h3 style="color: #ffff00;">Results</h3>
+                <div id="results-output" class="output-box" style="height: 300px;">
+                    <p>Adjust criteria and press search.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const resultsOutput = document.getElementById('results-output');
+            resultsOutput.innerHTML = '<p>Searching...</p>';
+            
+            const formData = new FormData(this);
+
+            fetch('php/db_search.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                resultsOutput.innerHTML = ''; // Clear searching message
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
+                if (data.length === 0) {
+                    resultsOutput.innerHTML = '<p>No corporations found matching the criteria.</p>';
+                    return;
+                }
+
+                const table = document.createElement('table');
+                table.innerHTML = `
+                    <thead>
+                        <tr>
+                            <th>Ticker</th>
+                            <th>Name</th>
+                            <th>Market Cap (M)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                `;
+                const tbody = table.querySelector('tbody');
+
+                data.forEach(corp => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${corp.ticker}</td>
+                        <td>${corp.name}</td>
+                        <td>${corp.total_stock_capitalization.toFixed(2)}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+
+                resultsOutput.appendChild(table);
+            })
+            .catch(error => {
+                resultsOutput.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+            });
+        });
+    </script>
+</body>
+</html>

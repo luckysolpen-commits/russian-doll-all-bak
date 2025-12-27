@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: File Menu</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>File Menu</h1>
+        <div class="separator">================================================</div>
+        <a href="index.html"><button>Back to Main Menu</button></a>
+
+        <!-- Save Game Section -->
+        <div style="margin-top: 20px;">
+            <h3 style="color: #ffff00;">Save Game</h3>
+            <form id="save-form">
+                <input type="text" name="save_name" placeholder="Enter save name" value="MSR_Save" required>
+                <button type="submit">Download Save File</button>
+            </form>
+            <div id="save-output" class="output-box" style="height: 50px; margin-top: 10px;"></div>
+        </div>
+
+        <!-- Load Game Section -->
+        <div style="margin-top: 20px;">
+            <h3 style="color: #ffff00;">Load Game</h3>
+            <form id="load-form" enctype="multipart/form-data">
+                <input type="file" name="save_file" accept=".zip" required>
+                <button type="submit">Upload & Load Save</button>
+            </form>
+             <div id="load-output" class="output-box" style="height: 50px; margin-top: 10px;"></div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const saveForm = document.getElementById('save-form');
+            const saveOutput = document.getElementById('save-output');
+            const loadForm = document.getElementById('load-form');
+            const loadOutput = document.getElementById('load-output');
+
+            // --- Save Game ---
+            saveForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                saveOutput.textContent = 'Preparing save for download...';
+                const saveName = this.elements.save_name.value;
+                
+                // Construct the URL for download
+                window.location.href = `php/download_save.php?save_name=${encodeURIComponent(saveName)}`;
+                saveOutput.textContent = `Save "${saveName}.zip" downloaded (or will begin shortly).`;
+            });
+
+            // --- Load Game ---
+             loadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                loadOutput.textContent = 'Uploading and loading game...';
+                const formData = new FormData(this);
+                fetch('php/upload_and_load_game.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        loadOutput.innerHTML = `<span style="color: #00ff00;">${data.message} Redirecting to main menu...</span>`;
+                        // Redirect to index.html after successful load
+                        setTimeout(() => {
+                            window.location.href = 'index.html';
+                        }, 2000);
+                    } else {
+                        throw new Error(data.message);
+                    }
+                })
+                .catch(error => {
+                    loadOutput.innerHTML = `<span class="error">Error: ${error.message}</span>`;
+                });
+            });
+        });
+    </script>
+</body>

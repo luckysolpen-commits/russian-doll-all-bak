@@ -1,0 +1,269 @@
+# MARS STREETRACE RAIDER - Web Implementation Plan
+## Brainstorm & Questions Document
+
+---
+
+## CORE QUESTIONS ABOUT THE GAME
+
+### 1. Game Theme & Setting
+- **Q:** Is this literally set in the Mars underground from the CYOA book universe?
+  - Same clowns, same blood trade, same corporations (Redplanet Labs, etc.)?
+  - Are we mixing Wall Street Raider mechanics with the Mars dystopia?
+  
+### 2. Core Gameplay Loop
+Looking at the C code, I see:
+- **Players** with cash/portfolios
+- **Corporations** with financial sheets (stocks, bonds, loans)
+- **Governments** with GDP/budgets
+- **Market mechanics** (interest rates, news, stock prices)
+- **Time progression** (clock system with years/months/days)
+
+**Q:** For Mars Streetrace Raider, what's the MAIN gameplay?
+- Are players:
+  - Trading blood/clone stocks on Mars stock exchange?
+  - Running dune buggy convoys to hijack competitors?
+  - Managing corporations (like WSR)?
+  - Street racing for territory/cash?
+  - All of the above in a combined simulation?
+
+### 3. Save/Load System
+**CLARIFIED:** CSV files on GoDaddy server, human-readable
+- Each new game erases temp CSVs
+- Players can download save file
+- Players can upload save file to continue
+
+**Q:** What needs to be saved?
+- Player stats (cash, inventory, reputation)?
+- Corporation ownership/stocks?
+- Game time/turn number?
+- Vehicle modifications?
+- Territory control?
+
+### 4. Core Features Priority
+**Q:** Which features do we implement FIRST?
+
+**Phase 1 Options:**
+- [ ] Basic game setup (player creation, starting cash)
+- [ ] Simple market/stock trading interface
+- [ ] Time progression system
+- [ ] Corporation management
+- [ ] Street racing minigame
+- [ ] Blood convoy hijacking
+- [ ] Dune buggy customization
+
+**My Suggestion for Phase 1:**
+1. Game setup screen (create player, starting cash)
+2. Main dashboard (Bloomberg-style terminal)
+3. Time system (can advance turns)
+4. Basic CSV save/load
+5. Simple stock market (buy/sell with price changes)
+
+### 5. UI/Visual Style
+**Q:** What aesthetic do we want?
+- Retro terminal (green text on black, like the C version)?
+- Cyberpunk/futuristic Bloomberg terminal (red/blue neon)?
+- Mix of both?
+- Graphics for vehicles/combat or pure text?
+
+**Suggestion:** Start with terminal aesthetic (matches Steam ad), can add visuals later
+
+---
+
+## TECHNICAL ARCHITECTURE PLAN
+
+### File Structure
+```
+mars-streetrace-raider/
+├── index.html          (main game interface)
+├── css/
+│   └── terminal.css    (cyberpunk terminal styling)
+├── js/
+│   ├── game.js         (main game loop)
+│   ├── market.js       (stock/commodity trading)
+│   ├── player.js       (player data management)
+│   ├── corporations.js (corp generation/management)
+│   ├── save.js         (CSV save/load system)
+│   └── clock.js        (time progression)
+├── php/
+│   ├── save_game.php   (write CSV to server)
+│   ├── load_game.php   (read CSV from server)
+│   └── clear_temp.php  (delete old saves)
+└── data/
+    └── temp/           (temporary CSV storage)
+```
+
+### CSV Data Structure
+
+**players.csv:**
+```csv
+name,cash,type,ticker_on
+PlayerName,10000.00,HUMAN,false
+```
+
+**corporations.csv:**
+```csv
+ticker,name,industry,price,shares_outstanding,free_cash,total_assets,net_worth
+RPL,Redplanet Labs,BIOTECH,50.25,100.0,500.0,2000.0,1500.0
+CMF,Clown Mafia Front,ENTERTAINMENT,12.50,50.0,100.0,500.0,300.0
+```
+
+**portfolio.csv:**
+```csv
+player,ticker,shares,avg_price
+PlayerName,RPL,10,48.50
+PlayerName,CMF,25,11.75
+```
+
+**game_state.csv:**
+```csv
+key,value
+current_year,2025
+current_month,1
+current_day,1
+current_turn,1
+interest_rate,2.5
+```
+
+### PHP Save/Load System
+
+**save_game.php** - receives JSON, converts to CSV, stores on server
+**load_game.php** - reads CSV, converts to JSON, sends to client
+**download_save.php** - packages all CSVs into zip for user download
+**upload_save.php** - accepts zip upload, extracts CSVs to server
+
+---
+
+## IMPLEMENTATION PHASES
+
+### Phase 1: Foundation (FIRST PRIORITY)
+**Goal:** Get basic game running with save/load
+
+**Features:**
+- [ ] Game setup screen
+  - Enter player name
+  - Set starting cash
+  - Choose game length (years)
+- [ ] Main dashboard
+  - Display player cash/net worth
+  - Display game date/time
+  - Show basic market info
+- [ ] Time progression
+  - "End Turn" button advances time
+  - Simple day/month/year counter
+- [ ] CSV save system
+  - Save button → writes to server
+  - Download button → get zip file
+  - Load button → upload previous game
+  - New game → clear temp files
+
+**Files to create:** index.html, game.js, save.js, save_game.php
+
+### Phase 2: Market System
+**Features:**
+- [ ] Corporation generation (from C code logic)
+- [ ] Stock market interface
+  - List of stocks with prices
+  - Buy/sell interface
+  - Portfolio display
+- [ ] Basic price changes (random walk for now)
+- [ ] News ticker (random events)
+
+### Phase 3: Advanced Features
+**Features:**
+- [ ] Blood convoy system
+- [ ] Dune buggy customization
+- [ ] Territory control
+- [ ] Combat/racing minigames
+- [ ] AI competitors
+
+---
+
+## QUESTIONS FOR YOU
+
+### Critical Decisions Needed:
+
+1. **Game Theme:** Is this set in your CYOA Mars universe? Should corporations be RPL, CMF, etc.?
+
+2. **Gameplay Balance:** What's the split between:
+   - Stock trading (Wall Street Raider style): ___%
+   - Vehicle combat/racing (Mad Max style): ___%
+   - Territory/business management (GTA style): ___%
+
+3. **Starting Corporations:** Should I use:
+   - Your C code's corporation list (real US companies)?
+   - Mars-themed fictional corporations?
+   - Mix of both?
+
+4. **Complexity Level:** For Phase 1, do you want:
+   - **Simple:** Just player cash, basic stocks, turn counter
+   - **Medium:** + corporations with balance sheets, news system
+   - **Complex:** + governments, banks, full WSR mechanics
+
+5. **Time System:** How should time progress?
+   - Real-time (clock ticks automatically)?
+   - Turn-based (player clicks "End Turn")?
+   - Hybrid (auto-advance with pause)?
+
+---
+
+## WHAT I CAN START CODING NOW (90%+ Confident)
+
+Based on your C code, I can immediately build:
+
+1. **index.html** - Terminal-style dashboard with:
+   - Player info display
+   - Game clock
+   - Menu system (numbered options like C version)
+   - News ticker
+
+2. **game.js** - Basic game state management:
+   - Player object
+   - Game time tracking
+   - Menu navigation
+
+3. **save.js** - Client-side CSV handling:
+   - Convert game state to CSV format
+   - Parse CSV back to game state
+   - Trigger download/upload
+
+4. **save_game.php** - Server-side save:
+   - Accept POST with CSV data
+   - Write to temp directory
+   - Return success/failure
+
+5. **Basic CSS** - Terminal aesthetic matching your Steam ad
+
+---
+
+## NEXT STEPS
+
+**Please answer:**
+1. Should I start with the simple terminal dashboard (index.html)?
+2. What corporations should exist in the Mars universe?
+3. What's the core gameplay loop you envision?
+
+**Then I'll code:**
+- Phase 1 foundation (setup + save/load)
+- Get it working on your GoDaddy
+- Iterate from there
+
+---
+
+## NOTES FROM C CODE ANALYSIS
+
+Your existing game has:
+- **53 corporations** (various industries: banking, insurance, biotech, etc.)
+- **7 governments** (Mars geography: Inland, Farland, Robot State, Solar Empire, etc.)
+- **Complex financial system** (balance sheets, P&E ratios, debt, etc.)
+- **Time system** (year/month/day/hour/minute/second/centisecond)
+- **AI module** for computer players
+- **News generation** system
+- **Portfolio management**
+- **Various menus** (File, Settings, Management, Financing, etc.)
+
+**Key insight:** Your C game is a full Wall Street Raider clone with Mars theme overlay. The web version could be:
+- Streamlined version (fewer corporations, simpler mechanics)
+- Full port (recreate everything in JS/PHP)
+- Hybrid (core WSR mechanics + new Mars-specific features like racing/combat)
+
+Which direction?

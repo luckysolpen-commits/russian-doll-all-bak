@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: Corporations</title>
+    <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>CORPORATIONS</h1>
+        <div class="separator">================================================</div>
+        <a href="index.html"><button>Back to Main Menu</button></a>
+        
+        <table style="margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>TICKER</th>
+                    <th>NAME</th>
+                    <th>INDUSTRY</th>
+                    <th>STOCK PRICE</th>
+                </tr>
+            </thead>
+            <tbody id="corporations-table-body">
+                <tr>
+                    <td colspan="4">Loading corporations...</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <a href="index.html" style="margin-top: 20px; display: inline-block;"><button>Back to Main Menu</button></a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableBody = document.getElementById('corporations-table-body');
+            
+            fetch('php/get_corporations.php')
+                .then(response => response.json())
+                .then(data => {
+                    tableBody.innerHTML = ''; // Clear loading message
+                    
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
+                    
+                    if (data.length === 0) {
+                        tableBody.innerHTML = '<tr><td colspan="4">No corporations found. Please run setup.</td></tr>';
+                        return;
+                    }
+
+                    data.forEach(corp => {
+                        const row = document.createElement('tr');
+                        
+                        const tickerCell = document.createElement('td');
+                        tickerCell.textContent = corp.ticker;
+                        row.appendChild(tickerCell);
+
+                        const nameCell = document.createElement('td');
+                        nameCell.textContent = corp.name;
+                        row.appendChild(nameCell);
+                        
+                        const industryCell = document.createElement('td');
+                        industryCell.textContent = corp.industry;
+                        row.appendChild(industryCell);
+                        
+                        const priceCell = document.createElement('td');
+                        priceCell.textContent = typeof corp.stock_price === 'number' ? '$' + corp.stock_price.toFixed(2) : 'N/A';
+                        row.appendChild(priceCell);
+                        
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    tableBody.innerHTML = `<tr><td colspan="4">Error loading data: ${error.message}</td></tr>`;
+                });
+        });
+    </script>
+</body>
+</html>
