@@ -1,0 +1,74 @@
+# Refactor Blueprint: craft.js to Multi-Window Compatible Version
+
+## Current State Analysis
+- **Current craft.js**: Has multi-window infrastructure but simplified game mechanics
+- **Original craft]og.js**: Full 3D crafting game with pyramid planet, controls, UI elements, etc.
+- **Goal**: Combine full functionality of original game with multi-window architecture
+
+## Key Differences to Address
+
+### 1. Missing UI Components (from original)
+- Dropdown menu with File operations (New, Open Project, Save)
+- Text and Platform buttons
+- File viewer section
+- Crosshair overlay
+- UI container with minimap canvas
+- Controls display
+- Inventory and Menu overlays
+- More detailed color picker with selection tracking
+
+### 2. Game Mechanics (from original)
+- Complete pyramid planet generation with different block types by level
+- 2D/3D view switching functionality
+- Player movement in both views
+- Mouse look and pointer lock
+- Picker mode with raycasting
+- Block mining/placing functionality
+- Collision detection with pyramid
+- Player physics (gravity, jumping)
+- Minimap rendering
+- Color palette with selection and status
+
+### 3. Event Management (from original)
+- Keyboard controls for movement, viewing, and actions
+- Mouse handling for look and interaction
+- File operations and project management
+- Save/load functionality for maps
+
+## Refactor Plan
+
+### Phase 1: Enhance HTML Template
+- Add all missing UI elements with instance-aware IDs
+- Ensure all button event handlers reference proper instance
+- Add all necessary HTML elements from original game
+
+### Phase 2: Update Instance-Aware Methods
+- Add toggleInventory() and toggleMenu() methods with instance-aware DOM access
+- Update all event listeners to use instance-aware selectors
+- Ensure all internal functions use getEl() helper for DOM access
+
+### Phase 3: Implement Full Game Logic
+- Replace current simplified setupCraftGame() with full original game logic
+- Ensure all DOM element references use instance-aware IDs
+- Update all internal function calls to be compatible with instance architecture
+- Convert all document.getElementById() calls to use getEl() helper
+
+### Phase 4: Connect Event Listeners
+- Update all event listeners to use the instance context
+- Ensure keyboard/mouse events are properly bound to the instance
+- Update any global window.craftApp references to use instance context
+
+### Phase 5: Testing
+- Verify craft command opens windows properly
+- Test multiple instances running simultaneously
+- Ensure all game functionality works in each instance independently
+- Confirm no cross-contamination between instances
+
+## Critical Implementation Notes
+
+1. Every document.getElementById() must be replaced with getEl() helper
+2. Event handlers in HTML must reference window.appInstances[instanceId]
+3. Internal method calls like window.craftApp.toggleInventory() must use "self" context
+4. The setupGame() method is the core game engine and needs complete rewrite
+5. All UI elements must have instanceId-prefixed IDs
+6. The game loop and all related functionality must be instance-specific

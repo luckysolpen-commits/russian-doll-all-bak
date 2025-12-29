@@ -1,0 +1,46 @@
+<?php
+// Test script to verify update_piece_position.php functionality
+
+// Test data
+$testData = [
+    'pieceId' => '6950fbbb29754', // First soldier from our CSV
+    'newX' => 3,
+    'newY' => 1,
+    'newZ' => 4
+];
+
+echo "Testing update_piece_position.php with data:\n";
+echo json_encode($testData) . "\n";
+
+$context = stream_context_create([
+    'http' => [
+        'method' => 'POST',
+        'header' => "Content-Type: application/json\r\n",
+        'content' => json_encode($testData)
+    ]
+]);
+
+$response = file_get_contents('http://localhost:8000/php/update_piece_position.php', false, $context);
+
+echo "Response from update_piece_position.php:\n";
+echo $response . "\n";
+
+if ($response) {
+    $result = json_decode($response, true);
+    if ($result && isset($result['status']) && $result['status'] === 'success') {
+        echo "\nSUCCESS: Piece position was updated!\n";
+    } else {
+        echo "\nFAILED: " . ($result['message'] ?? 'Unknown error') . "\n";
+    }
+} else {
+    echo "\nFAILED: Could not reach the update script\n";
+}
+
+// Also read the file to check the current state
+echo "\nCurrent pieces.csv content:\n";
+if (file_exists('../3d.tactics.board.frame.php]e6/pieces.csv')) {
+    echo file_get_contents('../3d.tactics.board.frame.php]e6/pieces.csv');
+} else {
+    echo "File not found!\n";
+}
+?>

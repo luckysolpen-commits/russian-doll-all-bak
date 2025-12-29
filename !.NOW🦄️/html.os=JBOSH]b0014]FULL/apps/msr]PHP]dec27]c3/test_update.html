@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Position Test</title>
+</head>
+<body>
+    <h1>Testing Update Position Functionality</h1>
+    <button onclick="testUpdate()">Test Update Position</button>
+    <div id="output"></div>
+    
+    <script>
+    async function testUpdate() {
+        const output = document.getElementById('output');
+        
+        // Test data to update first soldier to position 1,1,1
+        const testData = {
+            pieceId: '69510064eeacb', // First soldier's ID
+            newX: 1,
+            newY: 1,
+            newZ: 1
+        };
+        
+        output.innerHTML = 'Sending update request...<br>';
+        
+        try {
+            const response = await fetch('php/update_piece_position.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(testData)
+            });
+            
+            const result = await response.json();
+            output.innerHTML += 'Response:<br><pre>' + JSON.stringify(result, null, 2) + '</pre><br>';
+            
+            if (result.status === 'success') {
+                output.innerHTML += 'SUCCESS: Position updated!<br>';
+                
+                // Now fetch the pieces to verify the update occurred
+                const piecesResponse = await fetch('../3d.tactics.board.frame.php]e6/get_pieces.php');
+                const pieces = await piecesResponse.json();
+                output.innerHTML += 'Current pieces:<br><pre>' + JSON.stringify(pieces, null, 2) + '</pre>';
+            } else {
+                output.innerHTML += 'ERROR: ' + result.message + '<br>';
+            }
+        } catch (error) {
+            output.innerHTML += 'ERROR: ' + error.message + '<br>';
+        }
+    }
+    </script>
+</body>
+</html>

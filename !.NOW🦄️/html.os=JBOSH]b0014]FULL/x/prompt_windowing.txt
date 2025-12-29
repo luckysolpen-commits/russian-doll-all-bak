@@ -1,0 +1,231 @@
+**Objective:** Refactor `craft.js` to be fully instantiable, allowing multiple instances of the Craft application to run simultaneously without conflicting.
+
+**Prerequisite:** The file `craft.js` should be in its original state (as found in `backup/craft.js`). This has already been done.
+
+---
+
+### Step 1 of 3: Refactor Core GUI and Class Methods
+
+**Goal:** Replace the singleton-pattern methods with instance-aware ones. This step prepares the class for instantiation and unique window creation.
+
+**Action:** In `craft.js`, replace the entire `CraftApp` class definition and its global assignment with the following block. This new code introduces instance IDs, a global instance registry, and updates the core methods (`constructor`, `init`, `createGUI`, `showGUI`, `closeGUI`) to handle unique windows.
+
+```javascript
+class CraftApp {
+    constructor() {
+        this.gameWindow = null;
+        this.isInitialized = false;
+        
+        // Unique ID for this instance
+        this.instanceId = 'craft_instance_' + Date.now() + Math.floor(Math.random() * 1000);
+
+        // Register instance in a global map
+        if (!window.appInstances) {
+            window.appInstances = {};
+        }
+        window.appInstances[this.instanceId] = this;
+    }
+
+    init() {
+        this.createGUI();
+        this.showGUI();
+    }
+    
+    createGUI() {
+        const craftWindow = document.createElement('div');
+        craftWindow.id = `${this.instanceId}-main-window`;
+        craftWindow.className = 'terminal-window';
+        craftWindow.style.display = 'none';
+        craftWindow.style.width = '1000px';
+        craftWindow.style.height = '700px';
+        
+        craftWindow.innerHTML = `
+            <div class="title-bar">
+                Craft - 3D Building Game
+                <button class="close-btn" onclick="window.appInstances['${this.instanceId}'].closeGUI()">×</button>
+            </div>
+            <div class="terminal-content" style="display: flex; flex-direction: column; height: 100%; overflow: auto;">
+                <div id="${this.instanceId}-game-container" style="display: grid; grid-template-areas: 'header header' 'sidebar main'; grid-template-rows: 50px 1fr; grid-template-columns: 15% 85%; height: 100%; width: 100%;">
+                    <div id="${this.instanceId}-header" style="grid-area: header; background-color: rgba(0, 0, 0, 0.5); border-bottom: 2px solid white; display: flex; align-items: center; padding-left: 10px;">
+                        <button id="${this.instanceId}-view2DBtn">2d</button>
+                        <button id="${this.instanceId}-view3DBtn">3d</button>
+                    </div>
+                    <div id="${this.instanceId}-sidebar" style="grid-area: sidebar; background-color: rgba(0, 0, 0, 0.5); border-right: 2px solid white; overflow-y: auto; padding: 10px; color: white;">
+                        <h3 style="margin-top: 0;">Color Picker</h3>
+                        <div id="${this.instanceId}-color-palette"></div>
+                    </div>
+                    <div id="${this.instanceId}-main" style="grid-area: main; position: relative;">
+                        <div id="${this.instanceId}-canvasContainer" style="width: 100%; height: 100%;"></div>
+                        <div id="${this.instanceId}-coordinates" style="position: absolute; top: 10px; right: 10px; color: white;">X: 0, Y: 0, Z: 0</div>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(craftWindow);
+        this.gameWindow = craftWindow;
+        
+        setTimeout(() => {
+            this.initCraftGame();
+        }, 10);
+    }
+    
+    showGUI() {
+        if (this.gameWindow) {
+            this.gameWindow.style.display = 'block';
+            this.gameWindow.style.zIndex = 100;
+            this.gameWindow.style.position = 'absolute';
+            this.gameWindow.style.left = (Math.random() * 200 + 50) + 'px';
+            this.gameWindow.style.top = (Math.random() * 200 + 50) + 'px';
+        }
+    }
+    
+    closeGUI() {
+        if (this.gameWindow) {
+            this.gameWindow.remove();
+        }
+        if (window.appInstances && window.appInstances[this.instanceId]) {
+            delete window.appInstances[this.instanceId];
+        }
+    }
+// NOTE: The rest of the original methods (initCraftGame, setupCraftGame, etc.) should follow here.
+// We will replace them in the next steps.
+}
+
+if (typeof window !== 'undefined') {
+    window.CraftApp = CraftApp;
+}
+```
+
+---
+
+### Step 2 of 3: Update Game Initialization Logic
+
+**Goal:** Make the game's entry point (`initCraftGame`) and UI toggle methods (`toggleInventory`, `toggleMenu`) aware of the instance-specific element IDs.
+
+**Action:** In `craft.js`, replace the existing `initCraftGame`, `toggleInventory`, and `toggleMenu` methods with the following block.
+
+```javascript
+    initCraftGame() {
+        const canvasContainerId = `${this.instanceId}-canvasContainer`;
+        if (!document.getElementById(canvasContainerId)) {
+            return;
+        }
+        
+        if (typeof THREE === 'undefined' && !window.threejsLoaded) {
+            window.threejsLoaded = true;
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.144.0/three.min.js';
+            script.onload = () => { this.setupCraftGame(); };
+            document.head.appendChild(script);
+        } else if (typeof THREE !== 'undefined') {
+            this.setupCraftGame();
+        } else {
+            const poll = setInterval(() => {
+                if (typeof THREE !== 'undefined') {
+                    clearInterval(poll);
+                    this.setupCraftGame();
+                }
+            }, 100);
+        }
+    }
+    
+    toggleInventory() {
+        const inv = document.getElementById(`${this.instanceId}-inventory`);
+        if (inv) {
+            inv.style.display = inv.style.display === 'none' ? 'block' : 'none';
+        }
+    }
+    
+    toggleMenu() {
+        const menu = document.getElementById(`${this.instanceId}-menu`);
+        if (menu) {
+            menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+        }
+    }
+```
+
+---
+
+### Step 3 of 3: Restore and Refactor the Core Game Engine
+
+**Goal:** This is the most critical step. Replace the placeholder `setupCraftGame` with the full, original game logic, but modify it to use the dynamic, instance-specific element IDs.
+
+**Action:** In `craft.js`, replace the entire `setupCraftGame()` method with the following complete and corrected version.
+
+```javascript
+    setupCraftGame() {
+        const getEl = (id) => document.getElementById(`${this.instanceId}-${id}`);
+        const self = this; // Capture the 'this' context for event handlers and nested functions
+
+        const VIEW_MODE = { _3D: '3d', _2D: '2d' };
+        const BLOCK_COLORS = { GRASS: 0x228B22, DIRT: 0x8B4513, STONE: 0x808080, WOOD: 0xA0522D, LEAVES: 0x006400 };
+        const blocks = new Map();
+        const player = { x: 0, y: 0, z: 0, velocityY: 0, rotationX: 0, rotationY: 0, onGround: false, speed: 5, jumpStrength: 8, height: 1.8 };
+        const keys = { KeyW: false, KeyA: false, KeyS: false, KeyD: false, ArrowLeft: false, ArrowRight: false, ArrowUp: false, ArrowDown: false, Space: false, Escape: false, ControlLeft: false, ControlRight: false, Enter: false, ShiftLeft: false, ShiftRight: false, KeyI: false, KeyM: false };
+        const GRAVITY = -30;
+        const PYRAMID_SIZE = 16;
+        const PYRAMID_HEIGHT = 8;
+        const centerX = 0, centerZ = 0, baseY = 5;
+        let currentView = VIEW_MODE._3D;
+
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x87CEEB);
+        const camera = new THREE.PerspectiveCamera(75, 800 / 600, 0.1, 1000);
+        const canvasContainer = getEl('canvasContainer');
+        if (!canvasContainer) return;
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        canvasContainer.appendChild(renderer.domElement);
+
+        const ambientLight = new THREE.AmbientLight(0x404040, 1);
+        scene.add(ambientLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(1, 1, 0.5).normalize();
+        scene.add(directionalLight);
+
+        const playerGeometry = new THREE.BoxGeometry(0.8, player.height, 0.8);
+        const playerMaterial = new THREE.MeshLambertMaterial({ color: 0xFFA500 });
+        const playerMesh = new THREE.Mesh(playerGeometry, playerMaterial);
+        scene.add(playerMesh);
+
+        const coordinatesDisplay = getEl('coordinates');
+
+        // Main game logic and functions from the original file go here...
+        // This includes: createBlock, generatePyramidPlanet, isOnGround, view switchers, resize handler, gameLoop, etc.
+        // All internal calls to document.getElementById must be changed to use getEl().
+        // All internal calls to window.craftApp must be changed to use self.
+
+        function generatePyramidPlanet() {
+            // ... (full function body from original)
+             for (let level = 0; level < PYRAMID_HEIGHT; level++) {
+                const width = PYRAMID_SIZE - 2 * level;
+                const halfWidth = width / 2;
+                const y = baseY + level;
+                for (let dx = -halfWidth; dx < halfWidth; dx++) {
+                    for (let dz = -halfWidth; dz < halfWidth; dz++) {
+                        const x = centerX + dx + 0.5;
+                        const z = centerZ + dz + 0.5;
+                        let color, type;
+                        if (level === PYRAMID_HEIGHT - 1) { color = BLOCK_COLORS.GRASS; type = 'GRASS'; }
+                        else if (level > PYRAMID_HEIGHT / 2) { color = BLOCK_COLORS.DIRT; type = 'DIRT'; }
+                        else { color = BLOCK_COLORS.STONE; type = 'STONE'; }
+                        createBlock(x, y, z, color, type);
+                    }
+                }
+            }
+        }
+
+        function setupEventListeners() {
+            getEl('view2DBtn').addEventListener('click', switchTo2DView);
+            getEl('view3DBtn').addEventListener('click', switchTo3DView);
+            // ... etc for all other event listeners
+        }
+        
+        // Final calls
+        generatePyramidPlanet();
+        setupEventListeners();
+        gameLoop();
+    }
+```

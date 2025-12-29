@@ -1,0 +1,35 @@
+JOB.OS BUGS DISCOVERED - December 28, 2025
+============================================
+
+1. CUBE CANVAS ISSUE
+-------------------
+- Problem: After CSS changes, cube.js canvas was not displaying properly / too small
+- Status: FIXED
+- Solution: Updated cube.js to properly handle canvas container sizing and added resize listener
+
+2. TERMINAL SCROLLING ISSUE
+-------------------------
+- Problem: Terminal didn't automatically scroll to show cursor at bottom
+- Problem: Scroll bar didn't default to bottom position after new content was added
+- Status: FIXED
+- Solution: Enhanced scroll behavior in processCommand to always scroll to bottom and ensure cursor visibility
+
+3. TERMINAL OPENING POSITION ISSUE
+--------------------------------
+- Problem: When opening a new terminal, sometimes it opened partially hidden behind the OS footer
+- Status: FIXED
+- Solution: Updated createTerminal to calculate positions within visible area, avoiding the toolbar and minimized tab bar
+
+4. TERMINAL INPUT ISSUE AFTER MINIMIZE
+------------------------------------
+- Problem: When a terminal is minimized then reopened, it no longer accepts input
+- Status: NEW
+- Expected: Terminal should accept input after being restored from minimized state
+
+5. PREVIOUS ENHANCEMENTS
+------------------------
+- ✅ Created shared CSS for all app windows
+- ✅ Added minimize and fullscreen buttons to all app headers
+- ✅ Implemented minimized windows tab bar at bottom
+- ✅ Added scroll functionality to minimized tab bar
+- ✅ Fixed craft.js header disappearing on resize

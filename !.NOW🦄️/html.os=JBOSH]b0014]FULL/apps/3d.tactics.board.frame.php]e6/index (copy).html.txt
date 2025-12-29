@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Tactical Board Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        #gameContainer {
+            width: 100vw;
+            height: 100vh;
+        }
+        #controlsInfo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer"></div>
+    <div id="controlsInfo">
+        <p><strong>Controls:</strong></p>
+        <p>Arrow Keys: Move selector/piece</p>
+        <p>Ctrl: Toggle between selector and piece movement mode</p>
+        <p>WASD: Move camera (W-forward, S-backward, A-left, D-right)</p>
+        <p>Q/E: Rotate camera left/right</p>
+        <p>When selector is active: Arrow keys move the selector</p>
+        <p>When piece is selected: Arrow keys move the selected piece</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

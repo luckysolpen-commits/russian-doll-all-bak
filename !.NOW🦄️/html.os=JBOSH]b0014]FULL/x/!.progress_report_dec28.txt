@@ -1,0 +1,74 @@
+**Progress Report: December 28, 2025**
+
+---
+
+### **Overall Goal:**
+
+Refactor the Mars Streetrace Raider and 3D Tactics Board Game projects into a unified, multi-window desktop application using the existing PHP/JS/HTML stack.
+
+### **Current Status:**
+
+Most critical issues have been addressed, including fixing the `craft.js` functionality and implementing proper window focus handling. Remaining issues involve window dragging functionality.
+
+---
+
+### **Completed Actions:**
+
+1.  **CLI Setup:** The basic CLI environment is functional, and commands can be processed.
+2.  **`cube.js` Integration:**
+    *   The `cube.js` file was created, containing a basic Three.js rotating cube application.
+    *   The `CubeApp` class within `cube.js` was correctly renamed from `CraftApp` to `CubeApp` to avoid naming conflicts.
+    *   A `cube` command was successfully added to `script.js` which correctly instantiates and launches `CubeApp` windows.
+    *   `cube.js` is correctly loaded via a `<script>` tag in `g.clay]b3.txt.html`.
+3.  **`craft.js` Refactoring & Integration:**
+    *   Full 3D crafting game functionality has been restored from `backup/craft]og.js`.
+    *   The `craft.js` file has been refactored to be fully multi-window compatible with instance-aware UI elements.
+    *   Proper instance IDs are generated for each game instance, preventing element ID conflicts.
+    *   A `craft` command was added to `script.js` which correctly instantiates and launches `CraftApp` windows.
+    *   All game features including pyramid planet generation, 2D/3D views, controls, color picker, etc. are now functional.
+4.  **Window Focus/Z-index Management:**
+    *   Windows now properly come to the front (`z-index`) and receive a visual highlight (`.active` class) when clicked.
+    *   Fixed CraftApp windows to have proper mousedown event handling for focus management.
+    *   Implemented proper event bubbling for canvas elements to avoid focus capture issues.
+    *   Both cube and craft windows now behave like regular terminal windows for focus management.
+
+---
+
+### **Completed Actions:**
+
+5.  **Drivable Window Support for Craft/Cube:**
+    *   Craft and Cube windows now have draggable title bars like regular terminal windows.
+    *   The `makeDraggable()` function is now applied to Craft and Cube windows during creation.
+    *   Both Craft and Cube windows can now be moved around by dragging their title bars.
+    *   All windows in the application now behave consistently with respect to dragging and positioning.
+
+6.  **Responsive Window Sizing:**
+    *   Craft and Cube windows now automatically size themselves to be smaller than the browser window.
+    *   Windows will not exceed browser dimensions, with 100px margins (50px each side).
+    *   This fixes the original issue where `cube.js` windows were opening at default large sizes.
+    *   Implemented responsive sizing in both `createGUI()` and `showGUI()` methods.
+
+---
+
+### **Remaining Critical Issues:**
+
+None - All major functionality has been implemented and tested.
+
+---
+
+### **Detailed Problem Description & Diagnostic Information:**
+
+**Completed: Window Dragging for Craft/Cube Windows**
+
+*   **Solution Implemented:** Applied the `makeDraggable()` function to Craft and Cube windows during their creation in the `createGUI()` methods.
+*   **Result:** Both Craft and Cube windows now respond to title bar dragging just like regular terminal windows.
+
+**Completed: Responsive Window Sizing**
+
+*   **Solution Implemented:** Added dynamic sizing calculations in `createGUI()` and `showGUI()` methods to ensure windows are always smaller than the browser viewport.
+*   **Result:** Craft and Cube windows now automatically adjust their size based on the browser window dimensions with appropriate margins.
+
+---
+
+<<<<<<<<<<<<<< also .3d.tactics.board.frame.php]e6 shouldnt be "inside"msr]PHP]dec27]c2
+, they should both be in "2do_apps" (while done should be in "live_apps")>>>>>>>>>>>>>>

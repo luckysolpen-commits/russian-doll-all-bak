@@ -1,0 +1,337 @@
+# Terminal Refactor: Implementing Proper Process Control and Terminal-like Behavior
+
+## Current Issue
+The current system has applications (craft, cube, etc.) that, when launched via terminal commands, run in separate windows but do not allow users to regain control of the terminal. In a proper terminal environment, when running a program (like 'craft'), users should be able to use Ctrl+C to terminate the program and return to the command prompt.
+
+## Current Behavior
+- User types 'craft' in terminal
+- Craft window opens in a separate window
+- Terminal cursor remains in the command prompt
+- No way to "exit" the program and return to the terminal properly
+- Multiple programs can run simultaneously
+
+## Desired Behavior
+- User types 'craft' in terminal
+- Craft starts running in the terminal (or at least in a way that acknowledges the terminal context)
+- User can press Ctrl+C or some other command to terminate the program
+- Control returns to the terminal command prompt
+- OR if the program runs in a separate window, the terminal should block until the window is closed, then return control
+
+## Requirements for Refactor
+
+### 1. Process Management System
+- Implement a system to track running processes
+- Each command execution should create a running "process"
+- Processes should have a state: running, suspended, terminated
+- Ability to list running processes (like 'ps' command)
+
+### 2. Terminal Input/Output Control
+- When a program is running, the terminal should either:
+  A) Be blocked until program termination, OR
+  B) Allow multiple programs but provide a way to bring focus back to the terminal
+- Terminal should recognize when a process is running vs idle
+
+### 3. Signal Handling
+- Implement terminal interrupt (Ctrl+C equivalent) to terminate running programs
+- Provide commands like 'kill', 'jobs', 'fg', 'bg' similar to bash
+- Handle foreground vs background process management
+
+### 4. Application Integration
+- Modify apps (craft, cube, etc.) to be aware of terminal context
+- Apps should be able to run in "terminal mode" or "window mode"
+- Implement proper exit procedures for applications
+
+### 5. User Experience
+- Clear indication when a program is running in the terminal
+- Visual feedback when waiting for input vs running a program
+- Intuitive way to switch between running programs and terminal
+
+## Implementation Options
+
+### Option A: Synchronous Execution
+- When user types 'craft', the command blocks the terminal
+- Craft runs in a separate window but the terminal is aware
+- User can press a special key combination (like Ctrl+C) to terminate
+- When craft window is closed, terminal automatically returns control
+
+### Option B: Unix Shell with Job Control (Recommended)
+This option implements a comprehensive Unix-like shell experience with process management capabilities:
+
+#### B.1 Core Job Control Commands
+- `craft` - Starts craft in background by default
+- `craft &` - Explicitly starts craft in background
+- `jobs` - Lists all running jobs with [job_id] and status
+- `fg %job_id` - Brings job to foreground (terminal blocking)
+- `bg %job_id` - Continues a suspended job in the background
+- `kill %job_id` or `kill -9 %job_id` - Terminate specific job
+- `Ctrl+C` when foreground process is running - Terminate current process
+- `Ctrl+Z` when foreground process is running - Suspend current process
+
+#### B.2 Process States and Management
+- Each process has a state: RUNNING, STOPPED, TERMINATED
+- Job table maintains: [job_id], [pid], [command], [status], [window_ref]
+- Background processes run independently with status indicators
+- Foreground processes block the terminal until completion/suspension
+
+#### B.3 Terminal State Management
+- IDLE: Awaiting command input
+- RUNNING_BG: Command running in background, accepting new commands
+- RUNNING_FG: Command running in foreground, blocking input
+- SUSPENDED: Process suspended, showing job control options
+
+#### B.4 Process-Window Communication
+- Each app window registers with the ProcessManager
+- When a window is closed externally, ProcessManager is notified
+- ProcessManager updates job table and sends appropriate signals
+- Visual indicators show running jobs in the terminal interface
+
+#### B.5 Implementation Details
+- Job IDs start from 1 and increment
+- Each command execution returns immediately when backgrounded
+- `jobs` command shows: [1]+ Running craft (pid: 123)
+- Special syntax: `fg` with no args brings most recent job
+- ProcessManager handles all cross-process communication
+
+### Option C: Terminal-Window Bridge
+- Create a communication system between terminal and app windows
+- When app window is active, a special indicator shows in terminal
+- Terminal can send signals to app windows
+- App windows can signal when they're closed to return control
+
+## Technical Implementation
+
+### 1. Process Manager Class
+
+```
+class ProcessManager {
+  constructor() {
+    this.jobTable = [];  // Array of {jobId, pid, command, status, windowRef, terminalElement}
+    this.nextJobId = 1;
+    this.foregroundJob = null;  // Currently running foreground job
+  }
+  
+  startProcess(command, args, terminalElement, isBackground = false) {
+    const jobId = this.nextJobId++;
+    const pid = Date.now() + Math.random();  // Unique process identifier
+    
+    const process = {
+      jobId: jobId,
+      pid: pid,
+      command: command,
+      args: args,
+      status: isBackground ? 'RUNNING' : 'RUNNING_FG',
+      startTime: new Date(),
+      terminalElement: terminalElement,
+      windowRef: null  // Will be set when app creates window
+    };
+    
+    this.jobTable.push(process);
+    
+    if (!isBackground) {
+      this.foregroundJob = process;
+    }
+    
+    return { jobId, pid, isForeground: !isBackground };
+  }
+  
+  registerAppWindow(jobId, windowRef) {
+    const job = this.jobTable.find(j => j.jobId === jobId);
+    if (job) {
+      job.windowRef = windowRef;
+      return true;
+    }
+    return false;
+  }
+  
+  terminateProcess(jobId) {
+    const jobIndex = this.jobTable.findIndex(j => j.jobId === jobId);
+    if (jobIndex !== -1) {
+      const job = this.jobTable[jobIndex];
+      
+      // Close the associated window if it exists
+      if (job.windowRef && typeof job.windowRef.closeGUI === 'function') {
+        job.windowRef.closeGUI();
+      } else if (job.windowRef && job.windowRef.close) {
+        job.windowRef.close();
+      } else {
+        // If window object exists in DOM, remove it
+        if (job.windowRef && job.windowRef.remove) {
+          job.windowRef.remove();
+        }
+      }
+      
+      // Remove from job table
+      this.jobTable.splice(jobIndex, 1);
+      
+      // If it was the foreground job, clear the foreground job
+      if (this.foregroundJob && this.foregroundJob.jobId === jobId) {
+        this.foregroundJob = null;
+      }
+      
+      return true;
+    }
+    return false;
+  }
+  
+  suspendProcess(jobId) {
+    const job = this.jobTable.find(j => j.jobId === jobId);
+    if (job) {
+      job.status = 'STOPPED';
+      if (this.foregroundJob && this.foregroundJob.jobId === jobId) {
+        this.foregroundJob = null;
+      }
+      return true;
+    }
+    return false;
+  }
+  
+  resumeProcess(jobId, asBackground = false) {
+    const job = this.jobTable.find(j => j.jobId === jobId);
+    if (job) {
+      job.status = asBackground ? 'RUNNING' : 'RUNNING_FG';
+      if (!asBackground) {
+        this.foregroundJob = job;
+      }
+      return true;
+    }
+    return false;
+  }
+  
+  listJobs() {
+    return this.jobTable.map(job => ({
+      jobId: job.jobId,
+      command: job.command,
+      status: job.status,
+      startTime: job.startTime
+    }));
+  }
+  
+  getJobById(jobId) {
+    return this.jobTable.find(j => j.jobId === jobId);
+  }
+  
+  handleWindowClose(jobId) {
+    // Called when a window is closed externally
+    return this.terminateProcess(jobId);
+  }
+}
+
+// Global process manager instance
+window.processManager = new ProcessManager();
+```
+
+### 2. Modified Command Processing in script.js
+
+- Update processCommand to recognize job control commands (jobs, fg, bg, kill)
+- Parse commands for background (&) and job specifiers (%1, %2, etc.)
+- Implement interrupt handler for Ctrl+C
+- Add state management for foreground/background processes
+
+### 3. Modified Application Classes (CraftApp, CubeApp)
+
+- Add process ID parameter to constructor/init
+- Implement communication channel with ProcessManager
+- Handle termination signals appropriately
+- Register with ProcessManager when creating windows
+
+### 4. Terminal State Management
+
+- Add state variables to track terminal mode
+- Implement visual indicators for current state
+- Handle keyboard events (Ctrl+C, Ctrl+Z) appropriately
+- Update UI to show job status and allow control
+
+### 5. Unix Shell Command Implementation
+
+#### jobs command
+- Displays all running jobs in format: [job_id]+ Status Command (PID)
+- Example: [1]+ Running craft (12345), [2]- Stopped cube (12346)
+
+#### fg command
+- Bring job to foreground: `fg %1` or `fg` (for most recent)
+- Blocks terminal until job completes or is suspended
+
+#### bg command  
+- Resume suspended job in background: `bg %1`
+- Job continues running without blocking terminal
+
+#### kill command
+- Terminate job: `kill %1` or `kill -9 %1`
+- Also handles window close events for cleanup
+
+## User Experience and Interaction Patterns
+
+### Example Usage Scenarios
+
+#### Scenario 1: Basic Job Control
+```
+> craft
+[1]+ Running craft (PID: 12345) [background]
+> jobs
+[1]+ Running craft (12345)
+> fg %1
+[1]+ Running craft (12345) ... [foreground]
+# Craft window is active
+# Press Ctrl+C to terminate
+# Terminal returns control automatically
+> 
+```
+
+#### Scenario 2: Multiple Background Jobs
+```
+> craft &
+[1]+ Running craft (12345)
+> cube &
+[2]+ Running cube (12346)
+> jobs
+[1]+ Running craft (12345)
+[2]- Running cube (12346)
+> kill %1
+[1]+ craft Terminated
+> fg %2
+[2]+ Running cube (12346) ... [foreground]
+```
+
+#### Scenario 3: Suspend and Resume
+```
+> craft
+[1]+ Running craft (12345) ... [foreground]
+# Press some key combination to suspend (e.g., Ctrl+Z equivalent)
+[1]+ Stopped craft (12345)
+> bg %1
+[1]+ Running craft (12345) [background]
+> fg
+[1]+ Running craft (12345) ... [foreground]
+```
+
+### Visual Indicators
+- Process status indicators in terminal (RUNNING, STOPPED, TERMINATED)
+- Job numbers displayed with commands
+- Clear distinction between foreground and background processes
+- Notification when background processes complete
+
+### Keyboard Shortcuts
+- Ctrl+C: Terminate foreground process (if supported)
+- Ctrl+Z: Suspend foreground process (if supported)
+- Tab completion: For job IDs (%1, %2, etc.)
+
+## Priority Implementation Steps
+
+1. Implement basic ProcessManager class with job tracking
+2. Modify script.js to recognize job control commands (jobs, fg, bg, kill)
+3. Add process registration to app classes (CraftApp, CubeApp)
+4. Implement Ctrl+C and other interrupt handling in terminal
+5. Add visual indicators for running jobs
+6. Test job control commands: jobs, fg, bg, kill
+7. Handle external window closure and resource cleanup
+
+## Considerations
+
+- Maintain backward compatibility with existing functionality
+- Ensure multiple users of the system aren't affected
+- Consider how this interacts with window management features
+- Ensure proper cleanup of resources when processes terminate
+- Handle edge cases where windows are closed externally
+- Ensure that long-running processes don't impact performance
+- Handle process priority and resource allocation appropriately
+- Design intuitive user interface for job management

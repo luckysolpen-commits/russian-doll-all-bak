@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR :: Management</title>
+    <link rel="stylesheet" href="css/terminal.css">
+    <style>
+        .position-update {
+            margin-top: 5px;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+        }
+        
+        .position-update input {
+            margin: 2px;
+            padding: 2px;
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #ffff00;
+        }
+        
+        .position-update button {
+            margin-left: 5px;
+            padding: 2px 5px;
+            background-color: #ffff00;
+            color: #000;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div class="menu-bar">
+            <span>Active Entity: <span class="info-value" id="active-entity">N/A</span></span> |
+            <span>Date: <span class="info-value" id="game-date">01/01/2025</span></span>
+        </div>
+        
+        <div class="separator">================================================</div>
+        
+        <div class="columns">
+            <!-- Left Column -->
+            <div class="column">
+                <div class="balance-sheet">
+                    <div style="color: #ffff00; margin-bottom: 10px;">MY BALANCE SHEET:</div>
+                    <div class="info-line">Cash (CD's)..........<span id="player-cash">0.00</span></div>
+                    <div class="info-line">Stock Portfolio......<span id="portfolio-value">0.00</span></div>
+                    <div class="info-line">Total Assets.........<span id="total-assets">0.00</span></div>
+                    <div class="info-line">Less Debt............<span id="total-debt">-0.00</span></div>
+                    <div class="separator">---</div>
+                    <div class="info-line" style="color: #ffff00;">Net Worth............<span id="net-worth">0.00</span></div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="column">
+                <div class="control-section">
+                    <h3 style="color: #ffff00;">MANAGEMENT MENU</h3>
+                    
+                    <div class="submenu-section">
+                        <h4 style="color: #00ffff;">EMPLOYEE PIECES</h4>
+                        <div id="employee-list" class="employee-list">
+                            <!-- Dynamically populated employee pieces will go here -->
+                            <p>Loading employee pieces...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="separator">------------------------------------------------</div>
+                    
+                    <div class="submenu-section">
+                        <h4 style="color: #00ffff;">MANAGEMENT ACTIONS</h4>
+                        <button onclick="location.href='management.html'">Back to Management</button>
+                        <a href="index.html"><button>Main Menu</button></a>
+                        <a href="tools.html"><button>Tools</button></a>
+                    </div>
+                    
+                    <div class="separator">------------------------------------------------</div>
+                    
+                    <div class="submenu-section">
+                        <h4 style="color: #00ffff;">NAVIGATION</h4>
+                        <button id="view-3d-board">View 3D Board</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get elements
+            const employeeListEl = document.getElementById('employee-list');
+            const activeEntityEl = document.getElementById('active-entity');
+            const gameDateEl = document.getElementById('game-date');
+            const playerCashEl = document.getElementById('player-cash');
+            const portfolioValueEl = document.getElementById('portfolio-value');
+            const totalAssetsEl = document.getElementById('total-assets');
+            const totalDebtEl = document.getElementById('total-debt');
+            const netWorthEl = document.getElementById('net-worth');
+            const view3dBoardBtn = document.getElementById('view-3d-board');
+
+            // Load employee pieces from 3D system
+            async function loadEmployeePieces() {
+                try {
+                    // Fetch pieces from the 3D system's data
+                    const response = await fetch('3d.tactics.board.frame.php]d5/get_pieces.php');
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const pieces = await response.json();
+                    
+                    if (pieces.length === 0) {
+                        employeeListEl.innerHTML = '<p>No employee pieces found.</p>';
+                        return;
+                    }
+                    
+                    // Create a container for each employee piece
+                    let soldierCounter = 1; // Counter for display purposes
+                    let newHtmlContent = '';
+                    
+                    pieces.forEach((piece, originalIndex) => {
+                        if (piece.type === 'soldier') { // Only show soldier pieces as employees
+                            const pieceId = piece.id || `soldier_${originalIndex}`; // Use the piece's ID or create a fallback
+                            
+                            // Check if there are currently edited values in the input fields
+                            const currentXInput = document.getElementById(`posX-${pieceId}`);
+                            const currentYInput = document.getElementById(`posY-${pieceId}`);
+                            const currentZInput = document.getElementById(`posZ-${pieceId}`);
+                            
+                            // Use current input values if they exist (for ongoing edits), otherwise use server values
+                            const currentX = currentXInput ? currentXInput.value : piece.x;
+                            const currentY = currentYInput ? currentYInput.value : piece.y;
+                            const currentZ = currentZInput ? currentZInput.value : piece.z;
+                            
+                            newHtmlContent += `
+                                <div class="employee-item">
+                                    <div class="employee-header">
+                                        <strong>Employee #${soldierCounter}: ${piece.type.charAt(0).toUpperCase() + piece.type.slice(1)}</strong>
+                                        <span>Position: (${piece.x}, ${piece.y}, ${piece.z})</span>
+                                    </div>
+                                    <div class="employee-actions">
+                                        <button onclick="selectPiece(${piece.x}, ${piece.y}, ${piece.z})">Select on 3D Board</button>
+                                        <button onclick="updateEmployeeStatus('${pieceId}', 'feed')">Feed</button>
+                                        <button onclick="updateEmployeeStatus('${pieceId}', 'sleep')">Sleep</button>
+                                        <button onclick="updateEmployeeStatus('${pieceId}', 'work')">Work</button>
+                                        <div class="position-update">
+                                            <label>New Position:</label>
+                                            <input type="number" id="posX-${pieceId}" value="${currentX}" min="0" max="7" style="width: 50px;">,
+                                            <input type="number" id="posY-${pieceId}" value="${currentY}" min="0" max="10" style="width: 50px;">,
+                                            <input type="number" id="posZ-${pieceId}" value="${currentZ}" min="0" max="7" style="width: 50px;">
+                                            <button onclick="updatePiecePosition('${pieceId}')">Update Position</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            soldierCounter++;
+                        }
+                    });
+                    
+                    // Update the employee list with new content
+                    employeeListEl.innerHTML = newHtmlContent;
+                } catch (error) {
+                    console.error('Error loading employee pieces:', error);
+                    employeeListEl.innerHTML = `<p>Error loading employee pieces: ${error.message}</p>`;
+                }
+            }
+
+            // Function to handle piece selection and navigate to 3D board
+            window.selectPiece = function(x, y, z) {
+                // Save the selected piece position to localStorage so 3D board can read it
+                localStorage.setItem('selectedPiecePosition', JSON.stringify({x: x, y: y, z: z}));
+                
+                // Navigate to the 3D board page
+                window.location.href = '3d.tactics.board.frame.php]d5/index.html';
+            };
+
+            // Function to update employee status
+            function updateEmployeeStatus(pieceIndex, action) {
+                console.log(`Updating employee #${pieceIndex} with action: ${action}`);
+                // In a real implementation, this would update the piece data
+                alert(`Action "${action}" performed on employee #${pieceIndex + 1}`);
+            }
+
+            // Function to update piece position
+            async function updatePiecePosition(pieceId) {
+                // Get the new position values from the input fields based on the piece ID
+                const newX = parseInt(document.getElementById(`posX-${pieceId}`).value);
+                const newY = parseInt(document.getElementById(`posY-${pieceId}`).value);
+                const newZ = parseInt(document.getElementById(`posZ-${pieceId}`).value);
+
+                // Validate the new position is within bounds (8x8 grid, max Y level 10)
+                if (newX < 0 || newX > 7 || newY < 0 || newY > 10 || newZ < 0 || newZ > 7) {
+                    alert('Position out of bounds! Valid ranges: X=0-7, Y=0-10, Z=0-7');
+                    return;
+                }
+
+                try {
+                    // Send update request to PHP script
+                    const response = await fetch('php/update_piece_position.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            pieceId: pieceId,
+                            newX: newX,
+                            newY: newY,
+                            newZ: newZ
+                        })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+
+                    if (result.status === 'success') {
+                        console.log(`Position updated successfully for piece ID: ${pieceId} to (${newX}, ${newY}, ${newZ})`);
+                        
+                        // Update the GUI to reflect the new position
+                        // Find the specific input element and use it to locate the associated display element
+                        const inputElement = document.getElementById(`posX-${pieceId}`);
+                        if (inputElement) {
+                            const displayElement = inputElement.closest('.employee-item').querySelector('.employee-header span');
+                            if (displayElement) {
+                                displayElement.textContent = `Position: (${newX}, ${newY}, ${newZ})`;
+                            }
+                        }
+                        
+                        // Update the input fields to show the new values
+                        document.getElementById(`posX-${pieceId}`).value = newX;
+                        document.getElementById(`posY-${pieceId}`).value = newY;
+                        document.getElementById(`posZ-${pieceId}`).value = newZ;
+                        
+                        alert(`Position updated successfully for piece ID: ${pieceId} to (${newX}, ${newY}, ${newZ})`);
+                    } else {
+                        alert(`Error updating position: ${result.message}`);
+                    }
+                } catch (error) {
+                    console.error('Error updating piece position:', error);
+                    alert(`Error updating position: ${error.message}`);
+                }
+            }
+            
+            // Make the functions globally accessible
+            window.updatePiecePosition = updatePiecePosition;
+            window.selectPiece = selectPiece;
+
+            // Load initial data
+            loadEmployeePieces();
+            
+            // Auto-refresh employee pieces every 2 seconds to catch changes made elsewhere
+            setInterval(loadEmployeePieces, 2000);
+            
+            // Function to fetch and display game state (date, current player)
+            async function updateGameInfo() {
+                try {
+                    const response = await fetch('php/get_gamestate.php');
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const gamestate = await response.json();
+
+                    gameDateEl.textContent = `${String(gamestate.month).padStart(2, '0')}/${String(gamestate.day).padStart(2, '0')}/${gamestate.year} ${String(gamestate.hour).padStart(2, '0')}:${String(gamestate.minute).padStart(2, '0')}:${String(gamestate.second).padStart(2, '0')}`;
+                    
+                    if (gamestate.players && gamestate.players.length > 0) {
+                        const currentPlayerName = gamestate.players[gamestate.current_player_index];
+                        activeEntityEl.textContent = currentPlayerName;
+                    } else {
+                        activeEntityEl.textContent = 'N/A';
+                    }
+                } catch (error) {
+                    console.error("Error fetching game state:", error);
+                    gameDateEl.textContent = "Error";
+                    activeEntityEl.textContent = "Error";
+                }
+            }
+
+            // Function to fetch and display player-specific data
+            function updatePlayerData() {
+                const playerName = localStorage.getItem('playerName') || 'Player1';
+                fetch(`php/get_player_data.php?player=${playerName}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        playerCashEl.textContent = data.cash.toFixed(2);
+                        portfolioValueEl.textContent = data.portfolio_value.toFixed(2);
+                        const totalAssets = data.cash + data.portfolio_value;
+                        totalAssetsEl.textContent = totalAssets.toFixed(2);
+                        totalDebtEl.textContent = `-${data.debt.toFixed(2)}`;
+                        netWorthEl.textContent = (totalAssets - data.debt).toFixed(2);
+                    })
+                    .catch(error => {
+                        console.error("Error fetching player data:", error);
+                    });
+            }
+            
+            // Initial data load
+            updateGameInfo();
+            updatePlayerData();
+
+            // Set up intervals for automatic updates
+            setInterval(updateGameInfo, 1000); // Update game date and current player every 1 second
+        });
+    </script>
+</body>
+</html>

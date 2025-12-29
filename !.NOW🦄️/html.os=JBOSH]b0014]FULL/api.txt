@@ -1,0 +1,194 @@
+
+
+# Application API & Windowing Guide
+
+This document outlines the architecture and step-by-step process for creating new applications and converting existing ones to work within the multi-window terminal environment.
+
+---
+
+## 1. Core Architectural Concepts
+
+Our windowing system is built on a few key principles to ensure that multiple applications can run independently without interfering with each other.
+
+- **Instantiable Classes:** Every application is a JavaScript class (e.g., `class MyApp {...}`). It is **not** a singleton.
+- **Global Instance Registry:** A global object, `window.appInstances`, holds all currently running application instances. Each instance is stored by a unique ID.
+- **Unique Instance ID:** Each time an app is created, it generates a unique ID (e.g., `'craft_instance_1672252800000'`). This ID is used for everything related to that specific app instance.
+- **`init()` Method:** Each app class must have a public `init()` method. This is the single entry point that the terminal calls to launch the application. It is responsible for creating and showing the app's UI.
+- **Instance-Aware DOM Elements:** All DOM elements created by an app instance (windows, buttons, canvases, etc.) **must** have their IDs prefixed with the unique `instanceId`. This is the most critical rule for preventing conflicts.
+- **Event Handlers:** All `onclick` or other event handlers within an app's HTML must call methods on the correct instance by referencing it through the global `window.appInstances` registry (e.g., `onclick="window.appInstances['unique_id'].myMethod()"`).
+
+---
+
+## 2. How to Create a New App
+
+Here is a step-by-step guide to creating a new app called "MyApp" that can be launched with the `myapp` command.
+
+### Step 1: Create the App File
+
+Create a new file, `myapp.js`.
+
+### Step 2: Define the Class Structure
+
+In `myapp.js`, create the basic class. The constructor is responsible for generating the unique ID and registering the instance.
+
+```javascript
+// myapp.js
+
+class MyApp {
+    constructor() {
+        this.gameWindow = null;
+        // Unique ID for this instance
+        this.instanceId = 'myapp_instance_' + Date.now() + Math.random();
+
+        // Register instance in the global map
+        if (!window.appInstances) {
+            window.appInstances = {};
+        }
+        window.appInstances[this.instanceId] = this;
+    }
+
+    // ... methods will go here
+}
+
+// Make the class available to the global scope
+if (typeof window !== 'undefined') {
+    window.MyApp = MyApp;
+}
+```
+
+### Step 3: Implement Core GUI Methods
+
+Implement the `init`, `createGUI`, `showGUI`, and `closeGUI` methods.
+
+```javascript
+    init() {
+        // Called by the terminal. Creates and shows the UI.
+        this.createGUI();
+        this.showGUI();
+    }
+    
+    createGUI() {
+        const appWindow = document.createElement('div');
+        appWindow.id = `${this.instanceId}-main-window`; // Unique ID
+        appWindow.className = 'terminal-window';
+        appWindow.style.display = 'none';
+        appWindow.style.width = '400px';
+        appWindow.style.height = '300px';
+        
+        // Use the instanceId in element IDs and event handlers
+        appWindow.innerHTML = `
+            <div class="title-bar">
+                My App
+                <button class="close-btn" onclick="window.appInstances['${this.instanceId}'].closeGUI()">×</button>
+            </div>
+            <div class="terminal-content">
+                <p>Hello from MyApp instance: ${this.instanceId}</p>
+                <button id="${this.instanceId}-my-button">Click Me</button>
+            </div>
+        `;
+        document.body.appendChild(appWindow);
+        this.gameWindow = appWindow; // Store reference to the window
+
+        // Add event listeners programmatically
+        this.setupEventListeners();
+    }
+    
+    showGUI() {
+        if (this.gameWindow) {
+            this.gameWindow.style.display = 'block';
+            this.gameWindow.style.zIndex = 100;
+            this.gameWindow.style.position = 'absolute';
+            this.gameWindow.style.left = (Math.random() * 200 + 100) + 'px';
+            this.gameWindow.style.top = (Math.random() * 200 + 100) + 'px';
+        }
+    }
+    
+    closeGUI() {
+        // Remove the window from the DOM
+        if (this.gameWindow) {
+            this.gameWindow.remove();
+        }
+        // Deregister the instance to allow for garbage collection
+        if (window.appInstances && window.appInstances[this.instanceId]) {
+            delete window.appInstances[this.instanceId];
+        }
+    }
+```
+
+### Step 4: Implement App-Specific Logic
+
+Add methods for your app's functionality. Use an instance-aware element selector.
+
+```javascript
+    setupEventListeners() {
+        // Helper to get elements within this instance
+        const getEl = (id) => document.getElementById(`${this.instanceId}-${id}`);
+
+        const myButton = getEl('my-button');
+        if (myButton) {
+            myButton.addEventListener('click', () => this.onButtonClick());
+        }
+    }
+
+    onButtonClick() {
+        alert(`Button clicked in MyApp instance: ${this.instanceId}`);
+    }
+```
+
+### Step 5: Load the Script
+
+In `g.clay]b3.txt.html`, add a `<script>` tag to load your new app file.
+
+```html
+<script src="myapp.js"></script>
+```
+
+### Step 6: Add the Terminal Command
+
+In `script.js`, edit the `processCommand` function to add a new `case` for your app.
+
+```javascript
+// Inside processCommand function in script.js
+switch (cmd) {
+    // ... other cases
+    case 'myapp':
+        if (typeof window.MyApp === 'function') {
+            const newInstance = new MyApp();
+            newInstance.init();
+            response = 'New MyApp instance opened.';
+        } else {
+            response = 'MyApp class not loaded. Try refreshing the page.';
+        }
+        break;
+}
+```
+
+---
+
+## 3. Example: `cube.js`
+
+The file `cube.js` is a perfect, minimal example of this architecture. It correctly implements all the concepts above to create a simple window with a rotating cube. Use it as a reference.
+
+---
+## 4. How to Convert an Existing App
+
+The process is similar to creating a new app, but involves refactoring existing code. The original `craft.js` (from `backup/craft.js`) is the perfect example of a singleton that needed conversion.
+
+1.  **Change the Constructor:** Replace the old constructor and global singleton creation logic with the new instantiable pattern from Step 2 above.
+2.  **Create `init()` Method:** Add the `init()` method as the main entry point.
+3.  **Update `createGUI()`:** Modify the `innerHTML` to use the `instanceId` for all element IDs and `onclick` handlers.
+4.  **Update Core Logic (Most Important):** In any function that renders or interacts with the app's DOM (like `setupCraftGame`), you **must** stop using `document.getElementById('hardcoded-id')`. Instead, create and use an instance-aware helper function at the top:
+    ```javascript
+    const getEl = (id) => document.getElementById(`${this.instanceId}-${id}`);
+    
+    // Now use it like this:
+    const canvasContainer = getEl('canvasContainer'); 
+    const colorPalette = getEl('color-palette');
+    ```
+5.  **Update Event Listeners:** If event listeners call global functions (e.g., `window.craftApp.myMethod()`), update them to use the instance (e.g., `this.myMethod()` or `window.appInstances[this.instanceId].myMethod()`).
+6.  **Connect to CLI:** Follow steps 5 and 6 from the "Create a New App" guide to load the script and add the command.
+
+
+
+JavaScript implements inheritance through objects, where each object has an internal link to another object called its prototype, allowing objects to inherit properties and methods from other objects along a "prototype chain.
+this is elegant and easy to read. use it whenever possibe.

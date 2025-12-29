@@ -1,0 +1,19 @@
+ok, i see, well we dont have to read the time from wsr_clock.txt every update, but
+   we should once, on start, because the idea is, another service using same data 
+  may have been running before, and it has the current in game time. (this is also 
+  why we want to write the new time to the clock, at least on start); [also 
+  everytime an "action is taken officially"(not just browsing button options)we will
+   advance "turns forward, and in local or turn based game modes this will have 
+  meaning)] let me explain why we are sharing data like this  : 
+  @3d.tactics.board.frame.php]d5/ is a project we are going to "data twin" with this
+   one. its going to be  a board game of "human peices" who will be trading in the 
+  stock market, but also moving around in their enviornment working, eating sleeping
+   etc. essentially the players 3d managed "employees" (which is why they are 
+  selectable) ; its basically a business simulator where u can opt to have greater 
+  level of granularity or at leave view the ai board of ur employees) so with that 
+  in mind, time will also display and advance on the 3d game board (same as in text 
+  based command line) and when we "move a peice" (or do future functions) the 'turn 
+  will advance' ; do you see what im talking about and how we might want to modify 
+  the 3d or current text versions to be more compatible? write a 
+  compatibility_report.txt
+
