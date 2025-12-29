@@ -1,9 +1,0 @@
-TODO LIST - JOB.OS APPS HEADER FIX
-=================================================
-
-1. Create backup of current codebase
-2. Identify why craft.js header disappears on resize (terminal & cube headers work properly)
-3. Create shared CSS file for all apps (terminal, cube, craft)
-4. Apply shared CSS to fix header issue in craft.js
-5. Add fullscreen and minimize buttons to header bar
-6. Test cube.js and terminal to ensure they still work properly

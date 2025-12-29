@@ -1,0 +1,99 @@
+FEASIBILITY REPORT: MSR & 3D TACTICS APP INTEGRATION
+Date: December 28, 2025
+
+OVERVIEW
+--------
+This report analyzes the feasibility of refactoring two existing web applications (MSR and 3D Tactics Board) to integrate with the JOB.OS ecosystem.
+
+APPS ANALYSIS
+
+1. MSR (Mars Streetrace Raider) - apps/msr]PHP]dec27]c3/**
+   - Technology: PHP backend with HTML/JS frontend
+   - Structure: Multiple HTML files with shared CSS
+   - Complexity: HIGH - Full financial simulation game with persistent data
+   - Backend: PHP files in /php/ directory handling game logic and data
+   - Data: CSV files, JSON, text files in /data/ directory
+   - Modularity: HIGH - Very well organized with separate HTML files for each section
+
+2. 3D Tactics Board - apps/3d.tactics.board.frame.php]e6/**
+   - Technology: HTML/JS frontend with Three.js, PHP backend
+   - Structure: Single HTML file with JavaScript
+   - Complexity: MEDIUM - 3D game board with game piece management
+   - Backend: PHP files handling piece state via CSV files
+   - Data: CSV files in /data/ directory
+   - Modularity: LOW - Single page application
+
+WHICH TO DO FIRST
+-----------------
+RECOMMENDATION: 3D Tactics Board first
+
+Reasons:
+1. Single HTML file structure makes it easier to refactor into JOB.OS window format
+2. Self-contained functionality with clear game loop
+3. Less complex backend interactions (mainly CSV read/write)
+4. Good visual feedback to validate integration
+5. Shares data structure with MSR, so successful integration provides foundation
+
+MSR can be done second as it's more complex but would provide a comprehensive test of the system.
+
+REFINEMENTS FOR JOB.OS INTEGRATION
+
+For Both Apps:
+
+1. Window Integration:
+   - Wrap each app's main content in AppBase framework
+   - Use shared-window.css for consistent styling
+   - Add minimize/fullscreen/close buttons to headers
+   - Implement proper window lifecycle management
+
+2. Data Sharing:
+   - Both apps already use shared /data/ directory
+   - Maintain existing PHP backend functionality
+   - Ensure data consistency when running in JOB.OS environment
+
+For 3D Tactics Board Specifically:
+1. Convert single-page app to AppBase structure
+2. Maintain Three.js rendering within window container
+3. Ensure canvas resizes properly within JOB.OS window
+4. Preserve keyboard controls within minimized/restore cycle
+
+For MSR Specifically:
+1. Maintain modular HTML structure by loading sections appropriately
+2. Preserve complex JavaScript game state management
+3. Keep PHP backend functionality intact
+4. Convert the main menu to use terminal-style commands or window interactions
+5. Maintain persistent game data through window lifecycle
+
+MODULARITY PRESERVATION
+-----------------------
+Yes, modularity can be preserved:
+
+For MSR:
+- Individual HTML files can be loaded dynamically within app windows
+- Main menu can launch different app modules as separate windows
+- Each game function (portfolio, corporations, etc.) can be its own window
+- PHP endpoints can remain the same
+
+For 3D Tactics Board:
+- Could remain as single window or be split into game view + control panel
+- Game logic remains intact within AppBase framework
+
+TECHNICAL APPROACH
+------------------
+1. Create new AppBase subclasses for each app
+2. Preserve existing backend functionality
+3. Handle window lifecycle events appropriately
+4. Ensure all existing features work within JOB.OS
+5. Maintain existing data persistence mechanisms
+6. Ensure keyboard/mouse interactions work properly when windowed
+
+CONCLUSION
+----------
+Both applications can be successfully integrated with JOB.OS while preserving their modularity. The 3D Tactics Board is recommended as the first integration due to its simpler structure and will provide valuable experience for the more complex MSR integration.
+
+Key Success Factors:
+1. Preserving existing PHP backend functionality
+2. Maintaining data persistence 
+3. Ensuring proper window lifecycle management
+4. Keeping keyboard/mouse controls functional
+5. Preserving the existing user experience while adding JOB.OS features

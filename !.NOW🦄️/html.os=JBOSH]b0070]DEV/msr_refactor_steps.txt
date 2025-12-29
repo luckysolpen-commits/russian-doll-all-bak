@@ -1,0 +1,36 @@
+MSR Refactor Steps for JOB.OS Integration
+
+**High-Level Goal:** Refactor the Mars Streetrace Raider (MSR) application into the modular JOB.OS format.
+
+**Core Principle of this Refactor:**
+- **Source Directory (Read-Only):** The original MSR application files will be left untouched in `apps/msr]PHP]dec27]c3/`. This directory will serve as a reference for HTML structure, JavaScript logic, and PHP endpoints.
+- **New Working Directory:** All new, refactored JOB.OS-compatible code (e.g., `AppBase` subclasses) will be created inside the `apps/msr/` directory. No files will be moved out of the source directory.
+
+---
+### Step-by-Step Refactoring Plan
+
+**Step 1: Setup New Application Directory**
+1.  **Create New Directories:** Ensure the target directory structure exists: `apps/msr/` for the main app and `apps/msr/sub_views/` for the sub-view apps.
+2.  **Copy Essential Assets:** Copy the `css` directory from `apps/msr]PHP]dec27]c3/` to `apps/msr/`. The new JOB.OS apps will need these styles.
+
+**Step 2: Create the Main MSR Application (`apps/msr/msr.js`)**
+1.  **Develop `MSRApp` Class:** Create a new file at `apps/msr/msr.js` containing an `MSRApp` class that extends `AppBase`. This class will be the main launcher for the MSR game.
+2.  **Load Main View Content:** The `createGUI` method of `MSRApp` will fetch the HTML content from the *original* `apps/msr]PHP]dec27]c3/index.html` file and use it as the `innerHTML` for its window.
+3.  **Adapt JavaScript Logic:** All JavaScript from the original `index.html`'s `<script>` tag will be adapted into methods within the `MSRApp` class, using instance-aware selectors (e.g., `this.getElementById()`) to avoid DOM conflicts.
+4.  **Update Navigation:** Event listeners in `MSRApp` will be attached to the menu buttons. Instead of page navigation, these buttons will now launch new, independent sub-view apps.
+
+**Step 3: Convert Sub-Views to Independent `AppBase` Instances**
+1.  **Create Sub-View Apps:** For each major sub-view (e.g., `setup`, `corporations`, `management`), create a corresponding JavaScript file in `apps/msr/sub_views/` (e.g., `setup.js`, `corporations.js`).
+2.  **Define Sub-View Classes:** Each of these files will define its own `AppBase` subclass (e.g., `class SetupApp extends AppBase`).
+3.  **Load Sub-View Content:** The `createGUI` method in each sub-app class will fetch its HTML content from the corresponding file in the *original* source directory (e.g., `SetupApp` will fetch from `apps/msr]PHP]dec27]c3/setup.html`).
+4.  **Adapt Sub-View Logic:** Any JavaScript from the original sub-view HTML files will be adapted into methods within their new respective `AppBase` subclasses.
+5.  **Handle Closing:** "Back to Main Menu" buttons within the sub-views will call `this.closeGUI()` on their own instance.
+
+**Step 4: Reconnect PHP Backend and Data**
+1.  **Update `fetch` Paths:** In `msr.js` and all new sub-view JS files, all `fetch()` calls must be updated to point to the PHP scripts in their original location: `apps/msr]PHP]dec27]c3/php/`.
+
+**Step 5: Integrate `3dtactics` App**
+1.  **Update `ManagementApp`:** In the `ManagementApp` class (created from `management.html`), the "View 3D Board" button's event listener will be modified.
+2.  **Launch `TacticsGameApp`:** The listener will now instantiate and launch the `TacticsGameApp` from `apps/3dtactics/3dtactics.js` as a new, separate JOB.OS window.
+
+This updated plan ensures a clean separation between the original source and the new, refactored application, adhering to the modular principles of the JOB.OS.

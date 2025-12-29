@@ -1,0 +1,85 @@
+# Analysis of API and Implementation Deviations
+
+This document outlines the discrepancies between the official `api.txt` guide, the de-facto "standard" implementation of apps (`cube.js`, `craft.js`), and the current state of `msr.js`. It concludes with a recommendation for a more robust and reusable framework.
+
+---
+
+### 1. The Official API (`api.txt`)
+
+The `api.txt` guide specifies a clear and simple architecture:
+
+- An `init()` method is the entry point.
+- `init()` calls `createGUI()` first to build the UI elements (`display: 'none'`).
+- `init()` then calls `showGUI()` to make the UI visible (`display: 'block'`).
+- The roles are strictly separated: `createGUI` builds, `showGUI` displays. The example does not use or mention a base class.
+
+This is a clean, easy-to-understand pattern.
+
+---
+
+### 2. The "Standard" Practice (`cube.js`, `craft.js`, `AppBase.js`)
+
+In practice, apps `extend AppBase` to reuse functionality. This has led to three major deviations from the official API guide:
+
+1.  **The Flawed Foundation (`AppBase.js`):** The `AppBase.showGUI()` method violates the API's separation of concerns. It incorrectly calls `this.createGUI()` *again* before making the window visible. This single flaw is the root cause of the recursion bugs and implementation complexity.
+2.  **Inconsistent Implementations:** Because `AppBase` is flawed, app developers have created inconsistent workarounds:
+    - `cube.js` has no `init` or `showGUI` methods. It relies on the flawed `AppBase` methods but works by chance because its `createGUI` doesn't call `showGUI`.
+    - `craft.js` has its own `init` method, but like `cube.js`, it calls its main logic from `createGUI`.
+3.  **Blurred Responsibilities:** The "standard" apps initiate their core logic (e.g., `initCraftGame`) from within `createGUI`, often in a `setTimeout`. The API guide is silent on this, but it blurs the line between UI creation and application logic initialization.
+
+In short, the "standard" practice is not standard at all; it's a collection of workarounds for a flawed base class that deviates significantly from the clean, documented API.
+
+---
+
+### 3. The Current `msr.js` Setup
+
+Our `msr.js` is the result of navigating these inconsistencies:
+
+- **Deviation from "Standard":** To fix the recursion bug, `msr.js` now contains a custom `showGUI` method that intentionally *doesn't* call `createGUI`. This makes it different from `cube.js` and `craft.js`, which simply inherit the flawed base method.
+- **Deviation from `api.txt`:** The `createGUI` method in `msr.js` calls `initMSR()` (app logic) and `showGUI()`. This violates the API's principle that `createGUI` only builds the hidden UI and that `init` should be the one to call `showGUI`. Our `msr.js` is a functional, but non-standard, workaround.
+
+---
+
+### 4. Path Forward: A Truly Reusable Framework
+
+The goal is to create a simple, predictable framework so that prompting future AIs to build apps requires minimal instruction and is less error-prone. The current situation, with a flawed base class and multiple conflicting "standards", is the opposite of that.
+
+#### **Recommendation: Fix the Foundation**
+
+The single most impactful change is to fix `AppBase.js` to align with the `api.txt` documentation.
+
+1.  **Modify `AppBase.showGUI()`:** Remove the line `this.createGUI();` from this method. Its sole responsibility should be to make `this.gameWindow` visible.
+2.  **Establish a New, Unified Standard:** With a fixed `AppBase`, all applications can be built using the following clean, API-compliant, and highly reusable template:
+
+```javascript
+class StandardApp extends AppBase {
+    // 1. No custom init() or showGUI() needed. Inherit from the fixed AppBase.
+    
+    // 2. createGUI just creates the window and calls the app's setup logic.
+    createGUI() {
+        // Guard against being called multiple times.
+        if (this.gameWindow) return;
+
+        // Create the window element and set its innerHTML
+        const appWindow = document.createElement('div');
+        appWindow.id = `${this.instanceId}-main-window`;
+        appWindow.className = 'app-window terminal-window';
+        appWindow.style.display = 'none';
+        appWindow.innerHTML = `...`; // App-specific HTML
+        
+        document.body.appendChild(appWindow);
+        this.gameWindow = appWindow;
+
+        // Call the app's main logic function.
+        this.initializeAppLogic();
+    }
+
+    // 3. App-specific setup logic is cleanly separated.
+    initializeAppLogic() {
+        // All the code from initMSR(), initCraftGame(), etc. goes here.
+        console.log(`${this.constructor.name} logic initialized.`);
+    }
+}
+```
+
+By making this one change to `AppBase.js`, we eliminate the source of all bugs and establish a single, easy-to-follow pattern. This "paved road" approach means that an AI (or human) can simply follow the `api.txt` guide's principles, and the result will work correctly without needing to understand or implement complex workarounds. This maximizes reusability and dramatically reduces the chance of future errors.

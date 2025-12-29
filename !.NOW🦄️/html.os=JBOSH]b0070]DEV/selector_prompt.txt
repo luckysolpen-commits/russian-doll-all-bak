@@ -1,0 +1,28 @@
+SELECTOR PROMPT for 3D Tactics Game
+
+GAME MECHANICS:
+1. There is a selector (yellow wireframe cube) that the player controls
+2. There are game pieces (purple soldiers, blue water, etc.) on the board
+3. The selector is the primary controller - it's the "soul/hand" of the player
+
+CONTROL FLOW:
+1. INITIAL STATE: Selector mode
+   - Arrow keys move the selector independently on the board
+   - No piece is selected
+
+2. SELECTING A PIECE: Press Ctrl when selector is over a piece
+   - The piece becomes selected
+   - Arrow keys now move both the selector AND the selected piece together
+   - The piece follows the selector's movements
+
+3. DESELECTING: Press Ctrl again
+   - The piece stays in its current position
+   - Arrow keys move the selector independently again
+   - Selector and piece are now separate
+
+VISUAL FEEDBACK:
+- Selected piece: Slightly larger scale (1.1x) and potentially different visual state
+- When piece follows selector: Both move in unison
+
+KEY PRINCIPLE:
+The selector is ALWAYS the primary controller. When a piece is selected, the piece follows the selector. When no piece is selected, only the selector moves.
