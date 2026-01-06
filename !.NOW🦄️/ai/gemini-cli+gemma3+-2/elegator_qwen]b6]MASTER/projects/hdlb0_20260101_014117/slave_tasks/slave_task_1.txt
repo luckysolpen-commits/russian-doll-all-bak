@@ -1,0 +1,41 @@
+# Slave Task 1: 2-bit RISC-V Implementation
+
+## Objective
+Implement a minimal 2-bit RISC-V processor based on the specifications document.
+
+## Prerequisites
+- Basic logic gates from NAND gates must be completed (Task 0)
+- Review the 2-bit RISC-V specification document in ./docs/riscv_2bit_spec.txt
+
+## Specific Tasks
+1. Design and implement 2-bit register file (4 registers, 2 bits each)
+2. Design and implement 2-bit ALU with required operations
+3. Design and implement instruction decoder
+4. Design and implement control unit
+5. Design and implement program counter (2-bit)
+6. Design and implement memory subsystem (4 words, 2 bits each)
+7. Integrate all components into a complete 2-bit RISC-V processor
+8. Create comprehensive test suite for verification
+
+## Deliverables
+- Verilog (or VHDL) files for each component
+- Top-level integration file
+- Testbench files to verify functionality
+- Documentation explaining the design choices
+
+## Implementation Notes
+- Use only components built from NAND gates (from Stage 1)
+- Follow the ISA specification exactly
+- Ensure proper clocking and control logic
+- Design for easy extension to higher bit widths
+- Include hazard detection for more complex operations
+
+## Output Location
+- Place implementations in: ./riscv_2bit/
+- Place tests in: ./tests/riscv_2bit/
+
+## Verification
+- Each component must pass functional tests
+- Complete processor must execute all specified instructions correctly
+- Test programs should demonstrate all functionality
+- Verify timing and performance characteristics

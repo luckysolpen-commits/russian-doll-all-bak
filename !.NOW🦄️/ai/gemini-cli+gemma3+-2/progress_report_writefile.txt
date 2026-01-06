@@ -1,0 +1,62 @@
+## Progress Report: Gemma3:270M Tool Use
+
+**Current Situation:**
+The `llama3:latest` model was too slow for practical use. We are reverting to `gemma3:270M`.
+The `gemma3:270M` model is currently failing to generate structured JSON tool calls. Instead, it is generating Python scripts as part of its text response, indicating it does not correctly interpret the tool-use instructions in the system prompt.
+
+**Plan to make `gemma3:270M` work with tool calls:**
+
+1.  **Simplify the System Prompt:** Reduce the verbosity and complexity of the system prompt. Focus on the absolute essential instructions for tool use, making it as clear and direct as possible.
+2.  **Provide In-Context Examples (Few-Shot Prompting):** Add explicit examples within the system prompt. These examples will demonstrate user queries and the exact JSON format the model should use when calling `read_file` or `write_file`. This is crucial for smaller models to learn the expected output structure.
+3.  **Explicitly Instruct for JSON Output:** Reinforce the instruction that when a tool is needed, the response *must* be a JSON object matching the tool call format, and nothing else.
+4.  **Consider a "Tool Use" Prefix/Suffix:** Experiment with adding a distinct prefix (e.g., "TOOL_CALL:") before the JSON output to further signal to the model that it should generate a tool call. This might help in parsing as well.
+
+**Next Step:** Implement a simplified system prompt and add few-shot examples for `read_file` and `write_file` tools.
+
+---
+
+## Modularization Plan for `gemini-cli_v13.c` and `write_file` Tool Integration
+
+**Goal:** To modularize `gemini-cli_v13.c` and integrate a `write_file` tool, enabling the CLI to execute `write_file` operations based on JSON tool calls from the LLM.
+
+**Proposed Plan:**
+
+1.  **Create `file_utils.h` and `file_utils.c`:**
+    *   **`file_utils.h`**: Declare function prototypes for file operations.
+    *   **`file_utils.c`**:
+        *   Move the existing `read_file_to_string(const char* filename)` function here.
+        *   Implement a new function: `int write_string_to_file(const char* filename, const char* content, int auto_confirm)`. This function will:
+            *   Open the specified `filename` for writing.
+            *   Write the `content` to the file.
+            *   Handle file opening/writing errors.
+            *   Utilize the `ask_for_confirmation` mechanism (passed `auto_confirm` flag) before performing the write operation.
+            *   Return `0` on success, `-1` on failure.
+
+2.  **Create `cli_utils.h` and `cli_utils.c`:**
+    *   **`cli_utils.h`**: Declare function prototypes for CLI utility functions.
+    *   **`cli_utils.c`**:
+        *   Move the existing `int ask_for_confirmation(const char* question, int auto_confirm)` function here. (Note: `auto_confirm` should be passed as an argument, not rely on a global flag within this utility function for better modularity).
+
+3.  **Modify `main.c`:**
+    *   Include the new header files: `#include "file_utils.h"` and `#include "cli_utils.h"`.
+    *   Update calls to `read_file_to_string` and `ask_for_confirmation` to use the functions from the new utility modules.
+    *   **JSON Tool Call Parsing and Execution:**
+        *   After receiving the LLM's full response (`chunk.full_response`), implement logic to parse this response for JSON tool calls.
+        *   Use `cJSON` to parse `chunk.full_response`.
+        *   Look for a specific structure indicating a `write_file` tool call (e.g., `{"tool_code": "write_file", "file_path": "/path/to/file.txt", "content": "File content here"}`).
+        *   If a `write_file` tool call is detected:
+            *   Extract `file_path` and `content` from the JSON object.
+            *   Call `write_string_to_file(file_path, content, auto_confirm)`.
+            *   Print a message to `stdout` or `stderr` indicating the success or failure of the file write operation.
+        *   If no tool call is detected, or if it's a different type of tool call, proceed with displaying the LLM's response as usual.
+    *   **Error Handling**: Ensure robust error handling for JSON parsing and file writing operations.
+    *   **Cleanup**: Properly free all allocated `cJSON` objects and strings.
+
+**Benefits:**
+
+*   **Modularity**: Separates concerns into logical units (file operations, CLI utilities).
+*   **Maintainability**: Easier to understand, test, and modify individual components.
+*   **Extensibility**: Simplifies adding new tools in the future by following the JSON tool call parsing pattern.
+*   **Clarity**: Clearly defines the interface for file operations.
+
+This plan directly addresses the need to break up `gemini-cli_v13.c` and integrate a `write_file` tool, aligning with the broader goal of enabling robust tool use with `gemma3:270M`.

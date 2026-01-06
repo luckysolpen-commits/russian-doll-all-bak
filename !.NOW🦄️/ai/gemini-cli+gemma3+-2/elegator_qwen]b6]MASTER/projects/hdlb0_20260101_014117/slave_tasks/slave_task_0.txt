@@ -1,0 +1,32 @@
+# Slave Task 0: Basic Logic Gates from NAND Gates
+
+## Objective
+Implement basic logic gates using only NAND gates as building blocks.
+
+## Specific Tasks
+1. Design and implement NOT gate using NAND gate
+2. Design and implement AND gate using NAND gates
+3. Design and implement OR gate using NAND gates
+4. Design and implement XOR gate using NAND gates
+5. Design and implement NOR gate using NAND gates
+6. Design and implement XNOR gate using NAND gates
+
+## Deliverables
+- Verilog (or VHDL) files for each gate implementation
+- Testbench files to verify functionality
+- Documentation explaining the design choices
+
+## Implementation Notes
+- Use only NAND gates as primitive components
+- Optimize for minimal gate count where possible
+- Ensure proper signal propagation delays are considered
+- Create comprehensive test cases for each gate
+
+## Output Location
+- Place implementations in: ./nand_gates/
+- Place tests in: ./tests/nand_gates/
+
+## Verification
+- Each gate implementation must pass functional tests
+- Test vectors should cover all possible input combinations
+- Timing analysis if applicable

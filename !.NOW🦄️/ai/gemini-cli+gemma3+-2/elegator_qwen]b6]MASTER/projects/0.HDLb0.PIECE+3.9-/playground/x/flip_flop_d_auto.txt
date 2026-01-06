@@ -1,0 +1,67 @@
+# Rising-edge triggered D Flip-Flop from pure NAND
+# D = switch_0 (input 5)
+# CLK = clock (input 7)
+# Q stored in ram[0]
+# Tape shows current Q every cycle
+
+# 1. Store previous CLK in ram[30]
+0000000000000000  # pass CLK -> ram[30] (prev_CLK)
+0000000000011110  # out 30 (binary 000000011110)
+0000000000000111  # a=7 CLK
+0000000000000011  # blank
+
+# 2. ~prev_CLK = NOT prev_CLK
+0000000000000001  # nand
+0000000000011111  # out ram[31]
+0000000000011110  # a=ram[30]
+0000000000011110  # b=ram[30]
+
+# 3. rising_edge_pulse = CLK AND ~prev_CLK = NOT NAND(CLK, ~prev_CLK)
+0000000000000001  # nand temp
+0000000000100000  # ram[32]
+0000000000000111  # CLK
+0000000000011111  # ~prev
+
+0000000000000001  # not that = AND
+0000000000100001  # ram[33] pulse
+0000000000100000
+0000000000100000
+
+# 4. load_part = pulse AND D
+0000000000000001  # nand temp
+0000000000100010  # ram[34]
+0000000000100001  # pulse
+0000000000000101  # D
+
+0000000000000001  # not = AND
+0000000000100011  # ram[35] load_part
+0000000000100010
+0000000000100010
+
+# 5. hold_part = ~pulse AND old_Q (ram[0])
+0000000000000001  # ~pulse
+0000000000100100  # ram[36]
+0000000000100001
+0000000000100001
+
+0000000000000001  # nand with old_Q
+0000000000100101  # ram[37]
+0000000000100100  # ~pulse
+0000000000010000  # ram[0] address 16 binary 000000010000
+
+0000000000000001  # not = AND
+0000000000100110  # ram[38] hold_part
+0000000000100101
+0000000000100101
+
+# 6. new_Q = load_part OR hold_part = NOT NAND them
+0000000000000001  # nand
+0000000000000000  # out ram[0]
+0000000000100011  # load_part
+0000000000100110  # hold_part
+
+# 7. Output Q to tape every cycle so we can watch it breathe
+0000000000000000  # pass to tape (addr=0)
+0000000000000000
+0000000000010000  # input_a = ram[0] (16)
+0000000000000011  # blank

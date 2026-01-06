@@ -1,0 +1,26 @@
+# D-Latch Truth Table
+#
+# Inputs:
+#   D: Data input (switch_0, address 5)
+#   CLK: Clock input (address 7)
+# Output:
+#   Q: Output (ram[16])
+#
+# Symbol Legend:
+#   D  | CLK | Q(t) | Q(t+1) | Description
+#   -- | --- | ---- | ------ | -----------
+#   0  |  0  |  X   |   Q(t) | Hold (no change)
+#   0  |  1  |  X   |   0    | Reset (D=0, CLK=1)
+#   1  |  0  |  X   |   Q(t) | Hold (no change)
+#   1  |  1  |  X   |   1    | Set (D=1, CLK=1)
+#
+# Note: Q(t) represents current output state, Q(t+1) represents next output state
+
+D | CLK | Q(t) | Q(t+1) | Description
+---------------------------
+0 |  0  |  0   |   0    | Hold (0 state)
+0 |  0  |  1   |   1    | Hold (1 state)
+0 |  1  |  X   |   0    | Reset
+1 |  0  |  0   |   0    | Hold (0 state)
+1 |  0  |  1   |   1    | Hold (1 state)
+1 |  1  |  X   |   1    | Set

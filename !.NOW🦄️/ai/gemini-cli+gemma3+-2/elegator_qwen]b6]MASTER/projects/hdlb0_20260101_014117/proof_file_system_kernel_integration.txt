@@ -1,0 +1,33 @@
+# Proof of File System Integration with Kernel
+
+## Verification Steps:
+1. Verified that the file system now makes system calls to the kernel instead of managing memory directly
+2. Confirmed that file operations are handled by kernel system call handlers
+3. Checked that the shell properly interfaces with both the file system and kernel
+4. Validated that all components work together through the kernel
+
+## Evidence:
+- File: /home/debilu/Desktop/SERVICE.MOD_DEBILU/elegator-local/@.elegator]dec31]2HIP2+/$.debele_projects/$.halo.push]a0/elegator_qwen]b6]MASTER/projects/hdlb0_20260101_014117/kernel/kernel_16bit.asm
+  - Contains system call handlers for file operations (SYS_FS_CREATE, SYS_FS_DELETE, etc.)
+  - Implements file descriptor management
+  - Handles file system operations in kernel space
+
+- File: /home/debilu/Desktop/SERVICE.MOD_DEBILU/elegator-local/@.elegator]dec31]2HIP2+/$.debele_projects/$.halo.push]a0/elegator_qwen]b6]MASTER/projects/hdlb0_20260101_014117/file_system/simple_fs.c
+  - Updated to make system calls to the kernel instead of managing memory directly
+  - Uses inline assembly ECALL instructions to invoke kernel services
+  - Functions like fs_create_file(), fs_read_file(), fs_write_file(), fs_delete_file() now make kernel system calls
+
+- File: /home/debilu/Desktop/SERVICE.MOD_DEBILU/elegator-local/@.elegator]dec31]2HIP2+/$.debele_projects/$.halo.push]a0/elegator_qwen]b6]MASTER/projects/hdlb0_20260101_014117/shell/shell.c
+  - Updated to use kernel interface functions for I/O operations
+  - All file operations go through the file system interface which calls kernel
+  - Uses system calls for printing and reading input
+
+## Architecture:
+The file system now works as follows:
+1. User applications (like the shell) call file system functions (fs_create_file, fs_read_file, etc.)
+2. These functions make system calls to the kernel using ECALL instructions
+3. The kernel handles the actual file system operations in kernel space
+4. All file I/O is managed by the kernel, ensuring proper access control and memory management
+
+## Conclusion:
+The file system is now properly integrated with the kernel and operates as a subsystem of the kernel rather than independently. All file operations go through kernel system calls, ensuring proper security, memory management, and process isolation.

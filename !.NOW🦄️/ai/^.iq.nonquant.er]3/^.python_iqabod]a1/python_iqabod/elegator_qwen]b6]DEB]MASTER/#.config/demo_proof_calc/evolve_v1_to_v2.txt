@@ -1,0 +1,14 @@
+You are the_elegator managing the evolution of a simple calculator program from version 1 to version 2. 
+
+Current state (v1):
+- Basic calculator with addition and subtraction functions
+- Simple implementation in calculator.c
+
+Required improvements for v2:
+1. Add multiplication function
+2. Add division function with error handling for division by zero
+3. Improve the user interface to show all operations
+4. Add proper error handling
+5. Maintain clean, well-documented code
+
+Implement these changes to evolve the calculator from v1 to v2.

@@ -1,0 +1,59 @@
+# Full Adder Test Commands for Truth Table Verification
+# Commands:
+# 1 = Flip switch_0 
+# 2 = Flip switch_1
+# s = Step (execute one clock cycle)
+# q = Quit (output to tape)
+
+# To test the full adder, we need to run it multiple times with different inputs
+# In HDLb0, the memory addresses are:
+# RAM[30]: Input A (will use switch_0 value after setting)
+# RAM[31]: Input B (will use switch_1 value after setting)
+# RAM[32]: Input Cin (will use clock value after a few cycles)
+
+# The full adder outputs Sum to RAM[40] and Cout to RAM[41]
+# The final instruction writes RAM[40] (Sum) to tape
+
+# To test different input combinations, we'll use the clock's changing nature and flipping switches
+# Since the clock alternates, we can use it to affect Cin input
+
+# First test - initial state likely 0,0,0 (switches start low, first clock cycle is 1)
+s            # Step 1: Execute once with initial state
+q            # Output the Sum result
+
+# Set A=1, B=0 and test with Cin=0 (clock=0 on next cycle)
+1            # Flip switch_0 to make A=1
+s            # Execute to process A=1, B=0, Cin=0
+q            # Output Sum for A=1,B=0,Cin=0
+
+# Set A=0, B=1 and test with Cin=0 
+1            # Flip switch_0 back to A=0
+2            # Flip switch_1 to make B=1
+s            # Execute to process A=0, B=1, Cin=0
+q            # Output Sum for A=0,B=1,Cin=0
+
+# Set A=1, B=1 and test with Cin=0
+1            # Flip switch_0 to make A=1
+s            # Execute to process A=1, B=1, Cin=0
+q            # Output Sum for A=1,B=1,Cin=0
+
+# Test same inputs but with Cin=1 (clock will be 1)
+2            # Flip switch_1 to make B=0
+s            # Execute with A=0, B=0, Cin=1 (clock is now 1)
+q            # Output Sum for A=0,B=0,Cin=1
+
+# Set A=1, B=0 and test with Cin=1
+1            # Flip switch_0 to make A=1
+s            # Execute to process A=1, B=0, Cin=1
+q            # Output Sum for A=1,B=0,Cin=1
+
+# Set A=0, B=1 and test with Cin=1
+1            # Flip switch_0 to make A=0
+2            # Flip switch_1 to make B=1
+s            # Execute to process A=0, B=1, Cin=1
+q            # Output Sum for A=0,B=1,Cin=1
+
+# Set A=1, B=1 and test with Cin=1
+1            # Flip switch_0 to make A=1
+s            # Execute to process A=1, B=1, Cin=1
+q            # Output Sum for A=1,B=1,Cin=1

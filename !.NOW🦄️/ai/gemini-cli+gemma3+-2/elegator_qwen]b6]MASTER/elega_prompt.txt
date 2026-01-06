@@ -1,0 +1,148 @@
+
+💬️
+in pure gcc c &| bash (for embedded)
+were architecting a set of programs/scripts called "the_elegator_qwen";
+
+this program is meant to beable to start <> cli agent ai tool , 
+give it prompts , review its work, and give it reprompts
+or shut it down if it feels the context is too strained/corrupted/stuck
+(should probably ask for a new prompt using old context experience first)
+
+there maybe times where u find the need to run more than 1 agent
+in a new terminal, thats ok but lets limit it to no more than 3 for now.
+
+lets create whatever cli program + scripts you would need to run this
+
+
+heres a typical flow 
+
+1 . i will start a "<qwen-cli>" as "the_elegator" with elegator prompt
++ the project folder and project task
+
+that elegator_cli may make a todo, then will start its own <qwen-cli> as an "employolo_<#>"
+
+
+
+
+
+to prove this concept we are going to be working on "gitlet.c]j0009"
+
+a project that should do local version control , 
+later we want to integrate gitlet.c into 'the_elegator'
+for advanced version control 
+
+
+rules: 
+keep numbered backup files
+keep progress_reports.txt incase we have to handoff , or restart. 
+recursion-nuance: 
+the elegator may manage its own elegator, that way they can keep 
+resetting if the context was becoming to overwhelming
+
+lets address the feasability of this architecture
+help me write this in a more templated prompt that we can reuse with
+different projects?
+
+and then test it locally on "$ qwen" cli 
+💬️
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔒️we should live any filewrites to jbmbrooks.com till there is sec (fem-trolls)🔒️
+
+🔺️🕷️🐙️🔺️ai = smarter than ppl. we just need "employee systems".
+🛎️📣️alerts🛎️📣️
+📅️just look @ it everyweekend only. w/e [better than nothing]+discipline🦄️🥋️📅️
+🥇️
+we make something that will "run qwen till tokens expire"
+(one instance is more than enough , but it will tell it to keep going etc. 
+{to do on more computers 2 have our own os/lfs/halo[3x] stuff}
+
+can it make git versions? 
+🕷️
+🥈️is it better if done with ollama? (does same thing but with ollama = YES
+do we need to edit google-cli to use our own api keys(qwen/ollama) or w/e = YES
+
+
+🥉️
+is linux_mac best canditate 4 "GPU BASHING" actually ? yes. 
+🔺️🐙️🔺️
+
+then im gonna make them all work on "os stuff = lfs, halo, compiler + kompatkernel. 
+♿️
+y? we support linux, but if soething goes wrong, they can switch to our os
+
+(were not gonna baby sit these, treat it like the stock market = good training🐢️
+go right back to what we were doing b4 , i swear 2 god) 
+
+
+just make elegator quality check, rewrite a prompt
+and rerun llm. 
+♿️
+
+🛸️
+enterprise = wants this
+consumer = wants new twitch+switch 
+👾️
+even as experimental its good 2 have as a product]
+👿️debilu = only ollama, get it? 
+
+📲️👓️ (pi computer can do glasses & phone)
+🍎️has ollama. can it fix swift stuff? 
+
+🪣️can we have our own ollama? (not in w/e but just run some raw model? ask)🪣️
+👨🏽‍🔬️its a 'riscy' idea , but if it works/scrum cool. we want quantum exposure+sale👨🏽‍🔬️
+📼️
+
+Steve Yegge's Vibe Coding Manifesto: Why Claude Code Isn't It & What Comes After the IDE
+https://www.youtube.com/watch?v=zuJyJP517Uw
+
+📼️
+📅️📍️
+LOCAL DEV FIRST = 
+1 basic 4 qwen]
+1 basic 4 ollama]
+
+
+we could always AT LEAST have 1 qwen & 1 ollama rolling.
+📍️
+📅️
+
+projects :
+-1. get all the project u want and migrate them 2 "debilu"
+0. ollama&qwen integrations  . gemini 4 ollama gemini 4 naked model?=ask about
+1. halo rvi-rv32 + halo-native-kernel+c.compiler 
+2.lfs |& linux-like kernel
+3. ai 2 convo + p2p network |& karpathy-compatibility 
+4. vs control + dummy project and iterate on vs 
+
+5. current project / datalayeronly pieces enterplay/ stocks/yahoofin.jd/md]CRM++
+6. videos auto upload, yt channel managment / other socials
+7. security b4 ingestion.
+👶️
+they are acting out now ; they woldnt' be ready b4 we had focuse projects lol smh
+👶️
+
+📌️🐊️
+this is in excersize in "MACRO PROMPTING ALREADY"
+
+we will tell it our major goal, show it "ALL OUR SUBFOLDERS"
+and have it write a plan for each. then we will do a "ELEGATOR 2 approve
+steps of that plan as they happen, even refining testing method to suit it
+(and framework it so we can steal it if possible)
+
+👁️‍🗨️️look over the projects first and see if they make sense!
+
+(should be looking over elegator ollama vs qwen vs naked model ]NOW!👁️‍🗨️️
+💬️
+📌️🐊️

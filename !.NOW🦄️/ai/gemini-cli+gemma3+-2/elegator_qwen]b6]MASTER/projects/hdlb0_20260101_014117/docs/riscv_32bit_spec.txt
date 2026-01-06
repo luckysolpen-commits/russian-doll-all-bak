@@ -1,0 +1,136 @@
+# HDLB0 RISC-V Architecture Specifications
+
+## Stage 5: 32-bit RISC-V Implementation
+
+### Objective
+Implement a full 32-bit RISC-V processor that maintains backward compatibility with 2-bit, 8-bit, and 16-bit implementations.
+
+### Architecture Overview
+- Word size: 32 bits
+- Address size: 32 bits
+- Register file: 32 registers (32 bits each) - following RV32I standard
+- Instruction set: Complete RV32I or extended (RV32IMAC)
+
+### Register File
+- 32 general-purpose registers (x0-x31)
+- x0 hardwired to 0
+- Each register: 32 bits wide
+- Standard RISC-V calling convention
+
+### Instruction Set Architecture (ISA)
+#### Instruction Formats (32-bit standard RISC-V)
+1. R-type (Register)
+   - [6:0] opcode | [4:0] rs1 | [4:0] rs2 | [2:0] funct3 | [4:0] rd | [6:0] funct7
+2. I-type (Immediate)
+   - [6:0] opcode | [4:0] rs1 | [2:0] funct3 | [4:0] rd | [11:0] immediate
+3. S-type (Store)
+   - [6:0] opcode | [4:0] rs1 | [4:0] rs2 | [2:0] funct3 | [11:5] immediate[11:5] | [4:0] immediate[4:1]
+4. B-type (Branch)
+   - [6:0] opcode | [4:0] rs1 | [4:0] rs2 | [2:0] funct3 | [11:5] immediate[12|10:5] | [4:1] immediate[4:1|11] | [0:0] immediate[0]
+5. U-type (Upper Immediate)
+   - [6:0] opcode | [4:0] rd | [31:12] immediate
+6. J-type (Jump)
+   - [6:0] opcode | [4:0] rd | [19:12] immediate[19:12] | [11:11] immediate[11] | [10:1] immediate[10:1] | [20:20] immediate[20]
+
+#### Supported Instructions (RV32I Standard)
+1. Integer Register-Immediate Instructions
+   - ADDI: Add Immediate
+   - ANDI: AND Immediate
+   - ORI: OR Immediate
+   - XORI: XOR Immediate
+   - SLTI: Set if Less Than Immediate
+   - SLTIU: Set if Less Than Immediate Unsigned
+   - SLLI: Shift Left Logical Immediate
+   - SRLI: Shift Right Logical Immediate
+   - SRAI: Shift Right Arithmetic Immediate
+
+2. Integer Register-Register Operations
+   - ADD: Add
+   - SUB: Subtract
+   - AND: AND
+   - OR: OR
+   - XOR: XOR
+   - SLT: Set if Less Than
+   - SLTU: Set if Less Than Unsigned
+   - SLL: Shift Left Logical
+   - SRL: Shift Right Logical
+   - SRA: Shift Right Arithmetic
+
+3. Load/Store Instructions
+   - LB/LBU: Load Byte / Load Byte Unsigned
+   - LH/LHU: Load Halfword / Load Halfword Unsigned
+   - LW: Load Word
+   - SB: Store Byte
+   - SH: Store Halfword
+   - SW: Store Word
+
+4. Control Transfer Instructions
+   - BEQ: Branch if Equal
+   - BNE: Branch if Not Equal
+   - BLT: Branch if Less Than
+   - BGE: Branch if Greater or Equal
+   - BLTU: Branch if Less Than Unsigned
+   - BGEU: Branch if Greater or Equal Unsigned
+   - JAL: Jump and Link
+   - JALR: Jump and Link Register
+
+### Memory
+- Data memory: 4GB (32 bits each) - virtual/physical as needed
+- Addressable locations: 0 to 2^32-1
+- Memory management unit (if implementing virtual memory)
+
+### Control Signals
+- ALUOp: 4 bits (determine ALU operation)
+- RegWrite: 1 bit (enable register write)
+- MemWrite: 1 bit (enable memory write)
+- MemRead: 1 bit (enable memory read)
+- Branch: 1 bit (enable branch)
+- Jump: 1 bit (enable jump)
+- ALUSrc: 1 bit (select ALU source)
+- PCSource: 2 bits (select PC source)
+- MemToReg: 1 bit (select writeback source)
+- PCSrc: 2 bits (select PC source for next cycle)
+- PCWriteCond: 1 bit (conditional PC write)
+- PCWrite: 1 bit (unconditional PC write)
+
+### ALU Operations
+- 0000: Addition
+- 0001: Subtraction
+- 0010: AND
+- 0011: OR
+- 0100: XOR
+- 0101: Shift Left
+- 0110: Shift Right Logical
+- 0111: Shift Right Arithmetic
+- 1000: Set Less Than
+- 1001: Set Less Than Unsigned
+- 1010: Multiply (if implementing M extension)
+- 1011: Divide (if implementing M extension)
+
+### Backward Compatibility
+- Must be able to execute 2-bit, 8-bit, and 16-bit RISC-V programs
+- Provide mode switching between different bit-width operations
+- Maintain same instruction encoding principles
+- Ensure all previous implementations work within 32-bit framework
+- Implement compatibility layers if needed
+
+### Implementation Notes
+- Use components built from NAND gates in Stage 1
+- Extend 16-bit design principles to 32-bit
+- Consider pipelining for performance
+- Implement proper exception handling
+- Consider cache hierarchy for performance
+- Implement proper clocking and control logic
+- Optimize for performance while maintaining compatibility
+
+### Test Plan
+- Verify all instructions with various inputs
+- Test register file read/write operations
+- Test memory load/store operations
+- Verify control signal generation
+- Test backward compatibility with 2-bit, 8-bit, and 16-bit programs
+- Verify proper handling of 32-bit arithmetic
+- Test edge cases and overflow conditions
+- Performance benchmarking
+- Compliance testing with RISC-V standards
+- Exception and interrupt handling verification

@@ -1,0 +1,45 @@
+# Simple Clocked D Latch/Register with Enable - pure NAND
+# switch_0 (5) = enable (1 = load/follow D, 0 = hold)
+# switch_1 (6) = D input
+# Q = ram[0]
+# Tape shows Q every cycle - long same bits = hold magic!
+
+# load_part = enable AND D = NOT NAND(enable, D)
+0000000000000001  # nand -> ram[10]
+0000000000001010  # out 10
+0000000000000101  # a=enable switch_0
+0000000000000110  # b=D switch_1
+
+0000000000000001  # NOT = AND
+0000000000001011  # ram[11] load_part
+0000000000001010
+0000000000001010
+
+# ~enable = NOT enable
+0000000000000001
+0000000000001100  # ram[12]
+0000000000000101
+0000000000000101
+
+# hold_part = ~enable AND old_Q
+0000000000000001  # nand temp
+0000000000001101  # ram[13]
+0000000000001100  # ~enable
+0000000000010000  # old Q ram[0] (16)
+
+0000000000000001  # NOT = AND
+0000000000001110  # ram[14] hold_part
+0000000000001101
+0000000000001101
+
+# new_Q = load OR hold = NOT NAND
+0000000000000001
+0000000000000000  # out ram[0]
+0000000000001011  # load_part
+0000000000001110  # hold_part
+
+# Show Q on tape every cycle
+0000000000000000
+0000000000000000
+0000000000010000  # ram[0] (16)
+0000000000000011  # blank

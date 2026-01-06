@@ -1,0 +1,1 @@
+Implement the tasks specified in slave_task_3.txt: Create actual RISC-V assembly programs for the 2-bit processor, including simple operations, memory access, and test programs. Convert these to HDLb0 format for execution on the emulator.

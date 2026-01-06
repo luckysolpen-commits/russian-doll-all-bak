@@ -1,0 +1,37 @@
+# Slave Task 2: Create RISC-V Programs for HDLb0 Emulator
+
+## Objective
+Create simple RISC-V assembly programs that can run on the HDLb0 emulator using the 2-bit RISC-V processor that has been implemented.
+
+## Specific Tasks
+1. Design simple RISC-V assembly programs for the 2-bit processor
+2. Create programs demonstrating basic operations:
+   - Arithmetic operations (addition, subtraction)
+   - Logic operations (AND, OR, XOR)
+   - Memory access (load, store)
+   - Control flow (branches, jumps)
+3. Convert these programs to HDLb0 binary format
+4. Create test programs to verify the processor functionality
+5. Document the instruction set used for the 2-bit RISC-V
+
+## Deliverables
+- Simple RISC-V assembly programs in .s format
+- Converted HDLb0 binary format files (.hlo)
+- Test programs to verify processor functionality
+- Instruction set documentation for the 2-bit RISC-V
+
+## Implementation Notes
+- Use the 2-bit RISC-V instruction format that was designed
+- Programs should be simple enough for the 2-bit architecture
+- Include comprehensive test cases
+- Verify programs work with the existing processor implementation
+
+## Output Location
+- Place assembly programs in: ./riscv_2bit/programs/
+- Place HDLb0 binaries in: ./riscv_2bit/hdlb0_output/
+- Place documentation in: ./riscv_2bit/docs/
+
+## Verification
+- Programs should execute correctly on the HDLb0 emulator
+- Test results should match expected behavior
+- Programs should demonstrate all implemented instructions

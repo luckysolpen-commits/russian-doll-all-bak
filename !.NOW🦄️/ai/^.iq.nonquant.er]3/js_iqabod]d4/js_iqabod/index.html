@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript LLM Terminal with PHP Backend</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            font-family: 'Courier New', monospace;
+            color: #d4d4d4;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #terminal {
+            background-color: #1e1e1e;
+            border: 2px solid #3e3e3e;
+            border-radius: 5px;
+            padding: 15px;
+            flex: 1;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        
+        #input-container {
+            display: flex;
+            margin-top: 15px;
+        }
+        
+        #command-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Courier New', monospace;
+            background-color: #2d2d2d;
+            color: #d4d4d4;
+            border: 2px solid #3e3e3e;
+            border-radius: 3px;
+        }
+        
+        #submit-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: 'Courier New', monospace;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        #submit-btn:hover {
+            background-color: #005a9e;
+        }
+        
+        .command {
+            color: #7eda7d;
+        }
+        
+        .response {
+            color: #d4d4d4;
+            margin: 10px 0;
+        }
+        
+        .system-message {
+            color: #569cd6;
+        }
+        
+        .loading {
+            color: #c8c8c8;
+        }
+        
+        .train-controls {
+            display: flex;
+            margin-top: 10px;
+        }
+        
+        .train-control {
+            margin-right: 10px;
+        }
+        
+        .train-control label {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 12px;
+        }
+        
+        .train-control input {
+            width: 80px;
+            padding: 5px;
+            font-size: 12px;
+            font-family: 'Courier New', monospace;
+            background-color: #2d2d2d;
+            color: #d4d4d4;
+            border: 1px solid #3e3e3e;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <div class="system-message">JavaScript LLM Terminal with PHP Backend - Ready</div>
+        <div class="system-message">Type a command or question and press Enter/Submit</div>
+        <div class="system-message">Available commands: help, model-info, clear, status, config</div>
+        <div class="system-message">Training: Use 'train:epochs=5,batchSize=32,learningRate=0.001'</div>
+        <div class="system-message">Vocabulary: Use 'vocab:source=corpora/sample.txt,vocabName=default'</div>
+    </div>
+    
+    <div class="train-controls">
+        <div class="train-control">
+            <label for="train-epochs">Epochs</label>
+            <input type="number" id="train-epochs" value="5" min="1" max="100">
+        </div>
+        <div class="train-control">
+            <label for="train-batch-size">Batch Size</label>
+            <input type="number" id="train-batch-size" value="32" min="1" max="256">
+        </div>
+        <div class="train-control">
+            <label for="train-learning-rate">Learning Rate</label>
+            <input type="number" id="train-learning-rate" value="0.001" step="0.0001" min="0.0001" max="0.1">
+        </div>
+        <div class="train-control">
+            <label>&nbsp;</label>
+            <button id="train-btn">Start Training</button>
+        </div>
+    </div>
+    
+    <div class="train-controls">
+        <div class="train-control">
+            <label for="vocab-source">Corpus Source</label>
+            <input type="text" id="vocab-source" value="corpora/sample.txt" placeholder="Path to corpus">
+        </div>
+        <div class="train-control">
+            <label for="vocab-name">Vocab Name</label>
+            <input type="text" id="vocab-name" value="default" placeholder="Vocab name">
+        </div>
+        <div class="train-control">
+            <label>&nbsp;</label>
+            <button id="vocab-btn">Create Vocab</button>
+        </div>
+    </div>
+    
+    <div id="input-container">
+        <input type="text" id="command-input" placeholder="Enter command or prompt..." autocomplete="off">
+        <button id="submit-btn">Submit</button>
+    </div>
+
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <!-- Load TensorFlow.js converter -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@latest"></script>
+    <!-- Load TensorFlow.js layers -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-layers@latest"></script>
+    
+    <script src="js/model.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Add event listeners for the training and vocabulary buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            const trainBtn = document.getElementById('train-btn');
+            const epochsInput = document.getElementById('train-epochs');
+            const batchSizeInput = document.getElementById('train-batch-size');
+            const learningRateInput = document.getElementById('train-learning-rate');
+            
+            const vocabBtn = document.getElementById('vocab-btn');
+            const vocabSourceInput = document.getElementById('vocab-source');
+            const vocabNameInput = document.getElementById('vocab-name');
+            
+            if (trainBtn) {
+                trainBtn.addEventListener('click', () => {
+                    const epochs = epochsInput.value;
+                    const batchSize = batchSizeInput.value;
+                    const learningRate = learningRateInput.value;
+                    
+                    // Set command input to training command
+                    const commandInput = document.getElementById('command-input');
+                    commandInput.value = `train:epochs=${epochs},batchSize=${batchSize},learningRate=${learningRate}`;
+                    
+                    // Trigger the submit button click
+                    document.getElementById('submit-btn').click();
+                });
+            }
+            
+            if (vocabBtn) {
+                vocabBtn.addEventListener('click', () => {
+                    const vocabSource = vocabSourceInput.value;
+                    const vocabName = vocabNameInput.value;
+                    
+                    // Set command input to vocab command
+                    const commandInput = document.getElementById('command-input');
+                    commandInput.value = `vocab:source=${vocabSource},vocabName=${vocabName}`;
+                    
+                    // Trigger the submit button click
+                    document.getElementById('submit-btn').click();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Slave Agent Task: Fix PHP API Routing for Built-in Server
+
+You are an AI coding assistant called 'employolo_0', a specialized slave agent working on fixing the PHP API routing for the built-in server. The API endpoints are not being reached properly because the PHP built-in server doesn't automatically route all requests to an index.php file like Apache/Nginx.
+
+## Core Responsibility:
+Fix the API routing so that all /backend/* requests get properly handled by backend/api.php in the PHP built-in server.
+
+## Problem Description:
+API calls to /backend/vocab, /backend/train, etc. are returning 404 because the PHP built-in server doesn't handle routing the same way as Apache/Nginx. The server is looking for physical files rather than routing through api.php.
+
+## Task Requirements:
+1. Modify the router.php to properly handle all /backend/* routes
+2. Ensure all API endpoints work: /backend/vocab, /backend/train, /backend/generate, /backend/status, /backend/config
+3. The PHP development server should route all API requests to backend/api.php
+4. Maintain compatibility with serving static assets (index.html, CSS, JS files)
+5. Ensure the PATH_INFO and REQUEST_URI are properly set for the backend handlers
+6. Make sure CORS headers are properly set for API responses
+7. Verify the routing works with POST requests for vocab and train endpoints
+
+## Approach:
+The PHP built-in server router.php file should intercept all requests that look like API calls and forward them to the appropriate backend handler, while letting static files be served normally.
+
+## Expected Result:
+All backend API endpoints should return JSON responses instead of 404 errors.
+
+Begin implementing the proper API routing for the PHP built-in server.

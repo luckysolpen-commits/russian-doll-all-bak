@@ -1,0 +1,47 @@
+# HDLB0 RISC-V Architecture Specifications
+
+## Stage 1: NAND Gates
+### Objective
+Create all fundamental logic gates using only NAND gates as building blocks.
+
+### Components to Implement
+1. NOT Gate (Inverter)
+   - Input: 1 bit
+   - Output: 1 bit
+   - Function: Output is inverse of input
+
+2. AND Gate
+   - Input: 2 bits
+   - Output: 1 bit
+   - Function: Output is high only when both inputs are high
+
+3. OR Gate
+   - Input: 2 bits
+   - Output: 1 bit
+   - Function: Output is high when at least one input is high
+
+4. XOR Gate
+   - Input: 2 bits
+   - Output: 1 bit
+   - Function: Output is high when inputs are different
+
+5. NOR Gate
+   - Input: 2 bits
+   - Output: 1 bit
+   - Function: Output is inverse of OR operation
+
+6. XNOR Gate
+   - Input: 2 bits
+   - Output: 1 bit
+   - Function: Output is high when inputs are the same
+
+### Implementation Notes
+- All gates must be constructed using only 2-input NAND gates
+- Minimize the number of NAND gates used for each function
+- Consider propagation delay in the design
+- Create modular, reusable components
+
+### Test Plan
+- Verify each gate with all possible input combinations
+- Test propagation delay characteristics
+- Verify power consumption estimates

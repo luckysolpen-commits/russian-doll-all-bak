@@ -1,0 +1,24 @@
+# Full Adder Proof
+# This file contains the expected output from the full adder when running the test commands
+# Each 'q' command in the commands file should output the Sum value to tape
+
+# Expected results based on Full Adder truth table:
+# A | B | Cin | Sum | Cout
+# 0 | 0 |  0  |  0  |  0   -> Output: 0
+# 1 | 0 |  0  |  1  |  0   -> Output: 1  
+# 0 | 1 |  0  |  1  |  0   -> Output: 1
+# 1 | 1 |  0  |  0  |  1   -> Output: 0
+# 0 | 0 |  1  |  1  |  0   -> Output: 1
+# 1 | 0 |  1  |  0  |  1   -> Output: 0
+# 0 | 1 |  1  |  0  |  1   -> Output: 0
+# 1 | 1 |  1  |  1  |  1   -> Output: 1
+
+# So the expected output for each 'q' in our commands file should be:
+0
+1
+1
+0
+1
+0
+0
+1

@@ -1,0 +1,1 @@
+Implement the tasks specified in slave_task_5.txt: Create an 8-bit RISC-V processor that maintains backward compatibility with the 2-bit implementation and is compatible with the kernel. Design all necessary components, ensure kernel compatibility, and create test programs.

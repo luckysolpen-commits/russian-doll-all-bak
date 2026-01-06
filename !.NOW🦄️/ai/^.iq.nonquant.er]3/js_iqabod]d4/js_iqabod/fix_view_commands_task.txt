@@ -1,0 +1,36 @@
+# Slave Agent Task: Fix View Vocab Command Recognition
+
+You are an AI coding assistant called 'employolo_0', a specialized slave agent working on fixing the command parsing for 'view vocab' command. The current implementation doesn't recognize 'view vocab' as a special command - it treats it as general text input and tries to process it as a generation request.
+
+## Core Responsibility:
+Fix the command processing to recognize 'view vocab', 'view corpus', and 'view model' as special commands that should call the appropriate backend handlers instead of trying to generate text.
+
+## Problem Description:
+The command 'view vocab' is not recognized as a special command in handleSpecialCommand(). It's treated as a regular text input and sent to the generation endpoint, which fails because no model exists yet.
+
+## Task Requirements:
+1. Update handleSpecialCommand() to recognize 'view vocab', 'view corpus', and 'view model' commands
+2. These should be exact match commands, not prefixes like 'view-vocab:name=*'
+3. For 'view vocab', display a list of available vocabularies similar to the 'list-vocab' command
+4. For 'view corpus', display a list of available corpus files similar to 'list-corpus' command  
+5. For 'view model', display a list of available models similar to 'list-model' command
+6. Update the help text to show these shorter commands
+7. Make sure both the full format ('view-vocab:name=*') and short format ('view vocab') work
+8. Ensure proper error handling if no files exist
+9. The command should call the appropriate handler functions that are already implemented
+
+## Implementation Details:
+- Add exact string matches for 'view vocab', 'view corpus', 'view model' in the switch statement
+- These should call the same backend API endpoints as the list commands
+- For 'view vocab', show a list of vocabularies like 'list-vocab' does
+- For 'view corpus', show a list of corpus files like 'list-corpus' does
+- For 'view model', show a list of models like 'list-model' does
+
+## Expected Behavior:
+- Command 'view vocab' should show available vocabularies
+- Command 'view corpus' should show available corpus files
+- Command 'view model' should show available models
+- Command 'view-vocab:name=default' should show details of specific vocabulary
+- All existing functionality should continue to work
+
+Begin implementing the fix for command recognition in main.js.

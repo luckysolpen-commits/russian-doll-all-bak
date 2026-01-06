@@ -1,0 +1,84 @@
+# HDLB0 Detailed TODO List
+
+## Phase 1: NAND Gate Foundation
+- [ ] Design basic logic gates from NAND gates
+  - [ ] NOT gate from NAND
+  - [ ] AND gate from NAND
+  - [ ] OR gate from NAND
+  - [ ] XOR gate from NAND
+  - [ ] NOR gate from NAND
+  - [ ] XNOR gate from NAND
+- [ ] Create fundamental digital components
+  - [ ] Half adder using NAND gates
+  - [ ] Full adder using NAND gates
+  - [ ] 1-bit ALU using NAND gates
+  - [ ] Multiplexer using NAND gates
+  - [ ] Demultiplexer using NAND gates
+  - [ ] Decoder using NAND gates
+  - [ ] Flip-flops (SR, D, JK) using NAND gates
+  - [ ] Counter circuits using NAND gates
+- [ ] Document NAND gate implementations
+- [ ] Create test suite for NAND-based components
+
+## Phase 2: 2-bit RISC-V Implementation
+- [ ] Define 2-bit RISC-V instruction set architecture
+  - [ ] Determine minimal instruction set for 2-bit operation
+  - [ ] Define register file (2-bit registers)
+  - [ ] Design instruction encoding format
+  - [ ] Specify control signals
+- [ ] Implement core components
+  - [ ] 2-bit register file
+  - [ ] 2-bit ALU
+  - [ ] Program counter (2-bit)
+  - [ ] Instruction memory
+  - [ ] Data memory
+  - [ ] Control unit
+- [ ] Integrate components into 2-bit RISC-V processor
+- [ ] Create test programs for 2-bit processor
+- [ ] Verify functionality
+
+## Phase 3: 8-bit RISC-V Implementation
+- [ ] Extend architecture from 2-bit to 8-bit
+  - [ ] Redesign register file (8-bit registers)
+  - [ ] Modify ALU for 8-bit operations
+  - [ ] Update instruction encoding for 8-bit
+  - [ ] Adjust memory addressing
+- [ ] Maintain backward compatibility with 2-bit design
+- [ ] Implement extended instruction set for 8-bit
+- [ ] Create test programs for 8-bit processor
+- [ ] Verify functionality and compatibility
+
+## Phase 4: 16-bit RISC-V Implementation
+- [ ] Extend architecture from 8-bit to 16-bit
+  - [ ] Redesign register file (16-bit registers)
+  - [ ] Modify ALU for 16-bit operations
+  - [ ] Update instruction encoding for 16-bit
+  - [ ] Adjust memory addressing
+- [ ] Maintain backward compatibility with 8-bit and 2-bit designs
+- [ ] Implement extended instruction set for 16-bit
+- [ ] Create test programs for 16-bit processor
+- [ ] Verify functionality and compatibility
+
+## Phase 5: 32-bit RISC-V Implementation
+- [ ] Extend architecture from 16-bit to 32-bit
+  - [ ] Redesign register file (32-bit registers)
+  - [ ] Modify ALU for 32-bit operations
+  - [ ] Update instruction encoding for 32-bit
+  - [ ] Adjust memory addressing
+- [ ] Maintain backward compatibility with all previous designs
+- [ ] Implement full RISC-V instruction set for 32-bit
+- [ ] Create comprehensive test programs for 32-bit processor
+- [ ] Verify functionality and compatibility
+
+## Phase 6: Testing and Verification
+- [ ] Create comprehensive test suite for each implementation level
+- [ ] Verify backward compatibility between all levels
+- [ ] Performance testing
+- [ ] Functional verification
+- [ ] Bug fixing and optimization
+
+## Phase 7: Documentation and Finalization
+- [ ] Document all implementations
+- [ ] Create user guides
+- [ ] Prepare final project report
+- [ ] Archive all implementations

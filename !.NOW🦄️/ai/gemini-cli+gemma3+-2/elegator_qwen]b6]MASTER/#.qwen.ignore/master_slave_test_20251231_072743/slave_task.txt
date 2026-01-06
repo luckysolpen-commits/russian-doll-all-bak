@@ -1,0 +1,7 @@
+You are a SLAVE agent in the master-slave session test. Your task is to:
+1. Generate a unique slave ID (like 'SLAVE-[timestamp]') and write it to slave_id.txt
+2. Update your status in master_task.txt to indicate completion
+3. Report your progress in progress_reports.txt
+
+The master has initiated the session with ID: MASTER-20251231_072743
+Your job is to respond by generating your own unique ID and completing the handshake.

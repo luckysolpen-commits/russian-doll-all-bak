@@ -1,0 +1,87 @@
+# Feature Roadmap for gemini-cli (C Version) - Jan 1
+
+This document outlines the development roadmap for enhancing the C-based `gemini-cli` tool. The goal is to progressively add features to move from a minimal proof-of-concept to a more robust and functional command-line AI assistant.
+
+---
+
+### Architectural Principle: Process-Based Modularity
+
+To ensure high modularity and conceptual simplicity, this project will adhere to a process-based architecture. Instead of linking libraries or sharing complex internal state, new functionalities will be implemented as **separate, standalone executables**.
+
+The main `gemini-c` application will act as a controller, invoking these external modules using `fork()`/`exec()` or `system()`. Communication will be handled via standard I/O (passing data through `stdin`/`stdout` pipes) or temporary files. This approach avoids link-time dependencies and enforces a clean separation of concerns.
+
+---
+
+### Phase 1: Foundational Improvements (Usability & Configuration)
+
+**Objective:** Move beyond hardcoded values and improve the core user interaction.
+
+1.  **Robust JSON Handling:**
+    *   **Task:** Replace the unsafe `snprintf` method for creating the JSON payload.
+    *   **Implementation:** Use the `cJSON` library to build the JSON object programmatically.
+
+2.  **Configuration File:**
+    *   **Task:** Allow users to specify the model and API endpoint without changing the code.
+    *   **Implementation:** Read settings from a configuration file (e.g., `~/.config/gemini-c/config.json`).
+
+3.  **Command-Line Arguments:**
+    *   **Task:** Provide command-line flags to override settings.
+    *   **Implementation:** Use a library like `getopt` to parse arguments (e.g., `./gemini-c --model "gemma:2b"`).
+
+4.  **Streaming API Responses:**
+    *   **Task:** Display the model's response as it's being generated.
+    *   **Implementation:** Modify the `libcurl` write callback to process the streaming data from the server chunk by chunk.
+
+---
+
+### Phase 2: Enhanced Interaction (Context & I/O)
+
+**Objective:** Enable conversational memory and more flexible ways to provide input.
+
+1.  **Conversation History:**
+    *   **Task:** Maintain context between prompts.
+    *   **Implementation:** Manage conversation history in a session file. Load previous messages and include them in the API request.
+
+2.  **Interactive Multiline Input:**
+    *   **Task:** Allow users to easily write longer, multi-line prompts.
+    *   **Implementation:** If no prompt is provided, enter an interactive mode that reads user input until EOF (Ctrl+D).
+
+3.  **Piped Input (stdin):**
+    *   **Task:** Allow piping content from other commands as the prompt.
+    *   **Implementation:** Detect if the program is being run with piped input and use that content as the prompt.
+
+---
+
+### Phase 3: Core "Tool" Integration (Extensibility)
+
+**Objective:** Implement tool-use capabilities following the process-based architecture.
+
+1.  **Tool-Use Framework:**
+    *   **Task:** Create a system for the model to request local actions.
+    *   **Implementation:** Parse the model's output for tool call requests. The dispatcher will then invoke the appropriate **external executable (tool)**, passing arguments and capturing the output via pipes.
+
+2.  **Implement `read_file` Tool:**
+    *   **Task:** Allow the model to read files.
+    *   **Implementation:** While this could be a simple function, in adherence to our architecture, we can design it as an external call. The main `gemini-c` process will execute a helper that reads the file and prints its content to stdout.
+
+3.  **Implement `run_shell_command` Tool:**
+    *   **Task:** Allow the model to execute shell commands.
+    *   **Implementation:** This naturally fits our architecture. The `gemini-c` process will use `popen()` or a similar mechanism to execute the command, capturing and returning the output.
+
+---
+
+### Phase 4: Code Quality & Process-Based Modularity
+
+**Objective:** Refactor the codebase into a suite of cooperating executables.
+
+1.  **Extract Core Logic into Separate Executables:**
+    *   **Task:** Decompose the main application by identifying functionalities that can be standalone tools.
+    *   **Implementation:** Instead of creating internal C functions, create new, separate C files for distinct tasks (e.g., `json-formatter`, `config-manager`). Each will be compiled into its own executable. The main `gemini-c` binary will call these as needed.
+
+2.  **Compilation Script for Multi-Executable Project:**
+    *   **Task:** Simplify the build process for the entire suite of tools using a shell script.
+    *   **Implementation:** Create a `build.sh` script that compiles the main `gemini-c` application and all supporting executables. The script will handle the necessary `gcc` commands and flags.
+
+3.  **Advanced Error Handling for Child Processes:**
+    *   **Task:** Provide better feedback on errors occurring in external modules.
+    *   **Implementation:** Add robust checks for the exit codes and `stderr` of all child processes. Report errors from sub-modules clearly to the end-user.

@@ -1,0 +1,8 @@
+
+___________________________________
+this is going very well. def a missing link type situation. 
+
+later we will ask it 2 do the same with ollama (make a copy of it in gcc c) 
+(but steal the parsing of the model, then we will have that in .c ; maybe then soon we can swap it 
+with a homemade model, and were a legit ai-outfit ;) 
+___________________________________

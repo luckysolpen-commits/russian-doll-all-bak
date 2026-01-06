@@ -1,0 +1,36 @@
+  📖 New User Guide: JavaScript LLM Terminal
+
+  Step 1: Start the Server
+
+   1 cd /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod
+   2 ./start_server.sh
+
+  Wait for the message "Development Server started" on port 8080.
+
+  Step 2: Access the Interface
+  Open your browser and go to: http://localhost:8080/index.html
+
+  Step 3: Basic Test
+  Type help and press Enter to see available commands.
+
+  Step 4: Add Your Own Training Data
+   1. Put your text file in the data/corpora/ directory
+   2. Example: Create data/corpora/mydata.txt with some text content
+
+  Step 5: Create Vocabulary
+  In the terminal interface, type:
+
+   1 vocab:source=corpora/mydata.txt,vocabName=myvocab
+  (Replace mydata.txt with your file name)
+
+  Step 6: Train the Model
+
+   1 train:epochs=5,batchSize=16,learningRate=0.001
+     ,modelName=my_model,vocabName=myvocab
+
+  Step 7: Generate Text
+  Just type any prompt and press Enter:
+
+   1 What is machine learning?
+
+

@@ -1,0 +1,127 @@
+# HDLB0 RISC-V Architecture Specifications
+
+## Stage 4: 16-bit RISC-V Implementation
+
+### Objective
+Extend the 8-bit RISC-V processor to a 16-bit processor while maintaining backward compatibility with 2-bit and 8-bit implementations.
+
+### Architecture Overview
+- Word size: 16 bits
+- Address size: 16 bits
+- Register file: 32 registers (16 bits each) - following standard RISC-V
+- Instruction set: Extended RISC-V subset approaching RV32I completeness
+
+### Register File
+- 32 general-purpose registers (x0-x31)
+- x0 hardwired to 0
+- Each register: 16 bits wide
+
+### Instruction Set Architecture (ISA)
+#### Instruction Formats (16-bit implementation)
+1. R-type (Register)
+   - [15:13] opcode | [12:8] rs1 | [7:3] rs2 | [15:11] rd | [10:8] funct3 | [6:0] funct7
+2. I-type (Immediate)
+   - [15:13] opcode | [12:8] rs1 | [11:7] immediate | [6:2] rd | [1:0] funct3
+3. S-type (Store)
+   - [15:13] opcode | [12:8] rs1 | [7:3] rs2 | [11:8] immediate | [6:2] funct3
+4. B-type (Branch)
+   - [15:13] opcode | [12:8] rs1 | [7:3] rs2 | [12:8] immediate | [6:2] funct3
+5. U-type (Upper Immediate)
+   - [15:13] opcode | [31:12] immediate | [6:2] rd
+6. J-type (Jump)
+   - [15:13] opcode | [31:12] immediate | [6:2] rd
+
+#### Supported Instructions (RV32I subset adapted for 16-bit)
+1. Integer Register-Immediate Instructions
+   - ADDI: Add Immediate
+   - ANDI: AND Immediate
+   - ORI: OR Immediate
+   - XORI: XOR Immediate
+   - SLTI: Set if Less Than Immediate
+   - SLTIU: Set if Less Than Immediate Unsigned
+   - SLLI: Shift Left Logical Immediate
+   - SRLI: Shift Right Logical Immediate
+   - SRAI: Shift Right Arithmetic Immediate
+
+2. Integer Register-Register Operations
+   - ADD: Add
+   - SUB: Subtract
+   - AND: AND
+   - OR: OR
+   - XOR: XOR
+   - SLT: Set if Less Than
+   - SLTU: Set if Less Than Unsigned
+   - SLL: Shift Left Logical
+   - SRL: Shift Right Logical
+   - SRA: Shift Right Arithmetic
+
+3. Load/Store Instructions
+   - LB/LBU: Load Byte / Load Byte Unsigned
+   - LH/LHU: Load Halfword / Load Halfword Unsigned
+   - LW: Load Word
+   - SB: Store Byte
+   - SH: Store Halfword
+   - SW: Store Word
+
+4. Control Transfer Instructions
+   - BEQ: Branch if Equal
+   - BNE: Branch if Not Equal
+   - BLT: Branch if Less Than
+   - BGE: Branch if Greater or Equal
+   - BLTU: Branch if Less Than Unsigned
+   - BGEU: Branch if Greater or Equal Unsigned
+   - JAL: Jump and Link
+   - JALR: Jump and Link Register
+
+### Memory
+- Data memory: 64KB (16 bits each)
+- Addressable locations: 0-65535
+
+### Control Signals
+- ALUOp: 4 bits (determine ALU operation)
+- RegWrite: 1 bit (enable register write)
+- MemWrite: 1 bit (enable memory write)
+- MemRead: 1 bit (enable memory read)
+- Branch: 1 bit (enable branch)
+- Jump: 1 bit (enable jump)
+- ALUSrc: 1 bit (select ALU source)
+- PCSource: 2 bits (select PC source)
+- MemToReg: 1 bit (select writeback source)
+
+### ALU Operations
+- 0000: Addition
+- 0001: Subtraction
+- 0010: AND
+- 0011: OR
+- 0100: XOR
+- 0101: Shift Left
+- 0110: Shift Right Logical
+- 0111: Shift Right Arithmetic
+- 1000: Set Less Than
+- 1001: Set Less Than Unsigned
+- 1010: Multiply (if implemented)
+- 1011: Divide (if implemented)
+
+### Backward Compatibility
+- Must be able to execute 2-bit and 8-bit RISC-V programs
+- Provide mode switching between different bit-width operations
+- Maintain same instruction encoding principles
+- Ensure 8-bit and 2-bit operations work within 16-bit framework
+
+### Implementation Notes
+- Use components built from NAND gates in Stage 1
+- Extend 8-bit design principles to 16-bit
+- Consider memory management and addressing modes
+- Implement proper clocking and control logic
+- Design for easy extension to 32-bit
+- Optimize for performance while maintaining compatibility
+
+### Test Plan
+- Verify all instructions with various inputs
+- Test register file read/write operations
+- Test memory load/store operations
+- Verify control signal generation
+- Test backward compatibility with 2-bit and 8-bit programs
+- Verify proper handling of 16-bit arithmetic
+- Test edge cases and overflow conditions
+- Performance benchmarking

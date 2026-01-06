@@ -1,0 +1,242 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <curl/curl.h>
+#include <cjson/cJSON.h>
+#include <getopt.h>
+
+// Helper function to read a file into a string buffer
+char* read_file_to_string(const char* filename) {
+    FILE *file = fopen(filename, "rb");
+    if (file == NULL) {
+        return NULL;
+    }
+
+    fseek(file, 0, SEEK_END);
+    long length = ftell(file);
+    fseek(file, 0, SEEK_SET);
+
+    char *buffer = (char*)malloc(length + 1);
+    if (buffer == NULL) {
+        fclose(file);
+        return NULL;
+    }
+
+    fread(buffer, 1, length, file);
+    buffer[length] = '\0';
+    fclose(file);
+
+    return buffer;
+}
+
+// Processes a single line from the SSE stream
+void process_stream_line(char* line) {
+    if (strncmp(line, "data: ", 6) == 0) {
+        char* json_str = line + 6;
+        if (strcmp(json_str, "[DONE]") == 0) {
+            return;
+        }
+
+        cJSON *json = cJSON_Parse(json_str);
+        if (json != NULL) {
+            const cJSON *choices = cJSON_GetObjectItemCaseSensitive(json, "choices");
+            if (cJSON_IsArray(choices)) {
+                cJSON *choice = cJSON_GetArrayItem(choices, 0);
+                if (cJSON_IsObject(choice)) {
+                    const cJSON *delta = cJSON_GetObjectItemCaseSensitive(choice, "delta");
+                    if (cJSON_IsObject(delta)) {
+                        const cJSON *content = cJSON_GetObjectItemCaseSensitive(delta, "content");
+                        if (cJSON_IsString(content) && content->valuestring != NULL) {
+                            printf("%s", content->valuestring);
+                            fflush(stdout);
+                        }
+                    }
+                }
+            }
+            cJSON_Delete(json);
+        }
+    }
+}
+
+// Struct to hold the stream buffer
+struct StreamBuffer {
+    char *data;
+    size_t size;
+};
+
+// Callback function to handle streaming data
+static size_t
+StreamCallback(void *contents, size_t size, size_t nmemb, void *userp) {
+    size_t realsize = size * nmemb;
+    struct StreamBuffer *mem = (struct StreamBuffer *)userp;
+
+    char *ptr = realloc(mem->data, mem->size + realsize + 1);
+    if(ptr == NULL) {
+        printf("not enough memory (realloc returned NULL)\n");
+        return 0;
+    }
+
+    mem->data = ptr;
+    memcpy(&(mem->data[mem->size]), contents, realsize);
+    mem->size += realsize;
+    mem->data[mem->size] = 0;
+
+    char *line_end;
+    while ((line_end = strchr(mem->data, '\n')) != NULL) {
+        *line_end = '\0';
+        if (strlen(mem->data) > 0 && mem->data[strlen(mem->data)-1] == '\r') {
+            mem->data[strlen(mem->data)-1] = '\0';
+        }
+        process_stream_line(mem->data);
+        
+        size_t line_len = strlen(mem->data) + 1;
+        memmove(mem->data, mem->data + line_len, mem->size - line_len);
+        mem->size -= line_len;
+        mem->data[mem->size] = 0;
+    }
+
+    return realsize;
+}
+
+
+void print_usage(const char* prog_name) {
+    fprintf(stderr, "Usage: %s [options] <prompt>\n", prog_name);
+    fprintf(stderr, "Options:\n");
+    fprintf(stderr, "  --prompt <prompt>    The prompt to send to the model.\n");
+    fprintf(stderr, "  --model <model_name> Override the model from config.\n");
+    fprintf(stderr, "  --api-url <url>      Override the API URL from config.\n");
+    fprintf(stderr, "  --help               Show this help message.\n");
+}
+
+int main(int argc, char *argv[]) {
+    // --- Argument Parsing ---
+    char *prompt_arg = NULL;
+    char *model_arg = NULL;
+    char *api_url_arg = NULL;
+
+    struct option long_options[] = {
+        {"prompt",  required_argument, 0, 'p'},
+        {"model",   required_argument, 0, 'm'},
+        {"api-url", required_argument, 0, 'u'},
+        {"help",    no_argument,       0, 'h'},
+        {0, 0, 0, 0}
+    };
+
+    int opt;
+    int option_index = 0;
+    while ((opt = getopt_long(argc, argv, "p:m:u:h", long_options, &option_index)) != -1) {
+        switch (opt) {
+            case 'p': prompt_arg = strdup(optarg); break;
+            case 'm': model_arg = strdup(optarg); break;
+            case 'u': api_url_arg = strdup(optarg); break;
+            case 'h': print_usage(argv[0]); return 0;
+            default: print_usage(argv[0]); return 1;
+        }
+    }
+
+    if (optind < argc) {
+        if (prompt_arg != NULL) {
+            fprintf(stderr, "Error: Prompt provided with --prompt and as a bare argument. Please use only one.\n");
+            print_usage(argv[0]);
+            free(prompt_arg);
+            if (model_arg) free(model_arg);
+            if (api_url_arg) free(api_url_arg);
+            return 1;
+        }
+        prompt_arg = strdup(argv[optind]);
+    }
+
+    if (prompt_arg == NULL) {
+        fprintf(stderr, "Error: No prompt provided.\n");
+        print_usage(argv[0]);
+        return 1;
+    }
+
+    // --- Configuration Loading & Precedence ---
+    const char *default_model = "gemma3:270M";
+    const char *default_api_url = "http://localhost:11434/v1/chat/completions";
+    char *model = NULL;
+    char *api_url = NULL;
+
+    if (model_arg) model = model_arg;
+    if (api_url_arg) api_url = api_url_arg;
+
+    if (model == NULL || api_url == NULL) {
+        char* config_buffer = read_file_to_string("config.json");
+        if (config_buffer != NULL) {
+            cJSON *config_json = cJSON_Parse(config_buffer);
+            free(config_buffer);
+            if (config_json != NULL) {
+                if (model == NULL) {
+                    const cJSON *model_json = cJSON_GetObjectItemCaseSensitive(config_json, "model");
+                    if (cJSON_IsString(model_json) && model_json->valuestring != NULL) {
+                        model = strdup(model_json->valuestring);
+                    }
+                }
+                if (api_url == NULL) {
+                    const cJSON *api_url_json = cJSON_GetObjectItemCaseSensitive(config_json, "api_url");
+                    if (cJSON_IsString(api_url_json) && api_url_json->valuestring != NULL) {
+                        api_url = strdup(api_url_json->valuestring);
+                    }
+                }
+                cJSON_Delete(config_json);
+            }
+        }
+    }
+
+    if (model == NULL) model = (char*)default_model;
+    if (api_url == NULL) api_url = (char*)default_api_url;
+
+    // --- Main Logic ---
+    CURL *curl;
+    CURLcode res;
+    struct StreamBuffer chunk = { .data = malloc(1), .size = 0 };
+
+    curl_global_init(CURL_GLOBAL_ALL);
+    curl = curl_easy_init();
+    if(curl) {
+        cJSON *root = cJSON_CreateObject();
+        cJSON_AddStringToObject(root, "model", model);
+        cJSON_AddBoolToObject(root, "stream", 1);
+        cJSON *messages = cJSON_CreateArray();
+        cJSON_AddItemToObject(root, "messages", messages);
+        cJSON *message = cJSON_CreateObject();
+        cJSON_AddItemToArray(messages, message);
+        cJSON_AddStringToObject(message, "role", "user");
+        cJSON_AddStringToObject(message, "content", prompt_arg);
+
+        char *json_payload = cJSON_PrintUnformatted(root);
+        cJSON_Delete(root);
+
+        if (json_payload != NULL) {
+            struct curl_slist *headers = NULL;
+            headers = curl_slist_append(headers, "Content-Type: application/json");
+            curl_easy_setopt(curl, CURLOPT_URL, api_url);
+            curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+            curl_easy_setopt(curl, CURLOPT_POSTFIELDS, json_payload);
+            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, StreamCallback);
+            curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&chunk);
+
+            res = curl_easy_perform(curl);
+            free(json_payload);
+            curl_slist_free_all(headers);
+
+            if(res != CURLE_OK) {
+                fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
+            } else {
+                // After the stream is done, print a newline for clean formatting
+                printf("\n");
+            }
+        }
+        curl_easy_cleanup(curl);
+    }
+    free(chunk.data);
+
+    // --- Cleanup ---
+    free(prompt_arg);
+    if (model != default_model) free(model);
+    if (api_url != default_api_url) free(api_url);
+
+    curl_global_cleanup();
+    return 0;
+}

@@ -1,0 +1,112 @@
+
+
+@advanced_prompt\]a0.txt read this, look thru the demos in 
+  @elegator_qwen\]b6/\#.config/ , and run any of them to understand them better, 
+  while doing so and when done communicate with me your thoughts and plan of action 
+  in plan_of_action.txt,
+
+
+
+______________________________
+# Advanced Project Management 
+
+Prompt for C Implementation Projects
+
+## Project Overview
+You are an advanced project manager for complex C implementation projects, particularly those involving machine learning . Your role is to analyze, plan, and execute comprehensive upgrages to C codebases.
+
+## Core Responsibilities
+1. Analyze existing C implementations thoroughly
+2. Identify memory management issues (segfaults, null pointer dereferences, double frees)
+3. Create comprehensive fix plans with prioritized tasks
+4. Implement safe coding practices with proper error handling
+5. Maintain detailed progress reports
+
+## Analysis Phase
+- Examine all source files in the !.project directory
+- Identify the main implementation files (e.g., mini_llama.c, tokenizer.h)
+- Review existing fixes in safe/backup versions
+- Check for compilation warnings and errors
+- Understand the project's current state from documentation files
+
+
+## Progress Tracking
+- Document all identified issues
+- Create prioritized task lists
+- Track implementation progress
+- Note any challenges encountered
+- Plan next steps based on current progress
+
+## Output Requirements
+- Provide detailed analysis of current code state
+- List all identified memory management issues
+- Create comprehensive implementation plan
+- Document all changes made
+- Suggest next steps for project completion
+
+
+eventually we want to merge the chip making and chat bot program, 
+to teach the chatbot to make ai chips and even more software, like kernels, networking and gui applications. 
+(think qemu emulator but running riscv custom kernels) 
+read 
+impliment these tasks and i will chat with you as you do it. 
+
+
+-------------------
+ hi. im jb, the ceo. you the prompt im talking to is "The_Master_Elegator"
+
+vibe: i want you to start a slave qwen context
+so as not to expend your own context. you should never have to look at the code the slave is coding
+doing so would expend your context and inhibit your ability to "DELEGATE" tasks to "SLAVES"
+your only task is to start, or restart sub agents, your context level should beable to remain above 90%.
+
+to start these slaves you will use "elegator.c"
+pls read readme.md qwen_manager.sh and elegator_template_prompt.txt to get a better idea of what we are doing.
+
+speak directly to me about what you have your slave doing and tell me location of the report it 
+has created to you. if i need to i will relay instructions to the slave
+you should not try to understand what me and the slave are talking about because
+we do not want you to expend your context. understand? 
+
+let me know when you are ready for the path location of the task we want to deliver to the slave. 
+(in some cases i may give u task directly)
+in this case our task is to evaluate : elegator_raw_model]666mb]c4/ 
+and write a prompt for it in the style the prompts in !.projects/ dir 
+(our task is to fix a llm in .c , to use the (proven noncorrupt) .gguf mini lamma model to give
+coherent chat responses
+
+
+
+if anything goes wrong with elegator code, or you see a way to improve it , 
+you should start its own dir, and improve it in there, and give reports on what you needed to do. 
+---------------------------------
+
+======================
+=====================
+===================
+you are the "meta_elegator"
+we want to analyze the elagtor project.
+help it complete 'its 2 projects in !poject folder" and make any iprovement to eleagtor source code or helper scripts
+as we go on , to give me as much information about project progess as you can. 
+
+read thru the dirs till you get an understanding of whats going on and what we need to do . 
+====================
+=======================
+make sure if its writing in verilog it creates a conversion program that will 
+  convert verilog to "hdlb0 binary format" okay? there are currrently no such 
+  programs, so we will have to make one (ast compiler or w/e into hdlb0 and back)
+
+✦ Perfect! Now I understand the HDLb0 format completely. Each line contains 4
+  16-bit binary numbers representing:
+   1. Chip location (0000000000000001 = NAND gate chip, 0000000000000000 =
+      pass-through chip)
+   2. Output address (where to store the result)
+   3. Input A (source of first input)
+   4. Input B (source of second input)
+
+  Now I'll create a Verilog to HDLb0 converter. Let me create this in the main
+  project directory:
+
+
+================================
+=========================================================================================

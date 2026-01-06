@@ -1,0 +1,168 @@
+# HDLb0 API Documentation
+
+This document describes the architecture and programming model for the HDLb0 hardware emulator.
+
+## Overview
+
+HDLb0 is a simple, interactive hardware emulator that executes programs written in `.hlo` files. The emulator operates on a clock cycle basis and allows for user interaction through switches. The hardware consists of a small amount of RAM, two switches, a clock, and a set of available "chips" for logic operations.
+
+## Program Format (`.hlo` files)
+
+A program is a text file (`.hlo`) containing a series of instructions. Each instruction is composed of four 16-bit binary numbers. Comments can be added using the `#` symbol.
+
+### Instruction Structure
+
+Each instruction consists of four parts, executed in order:
+
+1.  **Part 1: Chip Location (16 bits):** Specifies which chip to use for the operation.
+2.  **Part 2: Output Address (16 bits):** Specifies where to send the output of the chip.
+3.  **Part 3: Input A (16 bits):** The first input to the chip.
+4.  **Part 4: Input B (16 bits):** The second input to the chip.
+
+Example instruction to pass the value of `switch_0` to the tape:
+```
+# Chip | Output | Input A  | Input B
+0000000000000000 0000000000000000 0000000000000101 0000000000000011
+```
+
+## Core Components
+
+### 1. Chips
+
+Chips are the processing units of the emulator. They take up to two inputs and produce one output. The chip to be used is specified by the first part of an instruction.
+
+*   **Chip 0 (Pass-through):** This is a special built-in chip that passes one of its inputs to the output. It expects one input to be "blank". If `Input A` is a value and `Input B` is blank, it outputs `Input A`. If `Input B` is a value and `Input A` is blank, it outputs `Input B`.
+
+*   **Logic Chips (Chip > 0):** These are external programs defined in `chip_bank.txt`. They perform logic operations. For example, a NAND chip would take two inputs and its execution would write the NAND result to the specified output address.
+
+### 2. Memory and I/O
+
+#### Output Addressing (Part 2 of instruction)
+
+*   **Address `0` (Tape):** `0000000000000000`
+    *   Writes the output value to the beginning of the `cli_tape.txt` file. This is the primary way to see program results.
+
+*   **Addresses `16` to `255` (General Purpose RAM):** `0000000000010000` to `0000000011111111`
+    *   Writes the output value to a specific address in the 256-byte RAM.
+    *   **CRITICAL RULE:** All general-purpose data, including registers, memory, and temporary values for chip calculations, MUST use addresses from 16 upwards.
+
+*   **Addresses `1` to `15` (Reserved):**
+    *   These addresses are reserved for special hardware functions or future expansion. They MUST NOT be used for general-purpose storage in chip design.
+
+#### Input Addressing (Parts 3 & 4 of instruction)
+
+Input values can be constants, hardware states, or values from RAM.
+
+*   **Constant `0`:** `0000000000000000`
+*   **Constant `1`:** `0000000000000001`
+*   **Blank/Unused:** `0000000000000010` or `0000000000000011`
+    *   Used to specify that an input for a chip (like Chip 0) is not being used.
+
+*   **Hardware Inputs:**
+    *   **`switch_0`:** `0000000000000101` (value is `0` or `1`)
+    *   **`switch_1`:** `0000000000000110` (value is `0` or `1`)
+    *   **`clock`:** `0000000000000111` (alternates between `1` and `0` each cycle)
+
+*   **RAM Inputs (General Purpose):**
+    *   **Addresses `16` to `255`:** `0000000000010000` to `0000000011111111`
+    *   Reads the value from the specified RAM address to be used as an input. Adheres to the critical rule that general RAM starts at address 16.
+
+## Execution Flow
+
+1.  The emulator is started with a `.hlo` program file.
+2.  The program is parsed into a list of instructions.
+3.  The emulator enters an interactive loop, starting with `Clock cycle 1`.
+4.  In each cycle, all instructions in the program are executed sequentially.
+5.  After all instructions are run, the clock value flips (`1` -> `0` or `0` -> `1`).
+6.  The user can then step to the next cycle, flip switches, or let the emulator run freely.
+
+## Command Line Arguments
+
+The HDLb0 emulator now supports flag-based command line arguments. This provides more flexibility in specifying parameters.
+
+### Usage
+
+```
+./emulator -program program.txt [-commands commands.txt] [-debug debug_output_file.txt] [-max N] [-cycles N] [-bank bank_file.txt]
+```
+
+### Available Flags
+
+*   **`-program` (Required):** Specifies the program file to execute (`.hlo` or `.txt`).
+*   **`-commands`:** Specifies a command file for automated control.
+*   **`-debug`:** Specifies a file to write debug output to.
+*   **`-max N`:** Sets a maximum number of clock cycles to execute (program will stop when this limit is reached).
+*   **`-cycles N`:** Runs the emulator for exactly N cycles automatically, then exits (non-interactive mode).
+*   **`-bank bank_file.txt`:** Specifies a bank file containing paths to multiple `.hlo` files that will be concatenated into a single chip bank before execution.
+
+## Automated Control
+
+The emulator can be controlled non-interactively by providing a command file as an argument. This is useful for automated testing of chips.
+
+### Usage
+
+To use this feature, provide the path to a command file using the `-commands` flag:
+
+`./emulator -program <program.hlo> -commands [commands.txt]`
+
+### Command File Format
+
+The command file is a simple text file with one command per line. The available commands are the same as in the interactive mode:
+
+*   `1`: Flip `switch_0`
+*   `2`: Flip `switch_1`
+*   `s` or (empty line): Step the clock by one cycle
+*   `r`: Run the clock continuously
+*   `q`: Quit the emulator
+
+The emulator will execute one command from the file for each prompt. Once all commands in the file have been executed, it will revert to interactive mode, waiting for user input from the command line.
+
+### Example
+
+**`test_d_latch.txt`:**
+```
+1
+s
+s
+1
+s
+s
+q
+```
+
+**Command:**
+`./emulator -program playground/d_latch.hlo -commands test_d_latch.txt`
+
+This will run the `d_latch.hlo` program, toggle `switch_0`, step twice, toggle `switch_0` again, step twice more, and then quit.
+
+## Bank File Functionality
+
+The `-bank` flag allows specifying a bank file that contains paths to multiple `.hlo` files, which will be combined into a single chip bank. This is useful when you want to break up a complex chip design into multiple files.
+
+### Bank File Format
+
+A bank file contains one or more paths to `.hlo` files, with each file path on a separate line:
+
+```
+path/to/file1.hlo
+path/to/file2.hlo
+path/to/file3.hlo
+```
+
+Example bank file (`my_chip_bank.txt`):
+```
+playground/d_latch/d_latch_commands.hlo
+#.ram_switch]AI.bad@ram.hlo
+```
+
+The contents of all specified `.hlo` files will be concatenated to form a single combined chip bank that is used during execution.
+
+## D Flip-Flop Logic
+
+A D flip-flop captures the value of its data input (`D`) on a clock edge and holds that value at its output (`Q`) until the next clock edge.
+
+*   **Input `D`:** The data to be stored. We will use `switch_0`.
+*   **Clock:** The system `clock` signal.
+*   **Output `Q`:** The stored value. We will store this in RAM.
+
+The logic is: **If `clock` is high (1), then `Q` becomes `D`. Otherwise, `Q` remains unchanged.** This can be built from NAND gates. The state will be held in a RAM location (e.g., address 16).

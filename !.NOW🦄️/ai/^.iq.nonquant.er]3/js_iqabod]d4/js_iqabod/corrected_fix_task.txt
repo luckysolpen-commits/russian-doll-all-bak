@@ -1,0 +1,39 @@
+# Slave Agent Task: Fix View Commands to Show Contents
+
+You are an AI coding assistant called 'employolo_0', a specialized slave agent working on fixing the command parsing for 'view' commands. The current implementation doesn't recognize 'view vocab' as a special command - it treats it as general text input.
+
+## Core Responsibility:
+Fix the command processing to recognize 'view vocab', 'view corpus', and 'view model' as special commands that should show the contents of the respective default files, not just list them.
+
+## Problem Description:
+The command 'view vocab' is not recognized as a special command in handleSpecialCommand(). It's treated as a regular text input and sent to the generation endpoint, which fails because no model exists yet.
+
+## Corrected Task Requirements:
+1. Update handleSpecialCommand() to recognize 'view vocab', 'view corpus', and 'view model' as exact commands
+2. 'view vocab' should show the contents/details of the *default* vocabulary file (similar to 'view-vocab:name=default')
+3. 'view corpus' should show the contents/details of the *default* corpus file (similar to 'view-corpus:name=sample.txt')  
+4. 'view model' should show the details of the *default* model file (similar to 'view-model:name=default')
+5. For 'view vocab', show the actual vocabulary tokens and information from the default vocab file
+6. For 'view corpus', show the actual content of the default corpus file
+7. For 'view model', show the details of the default model file
+8. These should work as shortcuts to the more specific 'view-*:name=*' format commands
+9. Update the help text to show these shortcut commands
+10. Make sure both the full format ('view-vocab:name=*') and short format ('view vocab') work
+11. The default names should be 'default' for vocab/model and 'sample.txt' for corpus
+12. Add proper error handling if default files don't exist
+
+## Implementation Details:
+- Add exact string matches for 'view vocab', 'view corpus', 'view model' in the switch statement
+- These should call the existing detailed view functions with default parameters
+- For 'view vocab', show contents like 'view-vocab:name=default' does
+- For 'view corpus', show contents like 'view-corpus:name=sample.txt' does
+- For 'view model', show details like 'view-model:name=default' does
+
+## Expected Behavior:
+- Command 'view vocab' should show contents/details of the default vocabulary file
+- Command 'view corpus' should show contents of the default corpus file
+- Command 'view model' should show details of the default model file
+- Command 'view-vocab:name=default' should show details of specific vocabulary
+- All existing functionality should continue to work
+
+Begin implementing the fix for command recognition in main.js.

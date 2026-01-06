@@ -1,0 +1,19 @@
+=== Progress Report - January 5, 2026 ===
+
+Fixed PHP API routing for built-in server:
+- Modified router.php to properly handle all /backend/* routes
+- Ensured API endpoints work: /backend/vocab, /backend/train, /backend/generate, /backend/status, /backend/config
+- Maintained compatibility with serving static assets (index.html, CSS, JS files)
+- Verified PATH_INFO and REQUEST_URI are properly set for backend handlers
+- Tested CORS headers work properly for API responses
+- Confirmed both GET and POST requests work for API endpoints
+- Verified static file serving still works correctly
+
+Testing performed:
+- curl -X GET http://localhost:8080/backend/status ✓
+- curl -X GET http://localhost:8080/backend/config ✓
+- curl -X GET http://localhost:8080/backend/vocab?name=default ✓
+- curl -X POST -H "Content-Type: application/json" http://localhost:8080/backend/vocab -d '{"source": "sample.txt", "vocabName": "test"}' ✓
+- curl -X GET http://localhost:8080/index.html ✓
+
+All backend API endpoints now return JSON responses instead of 404 errors when using PHP's built-in server.

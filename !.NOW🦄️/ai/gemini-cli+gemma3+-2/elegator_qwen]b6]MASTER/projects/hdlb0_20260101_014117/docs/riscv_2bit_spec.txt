@@ -1,0 +1,93 @@
+# HDLB0 RISC-V Architecture Specifications
+
+## Stage 2: 2-bit RISC-V Implementation
+
+### Objective
+Create a minimal 2-bit RISC-V processor to serve as the foundation for higher-bit implementations.
+
+### Architecture Overview
+- Word size: 2 bits
+- Address size: 2 bits
+- Register file: 4 registers (2 bits each)
+- Instruction set: Minimal RISC-V subset
+
+### Register File
+- 4 general-purpose registers (R0-R3)
+- R0 hardwired to 0
+- Each register: 2 bits wide
+
+### Instruction Set Architecture (ISA)
+#### Instruction Formats
+1. R-type (Register)
+   - [2:2] opcode | [1:1] rs1 | [0:0] rs2 | [1:0] rd | [1:0] funct3
+2. I-type (Immediate)
+   - [2:2] opcode | [1:1] rs1 | [1:0] immediate | [1:0] rd
+3. S-type (Store)
+   - [2:2] opcode | [1:1] rs1 | [0:0] rs2 | [1:0] immediate
+
+#### Supported Instructions
+1. ADD (R-type)
+   - Function: rd = rs1 + rs2
+   - Opcode: 00
+   - Funct3: 00
+
+2. SUB (R-type)
+   - Function: rd = rs1 - rs2
+   - Opcode: 00
+   - Funct3: 01
+
+3. AND (R-type)
+   - Function: rd = rs1 & rs2
+   - Opcode: 01
+   - Funct3: 00
+
+4. OR (R-type)
+   - Function: rd = rs1 | rs2
+   - Opcode: 01
+   - Funct3: 01
+
+5. XOR (R-type)
+   - Function: rd = rs1 ^ rs2
+   - Opcode: 01
+   - Funct3: 10
+
+6. ADDI (I-type)
+   - Function: rd = rs1 + immediate
+   - Opcode: 10
+
+7. LW (Load Word - I-type)
+   - Function: rd = memory[rs1 + immediate]
+   - Opcode: 11
+
+8. SW (Store Word - S-type)
+   - Function: memory[rs1 + immediate] = rs2
+   - Opcode: 11
+
+### Memory
+- Data memory: 4 words (2 bits each)
+- Addressable locations: 0, 1, 2, 3
+
+### Control Signals
+- ALUOp: 2 bits (determine ALU operation)
+- RegWrite: 1 bit (enable register write)
+- MemWrite: 1 bit (enable memory write)
+- MemRead: 1 bit (enable memory read)
+
+### ALU Operations
+- 00: Addition
+- 01: Subtraction
+- 10: AND
+- 11: OR
+
+### Implementation Notes
+- Use components built from NAND gates in Stage 1
+- Design for easy extension to higher bit widths
+- Include proper clocking and control logic
+- Implement hazard detection for more complex operations
+
+### Test Plan
+- Verify all instructions with various inputs
+- Test register file read/write operations
+- Test memory load/store operations
+- Verify control signal generation
+- Test edge cases and overflow conditions

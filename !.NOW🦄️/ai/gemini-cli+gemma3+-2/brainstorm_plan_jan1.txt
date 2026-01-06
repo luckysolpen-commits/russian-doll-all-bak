@@ -1,0 +1,57 @@
+# Brainstorm & Plan: Local Gemma 3 with a C-based CLI
+
+## Objective
+Create a minimal command-line interface in C (`gemini-cli.c`) to interact with a locally running Gemma 3 model via Ollama's OpenAI-compatible API endpoint. This serves as a learning exercise and a first step towards a lightweight, embeddable client.
+
+---
+
+### Phase 1: Minimal C Client for Ollama (`gemini-cli.c`)
+
+This is our primary path. We will build from scratch to understand the fundamentals.
+
+1.  **Verify Ollama Setup & API Endpoint:**
+    *   First, we'll use `curl` to send a direct request to Ollama's OpenAI-compatible endpoint (`http://localhost:11434/v1/chat/completions`).
+    *   This confirms the server is running, the `gemma3:270m` model is responsive, and we understand the JSON structure for requests and responses.
+
+2.  **C Client Scaffolding:**
+    *   Create a new C file: `gemini-cli.c`.
+    *   Write a basic `main` function that can accept a text prompt from a command-line argument.
+
+3.  **HTTP Requests in C:**
+    *   We will use the `libcurl` library to handle HTTP communication. It's robust and widely available.
+    *   We'll write C code to:
+        *   Construct the JSON payload required by the Ollama API (specifying model, roles, and content).
+        *   Set the correct HTTP headers (`Content-Type: application/json`).
+        *   Send the POST request to the Ollama server.
+
+4.  **JSON Parsing in C:**
+    *   The response from Ollama will be in JSON format.
+    *   We will need a lightweight JSON parsing library for C, like `cJSON`, to process this response.
+    *   We'll write code to parse the response and extract the model's message content.
+
+5.  **Compilation and Execution:**
+    *   Compile `gemini-cli.c`, linking against `libcurl` and `cJSON` (e.g., `gcc gemini-cli.c -o gemini-c -lcurl -lcjson`).
+    *   Run our new program from the terminal with a prompt (e.g., `./gemini-c "what is a large language model?"`).
+    *   Debug and refine until it works reliably.
+
+---
+
+### Phase 2: Fallback Plan (Official Gemini CLI)
+
+If we hit major roadblocks or want to compare functionality, we'll switch to this plan.
+
+1.  **Install from Source:**
+    *   Navigate into the `gemini-cli-main` directory.
+    *   Use `npm` to install dependencies and build the project.
+    *   Make the `gemini` command available system-wide.
+
+2.  **Configure for Local Model:**
+    *   Modify the Gemini CLI's configuration file (`~/.gemini/config.yaml` or a similar path).
+    *   Add a new provider section to point the CLI to the local Ollama server's URL (`http://localhost:11434/v1/`) and specify the model as `gemma3:270m`.
+
+3.  **Test:**
+    *   Run `gemini -p "your prompt here"` to confirm it's successfully communicating with the local Gemma 3 model.
+
+---
+
+Please review the plan. Once you approve, we can begin with Phase 1, Step 1.

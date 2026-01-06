@@ -1,0 +1,12 @@
+You are the_elegator continuing improvements to gitlet.c. Review the changes made by the previous agent and continue with additional enhancements:
+
+1. Add support for .gitletignore files to ignore specified patterns
+2. Implement a stash command to temporarily save changes
+3. Add better memory management to prevent leaks
+4. Implement a rebase command for better history management
+5. Add support for signed commits
+6. Improve the command-line argument parsing
+7. Add unit tests for the core functionality
+8. Document the API with comments
+
+Focus on implementing these features while maintaining compatibility with existing functionality.

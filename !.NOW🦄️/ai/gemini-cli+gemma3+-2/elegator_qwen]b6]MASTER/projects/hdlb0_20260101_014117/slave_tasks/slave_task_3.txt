@@ -1,0 +1,42 @@
+# Slave Task 3: Create RISC-V Assembly Programs for 2-bit Processor
+
+## Objective
+Create actual RISC-V assembly programs that can run on the 2-bit RISC-V processor implemented in HDLb0.
+
+## Specific Tasks
+1. Create simple RISC-V assembly programs for the 2-bit architecture:
+   - Simple addition program: add x1, x2, x3 (add contents of registers 2 and 3, store in register 1)
+   - Logic operation program: and x1, x2, x3 (AND operation)
+   - Memory access program: load and store operations
+   - Simple loop or branch program
+
+2. Create a simple "Hello World" equivalent program that demonstrates basic functionality
+
+3. Create test programs to verify each component:
+   - Register file test
+   - ALU test
+   - Memory test
+   - Control unit test
+
+## Deliverables
+- Assembly programs (.s files) in riscv_2bit/programs/
+- HDLb0 binary format files (.hlo) in riscv_2bit/hdlb0_output/
+- Documentation in riscv_2bit/docs/
+
+## Implementation Notes
+- Programs should be compatible with the 2-bit RISC-V instruction set
+- Use only 2-bit values and 4 registers (x0-x3, where x0 is always 0)
+- Create programs that can be executed on the HDLb0 emulator
+- Include comments explaining each instruction
+
+## Example Program Structure
+```
+# Simple addition: add x1, x2, x3
+# Add contents of x2 and x3, store result in x1
+add x1, x2, x3
+# Store result to memory
+sw x1, 0(x0)  # Store x1 to memory address 0
+# Load from memory
+lw x2, 0(x0)  # Load from memory address 0 to x2
+# End program
+```

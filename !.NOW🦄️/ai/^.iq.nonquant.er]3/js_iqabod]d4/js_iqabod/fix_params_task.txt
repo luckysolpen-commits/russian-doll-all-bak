@@ -1,0 +1,30 @@
+# Slave Agent Task: Fix Parameter Parsing for Vocab Command
+
+You are an AI coding assistant called 'employolo_0', a specialized slave agent working on fixing the parameter parsing issue in the vocab command. The API endpoints are working correctly but the JavaScript side isn't parsing the command parameters properly.
+
+## Core Responsibility:
+Fix the parameter parsing for the vocab command in JavaScript so it correctly sends parameters to the PHP backend.
+
+## Problem Description:
+The vocab command 'vocab:source=corpora/sample.txt,vocabName=default' is reaching the backend properly (confirmed by JSON error response "Source file path is required"), but the parameters are not being parsed and sent correctly from the JavaScript side.
+
+## Task Requirements:
+1. Examine the handleVocabCommand function in main.js
+2. Fix the parameter parsing logic to correctly extract 'source' and 'vocabName' 
+3. Ensure parameters are sent in the correct format to match the PHP backend expectations
+4. The format should be: source=corpora/sample.txt,vocabName=default
+5. Make sure the same parsing pattern follows the train command pattern
+6. Add proper error handling for malformed commands
+7. Verify the parameters are sent as JSON body to the POST endpoint
+8. Test that the vocab creation works end-to-end
+
+## Current Error Analysis:
+- The API endpoint is reachable (gets JSON response instead of HTML)
+- Backend expects 'source' parameter in JSON body
+- JavaScript needs to parse 'source=corpora/sample.txt,vocabName=default' format properly
+- Parameters need to be sent in the correct JSON structure
+
+## Expected Outcome:
+Vocab command should successfully create vocabulary from specified source file.
+
+Begin implementing the fix for parameter parsing in the vocab command.

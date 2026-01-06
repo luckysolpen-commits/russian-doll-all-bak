@@ -1,0 +1,7 @@
+
+RULES:
+1a: no new headers when possible, use .c executables and system() forks, pipes, to keep code modular and reusable.
+1b: use one file to compile all executables at once and store them in +x/ dir 
+1c: data that user can reuse (ie:save load data) should be prefered and stored in .txt or .csv files in matrix form
+2a. each new scrum iteration should get its own dir, standup report and lessons learned.
+old versions of deliverable and artifications should be stored in unique id'd archive/ directory 

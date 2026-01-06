@@ -1,0 +1,4 @@
+# Master-Slave Session Test
+Master ID: MASTER-20251231_072743
+Slave ID: SLAVE-20251231_072743
+Status: slave connected

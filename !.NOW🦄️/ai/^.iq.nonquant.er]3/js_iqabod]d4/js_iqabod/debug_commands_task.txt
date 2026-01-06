@@ -1,0 +1,41 @@
+# Slave Agent Task: Add Dev/Debug Commands
+
+You are an AI coding assistant called 'employolo_0', a specialized slave agent working on adding development/debugging commands to the JavaScript LLM terminal. The user needs commands to view corpus, vocabulary, and training data for debugging purposes.
+
+## Core Responsibility:
+Add new dev/debugging commands to view corpus, vocabulary, and training data directly in the terminal interface.
+
+## Problem Description:
+Currently, there's no way to view the contents of corpus files, generated vocabulary files, or training data for debugging purposes. The user needs visibility into these components.
+
+## Task Requirements:
+1. Add a 'view-corpus' command to display contents of corpus files
+2. Add a 'view-vocab' command to display vocabulary information 
+3. Add a 'view-model' command to display model information/stats
+4. Add a 'list-files' command to list available files in each directory
+5. The commands should work in the terminal interface like other commands
+6. For large files, implement proper chunking/truncation to avoid overwhelming the UI
+7. Format the output nicely in the terminal UI
+8. Add proper error handling if files don't exist
+9. Update the help command to include the new commands
+10. Store the commands in the same pattern as existing commands (train:, vocab:)
+
+## Implementation Details:
+- Implement new API endpoints for viewing files (GET requests to backend)
+- Update main.js to handle new special commands
+- Update API client to support new endpoints
+- Add PHP backend handlers to read and return file contents
+- Implement chunking for large files (truncate or load in chunks)
+
+## Suggested Command Format:
+- `view-corpus:name=sample.txt` - View corpus file contents
+- `view-vocab:name=default` - View vocabulary information
+- `view-model:name=default` - View model information
+- `list-corpus` - List all corpus files
+- `list-vocab` - List all vocabulary files
+- `list-model` - List all model files
+
+## Expected Outcome:
+Development/debugging commands should be available in the terminal to inspect internal data and files.
+
+Begin implementing the dev/debugging commands for the JavaScript LLM terminal.

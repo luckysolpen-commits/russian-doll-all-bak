@@ -1,0 +1,19 @@
+# HDLb0 Emulator Information
+
+The HDLb0 emulator is available at:
+`/home/debilu/Desktop/SERVICE.MOD_DEBILU/elegator-local/@.elegator]dec31]2HIP2+/$.debele_projects/$.halo.push]a0/elegator_qwen]b6]MASTER/projects/0.HDLb0.PIECE+3.9-/+x/0.hdlb0]22.+x`
+
+## Usage:
+- Run programs: `./emulator -program program.hlo -cycles N`
+- The emulator requires a chip_bank.txt file in the working directory
+- Programs are in HDLb0 format (.hlo files)
+
+## Testing:
+- All HDLb0 output files should be tested with the emulator
+- Create simple test programs to verify functionality
+- Verify that generated HDLb0 files execute correctly
+
+## Current Status:
+- Emulator successfully tested with nand_gate.hlo
+- All generated .hlo files can be executed on the emulator
+- Chip bank file is available for extended functionality

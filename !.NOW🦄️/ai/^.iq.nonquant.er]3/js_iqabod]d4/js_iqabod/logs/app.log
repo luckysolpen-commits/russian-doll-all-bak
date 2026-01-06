@@ -1,0 +1,65 @@
+[2026-01-05 18:14:07] [INFO] Loaded 0 training sequences
+[2026-01-05 18:14:07] [INFO] Initializing model weights...
+[2026-01-05 18:14:08] [INFO] Model initialized with 3351296 parameters
+[2026-01-05 18:14:08] [INFO] Starting training for new model: test_model
+[2026-01-05 18:14:08] [INFO] Starting training for 1 epochs with batch size 32 and learning rate 0.001
+[2026-01-05 18:14:08] [INFO] Epoch 0/1
+[2026-01-05 18:14:08] [INFO] Completed epoch 0 with average loss: 0
+[2026-01-05 18:14:08] [INFO] Training completed
+[2026-01-05 18:14:14] [INFO] Model saved to: /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod/backend/../models/test_model.json
+[2026-01-05 19:25:01] [ERROR] Vocabulary creation error: Source file not found: /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod/backend/../data/sample.txt
+[2026-01-05 19:30:23] [INFO] Loaded 0 training sequences
+[2026-01-05 19:30:23] [INFO] Initializing model weights...
+[2026-01-05 19:30:24] [INFO] Model initialized with 3351296 parameters
+[2026-01-05 19:30:24] [INFO] Starting training for new model: default
+[2026-01-05 19:30:24] [INFO] Starting training for 5 epochs with batch size 32 and learning rate 0.001
+[2026-01-05 19:30:24] [INFO] Epoch 0/5
+[2026-01-05 19:30:24] [INFO] Completed epoch 0 with average loss: 0
+[2026-01-05 19:30:24] [INFO] Epoch 1/5
+[2026-01-05 19:30:24] [INFO] Completed epoch 1 with average loss: 0
+[2026-01-05 19:30:24] [INFO] Epoch 2/5
+[2026-01-05 19:30:24] [INFO] Completed epoch 2 with average loss: 0
+[2026-01-05 19:30:24] [INFO] Epoch 3/5
+[2026-01-05 19:30:24] [INFO] Completed epoch 3 with average loss: 0
+[2026-01-05 19:30:24] [INFO] Epoch 4/5
+[2026-01-05 19:30:24] [INFO] Completed epoch 4 with average loss: 0
+[2026-01-05 19:30:24] [INFO] Training completed
+[2026-01-05 19:30:29] [INFO] Model saved to: /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod/backend/../models/default.json
+[2026-01-05 19:30:37] [INFO] Generation model loaded from: /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod/backend/../models/default.json
+[2026-01-05 19:30:37] [INFO] Generating text with prompt: 'test'
+[2026-01-05 19:30:37] [INFO] Generated text: '<unk> <unk> <unk> <unk> is <unk> vocabulary <unk> <unk> <unk> <unk> text creation <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> a <unk> <unk> <unk> <unk> <unk> <unk> testing <unk> testing vocabulary <unk> <unk> file <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <sos> <unk> <unk> <unk> <unk> creation <unk> <unk> <unk> <unk> <unk> <unk> <unk>. <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> sample <unk> <unk> <pad> <unk> <unk> <unk> <unk> vocabulary <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>.'
+[2026-01-05 19:45:45] [INFO] Loaded 0 training sequences
+[2026-01-05 19:45:47] [INFO] Model loaded from: /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod/backend/../models/default.json
+[2026-01-05 19:45:47] [INFO] Continuing training for existing model: default
+[2026-01-05 19:45:47] [INFO] Starting training for 5 epochs with batch size 32 and learning rate 0.001
+[2026-01-05 19:45:47] [INFO] Epoch 0/5
+[2026-01-05 19:45:47] [INFO] Completed epoch 0 with average loss: 0
+[2026-01-05 19:45:47] [INFO] Epoch 1/5
+[2026-01-05 19:45:47] [INFO] Completed epoch 1 with average loss: 0
+[2026-01-05 19:45:47] [INFO] Epoch 2/5
+[2026-01-05 19:45:47] [INFO] Completed epoch 2 with average loss: 0
+[2026-01-05 19:45:47] [INFO] Epoch 3/5
+[2026-01-05 19:45:47] [INFO] Completed epoch 3 with average loss: 0
+[2026-01-05 19:45:47] [INFO] Epoch 4/5
+[2026-01-05 19:45:47] [INFO] Completed epoch 4 with average loss: 0
+[2026-01-05 19:45:47] [INFO] Training completed
+[2026-01-05 19:45:53] [INFO] Model saved to: /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod/backend/../models/default.json
+[2026-01-05 20:25:08] [ERROR] Generation error: Model file not found: /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod/backend/../models/default.json
+[2026-01-05 20:25:33] [ERROR] Generation error: Model file not found: /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod/backend/../models/default.json
+[2026-01-05 20:37:44] [INFO] Loaded 0 training sequences
+[2026-01-05 20:37:44] [INFO] Initializing model weights...
+[2026-01-05 20:37:44] [INFO] Model initialized with 3351296 parameters
+[2026-01-05 20:37:44] [INFO] Starting training for new model: default
+[2026-01-05 20:37:44] [INFO] Starting training for 5 epochs with batch size 32 and learning rate 0.001
+[2026-01-05 20:37:44] [INFO] Epoch 0/5
+[2026-01-05 20:37:44] [INFO] Completed epoch 0 with average loss: 0
+[2026-01-05 20:37:44] [INFO] Epoch 1/5
+[2026-01-05 20:37:44] [INFO] Completed epoch 1 with average loss: 0
+[2026-01-05 20:37:44] [INFO] Epoch 2/5
+[2026-01-05 20:37:44] [INFO] Completed epoch 2 with average loss: 0
+[2026-01-05 20:37:44] [INFO] Epoch 3/5
+[2026-01-05 20:37:44] [INFO] Completed epoch 3 with average loss: 0
+[2026-01-05 20:37:44] [INFO] Epoch 4/5
+[2026-01-05 20:37:44] [INFO] Completed epoch 4 with average loss: 0
+[2026-01-05 20:37:44] [INFO] Training completed
+[2026-01-05 20:37:48] [INFO] Model saved to: /home/no/Desktop/qwen/jan-4/python_iqabod/js_iqabod/backend/../models/default.json

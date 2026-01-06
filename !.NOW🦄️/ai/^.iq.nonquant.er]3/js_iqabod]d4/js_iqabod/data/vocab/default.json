@@ -1,0 +1,25 @@
+{
+    "vocab": {
+        "<pad>": 0,
+        "<unk>": 1,
+        "<sos>": 2,
+        "<eos>": 3,
+        "this": 4,
+        "is": 5,
+        "a": 6,
+        "sample": 7,
+        "text": 8,
+        "file": 9,
+        "for": 10,
+        "testing": 11,
+        "vocabulary": 12,
+        "creation": 13,
+        ".": 14
+    },
+    "metadata": {
+        "name": "default",
+        "size": 15,
+        "created_at": "2026-01-05T20:37:28-08:00",
+        "source": "corpora\/sample.txt"
+    }
+}

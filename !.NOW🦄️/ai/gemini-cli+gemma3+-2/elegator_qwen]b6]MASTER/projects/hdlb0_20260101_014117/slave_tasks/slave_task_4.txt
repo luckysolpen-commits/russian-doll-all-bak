@@ -1,0 +1,42 @@
+# Slave Task 4: Create Backwards-Compatible Kernel for 8-bit Implementation
+
+## Objective
+Design and implement a minimal kernel that is backwards compatible with the 2-bit RISC-V implementation and can run on the 8-bit RISC-V processor when it's implemented.
+
+## Specific Tasks
+1. Design a minimal kernel architecture that can work across different bit-widths
+2. Create kernel modules that are parameterized for different bit-widths
+3. Implement core kernel functions:
+   - Process management (minimal)
+   - Memory management (abstraction layer)
+   - Interrupt handling
+   - System calls interface
+4. Ensure backwards compatibility with 2-bit instruction set
+5. Design kernel to be extensible to 8-bit, 16-bit, and 32-bit implementations
+6. Create test programs that demonstrate kernel functionality
+
+## Deliverables
+- Kernel source code in assembly or Verilog (as appropriate)
+- Kernel documentation
+- Test programs demonstrating kernel functionality
+- Compatibility verification programs
+- Design documentation for extensibility to higher bit-widths
+
+## Implementation Notes
+- Kernel should be designed to work with minimal resources of 2-bit system
+- Use abstraction layers to handle different bit-widths
+- Focus on core functionality that can scale
+- Include error handling for resource limitations
+- Design with future 8-bit implementation in mind
+
+## Output Location
+- Place kernel source in: ./kernel/
+- Place kernel documentation in: ./kernel/docs/
+- Place test programs in: ./kernel/tests/
+- Place compatibility tests in: ./kernel/compatibility/
+
+## Verification
+- Kernel should run on 2-bit simulator
+- Compatibility tests should pass
+- Resource usage should be minimal
+- Design should be extensible to 8-bit

@@ -1,0 +1,16 @@
+
+
+
+ok, i have 2 projects. 
+
+
+0.hdlb0 : a hdl in binary . we are trying to build riscv32 , by slowly building up using nand chips 
+and creating riscv-2bi riscv-8 bit 16 bit, working our way up but with backwards compatibility. 
+master elegator should read thru the entire directory , create a 2do list, then create a prompt
+for a slave elegator, continually evaluating its output and reprompting it or iterating with a new prompt till
+the goals are complete , tested somehow, and bug free. 
+
+
+iqabod]rd4 : a token centric llm for use in games and apps; meant to use data that is human readable and customizable.
+we want to add more tokens to the vocabulary to the point where the model is able to carry on coherent conversations
+u may decide to train, and manually tweak the biases of the vocab at your discretion to get the best possible outputs. 

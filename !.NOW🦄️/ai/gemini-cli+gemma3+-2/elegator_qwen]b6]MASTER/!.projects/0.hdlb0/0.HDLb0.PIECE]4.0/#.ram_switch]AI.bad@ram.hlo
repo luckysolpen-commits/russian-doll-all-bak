@@ -1,0 +1,12 @@
+# Test RAM store and retrieve
+# Store 1 to ram[0] (address 16)
+0000000000000000  # pass constant 1 -> ram[0]
+0000000000010000  # out 16
+0000000000000001  # input_a =1
+0000000000000011  # blank
+
+# Retrieve ram[0] and output to tape
+0000000000000001  # pass to tape
+0000000000000000
+0000000000010000  # input_a =16 (ram[0])
+0000000000000101

@@ -1,0 +1,58 @@
+# Slave Task 5: Create 8-bit RISC-V Implementation with Kernel Compatibility
+
+## Objective
+Design and implement an 8-bit RISC-V processor that maintains backward compatibility with the 2-bit implementation and is compatible with the kernel developed in Slave Task 4.
+
+## Specific Tasks
+1. Design the 8-bit RISC-V processor architecture with consideration for:
+   - Backward compatibility with 2-bit instruction set
+   - Forward compatibility with kernel requirements
+   - Efficient use of resources for 8-bit operations
+   - Memory management unit compatible with kernel
+
+2. Create all necessary components:
+   - 8-bit register file (8 registers, 8 bits each)
+   - 8-bit ALU with extended operations
+   - Control unit with 8-bit instruction decoding
+   - Memory management unit
+   - Program counter and instruction fetch unit
+   - Interrupt handling unit
+   - Top-level integration
+
+3. Ensure compatibility with the kernel:
+   - System call interface
+   - Memory layout requirements
+   - Process control block format
+   - Interrupt vector table
+
+4. Create test programs that demonstrate:
+   - Basic 8-bit operations
+   - Kernel interaction
+   - Backward compatibility with 2-bit programs
+   - Memory management functionality
+
+## Deliverables
+- Verilog files for each component in ./riscv_8bit/
+- Testbench files in ./tests/riscv_8bit/
+- Integration test with kernel in ./riscv_8bit/integration/
+- HDLb0 binary format files in ./riscv_8bit/hdlb0_output/
+- Documentation in ./riscv_8bit/docs/
+
+## Implementation Notes
+- Use the 2-bit implementation as a reference for compatibility
+- Follow the same HDLb0 instruction format where possible
+- Ensure the kernel can run on this processor
+- Optimize for the 8-bit architecture while maintaining compatibility
+- Include comprehensive test cases
+
+## Output Location
+- Place components in: ./riscv_8bit/
+- Place tests in: ./tests/riscv_8bit/
+- Place HDLb0 binaries in: ./riscv_8bit/hdlb0_output/
+- Place documentation in: ./riscv_8bit/docs/
+
+## Verification
+- Components should be compatible with kernel
+- Backward compatibility with 2-bit programs should be maintained
+- All test programs should execute correctly
+- Memory management should work with kernel requirements

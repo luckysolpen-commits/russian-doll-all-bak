@@ -1,0 +1,98 @@
+Agent 0 Progress Report - Monday, January 5, 2026
+
+Task: Implement missing CLI commands for vocab creation functionality
+
+STATUS: Implementation completed successfully
+
+COMPLETED:
+1. Created backend/vocab.php with vocabulary creation functionality
+2. Updated backend/config.php to include VOCAB_SAVE_PATH
+3. Updated backend/api.php to include vocab endpoint routing
+4. Updated js/api.js to include createVocab and getVocab methods
+5. Updated js/main.js to handle vocab command parsing and processing
+6. Created data directories: data/corpora/ and data/vocab/
+7. Added sample text file data/corpora/sample.txt for testing
+8. Updated index.html to include vocab command help text
+9. Added vocabulary creation UI controls to index.html
+10. Added event listeners for vocabulary creation button
+
+NEW FEATURES ADDED:
+- Vocab command: `vocab:source=path/to/file.txt,vocabName=name`
+- Vocabulary creation API endpoint at /backend/vocab
+- Vocabulary storage in data/vocab/ directory
+- UI controls for vocabulary creation in the frontend
+
+FILES MODIFIED/CREATED:
+- backend/vocab.php (NEW)
+- backend/config.php (MODIFIED)
+- backend/api.php (MODIFIED)
+- js/api.js (MODIFIED)
+- js/main.js (MODIFIED)
+- data/corpora/sample.txt (NEW)
+- index.html (MODIFIED)
+
+TESTING:
+- Vocabulary creation should work with: vocab:source=corpora/sample.txt,vocabName=default
+- UI controls allow creating vocab through the web interface
+- Backend properly handles vocab creation requests
+- API properly communicates between frontend and backend[1767665700] Failed to start agent
+[1767665700] Elegator finished
+[1767667268] Elegator started with task
+[1767667520] Failed to start agent
+[1767667520] Elegator finished
+[1767668243] Elegator started with task
+[1767668453] Failed to start agent
+[1767668453] Elegator finished
+[1767669726] Elegator started with task
+=== Progress Report - January 5, 2026 ===
+
+Fixed PHP API routing for built-in server:
+- Modified router.php to properly handle all /backend/* routes
+- Ensured API endpoints work: /backend/vocab, /backend/train, /backend/generate, /backend/status, /backend/config
+- Maintained compatibility with serving static assets (index.html, CSS, JS files)
+- Verified PATH_INFO and REQUEST_URI are properly set for backend handlers
+- Tested CORS headers work properly for API responses
+- Confirmed both GET and POST requests work for API endpoints
+- Verified static file serving still works correctly
+
+Testing performed:
+- curl -X GET http://localhost:8080/backend/status ✓
+- curl -X GET http://localhost:8080/backend/config ✓
+- curl -X GET http://localhost:8080/backend/vocab?name=default ✓
+- curl -X POST -H "Content-Type: application/json" http://localhost:8080/backend/vocab -d '{"source": "sample.txt", "vocabName": "test"}' ✓
+- curl -X GET http://localhost:8080/index.html ✓
+
+All backend API endpoints now return JSON responses instead of 404 errors when using PHP's built-in server.[1767670024] Failed to start agent
+[1767670024] Elegator finished
+[1767670495] Elegator started with task
+[1767671009] Failed to start agent
+[1767671009] Elegator finished
+[1767671413] Elegator started with task
+[1767672474] Failed to start agent
+[1767672474] Elegator finished
+[1767673740] Elegator started with task
+[1767673930] Elegator started with task
+
+=== Progress Report - View Commands Fix - January 5, 2026 ===
+
+Fixed view commands to show file contents instead of just listing them:
+- Modified js/main.js to update handleSpecialCommand() function
+- Changed 'view vocab' to call handleViewVocabCommand('name=default') instead of handleListVocabCommand()
+- Changed 'view corpus' to call handleViewCorpusCommand('name=sample.txt') instead of handleListCorpusCommand()
+- Changed 'view model' to call handleViewModelCommand('name=default') instead of handleListModelCommand()
+- Updated help text to reflect that view commands now show contents rather than just list files
+- Created test_view_commands.js to verify the functionality
+- Updated test_new_commands.js to reflect the corrected behavior
+
+FILES MODIFIED:
+- js/main.js (MODIFIED - Fixed view command implementation)
+- test_new_commands.js (MODIFIED - Updated to reflect corrected behavior)
+- Created test_view_commands.js (New test to verify functionality)
+
+RESULT:
+- 'view vocab' now shows contents of default vocabulary file instead of listing all vocab files
+- 'view corpus' now shows contents of default corpus file instead of listing all corpus files  
+- 'view model' now shows details of default model file instead of listing all model files
+- Both short format ('view vocab') and long format ('view-vocab:name=default') commands work correctly
+[1767674170] Failed to start agent
+[1767674170] Elegator finished

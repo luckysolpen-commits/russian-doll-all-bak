@@ -1,0 +1,1 @@
+Implement the tasks specified in slave_task_2.txt: Create simple RISC-V assembly programs for the 2-bit processor, convert them to HDLb0 format, and create test programs to verify functionality. Use the existing 2-bit RISC-V processor implementation to guide the program design.

@@ -1,0 +1,8 @@
+Implement a simple version control system in C with the following features:
+1. Initialize a repository
+2. Add files to staging area
+3. Commit changes with a message
+4. View commit history
+5. View differences between commits
+
+The implementation should be in the gitlet.c file and follow standard C practices.

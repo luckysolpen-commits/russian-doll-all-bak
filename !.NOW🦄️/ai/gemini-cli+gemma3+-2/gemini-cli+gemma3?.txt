@@ -1,0 +1,25 @@
+🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️
+this is our framework : chtml
+we made it from scratch to render chtml gui in open gl.we use it to hold gui seperately so we can prompt smaller contexts 
+and get more focused code outputs from llms.
+its an "mvc" architecture :
+
+
+its almost perfect but when i added flex sizing i broke display of menu submenus
+menu is immediately closing as soon as it opens because its positions are off ; ex : 
+
+handler called: menu_click_handler                                                                  
+   Menu '' opened                                                                                      
+   Closed menu '' as click was outside menu area\nEvent handler called: menu_click_handler             
+                                                                                                       
+   this keeps happening as soon as i open a menu's submenu because i think our positions are         
+   off in code 
+(even tho they aren't, in the users actual ui ; get it? ).                                                                                                 
+   obviously update is unaware we are using new positions when calculating menu close                  
+   is there someway we can fix this for backwards compatibility? we could temporarily ignore menu      
+   close functionality untill we figure out the new coords?                                            
+
+
+basically i wanna just remove menu render logic completely , so i can reimpliment it 
+from scratch ie sanity menu implimentation
+🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️🎖️

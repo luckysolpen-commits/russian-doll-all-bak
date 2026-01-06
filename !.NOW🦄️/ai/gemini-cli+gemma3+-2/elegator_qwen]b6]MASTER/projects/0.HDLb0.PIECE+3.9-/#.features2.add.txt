@@ -1,0 +1,48 @@
+⚠️ai is bad at this if u dont tell it ram starts @ 16  = "10000"⚠️
+
+
+
+
+❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️
+
+
+
+
+/home/no/Desktop/qwen/dec-21/testing/x/☮️.HDLb0.PIECE©️]g10]ϕ+3.7/0.hdlb0🧿️.☮️19.hlo.c
+
+we wanna add an option in to 
+read multiple chips 
+so we can use more than 1 .txt file for a longer "computer"
+
+(we may have to add flags for everything. 
+incase u wanna use single file or "BANK" file...
+
+
+
+❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️❔️
+
+
+
+
+
+
+
+
+
+✅️
+we want to add a feature where we can control "cli of halo using arg2 example :  generic  ./+x/0.hdlb0🧿️.☮️16\]pr5\]#ab\]HALO.+x playground/d_latch.hlo commands.txt
+file, it will read each cycle and do all the commands + if there is a new command than last count .
+
+(user should still beable to input thru cli, we just want another option)
+
+it will read via newline as 
+Options: '1' flip switch_0, '2' flip switch_1, 's' step, 'r' run, 'q' quit, [Enter] step: 
+ie :
+commands.txt = "
+1
+s
+1
+q
+"
+
+ie we can step thru , flip switches etc, then ai can test its own chips)

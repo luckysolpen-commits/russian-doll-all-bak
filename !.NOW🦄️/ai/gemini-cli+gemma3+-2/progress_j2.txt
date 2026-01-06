@@ -1,0 +1,46 @@
+### Progress Report: Gemini CLI (C Version)
+
+**Completed Features (from `feature_development_j1.txt` plan):**
+
+1.  **Conversation History:**
+    *   Implemented the ability to maintain context across multiple turns.
+    *   History is loaded from and saved to `history.json` in the project root.
+    *   Each user prompt and model response is added to the history.
+    *   The full history is sent with each API request.
+    *   A bug related to trailing newlines in model responses was identified and fixed.
+
+2.  **Multiline Input Support:**
+    *   The CLI now supports interactive multiline input (ending with Ctrl+D) when no prompt is provided via command-line arguments.
+    *   It also correctly handles multiline input piped from `stdin`.
+    *   The implementation differentiates between interactive TTY and piped input using `isatty()`.
+
+3.  **File Inclusion ("@" Ability):**
+    *   Introduced a special syntax `@<file_path>` within prompts to include file content.
+    *   A separate executable, `gemini-c-readfile`, was created to read file content, adhering to the process-based modularity principle.
+    *   The main `gemini-c` application executes `gemini-c-readfile` via `popen()` and replaces the `@<file_path>` token with the file's content.
+    *   Error handling for non-existent files is implemented.
+
+4.  **User Confirmation:**
+    *   Implemented a core `ask_for_confirmation()` function that prompts the user for 'y/N' input.
+    *   Added a `--yes` (`-y`) command-line flag to automatically confirm all prompts.
+    *   The confirmation logic defaults to 'no' in non-interactive environments (e.g., when input is piped) if `--yes` is not used.
+    *   Integrated confirmation into the "File Inclusion" feature, asking the user before reading file contents.
+
+The current version of the application is `gemini-cli_v12.c`.
+
+---
+
+### Next Steps: Tool Integration Framework (Roadmap Phase 3)
+
+With the foundational interaction features complete, the next major step is to implement the **Tool Integration Framework**. This will allow the AI model to request and execute external tools, transforming the CLI into a more powerful agent.
+
+**Key aspects of this phase will include:**
+
+1.  **Defining Tool Schemas:** Informing the model about the available tools and their parameters (e.g., `read_file`, `run_shell_command`).
+2.  **Parsing Tool Calls:** Detecting and extracting tool call requests from the model's responses.
+3.  **Tool Dispatcher:** A mechanism to execute the requested external tool executables.
+4.  **Feeding Tool Output Back:** Incorporating the results of tool execution back into the conversation with the model.
+
+This is a complex but exciting phase that will significantly expand the capabilities of `gemini-c`.
+
+How would you like to proceed? Shall we start with defining the tool schemas and modifying the API request to include them?

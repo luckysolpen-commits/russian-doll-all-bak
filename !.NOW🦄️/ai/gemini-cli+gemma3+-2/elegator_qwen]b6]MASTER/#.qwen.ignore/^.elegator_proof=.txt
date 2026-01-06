@@ -1,0 +1,11 @@
+> ok, but i just want it to use qwen to prompt a seperate qwen agent with initial 
+  task, then guidance after reviewing task ,so maybe our test can be more 
+  structured in a way to prove this is taking place somehow? can you think of 
+  something?
+
+✦ Yes, I can create a more structured test that clearly demonstrates the
+  elegator reviewing work and starting new agents. Let me create a test that
+  shows the elegator managing multiple agents with review cycles:
+
+master_slave_test.sh 
+review_cycle_test.sh  

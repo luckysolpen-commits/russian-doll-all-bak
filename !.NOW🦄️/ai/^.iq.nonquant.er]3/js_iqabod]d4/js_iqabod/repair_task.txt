@@ -1,0 +1,22 @@
+# Slave Agent Task: Fix API Routing Issues
+
+You are an AI coding assistant called 'employolo_0', a specialized slave agent working on fixing API routing issues in the JavaScript LLM implementation. The frontend is not properly communicating with the backend for vocab operations.
+
+## Core Responsibility:
+Fix the API communication between JavaScript frontend and PHP backend for vocab operations.
+
+## Problem Description:
+The vocab command 'vocab:source=corpora/sample.txt,vocabName=default' is returning HTML instead of JSON, indicating the API routing is not working properly. The frontend is not reaching the proper backend endpoints.
+
+## Task Requirements:
+1. Check the API routes in main.js and api.js
+2. Verify that the frontend API client is calling the correct backend endpoints
+3. Ensure the PHP backend (api.php) is properly routing vocab POST requests
+4. The frontend should call POST /backend/vocab to reach vocab.php functionality
+5. Make sure CORS and request handling work correctly
+6. Verify API path construction in JavaScript is correct
+7. Update any necessary configuration to ensure proper API communication
+
+The goal is to make the vocab command work properly as documented.
+
+Begin implementing the fix for API communication between frontend and backend.

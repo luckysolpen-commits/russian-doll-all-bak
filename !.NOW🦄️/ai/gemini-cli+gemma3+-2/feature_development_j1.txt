@@ -1,0 +1,75 @@
+# Feature Development Plan: Enhanced Interaction & Context for Gemini CLI (C Version)
+
+This document outlines the plan for implementing key features to evolve the `gemini-c` command-line interface into a more interactive and capable AI assistant. We will focus on enhancing conversational flow, user control, and contextual input.
+
+**Current State:**
+The `gemini-c` application (currently `gemini-cli_v6.c`) is a functional command-line tool that:
+*   Accepts prompts via arguments.
+*   Reads configuration from `config.json`.
+*   Supports overriding config with command-line flags.
+*   Streams responses from the Ollama API in real-time.
+*   Includes basic error handling for API responses.
+
+**Architectural Principle: Process-Based Modularity**
+As established, new functionalities will be implemented as **separate, standalone executables** invoked by the main `gemini-c` application using `fork()`/`exec()` or `system()`. Communication will primarily occur via standard I/O (pipes) or temporary files, avoiding direct linking or shared header files between modules.
+
+---
+
+## Feature Implementation Plan
+
+### 1. Conversation History
+
+*   **Purpose:** To enable multi-turn conversations by allowing the AI model to remember previous interactions within a session. This is fundamental for coherent and context-aware dialogue.
+*   **Implementation Details:**
+    *   **Data Structure:** The conversation history will be stored as an array of message objects, each containing a `role` (e.g., "user", "assistant") and `content`.
+    *   **Storage:** History will be persisted to a file (e.g., `history.json`) within the project's working directory. This file will be created if it doesn't exist.
+    *   **Loading:** On application startup, `gemini-c` will attempt to load the conversation history from `history.json`.
+    *   **Updating:** After each user prompt and subsequent model response, the new messages will be appended to the in-memory history and then saved back to `history.json`.
+    *   **API Integration:** The entire conversation history (up to a configurable token limit, to be considered later) will be included in the `messages` array of the JSON payload sent to the Ollama API.
+    *   **Modular Consideration:** The loading and saving of history could potentially be encapsulated in a separate `gemini-c-history` executable if the logic becomes complex, communicating JSON via pipes. For now, it will be integrated directly into `gemini-c`.
+
+### 2. Multiline Input Support
+
+*   **Purpose:** To allow users to enter prompts that span multiple lines, improving the user experience for more complex or detailed queries.
+*   **Implementation Details:**
+    *   **Detection:** If no prompt is provided as a command-line argument (i.e., neither a bare argument nor `--prompt` is used), `gemini-c` will enter an interactive multiline input mode.
+    *   **Input Loop:** The application will read lines from standard input (`stdin`) until an End-Of-File (EOF) signal is received (typically Ctrl+D on Unix-like systems).
+    *   **Concatenation:** All lines read during this interactive session will be concatenated into a single string, which will then be treated as the user's prompt for the current turn.
+
+### 3. File Inclusion ("@" Ability)
+
+*   **Purpose:** To allow users to easily incorporate the content of local files directly into their prompts, providing rich context to the AI model.
+*   **Implementation Details:**
+    *   **Syntax:** A special syntax, `@<file_path>`, will be recognized within the user's prompt. For example, `Please summarize this code: @src/main.c`.
+    *   **Parsing:** Before sending the prompt to the model, `gemini-c` will scan the prompt string for all occurrences of `@<file_path>`.
+    *   **File Reading (Modular Tool):**
+        *   A new, separate executable, `gemini-c-readfile`, will be created. This tool will take a file path as an argument and print the file's content to its `stdout`.
+        *   The main `gemini-c` process will invoke `gemini-c-readfile` using `system()` or `fork()`/`exec()`, capturing its standard output.
+    *   **Replacement:** Each `@<file_path>` token in the original prompt will be replaced with the actual content retrieved from the file.
+    *   **Error Handling:** If `gemini-c-readfile` reports an error (e.g., file not found, permission denied), an appropriate message will be displayed, and the user will be prompted for confirmation (see next feature) on how to proceed.
+    *   **Integration with History:** The expanded prompt (with file contents) will be the one added to the conversation history.
+
+### 4. User Confirmation
+
+*   **Purpose:** To provide a critical safety and control mechanism, requiring explicit user approval before executing potentially impactful or resource-intensive actions.
+*   **Implementation Details:**
+    *   **Prompting Function/Tool:** A utility function within `gemini-c` (or a simple `gemini-c-confirm` executable if more complex logic is needed) will be created. This function will:
+        *   Display a clear yes/no question to the user (e.g., "Proceed? [y/N]").
+        *   Read user input from `stdin`.
+        *   Return `true` for 'y'/'Y' and `false` for 'n'/'N' (or any other input, defaulting to 'no').
+    *   **Integration Points:**
+        *   **File Inclusion:** Before reading potentially large or numerous files via the "@" ability, `gemini-c` will ask for user confirmation.
+        *   **Tool Execution (Future):** This will be a mandatory step before any external tool (like `run_shell_command`) is executed based on the AI's suggestion.
+    *   **Non-Interactive Mode:** A command-line flag (e.g., `--yes` or `-y`) will be added to `gemini-c` to automatically confirm all prompts, enabling non-interactive scripting.
+
+---
+
+## Workflow Integration
+
+After the implementation of each feature (or logical sub-component), the established development workflow will be strictly followed:
+1.  **Compile:** Compile the modified C code.
+2.  **Test:** Thoroughly test the new feature, including edge cases and error conditions.
+3.  **Backup:** Create a backup of the current source file.
+4.  **Version Increment:** Rename the source file to the next version (e.g., `gemini-cli_v7.c`).
+
+This iterative approach ensures stability and maintainability throughout the development process.

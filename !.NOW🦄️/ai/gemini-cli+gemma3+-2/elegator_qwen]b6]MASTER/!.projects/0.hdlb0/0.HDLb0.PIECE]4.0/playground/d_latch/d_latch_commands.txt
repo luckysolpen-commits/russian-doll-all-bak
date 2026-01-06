@@ -1,0 +1,39 @@
+# D-Latch Test Commands for Truth Table Verification
+# Commands:
+# 1 = Flip switch_0 (data input D)
+# 2 = Flip switch_1 (unused in this design)
+# s = Step (execute one clock cycle) - this advances the clock
+# q = Quit (output to tape)
+
+# Testing all possible input combinations systematically:
+
+# Test Case 1: D=0, CLK=0 (hold state - verify Q remains unchanged)
+1            # Ensure D input is 0 (flip if currently 1)
+s            # Step once - clock changes, but D=0, CLK effect depends on timing
+s            # Step again - clock cycles again
+q            # Query output - should reflect latch behavior
+
+# Test Case 2: D=0, CLK=1 (attempt to reset when D=0)
+1            # Set D=0 (flip switch_0 to set data input to 0)
+s            # Step with clock high - should capture D=0 if clock was previously low
+s            # Step again to verify
+q            # Query output - should be 0 if latch captured D=0
+
+# Test Case 3: D=1, CLK=0 (hold state - verify Q remains unchanged)
+1            # Flip D to 1 (set data input to 1)
+s            # Step once - latch should hold previous value when CLK=0
+s            # Step again with CLK cycling
+q            # Query output - should hold previous value when CLK is low
+
+# Test Case 4: D=1, CLK=1 (attempt to set when D=1)
+1            # Ensure D=1
+s            # Step with CLK - if CLK transitions high, should capture D=1
+s            # Step again to stabilize
+q            # Query output - should be 1 if latch captured D=1
+
+# Additional verification to test full behavior
+s            # Step several times
+s            # To ensure stability
+1            # Flip D again
+s            # Step with new D value
+q            # Final output check

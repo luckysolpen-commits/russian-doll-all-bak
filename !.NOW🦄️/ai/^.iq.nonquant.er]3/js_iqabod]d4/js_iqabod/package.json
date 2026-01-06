@@ -1,0 +1,27 @@
+{
+  "name": "js-llm-terminal",
+  "version": "1.0.0",
+  "description": "A JavaScript-based LLM terminal interface using TensorFlow.js",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "npx http-server . -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "llm",
+    "tensorflow.js",
+    "terminal",
+    "ai",
+    "machine-learning"
+  ],
+  "author": "the_elegator",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

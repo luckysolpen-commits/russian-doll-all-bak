@@ -1,0 +1,20 @@
+# HDLb0 binary format for RISC-V processor
+# Generated from: riscv_2bit/programs/alu_test.s
+# Memory addresses automatically shifted to start from 16 and above for HDLb0 emulator compatibility
+# Addresses 0-15 are reserved for special purposes in the HDLb0 emulator
+0990
+8080
+2991
+8081
+4992
+8082
+6993
+8083
+8994
+8480
+6020
+6032
+0990
+8084
+0910
+6000

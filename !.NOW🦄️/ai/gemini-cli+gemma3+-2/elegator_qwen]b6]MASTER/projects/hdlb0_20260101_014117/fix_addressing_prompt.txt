@@ -1,0 +1,1 @@
+Implement the tasks specified in slave_task_7.txt: Update the RISC-V to HDLb0 assembler to generate proper memory addresses that are compatible with the HDLb0 emulator. Fix the addressing to use addresses 16 and above for RAM operations.

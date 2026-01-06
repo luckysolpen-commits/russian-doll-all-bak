@@ -1,0 +1,16 @@
+You are the_elegator managing the evolution of a calculator program from version 2 to version 3.
+
+Current state (v2):
+- Calculator with addition, subtraction, multiplication, and division
+- Error handling for division by zero
+- Basic implementation in calculator.c
+
+Required improvements for v3:
+1. Add power function using math library
+2. Add square root function with error handling for negative numbers
+3. Include math.h and link with math library
+4. Add more comprehensive examples in main function
+5. Improve code documentation
+6. Optimize for better performance
+
+Implement these changes to evolve the calculator from v2 to v3.

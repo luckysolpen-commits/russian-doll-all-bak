@@ -1,0 +1,192 @@
+# HDLB0 Test Plans for Each Stage
+
+## Stage 1: NAND Gates Test Plan
+
+### Objective
+Verify that all basic logic gates implemented using NAND gates function correctly.
+
+### Test Categories
+1. Functional Tests
+   - Test each gate with all possible input combinations
+   - Verify output matches expected truth table
+   - Test timing characteristics if applicable
+
+2. Integration Tests
+   - Verify gates work when connected together
+   - Test signal integrity and propagation delays
+   - Verify power consumption is within limits
+
+### Specific Tests
+- NOT gate: Input 0→Output 1, Input 1→Output 0
+- AND gate: Inputs (0,0)→Output 0, (0,1)→0, (1,0)→0, (1,1)→1
+- OR gate: Inputs (0,0)→Output 0, (0,1)→1, (1,0)→1, (1,1)→1
+- XOR gate: Inputs (0,0)→Output 0, (0,1)→1, (1,0)→1, (1,1)→0
+- NOR gate: Inputs (0,0)→Output 1, (0,1)→0, (1,0)→0, (1,1)→0
+- XNOR gate: Inputs (0,0)→Output 1, (0,1)→0, (1,0)→0, (1,1)→1
+
+### Test Environment
+- Digital logic simulator (e.g., Verilog testbench)
+- Input signal generators
+- Output verification tools
+
+## Stage 2: 2-bit RISC-V Test Plan
+
+### Objective
+Verify that the 2-bit RISC-V processor executes instructions correctly and maintains proper functionality.
+
+### Test Categories
+1. Unit Tests
+   - Individual component verification (ALU, register file, control unit)
+   - Instruction decoder verification
+   - Memory subsystem verification
+
+2. Integration Tests
+   - End-to-end instruction execution
+   - Program flow control
+   - Memory load/store operations
+
+3. System Tests
+   - Complete program execution
+   - Edge cases and error conditions
+   - Performance benchmarks
+
+### Specific Tests
+- Register file: Read/write operations to all registers
+- ALU operations: All supported operations with various inputs
+- Instruction execution: Each supported instruction with various operands
+- Memory operations: Load/store to all addressable locations
+- Control flow: Branch and jump instructions
+- Backward compatibility: Ability to run simplified programs
+
+### Test Programs
+- Arithmetic test: ADD, SUB operations
+- Logic test: AND, OR, XOR operations
+- Memory test: LW, SW operations
+- Control flow test: Branch instructions
+
+## Stage 3: 8-bit RISC-V Test Plan
+
+### Objective
+Verify that the 8-bit RISC-V processor executes instructions correctly and maintains backward compatibility with 2-bit implementation.
+
+### Test Categories
+1. Unit Tests
+   - Individual component verification (8-bit ALU, register file, control unit)
+   - Instruction decoder verification
+   - Memory subsystem verification
+
+2. Compatibility Tests
+   - 2-bit program execution within 8-bit framework
+   - Mode switching functionality
+   - Data width conversion
+
+3. Integration Tests
+   - End-to-end instruction execution
+   - Program flow control
+   - Memory load/store operations
+
+4. System Tests
+   - Complete program execution
+   - Edge cases and error conditions
+   - Performance benchmarks
+
+### Specific Tests
+- Register file: Read/write operations to all 32 registers
+- ALU operations: All supported operations with 8-bit values
+- Instruction execution: Each supported instruction with various operands
+- Memory operations: Load/store to all 256 addressable locations
+- Control flow: Branch and jump instructions
+- Backward compatibility: Ability to run 2-bit programs
+
+### Test Programs
+- Arithmetic test: All arithmetic operations
+- Logic test: All logic operations
+- Memory test: All memory access patterns
+- Control flow test: All branch conditions
+- Compatibility test: 2-bit programs running in 8-bit mode
+
+## Stage 4: 16-bit RISC-V Test Plan
+
+### Objective
+Verify that the 16-bit RISC-V processor executes instructions correctly and maintains backward compatibility with 2-bit and 8-bit implementations.
+
+### Test Categories
+1. Unit Tests
+   - Individual component verification (16-bit ALU, register file, control unit)
+   - Instruction decoder verification
+   - Memory subsystem verification
+
+2. Compatibility Tests
+   - 2-bit and 8-bit program execution within 16-bit framework
+   - Mode switching functionality
+   - Data width conversion
+
+3. Integration Tests
+   - End-to-end instruction execution
+   - Program flow control
+   - Memory load/store operations
+
+4. System Tests
+   - Complete program execution
+   - Edge cases and error conditions
+   - Performance benchmarks
+
+### Specific Tests
+- Register file: Read/write operations to all 32 registers
+- ALU operations: All supported operations with 16-bit values
+- Instruction execution: Each supported instruction with various operands
+- Memory operations: Load/store to all 65536 addressable locations
+- Control flow: Branch and jump instructions
+- Backward compatibility: Ability to run 2-bit and 8-bit programs
+
+### Test Programs
+- Arithmetic test: All arithmetic operations with 16-bit values
+- Logic test: All logic operations with 16-bit values
+- Memory test: All memory access patterns
+- Control flow test: All branch conditions
+- Compatibility test: 2-bit and 8-bit programs running in 16-bit mode
+
+## Stage 5: 32-bit RISC-V Test Plan
+
+### Objective
+Verify that the 32-bit RISC-V processor executes instructions correctly and maintains backward compatibility with all previous implementations.
+
+### Test Categories
+1. Unit Tests
+   - Individual component verification (32-bit ALU, register file, control unit)
+   - Instruction decoder verification
+   - Memory subsystem verification
+
+2. Compatibility Tests
+   - 2-bit, 8-bit, and 16-bit program execution within 32-bit framework
+   - Mode switching functionality
+   - Data width conversion
+
+3. Integration Tests
+   - End-to-end instruction execution
+   - Program flow control
+   - Memory load/store operations
+
+4. System Tests
+   - Complete program execution
+   - Edge cases and error conditions
+   - Performance benchmarks
+   - RISC-V compliance tests
+
+### Specific Tests
+- Register file: Read/write operations to all 32 registers
+- ALU operations: All supported operations with 32-bit values
+- Instruction execution: Each supported instruction with various operands
+- Memory operations: Load/store to all addressable locations
+- Control flow: Branch and jump instructions
+- Backward compatibility: Ability to run 2-bit, 8-bit, and 16-bit programs
+- Exception handling: Interrupt and exception processing
+
+### Test Programs
+- Arithmetic test: All arithmetic operations with 32-bit values
+- Logic test: All logic operations with 32-bit values
+- Memory test: All memory access patterns
+- Control flow test: All branch conditions
+- Compatibility test: All previous implementations' programs
+- RISC-V compliance test suite
+- Performance benchmark programs

@@ -1,0 +1,59 @@
+# Slave Task 6: Create 16-bit RISC-V Implementation with Kernel Compatibility
+
+## Objective
+Design and implement a 16-bit RISC-V processor that maintains backward compatibility with the 2-bit and 8-bit implementations and is compatible with the kernel developed in Slave Task 4.
+
+## Specific Tasks
+1. Design the 16-bit RISC-V processor architecture with consideration for:
+   - Backward compatibility with 2-bit and 8-bit instruction sets
+   - Forward compatibility with kernel requirements
+   - Efficient use of resources for 16-bit operations
+   - Memory management unit compatible with kernel
+
+2. Create all necessary components:
+   - 16-bit register file (16 registers, 16 bits each)
+   - 16-bit ALU with extended operations
+   - Control unit with 16-bit instruction decoding
+   - Memory management unit
+   - Program counter and instruction fetch unit
+   - Interrupt handling unit
+   - Compatibility modules for 2-bit and 8-bit programs
+   - Top-level integration
+
+3. Ensure compatibility with the kernel:
+   - System call interface
+   - Memory layout requirements
+   - Process control block format
+   - Interrupt vector table
+
+4. Create test programs that demonstrate:
+   - Basic 16-bit operations
+   - Kernel interaction
+   - Backward compatibility with 2-bit and 8-bit programs
+   - Memory management functionality
+
+## Deliverables
+- Verilog files for each component in ./riscv_16bit/
+- Testbench files in ./tests/riscv_16bit/
+- Integration test with kernel in ./riscv_16bit/integration/
+- HDLb0 binary format files in ./riscv_16bit/hdlb0_output/
+- Documentation in ./riscv_16bit/docs/
+
+## Implementation Notes
+- Use the 2-bit and 8-bit implementations as references for compatibility
+- Follow the same HDLb0 instruction format where possible
+- Ensure the kernel can run on this processor
+- Optimize for the 16-bit architecture while maintaining compatibility
+- Include comprehensive test cases
+
+## Output Location
+- Place components in: ./riscv_16bit/
+- Place tests in: ./tests/riscv_16bit/
+- Place HDLb0 binaries in: ./riscv_16bit/hdlb0_output/
+- Place documentation in: ./riscv_16bit/docs/
+
+## Verification
+- Components should be compatible with kernel
+- Backward compatibility with 2-bit and 8-bit programs should be maintained
+- All test programs should execute correctly
+- Memory management should work with kernel requirements

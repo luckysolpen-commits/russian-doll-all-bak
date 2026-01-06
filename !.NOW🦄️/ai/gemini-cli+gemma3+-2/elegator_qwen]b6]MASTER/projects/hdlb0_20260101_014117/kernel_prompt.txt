@@ -1,0 +1,1 @@
+Implement the tasks specified in slave_task_4.txt: Create a minimal backwards-compatible kernel that can work across different bit-widths (2-bit to 8-bit), with core functionality including process management, memory management, interrupt handling, and system calls interface. Design it to be extensible to higher bit-widths.

@@ -1,0 +1,33 @@
+# 1-bit Full Adder Truth Table
+#
+# A full adder takes three 1-bit inputs (A, B, Cin) and produces two 1-bit outputs (Sum, Cout).
+# It performs the addition of three bits: A + B + Cin = Sum (with Carry-out)
+#
+# Symbol Legend:
+# A    = First operand input
+# B    = Second operand input  
+# Cin  = Carry input from previous stage
+# Sum  = Sum output (Least Significant Bit of result)
+# Cout = Carry output (Carry to next stage)
+#
+# Truth Table:
+# A | B | Cin | Sum | Cout | Description
+# --|---|-----|-----|------|-----------------------------------
+# 0 | 0 |  0  |  0  |  0   | 0 + 0 + 0 = 0 (no carry)
+# 0 | 0 |  1  |  1  |  0   | 0 + 0 + 1 = 1 (no carry)  
+# 0 | 1 |  0  |  1  |  0   | 0 + 1 + 0 = 1 (no carry)
+# 0 | 1 |  1  |  0  |  1   | 0 + 1 + 1 = 10 (sum=0, carry=1)
+# 1 | 0 |  0  |  1  |  0   | 1 + 0 + 0 = 1 (no carry)
+# 1 | 0 |  1  |  0  |  1   | 1 + 0 + 1 = 10 (sum=0, carry=1)
+# 1 | 1 |  0  |  0  |  1   | 1 + 1 + 0 = 10 (sum=0, carry=1)
+# 1 | 1 |  1  |  1  |  1   | 1 + 1 + 1 = 11 (sum=1, carry=1)
+#
+# Memory Mapping for HDLb0:
+# Inputs:
+#   RAM[30]: Input A
+#   RAM[31]: Input B
+#   RAM[32]: Input Cin
+#
+# Outputs:
+#   RAM[40]: Sum
+#   RAM[41]: Cout
