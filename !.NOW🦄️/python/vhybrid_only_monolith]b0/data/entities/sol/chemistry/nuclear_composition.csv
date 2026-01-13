@@ -1,0 +1,14 @@
+density_g_cm3,element,isotope_id,isotope_mass_number,pressure_GPa,relative_abundance,state,state_phase,temperature_threshold_MK
+0.16,hydrogen,H-1,1.0,265.0,73.0,bound,plasma,13.6
+0.16,helium,He-4,4.0,265.0,25.0,bound,plasma,13.6
+0.16,helium,He-3,3.0,265.0,0.014,bound,plasma,13.6
+0.16,lithium,Li-7,7.0,265.0,1e-06,bound,plasma,13.6
+0.16,carbon,C-12,12.0,265.0,0.3,bound,plasma,13.6
+0.16,nitrogen,N-14,14.0,265.0,0.1,bound,plasma,13.6
+0.16,oxygen,O-16,16.0,265.0,0.8,bound,plasma,13.6
+0.16,neon,Ne-20,20.0,265.0,0.12,bound,plasma,13.6
+0.16,magnesium,Mg-24,24.0,265.0,0.058,bound,plasma,13.6
+0.16,silicon,Si-28,28.0,265.0,0.067,bound,plasma,13.6
+0.16,sulfur,S-32,32.0,265.0,0.033,bound,plasma,13.6
+0.16,iron,Fe-56,56.0,265.0,0.015,bound,plasma,13.6
+0.16,nickel,Ni-58,58.0,265.0,0.004,bound,plasma,13.6

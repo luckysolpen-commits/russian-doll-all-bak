@@ -1,0 +1,19 @@
+BUG REPORT: Selector Coordinate Issue in Tactics Game
+=====================================================
+
+Issue:
+The selector in the tactics game (#.tactics_game+z+3d.2.py) is having trouble properly selecting entities that are at the same coordinates. It appears to be selecting the entity that is "in front of" it rather than the one at the exact same coordinates.
+
+Analysis:
+Comparing with the hybrid+pov_v1.1.py (our beacon of truth), the selection logic should work as follows:
+- The selector position is [z, y, x] format: self.selector_pos[0] = z, self.selector_pos[1] = y, self.selector_pos[2] = x
+- Entity position key should be: f"{selector_z},{selector_x}" = f"{self.selector_pos[0]},{self.selector_pos[2]}"
+- Entity comparison should be done using the y coordinate: entity['y'] == self.selector_pos[1]
+
+In the updated tactics game, entities are stored with both original coordinates and new coordinate mapping:
+- Original: {'color': 'blue', 'row': row, 'col': col, 'z': z}  
+- New mapping: 'x': col, 'y': row (using original 'row' for y coordinate)
+
+The selection logic needs to match the coordinate system used in hybrid+pov_v1.1.py exactly.
+
+The issue is likely in how the entity position key is constructed and compared in the draw_selector and key events.

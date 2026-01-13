@@ -1,0 +1,1005 @@
+import sys
+import math
+from PySide6.QtWidgets import QApplication, QMainWindow, QStackedWidget, QLabel, QWidget
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QPainter, QColor, QFont, QPen
+from PySide6.QtOpenGLWidgets import QOpenGLWidget
+from OpenGL.GL import *
+from OpenGL.GLU import *
+try:
+    from OpenGL.GLUT import *
+except ImportError:
+    # If GLUT is not available, we'll skip text rendering in the minimap
+    pass
+
+# Import the minimap widget
+from minimap_widget import MinimapWidget
+
+
+class TacticsGame(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        
+        # Create a stacked widget to switch between 2D and 3D views
+        self.stacked_widget = QStackedWidget()
+        
+        # Create 2D view
+        self.view_2d = GridWidget2D()
+        self.stacked_widget.addWidget(self.view_2d)
+        
+        # Create 3D view
+        self.view_3d = GridWidget3D(parent=self)
+        self.stacked_widget.addWidget(self.view_3d)
+        
+        # Set stacked widget as central widget
+        self.setCentralWidget(self.stacked_widget)
+        
+        # Initially show 2D view
+        self.stacked_widget.setCurrentIndex(0)
+        self.current_mode = "2d"
+        
+        self.setWindowTitle("Tactics Roguelike Game - 2D/3D View")
+        self.setGeometry(100, 100, 1000, 800)
+        
+        # Mode indicator - will be positioned dynamically
+        self.mode_label = QLabel("Mode: 2D (Press '3' for 3D, '2' for 2D)", self)
+        self.mode_label.setStyleSheet("color: white; background-color: black; padding: 5px;")
+        # Initial position at top, will be repositioned for 2D vs 3D mode
+        self.mode_label.setGeometry(10, 10, 450, 30)
+        
+        # Create minimap widget
+        self.minimap = MinimapWidget(self)
+        self.minimap.hide()  # Only show when in 3D mode
+        
+        # Initialize minimap data right away to show initial state
+        self._update_minimap_initial_state()
+        
+        # Make sure the main window can receive key events
+        self.setFocusPolicy(Qt.StrongFocus)
+        self.setFocus()
+        
+    def _update_minimap_initial_state(self):
+        """Update the minimap with initial state"""
+        # Get entity data in the format expected by the minimap
+        entities_for_minimap = {}
+        for key, value in self.view_3d.entities.items():
+            entities_for_minimap[key] = {
+                'x': value['col'],  # Convert from col to x coordinate
+                'y': value['row'],  # Convert from row to y coordinate
+                'z': value['z'],
+                'color': value['color']
+            }
+        self.minimap.update_data(entities_for_minimap, self.view_3d.selector_pos, self.view_3d.pov_mode, self.view_3d.camera_direction)
+        
+    def keyPressEvent(self, event):
+        key = event.key()
+        if key == ord('2') or key == ord('3'):
+            if key == ord('2') and self.current_mode != "2d":
+                self.stacked_widget.setCurrentIndex(0)
+                self.current_mode = "2d"
+                self.mode_label.setText("Mode: 2D (Press '3' for 3D, '2' for 2D)")
+                
+                # Position the mode label below the selector position in 2D mode
+                # The selector position text is drawn in the 2D widget at a specific Y position
+                # Calculate position to put mode label below the 2D widget content
+                widget_height = self.view_2d.grid_size * self.view_2d.cell_size + 20  # Approximate height of 2D widget
+                self.mode_label.setGeometry(10, widget_height + 15, 450, 30)  # Position below 2D view
+                
+                self.minimap.hide()  # Hide minimap in 2D mode
+                event.accept()  # Accept the event to prevent it from propagating
+            elif key == ord('3') and self.current_mode != "3d":
+                self.stacked_widget.setCurrentIndex(1)
+                self.current_mode = "3d"
+                # Update the mode label to show current POV mode
+                pov_text = self.view_3d.pov_modes[self.view_3d.pov_mode]
+                self.mode_label.setText(f"Mode: 3D - POV: {pov_text} (Press '2' for 2D, '0' to cycle POV)")
+                
+                # Position the mode label back at the top for 3D mode
+                self.mode_label.setGeometry(10, 10, 450, 30)
+                
+                self.minimap.show()  # Show minimap in 3D mode
+                # Position the minimap in the top-right corner of the 3D view
+                self.minimap.setGeometry(self.width() - self.minimap.width() - 10, 40, 
+                                         self.minimap.width(), self.minimap.height())
+                event.accept()  # Accept the event to prevent it from propagating
+        else:
+            # Pass other keys to current widget
+            current_widget = self.stacked_widget.currentWidget()
+            if current_widget:
+                current_widget.keyPressEvent(event)
+
+    def resizeEvent(self, event):
+        # Handle window resizing - adjust minimap position and mode label position
+        super().resizeEvent(event)
+        if self.current_mode == "2d":
+            # Reposition mode label below 2D widget when window is resized
+            widget_height = self.view_2d.grid_size * self.view_2d.cell_size + 20  # Approximate height of 2D widget
+            self.mode_label.setGeometry(10, widget_height + 15, 450, 30)  # Position below 2D view
+        elif self.current_mode == "3d":
+            # Position the minimap in the top-right corner of the 3D view
+            self.minimap.setGeometry(self.width() - self.minimap.width() - 10, 40,
+                                     self.minimap.width(), self.minimap.height())
+            # Keep mode label at top in 3D mode
+            self.mode_label.setGeometry(10, 10, 450, 30)
+    
+    def keyReleaseEvent(self, event):
+        # Ensure the main window has focus to catch key events
+        self.setFocus()
+        super().keyReleaseEvent(event)
+
+
+class GridWidget2D(QWidget):
+    def __init__(self):
+        super().__init__()
+        
+        self.grid_size = 12
+        self.cell_size = 50  # Size of each cell in pixels
+        self.entities = {}
+        self.selector_pos = [0, 0]  # [row, col]
+        self.is_selected = False
+        self.selected_entity_key_when_picked_up = None # The key of the cell the entity was removed from
+        self.selected_entity_data = None # The entity data itself, removed from self.entities
+        
+        # Set size policy - add space for labels
+        self.setMinimumSize(self.grid_size * self.cell_size + 35, self.grid_size * self.cell_size + 20)
+        self.setMaximumSize(self.grid_size * self.cell_size + 35, self.grid_size * self.cell_size + 20)
+        
+        # Enable focus for keyboard events
+        self.setFocusPolicy(Qt.StrongFocus)
+
+        self.init_entities()
+
+    def init_entities(self):
+        """Initialize the entities on the grid"""
+        # Clear existing entities
+        self.entities = {}
+        
+        # Add blue entities (top two rows)
+        for row in range(2):
+            for col in range(self.grid_size):
+                pos_key = f"{row},{col}"
+                self.entities[pos_key] = {'color': 'blue', 'row': row, 'col': col}
+        
+        # Add red entities (bottom two rows)
+        for row in range(10, 12):
+            for col in range(self.grid_size):
+                pos_key = f"{row},{col}"
+                self.entities[pos_key] = {'color': 'red', 'row': row, 'col': col}
+
+    def paintEvent(self, event):
+        """Paint the scene"""
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.Antialiasing)
+        
+        # Draw the grid
+        self.draw_grid(painter)
+        
+        # Draw entities
+        self.draw_entities(painter)
+        
+        # Draw selector (on top of everything else)
+        self.draw_selector(painter)
+
+    def draw_grid(self, painter):
+        """Draw the grid with chess-style labels"""
+        # Draw the border around the grid area
+        pen = QPen(QColor(128, 128, 128), 2)
+        painter.setPen(pen)
+        painter.drawRect(25, 15, self.grid_size * self.cell_size, self.grid_size * self.cell_size)
+        
+        # Draw inner grid lines
+        # Vertical lines
+        for i in range(self.grid_size + 1):
+            painter.drawLine(25 + i * self.cell_size, 15, 
+                             25 + i * self.cell_size, 15 + self.grid_size * self.cell_size)
+        
+        # Horizontal lines  
+        for i in range(self.grid_size + 1):
+            painter.drawLine(25, 15 + i * self.cell_size, 
+                             25 + self.grid_size * self.cell_size, 15 + i * self.cell_size)
+        
+        # Draw column labels (a-l) - above the grid
+        painter.setFont(QFont("Arial", 10))
+        painter.setPen(QColor(255, 255, 255))  # White text
+        for i in range(self.grid_size):
+            col_label = chr(ord('a') + i)  # a, b, c, ..., l
+            # Position above the grid, centered horizontally within each cell
+            painter.drawText(25 + i * self.cell_size + self.cell_size // 4, 12, col_label)
+        
+        # Draw row labels (1-12) - to the left of the grid
+        for i in range(self.grid_size):
+            row_label = str(i + 1)
+            # Position to the left of the grid, vertically centered in each cell
+            painter.drawText(5, 15 + i * self.cell_size + self.cell_size // 2 + 5, row_label)
+
+    def draw_entities(self, painter):
+        """Draw the entities on the grid"""
+        # Draw all entities currently in the main dictionary (unselected entities)
+        for pos_key, entity in self.entities.items():
+            self.draw_single_entity(painter, entity['row'], entity['col'], entity['color'])
+
+        # If an entity is selected, draw it at the selector's current position
+        if self.is_selected and self.selected_entity_data:
+            self.draw_single_entity(painter, self.selector_pos[0], self.selector_pos[1], self.selected_entity_data['color'])
+
+    def draw_single_entity(self, painter, row, col, color):
+        """Helper to draw a single entity"""
+        x = 25 + col * self.cell_size
+        y = 15 + row * self.cell_size
+        
+        if color == 'blue':
+            painter.setBrush(QColor(0, 128, 255))  # Blue
+        else:  # red
+            painter.setBrush(QColor(255, 77, 77))  # Red
+        
+        painter.drawRect(x + 2, y + 2, self.cell_size - 4, self.cell_size - 4)
+
+    def draw_selector(self, painter):
+        """Draw the selection indicator"""
+        x = 25 + self.selector_pos[1] * self.cell_size
+        y = 15 + self.selector_pos[0] * self.cell_size
+        
+        target_pos_key = f"{self.selector_pos[0]},{self.selector_pos[1]}"
+        has_entity = target_pos_key in self.entities
+        
+        if not self.is_selected and has_entity:
+            pen_color = QColor(204, 0, 204)  # Purple when over entity
+        elif self.is_selected:
+            target_occupied = target_pos_key in self.entities
+            
+            if target_occupied:
+                pen_color = QColor(255, 255, 0) # Yellow for invalid
+            else:
+                pen_color = QColor(0, 255, 0) # Green for valid
+        else:
+            pen_color = QColor(255, 255, 255) # White default
+        
+        painter.setPen(QPen(pen_color, 3))
+        painter.setBrush(Qt.NoBrush)
+        
+        # Draw selection rectangle
+        painter.drawRect(x, y, self.cell_size, self.cell_size)
+
+    def keyPressEvent(self, event):
+        """Handle keyboard input for selector movement and entity selection/movement"""
+        key = event.key()
+        
+        if key == Qt.Key_Return or key == Qt.Key_Enter:  # Enter key to select/deselect or confirm move
+            current_pos_key = f"{self.selector_pos[0]},{self.selector_pos[1]}"
+            
+            if not self.is_selected:
+                # Attempt to select an entity
+                if current_pos_key in self.entities:
+                    self.is_selected = True
+                    self.selected_entity_key_when_picked_up = current_pos_key
+                    self.selected_entity_data = self.entities.pop(current_pos_key) # Remove from entities
+            else:
+                # Confirm move or deselect
+                target_pos_key = f"{self.selector_pos[0]},{self.selector_pos[1]}"
+                if target_pos_key in self.entities: # Target occupied by another entity
+                    # Invalidate move, revert entity to its original position
+                    self.entities[self.selected_entity_key_when_picked_up] = self.selected_entity_data
+                else: # Target is empty
+                    # Commit the move
+                    self.selected_entity_data['row'] = self.selector_pos[0]
+                    self.selected_entity_data['col'] = self.selector_pos[1]
+                    self.entities[target_pos_key] = self.selected_entity_data
+                
+                # Reset selection state
+                self.is_selected = False
+                self.selected_entity_key_when_picked_up = None
+                self.selected_entity_data = None
+        else:
+            # Movement keys
+            old_selector_pos = self.selector_pos[:]
+            new_pos = old_selector_pos[:]
+            
+            if key == Qt.Key_Up and self.selector_pos[0] > 0:
+                new_pos[0] -= 1
+            elif key == Qt.Key_Down and self.selector_pos[0] < self.grid_size - 1:
+                new_pos[0] += 1
+            elif key == Qt.Key_Left and self.selector_pos[1] > 0:
+                new_pos[1] -= 1
+            elif key == Qt.Key_Right and self.selector_pos[1] < self.grid_size - 1:
+                new_pos[1] += 1
+            elif key == Qt.Key_Space:  # Alternative to Enter for select/deselect/confirm
+                current_pos_key = f"{self.selector_pos[0]},{self.selector_pos[1]}"
+                if not self.is_selected:
+                    if current_pos_key in self.entities:
+                        self.is_selected = True
+                        self.selected_entity_key_when_picked_up = current_pos_key
+                        self.selected_entity_data = self.entities.pop(current_pos_key)
+                else:
+                    target_pos_key = f"{self.selector_pos[0]},{self.selector_pos[1]}"
+                    if target_pos_key in self.entities:
+                        self.entities[self.selected_entity_key_when_picked_up] = self.selected_entity_data
+                    else:
+                        self.selected_entity_data['row'] = self.selector_pos[0]
+                        self.selected_entity_data['col'] = self.selector_pos[1]
+                        self.entities[target_pos_key] = self.selected_entity_data
+                    
+                    self.is_selected = False
+                    self.selected_entity_key_when_picked_up = None
+                    self.selected_entity_data = None
+                self.update()
+                return
+            
+            # Only update selector position if it actually changed
+            if new_pos != old_selector_pos:
+                self.selector_pos = new_pos
+        
+        self.update() # Update the display after any action
+
+
+class GridWidget3D(QOpenGLWidget):
+    def __init__(self, parent=None):
+        super().__init__()
+        
+        self.parent = parent
+        self.grid_size = 12
+        self.cell_size = 1.0  # Size of each cell in world units
+        
+        # Create the same entities as 2D, but in 3D space
+        self.entities = {}
+        self.selector_pos = [0, 0, 0]  # [z, y, x] - note the change to [z, row, col] to match
+        self.is_selected = False
+        self.selected_entity_key_when_picked_up = None
+        self.selected_entity_data = None
+        
+        # Camera controls
+        self.camera_x = 0.0
+        self.camera_y = -12.0
+        self.camera_z = 12.0
+        self.camera_angle_x = -45  # Looking down at a moderate angle
+        self.camera_angle_y = 0  # Looking straight (no rotation)
+        
+        # Movement speed
+        self.move_speed = 0.5
+        
+        # Toggle for entity rotation: True to rotate entities 90° around X-axis, False for original orientation
+        self.rotate_entities = True
+        
+        # POV modes: 0=third_person, 1=first_person, 2=free_camera
+        self.pov_mode = 2  # Start in free camera mode
+        self.pov_modes = ["Third Person", "First Person", "Free Camera"]
+        
+        # Store selector position for camera following in first/third person modes
+        self.last_selector_pos = [0, 0, 0]
+        
+        # Camera direction for first person POV (in radians)
+        self.camera_direction = 0  # Start facing +Y direction (with -π/2 offset in update_camera gives -π/2 actual rotation -> +Y)
+
+        self.setFocusPolicy(Qt.StrongFocus)
+        
+        self.init_entities()
+
+    def init_entities(self):
+        """Initialize the entities on the grid"""
+        # Clear existing entities
+        self.entities = {}
+        
+        # Add blue entities (top two rows) at z=0
+        for row in range(2):
+            for col in range(self.grid_size):
+                pos_key = f"{row},{col}"
+                self.entities[pos_key] = {'color': 'blue', 'row': row, 'col': col, 'z': 0, 'x': col, 'y': row}  # Add x, y coordinates
+        
+        # Add red entities (bottom two rows) at z=1
+        for row in range(10, 12):
+            for col in range(self.grid_size):
+                pos_key = f"{row},{col}"
+                self.entities[pos_key] = {'color': 'red', 'row': row, 'col': col, 'z': 1, 'x': col, 'y': row}  # Add x, y coordinates
+
+    def initializeGL(self):
+        glClearColor(0.0, 0.0, 0.0, 1.0)
+        glEnable(GL_DEPTH_TEST)
+        glEnable(GL_BLEND)
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
+        glEnable(GL_CULL_FACE)
+        glCullFace(GL_BACK)
+        glShadeModel(GL_SMOOTH)
+
+    def resizeGL(self, width, height):
+        glViewport(0, 0, width, height)
+        glMatrixMode(GL_PROJECTION)
+        glLoadIdentity()
+        gluPerspective(45, width / height, 0.1, 100.0)
+        glMatrixMode(GL_MODELVIEW)
+
+    def paintGL(self):
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
+        glMatrixMode(GL_MODELVIEW)
+        glLoadIdentity()
+        
+        # Update camera based on POV mode
+        self.update_camera()
+        
+        # Draw the grid
+        self.draw_grid()
+        
+        # Draw entities (foundations)
+        self.draw_entities()
+        
+        # Draw selector
+        self.draw_selector()
+        
+        # Update minimap if it exists
+        if hasattr(self, 'parent') and hasattr(self.parent, 'minimap'):
+            # Get entity data in the format expected by the minimap
+            entities_for_minimap = {}
+            for key, value in self.entities.items():
+                entities_for_minimap[key] = {
+                    'x': value['x'],
+                    'y': value['y'],  # Added y coordinate
+                    'z': value['z'],
+                    'color': value['color']
+                }
+            self.parent.minimap.update_data(entities_for_minimap, self.selector_pos, self.pov_mode, self.camera_direction)
+
+    def draw_grid(self):
+        glColor3f(0.5, 0.5, 0.5)
+        glLineWidth(1.0)
+        
+        # Draw grid lines in X-Y plane at each Z level
+        for z in range(self.grid_size):
+            for i in range(self.grid_size + 1):
+                # Lines along X axis
+                glBegin(GL_LINES)
+                glVertex3f(0, i * self.cell_size, z * self.cell_size)
+                glVertex3f(self.grid_size * self.cell_size, i * self.cell_size, z * self.cell_size)
+                glEnd()
+                
+                # Lines along Y axis
+                glBegin(GL_LINES)
+                glVertex3f(i * self.cell_size, 0, z * self.cell_size)
+                glVertex3f(i * self.cell_size, self.grid_size * self.cell_size, z * self.cell_size)
+                glEnd()
+
+    def draw_entities(self):
+        # Draw all entities from all Z levels
+        for pos_key, entity in self.entities.items():
+            self.draw_single_entity(
+                entity['x'] * self.cell_size, 
+                (self.grid_size - 1 - entity['y']) * self.cell_size, 
+                entity['z'] * self.cell_size, 
+                entity['color'],
+                entity)  # Pass the entity data
+
+        # If an entity is selected, draw it at the selector's current position
+        if self.is_selected and self.selected_entity_data:
+            x = self.selector_pos[2] * self.cell_size
+            y = (self.grid_size - 1 - self.selector_pos[1]) * self.cell_size
+            z = self.selector_pos[0] * self.cell_size
+            self.draw_single_entity(x, y, z, self.selected_entity_data['color'], self.selected_entity_data)
+
+    def draw_single_entity(self, x, y, z, color, entity_data=None):
+        """Draw a single entity foundation"""
+        # Draw the thin foundation with higher transparency
+        if color == 'blue':
+            glColor4f(0.0, 0.5, 1.0, 0.3)  # Blue with high transparency
+        elif color == 'red':
+            glColor4f(1.0, 0.3, 0.3, 0.3)  # Red with high transparency
+        else:
+            glColor4f(0.5, 0.5, 0.5, 0.3)  # Gray with high transparency
+
+        # Draw the thin foundation cube at the bottom
+        foundation_height = self.cell_size * 0.1  # Thin foundation
+        self.draw_flat_cube(x, y, z, self.cell_size, foundation_height, is_entity=True)
+
+    def draw_flat_cube(self, x, y, z, size, height, is_entity=False):
+        """Draw a thin flat cube (foundation)"""
+        if is_entity:
+            glBegin(GL_QUADS)
+            # Top face
+            glVertex3f(x, y, z + height)
+            glVertex3f(x + size, y, z + height)
+            glVertex3f(x + size, y + size, z + height)
+            glVertex3f(x, y + size, z + height)
+            # Bottom face
+            glVertex3f(x, y, z)
+            glVertex3f(x, y + size, z)
+            glVertex3f(x + size, y + size, z)
+            glVertex3f(x + size, y, z)
+            # Front face
+            glVertex3f(x, y, z)
+            glVertex3f(x, y, z + height)
+            glVertex3f(x + size, y, z + height)
+            glVertex3f(x + size, y, z)
+            # Back face
+            glVertex3f(x, y + size, z)
+            glVertex3f(x + size, y + size, z)
+            glVertex3f(x + size, y + size, z + height)
+            glVertex3f(x, y + size, z + height)
+            # Right face
+            glVertex3f(x + size, y, z)
+            glVertex3f(x + size, y + size, z)
+            glVertex3f(x + size, y + size, z + height)
+            glVertex3f(x + size, y, z + height)
+            # Left face
+            glVertex3f(x, y, z)
+            glVertex3f(x, y, z + height)
+            glVertex3f(x, y + size, z + height)
+            glVertex3f(x, y + size, z)
+            glEnd()
+        else:
+            pass
+
+    def draw_cube(self, x, y, z, size, is_entity=False):
+        """Draw a full cube at the specified position"""
+        cube_height = size  # Full height
+        if is_entity:
+            # Draw a full cube for entities
+            glBegin(GL_QUADS)
+            # Top face
+            glVertex3f(x, y, z + cube_height)
+            glVertex3f(x + size, y, z + cube_height)
+            glVertex3f(x + size, y + size, z + cube_height)
+            glVertex3f(x, y + size, z + cube_height)
+            # Bottom face
+            glVertex3f(x, y, z)
+            glVertex3f(x, y + size, z)
+            glVertex3f(x + size, y + size, z)
+            glVertex3f(x + size, y, z)
+            # Front face
+            glVertex3f(x, y, z)
+            glVertex3f(x, y, z + cube_height)
+            glVertex3f(x + size, y, z + cube_height)
+            glVertex3f(x + size, y, z)
+            # Back face
+            glVertex3f(x, y + size, z)
+            glVertex3f(x + size, y + size, z)
+            glVertex3f(x + size, y + size, z + cube_height)
+            glVertex3f(x, y + size, z + cube_height)
+            # Right face
+            glVertex3f(x + size, y, z)
+            glVertex3f(x + size, y + size, z)
+            glVertex3f(x + size, y + size, z + cube_height)
+            glVertex3f(x + size, y, z + cube_height)
+            # Left face
+            glVertex3f(x, y, z)
+            glVertex3f(x, y, z + cube_height)
+            glVertex3f(x, y + size, z + cube_height)
+            glVertex3f(x, y + size, z)
+            glEnd()
+        else:
+            # Draw wireframe cube for selector - make it slightly bigger to be more visible
+            selector_size = size * 1.1  # Make slightly larger
+            selector_offset = (selector_size - size) / 2
+            selector_x = x - selector_offset
+            selector_y = y - selector_offset
+            selector_z = z
+            
+            glLineWidth(5.0)
+            glBegin(GL_LINES)
+            # Top face
+            glVertex3f(selector_x, selector_y, selector_z + cube_height)
+            glVertex3f(selector_x + selector_size, selector_y, selector_z + cube_height)
+            
+            glVertex3f(selector_x + selector_size, selector_y, selector_z + cube_height)
+            glVertex3f(selector_x + selector_size, selector_y + selector_size, selector_z + cube_height)
+            
+            glVertex3f(selector_x + selector_size, selector_y + selector_size, selector_z + cube_height)
+            glVertex3f(selector_x, selector_y + selector_size, selector_z + cube_height)
+            
+            glVertex3f(selector_x, selector_y + selector_size, selector_z + cube_height)
+            glVertex3f(selector_x, selector_y, selector_z + cube_height)
+            
+            # Bottom face
+            glVertex3f(selector_x, selector_y, selector_z)
+            glVertex3f(selector_x + selector_size, selector_y, selector_z)
+            
+            glVertex3f(selector_x + selector_size, selector_y, selector_z)
+            glVertex3f(selector_x + selector_size, selector_y + selector_size, selector_z)
+            
+            glVertex3f(selector_x + selector_size, selector_y + selector_size, selector_z)
+            glVertex3f(selector_x, selector_y + selector_size, selector_z)
+            
+            glVertex3f(selector_x, selector_y + selector_size, selector_z)
+            glVertex3f(selector_x, selector_y, selector_z)
+            
+            # Connect top and bottom faces
+            glVertex3f(selector_x, selector_y, selector_z)
+            glVertex3f(selector_x, selector_y, selector_z + cube_height)
+            
+            glVertex3f(selector_x + selector_size, selector_y, selector_z)
+            glVertex3f(selector_x + selector_size, selector_y, selector_z + cube_height)
+            
+            glVertex3f(selector_x, selector_y + selector_size, selector_z)
+            glVertex3f(selector_x, selector_y + selector_size, selector_z + cube_height)
+            
+            glVertex3f(selector_x + selector_size, selector_y + selector_size, selector_z)
+            glVertex3f(selector_x + selector_size, selector_y + selector_size, selector_z + cube_height)
+            
+            glEnd()
+            glLineWidth(1.0)
+
+    def draw_selector(self):
+        """Draw the selection indicator in 3D"""
+        x = self.selector_pos[2] * self.cell_size  # X coordinate (index 2)
+        y = (self.grid_size - 1 - self.selector_pos[1]) * self.cell_size  # Y coordinate inverted
+        z = self.selector_pos[0] * self.cell_size  # Z coordinate
+        
+        # Set color based on selection state
+        target_pos_key = f"{self.selector_pos[0]},{self.selector_pos[2]}"
+        has_entity_at_exact_pos = False
+        
+        if target_pos_key in self.entities:
+            entity = self.entities[target_pos_key]
+            if entity['y'] == self.selector_pos[1]:  # Compare entity's y with selector's y
+                has_entity_at_exact_pos = True
+        
+        if not self.is_selected and has_entity_at_exact_pos:
+            # Purple when hovering over an entity
+            glColor3f(0.8, 0.0, 0.8)
+        elif self.is_selected:
+            target_occupied = False
+            if target_pos_key in self.entities:
+                entity = self.entities[target_pos_key]
+                if entity['y'] == self.selector_pos[1]:  # Compare entity's y with target y
+                    target_occupied = True
+            
+            if target_occupied:
+                glColor3f(1.0, 1.0, 0.0)  # Yellow for invalid
+            else:
+                glColor3f(0.0, 1.0, 0.0)  # Green for valid
+        else:
+            glColor3f(1.0, 1.0, 1.0)  # White for normal
+        
+        # Draw wireframe cube for selector
+        self.draw_cube(x, y, z, self.cell_size, is_entity=False)
+
+    def update_camera(self):
+        """Update camera based on selected POV mode"""
+        selector_x = self.selector_pos[2] * self.cell_size
+        selector_y = (self.grid_size - 1 - self.selector_pos[1]) * self.cell_size
+        selector_z = self.selector_pos[0] * self.cell_size
+        
+        if self.pov_mode == 0:  # Third person mode
+            # New third person logic: behind, above, looking down
+            center_x = selector_x + self.cell_size / 2
+            center_y = selector_y + self.cell_size / 2
+            center_z = selector_z + self.cell_size / 2
+
+            distance = -9 #-7
+            height = -2 #-4 #4
+            pitch = -30 #-90
+            
+            # Reverse order of operations for OpenGL
+            glTranslatef(0, 0, distance) # Step 5: move camera away from selector
+            glRotatef(pitch, 1, 0, 0)  # Step 4: Pitch down to look at selector
+            glRotatef(math.degrees(self.camera_direction), 0, 0, 1) # Step 3: Rotate around Z-axis
+            glTranslatef(0, height, 0) # Step 2: Elevate camera
+            glTranslatef(-center_x, -center_y, -center_z) # Step 1: Center on selector
+        elif self.pov_mode == 1:  # First person mode
+            # Camera positioned at selector position with appropriate eye-level height
+            # For first person, position camera at selector with an eye-level height to see ground below
+            eye_level = 2.0  # Higher eye level to see the ground beneath and have proper perspective
+            
+            # Set camera to be at the selector's position but slightly above
+            # Apply rotation around Y-axis for left/right turning, but start facing +Y axis
+            # To make +Y the default forward direction, we need to rotate from the default -Z facing
+            # By -90 degrees around X-axis first, then apply the Y-axis rotation for direction
+            glRotatef(-90, 1, 0, 0)  # Rotate to make Y-axis forward (from default -Z)
+            glRotatef(math.degrees(self.camera_direction), 0, 0, 1)    # Then rotate around Z-axis for left/right
+            # Offset camera to center it in the grid cell and at proper eye level
+            # Move camera to center of the grid cube for proper viewing
+            # Move camera forward by 1 grid unit in the Y direction (accounting for inverted Y rendering)
+            glTranslatef(-selector_x - self.cell_size/2, -(selector_y + eye_level - 2*self.cell_size), -selector_z - self.cell_size/2)
+        else:  # Free camera mode (pov_mode == 2)
+            # Use the default camera controls
+            glRotatef(self.camera_angle_x, 1, 0, 0)
+            glRotatef(self.camera_angle_y, 0, 1, 0)
+            glTranslatef(-self.camera_x, -self.camera_y, -self.camera_z)
+
+    def keyPressEvent(self, event):
+        """Handle keyboard input"""
+        key = event.key()
+        
+        # Check for POV mode toggle first ('0' key)
+        if key == ord('0'):
+            self.pov_mode = (self.pov_mode + 1) % 3  # Cycle through 0, 1, 2
+            print(f"POV Mode: {self.pov_modes[self.pov_mode]}")
+            # Update the mode label in the main window to reflect the new POV
+            if hasattr(self, 'parent') and hasattr(self.parent, 'mode_label'):
+                pov_text = self.pov_modes[self.pov_mode]
+                self.parent.mode_label.setText(f"Mode: 3D - POV: {pov_text} (Press '2' for 2D, '0' to cycle POV)")
+            self.update()
+            # Also update the minimap to reflect the new POV mode
+            if hasattr(self, 'parent') and hasattr(self.parent, 'minimap'):
+                # Get entity data in the format expected by the minimap
+                entities_for_minimap = {}
+                for key_val, value in self.entities.items():
+                    entities_for_minimap[key_val] = {
+                        'x': value['x'],
+                        'y': value['y'],  # Added y coordinate
+                        'z': value['z'],
+                        'color': value['color']
+                    }
+                self.parent.minimap.update_data(entities_for_minimap, self.selector_pos, self.pov_mode, self.camera_direction)
+            return
+        
+        # Handle WASD keys based on POV mode
+        camera_moved = False
+        if key == ord('W') or key == ord('w'):
+            if self.pov_mode == 2:  # Free camera mode - move camera
+                self.camera_x -= math.sin(math.radians(self.camera_angle_y)) * self.move_speed
+                self.camera_y += math.cos(math.radians(self.camera_angle_y)) * self.move_speed
+                camera_moved = True
+            elif self.pov_mode in [0, 1]:  # First or Third person mode - rotate to face forward (+Y)
+                self.camera_direction = 0  # Face forward (+Y direction)
+                camera_moved = True
+                # Update the minimap to reflect the new camera direction
+                if hasattr(self, 'parent') and hasattr(self.parent, 'minimap'):
+                    # Get entity data in the format expected by the minimap
+                    entities_for_minimap = {}
+                    for key_val, value in self.entities.items():
+                        entities_for_minimap[key_val] = {
+                            'x': value['x'],
+                            'y': value['y'],  # Added y coordinate
+                            'z': value['z'],
+                            'color': value['color']
+                        }
+                    self.parent.minimap.update_data(entities_for_minimap, self.selector_pos, self.pov_mode, self.camera_direction)
+        elif key == ord('S') or key == ord('s'):
+            if self.pov_mode == 2:  # Free camera mode - move camera
+                self.camera_x += math.sin(math.radians(self.camera_angle_y)) * self.move_speed
+                self.camera_y -= math.cos(math.radians(self.camera_angle_y)) * self.move_speed
+                camera_moved = True
+            elif self.pov_mode in [0, 1]:  # First or Third person mode - rotate to face back (-Y)
+                self.camera_direction = math.pi  # Face back (-Y direction)
+                camera_moved = True
+                # Update the minimap to reflect the new camera direction
+                if hasattr(self, 'parent') and hasattr(self.parent, 'minimap'):
+                    # Get entity data in the format expected by the minimap
+                    entities_for_minimap = {}
+                    for key_val, value in self.entities.items():
+                        entities_for_minimap[key_val] = {
+                            'x': value['x'],
+                            'y': value['y'],  # Added y coordinate
+                            'z': value['z'],
+                            'color': value['color']
+                        }
+                    self.parent.minimap.update_data(entities_for_minimap, self.selector_pos, self.pov_mode, self.camera_direction)
+        elif key == ord('A') or key == ord('a'):
+            if self.pov_mode == 2:  # Free camera mode - move camera
+                self.camera_x -= math.cos(math.radians(self.camera_angle_y)) * self.move_speed
+                self.camera_y -= math.sin(math.radians(self.camera_angle_y)) * self.move_speed
+                camera_moved = True
+            elif self.pov_mode in [0, 1]:  # First or Third person mode - rotate to face left (-X)
+                self.camera_direction = -math.pi/2  # Face left (-X direction)
+                camera_moved = True
+                # Update the minimap to reflect the new camera direction
+                if hasattr(self, 'parent') and hasattr(self.parent, 'minimap'):
+                    # Get entity data in the format expected by the minimap
+                    entities_for_minimap = {}
+                    for key_val, value in self.entities.items():
+                        entities_for_minimap[key_val] = {
+                            'x': value['x'],
+                            'y': value['y'],  # Added y coordinate
+                            'z': value['z'],
+                            'color': value['color']
+                        }
+                    self.parent.minimap.update_data(entities_for_minimap, self.selector_pos, self.pov_mode, self.camera_direction)
+        elif key == ord('D') or key == ord('d'):
+            if self.pov_mode == 2:  # Free camera mode - move camera
+                self.camera_x += math.cos(math.radians(self.camera_angle_y)) * self.move_speed
+                self.camera_y += math.sin(math.radians(self.camera_angle_y)) * self.move_speed
+                camera_moved = True
+            elif self.pov_mode in [0, 1]:  # First or Third person mode - rotate to face right (+X)
+                self.camera_direction = math.pi/2  # Face right (+X direction)
+                camera_moved = True
+                # Update the minimap to reflect the new camera direction
+                if hasattr(self, 'parent') and hasattr(self.parent, 'minimap'):
+                    # Get entity data in the format expected by the minimap
+                    entities_for_minimap = {}
+                    for key_val, value in self.entities.items():
+                        entities_for_minimap[key_val] = {
+                            'x': value['x'],
+                            'y': value['y'],  # Added y coordinate
+                            'z': value['z'],
+                            'color': value['color']
+                        }
+                    self.parent.minimap.update_data(entities_for_minimap, self.selector_pos, self.pov_mode, self.camera_direction)
+        elif key == ord('F') or key == ord('f'):  # F key to toggle entity rotation
+            self.rotate_entities = not self.rotate_entities
+            print(f"Entity rotation: {'ON' if self.rotate_entities else 'OFF'}")
+            self.update()
+        elif key == ord('Q') or key == ord('q'):  # Q key to turn left
+            if self.pov_mode in [0, 1]:  # For first and third person mode
+                self.camera_direction -= math.pi / 8  # Turn 22.5 degrees left
+                self.update()
+                # Also update the minimap to reflect the new camera direction
+                if hasattr(self, 'parent') and hasattr(self.parent, 'minimap'):
+                    # Get entity data in the format expected by the minimap
+                    entities_for_minimap = {}
+                    for key_val, value in self.entities.items():
+                        entities_for_minimap[key_val] = {
+                            'x': value['x'],
+                            'y': value['y'],  # Added y coordinate
+                            'z': value['z'],
+                            'color': value['color']
+                        }
+                    self.parent.minimap.update_data(entities_for_minimap, self.selector_pos, self.pov_mode, self.camera_direction)
+        elif key == ord('E') or key == ord('e'):  # E key to turn right
+            if self.pov_mode in [0, 1]:  # For first and third person mode
+                self.camera_direction += math.pi / 8  # Turn 22.5 degrees right
+                self.update()
+                # Also update the minimap to reflect the new camera direction
+                if hasattr(self, 'parent') and hasattr(self.parent, 'minimap'):
+                    # Get entity data in the format expected by the minimap
+                    entities_for_minimap = {}
+                    for key_val, value in self.entities.items():
+                        entities_for_minimap[key_val] = {
+                            'x': value['x'],
+                            'y': value['y'],  # Added y coordinate
+                            'z': value['z'],
+                            'color': value['color']
+                        }
+                    self.parent.minimap.update_data(entities_for_minimap, self.selector_pos, self.pov_mode, self.camera_direction)
+        elif key == Qt.Key_Return or key == Qt.Key_Enter:  # Enter key to select/deselect or confirm move
+            target_pos_key = f"{self.selector_pos[0]},{self.selector_pos[2]}"
+            
+            if not self.is_selected:
+                # Attempt to select an entity at the X,Z coordinates
+                if target_pos_key in self.entities:
+                    self.is_selected = True
+                    self.selected_entity_key_when_picked_up = target_pos_key
+                    self.selected_entity_data = self.entities.pop(target_pos_key)
+            else:
+                # Confirm move or deselect
+                if target_pos_key in self.entities:
+                    self.entities[self.selected_entity_key_when_picked_up] = self.selected_entity_data
+                else:
+                    self.selected_entity_data['z'] = self.selector_pos[0]
+                    self.selected_entity_data['x'] = self.selector_pos[2]
+                    self.selected_entity_data['y'] = self.selector_pos[1]
+                    self.entities[target_pos_key] = self.selected_entity_data
+                
+                # Reset selection state
+                self.is_selected = False
+                self.selected_entity_key_when_picked_up = None
+                self.selected_entity_data = None
+            
+            self.update()
+        elif key == Qt.Key_Space:  # Alternative to Enter for select/deselect/confirm
+            target_pos_key = f"{self.selector_pos[0]},{self.selector_pos[2]}"
+            if not self.is_selected:
+                if target_pos_key in self.entities:
+                    self.is_selected = True
+                    self.selected_entity_key_when_picked_up = target_pos_key
+                    self.selected_entity_data = self.entities.pop(target_pos_key)
+            else:
+                if target_pos_key in self.entities:
+                    self.entities[self.selected_entity_key_when_picked_up] = self.selected_entity_data
+                else:
+                    self.selected_entity_data['z'] = self.selector_pos[0]
+                    self.selected_entity_data['x'] = self.selector_pos[2]
+                    self.selected_entity_data['y'] = self.selector_pos[1]
+                    self.entities[target_pos_key] = self.selected_entity_data
+                
+                # Reset selection state
+                self.is_selected = False
+                self.selected_entity_key_when_picked_up = None
+                self.selected_entity_data = None
+            self.update()
+            return
+        else:
+            # Movement keys
+            old_selector_pos = self.selector_pos[:]
+            new_pos = old_selector_pos[:]
+            
+            # For first and third-person modes, movement should be relative to camera direction
+            if self.pov_mode in [0, 1]:  # First or Third person mode
+                if key == Qt.Key_Up:  # Move forward in facing direction
+                    # Calculate movement based on camera direction
+                    delta_x = math.sin(self.camera_direction)
+                    delta_y = math.cos(self.camera_direction)
+                    
+                    # Since Y is inverted in rendering (lower grid Y appears higher), 
+                    # we need to account for this in grid coordinate changes
+                    new_grid_x = self.selector_pos[2] + round(delta_x)
+                    new_grid_y = self.selector_pos[1] - round(delta_y)  # Negative because of inverted Y axis
+                    
+                    # Apply boundaries
+                    if 0 <= new_grid_x < self.grid_size:
+                        new_pos[2] = int(new_grid_x)
+                    if 0 <= new_grid_y < self.grid_size:
+                        new_pos[1] = int(new_grid_y)
+                        
+                elif key == Qt.Key_Down:  # Move backward
+                    delta_x = math.sin(self.camera_direction)
+                    delta_y = math.cos(self.camera_direction)
+                    
+                    new_grid_x = self.selector_pos[2] - round(delta_x)
+                    new_grid_y = self.selector_pos[1] + round(delta_y)  # Positive Y in opposite direction
+                    
+                    # Apply boundaries
+                    if 0 <= new_grid_x < self.grid_size:
+                        new_pos[2] = int(new_grid_x)
+                    if 0 <= new_grid_y < self.grid_size:
+                        new_pos[1] = int(new_grid_y)
+                        
+                elif key == Qt.Key_Left:  # Strafe left
+                    # Move perpendicular 90 degrees CCW from facing direction
+                    delta_x = math.sin(self.camera_direction - math.pi/2) 
+                    delta_y = math.cos(self.camera_direction - math.pi/2)
+                    
+                    new_grid_x = self.selector_pos[2] + round(delta_x)
+                    new_grid_y = self.selector_pos[1] - round(delta_y)
+                    
+                    # Apply boundaries
+                    if 0 <= new_grid_x < self.grid_size:
+                        new_pos[2] = int(new_grid_x)
+                    if 0 <= new_grid_y < self.grid_size:
+                        new_pos[1] = int(new_grid_y)
+                        
+                elif key == Qt.Key_Right:  # Strafe right
+                    # Move perpendicular 90 degrees CW from facing direction  
+                    delta_x = math.sin(self.camera_direction + math.pi/2) 
+                    delta_y = math.cos(self.camera_direction + math.pi/2)
+                    
+                    new_grid_x = self.selector_pos[2] + round(delta_x)
+                    new_grid_y = self.selector_pos[1] - round(delta_y)
+                    
+                    # Apply boundaries
+                    if 0 <= new_grid_x < self.grid_size:
+                        new_pos[2] = int(new_grid_x)
+                    if 0 <= new_grid_y < self.grid_size:
+                        new_pos[1] = int(new_grid_y)
+                elif key == Qt.Key_Z and self.selector_pos[0] > 0:  # Z key to move down in Z-axis
+                    new_pos[0] -= 1
+                elif key == Qt.Key_X and self.selector_pos[0] < self.grid_size - 1:  # X key to move up in Z-axis
+                    new_pos[0] += 1
+            else:
+                # For third-person and free camera modes, use original movement
+                if key == Qt.Key_Up and self.selector_pos[1] > 0:
+                    new_pos[1] -= 1  # Moving up decreases Y to compensate for inverted drawing
+                elif key == Qt.Key_Down and self.selector_pos[1] < self.grid_size - 1:
+                    new_pos[1] += 1  # Moving down increases Y to compensate for inverted drawing
+                elif key == Qt.Key_Left and self.selector_pos[2] > 0:
+                    new_pos[2] -= 1  # Moving left decreases X
+                elif key == Qt.Key_Right and self.selector_pos[2] < self.grid_size - 1:
+                    new_pos[2] += 1  # Moving right increases X
+                elif key == Qt.Key_Z and self.selector_pos[0] > 0:  # Z key to move down in Z-axis
+                    new_pos[0] -= 1
+                elif key == Qt.Key_X and self.selector_pos[0] < self.grid_size - 1:  # X key to move up in Z-axis
+                    new_pos[0] += 1
+            
+            # Only update selector position if it actually changed
+            if new_pos != old_selector_pos:
+                self.selector_pos = new_pos
+                camera_moved = True  # Update display if selector moved
+        
+        # Update the display after any action
+        if camera_moved:
+            self.update()
+        
+        # Also update the minimap for all changes that affect position
+        # (movement keys, selection, etc.)
+        if (camera_moved or 
+            key in [Qt.Key_Up, Qt.Key_Down, Qt.Key_Left, Qt.Key_Right, Qt.Key_Z, Qt.Key_X] or
+            key == Qt.Key_Return or key == Qt.Key_Enter or key == Qt.Key_Space):
+            if hasattr(self, 'parent') and hasattr(self.parent, 'minimap'):
+                # Get entity data in the format expected by the minimap
+                entities_for_minimap = {}
+                for key_val, value in self.entities.items():
+                    entities_for_minimap[key_val] = {
+                        'x': value['x'],
+                        'y': value['y'],  # Added y coordinate
+                        'z': value['z'],
+                        'color': value['color']
+                    }
+                self.parent.minimap.update_data(entities_for_minimap, self.selector_pos, self.pov_mode, self.camera_direction)
+
+
+def main():
+    app = QApplication(sys.argv)
+    
+    window = TacticsGame()
+    window.show()
+    
+    sys.exit(app.exec())
+
+
+if __name__ == "__main__":
+    main()

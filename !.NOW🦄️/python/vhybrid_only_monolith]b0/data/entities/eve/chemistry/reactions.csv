@@ -1,0 +1,7 @@
+activation_energy,catalyst,k_equilibrium,notes,products,rate_constant,reactants,reaction_id,temp_optimal
+40.2,Phosphoglucose_Isomerase,0.42,Rate limiting step in glycolysis,Glucose_6_Phosphate -> Fructose_6_Phosphate,0.025,G6P -> F6P,METAB001,310.15
+60.5,Hexokinase,180.0,Phosphorylation reaction,ADP + Glucose -> ATP + Glucose,0.0083,A6P -> ATP,METAB002,310.15
+45.8,Cellular_Respiration_Cascade,1000000000000000.0,Aerobic respiration,Glucose + 6O2 -> 6CO2 + 6H2O,0.00012,Glucose + O2 -> CO2 + H2O,METAB003,310.15
+78.3,Ribosome,1000000000000.0,Protein synthesis,Amino_Acids -> Protein,9.8e-05,Amino_Acid -> Protein,METAB004,310.15
+39.8,Folate_Reductase,45.7,DNA synthesis cofactor,Folate + Vitamin_B12 -> Methyl_Folate,0.0019,Folate_Metab,METAB005,310.15
+55.1,Aromatase,23.8,Sex hormone production,Cholesterol -> Estradiol,0.0014,Estrogen_Synth,METAB006,310.15

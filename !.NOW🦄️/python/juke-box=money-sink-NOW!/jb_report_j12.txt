@@ -1,0 +1,41 @@
+(maybe shouldnt use most complex model of this 4
+sttaring in trumpos) 
+
+
+Jukebox Player - January 12th Report
+
+LIMITATIONS DUE TO PYGAME.MIXER:
+
+1. SEEKING FUNCTIONALITY:
+   - Current UI includes a seek slider but pygame.mixer does not support seeking to 
+     arbitrary positions in MP3 files
+   - User can drag the progress bar/slider but actual audio seeking is not possible
+   - To implement true seeking, would need to switch to audio libraries like:
+     * pydub with pyaudio
+     * python-sounddevice
+     * pygame.sndarray with manual seeking
+
+2. PITCH SHIFTING:
+   - Pitch controls are implemented in the UI (EQ tab) but pygame.mixer does not 
+     support real-time pitch shifting
+   - Setting is stored but has no audible effect due to library limitations
+   - To implement true pitch shifting, would need advanced audio libraries like:
+     * pydub with soundstretch
+     * librosa 
+     * rubberband-python
+
+CURRENT WORKING FEATURES:
+✓ Directory loading and recursive scanning
+✓ Playlist management with search and filtering
+✓ Multiple visualization modes (bars, waveform, spectrum, particles) 
+✓ EQ controls (highs, mids, lows) with visualization effects
+✓ Distortion/overdrive effects with adjustable intensity
+✓ Custom EQ curve editor
+✓ Shuffle mode (random auto-play when active)
+✓ Click-to-play from playlist
+✓ Auto-play next track (sequential or random based on shuffle state)
+✓ Config file to remember last used directory
+✓ All UI controls and visualizations working properly
+
+RECOMMENDATION: For full audio processing features, consider switching 
+to a more capable audio library for the next version.

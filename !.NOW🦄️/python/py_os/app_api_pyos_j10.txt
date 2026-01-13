@@ -1,0 +1,247 @@
+# PyOS App Development API Guide - January 10, 2026
+
+## Overview
+PyOS is a virtual operating system built with PySide6 and PyOpenGL. This guide provides instructions for developing applications that integrate seamlessly with the PyOS desktop environment.
+
+## Directory Structure
+```
+py_os/
+├── apps/
+│   ├── base_app.py          # Base class for all applications
+│   ├── app_manager.py       # Manages application registration and launching
+│   ├── your_app.py          # Your application
+├── window_manager/
+│   ├── main_window.py       # Main PyOS window
+│   ├── desktop.py          # Desktop environment
+│   ├── mini_window.py      # Window container for apps
+├── graphics/               # OpenGL and visual effects
+└── main.py                 # Entry point
+```
+
+## Creating a New App
+
+### 1. Basic App Structure
+Create your app in the `apps/` directory following this pattern:
+
+```python
+from PySide6.QtWidgets import QVBoxLayout, QWidget, QLabel
+from apps.base_app import BaseApplication
+
+class YourAppName(BaseApplication):
+    def setup_ui(self):
+        """Setup the application UI"""
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(15, 15, 15, 15)
+        
+        title_label = QLabel("Your App Title")
+        title_label.setStyleSheet("font-size: 18px; font-weight: bold; color: #ddd;")
+        layout.addWidget(title_label)
+        
+        # Add your app's widgets here
+        content_label = QLabel("Your app content goes here")
+        content_label.setStyleSheet("color: #aaa;")
+        layout.addWidget(content_label)
+        
+        # Add stretch to push content up
+        layout.addStretch()
+```
+
+### 2. OpenGL App Structure
+For 3D/OpenGL applications, use QOpenGLWidget:
+
+```python
+from PySide6.QtWidgets import QVBoxLayout, QWidget
+from PySide6.QtOpenGLWidgets import QOpenGLWidget
+from PySide6.QtCore import QTimer
+from OpenGL.GL import *
+from OpenGL.GLU import *
+
+class YourOpenGLApp(BaseApplication):
+    def setup_ui(self):
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(10, 10, 10, 10)
+        
+        # Create OpenGL widget
+        self.opengl_widget = YourOpenGLWidget()
+        layout.addWidget(self.opengl_widget)
+
+class YourOpenGLWidget(QOpenGLWidget):
+    def __init__(self):
+        super().__init__()
+        # Initialize rotation variables, timer, etc.
+        self.rotation_x = 0
+        self.timer = QTimer()
+        self.timer.timeout.connect(self.rotate)
+        self.timer.start(30)  # 30ms update interval
+    
+    def initializeGL(self):
+        """Initialize OpenGL settings"""
+        glClearColor(0.0, 0.0, 0.0, 1.0)
+        glEnable(GL_DEPTH_TEST)
+        # Additional OpenGL setup...
+    
+    def resizeGL(self, width, height):
+        """Handle window resize"""
+        glViewport(0, 0, width, height)
+        # Projection setup...
+    
+    def paintGL(self):
+        """Render the scene"""
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
+        # Drawing code...
+    
+    def rotate(self):
+        """Update rotation values"""
+        self.rotation_x += 1.0
+        self.update()
+```
+
+### 3. Game App Example (like Hangman)
+For interactive games or applications:
+
+```python
+from PySide6.QtWidgets import QVBoxLayout, QWidget, QLabel, QLineEdit, QPushButton, QHBoxLayout
+from apps.base_app import BaseApplication
+
+class GameApp(BaseApplication):
+    def setup_ui(self):
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(15, 15, 15, 15)
+        
+        title = QLabel("Game Title")
+        title.setStyleSheet("font-size: 24px; font-weight: bold; color: #ddd;")
+        layout.addWidget(title)
+        
+        # Game elements
+        self.game_display = QLabel("Game content here")
+        layout.addWidget(self.game_display)
+        
+        input_layout = QHBoxLayout()
+        self.user_input = QLineEdit()
+        self.user_input.setPlaceholderText("Enter your move...")
+        input_layout.addWidget(self.user_input)
+        
+        submit_btn = QPushButton("Submit")
+        input_layout.addWidget(submit_btn)
+        layout.addLayout(input_layout)
+        
+        # Connect events
+        submit_btn.clicked.connect(self.handle_input)
+        self.user_input.returnPressed.connect(self.handle_input)
+    
+    def handle_input(self):
+        """Process user input"""
+        user_text = self.user_input.text()
+        # Process the input...
+        self.user_input.clear()
+```
+
+## Registering Your App
+
+### 1. Add to main.py
+```python
+from apps.your_app import YourAppName
+
+# In the main() function:
+app_manager.register_app('your_app_command', YourAppName)
+```
+
+### 2. Add to Main Menu (optional)
+In `window_manager/main_window.py`:
+```python
+# In create_menu_bar method:
+your_app_action = QAction('Your App Name', self)
+your_app_action.triggered.connect(self.open_your_app)
+apps_menu.addAction(your_app_action)
+
+# Add the method:
+def open_your_app(self):
+    from apps.your_app import YourAppName
+    from window_manager.mini_window import MiniWindow
+    
+    app_instance = YourAppName()
+    app_window = MiniWindow(title="Your App", content_widget=app_instance)
+    app_window.show()
+    self.status_bar.showMessage("Opened Your App")
+```
+
+### 3. Add to Desktop Context Menu (optional)
+In `window_manager/desktop.py`:
+```python
+# Add to show_context_menu method:
+your_app_action = QAction("Open Your App", self)
+your_app_action.triggered.connect(self.open_your_app)
+menu.addAction(your_app_action)
+
+# Add the method:
+def open_your_app(self):
+    from apps.your_app import YourAppName
+    from window_manager.mini_window import MiniWindow
+    
+    app_instance = YourAppName()
+    app_window = MiniWindow(title="Your App", content_widget=app_instance)
+    app_window.setParent(self)  # Critical: parent to desktop
+    app_window.show()
+    self.add_window(app_window)
+```
+
+## Key Integration Points
+
+### 1. App Manager Integration
+Your app automatically works with:
+- Terminal commands (typing 'your_app_command')
+- App listing ('apps', 'list', 'ls' commands)
+- Centralized application management
+
+### 2. Window Management
+- Apps run in MiniWindow containers
+- Proper parenting ensures apps stay within PyOS desktop
+- All apps are properly contained in the virtual desktop environment
+
+### 3. Desktop Context Menu
+Right-click on desktop provides:
+- Terminal access
+- Screensaver
+- Your custom apps
+- Apps menu access
+
+## Special Considerations
+
+### Terminal Integration
+For special handling in terminal (like the Hangman example), add to terminal_app.py:
+```python
+elif cmd == 'your_custom_command':
+    self.run_your_custom_app()
+    self.display_prompt()
+```
+
+And implement the special method that ensures proper parent-child relationships.
+
+### OpenGL Considerations
+- Use QOpenGLWidget for 3D rendering
+- Implement proper initializeGL, resizeGL, and paintGL methods
+- Set up OpenGL context properly in initializeGL
+- Handle window resizing in resizeGL
+
+### Parent-Child Relationships
+- Always set parent to desktop when creating app windows from desktop context
+- Use `setParent(desktop_widget)` to ensure proper embedding
+- Call `desktop.add_window(window)` to track the window
+
+## Testing Your App
+1. Run `python main.py`
+2. Access via terminal: type your app's command
+3. Access via Apps menu in main window
+4. Access via desktop context menu (if added)
+5. Verify it runs within PyOS desktop, not as separate window
+
+## Best Practices
+1. Inherit from BaseApplication for consistency
+2. Use PySide6 styling for visual consistency
+3. Implement proper error handling
+4. Ensure all app windows are children of the PyOS desktop
+5. Use the AppManager for centralized app management
+6. Follow the event handling patterns used in existing apps
+7. Make sure apps work via both terminal and UI access
+
+This API allows you to create PyOS applications that seamlessly integrate with the desktop environment and provide a consistent user experience.

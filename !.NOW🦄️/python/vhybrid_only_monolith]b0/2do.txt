@@ -1,0 +1,18 @@
+Tactics Game Update Checklist
+============================
+
+Goal: Update #.tactics_game+z+3d.2.py to match recent changes in hybrid+pov_v1.1.py
+
+Key Features to Add:
+1. Minimap functionality for 3D view
+2. Updated 3D camera controls (POV modes - first person, third person, free camera)
+3. WASD movement controls
+4. Q/E camera turning in first/third person modes
+
+Tasks:
+- [ ] Add minimap functionality for 3D view
+- [ ] Implement camera POV modes (third person, first person, free camera)
+- [ ] Add WASD movement controls for camera
+- [ ] Add Q/E camera turning in first/third person modes
+- [ ] Update key press handling to support new camera controls
+- [ ] Test all functionality after updates

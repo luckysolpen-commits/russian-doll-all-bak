@@ -1,0 +1,13 @@
+atom_type,bond_with,charge,compound_type,electron_config,mass_amu,molecule_id,quantity
+WATER,Hydrogen_Oxygen,0,COMPOUND,H1O1,18.015,H2O,1000000.0
+GLUCOSE,Carbon_Hydrogen_Oxygen,0,COMPOUND,CH2OH(CHOH)4CHO,180.156,C6H12O6,50000.0
+ETHANOL,Carbon_Hydrogen_Oxygen,-0.7,ALCOHOL,CH3CH2OH,46.07,C2H5OH,5000.0
+SODIUM,Biological_Ion,1,ION,Natrium,22.99,Na+,25000.0
+POTASSIUM,Biological_Ion,1,ION,Kalium,39.098,K+,15000.0
+CALCIUM,Biological_Ion,2,ION,Ca,40.078,Ca2+,8000.0
+CHLORIDE,Biological_Ion,-1,ION,Chlorine,35.45,Cl-,20000.0
+ADENOSINE_TRI,Biological_Energy,-4,NUCLEOTIDE,adenine-ribose-three_phosphates,507.18,ATP,10000.0
+DNA,Genetic_Material,0,NUCLEIC_ACID,deoxyribose_phosphate_backbone,avg_3.1bp,DNA,1000.0
+various,Biological_Function,variable,PROTEIN,R-group_chains,variable,PROTEIN,500000.0
+FAT,Biological_Membrane,0,LIPOID,fatty_acids_glycerol,variable,LIPID,200000.0
+CELLULOSE,Biological_Structure,0,POLYSACCHARIDE,glucose_polymer,162.14,CARB,50000.0

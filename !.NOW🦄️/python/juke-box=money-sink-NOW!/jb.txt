@@ -1,0 +1,28 @@
+ ╭───────────────────────────────────────────────────────────────────────╮
+ │ ✓  Shell pip list | grep -E "(PySide6|pygame|numpy|librosa|pyaudio)"  │
+ │                                                                      
+ ------------------
+
+
+i want to make the game "monster rancher" but in python. (at the temple)we will generate random voxel shapes and colors, based on "seed input" hash. then we can take the monsters back to our ranch , and do things with them each week of the month (buyingfood & feeding, training , upgrades, itembuy) , finally we will allow them to go to competitions to win prizes, and battle in tournaments like monster rancher games. we will also allow merging of monsters (at the temple)
+
+
+the game play will take place on a grid that 
+represents the ranch 
+
+battles will also take place on a different grid 
+
+hybrid_clean.py
+is the foundation for the game (and best practices).
+adam/ 8x8 and 8x8x8 shows how we should generate and
+store our monster data visually.
+
+we are  using grid based , because 
+we want it to have a "tactics" type feel. 
+
+most things can take place in offshoot of main menu
+(press spacebar to bring up menu = stats , schedule fights, train, save/load etc)
+or in dialouge pop up 
+
+
+wanna write a blueprint_mr_py.txt first or get right to it? 
