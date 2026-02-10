@@ -1,0 +1,10 @@
+option_0 end_turn
+option_1 hunger
+option_2 state
+option_3 act
+option_4 inventory
+option_count 5
+current_selection -1
+event_listeners menu_select
+methods show_menu,handle_selection,get_options
+status active

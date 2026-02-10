@@ -1,0 +1,17 @@
+session_id 1770734765
+current_key_log_path games/default/pieces/keyboard/history.txt
+logging_enabled True
+keys_recorded 11
+event_listeners [key_press]
+last_key_logged a
+last_key_time 2026-02-10 06:46:08
+last_key_code 97
+methods [log_key, reset_session, get_session_log, enable_logging, disable_logging]
+status active
+initialized True
+supported_inputs ['WASD', 'ARROWS', 'MENU_NUMBERS']
+last_session_start 2026-02-10 06:46:05
+last_pressed_key_code 97
+last_pressed_key_char a
+quit_requested False
+last_menu_choice None

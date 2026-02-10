@@ -1,0 +1,5 @@
+# Entity placements
+# Format: x y symbol description
+15 10 @ Building with player spawn point
+20 12 Z Zombie enemy
+25 10 & Friendly Sheep
