@@ -1,0 +1,5 @@
+symbol @
+health 100
+status active
+x 12
+y 13
