@@ -1,0 +1,103 @@
+# Master Ledger - Central Audit Trail
+# All system events, method calls, and state changes are logged here for complete auditability
+
+# Format: [TIMESTAMP] EVENT_TYPE: description | Source: source_info
+# Example: [2026-02-10 18:58:25] MethodCall: feed on fuzzpet | Caller: user_input
+# Example: [2026-02-10 18:58:26] StateChange: fuzzpet hunger 25 | Trigger: feed_method
+# Example: [2026-02-10 18:58:27] EventFire: fed on fuzzpet | Trigger: hunger_change
+[2026-02-10 22:52:49] MethodCall: feed on fuzzpet | Caller: user_input
+[2026-02-10 22:52:49] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 22:53:09] MethodCall: sleep on fuzzpet | Caller: user_input
+[2026-02-10 22:53:09] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 22:53:09] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 22:53:09] StateChange: fuzzpet energy 100 | Trigger: set_state
+[2026-02-10 22:53:09] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 22:53:09] EventFire: slept on fuzzpet | Trigger: fire_event
+[2026-02-10 22:53:09] Response: fuzzpet slept | Message: Zzz... all cozy now~ *yawns cutely* Feeling recharged!
+[2026-02-10 22:53:17] MethodCall: play on fuzzpet | Caller: user_input
+[2026-02-10 22:53:17] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 22:53:17] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 22:53:17] StateChange: fuzzpet energy 70 | Trigger: set_state
+[2026-02-10 22:53:17] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 22:53:17] StateChange: fuzzpet happiness 70 | Trigger: set_state
+[2026-02-10 22:53:17] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 22:53:17] EventFire: played on fuzzpet | Trigger: fire_event
+[2026-02-10 22:53:17] Response: fuzzpet played | Message: Wheee~ Best playtime ever! *bounces around joyfully*
+[2026-02-10 22:54:26] MethodCall: feed on fuzzpet | Caller: user_input
+[2026-02-10 22:54:26] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 22:54:26] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 22:54:26] StateChange: fuzzpet hunger 10 | Trigger: set_state
+[2026-02-10 22:54:26] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 22:54:26] StateChange: fuzzpet happiness 80 | Trigger: set_state
+[2026-02-10 22:54:26] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 22:54:26] EventFire: fed on fuzzpet | Trigger: fire_event
+[2026-02-10 22:54:26] Response: fuzzpet fed | Message: Yum yum~ Feeling so happy! *tail wags wildly*
+[2026-02-10 23:01:17] StateChange: fuzzpet hunger 0 | Trigger: set_state
+[2026-02-10 23:01:17] StateChange: fuzzpet hunger 0 | Trigger: set_state
+[2026-02-10 23:01:17] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:01:17] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:01:21] MethodCall: sleep on fuzzpet | Caller: user_input
+[2026-02-10 23:01:21] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:05:06] MethodCall: feed on fuzzpet | Caller: user_input
+[2026-02-10 23:05:06] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:05:09] MethodCall: feed on fuzzpet | Caller: user_input
+[2026-02-10 23:05:09] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:05:09] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:06:58] MethodCall: play on fuzzpet | Caller: user_input
+[2026-02-10 23:06:58] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:07:01] MethodCall: feed on fuzzpet | Caller: user_input
+[2026-02-10 23:07:01] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:07:01] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:07:03] MethodCall: play on fuzzpet | Caller: user_input
+[2026-02-10 23:07:03] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:07:03] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:07:08] MethodCall: sleep on fuzzpet | Caller: user_input
+[2026-02-10 23:07:08] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:07:08] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:12:19] MethodCall: feed on fuzzpet | Caller: user_input
+[2026-02-10 23:12:19] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:12:20] MethodCall: play on fuzzpet | Caller: user_input
+[2026-02-10 23:12:20] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:12:20] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] StateChange: fuzzpet energy 100 | Trigger: set_state
+[2026-02-10 23:17:31] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: slept on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:17:31] StateChange: fuzzpet hunger 0 | Trigger: set_state
+[2026-02-10 23:17:31] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] StateChange: fuzzpet happiness 100 | Trigger: set_state
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: fed on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:17:31] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: slept on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] StateChange: fuzzpet hunger 0 | Trigger: set_state
+[2026-02-10 23:17:31] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] StateChange: fuzzpet happiness 100 | Trigger: set_state
+[2026-02-10 23:17:31] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: fed on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] Response: fuzzpet fed | Message: Yum yum~ Feeling so happy! *tail wags wildly*
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:17:31] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: slept on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] StateChange: fuzzpet energy 100 | Trigger: set_state
+[2026-02-10 23:17:31] EventFire: state_change on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: slept on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] Response: fuzzpet command_received | Message: *ears perk up* Ooh, you said something? *tilts head curiously*
+[2026-02-10 23:17:31] EventFire: command_received on fuzzpet | Trigger: fire_event
+[2026-02-10 23:17:31] StateChange: fuzzpet hunger 0 | Trigger: set_state
+[2026-02-10 23:17:31] EventFire: state_change on fuzzpet | Trigger: fire_event

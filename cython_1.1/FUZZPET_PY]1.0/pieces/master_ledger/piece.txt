@@ -1,0 +1,14 @@
+# Master Ledger Piece Definition
+# This piece manages the central audit trail for all system operations
+
+state:
+  status: active
+  last_entry_id: 0
+  total_entries: 0
+  
+methods: log_event, read_log, search_log, clear_log
+event_listeners: system_event, method_call, state_change
+responses:
+  system_event: Processing system event in master ledger
+  method_call: Logging method call to master ledger
+  state_change: Recording state change in master ledger

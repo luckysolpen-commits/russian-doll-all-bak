@@ -1,0 +1,2 @@
+# FuzzPet Piece History
+# Input history for this piece (user commands affecting it)

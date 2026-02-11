@@ -1,0 +1,4 @@
+# Keyboard session started at 2026-02-11 01:03:25
+# Format: key_code (numeric)
+49
+50

@@ -1,0 +1,2 @@
+# FuzzPet Piece Ledger - Audit Trail
+# All changes to the fuzzpet piece are logged here for complete auditability

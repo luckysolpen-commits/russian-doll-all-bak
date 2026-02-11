@@ -1,0 +1,8 @@
+title Settings
+option_0 Audio
+option_1 Video
+option_2 Controls
+option_3 Back
+option_count 4
+current_selection 0
+methods [show_menu, handle_selection]

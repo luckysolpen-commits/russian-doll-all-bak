@@ -1,0 +1,2 @@
+# Master Ledger Piece Audit Trail
+# Log of all changes made to the master ledger piece itself

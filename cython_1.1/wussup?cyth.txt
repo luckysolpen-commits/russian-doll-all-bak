@@ -1,0 +1,24 @@
+
+
+📆️FEB11. 
+
+the fuzzzpet doesn't yet have "games/default/peices/
+
+meaning there cant be multiple saves (save manager should
+be pointing code 2 w/e <id> but w/e its advanced and ez. 
+but should def be done (willbe before we do anything 2 weal...)
+
+speaking of tho. i wanna do MINI-wsr , with clock, 
+i mean i know things are already working but why not anyways? 
+
+we already have refernce, and maybe it can be made more claer 2 human
+these peices are pretty readable tbh esp with full kno how. 
+
+
++ we wanted to do "pet calendar auto scheduling  , 
+owning multiple pokemon , 
+pets owning pets, 
+
+and then start introducing giving them items, feeding them, 
+teeching them 2 mine/farm/r&d (graze) (employees w/e up 2 wu/civ/mc/etc) 
+📆️

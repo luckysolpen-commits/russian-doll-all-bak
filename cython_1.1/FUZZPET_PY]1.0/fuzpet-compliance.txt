@@ -1,0 +1,118 @@
+# FuzzPet TPM Compliance Document
+
+## Overview
+This document outlines the implementation plan for making FuzzPet compliant with the True Piece Method (TPM) Master Specification v1.1. The key changes involve restructuring pieces as directories, implementing a master ledger system for auditability, and ensuring all data flows through file-based operations rather than in-memory passing. According to the enlightened understanding, EVERYTHING is a piece including system components like the master ledger itself.
+
+## Implementation Plan According to ^TPM.MASTER-IQ_1.00.txt and ^enlightened_tpm+1.txt
+
+### 1. Piece Directory Restructure (FUNDAMENTAL TPM PRINCIPLE)
+**Requirement from spec:** "A Piece is a **directory** named after its ID (e.g., `fuzzpet/`). It contains:
+- **piece.txt**: Core definition file with sections for state, methods, event_listeners, responses, relations.
+- **ledger.txt**: Piece-specific log of all changes (appended timestamps + actions).
+- **history.txt**: Input log for this Piece (e.g., user commands affecting it).
+- **sub-pieces/**: Optional dir for recursion"
+
+**Current state:** `pieces/fuzzpet.txt` (single file)
+**Target state:** `pieces/fuzzpet/` (directory with piece.txt, ledger.txt, history.txt)
+
+**REASONING FROM ENLIGHTENED TPM:** EVERYTHING must be a piece for complete configurability and transparency. No hardcoded infrastructure.
+
+### 2. Master Ledger as Its Own Piece (CRITICAL UNDERSTANDING)
+**Clarified requirement:** The master ledger is NOT just a file - it is its own piece directory called `master_ledger/` with:
+- `master_ledger/piece.txt` - Defines the ledger piece properties
+- `master_ledger/master_ledger.txt` - The actual central append-only log
+- `master_ledger/ledger.txt` - Audit trail for the ledger itself
+- `master_ledger/history.txt` - Input history for the ledger piece
+
+**Corrected understanding:** The master ledger is a piece itself, allowing its behavior to be configured via its piece.txt file.
+
+### 3. Pipeline Flow Architecture (FILE-BASED SYSTEM)
+**Requirement from spec:** The three Managers (Piece, Methods, Event) form a file-based pipeline with master_ledger as the central bus.
+
+**FLOW (CORRECTED):**
+1. Input → input/history.txt → master_ledger.txt (MethodCall)
+2. Methods Manager reads master_ledger.txt → executes method → appends delta
+3. Event Manager reads master_ledger.txt → detects changes → triggers responses
+
+**CRITICAL INPUT FLOW (FROM ENLIGHTENED TPM):** ALL input must be written to history files FIRST, then pieces read from those files.
+
+### 4. Elimination of In-Memory Data Passing (AUDIT PRINCIPLE)
+**Requirement from spec:** "No data passes in memory; all interactions write to files (ledgers) for audit."
+**Reason:** To ensure every action is traceable, replayable, and tamper-evident, like a blockchain for application logic.
+
+### 5. Universal Piece Principle (ENLIGHTENED UNDERSTANDING)
+**New requirement:** Following the enlightened tpm principle that "EVERYTHING IS A PIECE":
+- FuzzPet piece (game entity)
+- Master ledger piece (system infrastructure)
+- Input piece (input handling)
+- Clock piece (timing, if needed)
+- Display piece (output, if needed)
+- Event manager piece (system logic)
+- Etc.
+
+## Implementation Steps
+
+### Phase 1: Create Master Ledger Piece
+1. Create `master_ledger/` directory
+2. Create `master_ledger/piece.txt` with ledger configuration
+3. Create `master_ledger/master_ledger.txt` for central log
+4. Create `master_ledger/ledger.txt` and `master_ledger/history.txt`
+
+### Phase 2: Restructure FuzzPet Piece
+1. Convert `pieces/fuzzpet.txt` to `pieces/fuzzpet/piece.txt`
+2. Create `pieces/fuzzpet/ledger.txt` for audit trail
+3. Create `pieces/fuzzpet/history.txt` for inputs
+4. Set up relationships in piece.txt
+
+### Phase 3: Update Core Logic
+1. Modify main.py to implement the three-manager pipeline
+2. Update Piece Manager to read/write from directories
+3. Update Methods Manager to process method calls from master ledger
+4. Update Event Manager to process events from master ledger
+
+### Phase 4: Master Ledger Integration
+1. When user makes a choice, write to master_ledger.txt (MethodCall entry)
+2. Methods Manager reads from master_ledger.txt to execute methods
+3. When piece executes a method, write results to master_ledger.txt
+4. Event Manager reads from master_ledger.txt to handle piece communications
+
+## Existing Components Assessment
+
+### Current pieces/fuzzpet.txt Analysis
+- State variables: name, hunger, happiness, energy, level (✓ will move to piece.txt)
+- Methods: feed, play, sleep, status, evolve (✓ will stay in piece.txt)
+- Event listeners: fed, played, slept, command_received (✓ will stay in piece.txt)
+- Responses: Various responses (✓ will stay in piece.txt)
+
+### Plugin System
+- plugins/pet_plugin.py exists (✓ will need updates for directory-based operation)
+- plugin.config exists (✓ will need verification for compliance)
+
+## Master Ledger Piece Creation (CORRECTED UNDERSTANDING)
+
+According to the enlightened TPM understanding, the master ledger is a piece itself with:
+- `master_ledger/piece.txt` - Defines what this piece is and how it behaves
+- `master_ledger/master_ledger.txt` - The actual central append-only log
+- `master_ledger/ledger.txt` - Audit trail for this piece itself
+- `master_ledger/history.txt` - History of inputs for this piece
+
+## Piece Reading Component (UNDERSTOOD NOW)
+
+System pieces (like event managers) read from the master ledger piece to process events and method calls. This means we need pieces that represent:
+- Piece Manager (reads pieces and writes to ledger)
+- Methods Manager (reads ledger for method calls, executes methods)
+- Event Manager (reads ledger for state changes, triggers events)
+
+## Compliance Verification Criteria
+
+After implementation:
+1. ✓ All data stored in piece directories (NOT single files)
+2. ✓ Master ledger is its own piece directory with proper structure
+3. ✓ All input goes through history files first
+4. ✓ All state changes logged in appropriate ledgers
+5. ✓ All events flow through master ledger piece
+6. ✓ No in-memory data passing between components
+7. ✓ Full auditability maintained through file-based system
+8. ✓ Complete piece-based architecture (everything is a piece)
+9. ✓ Pipeline flow operational through file-based operations
+10. ✓ Existing functionality preserved in new architecture

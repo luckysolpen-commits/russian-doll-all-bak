@@ -1,0 +1,11 @@
+title Help Menu
+option_0 Instructions
+option_1 Documentation
+option_2 About
+option_3 Back to Main
+option_count 4
+current_selection 0
+event_listeners [key_press, menu_select]
+methods [show_menu, handle_selection, navigate_menu]
+status active
+parent_menu main_menu
