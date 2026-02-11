@@ -1,0 +1,8 @@
+title Main Menu
+option_0 Play Game
+option_1 Settings
+option_2 Utilities
+option_3 Help
+option_count 4
+current_selection 2
+methods [show_menu, handle_selection]

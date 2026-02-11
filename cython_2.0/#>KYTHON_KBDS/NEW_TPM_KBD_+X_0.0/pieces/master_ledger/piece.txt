@@ -1,0 +1,5 @@
+status active
+last_entry_id 0
+total_entries 0
+event_listeners system_event, method_call, state_change
+methods log_event, read_log, search_log, clear_log

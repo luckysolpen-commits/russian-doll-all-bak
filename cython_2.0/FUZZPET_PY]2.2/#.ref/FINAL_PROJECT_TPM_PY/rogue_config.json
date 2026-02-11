@@ -1,0 +1,32 @@
+{
+    "enabled_plugins": [
+        "core.piece_manager",
+        "core.event_manager",
+        "core.npc",
+        "ui.display",
+        "core.player",
+        "core.world", 
+        "core.turn",
+        "core.health",
+        "core.action",
+        "core.inventory",
+        "core.methods_plugin",
+        "core.control",
+        "core.keyboard"
+    ],
+    "plugin_paths": {
+        "core.piece_manager": "plugins/core/piece_manager.py",
+        "core.event_manager": "plugins/core/event_manager.py",
+        "core.npc": "plugins/core/npc.py",
+        "ui.display": "plugins/ui/display.py",
+        "core.player": "plugins/core/player.py",
+        "core.world": "plugins/core/world.py",
+        "core.turn": "plugins/core/turn.py",
+        "core.health": "plugins/core/health.py", 
+        "core.action": "plugins/core/action.py",
+        "core.inventory": "plugins/core/inventory.py",
+        "core.methods_plugin": "plugins/core/methods_plugin.py",
+        "core.control": "plugins/core/control.py",
+        "core.keyboard": "plugins/core/keyboard.py"
+    }
+}

@@ -1,0 +1,21 @@
+# Master Ledger - Central Audit Trail
+[2026-02-11 03:07:54] KeyEvent: h (code 104) | Source: keyboard
+[2026-02-11 03:07:54] KeyEvent: i (code 105) | Source: keyboard
+[2026-02-11 03:07:56] KeyEvent:   (code 32) | Source: keyboard
+[2026-02-11 03:07:56] KeyEvent: w (code 119) | Source: keyboard
+[2026-02-11 03:07:56] MovementEvent: up | From: (0,0) To: (0,-1) | Target: mover
+[2026-02-11 03:07:56] EventFire: key_w on mover | Trigger: movement_key_press
+[2026-02-11 03:07:57] KeyEvent: a (code 97) | Source: keyboard
+[2026-02-11 03:07:57] MovementEvent: left | From: (0,-1) To: (-1,-1) | Target: mover
+[2026-02-11 03:07:57] EventFire: key_a on mover | Trigger: movement_key_press
+[2026-02-11 03:07:58] KeyEvent: s (code 115) | Source: keyboard
+[2026-02-11 03:07:58] MovementEvent: down | From: (-1,-1) To: (-1,0) | Target: mover
+[2026-02-11 03:07:58] EventFire: key_s on mover | Trigger: movement_key_press
+[2026-02-11 03:07:58] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-11 03:07:58] MovementEvent: right | From: (-1,0) To: (0,0) | Target: mover
+[2026-02-11 03:07:58] EventFire: key_d on mover | Trigger: movement_key_press
+[2026-02-11 03:08:00] KeyEvent:   (code 32) | Source: keyboard
+[2026-02-11 03:08:01] KeyEvent: 
+ (code 10) | Source: keyboard
+[2026-02-11 03:08:02] KeyEvent: 
+ (code 10) | Source: keyboard

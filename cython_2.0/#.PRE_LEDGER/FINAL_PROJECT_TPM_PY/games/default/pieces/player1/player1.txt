@@ -1,0 +1,9 @@
+x 19
+y 8
+symbol @
+health 100
+inventory_count 0
+active True
+event_listeners [key_press, position_change]
+methods [move, take_damage, heal]
+status active

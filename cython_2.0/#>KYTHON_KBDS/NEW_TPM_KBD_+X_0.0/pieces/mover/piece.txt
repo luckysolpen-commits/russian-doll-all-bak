@@ -1,0 +1,12 @@
+position_x 0
+position_y 0
+last_direction right
+status active
+methods move_up, move_down, move_left, move_right, get_position
+event_listeners key_w, key_a, key_s, key_d
+responses:
+  key_w: Moving up
+  key_a: Moving left
+  key_s: Moving down
+  key_d: Moving right
+  default: Unknown movement

@@ -1,0 +1,17 @@
+# Keyboard session started at 2026-02-11 02:10:20
+# Format: key_code (numeric)
+27
+91
+67
+27
+91
+67
+10
+100
+100
+100
+119
+119
+119
+97
+97

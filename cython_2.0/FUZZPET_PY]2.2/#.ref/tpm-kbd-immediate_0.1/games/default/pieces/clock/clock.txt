@@ -1,0 +1,5 @@
+current_time 0
+turn 0
+status active
+event_listeners [time_tick]
+methods [tick, get_time, increment_turn]

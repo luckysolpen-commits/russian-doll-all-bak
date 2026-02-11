@@ -1,0 +1,6 @@
+last_refresh_time 1770800607
+refresh_count 37
+active True
+event_listeners [refresh_request]
+methods [refresh_display]
+status active
