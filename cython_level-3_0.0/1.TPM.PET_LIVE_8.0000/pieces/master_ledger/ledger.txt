@@ -1,0 +1,84 @@
+# Master Ledger - Central Audit Trail
+[2026-02-12 00:08:03] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-12 00:08:03] EventFire: key_d on mover | Trigger: keyboard_input
+[2026-02-12 00:08:03] MovementEvent: right | From: (0,0) To: (1,0) | Target: mover
+[2026-02-12 00:08:05] KeyEvent: a (code 97) | Source: keyboard
+[2026-02-12 00:08:05] EventFire: key_a on mover | Trigger: keyboard_input
+[2026-02-12 00:08:05] MovementEvent: left | From: (1,0) To: (0,0) | Target: mover
+[2026-02-12 00:08:05] KeyEvent: w (code 119) | Source: keyboard
+[2026-02-12 00:08:05] EventFire: key_w on mover | Trigger: keyboard_input
+[2026-02-12 00:08:05] MovementEvent: up | From: (0,0) To: (0,-1) | Target: mover
+[2026-02-12 00:08:06] KeyEvent: w (code 119) | Source: keyboard
+[2026-02-12 00:08:06] EventFire: key_w on mover | Trigger: keyboard_input
+[2026-02-12 00:08:06] MovementEvent: up | From: (0,-1) To: (0,-2) | Target: mover
+[2026-02-12 00:08:06] KeyEvent: a (code 97) | Source: keyboard
+[2026-02-12 00:08:06] EventFire: key_a on mover | Trigger: keyboard_input
+[2026-02-12 00:08:06] MovementEvent: left | From: (0,-2) To: (-1,-2) | Target: mover
+[2026-02-12 00:08:07] KeyEvent: s (code 115) | Source: keyboard
+[2026-02-12 00:08:07] EventFire: key_s on mover | Trigger: keyboard_input
+[2026-02-12 00:08:07] MovementEvent: down | From: (-1,-2) To: (-1,-1) | Target: mover
+[2026-02-12 00:08:07] KeyEvent: s (code 115) | Source: keyboard
+[2026-02-12 00:08:07] EventFire: key_s on mover | Trigger: keyboard_input
+[2026-02-12 00:08:07] MovementEvent: down | From: (-1,-1) To: (-1,0) | Target: mover
+[2026-02-12 00:08:07] KeyEvent: s (code 115) | Source: keyboard
+[2026-02-12 00:08:07] EventFire: key_s on mover | Trigger: keyboard_input
+[2026-02-12 00:08:07] MovementEvent: down | From: (-1,0) To: (-1,1) | Target: mover
+[2026-02-12 00:08:07] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-12 00:08:07] EventFire: key_d on mover | Trigger: keyboard_input
+[2026-02-12 00:08:07] MovementEvent: right | From: (-1,1) To: (0,1) | Target: mover
+[2026-02-12 00:08:08] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-12 00:08:08] EventFire: key_d on mover | Trigger: keyboard_input
+[2026-02-12 00:08:08] MovementEvent: right | From: (0,1) To: (1,1) | Target: mover
+[2026-02-12 00:08:08] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-12 00:08:08] EventFire: key_d on mover | Trigger: keyboard_input
+[2026-02-12 00:08:08] MovementEvent: right | From: (1,1) To: (2,1) | Target: mover
+[2026-02-12 00:08:09] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-12 00:08:09] EventFire: key_d on mover | Trigger: keyboard_input
+[2026-02-12 00:08:09] MovementEvent: right | From: (2,1) To: (3,1) | Target: mover
+[2026-02-12 00:08:09] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-12 00:08:09] EventFire: key_d on mover | Trigger: keyboard_input
+[2026-02-12 00:08:09] MovementEvent: right | From: (3,1) To: (4,1) | Target: mover
+[2026-02-12 00:08:09] KeyEvent: s (code 115) | Source: keyboard
+[2026-02-12 00:08:09] EventFire: key_s on mover | Trigger: keyboard_input
+[2026-02-12 00:08:09] MovementEvent: down | From: (4,1) To: (4,2) | Target: mover
+[2026-02-12 00:08:09] KeyEvent: s (code 115) | Source: keyboard
+[2026-02-12 00:08:09] EventFire: key_s on mover | Trigger: keyboard_input
+[2026-02-12 00:08:09] MovementEvent: down | From: (4,2) To: (4,3) | Target: mover
+[2026-02-12 00:08:10] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-12 00:08:10] EventFire: key_d on mover | Trigger: keyboard_input
+[2026-02-12 00:08:10] MovementEvent: right | From: (4,3) To: (5,3) | Target: mover
+[2026-02-12 00:08:10] KeyEvent: w (code 119) | Source: keyboard
+[2026-02-12 00:08:10] EventFire: key_w on mover | Trigger: keyboard_input
+[2026-02-12 00:08:10] MovementEvent: up | From: (5,3) To: (5,2) | Target: mover
+[2026-02-12 00:08:10] KeyEvent: w (code 119) | Source: keyboard
+[2026-02-12 00:08:10] EventFire: key_w on mover | Trigger: keyboard_input
+[2026-02-12 00:08:10] MovementEvent: up | From: (5,2) To: (5,1) | Target: mover
+[2026-02-12 00:08:11] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-12 00:08:11] EventFire: key_d on mover | Trigger: keyboard_input
+[2026-02-12 00:08:11] MovementEvent: right | From: (5,1) To: (6,1) | Target: mover
+[2026-02-12 00:08:11] KeyEvent: d (code 100) | Source: keyboard
+[2026-02-12 00:08:11] EventFire: key_d on mover | Trigger: keyboard_input
+[2026-02-12 00:08:11] MovementEvent: right | From: (6,1) To: (7,1) | Target: mover
+[2026-02-12 00:08:11] KeyEvent: s (code 115) | Source: keyboard
+[2026-02-12 00:08:11] EventFire: key_s on mover | Trigger: keyboard_input
+[2026-02-12 00:08:11] MovementEvent: down | From: (7,1) To: (7,2) | Target: mover
+[2026-02-12 00:08:12] StateChange: fuzzpet hunger 100 | Trigger: hunger_increase
+[2026-02-12 00:08:12] EventFire: very_hungry on fuzzpet | Trigger: hunger_threshold
+[2026-02-12 00:08:16] KeyEvent: 1 (code 49) | Source: keyboard
+[2026-02-12 00:08:16] MethodCall: feed on fuzzpet | Caller: keyboard_input
+[2026-02-12 00:08:16] EventFire: fed on fuzzpet | Trigger: command_execution
+[2026-02-12 00:08:16] Response: fuzzpet fed | Message: Yum yum~ Feeling so happy! *tail wags wildly*
+[2026-02-12 00:08:16] CommandExecuted: feed on fuzzpet | Source: command_processor
+[2026-02-12 00:08:16] EventFire: fed on fuzzpet | Trigger: command_execution
+[2026-02-12 00:08:16] Response: fuzzpet fed | Message: Yum yum~ Feeling so happy! *tail wags wildly*
+[2026-02-12 00:08:16] CommandExecuted: feed on fuzzpet | Source: command_processor
+[2026-02-12 00:08:17] KeyEvent: 1 (code 49) | Source: keyboard
+[2026-02-12 00:08:17] MethodCall: feed on fuzzpet | Caller: keyboard_input
+[2026-02-12 00:08:17] EventFire: fed on fuzzpet | Trigger: command_execution
+[2026-02-12 00:08:17] Response: fuzzpet fed | Message: Yum yum~ Feeling so happy! *tail wags wildly*
+[2026-02-12 00:08:17] CommandExecuted: feed on fuzzpet | Source: command_processor
+[2026-02-12 00:08:17] EventFire: fed on fuzzpet | Trigger: command_execution
+[2026-02-12 00:08:17] Response: fuzzpet fed | Message: Yum yum~ Feeling so happy! *tail wags wildly*
+[2026-02-12 00:08:17] CommandExecuted: feed on fuzzpet | Source: command_processor
+[2026-02-12 00:08:22] StateChange: fuzzpet hunger 21 | Trigger: hunger_increase
+[2026-02-12 00:08:32] StateChange: fuzzpet hunger 22 | Trigger: hunger_increase

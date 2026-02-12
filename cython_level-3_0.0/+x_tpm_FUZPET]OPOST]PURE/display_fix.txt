@@ -1,0 +1,55 @@
+DISPLAY FIX REFERENCE
+===================
+
+COMMON CAUSES OF DISPLAY OUTPUT CORRUPTION:
+
+1. CHARACTER BUFFERING/MISMATCH:
+   - Issue: Reading characters without properly handling newlines, carriage returns
+   - Solution: Always handle \n and \r properly in loops
+   
+2. MEMORY OFFSET ERRORS:
+   - Issue: Writing to wrong memory positions in matrices
+   - Solution: Careful indexing and boundary checking
+
+3. LINE TERMINATION PROBLEMS:
+   - Issue: Improper handling of line endings when reading/writing files
+   - Solution: Consistent newline handling (typically \n only in Unix systems)
+
+4. BUFFER OVERFLOW:
+   - Issue: Writing past allocated memory boundaries
+   - Solution: Bounds checking and proper allocation
+
+5. FILE POINTER POSITIONING:
+   - Issue: File pointers not positioned correctly leading to partial writes
+   - Solution: Use proper fseek(), rewind() as needed
+
+6. CHARACTER BY CHARACTER PROCESSING:
+   - Issue: Reading single chars can lead to misalignment
+   - Solution: Read by lines where possible
+
+SPECIFIC FIXES APPLIED:
+
+1. MAP LOADING FUNCTION:
+   - OLD: Reading character by character with complex loop logic
+   - NEW: Read entire lines with fgets() then process each line appropriately
+   - RESULT: Proper preservation of line breaks and character positioning
+
+2. MATRIX STORAGE:
+   - OLD: Unreliable single-character reading that could misalign
+   - NEW: Line-by-line reading with proper column alignment
+   - RESULT: Each row in matrix corresponds exactly to original file row
+
+3. OUTPUT WRITING:
+   - OLD: Character-by-character writing that could insert spurious characters
+   - NEW: Row-by-row writing that maintains integrity
+   - RESULT: Clean, properly formatted output
+
+4. STRING TERMINATION:
+   - Fixed strcspsp typo to strcspn (string truncate at first occurrence)
+   - Ensures proper string handling without corruption
+
+THE SPECIFIC FIX THAT WORKED:
+Instead of complex character-by-character file processing that can introduce 
+offset errors, we used line-based processing with fgets() which properly
+preserves line structure and avoids byte offset issues that lead to the 
+garbled output seen before.

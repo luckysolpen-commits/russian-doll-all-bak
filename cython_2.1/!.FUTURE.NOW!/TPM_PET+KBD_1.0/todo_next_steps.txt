@@ -1,0 +1,70 @@
+TODO LIST: BUILD UPON TPM FOUNDATION
+===================================
+
+COMPLETED FOUNDATION ELEMENTS:
+- ✓ Plugin-based architecture established
+- ✓ Immediate keyboard input system (WASD working)
+- ✓ Master ledger audit trail system
+- ✓ Piece-driven state management
+- ✓ Directory structure for keyboard, master_ledger, and mover pieces
+- ✓ Basic engine coordinating plugins
+- ✓ Movement functionality with position tracking
+- ✓ Integrated fuzzpet functionality (piece created and loaded)
+- ✓ Command processing for number keys (1-5 for pet commands)
+
+NEXT PRIORITY ITEMS:
+
+1. ENHANCE EVENT SYSTEM  
+   - Implement proper event manager plugin
+   - Enable pieces to listen to and respond to events from master ledger
+   - Connect command responses to the event system
+   - Ensure all events are properly logged to master ledger
+
+2. CONNECT TO EXISTING PET_PLUGIN.PY
+   - Integrate the original pet plugin methods (feed, play, sleep, etc.)
+   - Ensure all responses match the original functionality
+   - Connect event firing to the original response system
+
+3. ADD MORE INPUT HANDLING
+   - Support arrow keys for movement (in addition to WASD)
+   - Implement Enter-key functionality for traditional commands
+   - Add menu navigation if needed
+   - Handle special keys appropriately
+
+4. IMPROVE USER INTERFACE
+   - Add status display showing current pet state
+   - Implement more sophisticated display system
+   - Add visual indicators for different modes
+   - Enhance feedback for all user actions
+
+5. ENHANCE MOVEMENT SYSTEM
+   - Implement 2D grid coordinates for pet movement
+   - Add collision detection if needed
+   - Implement pathfinding between locations
+   - Connect movement to pet state (energy, etc.)
+
+6. STRENGTHEN AUDIT SYSTEM
+   - Ensure all state changes are logged to master ledger
+   - Implement ledger querying capabilities
+   - Add event playback/replay functionality
+   - Enhance audit trail for better debugging
+
+7. TESTING AND VALIDATION
+   - Test all existing functionality still works
+   - Validate master ledger contains complete audit trail
+   - Verify piece states are properly maintained
+   - Ensure thread safety if needed
+
+8. PERFORMANCE OPTIMIZATION
+   - Optimize file I/O operations
+   - Improve piece loading/saving efficiency
+   - Add caching mechanisms if needed
+   - Optimize ledger processing
+
+9. DOCUMENTATION
+   - Update architecture documentation
+   - Add usage examples
+   - Document plugin interface clearly
+   - Create developer guidelines
+
+CONTINUE WITH ITEM #1: Implement the proper event manager system.

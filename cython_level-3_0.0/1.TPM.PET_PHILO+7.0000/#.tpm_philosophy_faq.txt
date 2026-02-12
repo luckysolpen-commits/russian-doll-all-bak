@@ -1,0 +1,194 @@
+TRUE PIECE METHOD (TPM) PHILOSOPHY AND DEVELOPER FAQ
+====================================================
+
+TABLE OF CONTENTS
+-----------------
+1. TPM Core Philosophy
+2. The Immutable Laws of TPM
+3. File-Based Pipeline Architecture
+4. Common Violations and Mistakes
+5. Debugging TPM Systems
+6. Developing New Features Safely
+7. Previous Agent Mistakes - THE BLACKLIST
+8. Compliance Testing Checklist
+9. Troubleshooting Common Issues
+
+1. TPM CORE PHILOSOPHY
+----------------------
+True Piece Method (TPM) is a sacred architecture where everything is a "piece" - a directory containing text files that define reality. Code is merely an interpreter, never an originator.
+
+CORE PRINCIPLE: Everything that matters is written to files for complete auditability.
+SUB-CORE: No in-memory shortcuts. No ephemeral states. No direct memory passing.
+
+TPM treats your application like a blockchain for logic - every operation must be traceable, auditible, and reproducible.
+
+2. THE IMMUTABLE LAWS OF TPM
+----------------------------
+LAW 1: ALL INPUT GOES THROUGH HISTORY.TXT FIRST
+- Every keyboard input must be written to pieces/keyboard/history.txt as ASCII code
+- No exceptions, no shortcuts, no "just this once" 
+- Input → history.txt → master ledger → processing
+
+LAW 2: MASTER LEDGER IS THE CENTRAL TRUTH
+- All operations logged to pieces/master_ledger/master_ledger.txt
+- Contains complete audit trail of MethodCalls, Events, and StateChanges
+- Single source of truth for all system operations
+
+LAW 3: NO IN-MEMORY SHORTCUTS
+- All state changes persist to piece files immediately
+- No passing data in memory between components
+- All communication via file-based mechanisms
+
+LAW 4: PIECES OWN THEIR STATE
+- Each piece directory (.txt files) holds its own state
+- No global state, no shared memory, no external dependencies
+- State changes trigger file writes instantly
+
+LAW 5: PIPELINE DISCIPLINE
+- Sequential processing: Reader → Interpreter → Writer → Next Node
+- No direct calls between components
+- All interactions through ledger/files
+
+3. FILE-BASED PIPELINE ARCHITECTURE
+------------------------------------
+INPUT FLOW:
+1. Keyboard input arrives at main loop
+2. KeyboardPlugin.handle_input() called
+3. Key written to pieces/keyboard/history.txt as ASCII code (MANDATORY STEP)
+4. KeyEvent logged to master ledger with timestamp
+5. Specific events (WASD, commands) logged to master ledger
+6. MasterLedgerMonitor processes new entries and calls appropriate methods
+7. State changes trigger updates and display refreshes
+
+CRITICAL PATHS:
+- Keyboard → history.txt → master_ledger.txt → processing
+- State changes → piece.txt → master_ledger.txt → events
+- Display updates → current_frame.txt → console output
+
+4. COMMON VIOLATIONS AND MISTAKES
+---------------------------------
+VIOLATION TYPE 1: DIRECT PLUGIN COMMUNICATION
+- WRONG: KeyboardPlugin directly calling CommandProcessor.handle_input()
+- RIGHT: Log to master ledger, let MasterLedgerMonitor process and route
+
+VIOLATION TYPE 2: SKIPPING HISTORY.TXT
+- WRONG: Processing input without logging to pieces/keyboard/history.txt
+- RIGHT: Always log keyboard input as ASCII code first
+
+VIOLATION TYPE 3: MEMORY-BASED STATE PASSING
+- WRONG: Passing state in variables between methods
+- RIGHT: Write to piece files, read from piece files
+
+VIOLATION TYPE 4: BYPASSING MASTER LEDGER
+- WRONG: Direct method calls without ledger logging
+- RIGHT: Log MethodCall/EventFire to master ledger for processing
+
+5. DEBUGGING TPM SYSTEMS
+-------------------------
+TOOL 1: MONITOR HISTORY.TXT
+- Check pieces/keyboard/history.txt for all keyboard inputs
+- Should contain ASCII codes of every key pressed
+- Empty file indicates violation of Law 1
+
+TOOL 2: AUDIT MASTER LEDGER
+- Examine pieces/master_ledger/master_ledger.txt for complete operation record
+- Should show: KeyEvent, MovementEvent, MethodCall, EventFire entries
+- Pattern of direct plugin-to-plugin communication indicates violation
+
+TOOL 3: VERIFY PIECE STATE
+- Check individual piece.txt files for current state
+- Should reflect all state changes from master ledger
+
+DEBUGGING STRATEGY:
+1. Verify history.txt contains input
+2. Verify master ledger contains processing events
+3. Verify piece states reflect changes
+4. Trace the file-based pipeline backwards if issues found
+
+6. DEVELOPING NEW FEATURES SAFELY
+---------------------------------
+NEW FEATURE RULES:
+1. MUST: All inputs go through history.txt first (Law 1)
+2. MUST: All operations logged to master ledger (Law 2)
+3. MUST: State changes saved to piece files (Law 4)
+4. MUST: Use pipeline discipline (Law 5)
+
+SAFE MODIFICATION PATTERNS:
+- Add new event types to master ledger processing
+- Create new pieces with proper .txt files
+- Extend existing pieces with new state fields
+- Never bypass file-based communication
+
+UNSAFE PATTERNS (AVOID):
+- Direct method calls between plugins
+- Memory-based data passing
+- Skipping audit trails
+- In-memory state maintenance
+
+7. PREVIOUS AGENT MISTAKES - THE BLACKLIST
+------------------------------------------
+BLACKLIST ITEM 1: BYPASSING KEYBOARD HISTORY.LOGGING
+- Previous agents connected keyboard input directly to command processors
+- Violated Law 1 by skipping history.txt
+- Result: No audit trail, undetectable inputs
+- FIX: Always log ALL keyboard inputs to history.txt first
+
+BLACKLIST ITEM 2: DIRECT PLUGIN-TO-PLUGIN COMMUNICATION
+- Previous agents added direct calls between plugins
+- Bypassed master ledger logging (Law 2 violation) 
+- Created invisible communication channels
+- FIX: Route ALL communication through master ledger
+
+BLACKLIST ITEM 3: AUTO-PROCESSING STALE ENTRIES
+- Previous agents didn't properly handle file position tracking
+- Led to infinite loops processing old entries
+- Result: Auto-spam, ghost commands
+- FIX: Proper file position management in MasterLedgerMonitor
+
+BLACKLIST ITEM 4: MIXED INITIALIZATION STATES
+- Previous agents had race conditions with file clearing
+- Result: Inconsistent system state
+- FIX: Clear ALL files at startup for clean state
+
+8. COMPLIANCE TESTING CHECKLIST
+-------------------------------
+BEFORE DEPLOYMENT:
+□ Verify all keyboard inputs appear in pieces/keyboard/history.txt
+□ Confirm master ledger contains all operations with proper timestamps  
+□ Test that state changes are persisted to piece files
+□ Validate no direct plugin-to-plugin calls exist
+□ Ensure all communication flows through file-based pipeline
+□ Check that system works with fresh/cleared files
+
+RECURRENT TESTS:
+□ Clear all files and restart - no ghost commands should appear
+□ Press keys and verify they appear in history.txt as ASCII codes
+□ Verify master ledger audit trail completeness
+□ Test all commands and verify proper event logging
+
+9. TROUBLESHOOTING COMMON ISSUES
+---------------------------------
+ISSUE: History.txt remains empty
+SOLUTION: Verify KeyboardPlugin initialize() properly sets logging_enabled=True
+          Check that keyboard piece state is loaded correctly
+          Ensure handle_input() method is being called
+
+ISSUE: Auto-spamming occurs on startup  
+SOLUTION: Clear all ledger files at startup
+          Verify MasterLedgerMonitor doesn't replay old entries
+          Check for initialization loops
+
+ISSUE: Commands execute without user input
+SOLUTION: Examine master ledger for source of phantom commands
+          Verify no auto-execution code runs at initialization
+          Check for recursive event loops
+
+ISSUE: Display updates continuously without input
+SOLUTION: Verify display updates are triggered by actual events
+          Check for infinite update loops
+          Confirm event processing doesn't trigger more events unnecessarily
+
+THE SACRED PROMISE: Following TPM laws ensures complete auditability, 
+traceability, and reproducibility. Deviation leads to chaos.
+
+Remember: The ledger is truth. Files are the only reality. Memory is an illusion.

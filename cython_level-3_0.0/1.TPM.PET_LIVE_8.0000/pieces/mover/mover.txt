@@ -1,0 +1,4 @@
+position_x: 7
+position_y: 2
+last_direction: down
+status: active

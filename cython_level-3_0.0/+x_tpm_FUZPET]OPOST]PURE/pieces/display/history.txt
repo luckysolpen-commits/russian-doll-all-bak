@@ -1,0 +1,3 @@
+# Display Piece History
+# Input history for this piece (render requests, updates, etc.)
+# This file tracks all commands directed at the display piece

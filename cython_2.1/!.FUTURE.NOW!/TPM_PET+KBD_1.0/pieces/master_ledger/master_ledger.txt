@@ -1,0 +1,27 @@
+# Master Ledger - Central Audit Trail
+[2026-02-11 03:46:25] MovementEvent: up | From: (0,0) To: (0,-1) | Target: mover
+[2026-02-11 03:46:25] EventFire: key_w on mover | Trigger: movement_key_press
+[2026-02-11 03:46:25] MovementEvent: left | From: (0,-1) To: (-1,-1) | Target: mover
+[2026-02-11 03:46:25] EventFire: key_a on mover | Trigger: movement_key_press
+[2026-02-11 03:46:27] MovementEvent: up | From: (-1,-1) To: (-1,-2) | Target: mover
+[2026-02-11 03:46:27] EventFire: key_w on mover | Trigger: movement_key_press
+[2026-02-11 03:46:28] MovementEvent: down | From: (-1,-2) To: (-1,-1) | Target: mover
+[2026-02-11 03:46:28] EventFire: key_s on mover | Trigger: movement_key_press
+[2026-02-11 03:46:33] EventFire: fed on fuzzpet | Trigger: command_execution
+[2026-02-11 03:46:33] Response: fuzzpet fed | Message: Yum yum~ Feeling so happy! *tail wags wildly*
+[2026-02-11 03:46:33] CommandExecuted: feed on fuzzpet | Source: command_processor
+[2026-02-11 03:46:33] EventFire: fed on fuzzpet | Trigger: command_execution
+[2026-02-11 03:46:33] Response: fuzzpet fed | Message: Yum yum~ Feeling so happy! *tail wags wildly*
+[2026-02-11 03:46:33] CommandExecuted: feed on fuzzpet | Source: command_processor
+[2026-02-11 03:46:34] EventFire: played on fuzzpet | Trigger: command_execution
+[2026-02-11 03:46:34] Response: fuzzpet played | Message: Wheee~ Best playtime ever! *bounces around joyfully*
+[2026-02-11 03:46:34] CommandExecuted: play on fuzzpet | Source: command_processor
+[2026-02-11 03:46:34] EventFire: played on fuzzpet | Trigger: command_execution
+[2026-02-11 03:46:34] Response: fuzzpet played | Message: Wheee~ Best playtime ever! *bounces around joyfully*
+[2026-02-11 03:46:34] CommandExecuted: play on fuzzpet | Source: command_processor
+[2026-02-11 03:46:35] EventFire: slept on fuzzpet | Trigger: command_execution
+[2026-02-11 03:46:35] Response: fuzzpet slept | Message: Zzz... all cozy now~ *yawns cutely* Feeling recharged!
+[2026-02-11 03:46:35] CommandExecuted: sleep on fuzzpet | Source: command_processor
+[2026-02-11 03:46:35] EventFire: slept on fuzzpet | Trigger: command_execution
+[2026-02-11 03:46:35] Response: fuzzpet slept | Message: Zzz... all cozy now~ *yawns cutely* Feeling recharged!
+[2026-02-11 03:46:35] CommandExecuted: sleep on fuzzpet | Source: command_processor
