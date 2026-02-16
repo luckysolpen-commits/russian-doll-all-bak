@@ -1,0 +1,3 @@
+# FuzzPet Piece History
+# Input history for this piece (user commands affecting it)
+# This file tracks all inputs directed at the fuzzpet piece

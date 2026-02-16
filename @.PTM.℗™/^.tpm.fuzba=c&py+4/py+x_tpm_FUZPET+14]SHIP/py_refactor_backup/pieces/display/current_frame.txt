@@ -1,0 +1,20 @@
+============================================================
+PET POSITION MAP:
+============================================================
+##########
+#        #
+#        #
+#        #
+#   @    #
+#    @   #
+#        #
+#        #
+#        #
+##########
+Pet Position: (5, 5)
+============================================================
+Pet Status: Name: FuzzPet, Hunger: 50, Happiness: 50, Energy: 50, Level: 1
+
+[GAME] Game logic started.
+
+Movement: W↑|A←|S↓|D→ | Pet Cmds: 1[Feed]|2[Play]|3[Sleep]|4[Status]|5[Evolve]

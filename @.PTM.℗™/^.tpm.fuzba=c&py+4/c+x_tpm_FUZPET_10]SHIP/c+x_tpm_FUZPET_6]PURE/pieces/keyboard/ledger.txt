@@ -1,0 +1,2 @@
+# Keyboard Piece Ledger - Audit Trail
+# All changes to the keyboard piece are logged here for complete auditability

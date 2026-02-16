@@ -1,0 +1,2 @@
+# Display Piece Ledger - Audit Trail
+# All changes to the display piece are logged here for complete auditability

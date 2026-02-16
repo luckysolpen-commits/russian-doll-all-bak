@@ -1,0 +1,1199 @@
+[2026-02-14 22:44:32] CommandExecuted: Feed pet | Source: keyboard_input
+[2026-02-14 22:44:32] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:05:15] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-14 23:05:15] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:05:17] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:05:17] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:05:18] CommandExecuted: Feed pet | Source: keyboard_input
+[2026-02-14 23:05:18] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:25:22] CommandExecuted: Play with pet | Source: keyboard_input
+[2026-02-14 23:25:22] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 65, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:26:54] CommandExecuted: Play with pet | Source: keyboard_input
+[2026-02-14 23:26:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 65, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:30:12] CommandExecuted: Feed pet | Source: keyboard_input
+[2026-02-14 23:30:12] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:30:13] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-14 23:30:13] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:30:15] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:32:10] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:32:10] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:32:10] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:34:53] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-14 23:34:53] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:34:54] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:34:54] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:34:55] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:34:55] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:34:55] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:34:55] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:34:55] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:34:55] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:19] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:25] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:39:25] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:26] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-14 23:39:26] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:26] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:39:26] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:27] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:27] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:27] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:27] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:27] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:27] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:39:56] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:39:56] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:14] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-14 23:42:14] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:15] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-14 23:42:15] StateUpdate: Pet state updated: {'pos_x': 3, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:15] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-14 23:42:15] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:16] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:42:16] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:16] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:42:16] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:17] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:42:17] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:17] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:42:17] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:18] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:18] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:18] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:18] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:18] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:18] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:42:19] CommandExecuted: Feed pet | Source: keyboard_input
+[2026-02-14 23:42:19] StateUpdate: Pet state updated: {'pos_x': 2, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:44:39] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:44:39] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:44:40] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:44:40] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 3, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:32] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:46:32] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:32] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:46:32] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:34] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-14 23:46:34] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:34] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-14 23:46:34] StateUpdate: Pet state updated: {'pos_x': 3, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:34] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:46:34] StateUpdate: Pet state updated: {'pos_x': 3, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:35] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-14 23:46:35] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:35] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-14 23:46:35] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:35] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:46:35] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:35] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:46:35] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:36] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:46:36] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:46:36] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:46:36] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 8, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:45] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-14 23:48:45] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:57] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:57] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:57] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:58] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:58] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:58] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:59] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:59] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:48:59] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:49:00] CommandExecuted: Feed pet | Source: keyboard_input
+[2026-02-14 23:49:00] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:50:28] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:50:28] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:50:29] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:50:29] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:50:29] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:50:29] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 3, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:50:29] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:50:29] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 3, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:52:40] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-14 23:52:40] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 3, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:52:40] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-14 23:52:40] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:52:45] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:52:45] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:55:07] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-14 23:55:07] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:55:08] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-14 23:55:08] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:55:08] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-14 23:55:08] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:56:24] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-14 23:56:24] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-14 23:56:25] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:00:43] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:00:43] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:04:29] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:04:29] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:04:29] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:04:29] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:04:29] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 00:04:29] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:04:46] CommandExecuted: Feed pet | Source: keyboard_input
+[2026-02-15 00:04:46] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:04:46] CommandExecuted: Play with pet | Source: keyboard_input
+[2026-02-15 00:04:46] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 65, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:05:59] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:05:59] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:06:00] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:06:00] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:06:00] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 00:06:00] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:10:15] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:10:15] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:10:16] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 00:10:16] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:16:02] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:16:02] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:16:03] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:16:03] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:16:04] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 00:16:04] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:16:05] CommandExecuted: Play with pet | Source: keyboard_input
+[2026-02-15 00:16:05] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 65, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:47] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:47] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:47] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:47] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:47] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:47] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:48] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:48] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:48] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:48] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:48] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:48] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:48] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:20:48] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:49] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-15 00:20:49] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:20:49] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:20:49] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:14] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:22:14] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:15] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:22:15] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:16] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:22:16] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:16] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:22:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:18] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:22:18] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:18] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:22:18] StateUpdate: Pet state updated: {'pos_x': 3, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:22:25] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:22:25] StateUpdate: Pet state updated: {'pos_x': 4, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:14] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:23:14] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:14] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:23:14] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:15] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 00:23:15] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:15] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:23:15] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:15] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-15 00:23:15] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:15] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:23:15] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:16] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:17] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:52] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 00:23:52] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:54] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-15 00:23:54] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:23:55] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:23:55] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:24:42] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:24:42] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:24:43] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 00:24:43] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:26:06] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-15 00:26:06] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:26:06] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 00:26:06] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:26:07] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 00:26:07] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:27:31] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:27:31] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:30:06] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:30:06] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:30:06] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:30:06] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:30:06] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:30:07] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-15 00:30:07] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:30:07] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 00:30:07] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:30:07] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 00:30:07] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 4, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:50:21] CommandExecuted: Feed pet | Source: keyboard_input
+[2026-02-15 00:50:21] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 00:50:41] CommandExecuted: Play with pet | Source: keyboard_input
+[2026-02-15 00:50:41] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 65, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 22:37:35] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 22:37:35] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 22:37:39] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-15 22:37:39] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 50, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 22:37:40] CommandExecuted: Pet command 1 processed | Source: keyboard_input
+[2026-02-15 22:37:40] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 22:38:37] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 22:38:37] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 50, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 22:38:39] CommandExecuted: Pet command 2 processed | Source: keyboard_input
+[2026-02-15 22:38:39] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 65, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 22:38:47] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:38:57] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:39:07] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:39:17] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:39:27] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:39:37] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:39:47] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:39:57] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:40:07] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:40:17] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:40:27] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:40:37] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:40:47] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:40:57] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:41:07] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:41:17] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:41:27] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:41:37] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:41:47] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:41:57] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:42:07] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:42:17] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:42:27] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:42:37] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:42:47] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:42:57] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:43:07] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:43:17] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:43:27] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:43:37] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:43:47] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:43:57] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:44:07] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:44:17] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:44:27] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:44:37] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:44:47] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:44:57] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:45:07] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:45:17] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:45:27] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:45:37] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:45:48] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:45:58] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:46:08] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:46:18] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:46:28] SystemEvent: ResponseHandler activity check | Source: response_handler
+[2026-02-15 22:46:38] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-15 22:46:38] StateUpdate: Pet state updated: {'pos_x': 8, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 65, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 22:46:39] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 22:46:39] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 65, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 22:46:39] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-15 22:46:39] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 65, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-15 22:46:40] CommandExecuted: Pet command 2 processed | Source: keyboard_input
+[2026-02-15 22:46:40] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:39:44] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-16 03:39:44] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:39:45] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-16 03:39:45] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:39:49] EventFire: Turn end on clock (key: 6) | Source: game_logic
+[2026-02-16 03:39:49] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:39:52] EventFire: Turn end on clock (key: 6) | Source: game_logic
+[2026-02-16 03:39:53] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:39:54] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-16 03:39:54] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:39:55] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-16 03:39:55] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 6, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:39:56] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-16 03:39:56] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:42:10] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-16 03:42:10] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:42:15] EventFire: Turn end on clock (key: 6) | Source: game_logic
+[2026-02-16 03:42:15] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:59:04] EventFire: Turn end on clock (key: 6) | Source: game_logic
+[2026-02-16 03:59:04] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:59:07] EventFire: Turn end on clock (key: 6) | Source: game_logic
+[2026-02-16 03:59:07] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 03:59:20] EventFire: Turn end on clock (key: 6) | Source: game_logic
+[2026-02-16 03:59:20] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 04:41:31] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-16 04:41:31] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 04:41:32] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-16 04:41:32] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 04:47:32] MovementEvent: Move Right (key: d) | Source: keyboard_input
+[2026-02-16 04:47:32] StateUpdate: Pet state updated: {'pos_x': 8, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 04:47:34] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-16 04:47:34] StateUpdate: Pet state updated: {'pos_x': 7, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 04:47:35] MovementEvent: Move Left (key: a) | Source: keyboard_input
+[2026-02-16 04:47:35] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
+[2026-02-16 04:47:36] StateUpdate: Pet state updated: {'pos_x': 6, 'pos_y': 5, 'name': 'FuzzPet', 'hunger': 30, 'happiness': 80, 'energy': 50, 'level': 1} | Source: game_logic
