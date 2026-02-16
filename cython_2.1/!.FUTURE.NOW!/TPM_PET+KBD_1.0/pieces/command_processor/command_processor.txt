@@ -1,4 +1,0 @@
-current_command: 
-command_buffer: 
-command_mode: waiting
-status: active

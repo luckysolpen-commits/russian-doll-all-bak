@@ -1,2 +1,0 @@
-# World Piece Ledger - Audit Trail
-# All changes to the world piece are logged here for complete auditability

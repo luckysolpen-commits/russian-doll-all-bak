@@ -1,3 +1,0 @@
-# World Piece History
-# Input history for this piece (map changes, object placement, etc.)
-# This file tracks all commands directed at the world piece

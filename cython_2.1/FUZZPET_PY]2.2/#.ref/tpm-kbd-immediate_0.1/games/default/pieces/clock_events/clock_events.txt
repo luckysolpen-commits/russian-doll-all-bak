@@ -1,7 +1,0 @@
-event_0_time 0
-event_0_method tick
-event_0_target clock
-recurring_interval 1
-current_time 0
-next_event_time 1
-methods [register_event, execute_at_time, schedule_recurring, check_events]

@@ -1,9 +1,0 @@
-# ENTITY PLACEMENTS LAYER
-# ENTITY METADATA
-NAME=World Entities Layer
-COUNT=3
-
-# ENTITY DATA (x y symbol type description)
-15 10 @ building "Building with player spawn point"
-20 12 Z enemy "Zombie enemy"
-25 10 & animal "Friendly Sheep"

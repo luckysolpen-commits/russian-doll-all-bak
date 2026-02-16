@@ -1,9 +1,0 @@
-current_menu main_menu
-current_selection 2
-initialized True
-supported_inputs ['NUMBERS', 'ARROWS', 'NAVIGATION']
-last_action Selected option 2
-quit_requested False
-event_listeners [key_press]
-methods [handle_selection, navigate_menu]
-status active

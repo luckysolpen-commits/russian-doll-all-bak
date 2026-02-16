@@ -1,5 +1,0 @@
-x 28
-y 16
-symbol @
-health 100
-status active
