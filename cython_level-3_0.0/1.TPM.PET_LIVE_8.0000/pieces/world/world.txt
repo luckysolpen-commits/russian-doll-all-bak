@@ -1,3 +1,0 @@
-status active
-event_listeners [map_update]
-methods [render_map, update_view]

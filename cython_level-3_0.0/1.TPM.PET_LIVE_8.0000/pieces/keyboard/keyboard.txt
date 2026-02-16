@@ -1,7 +1,0 @@
-session_id: 1770883681
-current_key_log_path: pieces/keyboard/history.txt
-logging_enabled: True
-keys_recorded: 23
-last_key_logged: 1
-last_key_code: 49
-last_key_time: 2026-02-12 00:08:17
