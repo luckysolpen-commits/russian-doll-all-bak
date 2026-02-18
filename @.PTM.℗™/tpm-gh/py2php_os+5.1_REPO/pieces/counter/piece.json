@@ -1,0 +1,30 @@
+{
+  "state": {
+    "count": 0,
+    "name": "DemoCounter",
+    "min_value": -999,
+    "max_value": 999
+  },
+  "methods": [
+    "increment",
+    "decrement",
+    "reset",
+    "set_value"
+  ],
+  "event_listeners": [
+    "increment",
+    "decrement",
+    "reset",
+    "value_changed"
+  ],
+  "responses": {
+    "increment": "Counter incremented",
+    "decrement": "Counter decremented",
+    "reset": "Counter reset to zero",
+    "value_changed": "Counter value changed"
+  },
+  "relations": {
+    "parent": "desktop",
+    "children": []
+  }
+}

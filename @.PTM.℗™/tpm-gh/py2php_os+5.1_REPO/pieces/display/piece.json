@@ -1,0 +1,30 @@
+{
+  "state": {
+    "show_value": true,
+    "format": "number",
+    "prefix": "Count: ",
+    "suffix": "",
+    "style": {
+      "fontSize": "48px",
+      "color": "#3498db",
+      "fontWeight": "bold"
+    }
+  },
+  "methods": [
+    "render",
+    "update_style",
+    "set_format"
+  ],
+  "event_listeners": [
+    "counter_changed",
+    "style_updated"
+  ],
+  "responses": {
+    "counter_changed": "Display updated with new counter value",
+    "style_updated": "Display style updated"
+  },
+  "relations": {
+    "parent": "counter",
+    "children": []
+  }
+}

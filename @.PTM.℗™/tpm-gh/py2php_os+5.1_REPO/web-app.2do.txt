@@ -1,0 +1,489 @@
+# Web App Implementation Plan for PyOS-TPM Web
+# DATE: February 17, 2026
+
+## Overview
+Implement web applications following the True Piece Method (TPM) architecture:
+- Pieces (state files in JSON)
+- Master Ledger (audit trail)
+- Plugins (JavaScript modules)
+- Input → History → Ledger → Process flow
+
+## App 1: Demo Counter App (Starter/Test App)
+A simple counter app to demonstrate TPM web architecture.
+
+### Pieces Required
+```
+pieces/
+├── counter/
+│   ├── piece.json       # Counter state: { count: 0, name: "DemoCounter" }
+│   ├── history.json     # Button clicks logged
+│   └── ledger.json      # Counter operations audit trail
+└── display/
+    └── piece.json       # Display state: { show_value: true, format: "number" }
+```
+
+### TPM Flow
+```
+1. INPUT: User clicks "Increment" button
+   → keyboard piece logs keypress to history.json
+   
+2. HISTORY: Event recorded
+   → pieces/counter/history.json: { event: "increment_click", timestamp: ... }
+   
+3. LEDGER: State change request
+   → pieces/master_ledger/ledger.json: "StateChange: counter count 0→1"
+   
+4. PROCESS: Counter plugin handles the event
+   → plugins/counter-plugin.js updates counter state
+   
+5. RESPONSE: Display updates
+   → pieces/display/piece.json updated
+   → UI re-renders with new count
+```
+
+### Files to Create
+```
+py2php_os/
+├── js/apps/
+│   └── demo-counter.js      # Main app (innerHTML pattern)
+├── plugins/
+│   └── counter-plugin.js    # Counter logic plugin
+└── pieces/
+    ├── counter/
+    │   ├── piece.json
+    │   ├── history.json
+    │   └── ledger.json
+    └── display/
+        └── piece.json
+```
+
+---
+
+## App 2: FuzzPet Web (Full TPM Implementation)
+
+### Architecture Mapping: Python → Web
+
+```
+Python FuzzPet          →    Web FuzzPet
+─────────────────────────────────────────────────
+pieces/clock/state.txt  →    pieces/clock/piece.json
+pieces/fuzzpet/piece.txt →   pieces/fuzzpet/piece.json
+pieces/world/map.txt    →    pieces/world/piece.json
+pieces/display/current_frame.txt → pieces/display/piece.json
+pieces/keyboard/history.txt →    pieces/keyboard/history.json
+pieces/master_ledger/ledger.txt → pieces/master_ledger/ledger.json
+
+plugins/fuzzpet.py      →    plugins/fuzzpet-plugin.js
+plugins/game_logic.py   →    plugins/game-logic.js
+plugins/keyboard.py     →    plugins/keyboard-plugin.js
+plugins/renderer.py     →    plugins/renderer-plugin.js
+plugins/end_turn.py     →    plugins/end-turn-plugin.js
+plugins/response_handler.py → plugins/response-handler.js
+
+orchestrator.py         →    (JS module imports, no subprocess needed)
+```
+
+### Pieces Required
+```
+pieces/
+├── fuzzpet/
+│   ├── piece.json       # Pet state: pos_x, pos_y, name, hunger, happiness, energy, level
+│   ├── history.json     # Pet actions history
+│   └── ledger.json      # Pet state changes
+├── world/
+│   ├── piece.json       # Map data: grid[10][10], walls, boundaries
+│   └── history.json     # World changes
+├── clock/
+│   └── piece.json       # Game time: turn, time (HH:MM:SS)
+├── display/
+│   └── piece.json       # Render frame: ascii_art, status_text
+├── keyboard/
+│   └── history.json     # Key inputs (WASD, 1-6)
+└── master_ledger/
+    └── ledger.json      # All events audit trail
+```
+
+### FuzzPet State Schema
+```json
+{
+  "state": {
+    "pos_x": 5,
+    "pos_y": 5,
+    "name": "FuzzPet",
+    "hunger": 50,
+    "happiness": 50,
+    "energy": 50,
+    "level": 1
+  },
+  "methods": [
+    "move",
+    "feed",
+    "play",
+    "sleep",
+    "evolve",
+    "end_turn"
+  ],
+  "event_listeners": [
+    "key_pressed",
+    "command_executed",
+    "state_updated",
+    "turn_ended"
+  ],
+  "responses": {
+    "move": "Pet moved to new position",
+    "feed": "Pet was fed, hunger decreased",
+    "play": "Pet played, happiness increased",
+    "sleep": "Pet slept, energy restored",
+    "evolve": "Pet evolved to next level",
+    "end_turn": "Turn ended, time advanced"
+  },
+  "relations": {
+    "parent": "world",
+    "children": []
+  }
+}
+```
+
+### World/Map Schema
+```json
+{
+  "state": {
+    "width": 10,
+    "height": 10,
+    "grid": [
+      "##########",
+      "#        #",
+      "#        #",
+      "#        #",
+      "#   @    #",
+      "#        #",
+      "#        #",
+      "#        #",
+      "#        #",
+      "##########"
+    ],
+    "walls": [[0,0], [0,1], [0,2]...],
+    "boundaries": { "min_x": 1, "max_x": 8, "min_y": 1, "max_y": 8 }
+  }
+}
+```
+
+### Clock Schema
+```json
+{
+  "state": {
+    "turn": 0,
+    "time": "08:00:00"
+  }
+}
+```
+
+### Display Schema (Current Frame)
+```json
+{
+  "state": {
+    "ascii_art": "##########\n#   @    #\n...",
+    "status_text": "Name: FuzzPet | Hunger: 50 | Happiness: 50 | Energy: 50 | Level: 1",
+    "turn": 0,
+    "time": "08:00:00",
+    "controls": "W↑|A←|S↓|D→ | 1[Feed]|2[Play]|3[Sleep]|4[Status]|5[Evolve]|6[End Turn]"
+  }
+}
+```
+
+### Plugins Required
+```
+js/plugins/
+├── fuzzpet-plugin.js      # Pet state management
+├── game-logic.js          # Main game loop, input processing
+├── keyboard-plugin.js     # Keyboard input capture
+├── renderer-plugin.js     # ASCII art rendering
+├── end-turn-plugin.js     # Turn/time increment
+└── response-handler.js    # Event response system
+```
+
+### Game Logic Flow
+```
+1. User presses 'd' (move right)
+   → keyboard-plugin.js captures keydown event
+   → logs to pieces/keyboard/history.json
+
+2. game-logic.js monitors keyboard history
+   → reads last key: 'd'
+   → validates move (check boundaries in world piece)
+   → updates fuzzpet pos_x + 1
+
+3. State update logged to master ledger
+   → "MovementEvent: Move Right (key: d) | Source: keyboard_input"
+   → "StateUpdate: Pet state updated: pos_x: 5→6 | Source: game_logic"
+
+4. renderer-plugin.js monitors display piece
+   → regenerates ASCII art with new pet position
+   → updates pieces/display/piece.json
+
+5. UI updates automatically
+   → display component re-renders from display piece state
+```
+
+### Commands Mapping
+```
+Key  | Command      | Effect
+─────|──────────────|────────────────────────────────
+W    | Move Up      | pos_y -= 1 (if valid)
+A    | Move Left    | pos_x -= 1 (if valid)
+S    | Move Down    | pos_y += 1 (if valid)
+D    | Move Right   | pos_x += 1 (if valid)
+1    | Feed         | hunger -= 20, happiness += 5
+2    | Play         | happiness += 15, energy -= 10, hunger += 5
+3    | Sleep        | energy += 30, hunger += 10
+4    | Status       | Show detailed status (no state change)
+5    | Evolve       | level += 1 (if requirements met)
+6    | End Turn     | turn += 1, time += 5 minutes
+```
+
+### Turn Mechanics
+Each turn (6 end turn command):
+- turn += 1
+- time += 5 minutes (HH:MM:SS format, wraps at 24:00:00)
+- hunger += 2 (pet gets hungry over time)
+- energy -= 1 (pet gets tired)
+- Check for game over conditions (hunger >= 100, energy <= 0)
+
+---
+
+## Implementation Phases
+
+### Phase 1: Demo Counter App (Test App)
+**Goal:** Prove TPM web architecture works
+
+- [ ] Create pieces/counter/piece.json
+- [ ] Create pieces/display/piece.json
+- [ ] Create js/apps/demo-counter.js (innerHTML window)
+- [ ] Create plugins/counter-plugin.js
+- [ ] Wire up: Button click → history → ledger → state update → re-render
+- [ ] Test in browser
+
+### Phase 2: FuzzPet Core Pieces
+- [ ] Create pieces/fuzzpet/piece.json
+- [ ] Create pieces/world/piece.json (map data)
+- [ ] Create pieces/clock/piece.json
+- [ ] Create pieces/display/piece.json
+- [ ] Create pieces/keyboard/history.json
+- [ ] Initialize pieces/master_ledger/ledger.json
+
+### Phase 3: FuzzPet Plugins
+- [ ] Create plugins/fuzzpet-plugin.js (state management)
+- [ ] Create plugins/keyboard-plugin.js (input capture)
+- [ ] Create plugins/game-logic.js (input processing, validation)
+- [ ] Create plugins/renderer-plugin.js (ASCII art generation)
+- [ ] Create plugins/end-turn-plugin.js (time/turn increment)
+
+### Phase 4: FuzzPet UI Window
+- [ ] Create js/apps/fuzzpet.js (main app window)
+- [ ] ASCII display area (monospace font, pre tag)
+- [ ] Status bar (hunger, happiness, energy, level)
+- [ ] Controls help text
+- [ ] Keyboard event listeners (WASD, 1-6)
+
+### Phase 5: Integration & Polish
+- [ ] Wire all plugins together
+- [ ] Test full game loop
+- [ ] Add visual polish (colors, animations)
+- [ ] Add save/load functionality (PHP persistence)
+- [ ] Test edge cases (boundary collisions, stat limits)
+
+---
+
+## File Structure (Final)
+
+```
+py2php_os/
+├── index.html
+├── js/
+│   ├── apps/
+│   │   ├── demo-counter.js    # Phase 1
+│   │   └── fuzzpet.js         # Phase 4
+│   ├── plugins/
+│   │   ├── counter-plugin.js  # Phase 1
+│   │   ├── fuzzpet-plugin.js  # Phase 3
+│   │   ├── keyboard-plugin.js # Phase 3
+│   │   ├── game-logic.js      # Phase 3
+│   │   ├── renderer-plugin.js # Phase 3
+│   │   └── end-turn-plugin.js # Phase 3
+│   └── ... (existing files)
+├── plugins/
+│   └── (JavaScript plugin modules - same as js/plugins/)
+├── pieces/
+│   ├── counter/               # Phase 1
+│   ├── fuzzpet/               # Phase 2
+│   ├── world/                 # Phase 2
+│   ├── clock/                 # Phase 2
+│   ├── display/               # Phase 2
+│   ├── keyboard/              # Phase 2
+│   └── master_ledger/         # Existing
+└── ... (existing files)
+```
+
+---
+
+## Demo Counter App - Detailed Spec
+
+### Window Content (innerHTML)
+```javascript
+const counterContent = `
+    <div class="counter-container" style="padding: 20px; text-align: center;">
+        <h2 style="color: #2c3e50;">Demo Counter</h2>
+        <p style="color: #666;">A TPM demonstration app</p>
+        
+        <div class="counter-display" style="
+            font-size: 48px; 
+            color: #3498db; 
+            margin: 30px 0;
+            font-weight: bold;
+        ">
+            Count: <span id="count-value">0</span>
+        </div>
+        
+        <div class="counter-controls" style="display: flex; gap: 10px; justify-content: center;">
+            <button id="btn-decrement" style="
+                padding: 10px 20px;
+                font-size: 18px;
+                background: #e74c3c;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            ">−</button>
+            
+            <button id="btn-reset" style="
+                padding: 10px 20px;
+                font-size: 14px;
+                background: #95a5a6;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            ">Reset</button>
+            
+            <button id="btn-increment" style="
+                padding: 10px 20px;
+                font-size: 18px;
+                background: #27ae60;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            ">+</button>
+        </div>
+        
+        <div class="counter-history" style="
+            margin-top: 20px;
+            padding: 10px;
+            background: #f5f6fa;
+            border-radius: 5px;
+            font-size: 12px;
+            text-align: left;
+            max-height: 150px;
+            overflow-y: auto;
+        ">
+            <strong>History:</strong>
+            <div id="history-list"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Counter app logic inline (will be extracted to plugin)
+        (function() {
+            let count = 0;
+            const countEl = document.getElementById('count-value');
+            const historyEl = document.getElementById('history-list');
+            
+            function updateDisplay() {
+                countEl.textContent = count;
+            }
+            
+            function addToHistory(action) {
+                const entry = document.createElement('div');
+                entry.textContent = new Date().toLocaleTimeString() + ' - ' + action;
+                historyEl.insertBefore(entry, historyEl.firstChild);
+            }
+            
+            document.getElementById('btn-increment').addEventListener('click', () => {
+                count++;
+                updateDisplay();
+                addToHistory('Increment: ' + count);
+                // Log to TPM
+                if (typeof pieceManager !== 'undefined') {
+                    pieceManager.updatePieceState('counter', { count: count });
+                    pieceManager.fireEvent('counter', 'increment', { newValue: count });
+                }
+            });
+            
+            document.getElementById('btn-decrement').addEventListener('click', () => {
+                count--;
+                updateDisplay();
+                addToHistory('Decrement: ' + count);
+                if (typeof pieceManager !== 'undefined') {
+                    pieceManager.updatePieceState('counter', { count: count });
+                    pieceManager.fireEvent('counter', 'decrement', { newValue: count });
+                }
+            });
+            
+            document.getElementById('btn-reset').addEventListener('click', () => {
+                count = 0;
+                updateDisplay();
+                addToHistory('Reset to 0');
+                if (typeof pieceManager !== 'undefined') {
+                    pieceManager.updatePieceState('counter', { count: 0 });
+                    pieceManager.fireEvent('counter', 'reset', { newValue: 0 });
+                }
+            });
+            
+            // Load initial state from piece
+            if (typeof pieceManager !== 'undefined') {
+                const savedState = pieceManager.getPieceState('counter', 'count');
+                if (savedState !== null) {
+                    count = savedState;
+                    updateDisplay();
+                }
+            }
+        })();
+    <\/script>
+`;
+```
+
+---
+
+## Success Criteria
+
+### Demo Counter App
+- [ ] Window opens from terminal `open counter` command
+- [ ] Increment/Decrement buttons update count
+- [ ] Count persists across window close/reopen
+- [ ] History shows in window
+- [ ] Master ledger logs all operations
+
+### FuzzPet
+- [ ] Window opens from terminal `open fuzzpet` or `apps → FuzzPet`
+- [ ] WASD keys move pet (shown as @) on ASCII map
+- [ ] Pet stays within boundaries (walls #)
+- [ ] Commands 1-6 work (Feed, Play, Sleep, Status, Evolve, End Turn)
+- [ ] Stats update correctly (hunger, happiness, energy)
+- [ ] Turn counter increments
+- [ ] Time advances 5 minutes per turn
+- [ ] All actions logged to master ledger
+- [ ] Pet state persists across sessions
+
+---
+
+## Notes
+
+1. **JavaScript doesn't need subprocess/orchestrator** - All plugins run in same thread, communicate via shared state (pieces) and events.
+
+2. **PHP only for persistence** - Piece state loaded/saved via PHP file_io.php, but runtime state is in JavaScript memory.
+
+3. **Auto-save** - Master ledger auto-saves every 5 seconds (configurable).
+
+4. **UI Updates** - Use DOM manipulation or re-render from piece state on change.
+
+5. **Keyboard handling** - Browser captures keys differently than Python termios. Use standard DOM keydown events.

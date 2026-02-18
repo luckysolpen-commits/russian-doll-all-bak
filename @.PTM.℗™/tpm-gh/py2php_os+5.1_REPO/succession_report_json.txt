@@ -1,0 +1,725 @@
+# PyOS-TPM Web - Succession Report: JSON Persistence
+# DATE: February 17, 2026
+# STATUS: Phase 1 Complete - In-Memory State Only
+
+## Executive Summary
+
+The PyOS-TPM Web Edition currently stores all piece state **in JavaScript memory only**. 
+When the browser is refreshed or closed, all game state is lost.
+
+**Goal:** Implement PHP-backed JSON persistence so that:
+- FuzzPet state saves automatically and persists across sessions
+- Counter app state persists
+- Master ledger accumulates across sessions
+- Users can save/load game states
+
+---
+
+## Current Architecture
+
+### What Works Now (In-Memory)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     Browser (JavaScript)                     │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
+│  │ fuzzpet.js  │  │   counter   │  │  terminal   │         │
+│  │   (state)   │  │  (state)    │  │   (state)   │         │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘         │
+│         │                │                │                 │
+│         └────────────────┴────────────────┘                 │
+│                          │                                  │
+│                  ┌───────▼────────┐                         │
+│                  │ piece-manager  │                         │
+│                  │      js/       │                         │
+│                  │  (IN MEMORY)   │                         │
+│                  └───────┬────────┘                         │
+│                          │                                  │
+│                  ┌───────▼────────┐                         │
+│                  │ master-ledger  │                         │
+│                  │      js/       │                         │
+│                  │  (IN MEMORY)   │                         │
+│                  └───────┬────────┘                         │
+│                          │                                  │
+│                          ▼                                  │
+│              [PHP API: file_io.php] ←─── HTTP POST/GET     │
+└─────────────────────────────────────────────────────────────┘
+                         │
+                         │ (Currently NOT saving)
+                         ▼
+              ┌──────────────────────┐
+              │   pieces/*.json      │
+              │   (Files exist but   │
+              │    not being used)   │
+              └──────────────────────┘
+```
+
+### Code Flow (Current)
+
+```javascript
+// 1. Game state changes
+fuzzpetGame.petState.hunger = 30;
+
+// 2. Piece manager updates (in-memory only)
+pieceManager.updatePieceState('fuzzpet', { hunger: 30 });
+// → Updates pieceManager.pieces Map
+// → Calls PHP file_io.php?action=write (but response ignored)
+
+// 3. Master ledger logs (in-memory only)
+masterLedger.log('StateChange', 'hunger: 50→30', 'fuzzpet');
+// → Pushes to masterLedger.entries array
+// → Queues PHP save (but may fail silently)
+```
+
+---
+
+## Problems Identified
+
+### 1. Piece Manager - No Actual Persistence
+
+**File:** `js/piece-manager.js`
+
+**Current Code:**
+```javascript
+async updatePieceState(pieceId, newValues) {
+    const piece = this.pieces.get(pieceId);
+    if (!piece) return false;
+    
+    // Update in-memory state ✓
+    Object.assign(piece.state, newValues);
+    
+    // Persist to file via PHP ← THIS FAILS SILENTLY
+    try {
+        await fetch(`${this.phpApi}?action=write`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                path: `${this.piecesDir}/${pieceId}/piece.json`,
+                content: JSON.stringify(piece, null, 2)
+            })
+        });
+    } catch (error) {
+        console.error(`Failed to persist piece ${pieceId}:`, error);
+        // NO RETRY, NO FALLBACK
+    }
+    
+    return true;
+}
+```
+
+**Issues:**
+- No error handling if PHP is unavailable
+- No confirmation that write succeeded
+- No retry mechanism
+- CORS issues may block requests
+
+---
+
+### 2. Master Ledger - Auto-Save May Fail
+
+**File:** `js/master-ledger.js`
+
+**Current Code:**
+```javascript
+async saveBatch() {
+    if (this.saveQueue.length === 0) return;
+    
+    const entriesToSave = [...this.saveQueue];
+    this.saveQueue = [];
+    
+    try {
+        await fetch(`${this.phpApi}?action=append`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                path: this.ledgerFile,
+                data: entriesToSave.length === 1 ? entriesToSave[0] : entriesToSave
+            })
+        });
+    } catch (error) {
+        console.error('Failed to save ledger entries:', error);
+        // Re-queue failed entries
+        this.saveQueue.unshift(...entriesToSave);
+    }
+}
+```
+
+**Issues:**
+- Entries can be lost if browser closes before auto-save (5s interval)
+- No localStorage backup
+- No conflict resolution if file changed on server
+
+---
+
+### 3. FuzzPet Game - Direct State Mutation
+
+**File:** `js/apps/fuzzpet.js`
+
+**Current Code:**
+```javascript
+saveState() {
+    if (typeof pieceManager !== 'undefined') {
+        pieceManager.updatePieceState('fuzzpet', this.petState);
+        pieceManager.updatePieceState('clock', this.clockState);
+    }
+}
+```
+
+**Issues:**
+- Relies on pieceManager which doesn't guarantee persistence
+- No explicit save confirmation
+- No save/load API for user-initiated saves
+
+---
+
+## Solution: PHP-JSON Persistence Layer
+
+### Architecture (After Fix)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     Browser (JavaScript)                     │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
+│  │ fuzzpet.js  │  │   counter   │  │  terminal   │         │
+│  │   (state)   │  │  (state)    │  │   (state)   │         │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘         │
+│         │                │                │                 │
+│         └────────────────┴────────────────┘                 │
+│                          │                                  │
+│                  ┌───────▼────────┐                         │
+│                  │ piece-manager  │                         │
+│                  │      js/       │                         │
+│                  │ +localStorage  │ ←── Immediate backup    │
+│                  └───────┬────────┘                         │
+│                          │                                  │
+│                          ▼                                  │
+│              [PHP API: file_io.php]                         │
+│              + session_manager.php                          │
+│              + save_game.php                                │
+│              + load_game.php                                │
+└─────────────────────────────────────────────────────────────┘
+                         │
+                         │ HTTP POST with JSON
+                         ▼
+              ┌──────────────────────┐
+              │   PHP File System    │
+              │   pieces/*.json      │
+              │   saves/*.json       │
+              │   ledgers/*.json     │
+              └──────────────────────┘
+```
+
+---
+
+## Implementation Plan
+
+### Phase 1: Fix Existing PHP API
+
+**Files to Modify:**
+- `php/file_io.php` - Add better error handling, CORS headers
+- `js/piece-manager.js` - Add localStorage fallback, retry logic
+- `js/master-ledger.js` - Add immediate save option, localStorage backup
+
+**Changes:**
+
+#### 1.1 Update `php/file_io.php`
+
+```php
+<?php
+// Add CORS headers for local development
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+header('Content-Type: application/json');
+
+// Handle preflight
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+// Add session support
+session_start();
+
+// Track last modification time for conflict resolution
+$basePath = dirname(__DIR__) . '/';
+// ... rest of existing code with better error reporting
+?>
+```
+
+#### 1.2 Update `js/piece-manager.js`
+
+```javascript
+async updatePieceState(pieceId, newValues) {
+    const piece = this.pieces.get(pieceId);
+    if (!piece) return false;
+    
+    // Update in-memory state
+    Object.assign(piece.state, newValues);
+    
+    // IMMEDIATE: Save to localStorage as backup
+    localStorage.setItem(`piece_${pieceId}`, JSON.stringify(piece.state));
+    
+    // ASYNC: Try to save to PHP
+    try {
+        const response = await fetch(`${this.phpApi}?action=write`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                path: `${this.piecesDir}/${pieceId}/piece.json`,
+                content: JSON.stringify(piece, null, 2)
+            })
+        });
+        
+        const result = await response.json();
+        if (result.success) {
+            console.log(`[PieceManager] Saved ${pieceId} to PHP`);
+        } else {
+            console.warn(`[PieceManager] PHP save failed, using localStorage`);
+        }
+    } catch (error) {
+        console.warn(`[PieceManager] PHP unavailable, using localStorage`);
+        // localStorage already saved above
+    }
+    
+    return true;
+}
+
+// New method: Load from localStorage if PHP fails
+async loadPiece(pieceId) {
+    try {
+        const response = await fetch(`${this.phpApi}?action=read&path=${this.piecesDir}/${pieceId}/piece.json`);
+        if (response.ok) {
+            const pieceData = await response.json();
+            this.pieces.set(pieceId, pieceData);
+            return pieceData;
+        }
+    } catch (error) {
+        console.warn(`[PieceManager] PHP load failed, trying localStorage`);
+    }
+    
+    // Fallback to localStorage
+    const saved = localStorage.getItem(`piece_${pieceId}`);
+    if (saved) {
+        const pieceData = { state: JSON.parse(saved) };
+        this.pieces.set(pieceId, pieceData);
+        console.log(`[PieceManager] Loaded ${pieceId} from localStorage`);
+        return pieceData;
+    }
+    
+    // Use default
+    const pieceData = this.createDefaultPiece(pieceId);
+    this.pieces.set(pieceId, pieceData);
+    return pieceData;
+}
+```
+
+#### 1.3 Update `js/master-ledger.js`
+
+```javascript
+// Add immediate save option
+log(entryType, message, source, immediate = false) {
+    const entry = {
+        timestamp: new Date().toISOString(),
+        type: entryType,
+        message: message,
+        source: source
+    };
+    
+    this.entries.push(entry);
+    
+    // Also save to localStorage immediately
+    this.saveToLocalStorage();
+    
+    if (immediate) {
+        // Force immediate PHP save
+        this.saveBatch();
+    } else if (this.autoSave) {
+        this.queueSave(entry);
+    }
+    
+    return entry;
+}
+
+saveToLocalStorage() {
+    try {
+        localStorage.setItem('master_ledger', JSON.stringify(this.entries));
+    } catch (e) {
+        console.warn('[MasterLedger] localStorage save failed:', e);
+    }
+}
+
+async load() {
+    // Try PHP first
+    try {
+        const response = await fetch(`${this.phpApi}?action=read&path=${this.ledgerFile}`);
+        if (response.ok) {
+            const data = await response.json();
+            this.entries = Array.isArray(data) ? data : [];
+            this.saveToLocalStorage(); // Backup to localStorage
+            return;
+        }
+    } catch (error) {
+        console.warn('[MasterLedger] PHP load failed, trying localStorage');
+    }
+    
+    // Fallback to localStorage
+    const saved = localStorage.getItem('master_ledger');
+    if (saved) {
+        this.entries = JSON.parse(saved);
+        console.log(`[MasterLedger] Loaded ${this.entries.length} entries from localStorage`);
+    }
+}
+```
+
+---
+
+### Phase 2: Add Save/Load Game API
+
+**New Files:**
+- `php/save_game.php` - Save complete game state
+- `php/load_game.php` - Load complete game state
+- `php/session_manager.php` - Manage user sessions
+
+#### 2.1 `php/save_game.php`
+
+```php
+<?php
+/**
+ * save_game.php - Save complete game state
+ * 
+ * POST: {
+ *   "session_id": "user123",
+ *   "game_state": {
+ *     "fuzzpet": { ... },
+ *     "clock": { ... },
+ *     "counter": { ... }
+ *   }
+ * }
+ */
+
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+$data = json_decode(file_get_contents('php://input'), true);
+$sessionId = $data['session_id'] ?? 'default';
+$gameState = $data['game_state'] ?? null;
+
+if (!$gameState) {
+    http_response_code(400);
+    echo json_encode(['error' => 'No game state provided']);
+    exit;
+}
+
+$basePath = dirname(__DIR__) . '/saves/';
+if (!is_dir($basePath)) {
+    mkdir($basePath, 0755, true);
+}
+
+$saveFile = $basePath . "save_{$sessionId}.json";
+$saveData = [
+    'session_id' => $sessionId,
+    'saved_at' => date('c'),
+    'game_state' => $gameState
+];
+
+if (file_put_contents($saveFile, json_encode($saveData, JSON_PRETTY_PRINT))) {
+    echo json_encode([
+        'success' => true,
+        'save_file' => "save_{$sessionId}.json",
+        'saved_at' => $saveData['saved_at']
+    ]);
+} else {
+    http_response_code(500);
+    echo json_encode(['error' => 'Failed to save game']);
+}
+?>
+```
+
+#### 2.2 `php/load_game.php`
+
+```php
+<?php
+/**
+ * load_game.php - Load complete game state
+ * 
+ * GET: ?session_id=user123
+ * POST: { "session_id": "user123" }
+ */
+
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+$sessionId = $_GET['session_id'] ?? 
+             (json_decode(file_get_contents('php://input'), true)['session_id'] ?? 'default');
+
+$basePath = dirname(__DIR__) . '/saves/';
+$saveFile = $basePath . "save_{$sessionId}.json";
+
+if (!file_exists($saveFile)) {
+    http_response_code(404);
+    echo json_encode(['error' => 'No save found for session', 'session_id' => $sessionId]);
+    exit;
+}
+
+$saveData = json_decode(file_get_contents($saveFile), true);
+
+echo json_encode([
+    'success' => true,
+    'saved_at' => $saveData['saved_at'],
+    'game_state' => $saveData['game_state']
+]);
+?>
+```
+
+---
+
+### Phase 3: Update FuzzPet to Use Save/Load
+
+**File:** `js/apps/fuzzpet.js`
+
+```javascript
+// Add save/load methods to fuzzpetGame object
+
+fuzzpetGame = {
+    // ... existing properties ...
+    
+    sessionId: 'default', // Could be from user login
+    
+    saveGame() {
+        const gameState = {
+            fuzzpet: this.petState,
+            clock: this.clockState,
+            world: this.worldState
+        };
+        
+        // Save via PHP
+        fetch('php/save_game.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                session_id: this.sessionId,
+                game_state: gameState
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                this.showMessage(`✓ Game saved at ${data.saved_at}`);
+                masterLedger.log('StateChange', 'Game saved', 'fuzzpet', true);
+            } else {
+                this.showMessage('✗ Save failed: ' + data.error);
+            }
+        })
+        .catch(err => {
+            this.showMessage('✗ Save error: ' + err.message);
+            // Fallback to localStorage
+            localStorage.setItem('fuzzpet_save', JSON.stringify(gameState));
+            this.showMessage('✓ Saved to browser storage');
+        });
+    },
+    
+    loadGame() {
+        fetch(`php/load_game.php?session_id=${this.sessionId}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                this.petState = { ...this.petState, ...data.game_state.fuzzpet };
+                this.clockState = { ...this.clockState, ...data.game_state.clock };
+                this.showMessage(`✓ Game loaded from ${data.saved_at}`);
+                this.render();
+                this.updateStats();
+                masterLedger.log('StateChange', 'Game loaded', 'fuzzpet', true);
+            } else {
+                this.showMessage('No save found');
+            }
+        })
+        .catch(err => {
+            // Try localStorage fallback
+            const saved = localStorage.getItem('fuzzpet_save');
+            if (saved) {
+                const gameState = JSON.parse(saved);
+                this.petState = { ...this.petState, ...gameState.fuzzpet };
+                this.clockState = { ...this.clockState, ...gameState.clock };
+                this.showMessage('✓ Loaded from browser storage');
+                this.render();
+                this.updateStats();
+            } else {
+                this.showMessage('No save found');
+            }
+        });
+    },
+    
+    // Auto-save every 30 seconds
+    autoSaveInterval: null,
+    
+    startAutoSave() {
+        this.autoSaveInterval = setInterval(() => {
+            this.saveGame();
+        }, 30000);
+    },
+    
+    stopAutoSave() {
+        if (this.autoSaveInterval) {
+            clearInterval(this.autoSaveInterval);
+        }
+    }
+};
+
+// Update init() to start auto-save
+init(win) {
+    this.window = win;
+    this.loadState();
+    this.render();
+    this.updateStats();
+    this.setupKeyboard();
+    this.startAutoSave(); // ← Add this
+    masterLedger.log('StateChange', 'FuzzPet game initialized', 'fuzzpet');
+}
+```
+
+---
+
+## Testing Checklist
+
+### Before (Current State)
+- [ ] Open FuzzPet
+- [ ] Move pet, feed it, play with it
+- [ ] Refresh browser
+- [ ] ❌ Pet resets to starting position and stats
+
+### After (With Persistence)
+- [ ] Open FuzzPet
+- [ ] Move pet, feed it, play with it
+- [ ] Refresh browser
+- [ ] ✅ Pet retains position and stats
+- [ ] Close browser completely
+- [ ] Reopen browser
+- [ ] ✅ Pet still has saved state
+- [ ] Type `save` in terminal
+- [ ] ✅ Manual save confirmation
+- [ ] Type `load` in terminal
+- [ ] ✅ Manual load confirmation
+
+---
+
+## File Structure (After Implementation)
+
+```
+py2php_os/
+├── pieces/                    # Persistent piece state
+│   ├── fuzzpet/
+│   │   ├── piece.json        # ← Saved via PHP
+│   │   ├── history.json      # ← Saved via PHP
+│   │   └── ledger.json
+│   ├── clock/
+│   │   └── piece.json        # ← Saved via PHP
+│   └── counter/
+│       └── piece.json        # ← Saved via PHP
+├── saves/                     # NEW: User save files
+│   ├── save_default.json
+│   ├── save_user123.json
+│   └── ...
+├── ledgers/                   # NEW: Archived ledgers
+│   └── master_ledger.json
+├── php/
+│   ├── file_io.php           # Enhanced with sessions
+│   ├── save_game.php         # NEW
+│   ├── load_game.php         # NEW
+│   └── session_manager.php   # NEW
+└── js/
+    ├── piece-manager.js      # With localStorage fallback
+    ├── master-ledger.js      # With localStorage backup
+    └── apps/
+        └── fuzzpet.js        # With save/load methods
+```
+
+---
+
+## Security Considerations
+
+1. **Input Validation**: Sanitize session_id to prevent directory traversal
+2. **Rate Limiting**: Limit save frequency to prevent abuse
+3. **File Permissions**: Ensure saves/ directory is writable but not executable
+4. **Session Management**: Implement proper user authentication for multi-user
+5. **Data Validation**: Validate game state before saving (no negative hunger, etc.)
+
+---
+
+## Migration Path
+
+### Week 1: Fix PHP API
+- [ ] Update `file_io.php` with better error handling
+- [ ] Add localStorage fallback to `piece-manager.js`
+- [ ] Add localStorage backup to `master-ledger.js`
+- [ ] Test persistence across page refresh
+
+### Week 2: Save/Load System
+- [ ] Create `save_game.php` and `load_game.php`
+- [ ] Add save/load to FuzzPet game
+- [ ] Add auto-save functionality
+- [ ] Test save/load cycle
+
+### Week 3: Session Management
+- [ ] Create `session_manager.php`
+- [ ] Add user session support
+- [ ] Implement multiple save slots
+- [ ] Add save file browser UI
+
+### Week 4: Polish
+- [ ] Add save confirmation UI
+- [ ] Add load/save keyboard shortcuts
+- [ ] Implement auto-save indicator
+- [ ] Add error recovery UI
+
+---
+
+## Conclusion
+
+**Current State:** All game state is in JavaScript memory only. Refreshing the browser loses all progress.
+
+**Required Changes:**
+1. Fix piece-manager.js to actually save via PHP
+2. Add localStorage as immediate fallback
+3. Create save_game.php / load_game.php for explicit saves
+4. Update FuzzPet to use new save system
+5. Implement auto-save every 30 seconds
+
+**Priority:** HIGH - Without persistence, the game is not playable long-term.
+
+---
+
+## Quick Test Commands
+
+After implementing:
+
+```javascript
+// In browser console, test PHP connection:
+fetch('php/file_io.php?action=read&path=pieces/fuzzpet/piece.json')
+  .then(r => r.json())
+  .then(console.log);
+
+// Test save:
+fetch('php/save_game.php', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({
+    session_id: 'test',
+    game_state: {fuzzpet: {test: true}}
+  })
+}).then(r => r.json()).then(console.log);
+```

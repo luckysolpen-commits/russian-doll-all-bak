@@ -1,0 +1,27 @@
+{
+  "state": {
+    "visible": true,
+    "focus": null,
+    "input_buffer": ""
+  },
+  "methods": [
+    "handle_keydown",
+    "handle_keyup",
+    "set_focus",
+    "clear_focus"
+  ],
+  "event_listeners": [
+    "keydown",
+    "keyup",
+    "focus_changed"
+  ],
+  "responses": {
+    "keydown": "Key pressed",
+    "keyup": "Key released",
+    "focus_changed": "Focus changed to new element"
+  },
+  "relations": {
+    "parent": "desktop",
+    "children": []
+  }
+}

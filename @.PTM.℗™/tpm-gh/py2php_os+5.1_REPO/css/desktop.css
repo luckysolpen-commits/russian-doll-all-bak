@@ -1,0 +1,318 @@
+/* desktop.css - PyOS-TPM Web Desktop Environment */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+#desktop {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ========== Toolbar ========== */
+#toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, #2d3e50, #1a252f);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.toolbar-left,
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.toolbar-btn {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.toolbar-btn:hover {
+    background: linear-gradient(to bottom, #5dade2, #3498db);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.4);
+}
+
+.toolbar-btn:active {
+    transform: translateY(0);
+}
+
+.toolbar-clock {
+    color: white;
+    font-size: 13px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* ========== Dropdowns ========== */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background: linear-gradient(to bottom, #34495e, #2c3e50);
+    min-width: 180px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 0 0 6px 6px;
+    z-index: 1001;
+    padding: 5px 0;
+}
+
+#fileDropdown {
+    left: 10px;
+}
+
+#appsDropdown {
+    left: 100px;
+}
+
+.dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.dropdown-content button:hover {
+    background: rgba(52, 152, 219, 0.3);
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+}
+
+/* ========== Context Menu ========== */
+.context-menu {
+    display: none;
+    position: absolute;
+    background: linear-gradient(to bottom, #34495e, #2c3e50);
+    min-width: 180px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    z-index: 2000;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.context-item {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.context-item:hover {
+    background: rgba(52, 152, 219, 0.3);
+}
+
+.context-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+}
+
+/* ========== Taskbar ========== */
+#taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background: linear-gradient(to bottom, #2d3e50, #1a252f);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.start-btn {
+    background: linear-gradient(to bottom, #27ae60, #229954);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: all 0.2s;
+}
+
+.start-btn:hover {
+    background: linear-gradient(to bottom, #2ecc71, #27ae60);
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+}
+
+#taskbar-windows {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow-x: auto;
+}
+
+.taskbar-window {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.taskbar-window:hover {
+    background: linear-gradient(to bottom, #5dade2, #3498db);
+}
+
+.taskbar-window.active {
+    background: linear-gradient(to bottom, #1abc9c, #16a085);
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+}
+
+#taskbar-tray {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.tray-icon {
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.tray-icon:hover {
+    opacity: 1;
+}
+
+/* ========== Desktop Icons Area ========== */
+.desktop-icons {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1;
+}
+
+.desktop-icon {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.desktop-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.desktop-icon .icon {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.desktop-icon .label {
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* ========== Welcome Screen ========== */
+#welcome-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #34495e, #2c3e50);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 500;
+    max-width: 500px;
+}
+
+#welcome-screen h1 {
+    color: #3498db;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+#welcome-screen p {
+    color: #ecf0f1;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#welcome-screen button {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    transition: all 0.2s;
+}
+
+#welcome-screen button:hover {
+    background: linear-gradient(to bottom, #5dade2, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}

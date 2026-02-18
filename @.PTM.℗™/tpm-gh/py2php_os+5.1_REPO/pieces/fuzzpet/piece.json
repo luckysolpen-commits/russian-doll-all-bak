@@ -1,0 +1,12 @@
+{
+  "state": {
+    "{\"content\":\"pos_x": "5\\npos_y 5\\nname FuzzPet\\nhunger 50\\nhappiness 50\\nenergy 50\\nlevel 1\\n\"}",
+    "pos_x": 5,
+    "pos_y": 3,
+    "name": "FuzzPet",
+    "hunger": 30,
+    "happiness": 55,
+    "energy": 50,
+    "level": 1
+  }
+}

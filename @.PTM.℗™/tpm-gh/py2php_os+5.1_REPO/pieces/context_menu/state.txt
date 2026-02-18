@@ -1,0 +1,7 @@
+visible false
+position_x 0
+position_y 0
+selected_option 
+options open_terminal,show_apps,settings,screensaver,hangman,pyboard2d,pyboard3d,counter,fuzzpet
+width 200
+height 280

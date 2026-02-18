@@ -1,0 +1,296 @@
+/* windows.css - PyOS-TPM Window Styles */
+
+/* ========== Base Window ========== */
+.window {
+    position: absolute;
+    background: linear-gradient(to bottom, #ecf0f1, #bdc3c7);
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    min-width: 200px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+}
+
+.window:hover {
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.5);
+}
+
+.window.dragging {
+    opacity: 0.9;
+    cursor: move;
+}
+
+.window.resizing {
+    cursor: se-resize;
+}
+
+.window.minimized {
+    display: none;
+}
+
+.window.maximized {
+    border-radius: 0;
+}
+
+/* ========== Title Bar ========== */
+.title-bar {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: move;
+    user-select: none;
+}
+
+.title-text {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.window-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.control-btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.minimize-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.minimize-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.maximize-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.maximize-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.close-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.close-btn:hover {
+    background: #c0392b;
+}
+
+/* ========== Content Area ========== */
+.content-area {
+    flex: 1;
+    overflow: auto;
+    background: white;
+    position: relative;
+}
+
+/* ========== Resize Handle ========== */
+.resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    cursor: se-resize;
+    background: linear-gradient(135deg, transparent 50%, rgba(0, 0, 0, 0.1) 50%);
+}
+
+/* ========== Terminal Window Styles ========== */
+.terminal-window .content-area {
+    background: #1a1a2e;
+}
+
+.terminal-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+}
+
+.terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    color: #00ff00;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #0d0d1a;
+    border-radius: 5px;
+    user-select: text;
+    cursor: text;
+}
+
+.terminal-output::-moz-selection {
+    background: #00ff00;
+    color: #1a1a2e;
+}
+
+.terminal-output::selection {
+    background: #00ff00;
+    color: #1a1a2e;
+}
+
+.terminal-line {
+    margin-bottom: 3px;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.terminal-response {
+    color: #00ffff;
+}
+
+.terminal-error {
+    color: #ff6b6b;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+}
+
+.terminal-input {
+    flex: 1;
+    background: #2a2a3e;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    outline: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.terminal-input:focus {
+    background: #3a3a4e;
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.terminal-input::placeholder {
+    color: #00aa00;
+}
+
+/* ========== App-Specific Window Styles ========== */
+.pyboard2d-window {
+    background: #2c3e50;
+}
+
+.pyboard2d-window .content-area {
+    background: #1a1a2e;
+}
+
+.pyboard3d-window {
+    background: #2c3e50;
+}
+
+.pyboard3d-window .content-area {
+    background: #000;
+}
+
+.cube-window .content-area {
+    background: #0a0a0a;
+}
+
+.hangman-window .content-area {
+    background: linear-gradient(to bottom, #fff5e6, #ffe0b2);
+}
+
+.settings-window .content-area {
+    background: #f5f6fa;
+}
+
+/* ========== Scrollbar Styles ========== */
+.content-area::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.content-area::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.content-area::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.content-area::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.terminal-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 4px;
+}
+
+/* ========== Window Animations ========== */
+@keyframes windowOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.window {
+    animation: windowOpen 0.2s ease-out;
+}
+
+@keyframes windowClose {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+.window.closing {
+    animation: windowClose 0.2s ease-out forwards;
+}

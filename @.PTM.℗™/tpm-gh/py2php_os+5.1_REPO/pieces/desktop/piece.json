@@ -1,0 +1,35 @@
+{
+  "state": {
+    "visible": true,
+    "context_menu_visible": false,
+    "background": "default",
+    "width": 1920,
+    "height": 1080
+  },
+  "methods": [
+    "show_context_menu",
+    "hide_context_menu",
+    "add_window",
+    "remove_window",
+    "open_terminal",
+    "resize"
+  ],
+  "event_listeners": [
+    "right_click",
+    "window_created",
+    "window_destroyed",
+    "context_menu_requested",
+    "desktop_resized"
+  ],
+  "responses": {
+    "right_click": "Desktop right-clicked, showing context menu",
+    "window_created": "Window added to desktop",
+    "window_destroyed": "Window removed from desktop",
+    "desktop_resized": "Desktop resized successfully",
+    "context_menu_requested": "Context menu requested at position"
+  },
+  "relations": {
+    "parent": "root",
+    "children": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "state": {
+    "width": 10,
+    "height": 10,
+    "grid": [
+      "##########",
+      "#        #",
+      "#        #",
+      "#        #",
+      "#   @    #",
+      "#        #",
+      "#        #",
+      "#        #",
+      "#        #",
+      "##########"
+    ],
+    "boundaries": {
+      "min_x": 1,
+      "max_x": 8,
+      "min_y": 1,
+      "max_y": 8
+    }
+  },
+  "methods": [
+    "is_valid_position",
+    "get_grid",
+    "render"
+  ],
+  "event_listeners": [
+    "pet_moved",
+    "map_updated"
+  ],
+  "responses": {
+    "pet_moved": "Pet position updated on map",
+    "map_updated": "Map display refreshed"
+  },
+  "relations": {
+    "parent": "fuzzpet",
+    "children": []
+  }
+}

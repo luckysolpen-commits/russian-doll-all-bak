@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyOS-TPM Web Edition</title>
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/windows.css">
+</head>
+<body>
+    <div id="desktop">
+        <!-- Toolbar -->
+        <div id="toolbar">
+            <div class="toolbar-left">
+                <button id="fileBtn" class="toolbar-btn">File</button>
+                <button id="appsBtn" class="toolbar-btn">Apps</button>
+                <button id="terminalBtn" class="toolbar-btn">Terminal</button>
+            </div>
+            <div class="toolbar-right">
+                <span id="clock" class="toolbar-clock">00:00:00</span>
+            </div>
+            
+            <!-- File Dropdown -->
+            <div id="fileDropdown" class="dropdown-content">
+                <button id="newWindowBtn">New Window</button>
+                <button id="openTerminalBtn">Open Terminal</button>
+                <div class="dropdown-divider"></div>
+                <button id="settingsBtn">Settings</button>
+            </div>
+            
+            <!-- Apps Dropdown -->
+            <div id="appsDropdown" class="dropdown-content">
+                <button data-app="terminal">Terminal</button>
+                <button data-app="counter">Demo Counter</button>
+                <button data-app="fuzzpet">🐾 FuzzPet</button>
+                <button data-app="hangman">Hangman</button>
+                <button data-app="pyboard2d">2D PyBoard</button>
+                <button data-app="pyboard3d">3D PyBoard</button>
+                <button data-app="cube">3D Cube</button>
+                <div class="dropdown-divider"></div>
+                <button data-app="settings">Settings</button>
+                <button data-app="store">Store</button>
+                <button data-app="wallet">Wallet</button>
+            </div>
+        </div>
+        
+        <!-- Context Menu (hidden by default) -->
+        <div id="context-menu" class="context-menu">
+            <div class="context-item" data-action="open_terminal">Open Terminal</div>
+            <div class="context-item" data-action="show_apps">Applications</div>
+            <div class="context-divider"></div>
+            <div class="context-item" data-action="counter">Demo Counter</div>
+            <div class="context-item" data-action="fuzzpet">🐾 FuzzPet</div>
+            <div class="context-divider"></div>
+            <div class="context-item" data-action="hangman">Hangman</div>
+            <div class="context-item" data-action="pyboard2d">2D PyBoard</div>
+            <div class="context-item" data-action="pyboard3d">3D PyBoard</div>
+            <div class="context-divider"></div>
+            <div class="context-item" data-action="settings">Settings</div>
+            <div class="context-item" data-action="refresh">Refresh</div>
+        </div>
+        
+        <!-- Taskbar -->
+        <div id="taskbar">
+            <button id="startBtn" class="start-btn">☰ Start</button>
+            <div id="taskbar-windows"></div>
+            <div id="taskbar-tray">
+                <span class="tray-icon">🔊</span>
+                <span class="tray-icon">📶</span>
+                <span class="tray-icon">🔋</span>
+            </div>
+        </div>
+        
+        <!-- Windows will be dynamically added here -->
+    </div>
+    
+    <!-- Load JavaScript modules -->
+    <script src="js/plugin-interface.js?v=1"></script>
+    <script src="js/master-ledger.js?v=1"></script>
+    <script src="js/piece-manager.js?v=1"></script>
+    <script src="js/plugins/counter-plugin.js?v=1"></script>
+    <script src="js/window-manager.js?v=1"></script>
+    <script src="js/desktop.js?v=1"></script>
+    <script src="js/apps/demo-counter.js?v=1"></script>
+    <script src="js/apps/fuzzpet.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+{
+    "0": {
+        "timestamp": "2026-02-17T08:59:47.207Z",
+        "type": "StateChange",
+        "message": "Counter plugin initialized",
+        "source": "CounterPlugin"
+    },
+    "1": {
+        "timestamp": "2026-02-17T08:59:47.239Z",
+        "type": "StateChange",
+        "message": "loaded 3 pieces",
+        "source": "piece_manager"
+    },
+    "2": {
+        "timestamp": "2026-02-17T08:59:47.240Z",
+        "type": "StateChange",
+        "message": "Desktop initialized",
+        "source": "desktop"
+    },
+    "3": {
+        "timestamp": "2026-02-17T08:59:47.743Z",
+        "type": "StateChange",
+        "message": "window \"Welcome\" created",
+        "source": "window_manager"
+    },
+    "4": {
+        "timestamp": "2026-02-17T08:59:48.749Z",
+        "type": "EventFire",
+        "message": "right_click on desktop: Desktop right-clicked, showing context menu",
+        "source": "piece_manager"
+    },
+    "5": {
+        "timestamp": "2026-02-17T08:59:49.424Z",
+        "type": "StateChange",
+        "message": "window \"Terminal\" created",
+        "source": "window_manager"
+    },
+    "6": {
+        "timestamp": "2026-02-17T08:59:49.435Z",
+        "type": "EventFire",
+        "message": "terminal_opened on terminal: Terminal window opened",
+        "source": "piece_manager"
+    },
+    "7": {
+        "timestamp": "2026-02-17T08:59:52.627Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "8": {
+        "timestamp": "2026-02-17T08:59:52.663Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "9": {
+        "timestamp": "2026-02-17T08:59:52.686Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "timestamp": "2026-02-17T09:55:38.007Z",
+    "type": "EventFire",
+    "message": "window win_1771322136163_886 dragged",
+    "source": "window_manager",
+    "10": {
+        "timestamp": "2026-02-17T08:59:58.100Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "11": {
+        "timestamp": "2026-02-17T08:59:58.118Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "12": {
+        "timestamp": "2026-02-17T08:59:58.119Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "13": {
+        "timestamp": "2026-02-17T08:59:58.167Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "14": {
+        "timestamp": "2026-02-17T09:02:02.965Z",
+        "type": "StateChange",
+        "message": "Counter plugin initialized",
+        "source": "CounterPlugin"
+    },
+    "15": {
+        "timestamp": "2026-02-17T09:02:02.996Z",
+        "type": "StateChange",
+        "message": "loaded 3 pieces",
+        "source": "piece_manager"
+    },
+    "16": {
+        "timestamp": "2026-02-17T09:02:02.997Z",
+        "type": "StateChange",
+        "message": "Desktop initialized",
+        "source": "desktop"
+    },
+    "17": {
+        "timestamp": "2026-02-17T09:02:03.499Z",
+        "type": "StateChange",
+        "message": "window \"Welcome\" created",
+        "source": "window_manager"
+    },
+    "18": {
+        "timestamp": "2026-02-17T09:02:03.582Z",
+        "type": "EventFire",
+        "message": "right_click on desktop: Desktop right-clicked, showing context menu",
+        "source": "piece_manager"
+    },
+    "19": {
+        "timestamp": "2026-02-17T09:02:04.155Z",
+        "type": "StateChange",
+        "message": "window \"Terminal\" created",
+        "source": "window_manager"
+    },
+    "20": {
+        "timestamp": "2026-02-17T09:02:04.164Z",
+        "type": "EventFire",
+        "message": "terminal_opened on terminal: Terminal window opened",
+        "source": "piece_manager"
+    },
+    "21": {
+        "timestamp": "2026-02-17T09:06:40.105Z",
+        "type": "StateChange",
+        "message": "Counter plugin initialized",
+        "source": "CounterPlugin"
+    },
+    "22": {
+        "timestamp": "2026-02-17T09:06:40.140Z",
+        "type": "StateChange",
+        "message": "loaded 3 pieces",
+        "source": "piece_manager"
+    },
+    "23": {
+        "timestamp": "2026-02-17T09:06:40.140Z",
+        "type": "StateChange",
+        "message": "Desktop initialized",
+        "source": "desktop"
+    },
+    "24": {
+        "timestamp": "2026-02-17T09:06:40.642Z",
+        "type": "StateChange",
+        "message": "window \"Welcome\" created",
+        "source": "window_manager"
+    },
+    "25": {
+        "timestamp": "2026-02-17T09:06:40.735Z",
+        "type": "EventFire",
+        "message": "right_click on desktop: Desktop right-clicked, showing context menu",
+        "source": "piece_manager"
+    },
+    "26": {
+        "timestamp": "2026-02-17T09:06:41.400Z",
+        "type": "StateChange",
+        "message": "window \"Terminal\" created",
+        "source": "window_manager"
+    },
+    "27": {
+        "timestamp": "2026-02-17T09:06:41.413Z",
+        "type": "EventFire",
+        "message": "terminal_opened on terminal: Terminal window opened",
+        "source": "piece_manager"
+    },
+    "28": {
+        "timestamp": "2026-02-17T09:10:14.302Z",
+        "type": "StateChange",
+        "message": "window \"Demo Counter\" created",
+        "source": "window_manager"
+    },
+    "29": {
+        "timestamp": "2026-02-17T09:10:14.302Z",
+        "type": "StateChange",
+        "message": "counter app opened",
+        "source": "desktop"
+    },
+    "30": {
+        "timestamp": "2026-02-17T09:10:14.303Z",
+        "type": "EventFire",
+        "message": "App launched: counter",
+        "source": "desktop"
+    },
+    "31": {
+        "timestamp": "2026-02-17T09:10:15.706Z",
+        "type": "StateChange",
+        "message": "Counter increment: 1",
+        "source": "counter_plugin"
+    },
+    "32": {
+        "timestamp": "2026-02-17T09:10:16.545Z",
+        "type": "StateChange",
+        "message": "Counter increment: 2",
+        "source": "counter_plugin"
+    },
+    "33": {
+        "timestamp": "2026-02-17T09:10:22.340Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "34": {
+        "timestamp": "2026-02-17T09:10:22.371Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "35": {
+        "timestamp": "2026-02-17T09:10:22.388Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "36": {
+        "timestamp": "2026-02-17T09:10:22.447Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "37": {
+        "timestamp": "2026-02-17T09:13:11.857Z",
+        "type": "StateChange",
+        "message": "Counter plugin initialized",
+        "source": "CounterPlugin"
+    },
+    "38": {
+        "timestamp": "2026-02-17T09:13:11.894Z",
+        "type": "StateChange",
+        "message": "loaded 3 pieces",
+        "source": "piece_manager"
+    },
+    "39": {
+        "timestamp": "2026-02-17T09:13:11.894Z",
+        "type": "StateChange",
+        "message": "Desktop initialized",
+        "source": "desktop"
+    },
+    "40": {
+        "timestamp": "2026-02-17T09:13:12.396Z",
+        "type": "StateChange",
+        "message": "window \"Welcome\" created",
+        "source": "window_manager"
+    },
+    "41": {
+        "timestamp": "2026-02-17T09:13:15.915Z",
+        "type": "StateChange",
+        "message": "window \"FuzzPet\" created",
+        "source": "window_manager"
+    },
+    "42": {
+        "timestamp": "2026-02-17T09:13:15.915Z",
+        "type": "EventFire",
+        "message": "FuzzPet app launched",
+        "source": "desktop"
+    },
+    "43": {
+        "timestamp": "2026-02-17T09:13:15.966Z",
+        "type": "StateChange",
+        "message": "FuzzPet game initialized",
+        "source": "fuzzpet"
+    },
+    "44": {
+        "timestamp": "2026-02-17T09:13:23.274Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "45": {
+        "timestamp": "2026-02-17T09:13:23.275Z",
+        "type": "EventFire",
+        "message": "desktop_resized on desktop: Desktop resized successfully",
+        "source": "piece_manager"
+    },
+    "46": {
+        "timestamp": "2026-02-17T09:30:25.776Z",
+        "type": "StateChange",
+        "message": "Counter plugin initialized",
+        "source": "CounterPlugin"
+    },
+    "47": {
+        "timestamp": "2026-02-17T09:30:25.843Z",
+        "type": "StateChange",
+        "message": "loaded 8 pieces",
+        "source": "piece_manager"
+    },
+    "48": {
+        "timestamp": "2026-02-17T09:30:25.844Z",
+        "type": "StateChange",
+        "message": "Desktop initialized",
+        "source": "desktop"
+    },
+    "49": {
+        "timestamp": "2026-02-17T09:30:26.346Z",
+        "type": "StateChange",
+        "message": "window \"Welcome\" created",
+        "source": "window_manager"
+    },
+    "50": {
+        "timestamp": "2026-02-17T09:31:10.909Z",
+        "type": "EventFire",
+        "message": "right_click on desktop: Desktop right-clicked, showing context menu",
+        "source": "piece_manager"
+    },
+    "51": {
+        "timestamp": "2026-02-17T09:31:11.753Z",
+        "type": "StateChange",
+        "message": "window \"Terminal\" created",
+        "source": "window_manager"
+    },
+    "52": {
+        "timestamp": "2026-02-17T09:31:11.762Z",
+        "type": "EventFire",
+        "message": "terminal_opened on terminal: Terminal window opened",
+        "source": "piece_manager"
+    },
+    "53": {
+        "timestamp": "2026-02-17T09:31:18.205Z",
+        "type": "StateChange",
+        "message": "window \"FuzzPet\" created",
+        "source": "window_manager"
+    },
+    "54": {
+        "timestamp": "2026-02-17T09:31:18.206Z",
+        "type": "EventFire",
+        "message": "FuzzPet app launched",
+        "source": "desktop"
+    },
+    "55": {
+        "timestamp": "2026-02-17T09:31:18.206Z",
+        "type": "EventFire",
+        "message": "App launched: fuzzpet",
+        "source": "desktop"
+    },
+    "56": {
+        "timestamp": "2026-02-17T09:31:18.257Z",
+        "type": "StateChange",
+        "message": "FuzzPet game initialized",
+        "source": "fuzzpet"
+    },
+    "57": {
+        "timestamp": "2026-02-17T09:31:21.863Z",
+        "type": "StateChange",
+        "message": "fuzzpet pos_x 6",
+        "source": "piece_manager"
+    },
+    "58": {
+        "timestamp": "2026-02-17T09:31:21.864Z",
+        "type": "StateChange",
+        "message": "fuzzpet pos_y 5",
+        "source": "piece_manager"
+    },
+    "59": {
+        "timestamp": "2026-02-17T09:31:21.864Z",
+        "type": "StateChange",
+        "message": "fuzzpet name \"FuzzPet\"",
+        "source": "piece_manager"
+    },
+    "60": {
+        "timestamp": "2026-02-17T09:31:21.865Z",
+        "type": "StateChange",
+        "message": "fuzzpet hunger 50",
+        "source": "piece_manager"
+    },
+    "61": {
+        "timestamp": "2026-02-17T09:31:21.865Z",
+        "type": "StateChange",
+        "message": "fuzzpet happiness 50",
+        "source": "piece_manager"
+    },
+    "62": {
+        "timestamp": "2026-02-17T09:31:21.865Z",
+        "type": "StateChange",
+        "message": "fuzzpet energy 50",
+        "source": "piece_manager"
+    },
+    "63": {
+        "timestamp": "2026-02-17T09:31:21.866Z",
+        "type": "StateChange",
+        "message": "fuzzpet level 1",
+        "source": "piece_manager"
+    },
+    "64": {
+        "timestamp": "2026-02-17T09:31:21.868Z",
+        "type": "StateChange",
+        "message": "clock turn 0",
+        "source": "piece_manager"
+    },
+    "65": {
+        "timestamp": "2026-02-17T09:31:21.868Z",
+        "type": "StateChange",
+        "message": "clock time \"08:00:00\"",
+        "source": "piece_manager"
+    },
+    "66": {
+        "timestamp": "2026-02-17T09:31:21.868Z",
+        "type": "MovementEvent",
+        "message": "Move right to (6, 5)",
+        "source": "fuzzpet"
+    },
+    "67": {
+        "timestamp": "2026-02-17T09:46:39.761Z",
+        "type": "StateChange",
+        "message": "Counter plugin initialized",
+        "source": "CounterPlugin"
+    },
+    "68": {
+        "timestamp": "2026-02-17T09:46:39.830Z",
+        "type": "StateChange",
+        "message": "loaded 8 pieces",
+        "source": "piece_manager"
+    },
+    "69": {
+        "timestamp": "2026-02-17T09:46:39.831Z",
+        "type": "StateChange",
+        "message": "Desktop initialized",
+        "source": "desktop"
+    },
+    "70": {
+        "timestamp": "2026-02-17T09:46:40.333Z",
+        "type": "StateChange",
+        "message": "window \"Welcome\" created",
+        "source": "window_manager"
+    },
+    "71": {
+        "timestamp": "2026-02-17T09:46:44.362Z",
+        "type": "StateChange",
+        "message": "window \"FuzzPet\" created",
+        "source": "window_manager"
+    },
+    "72": {
+        "timestamp": "2026-02-17T09:46:44.363Z",
+        "type": "EventFire",
+        "message": "FuzzPet app launched",
+        "source": "desktop"
+    },
+    "73": {
+        "timestamp": "2026-02-17T09:46:44.363Z",
+        "type": "EventFire",
+        "message": "App launched: fuzzpet",
+        "source": "desktop"
+    },
+    "74": {
+        "timestamp": "2026-02-17T09:46:44.414Z",
+        "type": "StateChange",
+        "message": "FuzzPet game initialized",
+        "source": "fuzzpet"
+    },
+    "75": {
+        "timestamp": "2026-02-17T09:55:33.714Z",
+        "type": "StateChange",
+        "message": "Counter plugin initialized",
+        "source": "CounterPlugin"
+    },
+    "76": {
+        "timestamp": "2026-02-17T09:55:33.809Z",
+        "type": "StateChange",
+        "message": "loaded 8 pieces",
+        "source": "piece_manager"
+    },
+    "77": {
+        "timestamp": "2026-02-17T09:55:33.810Z",
+        "type": "StateChange",
+        "message": "Desktop initialized",
+        "source": "desktop"
+    },
+    "78": {
+        "timestamp": "2026-02-17T09:55:34.311Z",
+        "type": "StateChange",
+        "message": "window \"Welcome\" created",
+        "source": "window_manager"
+    },
+    "79": {
+        "timestamp": "2026-02-17T09:55:36.164Z",
+        "type": "StateChange",
+        "message": "window \"FuzzPet\" created",
+        "source": "window_manager"
+    },
+    "80": {
+        "timestamp": "2026-02-17T09:55:36.165Z",
+        "type": "EventFire",
+        "message": "FuzzPet app launched",
+        "source": "desktop"
+    },
+    "81": {
+        "timestamp": "2026-02-17T09:55:36.165Z",
+        "type": "EventFire",
+        "message": "App launched: fuzzpet",
+        "source": "desktop"
+    },
+    "82": {
+        "timestamp": "2026-02-17T09:55:36.215Z",
+        "type": "StateChange",
+        "message": "FuzzPet game initialized",
+        "source": "fuzzpet"
+    }
+}
