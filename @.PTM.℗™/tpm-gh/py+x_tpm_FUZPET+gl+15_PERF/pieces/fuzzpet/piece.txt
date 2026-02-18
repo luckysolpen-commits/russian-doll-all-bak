@@ -1,0 +1,7 @@
+pos_x=5
+pos_y=8
+name=FuzzPet
+hunger=0
+happiness=100
+energy=90
+level=3

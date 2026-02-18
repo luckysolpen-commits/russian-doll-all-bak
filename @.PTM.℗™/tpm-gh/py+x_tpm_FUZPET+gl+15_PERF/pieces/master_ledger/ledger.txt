@@ -1,0 +1,6 @@
+[2026-02-17 16:46:43] MovementEvent: Move Up (key: w) | Source: keyboard_input
+[2026-02-17 16:46:43] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 7, 'name': 'FuzzPet', 'hunger': 0, 'happiness': 100, 'energy': 90, 'level': 3} | Source: game_logic
+[2026-02-17 16:46:45] MovementEvent: Move Down (key: s) | Source: keyboard_input
+[2026-02-17 16:46:45] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 8, 'name': 'FuzzPet', 'hunger': 0, 'happiness': 100, 'energy': 90, 'level': 3} | Source: game_logic
+[2026-02-17 16:46:48] CommandExecuted: Pet command 1 processed | Source: keyboard_input
+[2026-02-17 16:46:48] StateUpdate: Pet state updated: {'pos_x': 5, 'pos_y': 8, 'name': 'FuzzPet', 'hunger': 0, 'happiness': 100, 'energy': 90, 'level': 3} | Source: game_logic

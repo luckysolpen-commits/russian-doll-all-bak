@@ -1,0 +1,41 @@
+✦ Based on everything we've built together, here are my top 2 recommendations for a TPM
+  newcomer, plus my own consolidated document:
+
+  ---
+
+  1st Place: `^/^.THE_PRACTING_M*+1.txt` (THE PRACTICAL MASTER)
+
+  Why: This is the most comprehensive existing document. It covers:
+   - Core TPM principles (Everything is a Piece, Data Sovereignty, Audit Obsession)
+   - Directory structure conventions
+   - Piece definition format (state, methods, event_listeners, responses)
+   - The Three-Manager Pipeline (Piece Manager, Methods Manager, Event Manager)
+   - Master Ledger System
+   - Plugin Architecture
+   - Complete working examples
+
+  Best for: Understanding the full architecture before implementing anything.
+
+  ---
+
+  2nd Place: `*.fuzzpet_pipeline.c+x_0.0.txt` (FuzzPet Pipeline Flow)
+
+  Why: This shows TPM in action with a real codebase:
+   - Concrete file paths and data flow
+   - How keyboard input flows through the system
+   - How game_logic processes input and writes frames
+   - How renderers detect changes and display output
+   - Clock management, piece_manager usage, response handling
+   - Updated with the marker-file enhancement we added
+
+  Best for: Understanding how pieces actually communicate via files.
+
+  ---
+
+  My New Consolidated Document:
+
+  Let me write a fresh TPM onboarding document that combines philosophy + practice:
+
+ ╭──────────────────────────────────────────────────────────────────────────────────────────╮
+ │ ?  WriteFile Writing to TPM_ONBOARDING_GUIDE.txt ←                                       │
+ │                                                                 

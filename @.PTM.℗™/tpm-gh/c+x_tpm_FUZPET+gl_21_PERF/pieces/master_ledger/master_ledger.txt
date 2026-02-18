@@ -1,0 +1,117 @@
+[2026-02-17 15:14:28] InputReceived: key_code=102 | Source: gl_keyboard_input
+[2026-02-17 15:14:28] StateChange: keyboard last_key_logged f | Trigger: piece_manager_set_state
+[2026-02-17 15:14:28] EventFire: command_received on fuzzpet | Trigger: user_input
+[2026-02-17 15:14:29] InputReceived: key_code=100 | Source: gl_keyboard_input
+[2026-02-17 15:14:29] StateChange: fuzzpet pos_x 6 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:29] StateChange: fuzzpet pos_y 3 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:30] InputReceived: key_code=119 | Source: gl_keyboard_input
+[2026-02-17 15:14:30] StateChange: fuzzpet pos_x 6 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:30] StateChange: fuzzpet pos_y 2 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:30] InputReceived: key_code=119 | Source: gl_keyboard_input
+[2026-02-17 15:14:30] StateChange: fuzzpet pos_x 6 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:30] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:31] InputReceived: key_code=100 | Source: gl_keyboard_input
+[2026-02-17 15:14:31] StateChange: fuzzpet pos_x 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:31] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:31] InputReceived: key_code=100 | Source: gl_keyboard_input
+[2026-02-17 15:14:31] StateChange: fuzzpet pos_x 8 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:31] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:31] InputReceived: key_code=100 | Source: gl_keyboard_input
+[2026-02-17 15:14:31] StateChange: fuzzpet pos_x 9 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:31] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:32] InputReceived: key_code=100 | Source: gl_keyboard_input
+[2026-02-17 15:14:32] StateChange: fuzzpet pos_x 10 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:32] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:32] InputReceived: key_code=100 | Source: gl_keyboard_input
+[2026-02-17 15:14:32] StateChange: fuzzpet pos_x 11 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:32] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:32] InputReceived: key_code=115 | Source: gl_keyboard_input
+[2026-02-17 15:14:32] StateChange: fuzzpet pos_x 11 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:32] StateChange: fuzzpet pos_y 2 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:32] InputReceived: key_code=115 | Source: gl_keyboard_input
+[2026-02-17 15:14:32] StateChange: fuzzpet pos_x 11 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:32] StateChange: fuzzpet pos_y 3 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:33] InputReceived: key_code=115 | Source: gl_keyboard_input
+[2026-02-17 15:14:33] StateChange: fuzzpet pos_x 11 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:33] StateChange: fuzzpet pos_y 4 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:36] InputReceived: key_code=115 | Source: gl_keyboard_input
+[2026-02-17 15:14:36] StateChange: fuzzpet pos_x 11 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:36] StateChange: fuzzpet pos_y 5 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:37] InputReceived: key_code=115 | Source: gl_keyboard_input
+[2026-02-17 15:14:37] StateChange: fuzzpet pos_x 11 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:37] StateChange: fuzzpet pos_y 6 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:37] InputReceived: key_code=115 | Source: gl_keyboard_input
+[2026-02-17 15:14:37] StateChange: fuzzpet pos_x 11 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:37] StateChange: fuzzpet pos_y 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:37] InputReceived: key_code=97 | Source: gl_keyboard_input
+[2026-02-17 15:14:37] StateChange: fuzzpet pos_x 10 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:37] StateChange: fuzzpet pos_y 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:38] InputReceived: key_code=97 | Source: gl_keyboard_input
+[2026-02-17 15:14:38] StateChange: fuzzpet pos_x 9 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:38] StateChange: fuzzpet pos_y 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:38] InputReceived: key_code=97 | Source: gl_keyboard_input
+[2026-02-17 15:14:38] StateChange: fuzzpet pos_x 8 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:38] StateChange: fuzzpet pos_y 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:38] InputReceived: key_code=97 | Source: gl_keyboard_input
+[2026-02-17 15:14:38] StateChange: fuzzpet pos_x 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:38] StateChange: fuzzpet pos_y 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:38] InputReceived: key_code=97 | Source: gl_keyboard_input
+[2026-02-17 15:14:38] StateChange: fuzzpet pos_x 6 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:38] StateChange: fuzzpet pos_y 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:39] InputReceived: key_code=97 | Source: gl_keyboard_input
+[2026-02-17 15:14:39] StateChange: fuzzpet pos_x 5 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:39] StateChange: fuzzpet pos_y 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:39] InputReceived: key_code=97 | Source: gl_keyboard_input
+[2026-02-17 15:14:39] StateChange: fuzzpet pos_x 4 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:39] StateChange: fuzzpet pos_y 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:39] InputReceived: key_code=119 | Source: gl_keyboard_input
+[2026-02-17 15:14:39] StateChange: fuzzpet pos_x 4 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:39] StateChange: fuzzpet pos_y 6 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:39] InputReceived: key_code=119 | Source: gl_keyboard_input
+[2026-02-17 15:14:39] StateChange: fuzzpet pos_x 4 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:39] StateChange: fuzzpet pos_y 5 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] InputReceived: key_code=119 | Source: gl_keyboard_input
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_x 4 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_y 4 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] InputReceived: key_code=119 | Source: gl_keyboard_input
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_x 4 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_y 3 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] InputReceived: key_code=119 | Source: gl_keyboard_input
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_x 4 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_y 2 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] InputReceived: key_code=119 | Source: gl_keyboard_input
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_x 4 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] InputReceived: key_code=100 | Source: gl_keyboard_input
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_x 5 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:40] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:41] InputReceived: key_code=100 | Source: gl_keyboard_input
+[2026-02-17 15:14:41] StateChange: fuzzpet pos_x 6 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:41] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:41] InputReceived: key_code=100 | Source: gl_keyboard_input
+[2026-02-17 15:14:41] StateChange: fuzzpet pos_x 7 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:41] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:42] InputReceived: key_code=100 | Source: keyboard_input_service
+[2026-02-17 15:14:42] StateChange: fuzzpet pos_x 8 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:42] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:43] InputReceived: key_code=100 | Source: keyboard_input_service
+[2026-02-17 15:14:43] StateChange: fuzzpet pos_x 9 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:43] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:43] InputReceived: key_code=100 | Source: keyboard_input_service
+[2026-02-17 15:14:43] StateChange: fuzzpet pos_x 10 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:43] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:43] InputReceived: key_code=100 | Source: keyboard_input_service
+[2026-02-17 15:14:43] StateChange: fuzzpet pos_x 11 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:43] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:43] InputReceived: key_code=100 | Source: keyboard_input_service
+[2026-02-17 15:14:43] StateChange: fuzzpet pos_x 12 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:43] StateChange: fuzzpet pos_y 1 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:44] InputReceived: key_code=115 | Source: keyboard_input_service
+[2026-02-17 15:14:44] StateChange: fuzzpet pos_x 12 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:44] StateChange: fuzzpet pos_y 2 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:44] InputReceived: key_code=115 | Source: keyboard_input_service
+[2026-02-17 15:14:44] StateChange: fuzzpet pos_x 12 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:44] StateChange: fuzzpet pos_y 3 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:44] InputReceived: key_code=115 | Source: keyboard_input_service
+[2026-02-17 15:14:44] StateChange: fuzzpet pos_x 12 | Trigger: piece_manager_set_state
+[2026-02-17 15:14:44] StateChange: fuzzpet pos_y 4 | Trigger: piece_manager_set_state

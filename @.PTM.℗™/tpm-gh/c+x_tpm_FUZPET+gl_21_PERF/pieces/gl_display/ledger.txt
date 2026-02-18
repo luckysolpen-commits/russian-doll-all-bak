@@ -1,0 +1,2 @@
+# GL Display Piece Ledger - Audit Trail
+# All changes to the gl_display piece are logged here for complete auditability

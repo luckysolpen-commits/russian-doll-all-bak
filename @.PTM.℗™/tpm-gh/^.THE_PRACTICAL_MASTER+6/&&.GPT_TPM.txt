@@ -1,0 +1,269 @@
+&&.GPT_TPM-TPM-CHATGPT.TXT
+Title: Pure TPM Specification (Micro + Macro)
+Purpose: Enable a coding agent to operate inside TPM with maximal clarity, momentum, and architectural alignment.
+
+------------------------------------------------------------
+I. CORE INVARIANT
+------------------------------------------------------------
+
+Everything is a Piece.
+
+No exceptions.
+No hidden primitives.
+No special engine objects.
+No privileged layers.
+
+A NAND gate is a Piece.
+A quantum gate is a Piece.
+A clock is a Piece.
+An AI agent is a Piece.
+A galaxy is a Piece.
+A corporation is a Piece.
+A chatroom is a Piece.
+
+Scale does not change ontology.
+
+------------------------------------------------------------
+II. WHAT IS A PIECE? (MINIMAL CONTRACT)
+------------------------------------------------------------
+
+A Piece MUST have:
+
+1. Unique Identity
+   - Stable ID
+   - Deterministic reference
+
+2. State
+   - Explicit
+   - Serializable
+   - No hidden memory
+
+3. Interface (Methods)
+   - Explicitly declared
+   - Deterministic inputs
+   - Deterministic outputs
+
+4. Event Handling
+   - Can receive events
+   - Can emit events
+   - No implicit loops
+
+5. Persistence Boundary
+   - State changes must be recorded
+   - No invisible mutation
+
+A Piece MUST NOT:
+- Poll continuously
+- Mutate global state
+- Rely on hidden runtime magic
+- Perform background autonomous mutation without an event
+
+------------------------------------------------------------
+III. EVENT MODEL
+------------------------------------------------------------
+
+All change occurs through Events.
+
+Events:
+- Are explicit
+- Are atomic
+- Are logged
+- Are replayable
+
+State transitions are:
+Old State + Event -> New State
+
+The system must be replayable from genesis.
+
+No invisible transitions.
+No spontaneous mutation.
+
+------------------------------------------------------------
+IV. DETERMINISM REQUIREMENT
+------------------------------------------------------------
+
+Given:
+- Same initial state
+- Same ordered event stream
+
+The result MUST be identical.
+
+This enables:
+- Time travel
+- Forked simulation
+- Parallel world modeling
+- Auditability
+- Predictive simulation
+
+Non-determinism must be isolated and declared.
+
+------------------------------------------------------------
+V. NO PRIVILEGED SCALE
+------------------------------------------------------------
+
+A Galaxy Piece and a NAND Gate Piece differ only in:
+- State complexity
+- Method surface area
+
+They do not differ in structural rules.
+
+This enforces:
+- Conceptual flatness
+- Universal composability
+- Infinite extensibility
+
+------------------------------------------------------------
+VI. COMPOSITION OVER HIERARCHY
+------------------------------------------------------------
+
+Pieces compose other Pieces.
+
+No god-objects.
+No engine core with secret authority.
+
+Systems are built as:
+Piece networks.
+
+A “world” is a Piece.
+A “simulation” is a Piece.
+A “corporation” is a Piece composed of sub-Pieces.
+
+------------------------------------------------------------
+VII. GRAVITY PRINCIPLE
+------------------------------------------------------------
+
+TPM becomes gravitational when:
+
+As the number of Pieces increases,
+clarity increases.
+
+If adding Pieces increases confusion,
+architecture is incorrect.
+
+The system must trend toward:
+Higher legibility at higher scale.
+
+------------------------------------------------------------
+VIII. MARKETPLACE COMPATIBILITY
+------------------------------------------------------------
+
+Pieces must be:
+
+- Swappable
+- Versionable
+- Isolated
+- Contract-defined
+
+A third party should be able to:
+- Build a Piece
+- Plug it in
+- Replace another Piece
+- Sell or license it
+
+No brittle coupling.
+
+------------------------------------------------------------
+IX. TIME AS A PIECE
+------------------------------------------------------------
+
+Time is not global magic.
+
+If time exists,
+it exists as a Piece (e.g., Clock Piece).
+
+Other Pieces respond to time events.
+They do not read a hidden system clock.
+
+------------------------------------------------------------
+X. AI WITHIN TPM
+------------------------------------------------------------
+
+An AI agent is a Piece.
+
+It:
+- Receives world state
+- Emits decisions as Events
+- Does not mutate world directly
+- Is auditable
+
+No hidden AI superpowers.
+
+------------------------------------------------------------
+XI. FILE / STORAGE PHILOSOPHY
+------------------------------------------------------------
+
+Storage is not the system.
+Storage is persistence of Pieces and Events.
+
+In-memory acceleration layers are allowed,
+but canonical truth must be reconstructable.
+
+------------------------------------------------------------
+XII. MICRO GUIDELINES FOR CODING AGENT
+------------------------------------------------------------
+
+When implementing a Piece:
+
+1. Define ID.
+2. Define state schema.
+3. Define event handlers.
+4. Define allowed emitted events.
+5. Ensure state mutation only occurs inside handler.
+6. Ensure event emission is explicit.
+
+Never:
+- Mutate state outside event processing.
+- Access another Piece’s internal state directly.
+- Create hidden execution loops.
+
+------------------------------------------------------------
+XIII. MACRO SYSTEM INTENT
+------------------------------------------------------------
+
+TPM is not just a game engine.
+
+It is:
+- A deterministic universe kernel
+- A governance substrate
+- A composable simulation layer
+- A coordination primitive
+
+Its goal is to unify:
+Physics
+Economics
+AI
+Biotech
+Corporate structures
+Social systems
+
+Under one rule:
+Everything is Pieces.
+
+------------------------------------------------------------
+XIV. FAILURE CONDITIONS
+------------------------------------------------------------
+
+TPM has failed if:
+
+- There exist non-Piece entities.
+- State mutates invisibly.
+- Events are not replayable.
+- Complexity grows faster than clarity.
+- A central authority object emerges.
+
+------------------------------------------------------------
+XV. SUCCESS CONDITIONS
+------------------------------------------------------------
+
+TPM succeeds if:
+
+- Entire worlds can be replayed deterministically.
+- Massive systems remain legible.
+- Third parties can build interoperable Pieces.
+- AI agents operate safely and transparently.
+- Forking realities is trivial.
+
+------------------------------------------------------------
+END OF DOCUMENT
+------------------------------------------------------------
+

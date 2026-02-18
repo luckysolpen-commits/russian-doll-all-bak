@@ -1,0 +1,3 @@
+[2026-02-17 16:46:43] InputReceived: key_code=119 | Source: keyboard_input_service
+[2026-02-17 16:46:45] InputReceived: key_code=115 | Source: gl_keyboard_input
+[2026-02-17 16:46:48] InputReceived: key_code=49 | Source: gl_keyboard_input
