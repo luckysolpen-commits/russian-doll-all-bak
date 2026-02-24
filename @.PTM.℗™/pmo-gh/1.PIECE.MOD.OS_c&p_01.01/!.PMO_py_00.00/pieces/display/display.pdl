@@ -1,0 +1,30 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | display
+META         | version            | 1.0
+META         | determinism        | strict
+
+STATE        | current_frame      | string
+STATE        | frame_count        | int
+STATE        | last_render_time   | string
+STATE        | status             | string
+STATE        | auto_update_enabled| bool
+
+METHOD       | render_frame       | void | python:pieces/display/plugins/render_frame.py | c:pieces/display/plugins/+x/render_frame.+x
+METHOD       | update_frame       | void | python:pieces/display/plugins/update_frame.py | c:pieces/display/plugins/+x/update_frame.+x
+METHOD       | clear_display      | void | python:pieces/display/plugins/clear_display.py | c:pieces/display/plugins/+x/clear_display.+x
+METHOD       | get_frame          | string | python:pieces/display/plugins/get_frame.py | c:pieces/display/plugins/+x/get_frame.+x
+METHOD       | enable_auto_update | void | python:pieces/display/plugins/enable_auto_update.py | c:pieces/display/plugins/+x/enable_auto_update.+x
+METHOD       | disable_auto_update| void | python:pieces/display/plugins/disable_auto_update.py | c:pieces/display/plugins/+x/disable_auto_update.+x
+
+EVENT_IN     | frame_requested    | void
+EVENT_IN     | display_update     | void
+EVENT_IN     | render_complete    | void
+
+EVENT_OUT    | frame_rendered     | int
+EVENT_OUT    | display_cleared    | void
+
+RESPONSE     | frame_requested    | Processing frame request
+RESPONSE     | display_update     | Updating display
+RESPONSE     | render_complete    | Frame rendered successfully
+RESPONSE     | default            | Display operation completed

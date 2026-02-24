@@ -1,0 +1,21 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | clock
+META         | version            | 1.0
+META         | determinism        | strict
+
+STATE        | time               | string
+STATE        | time_increment_min | int
+STATE        | tick_counter       | int
+STATE        | status             | string
+STATE        | turn               | int
+
+METHOD       | increment_time     | void | python:pieces/clock/plugins/increment_time.py | c:pieces/clock/plugins/+x/increment_time.+x
+METHOD       | increment_turn     | void | python:pieces/clock/plugins/increment_turn.py | c:pieces/clock/plugins/+x/increment_turn.+x
+METHOD       | end_turn           | void | python:pieces/clock/plugins/end_turn.py | c:pieces/clock/plugins/+x/end_turn.+x
+
+EVENT_IN     | turn_end           | void
+EVENT_IN     | game_move          | void
+
+EVENT_OUT    | time_advanced      | int
+EVENT_OUT    | turn_advanced      | int

@@ -1,0 +1,639 @@
+python3 run_pmo.py 
+Starting CHTPM+OS Pipeline (Python)...
+Orchestrator starting...
+  -> pieces/keyboard/plugins/keyboard.py started (PID: 127038)
+  -> pieces/master_ledger/plugins/response_handler.py started (PID: 127040)
+  -> pieces/chtpm/plugins/phtpm_parser.py started (PID: 127047)
+  -> pieces/display/plugins/renderer.py started (PID: 127048)
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║           C H T P M + O S   C L I   v2.0                 ║
+║                                                           ║
+║  CHTPM+OS Main Menu                                      ║
+║                                                           ║
+║  [ ] 1. [Help]                                             ║
+║  [ ] 2. [Launch FuzzPet]                                   ║
+║  [ ] 3. [Status]                                           ║
+║  [ ] 4. [List Processes]                                   ║
+║  [ ] 5. [Settings]                                          ║
+║      Applications                                        ║
+╠═══════════════════════════════════════════════════════════╣
+║  Running Applications: None                               ║
+║  System Time: 13:40:00 | Turn: 67                          ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  $ [ ] 7. _                                                  ║
+║                                                           ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+  -> pieces/display/plugins/gl_renderer.py started (PID: 127058)
+
+All pieces launched. System is running.
+Press Ctrl+C to stop.
+
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║           C H T P M + O S   C L I   v2.0                 ║
+║                                                           ║
+║  CHTPM+OS Main Menu                                      ║
+║                                                           ║
+║  [ ] 1. [Help]                                             ║
+║  [>] 2. [Launch FuzzPet]                                   ║
+║  [ ] 3. [Status]                                           ║
+║  [ ] 4. [List Processes]                                   ║
+║  [ ] 5. [Settings]                                          ║
+║      Applications                                        ║
+╠═══════════════════════════════════════════════════════════╣
+║  Running Applications: None                               ║
+║  System Time: 13:40:00 | Turn: 67                          ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  $ [ ] 7. _                                                  ║
+║                                                           ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 0/100 | Happiness: 100/100           ║
+║  Energy: 72/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [>] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #   @    #                                                ║
+║  #  @     #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: None                                   ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+[fuzzpet] Sovereign Stage active. Monitoring history.txt...
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 0/100 | Happiness: 100/100           ║
+║  Energy: 72/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [>] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #   @    #                                                ║
+║  #  @     #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: None                                   ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 0/100 | Happiness: 100/100           ║
+║  Energy: 72/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #   @    #                                                ║
+║  #  @     #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: None                                   ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 0/100 | Happiness: 100/100           ║
+║  Energy: 72/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #   @    #                                                ║
+║  #  @     #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: None                                   ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]: w (ESC to exit)
+sh: 1: FUZ_0.04/pieces/apps/fuzzpet_app/clock/plugins/increment_time.py: not found
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name:                                      ║
+║  Status:                                          ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: /100 | Happiness: /100           ║
+║  Energy: /100 | Level:                        ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @@    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+sh: 1: FUZ_0.04/pieces/apps/fuzzpet_app/clock/plugins/increment_turn.py: not found
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 1/100 | Happiness: 100/100           ║
+║  Energy: 71/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @@    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 1/100 | Happiness: 100/100           ║
+║  Energy: 71/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @@    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 1/100 | Happiness: 100/100           ║
+║  Energy: 71/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @@    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+python3: can't open file '/home/no/Desktop/TPM_AI/[03.00]HTPMGLOS/0.HTPMGLOS_00.01/code-investigation-2-fix+18/1.PIECE-MODULE-OS_00.11/PHTMP+GL': [Errno 2] No such file or directory
+python3: can't open file '/home/no/Desktop/TPM_AI/[03.00]HTPMGLOS/0.HTPMGLOS_00.01/code-investigation-2-fix+18/1.PIECE-MODULE-OS_00.11/PHTMP+GL': [Errno 2] No such file or directory
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 1/100 | Happiness: 100/100           ║
+║  Energy: 71/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @@    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]: w (ESC to exit)
+sh: 1: FUZ_0.04/pieces/apps/fuzzpet_app/clock/plugins/increment_time.py: not found
+sh: 1: FUZ_0.04/pieces/apps/fuzzpet_app/clock/plugins/increment_turn.py: not found
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 1/100 | Happiness: 100/100           ║
+║  Energy: 71/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @@    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]: w (ESC to exit)
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 2/100 | Happiness: 100/100           ║
+║  Energy: 70/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @     #                                                ║
+║  #   @    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 2/100 | Happiness: 100/100           ║
+║  Energy: 70/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @     #                                                ║
+║  #   @    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 2/100 | Happiness: 100/100           ║
+║  Energy: 70/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @     #                                                ║
+║  #   @    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+python3: can't open file '/home/no/Desktop/TPM_AI/[03.00]HTPMGLOS/0.HTPMGLOS_00.01/code-investigation-2-fix+18/1.PIECE-MODULE-OS_00.11/PHTMP+GL': [Errno 2] No such file or directory
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 2/100 | Happiness: 100/100           ║
+║  Energy: 70/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @     #                                                ║
+║  #   @    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 119 ('w')                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+python3: can't open file '/home/no/Desktop/TPM_AI/[03.00]HTPMGLOS/0.HTPMGLOS_00.01/code-investigation-2-fix+18/1.PIECE-MODULE-OS_00.11/PHTMP+GL': [Errno 2] No such file or directory
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 2/100 | Happiness: 100/100           ║
+║  Energy: 70/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]: 2 (ESC to exit)
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 0/100 | Happiness: 100/100           ║
+║  Energy: 70/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #  @     #                                                ║
+║  #   @    #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: ...                                           ║
+║  DEBUG [Last Key]: 50 ('2')                               ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Active [^]:  (ESC to exit)
+
+Piece ['/usr/bin/python3', '-u', 'pieces/keyboard/plugins/keyboard.py'] has terminated (exit code: 0)
+^C
+
+Termination signal received. Shutting down...
+All pieces terminated. Goodbye!
+Orchestrator finished.
+no@no-Surface-Laptop-3:~/Desktop/TPM_AI/[03.00]HTPMGLOS/0.HTPMGLOS_00.01/code-investigation-2-fix+18/1.PIECE-MODULE-OS_00.11/PHTMP+GL&FUZ_0.04$ 
+
+going pretty well for same day . 
+is moving pet but we dont get responses from menu yet

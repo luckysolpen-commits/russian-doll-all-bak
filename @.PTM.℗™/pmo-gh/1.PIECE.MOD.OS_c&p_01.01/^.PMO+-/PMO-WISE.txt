@@ -1,0 +1,52 @@
+# PMO-WISE.txt - Wisdom from the Frontlines of Piece-Module-OS
+
+**Document Type:** Philosophical & Tactical Reflection
+**Date:** 2026-02-24
+**Context:** TPM Refactoring Journey (v0.08 to v0.11)
+
+---
+
+## 1. THE TOP 3 WISDOMS
+
+### 1.1 The "Option Z" Epiphany (The Theater & The Stage)
+Initially, we fought over who should write to the screen. We tried pipes, eager module composition, and complex hand-offs.
+*   **The Truth:** The OS Parser is the **Theater** (Layout/UI/Shell). The Module is the **Stage** (Logic/Content). 
+*   **KISS Fix:** The Module writes its logic view to a private `view.txt`. The Parser substitutes this into a variable (`${game_view}`). 
+*   **Result:** Permanent OS layout, zero flickering, and the Module remains a stateless logic agent.
+
+### 1.2 The Single Pulse Standard (The Heartbeat)
+We wasted hours on `mtime` resolution issues. 1-second resolution is death for gaming.
+*   **The Truth:** Use **File Size** delta on a single universal tally file (`frame_changed.txt`).
+*   **KISS Fix:** Every process that touches reality (PieceManager, Module, Parser) appends 1 byte to the same pulse file. 
+*   **Result:** Sub-millisecond synchronization across multiple concurrent processes.
+
+### 1.3 The "Mirror Sync" Mandate
+We struggled with "Ghost Data" where the Parser showed old values.
+*   **The Truth:** A Piece has two faces: **DNA** (.pdl) for the audit ledger, and **Mirror** (state.txt) for the high-speed render.
+*   **KISS Fix:** The Module must update the DNA via `piece_manager` (for the truth) and immediately dump a raw key=value mirror (for the render).
+
+---
+
+## 2. THINGS WE OVER-COMPLICATED (Learn from these!)
+
+1.  **Pipe-based IPC:** We tried to use Pipes for `VARS:`. It was brittle and invisible. The Filesystem is a better API—it is atomic, auditable, and easier to debug with `tail`.
+2.  **Thread Priority:** We tried to move `keyboard_input` to the foreground to solve Termios issues. This was a "Readability Confusion" artifact. The simple background thread works fine as long as only ONE process owns the keyboard Piece history.
+3.  **Mode Switching Logic:** We tried to "Silence" the parser during interaction. This created "Navless Views." **Option Z** solved this by making the Parser the sole writer, always.
+
+---
+
+## 3. THE "POINTER FILE" TRAP (Crutches for Hardcoders)
+We found legacy symlinks (e.g., `pieces/fuzzpet` -> `pieces/apps/...`). 
+*   **The Truth:** These were not backup artifacts; they were "patches" for code that had hardcoded old paths. 
+*   **The Wisdom:** If you need a symlink to make your app run, your code is not **TPM-wise**.
+*   **KISS Fix:** Use `location_kvp` or explicit Macro-Folder paths. **Delete the pointers.** If the code is Sovereign, it knows exactly where it lives without needing "ghost" directories.
+
+---
+
+## 4. FINAL MANTRA FOR FUTURE AGENTS
+
+> **"If it's not in a file, it's a lie. If the Theater is flickering, check the Stage boundaries. One Pulse, one Theater, many Stages."**
+
+---
+**Signed:** TPM Architecture Core
+**Verified Status:** v0.11 COMPLIANT

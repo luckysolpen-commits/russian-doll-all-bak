@@ -1,0 +1,333 @@
+ sh run_chtpm.sh 
+Starting CHTPM+OS Pipeline...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- FRAME UPDATE at 2026-02-24 01:58:33 ---
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║           C H T P M + O S   C L I   v2.0                 ║
+║                                                           ║
+║  CHTPM+OS Main Menu                                      ║
+║                                                           ║
+║  [>] 1. [Help]                                             ║
+║  [ ] 2. [Launch FuzzPet]                                   ║
+║  [ ] 3. [Status]                                           ║
+║  [ ] 4. [List Processes]                                   ║
+║  [ ] 5. [Settings]                                          ║
+║      Applications                                        ║
+╠═══════════════════════════════════════════════════════════╣
+║  Running Applications: None                               ║
+║  System Time: 08:00:00 | Turn: 0                          ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  $ [ ] 7. _                                                  ║
+║                                                           ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- FRAME UPDATE at 2026-02-24 01:58:35 ---
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║           C H T P M + O S   C L I   v2.0                 ║
+║                                                           ║
+║  CHTPM+OS Main Menu                                      ║
+║                                                           ║
+║  [ ] 1. [Help]                                             ║
+║  [>] 2. [Launch FuzzPet]                                   ║
+║  [ ] 3. [Status]                                           ║
+║  [ ] 4. [List Processes]                                   ║
+║  [ ] 5. [Settings]                                          ║
+║      Applications                                        ║
+╠═══════════════════════════════════════════════════════════╣
+║  Running Applications: None                               ║
+║  System Time: 08:00:00 | Turn: 0                          ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  $ [ ] 7. _                                                  ║
+║                                                           ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > 2_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- FRAME UPDATE at 2026-02-24 01:58:35 ---
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   L A U N C H E R               ║
+║                                                           ║
+║  Select an option to begin:                               ║
+║                                                           ║
+║  [>] 1. [New Game (Reset Pet)]                        ║
+║  [ ] 2. [Load Game (Continue)]                            ║
+║  [ ] 3. [Back to Main Menu]                                   ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- FRAME UPDATE at 2026-02-24 01:58:37 ---
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: Fuzzball                                     ║
+║  Status: active                                         ║
+║  Turn: 0 | Time: 08:00:00                          ║
+║                                                           ║
+║  Hunger: 53/100 | Happiness: 75/100           ║
+║  Energy: 97/100 | Level: 1                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [>] 1. [Control Map]                                      ║
+║  ####################                                     ║
+║  #  ...............T#                                     ║
+║  #  ...............T#                                     ║
+║  #  ....R..........T#                                     ║
+║  #  ....R..........T#                                     ║
+║  #  .@..R..........T#                                     ║
+║  #  ....R..........T#                                     ║
+║  #  ................#                                     ║
+║  #                  #                                     ║
+║  ####################                                     ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: *moves around excitedly*                      ║
+║  DEBUG [Last Key]: CODE 1000                              ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- FRAME UPDATE at 2026-02-24 01:58:37 ---
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: Fuzzball                                     ║
+║  Status: active                                         ║
+║  Turn: 0 | Time: 08:00:00                          ║
+║                                                           ║
+║  Hunger: 50/100 | Happiness: 75/100           ║
+║  Energy: 100/100 | Level: 1                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [>] 1. [Control Map]                                      ║
+║  ####################                                     ║
+║  #  ...............T#                                     ║
+║  #  ...............T#                                     ║
+║  #  ....R..........T#                                     ║
+║  #  ....R..........T#                                     ║
+║  #  ..@.R..........T#                                     ║
+║  #  ....R..........T#                                     ║
+║  #  ................#                                     ║
+║  #                  #                                     ║
+║  ####################                                     ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: *confused tilt* ...huh?                       ║
+║  DEBUG [Last Key]: None                                   ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [ ] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+^Cno@no-Surface-Laptop-3:~/Desktop/TPM_AI/[03.00]HTPMGLOS/0.HTPMGLOS_00.01/code-investigation-2-fix+18/1.PIECE-MODULE-OS_00.11/!.PMO_00.08$ sh run_chtpm.sh 
+Starting CHTPM+OS Pipeline...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- FRAME UPDATE at 2026-02-24 02:02:54 ---
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║           C H T P M + O S   C L I   v2.0                 ║
+║                                                           ║
+║  CHTPM+OS Main Menu                                      ║
+║                                                           ║
+║  [>] 1. [Help]                                             ║
+║  [ ] 2. [Launch FuzzPet]                                   ║
+║  [ ] 3. [Status]                                           ║
+║  [ ] 4. [List Processes]                                   ║
+║  [ ] 5. [Settings]                                          ║
+║      Applications                                        ║
+╠═══════════════════════════════════════════════════════════╣
+║  Running Applications: None                               ║
+║  System Time: 08:00:00 | Turn: 0                          ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  $ [ ] 7. _                                                  ║
+║                                                           ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+
+✦ I can see the C version has:
+   1. Clean frames with no raw tags
+   2. Proper box-drawing characters throughout
+   3. Working variable substitution (shows "Fuzzball", "53/100", etc.)
+   4. A proper map with #, ., @, T, R characters
+
+  The Python version shows empty variables and no map content. The main issues are:
+
+   1. Variables not loading - state.txt values aren't being read
+   2. Map not rendering - fuzzpet module might not be running or view.txt isn't being
+      read
+

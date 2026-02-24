@@ -1,0 +1,59 @@
+# PY_PMO_DOX.txt - Canonical Requirements for PMO Implementation
+
+This document codifies the "Perfect Implementation" of the C-Build (v0.11) to ensure 1:1 parity in any language (Python, PHP, JS, etc.).
+
+---
+
+## 1. THE RENDERING ENGINE (Theater Laws)
+
+### 1.1 "Neat and Tight" Spacing
+*   **The Rule:** DO NOT preserve whitespace/newlines found between tags in the source `.chtpm` file.
+*   **The Logic:** The parser must identify elements (`<text>`, `<button>`, etc.) and build the frame buffer surgically. 
+*   **The Spacing:**
+    *   Newlines are generated ONLY by `<br/>` or explicit `
+` inside multiline variables like `${game_map}`.
+    *   Interactive elements (`button`, `link`) must prepend a single space and an index: `[>] 1. [Label] `.
+
+### 1.2 "Option Z" Sovereignty
+*   **The Rule:** The OS Parser is the ONLY writer of `current_frame.txt`.
+*   **The Logic:** Modules write to a private `view.txt`. The Parser substitutes the full content of `view.txt` into a variable (e.g., `${game_map}`).
+*   **Boxed Theater:** The Parser should wrap the final composition in ASCII borders (`╔═══╗`, `╚═══╝`) and add the Nav Footer.
+
+---
+
+## 2. THE INPUT SYSTEM (Relay Laws)
+
+### 2.1 Pure Focus Navigation
+*   **The Rule:** Moving focus (Arrows/W/S) must NEVER auto-trigger an action.
+*   **Activation:** An action is ONLY triggered by the `Enter` key (Code 10/13).
+*   **Digit Jumping:** Jump-to-index (pressing '1'-'9') is an optional speed-dial, but it should only set the **focus**, NOT trigger the action.
+
+### 2.2 Relay Pattern
+*   **Nav Mode:** Parser handles navigation.
+*   **Active [^] Mode:** Parser silences its own logic and appends RAW key codes to the Module's `history.txt`.
+
+---
+
+## 3. THE HEARTBEAT (Pulse Laws)
+
+### 3.1 Single Pulse Standard
+*   **Path:** `pieces/display/frame_changed.txt`
+*   **Logic:** 
+    *   Piece Manager appends 'S' (State Change).
+    *   Module appends 'V' (View Change).
+    *   Parser appends 'P' (OS Change).
+*   **Sync:** Polling loops must check for **File Size Increase**, not `mtime`.
+*   **Self-Correction:** The Parser MUST read the new bytes and ignore its own 'P' trigger to prevent infinite re-rendering loops.
+
+---
+
+## 4. ARCHITECTURAL SANITY
+
+### 4.1 Macro Folder Sovereignty
+*   All app-specific data lives in `pieces/apps/[app_name]/`.
+*   No hardcoded paths. All paths are resolved via `location_kvp` and a `path_utils` equivalent.
+
+### 4.2 Mirror Sync
+*   Authoritative State = DNA (.pdl file).
+*   Rendering State = Mirror (raw `state.txt`).
+*   The Module must update DNA for audit and Mirror for speed simultaneously.

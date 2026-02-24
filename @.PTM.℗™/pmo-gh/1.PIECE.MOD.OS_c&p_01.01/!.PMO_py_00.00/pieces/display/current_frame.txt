@@ -1,0 +1,36 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║             F U Z Z P E T   D A S H B O A R D             ║
+║                                                           ║
+║  Pet Name: FuzzPet                                     ║
+║  Status: active                                         ║
+║  Turn: 67 | Time: 13:40:00                          ║
+║                                                           ║
+║  Hunger: 0/100 | Happiness: 100/100           ║
+║  Energy: 100/100 | Level: 3                       ║
+║                                                           ║
+║  GAME MAP:                                                ║
+║  [ ] 1. [Control Map]                                      ║
+║  ##########                                                ║
+║  #        #                                                ║
+║  #  .@    #                                                ║
+║  #  .     #                                                ║
+║  #  ..    #                                                ║
+║  #  .     #                                                ║
+║  #  .     #                                                ║
+║  #        #                                                ║
+║  #        #                                                ║
+║  ##########                                                ║
+╠═══════════════════════════════════════════════════════════╣
+║  [FUZZPET]: Wheee~ Best playtime ever!                    ║
+║  DEBUG [Last Key]: 51 ('3')                               ║
+
+║                                                           ║
+║  [ ] 2. [Feed Pet] [>] 3. [Play] [ ] 4. [Sleep]              ║
+║  [ ] 5. [Evolve] [ ] 6. [End Turn]                       ║
+║  [ ] 7. [Exit to Main Menu]                          ║
+║                                                           ║
+║  DEBUG [Last Key]:                                     ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _

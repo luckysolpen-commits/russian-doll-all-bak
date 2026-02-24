@@ -1,0 +1,1 @@
+FuzzPet=pieces/apps/fuzzpet_app/fuzzpet/plugins/fuzzpet.py

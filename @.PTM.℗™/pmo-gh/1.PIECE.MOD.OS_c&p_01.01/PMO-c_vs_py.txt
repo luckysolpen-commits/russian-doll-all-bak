@@ -1,0 +1,777 @@
+# PMO C vs Python - Definitive Conversion Guide
+**Document Type:** Canonical Reference for PMO Cross-Language Development
+**Date:** 2026-02-24
+**Status:** AUTHORITATIVE - Battle-Tested Patterns
+**Purpose:** Enable any developer to convert PMO applications between C and Python with confidence
+
+---
+
+## PHILOSOPHY
+
+> **"The C implementation is the REFERENCE ARCHITECTURE. Python must mirror C exactly - not approximate, not 'Pythonic', not 'simpler'. Every deviation introduces bugs."**
+
+This document catalogs EVERY difference discovered during the Python PMO development. Follow these patterns exactly.
+
+---
+
+## TABLE OF CONTENTS
+
+1. [Core Architecture Patterns](#1-core-architecture-patterns)
+2. [File I/O and Synchronization](#2-file-io-and-synchronization)
+3. [String and Memory Handling](#3-string-and-memory-handling)
+4. [XML/CHTML Parsing](#4-xmlchtml-parsing)
+5. [Element Rendering](#5-element-rendering)
+6. [Input Handling](#6-input-handling)
+7. [Module Communication](#7-module-communication)
+8. [State Management](#8-state-management)
+9. [Process Management](#9-process-management)
+10. [Path Handling](#10-path-handling)
+11. [Common Bugs and Fixes](#11-common-bugs-and-fixes)
+
+---
+
+## 1. CORE ARCHITECTURE PATTERNS
+
+### 1.1 The PMO Hierarchy (IDENTICAL in both languages)
+
+```
+PIECE (Data) → MODULE (Logic) → OS (Orchestration)
+   ↓              ↓                  ↓
+piece.txt     fuzzpet.c         chtpm_parser.c
+state.txt     history.txt       os.chtpm
+history.txt   view.txt          renderer.c
+```
+
+### 1.2 File-Based IPC (IDENTICAL)
+
+| File | Purpose | Writer | Reader |
+|------|---------|--------|--------|
+| `keyboard/history.txt` | Hardware input | keyboard_input | chtpm_parser |
+| `fuzzpet/history.txt` | Module input | chtpm_parser | fuzzpet_module |
+| `fuzzpet/view.txt` | Module output | fuzzpet_module | chtpm_parser |
+| `fuzzpet/state.txt` | State mirror | fuzzpet_module | chtpm_parser |
+| `display/current_frame.txt` | Final frame | chtpm_parser | renderer |
+| `display/frame_changed.txt` | Pulse signal | chtpm_parser | renderer |
+
+**CRITICAL:** These file paths MUST match exactly. No shortcuts.
+
+---
+
+## 2. FILE I/O AND SYNCHRONIZATION
+
+### 2.1 Writing Files (CRITICAL DIFFERENCE)
+
+**C Version:**
+```c
+FILE *fp = fopen("view.txt", "w");
+if (!fp) return;
+fprintf(fp, "content\n");
+fclose(fp);  // ← ATOMIC on POSIX: flushes + closes
+
+FILE *marker = fopen("view_changed.txt", "a");
+fputc('X', marker);
+fputc('\n', marker);
+fclose(marker);  // ← Marker AFTER file complete
+```
+
+**Python Version (CORRECT):**
+```python
+with open("view.txt", 'w') as fp:
+    fp.write("content\n")
+    fp.flush()           # ← EXPLICIT flush
+    os.fsync(fp.fileno()) # ← FORCE to disk (C's fclose does this)
+
+with open("view_changed.txt", 'a') as f:
+    f.write("X\n")
+    f.flush()            # ← Marker AFTER file complete
+```
+
+**Python Version (WRONG - causes race conditions):**
+```python
+# DON'T DO THIS - missing flush/fsync
+with open("view.txt", 'w') as fp:
+    fp.write("content\n")
+# Context manager closes, but data might be in kernel cache!
+
+with open("view_changed.txt", 'a') as f:
+    f.write("X\n")
+# Parser might see marker BEFORE view.txt is fully written!
+```
+
+### 2.2 Reading Files (IDENTICAL)
+
+**C Version:**
+```c
+FILE *f = fopen("state.txt", "r");
+if (!f) return;
+char line[MAX_LINE];
+while (fgets(line, sizeof(line), f)) {
+    // Process line
+}
+fclose(f);
+```
+
+**Python Version:**
+```python
+if not os.path.exists(path): return
+with open(path, 'r') as f:
+    for line in f:
+        # Process line
+# Auto-closes
+```
+
+### 2.3 File Size Polling (IDENTICAL)
+
+**C Version:**
+```c
+struct stat st;
+if (stat("frame_changed.txt", &st) == 0) {
+    if (st.st_size > last_pulse_size) {
+        last_pulse_size = st.st_size;
+        dirty = 1;  // File grew = new data
+    }
+}
+```
+
+**Python Version:**
+```python
+if os.path.exists(path):
+    curr_size = os.path.getsize(path)
+    if curr_size > last_pulse_size:
+        last_pulse_size = curr_size
+        dirty = True  # File grew = new data
+```
+
+---
+
+## 3. STRING AND MEMORY HANDLING
+
+### 3.1 String Buffers
+
+**C Version:**
+```c
+char response[256] = "";  // ← Stack allocation
+snprintf(response, sizeof(response), "format %d", value);
+strcpy(dest, src);  // ← Copy
+```
+
+**Python Version:**
+```python
+response = ""  # ← Heap allocation (automatic)
+response = f"format {value}"  # ← f-string
+dest = src  # ← Reference (strings are immutable)
+```
+
+**GOTCHA:** Python strings are immutable. `dest = src` creates a reference, not a copy. For mutable data (lists), use `dest = src.copy()` or `dest = list(src)`.
+
+### 3.2 Character vs Integer
+
+**C Version:**
+```c
+inject_raw_key('2');  // ← Character literal = ASCII 50
+```
+
+**Python Version:**
+```python
+inject_raw_key(ord('2'))  # ← Must convert to ASCII: 50
+# OR
+inject_raw_key(50)  # ← Direct ASCII value
+```
+
+**GOTCHA:** `inject_raw_key(2)` is WRONG - that's ASCII STX (control character), not the digit '2'.
+
+---
+
+## 4. XML/CHTML PARSING
+
+### 4.1 Tokenization (CRITICAL - MUST MIRROR C)
+
+**C Version:**
+```c
+typedef enum { TOKEN_TEXT, TOKEN_OPEN_TAG, TOKEN_CLOSE_TAG, TOKEN_SELFCLOSE_TAG } TokenType;
+
+Token* tokenize(const char* content, int* token_count) {
+    Token* tokens = malloc(MAX_ELEMENTS * 4 * sizeof(Token));
+    const char* cursor = content;
+    while (*cursor) {
+        const char* tag_start = strchr(cursor, '<');
+        if (!tag_start) { /* rest is text */ break; }
+        
+        if (tag_start > cursor) { /* text before tag */ }
+        
+        const char* tag_end = strchr(tag_start, '>');
+        // Parse tag body...
+        cursor = tag_end + 1;
+    }
+    return tokens;
+}
+```
+
+**Python Version (CORRECT - mirrors C):**
+```python
+tokens = []
+cursor = 0
+while cursor < len(content):
+    tag_start = content.find('<', cursor)
+    if tag_start == -1:
+        if cursor < len(content):
+            tokens.append(('TEXT', content[cursor:], '', ''))
+        break
+    
+    if tag_start > cursor:
+        tokens.append(('TEXT', content[cursor:tag_start], '', ''))
+    
+    tag_end = content.find('>', tag_start)
+    if tag_end == -1: break
+    
+    tag_body = content[tag_start + 1:tag_end]
+    # Parse tag body...
+    cursor = tag_end + 1
+```
+
+**Python Version (WRONG - causes tag leakage):**
+```python
+# DON'T use character-by-character state machine!
+state = "TEXT"
+buffer = ""
+for char in content:
+    if char == "<":
+        state = "TAG"
+    elif char == ">":
+        state = "TEXT"
+    else:
+        buffer += char
+# This FAILS on multi-line attribute values like label="${game_map}"
+```
+
+### 4.2 Attribute Parsing (IDENTICAL logic)
+
+**C Version:**
+```c
+void parse_attributes(UIElement* el, const char* attr_str) {
+    char* attrs = strdup(attr_str);
+    char* pos = attrs;
+    while (*pos) {
+        // Skip whitespace
+        while (*pos && isspace(*pos)) pos++;
+        
+        // Get attribute name
+        char* name_start = pos;
+        while (*pos && *pos != '=' && !isspace(*pos)) pos++;
+        
+        // Get attribute value
+        char* val_start = pos;
+        if (*pos == '=') { pos++; while (*pos && isspace(*pos)) pos++; }
+        if (*pos == '"') { pos++; val_start = pos; while (*pos && *pos != '"') pos++; }
+        
+        // Assign to element
+        if (strcmp(name_start, "label") == 0) strncpy(el->label, val_start, MAX_LABEL_LEN);
+    }
+    free(attrs);
+}
+```
+
+**Python Version:**
+```python
+def get_attr(self, attr_str, name):
+    match = re.search(fr'{name}\s*=\s*["\'](.*?)["\']', attr_str, re.DOTALL)
+    return match.group(1) if match else ""
+```
+
+---
+
+## 5. ELEMENT RENDERING
+
+### 5.1 Recursive Rendering (CRITICAL - MUST MIRROR C)
+
+**C Version:**
+```c
+void render_element(int idx, char* frame) {
+    if (idx < 0 || idx >= element_count) return;
+    UIElement* el = &elements[idx];
+    
+    // Check parent visibility
+    if (el->parent_index != -1) {
+        UIElement* p = &elements[el->parent_index];
+        if (strcmp(p->type, "menu") == 0 && !p->visibility && active_index != el->parent_index)
+            return;  // Hide children of inactive menu
+    }
+    
+    // Variable substitution
+    char substituted[MAX_LINE * 2] = "";
+    char *p_src = el->label, *p_dst = substituted;
+    while (*p_src) {
+        if (*p_src == '$' && *(p_src+1) == '{') {
+            // Substitute ${var}
+        }
+        *p_dst++ = *p_src++;
+    }
+    
+    // Render based on type
+    if (strcmp(el->type, "text") == 0) strcat(frame, substituted);
+    else if (is_interactive(el)) { /* render button/link */ }
+    
+    // Recursively render children
+    if (strcmp(el->type, "menu") == 0 || strcmp(el->type, "panel") == 0) {
+        for (int i = 0; i < el->num_children; i++)
+            render_element(el->children[i], frame);
+    }
+}
+
+void compose_frame() {
+    load_vars();
+    char *frame = calloc(1, MAX_BUFFER);
+    for (int i = 0; i < element_count; i++)
+        if (elements[i].parent_index == -1)  // Root elements only
+            render_element(i, frame);
+}
+```
+
+**Python Version (CORRECT - mirrors C):**
+```python
+def render_element(self, idx, frame_buffer):
+    if idx < 0 or idx >= len(self.elements): return
+    el = self.elements[idx]
+    
+    # Check parent visibility
+    if el.parent_index != -1:
+        parent = self.elements[el.parent_index]
+        if parent.type == 'menu' and self.active_index != el.parent_index:
+            return  # Hide children of inactive menu
+    
+    # Variable substitution
+    label = el.label
+    substituted = ""
+    i = 0
+    while i < len(label):
+        if label[i] == '$' and i + 1 < len(label) and label[i + 1] == '{':
+            end = label.find('}', i + 2)
+            if end != -1:
+                var_name = label[i + 2:end]
+                val = self.variables.get(var_name, "")
+                substituted += str(val)
+                i = end + 1
+                continue
+        substituted += label[i]
+        i += 1
+    
+    # Render based on type
+    if el.type == 'text': frame_buffer.append(substituted)
+    elif el.type == 'br': frame_buffer.append("\n")
+    elif self.is_interactive(el): /* render button/link */ }
+    
+    # Recursively render children
+    if el.type in ['menu', 'panel']:
+        for child_idx in el.children:
+            self.render_element(child_idx, frame_buffer)
+
+def compose_frame(self):
+    self.load_vars()
+    frame_buffer = []
+    for i in range(len(self.elements)):
+        if self.elements[i].parent_index == -1:  # Root elements only
+            self.render_element(i, frame_buffer)
+```
+
+**Python Version (WRONG - causes layout issues):**
+```python
+# DON'T iterate flat list without recursion!
+for i, el in enumerate(self.elements):
+    label = re.sub(r'\$\{(.*?)\}', ... , el.label)
+    if el.type == "text": frame_buffer.append(label)
+# This FAILS to handle parent/child relationships!
+```
+
+---
+
+## 6. INPUT HANDLING
+
+### 6.1 Key Injection (CRITICAL - PATH MUST BE CORRECT)
+
+**C Version:**
+```c
+void inject_raw_key(int code) {
+    FILE *fp = fopen("pieces/apps/fuzzpet_app/fuzzpet/history.txt", "a");
+    if (fp) { fprintf(fp, "%d\n", code); fclose(fp); }
+}
+```
+
+**Python Version (CORRECT):**
+```python
+def inject_raw_key(self, key_code):
+    hist_path = path_utils.get_piece_path('fuzzpet', 'history.txt')
+    if hist_path:
+        with open(hist_path, 'a') as f:
+            f.write(f"{key_code}\n")
+```
+
+**Python Version (WRONG - causes input to be lost):**
+```python
+# DON'T write to keyboard history!
+hist_path = path_utils.get_piece_path('keyboard', 'history.txt')
+# This causes parser to re-read its own injections!
+```
+
+### 6.2 Key Processing (IDENTICAL logic)
+
+**C Version:**
+```c
+void process_key(int key) {
+    if (active_index == -1) {
+        // Navigation mode
+        if (key == 13) {  // Enter
+            UIElement *el = &elements[focus_index];
+            if (el->href) { /* navigate */ }
+            else if (strcmp(el->type, "menu") == 0) { /* open menu */ }
+            else {
+                active_index = focus_index;
+                if (strcmp(el->onClick, "INTERACT") != 0) {
+                    send_command(el->onClick);  // FEED→'2', PLAY→'3', etc.
+                    active_index = -1;
+                }
+            }
+        }
+    } else {
+        // Active mode
+        UIElement *el = &elements[active_index];
+        if (key == ESC_KEY) { active_index = -1; }
+        else if (strcmp(el->onClick, "INTERACT") == 0) {
+            inject_raw_key(key);  // Pass key to module
+        }
+    }
+}
+```
+
+**Python Version:**
+```python
+def process_key(self, key):
+    if self.active_index == -1:
+        if key in [10, 13]:  # Enter
+            el = self.elements[self.focus_index]
+            if el.href: /* navigate */
+            elif el.type == 'menu': /* open menu */
+            else:
+                self.active_index = self.focus_index
+                if el.on_click != 'INTERACT':
+                    if el.on_click == 'FEED':
+                        self.inject_raw_key(ord('2'))
+                        self.active_index = -1
+    else:
+        el = self.elements[self.active_index]
+        if key == 27: self.active_index = -1
+        elif el.on_click == 'INTERACT':
+            self.inject_raw_key(key)
+```
+
+---
+
+## 7. MODULE COMMUNICATION
+
+### 7.1 Response Loading (CRITICAL - READ FROM PDL)
+
+**C Version:**
+```c
+// Uses piece_manager.+x external process to get response from .pdl
+char response[256] = "";
+char cmd[512];
+snprintf(cmd, sizeof(cmd), "./piece_manager.+x fuzzpet get-response %s", current_response_key);
+FILE *rf = popen(cmd, "r");
+if (rf) {
+    fgets(response, sizeof(response), rf);
+    pclose(rf);
+}
+```
+
+**Python Version (CORRECT - reads from PDL):**
+```python
+def get_piece_responses(self, piece_name):
+    # Read from .pdl (DNA source of truth)
+    pdl_path = self.get_path_for_piece(piece_name, f'{piece_name}.pdl')
+    if os.path.exists(pdl_path):
+        responses = {}
+        with open(pdl_path, 'r') as f:
+            for line in f:
+                if line.startswith('RESPONSE'):
+                    parts = line.split('|')
+                    if len(parts) >= 3:
+                        key = parts[1].strip()
+                        value = parts[2].strip()
+                        responses[key] = value
+        return responses
+    return {}
+```
+
+**Python Version (WRONG - reads from piece.txt which may not have responses):**
+```python
+# DON'T read from piece.txt!
+state_path = self.get_path_for_piece(piece_name, 'piece.txt')
+# piece.txt is overwritten by write_piece_state() and loses responses!
+```
+
+### 7.2 State Writing (CRITICAL - PRESERVE RESPONSES)
+
+**C Version:**
+```c
+// piece_manager.+x handles .pdl structure preservation
+set_piece_state_int("fuzzpet", "hunger", value);
+```
+
+**Python Version (CORRECT - preserves responses from PDL):**
+```python
+def write_piece_state(self, piece_name, state_data):
+    # Read responses from PDL to preserve them
+    pdl_path = self.get_path_for_piece(piece_name, f'{piece_name}.pdl')
+    responses_section = ""
+    if os.path.exists(pdl_path):
+        # Parse responses from PDL
+        # ...
+        responses_section = "responses:\n" + formatted_responses
+    
+    # Write piece.txt preserving responses
+    with open(state_path, 'w') as f:
+        f.write('state:\n')
+        for key, value in state_data.items():
+            f.write(f'  {key}={value}\n')
+        f.write(responses_section)  # ← Preserve responses!
+```
+
+---
+
+## 8. STATE MANAGEMENT
+
+### 8.1 Map Handling (CRITICAL - PET POSITION)
+
+**C Version:**
+```c
+void load_map() {
+    FILE *f = fopen("world/map.txt", "r");
+    // Load map...
+    
+    // Get initial position from state
+    int initial_pos_x = get_piece_state_int("fuzzpet", "pos_x");
+    int initial_pos_y = get_piece_state_int("fuzzpet", "pos_y");
+    
+    // Clear old '@'
+    for (int y = 0; y < MAP_ROWS; y++)
+        for (int x = 0; x < MAP_COLS; x++)
+            if (map[y][x] == '@') map[y][x] = '.';
+    
+    // Place '@' at initial position
+    map[initial_pos_y][initial_pos_x] = '@';
+}
+
+void move(char d) {
+    // Update position
+    map[pos_y][pos_x] = '.';  // Clear old
+    pos_x = nx; pos_y = ny;
+    map[pos_y][pos_x] = '@';  // Set new
+    save_map();
+}
+```
+
+**Python Version (CORRECT):**
+```python
+def load_initial_data(self):
+    self.map = piece_manager.load_map()  # Returns list of lists
+    
+    # Ensure pet '@' is at correct position from state
+    pos_x = self.state.get('pos_x', 5)
+    pos_y = self.state.get('pos_y', 5)
+    
+    # Clear any existing '@'
+    for y in range(len(self.map)):
+        if isinstance(self.map[y], list):
+            for x in range(len(self.map[y])):
+                if self.map[y][x] == '@':
+                    self.map[y][x] = '.'
+        else:
+            row = list(self.map[y])
+            if '@' in row:
+                row[row.index('@')] = '.'
+                self.map[y] = "".join(row)
+    
+    # Place '@' at current position
+    if 0 <= pos_y < len(self.map):
+        if isinstance(self.map[pos_y], list):
+            self.map[pos_y][pos_x] = '@'
+        else:
+            row = list(self.map[pos_y])
+            row[pos_x] = '@'
+            self.map[pos_y] = "".join(row)
+
+def move(self, direction):
+    # Update map - clear old position
+    if pos_y < len(self.map):
+        row = list(self.map[pos_y])
+        row[pos_x] = '.'
+        self.map[pos_y] = "".join(row)
+    
+    # Set new position
+    self.state['pos_x'] = nx
+    self.state['pos_y'] = ny
+    if ny < len(self.map):
+        row = list(self.map[ny])
+        row[nx] = '@'
+        self.map[ny] = "".join(row)
+    
+    piece_manager.save_map(self.map)
+```
+
+**GOTCHA:** `load_map()` returns list of lists (each row is `['#', '#', ...]`), but after first move, rows become strings (`"##########"`). Handle both with `isinstance(row, list)` check.
+
+---
+
+## 9. PROCESS MANAGEMENT
+
+### 9.1 Module Launching
+
+**C Version:**
+```c
+void launch_module(const char* path) {
+    cleanup_module();
+    current_module_pid = fork();
+    if (current_module_pid == 0) {
+        execl(path, path, NULL);
+        exit(1);
+    }
+}
+```
+
+**Python Version:**
+```python
+def launch_module(self, path):
+    self.cleanup_module()
+    self.current_module_proc = subprocess.Popen([sys.executable, "-u", path])
+```
+
+### 9.2 External Command Execution
+
+**C Version:**
+```c
+system("./pieces/apps/fuzzpet_app/clock/plugins/+x/increment_time.+x > /dev/null 2>&1");
+```
+
+**Python Version (CORRECT - handles special chars in paths):**
+```python
+subprocess.run([sys.executable, clock_script], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+```
+
+**Python Version (WRONG - fails with '&' in path):**
+```python
+# DON'T use os.system with paths containing special chars!
+os.system(f"python3 {clock_script}")
+# Path like "PHTMP+GL&FUZ_0.04/..." will fail because & is shell metacharacter
+```
+
+---
+
+## 10. PATH HANDLING
+
+### 10.1 Path Construction
+
+**C Version:**
+```c
+// Direct string concatenation
+char path[MAX_PATH];
+snprintf(path, sizeof(path), "pieces/apps/fuzzpet_app/fuzzpet/history.txt");
+```
+
+**Python Version:**
+```python
+# Use path_utils for consistency
+hist_path = path_utils.get_piece_path('fuzzpet', 'history.txt')
+# Returns: /absolute/path/to/PHTMP+GL&FUZ_0.04/pieces/apps/fuzzpet_app/fuzzpet/history.txt
+```
+
+**GOTCHA:** Paths with `&` character require `subprocess.run([list])` not `os.system("string")`.
+
+---
+
+## 11. COMMON BUGS AND FIXES
+
+### Bug 1: Tag Leakage in Output
+
+**Symptom:** Raw `<text label="..."/>` appears in rendered frame.
+
+**Cause:** Character-by-character state machine parser fails on multi-line attribute values.
+
+**Fix:** Use C-style tokenizer that finds complete tags first, then processes.
+
+### Bug 2: Response Shows "..." Instead of Text
+
+**Symptom:** `[FUZZPET]: ...` instead of `[FUZZPET]: Yum yum~...`
+
+**Cause:** `get_piece_responses()` reads from `piece.txt` which doesn't have responses (overwritten by `write_piece_state()`).
+
+**Fix:** Read responses from `.pdl` file (DNA source of truth).
+
+### Bug 3: Double Pet '@' in Map
+
+**Symptom:** Map shows `@@` or pet in wrong position.
+
+**Cause:** `load_map()` places '@' but state has different position, or `move()` doesn't clear old position.
+
+**Fix:** In `load_initial_data()`, clear all '@' then place at state position. In `move()`, clear old position before setting new.
+
+### Bug 4: Menu Button Responses Don't Work
+
+**Symptom:** Pressing Enter on "Feed Pet" does nothing.
+
+**Cause:** `inject_raw_key()` writes to wrong file (`keyboard/history.txt` instead of `fuzzpet/history.txt`).
+
+**Fix:** Use correct path: `path_utils.get_piece_path('fuzzpet', 'history.txt')`.
+
+### Bug 5: Race Condition - Response Delayed One Frame
+
+**Symptom:** Response shows "..." first frame, correct text next frame.
+
+**Cause:** Parser reads `view.txt` before module finishes writing it.
+
+**Fix:** In module's `write_sovereign_view()`:
+1. Get response text FIRST (before file I/O)
+2. Write `view.txt` with `flush()` + `fsync()`
+3. Hit marker LAST
+
+---
+
+## QUICK REFERENCE: C → Python Translation
+
+| C Construct | Python Equivalent |
+|-------------|-------------------|
+| `fopen/fprintf/fclose` | `with open() as f: f.write()` + `flush()` + `fsync()` |
+| `fgets(line, sizeof(line), f)` | `for line in f:` |
+| `strcpy(dest, src)` | `dest = src` (strings immutable) |
+| `strncpy(dest, src, n)` | `dest = src[:n]` |
+| `strcmp(a, b) == 0` | `a == b` |
+| `strncmp(a, b, n) == 0` | `a[:n] == b` |
+| `strlen(s)` | `len(s)` |
+| `char buf[256]` | `buf = ""` or `buf = []` |
+| `snprintf(buf, size, "fmt", args)` | `buf = f"fmt {args}"` |
+| `fork()/execl()` | `subprocess.Popen()` |
+| `system("cmd")` | `subprocess.run([cmd])` |
+| `usleep(16667)` | `time.sleep(0.016)` |
+| `malloc(n * sizeof(T))` | `[None] * n` or `[]` |
+| `free(ptr)` | Automatic (garbage collection) |
+
+---
+
+## FINAL CHECKLIST FOR CONVERSION
+
+Before declaring a Python PMO module "complete":
+
+- [ ] Tokenizer mirrors C exactly (find tags, then process)
+- [ ] `render_element()` is recursive with parent/child handling
+- [ ] `inject_raw_key()` writes to module history, not keyboard
+- [ ] `get_piece_responses()` reads from `.pdl`, not `piece.txt`
+- [ ] `write_piece_state()` preserves responses from PDL
+- [ ] Map handling clears old '@' before placing new
+- [ ] File writes use `flush()` + `fsync()` before marker
+- [ ] Paths use `path_utils.get_piece_path()`
+- [ ] External commands use `subprocess.run([list])`
+- [ ] Key codes use `ord('2')` not `2`
+
+---
+
+**Document Maintainer:** TPM Architecture Team
+**Reference:** `!.PMO_00.08/` (C) ↔ `PHTMP+GL&FUZ_0.04/` (Python)
+**Mantra:** "Copy C exactly. Every deviation is a bug."
