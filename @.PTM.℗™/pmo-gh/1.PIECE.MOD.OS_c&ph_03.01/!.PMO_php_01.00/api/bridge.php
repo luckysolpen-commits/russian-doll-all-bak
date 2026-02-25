@@ -4,7 +4,8 @@ header('Content-Type: application/json');
 
 $action = $_GET['action'] ?? '';
 $path = $_GET['path'] ?? '';
-$root = realpath(__DIR__ . '/../../1.PIECE.MOD.OS_c&p_01.01/!.PMO_c_00.00/');
+// TPM-Compliant: Dynamic root resolution relative to this script
+$root = realpath(__DIR__ . '/../');
 
 if (!$path || strpos(realpath($root . '/' . $path), $root) !== 0) {
     echo json_encode(['error' => 'Invalid path']);

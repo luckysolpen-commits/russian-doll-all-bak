@@ -1,0 +1,27 @@
+# Fix: Relative Path Resolution for PMO PHP/Web Stack
+
+## Problem
+The PHP bridge (`bridge.php`) used a hardcoded relative path to a parent directory (`../../1.PIECE.MOD.OS_c&p_01.01/...`) to find the project root. This broke when the project folder was moved or renamed, as the absolute path resolution failed.
+
+## Solution: Dynamic Root Discovery
+Mirroring the pattern used in `!.PMO_c_00.01/compile_all.sh` and `php_server++.sh`, we now use PHP's `__DIR__` to resolve the root dynamically.
+
+### 1. Updated `api/bridge.php`
+Changed the hardcoded `$root` to:
+```php
+$root = realpath(__DIR__ . '/../');
+```
+This ensures that the bridge always treats the directory containing `api/` and `pieces/` as the canonical root, regardless of where the project sits on the filesystem.
+
+### 2. Verified `js/orchestrator.js` & `index.html`
+All JS calls to the bridge already use relative paths (e.g., `pieces/apps/...`). By fixing the bridge's `$root`, these paths now resolve correctly to the local `pieces/` directory managed by `php_server++.sh`.
+
+### 3. TPM-Compliance
+- **Auditability:** Every file read/write through the bridge is logged and restricted to the project root.
+- **Portability:** The entire `!.PMO_php_00.01/` directory can now be moved or deployed to a web server (like GoDaddy/cPanel) without manual path configuration.
+- **Pipeline Alignment:** Adheres to `@^.PMO+-0.2/*.PMO-pipeline_1.0.txt` by treating the local filesystem as the source of truth.
+
+## Verification
+1. Run `bash php_server++.sh`.
+2. Access `http://localhost:8001`.
+3. The bridge will now correctly find `pieces/chtpm/layouts/os.chtpm` and initialize the state.
