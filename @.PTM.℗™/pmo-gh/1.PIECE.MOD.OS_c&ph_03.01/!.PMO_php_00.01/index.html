@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PMO Web Terminal</title>
+    <style>
+        body { 
+            background: #000; 
+            color: #aaa; 
+            font-family: "Courier New", Courier, monospace; 
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+        }
+        #terminal-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: auto; /* Enable scrolling */
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start; /* Align to top-left for better scroll behavior */
+            align-items: flex-start;
+        }
+        #terminal {
+            white-space: pre;
+            line-height: 1.2;
+            font-size: 16px;
+            color: #ccc;
+            /* Ensure box drawing characters align perfectly */
+            font-variant-ligatures: none;
+            display: inline-block; /* Ensure it takes up space for horizontal scrolling */
+        }
+        /* Custom scrollbar to keep the terminal look */
+        #terminal-container::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        #terminal-container::-webkit-scrollbar-track {
+            background: #000;
+        }
+        #terminal-container::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        #terminal-container::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+        .cursor {
+            background: #aaa;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal-container">
+        <div id="terminal">Loading CHTPM+OS...</div>
+    </div>
+
+    <script src="js/parser.js"></script>
+    <script src="js/orchestrator.js"></script>
+    <script>
+        const module = new PMOModule('api/bridge.php');
+        const parser = new CHTPMParser();
+        const terminal = document.getElementById('terminal');
+        let lastFrameContent = "";
+        const MAX_HISTORY = 50;
+        const frames = [];
+
+        async function init() {
+            await module.init();
+            renderLoop();
+        }
+
+        async function renderLoop() {
+            // 1. Module Pulse (Logic & View Production)
+            await module.pulse();
+
+            // 2. Load Unified State (DNA + Mirror + Sovereign View + Clock)
+            const mirror = await module.callBridge('read', 'pieces/apps/fuzzpet_app/fuzzpet/state.txt');
+            const view = await module.callBridge('read', 'pieces/apps/fuzzpet_app/fuzzpet/view.txt');
+            const clock = await module.callBridge('read', 'pieces/apps/fuzzpet_app/clock/state.txt');
+            
+            const state = {};
+            if (mirror.content) {
+                mirror.content.split('\n').forEach(line => {
+                    const [k, v] = line.split('=');
+                    if (k) state[`fuzzpet_${k}`] = v;
+                });
+            }
+            if (clock.content) {
+                clock.content.split('\n').forEach(line => {
+                    const [k, v] = line.split(' ');
+                    if (k === 'turn') state['clock_turn'] = v;
+                    if (k === 'time') state['clock_time'] = v;
+                });
+            }
+            if (view.content) {
+                state['game_map'] = view.content;
+            }
+
+            // 3. Parser Composition (The Theater)
+            const layout = await module.callBridge('read', module.currentLayout);
+            if (layout.content) {
+                parser.setVars(state);
+                const currentFrame = await parser.composeFrame(layout.content);
+                
+                // Only update if the frame content has actually changed (The "Pulse" check)
+                if (currentFrame !== lastFrameContent) {
+                    const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19);
+                    const frameHeader = `\n\n--- FRAME UPDATE at ${timestamp} ---\n`;
+                    
+                    frames.push(frameHeader + currentFrame);
+                    if (frames.length > MAX_HISTORY) frames.shift();
+                    
+                    terminal.textContent = frames.join("");
+                    lastFrameContent = currentFrame;
+                    
+                    // Auto-scroll to bottom
+                    const container = document.getElementById('terminal-container');
+                    container.scrollTop = container.scrollHeight;
+                }
+            }
+
+            setTimeout(renderLoop, 100); // 10 FPS
+        }
+
+        // Input Handling
+        window.addEventListener('keydown', async (e) => {
+            if (e.key >= '1' && e.key <= '9') {
+                parser.navBuffer += e.key;
+                parser.focusIndex = parseInt(parser.navBuffer);
+            } else if (e.key === 'Backspace') {
+                parser.navBuffer = parser.navBuffer.slice(0, -1);
+                if (parser.navBuffer === "") parser.focusIndex = 1;
+                else parser.focusIndex = parseInt(parser.navBuffer);
+            } else if (e.key === 'Enter') {
+                // Find focused command and execute
+                const layout = await module.callBridge('read', module.currentLayout);
+                const parts = layout.content.split(/(<[^>]+>)/g);
+                let interactiveCount = 0;
+                for (let part of parts) {
+                    if (part.startsWith('<button') || part.startsWith('<link') || part.startsWith('<menu')) {
+                        interactiveCount++;
+                        if (interactiveCount === parser.focusIndex) {
+                            const onClickMatch = part.match(/onClick="([^"]+)"/);
+                            const hrefMatch = part.match(/href="([^"]+)"/);
+                            if (onClickMatch) {
+                                // Inject key to module history
+                                let key = "";
+                                if (onClickMatch[1] === 'FEED') key = '2';
+                                if (onClickMatch[1] === 'PLAY') key = '3';
+                                if (onClickMatch[1] === 'SLEEP') key = '4';
+                                if (key) await module.callBridge('write', 'pieces/apps/fuzzpet_app/fuzzpet/history.txt', `KEY_PRESSED: ${key}\n`);
+                            }
+                            if (hrefMatch) {
+                                module.currentLayout = hrefMatch[1];
+                                parser.focusIndex = 1; // Reset focus on layout change
+                            }
+                            break;
+                        }
+                    }
+                }
+                parser.navBuffer = "";
+            } else if (['w', 'a', 's', 'd'].includes(e.key)) {
+                // If focused on Map (index 1), inject WASD to module
+                if (parser.focusIndex === 1) {
+                    await module.callBridge('write', 'pieces/apps/fuzzpet_app/fuzzpet/history.txt', `KEY_PRESSED: ${e.key}\n`);
+                }
+            }
+        });
+
+        init();
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
-hunger=50
+hunger=51
 happiness=75
-energy=100
+energy=99
 level=1
 pos_x=5
-pos_y=5
+pos_y=4
 status=active

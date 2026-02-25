@@ -1,2 +1,0 @@
-[2026-02-24 02:02:54] FrameComposed: 22 lines | Source: chtpm_parser
-[2026-02-24 02:02:54] FrameRendered: from current_frame.txt | Source: renderer
