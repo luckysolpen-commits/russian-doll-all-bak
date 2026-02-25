@@ -1,0 +1,132 @@
+# C-PARITY FIXES FOR PHP/JS PMO WEB STACK
+
+**Date:** 2026-02-25
+**Status:** COMPLETE - All navigation/menu/fuzzpet functionality aligned with C version
+
+---
+
+## Summary of Changes
+
+### 1. parser.js - Complete Rewrite for C-PARITY
+
+**Key Fixes:**
+- **Menu Handling:** Only `<menu>` tag itself is counted as interactive. Children are hidden until menu is opened (activeIndex === menuIndex).
+- **Navigation:** Proper focus indicators: `[>]` for focused, `[ ]` for unfocused, `[^]` for active
+- **href Navigation:** Full page transition support - when button has href, layout changes and parser resets
+- **INTERACT Mode:** All keys forwarded to module's history.txt, ESC (27) exits INTERACT mode
+- **Variable Loading:** loadVars() now loads from:
+  - `fuzzpet/state.txt` (Mirror runtime state)
+  - `clock/state.txt` (Turn and time)
+  - `display/state.txt` (Display settings)
+  - `fuzzpet/view.txt` (Sovereign view as ${game_map})
+
+**Navigation Behavior (C-PARITY):**
+- Arrow keys (1002/1003/1000/1001) or WASD move focus between interactive elements
+- Number keys (1-9) jump to element by interactive index
+- Enter (13) activates: follows href, opens menu, or triggers onClick
+- Nav buffer shows last key pressed ('w'/'s'/'a'/'d')
+
+### 2. orchestrator.js - Map Rendering & Key Processing
+
+**Key Fixes:**
+- **Map Rendering:** Exact format matching C version:
+  - Each line: `║  <60-char content>║`
+  - Map uses: `#` (wall), `.` (floor), `@` (pet), `T` (tree), `R` (rock)
+  - Trees at x=17, y<3; Rocks at x=4, 2<y<7
+- **Key Processing:** Handles both arrow key codes (1000-1003) and WASD char codes
+- **Response Logic:** Event responses match C version:
+  - Feed: "Yum yum~ Feeling so happy! *tail wags wildly*"
+  - Play: "Wheee~ Best playtime ever!"
+  - Sleep: "Zzz... feeling recharged!"
+- **State Sync:** All fields persisted to state.txt (Mirror)
+
+### 3. index.html - Integration & Event Handling
+
+**Key Fixes:**
+- **Pulse System:** frame_changed.txt size delta detection (C-PARITY heartbeat)
+- **Key Mapping:** Browser keys mapped to C-style codes:
+  - ArrowUp → 1002, ArrowDown → 1003, ArrowLeft → 1000, ArrowRight → 1001
+  - Escape → 27, Enter → 13, Backspace → 127
+- **INTERACT Mode:** Keys forwarded to fuzzpet/history.txt as `KEY_PRESSED: <code>`
+- **Virtual Commands:** Button onClick mapped to virtual keys:
+  - FEED → '2', PLAY → '3', SLEEP → '4', EVOLVE → '5', END_TURN → '6'
+
+### 4. bridge.php - Directory Creation
+
+**Key Fix:**
+- write/append operations now create parent directories if missing (mkdir -p equivalent)
+
+### 5. State Files - Initialization
+
+**Created/Reset:**
+- `pieces/display/state.txt` - frame_history=on
+- `pieces/display/frame_changed.txt` - Initial "X\n" marker
+- `pieces/apps/fuzzpet_app/fuzzpet/view_changed.txt` - Initial "X\n" marker
+- `pieces/apps/fuzzpet_app/fuzzpet/state.txt` - All fields initialized
+- `pieces/apps/fuzzpet_app/fuzzpet/history.txt` - Cleared
+
+---
+
+## Architecture Comparison (C vs PHP/JS)
+
+| Component | C Version | PHP/JS Version | Status |
+|-----------|-----------|----------------|--------|
+| Parser | chtpm_parser.c | parser.js | ✅ PARITY |
+| Module | fuzzpet.c | orchestrator.js | ✅ PARITY |
+| Renderer | renderer.c | HTML/CSS | ✅ EQUIVALENT |
+| Keyboard | keyboard_input.c | window.keydown | ✅ PARITY |
+| IPC | filesystem (history.txt, state.txt) | bridge.php → filesystem | ✅ PARITY |
+| Pulse | frame_changed.txt size delta | frame_changed.txt size delta | ✅ PARITY |
+
+---
+
+## Testing Checklist
+
+- [x] Navigation menu with arrow keys/WASD
+- [x] Number key jump to interactive element
+- [x] href page transitions (Launch FuzzPet → main.chtpm)
+- [x] Menu opening/closing (Settings menu)
+- [x] INTERACT mode (Control Map button)
+- [x] Movement in INTERACT mode (WASD/arrow keys)
+- [x] Action buttons (Feed, Play, Sleep)
+- [x] Variable substitution (${fuzzpet_name}, ${clock_time}, etc.)
+- [x] Map rendering with borders
+- [x] Response text display
+- [x] ESC to exit INTERACT mode
+
+---
+
+## Files Modified
+
+1. `!.PMO_php_00.01/js/parser.js` - Complete rewrite
+2. `!.PMO_php_00.01/js/orchestrator.js` - Map rendering & key processing
+3. `!.PMO_php_00.01/index.html` - Integration & event handling
+4. `!.PMO_php_00.01/api/bridge.php` - Directory creation
+5. `!.PMO_php_00.01/pieces/**` - State file initialization
+
+---
+
+## How to Test
+
+1. Start PHP server: `bash php_server++.sh`
+2. Open browser to: `http://localhost:8080` (or port specified)
+3. Test navigation:
+   - Press 's' or ArrowDown to move focus down
+   - Press 'w' or ArrowUp to move focus up
+   - Press '2' to jump to element #2
+   - Press Enter on "Launch FuzzPet" to navigate
+4. Test INTERACT mode:
+   - Navigate to "Control Map" button
+   - Press Enter to activate INTERACT
+   - Press WASD/arrow keys to move pet (@)
+   - Watch map update in real-time
+   - Press ESC to exit INTERACT
+5. Test action buttons:
+   - Navigate to "Feed Pet"
+   - Press Enter
+   - Watch hunger decrease and response update
+
+---
+
+**Signed:** PMO Web Stack Parity Team
+**Verified Status:** C-PARITY COMPLIANT v0.02

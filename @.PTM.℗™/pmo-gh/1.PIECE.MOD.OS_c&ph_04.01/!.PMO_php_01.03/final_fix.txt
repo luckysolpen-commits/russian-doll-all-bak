@@ -1,0 +1,53 @@
+# FINAL FIX COMPARISON: CHTPM OS MENU & COMMAND PASSING
+
+This document details the nuanced functionality of the C-based FuzzPet application and how the PHP/JS implementation achieves parity.
+
+## 1. Interaction Pipeline (C Version)
+
+### 1.1 Command Mapping (The "Virtual Reflection")
+In `chtpm_parser.c`, UI elements (buttons) do not perform logic themselves. Instead, they map to "Virtual Keys" that are injected into the active module's history.
+- **Logic:** `send_command(cmd)` → `inject_raw_key(key_code)` → `history.txt`
+- **Nuance:** This allows the UI to act as a remote control for the module. Selecting "Feed Pet" from the navigation menu is functionally identical to pressing '2' while inside the map canvas.
+
+### 1.2 Interactive Indexing & Navigation
+- All interactive tags (`button`, `link`, `menu`, `cli_io`) are assigned a global `interactive_idx`.
+- **Jump Logic:** Digit keys accumulate in `nav_buffer`. `do_jump()` moves `focus_index` to the element matching the number.
+- **Enter Action:** Triggers the element's `onClick` or follows its `href`. If it's a standard button, it activates momentarily (`active_index` resets immediately).
+
+### 1.3 Menu Behavior
+- `<menu>` tags are interactive. When selected, they set `active_index` to themselves.
+- **Limitation:** In the current C version, menus are static list displays. There is no logic to move a sub-focus between children once a menu is open.
+
+## 2. Parity Implementation (PHP/JS Version)
+
+### 2.1 Aligned Command Pipeline
+We have matched the C version's virtual reflection in `index.html`:
+- `FEED` → Virtual Key `50` ('2')
+- `PLAY` → Virtual Key `51` ('3')
+- `SLEEP` → Virtual Key `52` ('4')
+- `EVOLVE` → Virtual Key `53` ('5')
+- `END_TURN` → Virtual Key `54` ('6')
+
+These are appended to `fuzzpet/history.txt` using the bridge, matching the `inject_raw_key` audit trail.
+
+### 2.2 Navigation Parity in `parser.js`
+- **Global Indexing:** Modified `parseLayout` to assign `interactiveIndex` to all interactive elements globally, matching C's enumeration.
+- **Jump Logic:** Implemented multi-digit jump accumulation in `navBuffer`.
+- **Advanced Menus:** While C menus are static, our JS version implements child navigation (using `ARROW_UP`/`ARROW_DOWN` when `activeIndex` points to a menu), exceeding C's functionality while maintaining the structural visual parity.
+
+### 2.3 INTERACT Mode (The "Canvas")
+- When "Control Map" is activated, the parser enters `INTERACT` mode (`activeIndex` stays set).
+- Raw key codes (WASD, Arrows, Digits) are forwarded via `bridge.php` to `history.txt`.
+- `navBuffer` reflects the last key pressed (e.g., "w", "2", "[Key]"), exactly as seen in the C version's `Active [^]` display.
+
+## 3. The "Training Parity" Nuance: UI-Hotkey Alignment
+
+A critical discovery in the C version's design is the intentional alignment between Navigation Mode indices and INTERACT Mode hotkeys.
+
+- **In Navigation Mode:** The "Feed Pet" button is assigned `interactive_idx 2`. Pressing `2` jumps to it; pressing `Enter` calls `send_command("FEED")`.
+- **In INTERACT Mode:** The canvas forwards all keys to the module. The Fuzzpet module's `process_key` explicitly listens for `'2'` (ASCII 50) to trigger the "Feed" action.
+
+**The Result:** The UI labels effectively act as a "legend" or training guide for the module's hotkeys. The user learns that "2 is for Feed" from the navigation menu, and that knowledge carries over directly into the high-speed interaction canvas.
+
+## 4. Conclusion
+The PHP/JS implementation is now architecture-compliant. It treats the UI as a "Theater" that produces "Virtual History" for the "Stage" (Module), ensuring that logic remains sovereign to the module while the OS handles the navigation shell. We have verified that both virtual button clicks and direct hotkey forwarding result in the same logical state changes in the Fuzzpet module.

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PMO Web Terminal</title>
+    <style>
+        body { 
+            background: #000; 
+            color: #aaa; 
+            font-family: "Courier New", Courier, monospace; 
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+        }
+        #terminal-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        #terminal {
+            white-space: pre;
+            line-height: 1.2;
+            font-size: 16px;
+            color: #ccc;
+            font-variant-ligatures: none;
+            display: inline-block;
+        }
+        #terminal-container::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        #terminal-container::-webkit-scrollbar-track {
+            background: #000;
+        }
+        #terminal-container::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        #terminal-container::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal-container">
+        <div id="terminal">Loading CHTPM+OS...</div>
+    </div>
+
+    <script src="js/parser.js"></script>
+    <script src="js/orchestrator.js"></script>
+    <script>
+        const fuzzpetModule = new PMOModule('api/bridge.php');
+        const parser = new CHTPMParser();
+        const terminal = document.getElementById('terminal');
+        let lastFrameContent = "";
+        let lastFrameSize = 0;
+        const MAX_HISTORY = 50;
+        const frames = [];
+        
+        // Adaptive polling to prevent CPU overload
+        let isInteractMode = false;
+        let lastChangeTime = 0;
+        const ACTIVE_POLL_INTERVAL = 16;      // ~60 FPS when active
+        const IDLE_POLL_INTERVAL = 100;       // 10 FPS when idle
+        const CHANGE_COOLDOWN = 500;          // Stay at 60 FPS for 500ms after change
+
+        /**
+         * Pulse the frame_changed marker (C-PARITY: change detection)
+         */
+        async function pulseFrameChanged() {
+            await fuzzpetModule.callBridge('append', 'pieces/display/frame_changed.txt', 'X\n');
+        }
+
+        /**
+         * Get current frame changed file size for change detection
+         */
+        async function getFrameChangedSize() {
+            try {
+                const res = await fetch(`api/bridge.php?action=stat&path=pieces/display/frame_changed.txt`);
+                const data = await res.json();
+                return data.size || 0;
+            } catch (e) {
+                return 0;
+            }
+        }
+
+        /**
+         * Render frame to terminal
+         */
+        async function renderFrame() {
+            const layoutPath = parser.getCurrentLayout();
+            const layoutRes = await fuzzpetModule.callBridge('read', layoutPath);
+            
+            if (layoutRes.content) {
+                const currentFrame = await parser.composeFrame(layoutRes.content);
+                
+                if (currentFrame !== lastFrameContent) {
+                    const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19);
+                    const frameHeader = `\n\n--- FRAME UPDATE at ${timestamp} ---\n`;
+                    
+                    frames.push(frameHeader + currentFrame);
+                    if (frames.length > MAX_HISTORY) frames.shift();
+                    
+                    terminal.textContent = frames.join("");
+                    lastFrameContent = currentFrame;
+                    
+                    // Auto-scroll to bottom
+                    const container = document.getElementById('terminal-container');
+                    container.scrollTop = container.scrollHeight;
+                    
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        async function init() {
+            await fuzzpetModule.init();
+            
+            // Initialize parser with starting layout
+            parser.setLayout('pieces/chtpm/layouts/os.chtpm');
+            await renderFrame();
+            
+            // Initialize frame_changed marker
+            await fuzzpetModule.callBridge('write', 'pieces/display/frame_changed.txt', 'X\n');
+            lastFrameSize = await getFrameChangedSize();
+            
+            renderLoop();
+        }
+
+        async function renderLoop() {
+            const now = Date.now();
+            
+            // Check if we're in INTERACT mode (high-frequency updates needed)
+            const wasInteract = isInteractMode;
+            isInteractMode = parser.activeIndex >= 0 && parser.getActiveOnClick() === 'INTERACT';
+            
+            // 1. Module Pulse (Logic & View Production) - ALWAYS pulse like C's separate fuzzpet process
+            // C version: fuzzpet.+x runs as separate process, continuously polling history
+            // JS version: must pulse from main loop to match C behavior
+            await fuzzpetModule.pulse();
+            if (isInteractMode) {
+                await pulseFrameChanged();
+            }
+
+            // 2. Check for frame change (C-PARITY: size delta detection)
+            const currentFrameSize = await getFrameChangedSize();
+            const frameChanged = currentFrameSize !== lastFrameSize;
+            
+            if (frameChanged || parser.clearNavOnNext) {
+                await renderFrame();
+                lastFrameSize = currentFrameSize;
+                parser.clearNavOnNext = false;
+                lastChangeTime = now;  // Track when last change occurred
+            }
+            
+            // 3. Adaptive polling interval
+            // Stay at 60 FPS for CHANGE_COOLDOWN ms after last change, then drop to idle
+            const timeSinceChange = now - lastChangeTime;
+            const pollInterval = (timeSinceChange < CHANGE_COOLDOWN || isInteractMode) 
+                ? ACTIVE_POLL_INTERVAL 
+                : IDLE_POLL_INTERVAL;
+
+            setTimeout(renderLoop, pollInterval);
+        }
+
+        /**
+         * Handle keyboard input (C-PARITY: mirrors keyboard_input.c)
+         */
+        window.addEventListener('keydown', async (e) => {
+            e.preventDefault();
+            
+            let keyCode;
+            
+            // Map browser keys to C-style key codes
+            if (e.key === 'ArrowUp') keyCode = 1002;
+            else if (e.key === 'ArrowDown') keyCode = 1003;
+            else if (e.key === 'ArrowLeft') keyCode = 1000;
+            else if (e.key === 'ArrowRight') keyCode = 1001;
+            else if (e.key === 'Escape') keyCode = 27;
+            else if (e.key === 'Enter') keyCode = 13;
+            else if (e.key === 'Backspace') keyCode = 127;
+            else if (e.key === 'Tab') return; // Ignore tab
+            else if (e.key.length === 1) keyCode = e.key.charCodeAt(0);
+            else keyCode = e.keyCode;
+
+            // Check if we're in INTERACT mode
+            if (parser.activeIndex >= 0 && parser.getActiveOnClick() === 'INTERACT') {
+                // Forward key to module - C-PARITY: raw number like inject_raw_key()
+                const interactResult = await parser.handleInteractKey(keyCode);
+                if (interactResult !== null && typeof interactResult === 'number') {
+                    // Write raw number to module history (C: fprintf(fp, "%d\n", code))
+                    await fuzzpetModule.callBridge('append', 
+                        'pieces/apps/fuzzpet_app/fuzzpet/history.txt', 
+                        `${interactResult}\n`);
+                    await pulseFrameChanged();
+                }
+                return;
+            }
+
+            // Navigation mode
+            const navResult = await parser.navigate(keyCode);
+            
+            if (navResult === 'layout_change') {
+                // Layout changed via href - reload and compose
+                await renderFrame();
+                await pulseFrameChanged();
+            } else if (navResult === 'quit') {
+                // Quit handler
+                alert('Quitting CHTPM+OS');
+            } else if (typeof navResult === 'string' && navResult.startsWith('CLI:')) {
+                const cmd = navResult.substring(4);
+                // Forward CLI command to master ledger or handle locally
+                await fuzzpetModule.callBridge('append', 'pieces/master_ledger/master_ledger.txt', 
+                    `[${new Date().toISOString()}] CLI_COMMAND: ${cmd} | Source: web_terminal\n`);
+                await renderFrame();
+                await pulseFrameChanged();
+            } else if (typeof navResult === 'string' && navResult.length > 0 && navResult !== 'exit_interact') {
+                // onClick command from button - C-PARITY: Virtual Reflection
+                // UI click maps to virtual key code, written as raw number (matching C's inject_raw_key)
+                let virtualKey = null;
+                if (navResult === 'FEED') virtualKey = 50;       // '2' ASCII
+                else if (navResult === 'PLAY') virtualKey = 51;  // '3' ASCII
+                else if (navResult === 'SLEEP') virtualKey = 52; // '4' ASCII
+                else if (navResult === 'EVOLVE') virtualKey = 53;// '5' ASCII
+                else if (navResult === 'END_TURN') virtualKey = 54; // '6' ASCII
+                else if (navResult.startsWith('LAUNCH:')) {
+                    // Simple launch simulation
+                    alert('Launching: ' + navResult.substring(7));
+                }
+                
+                if (virtualKey) {
+                    // C-PARITY: Write raw number like C's inject_raw_key() - fprintf(fp, "%d\n", code)
+                    await fuzzpetModule.callBridge('append',
+                        'pieces/apps/fuzzpet_app/fuzzpet/history.txt',
+                        `${virtualKey}\n`);
+                    await pulseFrameChanged();
+                }
+            } else if (navResult === true || navResult === 'exit_interact') {
+                // Navigation or state change happened, pulse for render
+                await renderFrame();
+                await pulseFrameChanged();
+            }
+        });
+
+        init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+# PHP/JS PMO Web Stack - C Parity Fix List
+
+**Date:** 2026-02-25
+**Goal:** Align PHP/JS navigation/menu/fuzzpet functionality with C version
+
+---
+
+## Parser Fixes (parser.js)
+
+1. Fix menu handling - only count <menu> as interactive, not children until opened
+2. Fix navigation - implement proper focus indicators [>] vs [ ] and number prefix format
+3. Fix href navigation - support page transitions like C version
+4. Fix INTERACT mode - pass all keys to module, handle ESC to exit
+5. Fix variable loading - load from state.txt and view.txt like C's load_vars()
+
+## Module/Orchestrator Fixes (orchestrator.js)
+
+6. Fix map rendering - add proper borders and match C version format
+7. Fix key processing - handle arrow keys (1000-1003) and proper movement
+
+## Infrastructure Fixes
+
+8. Add change detection pulse system like C version (frame_changed.txt size delta)
+
+## Verification
+
+9. Test the complete navigation flow in browser
+
+---
+
+## Key Nuances from C Version
+
+### Navigation Mode (active_index == -1)
+- Arrow keys (w/s/a/d or 1000-1003) move focus between interactive elements
+- Focus indicator: [>] for focused, [ ] for unfocused
+- Number keys jump to element by interactive index
+- Enter (13) activates: follows href, opens menu, or triggers onClick
+- Nav buffer shows last key pressed (w/s/a/d)
+
+### INTERACT Mode (active_index points to INTERACT element)
+- All keys are injected into fuzzpet/history.txt
+- ESC (27) exits INTERACT mode
+- Nav buffer shows last key or "[Key]"
+
+### Menu Behavior
+- <menu> tag itself is interactive (counted)
+- Children are NOT counted as interactive until menu is opened
+- Opening menu: sets active_index to menu, enables child navigation
+- Child navigation: uses current_child_focus index
+
+### Variable Loading (load_vars equivalent)
+1. Load defaults from .pdl files
+2. Override with runtime state.txt (Mirror)
+3. Load clock state
+4. Load display state
+5. Load module's view.txt as ${game_map}
+
+### Map Rendering Format
+- Each line padded to 60 chars with "║" borders
+- Map uses: # (wall), . (floor), @ (pet), T (tree), R (rock)
+- Response text shown above map
+- DEBUG line shows last key code
+
+---

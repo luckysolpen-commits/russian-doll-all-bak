@@ -1,0 +1,40 @@
+# 3-Step Fix: Achieving C-Compliant Parity for PMO Web Stack
+
+## Step 1: Parser Refinement (The "Theater")
+The `parser.js` currently treats every tag as an interactive element and lacks the ability to handle nested content correctly, leading to "split" menus.
+
+**Fixes:**
+-   **Menu Logic:** Only count the `<menu>` tag itself as interactive, not its children (until the menu is "opened"). For now, we will simplify by making `<menu>` a single interactive item.
+-   **CLI_IO Rendering:** Update `cli_io` to render as `_` without the `[n.]` button indicator if it's meant to be a raw echo, or ensure it matches the C version's `[ ] 7. _` style but behaves as a buffer.
+-   **Whitespace Management:** Improve the handling of raw text between tags to prevent double-spacing and misaligned borders.
+
+## Step 2: Module Logic & View Production (The "Stage")
+The `orchestrator.js` generates the map without the required `║` side borders and doesn't fully implement the response logic seen in the C version.
+
+**Fixes:**
+-   **Border Padding:** Update `writeSovereignView()` to pad every line of the map with `║ ` and ` ║` to maintain the box-drawing integrity.
+-   **Response Sync:** Ensure `last_key` and `responseText` accurately reflect the C version's feedback loop.
+-   **Layout Cleanup:** Adjust the `view.txt` structure to match the exact line count and formatting expected by the OS layout.
+
+## Step 3: Layout Alignment (The "Script")
+The `.chtpm` files in `php_server++.sh` have some deviations from the canonical C layouts.
+
+**Fixes:**
+-   **OS Menu:** Align the `Settings` menu and `cli_io` line with the C version (`#.c_look.txt`).
+-   **FuzzPet Dashboard:** Ensure the `${game_map}` substitution doesn't break the surrounding box borders.
+-   **DNA Reference:** Verify all state variables match the `.pdl` (DNA) source of truth.
+
+## Step 4: Input & IPC Reliability (The "Nerves")
+Fixed critical synchronization bugs that prevented map navigation and correct indexing.
+
+**Fixes:**
+-   **Append vs Overwrite:** Updated `bridge.php` with an `append` action. Previously, history writes used `w` mode, wiping out previous inputs and breaking orchestrator tracking.
+-   **Keyboard Mapping:** Added Arrow key support in `index.html` (mapped to WASD) to match C version behavior.
+-   **Index Parity:** Modified `parser.js` to count interactive items inside hidden menus. This ensures `cli_io` correctly receives index `7`, matching the C-standard layout.
+-   **Signal Integrity:** Centralized `pulseMarker` in PHP to ensure every `write` or `append` to critical files triggers a frame refresh.
+
+---
+**Verification Plan:**
+1. Apply `parser.js` and `orchestrator.js` fixes.
+2. Update `php_server++.sh` with refined layouts.
+3. Compare the generated Web terminal output side-by-side with `# .c_look.txt`.

@@ -1,9 +1,0 @@
-name=FuzzPet
-hunger=0
-happiness=100
-energy=100
-level=3
-pos_x=4
-pos_y=2
-status=active
-response_key=played

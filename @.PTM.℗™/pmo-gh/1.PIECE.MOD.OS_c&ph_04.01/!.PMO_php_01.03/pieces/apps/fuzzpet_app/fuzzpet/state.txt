@@ -1,0 +1,12 @@
+name=Fuzzball
+hunger=30
+happiness=95
+energy=100
+level=1
+status=active
+alive=true
+last_key=51 ('3')
+pos_x=5
+pos_y=5
+clock_turn=0
+clock_time=08:00:00
