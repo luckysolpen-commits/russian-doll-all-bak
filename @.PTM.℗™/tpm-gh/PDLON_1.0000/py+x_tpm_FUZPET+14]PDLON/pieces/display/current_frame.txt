@@ -1,0 +1,22 @@
+============================================================
+PET POSITION MAP:
+============================================================
+##########
+#        #
+#        #
+#     @  #
+#   @    #
+#        #
+#        #
+#        #
+#        #
+##########
+Pet Position: (6, 3)
+============================================================
+Pet Status: Name: FuzzPet, Hunger: 0, Happiness: 100, Energy: 100, Level: 3
+Turn: 67
+Time: 13:40:00
+
+Yum yum~ Feeling so happy! *tail wags wildly*
+
+Movement: W↑|A←|S↓|D→ | Pet Cmds: 1[Feed]|2[Play]|3[Sleep]|4[Status]|5[Evolve]|6[End Turn]

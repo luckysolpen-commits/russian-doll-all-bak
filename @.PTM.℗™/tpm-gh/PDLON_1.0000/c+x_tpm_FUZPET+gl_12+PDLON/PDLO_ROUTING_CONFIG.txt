@@ -1,0 +1,154 @@
+# PDLO Routing Configuration
+
+## Overview
+
+The C version now supports **optional PDLO-based executable routing**. By default, it compiles with hardcoded fallback paths for reliability. You can enable full PDLO routing at compile time.
+
+---
+
+## Compilation Modes
+
+### Mode 1: Fallback Mode (Default)
+```bash
+gcc -o pieces/world/plugins/+x/game_logic.+x pieces/world/plugins/game_logic.c
+```
+
+**Behavior:**
+- Uses hardcoded executable paths
+- Always works, no dependencies
+- Good for production stability
+
+**Use when:** You want maximum reliability and don't need dynamic routing.
+
+---
+
+### Mode 2: PDLO Routing Mode
+```bash
+gcc -DUSE_PDLO_ROUTING -o pieces/world/plugins/+x/game_logic.+x pieces/world/plugins/game_logic.c
+```
+
+**Behavior:**
+- Reads executable paths from `pieces/clock/clock.pdl`
+- Falls back to hardcoded paths if PDLO parsing fails
+- Fully TPM-compliant dynamic routing
+
+**Use when:** You want full TPM compliance and dynamic executable routing.
+
+---
+
+## How It Works
+
+The `execute_clock_method()` function:
+
+```c
+void execute_clock_method(const char* method_name) {
+    char exe_path[MAX_FILENAME];
+    
+#ifdef USE_PDLO_ROUTING
+    // Full TPM-compliant PDLO routing
+    PDLOData clock_pdl;
+    if (parse_pdl_file("pieces/clock/clock.pdl", &clock_pdl)) {
+        if (get_method_executable(&clock_pdl, method_name, exe_path, sizeof(exe_path))) {
+            system(exe_path);  // ← Path from PDLO!
+            return;
+        }
+    }
+    // Falls through to hardcoded if PDLO fails
+#endif
+    
+    // Hardcoded fallback (always present)
+    if (strcmp(method_name, "increment_time") == 0) {
+        snprintf(exe_path, sizeof(exe_path), "./pieces/clock/plugins/+x/increment_time.+x");
+    }
+    // ...
+    system(exe_path);
+}
+```
+
+---
+
+## Updating compile_all.sh
+
+To enable PDLO routing by default, edit `compile_all.sh`:
+
+```bash
+# Change this line:
+gcc -o pieces/world/plugins/+x/game_logic.+x pieces/world/plugins/game_logic.c
+
+# To this:
+gcc -DUSE_PDLO_ROUTING -o pieces/world/plugins/+x/game_logic.+x pieces/world/plugins/game_logic.c
+```
+
+Or uncomment the PDLO routing line in the script.
+
+---
+
+## Testing PDLO Routing
+
+### Test 1: Verify PDLO Parser Works
+```bash
+cd c+x_tpm_FUZPET+gl_12
+gcc -DTEST_PDLO_PARSER -o pdlo_test pieces/locations/pdlo_parser.c
+./pdlo_test pieces/clock/clock.pdl
+```
+
+Expected output:
+```
+Piece: clock (version 1.0)
+Methods (3):
+  increment_time:
+    python: pieces/clock/plugins/increment_time.py
+    c: pieces/clock/plugins/+x/increment_time.+x
+  ...
+Executable for increment_time: pieces/clock/plugins/+x/increment_time.+x
+```
+
+### Test 2: Compile with PDLO Routing
+```bash
+gcc -DUSE_PDLO_ROUTING -o pieces/world/plugins/+x/game_logic.+x pieces/world/plugins/game_logic.c
+./run_fuzzpet.sh
+```
+
+System should run normally, but now reads executable paths from PDLO.
+
+### Test 3: Verify Fallback Works
+```bash
+# Temporarily break the PDLO file
+echo "broken" > pieces/clock/clock.pdl
+
+# System should still work (falls back to hardcoded paths)
+./run_fuzzpet.sh
+```
+
+---
+
+## Benefits of This Design
+
+1. **Graceful Degradation** - System works even if PDLO parsing fails
+2. **Optional TPM Compliance** - Enable full routing when ready
+3. **Zero Downtime Migration** - Switch modes without breaking system
+4. **Debugging** - Can test with/without PDLO routing easily
+5. **Production Safety** - Default to fallback, enable PDLO when confident
+
+---
+
+## Future Enhancements
+
+When ready for full TPM compliance:
+
+1. **Change default in compile_all.sh** to use `-DUSE_PDLO_ROUTING`
+2. **Extend to all pieces** - Not just clock, but all method calls
+3. **Add caching** - Parse PDLO once at startup, cache results
+4. **Add validation** - Verify all executables exist at startup
+
+---
+
+## Current Status
+
+- ✅ PDLO parser created and tested
+- ✅ `execute_clock_method()` supports both modes
+- ✅ Compiles in both modes successfully
+- ✅ Default: Fallback mode (stable)
+- ✅ Optional: PDLO routing mode (TPM-compliant)
+
+**Recommendation:** Keep fallback mode for now, enable PDLO routing when you want full TPM compliance.

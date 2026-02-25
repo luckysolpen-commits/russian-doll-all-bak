@@ -1,0 +1,24 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | keyboard
+META         | version            | 1.0
+META         | determinism        | strict
+
+STATE        | session_id           | int
+STATE        | current_key_log_path | string
+STATE        | logging_enabled      | bool
+STATE        | keys_recorded        | int
+STATE        | last_key_logged      | n
+STATE        | last_key_code        | int
+STATE        | last_key_time        | string
+STATE        | status               | string
+
+METHOD       | log_key              | void
+METHOD       | clear_log            | void
+METHOD       | get_last_key         | void
+METHOD       | reset_session        | void
+
+EVENT_IN     | key_logged           | void
+EVENT_IN     | input_received       | void
+EVENT_IN     | session_started      | void
+
