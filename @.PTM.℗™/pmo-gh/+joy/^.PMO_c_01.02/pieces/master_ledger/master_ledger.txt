@@ -1,0 +1,35 @@
+[2026-03-02 22:23:23] FrameRendered: at 2026-03-02 22:23:23 | Source: renderer
+[2026-03-02 22:23:26] InputReceived: key_code=2103 | Source: joystick_input
+[2026-03-02 22:23:26] FrameRendered: at 2026-03-02 22:23:26 | Source: renderer
+[2026-03-02 22:23:27] InputReceived: key_code=2000 | Source: joystick_input
+[2026-03-02 22:23:27] FrameRendered: at 2026-03-02 22:23:27 | Source: renderer
+[2026-03-02 22:23:28] InputReceived: key_code=2000 | Source: joystick_input
+[2026-03-02 22:23:28] FrameRendered: at 2026-03-02 22:23:28 | Source: renderer
+[2026-03-02 22:23:28] FrameRendered: at 2026-03-02 22:23:28 | Source: renderer
+[2026-03-02 22:23:30] InputReceived: key_code=2000 | Source: joystick_input
+[2026-03-02 22:23:30] FrameRendered: at 2026-03-02 22:23:30 | Source: renderer
+[2026-03-02 22:23:31] InputReceived: key_code=2103 | Source: joystick_input
+[2026-03-02 22:23:31] InputForwarded: key_code=2103 to fuzzpet | Source: chtpm_parser
+[2026-03-02 22:23:31] FrameRendered: at 2026-03-02 22:23:31 | Source: renderer
+[2026-03-02 22:23:31] StateChange: fuzzpet pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-02 22:23:31] StateChange: fuzzpet pos_y 6 | Trigger: piece_manager_set_state
+[2026-03-02 22:23:31] StateChange: fuzzpet hunger 51 | Trigger: piece_manager_set_state
+[2026-03-02 22:23:31] StateChange: fuzzpet energy 99 | Trigger: piece_manager_set_state
+[2026-03-02 22:23:31] FrameRendered: at 2026-03-02 22:23:31 | Source: renderer
+[2026-03-02 22:23:31] EventFire: moved on fuzzpet | Source: fuzzpet_app
+[2026-03-02 22:23:31] FrameRendered: at 2026-03-02 22:23:31 | Source: renderer
+[2026-03-02 22:23:31] FrameRendered: at 2026-03-02 22:23:31 | Source: renderer
+[2026-03-02 22:23:32] InputReceived: key_code=2000 | Source: joystick_input
+[2026-03-02 22:23:32] InputForwarded: key_code=2000 to fuzzpet | Source: chtpm_parser
+[2026-03-02 22:23:32] FrameRendered: at 2026-03-02 22:23:32 | Source: renderer
+[2026-03-02 22:23:32] FrameRendered: at 2026-03-02 22:23:32 | Source: renderer
+[2026-03-02 22:23:35] InputReceived: key_code=27 | Source: keyboard_input
+[2026-03-02 22:23:35] FrameRendered: at 2026-03-02 22:23:35 | Source: renderer
+[2026-03-02 22:23:36] InputReceived: key_code=2103 | Source: joystick_input
+[2026-03-02 22:23:36] FrameRendered: at 2026-03-02 22:23:36 | Source: renderer
+[2026-03-02 22:23:37] InputReceived: key_code=2000 | Source: joystick_input
+[2026-03-02 22:23:37] InputForwarded: key_code=50 to fuzzpet | Source: chtpm_parser
+[2026-03-02 22:23:37] StateChange: fuzzpet hunger 31 | Trigger: piece_manager_set_state
+[2026-03-02 22:23:37] ResponseRequest: fed on fuzzpet | Source: fuzzpet_app
+[2026-03-02 22:23:37] FrameRendered: at 2026-03-02 22:23:37 | Source: renderer
+[2026-03-02 22:23:37] ResponseTriggered: fed on fuzzpet | Message: Yum yum~ Feeling so happy! *tail wags wildly* | Source: response_handler

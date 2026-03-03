@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PMO Web Terminal</title>
+    <style>
+        body { 
+            background: #000; 
+            color: #aaa; 
+            font-family: "Courier New", Courier, monospace; 
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+        }
+        #terminal-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: auto; /* Enable scrolling */
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start; /* Align to top-left for better scroll behavior */
+            align-items: flex-start;
+        }
+        #terminal {
+            white-space: pre;
+            line-height: 1.2;
+            font-size: 16px;
+            color: #ccc;
+            /* Ensure box drawing characters align perfectly */
+            font-variant-ligatures: none;
+            display: inline-block; /* Ensure it takes up space for horizontal scrolling */
+        }
+        /* Custom scrollbar to keep the terminal look */
+        #terminal-container::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        #terminal-container::-webkit-scrollbar-track {
+            background: #000;
+        }
+        #terminal-container::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        #terminal-container::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+        .cursor {
+            background: #aaa;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal-container">
+        <div id="terminal">Loading CHTPM+OS...</div>
+    </div>
+
+    <script src="js/parser.js"></script>
+    <script src="js/orchestrator.js"></script>
+    <script>
+        const module = new PMOModule('api/bridge.php');
+        const parser = new CHTPMParser();
+        const terminal = document.getElementById('terminal');
+        let lastFrameContent = "";
+        const MAX_HISTORY = 50;
+        const frames = [];
+        let clearNavOnNext = false;
+        // Removed waitForViewChange - orchestrator pulses every frame anyway
+
+        // Joystick/Gamepad State tracking
+        const lastGamepadState = { buttons: [], axes: [] };
+        const AXIS_THRESHOLD = 0.5;
+
+        // doJump() - Match C version: jump to element by interactive_idx
+        function doJump(targetNum) {
+            // Check parser.elements for matching interactiveIdx
+            if (parser.elements && parser.elements.length > 0) {
+                for (let i = 0; i < parser.elements.length; i++) {
+                    if (parser.elements[i].interactiveIdx === targetNum) {
+                        parser.focusIndex = i + 1;  // 1-based index for display
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        async function init() {
+            await module.init();
+            renderLoop();
+        }
+
+        async function pollGamepad() {
+            const gamepads = navigator.getGamepads();
+            if (!gamepads) return;
+            const gp = gamepads[0];
+            if (!gp) return;
+
+            // Process Buttons
+            for (let i = 0; i < gp.buttons.length; i++) {
+                const btn = gp.buttons[i];
+                const isPressed = btn.pressed || btn.value > 0;
+                if (isPressed && !lastGamepadState.buttons[i]) {
+                    await handleInput(2000 + i);
+                }
+                lastGamepadState.buttons[i] = isPressed;
+            }
+
+            // Process Axes
+            for (let i = 0; i < gp.axes.length; i++) {
+                const val = gp.axes[i];
+                const base = 2100 + (i * 2);
+                
+                // Axis Threshold Logic
+                if (val < -AXIS_THRESHOLD && !lastGamepadState.axes[base]) {
+                    await handleInput(base);
+                    lastGamepadState.axes[base] = true;
+                } else if (val > -AXIS_THRESHOLD / 2) {
+                    lastGamepadState.axes[base] = false;
+                }
+
+                if (val > AXIS_THRESHOLD && !lastGamepadState.axes[base + 1]) {
+                    await handleInput(base + 1);
+                    lastGamepadState.axes[base + 1] = true;
+                } else if (val < AXIS_THRESHOLD / 2) {
+                    lastGamepadState.axes[base + 1] = false;
+                }
+            }
+        }
+
+        async function renderLoop() {
+            await pollGamepad();
+            await module.pulse();  // ALWAYS pulse - orchestrator processes history
+
+            const mirror = await module.callBridge('read', 'pieces/apps/fuzzpet_app/fuzzpet/state.txt');
+            const view = await module.callBridge('read', 'pieces/apps/fuzzpet_app/fuzzpet/view.txt');
+            const clock = await module.callBridge('read', 'pieces/apps/fuzzpet_app/clock/state.txt');
+            
+            const state = {};
+            if (mirror.content) {
+                mirror.content.split('\n').forEach(line => {
+                    const [k, v] = line.split('=');
+                    if (k) state[`fuzzpet_${k}`] = v;
+                });
+            }
+            if (clock.content) {
+                clock.content.split('\n').forEach(line => {
+                    const [k, v] = line.split(' ');
+                    if (k === 'turn') state['clock_turn'] = v;
+                    if (k === 'time') state['clock_time'] = v;
+                });
+            }
+            if (view.content) state['game_map'] = view.content;
+
+            const layout = await module.callBridge('read', module.currentLayout);
+            if (layout.content) {
+                parser.setVars(state);
+                
+                const currentFrame = await parser.composeFrame(layout.content);
+                
+                if (currentFrame !== lastFrameContent) {
+                    const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19);
+                    const frameHeader = `\n\n--- FRAME UPDATE at ${timestamp} ---\n`;
+                    frames.push(frameHeader + currentFrame);
+                    if (frames.length > MAX_HISTORY) frames.shift();
+                    terminal.textContent = frames.join("");
+                    lastFrameContent = currentFrame;
+                    document.getElementById('terminal-container').scrollTop = document.getElementById('terminal-container').scrollHeight;
+                }
+            }
+
+            setTimeout(renderLoop, 100);
+        }
+
+        async function handleInput(keyInput) {
+            let code;
+            let display = "";
+
+            if (typeof keyInput === 'string') {
+                if (keyInput === 'ArrowUp') { code = 1002; display = "up"; }
+                else if (keyInput === 'ArrowDown') { code = 1003; display = "down"; }
+                else if (keyInput === 'ArrowLeft') { code = 1000; display = "left"; }
+                else if (keyInput === 'ArrowRight') { code = 1001; display = "right"; }
+                else if (keyInput === 'Enter') { code = 13; display = ""; }
+                else if (keyInput === 'Escape') { code = 27; display = ""; }
+                else if (keyInput === 'Backspace') { code = 8; display = ""; }
+                else {
+                    code = keyInput.charCodeAt(0);
+                    display = keyInput;
+                }
+            } else {
+                code = keyInput;
+                if (code >= 2100 && code <= 2103) {
+                    const dirs = ["J-LF", "J-RT", "J-UP", "J-DN"];
+                    display = dirs[code - 2100];
+                } else if (code >= 2000 && code < 2100) {
+                    display = "J-B" + (code - 2000);
+                }
+            }
+
+            // Standard Hardware Audit
+            await module.callBridge('append', 'pieces/keyboard/history.txt', `KEY_PRESSED: ${code}\n`);
+
+            if (parser.activeIndex === -1) {
+                // NAVIGATION MODE
+                if (display >= '0' && display <= '9') {
+                    // Match C version: accumulate digits for multi-digit jump
+                    if (parser.navBuffer !== "" && !/^\d+$/.test(parser.navBuffer)) {
+                        parser.navBuffer = "";
+                    }
+                    parser.navBuffer += display;
+                    const targetIdx = parseInt(parser.navBuffer);
+                    // Try multi-digit jump first, fall back to single digit
+                    if (!doJump(targetIdx)) {
+                        const singleIdx = parseInt(display);
+                        if (doJump(singleIdx)) {
+                            parser.navBuffer = display;
+                        } else {
+                            parser.navBuffer = "";
+                        }
+                    }
+                    parser.focusIndex = targetIdx;
+                    // Don't clear - number persists in nav like C version (e.g., "Nav > 2_")
+                } else if (code === 8) { // Backspace
+                    parser.navBuffer = parser.navBuffer.slice(0, -1);
+                    parser.focusIndex = parser.navBuffer === "" ? 1 : parseInt(parser.navBuffer);
+                } else if (code === 13 || code === 2000) { // Enter or Joy B0
+                    // Show ENTER in nav for debug - persists until next key
+                    parser.navBuffer = "ENTER";
+                    await executeAction();
+                } else if (display !== "") {
+                    parser.navBuffer = display;
+                    // Focus Movement Parity
+                    if (code === 119 || code === 87 || code === 1002 || code === 2102) parser.focusIndex = Math.max(1, parser.focusIndex - 1);
+                    if (code === 115 || code === 83 || code === 1003 || code === 2103) parser.focusIndex++;
+                }
+            } else {
+                // INTERACT MODE
+                if (code === 27) {
+                    parser.activeIndex = -1;
+                    parser.navBuffer = "";
+                } else {
+                    // Forward to module history
+                    await module.callBridge('append', 'pieces/apps/fuzzpet_app/fuzzpet/history.txt', `KEY_PRESSED: ${code}\n`);
+                    parser.navBuffer = display;
+                    // Don't clear - let key persist like C version
+                }
+            }
+        }
+
+        async function executeAction() {
+            const layout = await module.callBridge('read', module.currentLayout);
+            if (!layout.content) return false;
+            const parts = layout.content.split(/(<[^>]+>)/g);
+            let interactiveCount = 0;
+            let didSendCommand = false;
+            
+            for (let part of parts) {
+                if (part.startsWith('<button') || part.startsWith('<link') || part.startsWith('<menu') || part.startsWith('<cli_io')) {
+                    interactiveCount++;
+                    if (interactiveCount === parser.focusIndex) {
+                        const onClickMatch = part.match(/onClick="([^"]+)"/);
+                        const hrefMatch = part.match(/href="([^"]+)"/);
+                        if (onClickMatch) {
+                            const cmd = onClickMatch[1];
+                            if (cmd === 'INTERACT') {
+                                parser.activeIndex = parser.focusIndex;
+                                parser.navBuffer = "";
+                            } else {
+                                // VIRTUAL REFLECTION: Send numeric hotkey only (keyboard input)
+                                let virtualCode = 0;
+                                
+                                if (cmd === 'FEED') virtualCode = 50;  // '2'
+                                else if (cmd === 'PLAY') virtualCode = 51;  // '3'
+                                else if (cmd === 'SLEEP') virtualCode = 52;  // '4'
+                                else if (cmd === 'EVOLVE') virtualCode = 53;  // '5'
+                                else if (cmd === 'END_TURN') virtualCode = 54;  // '6'
+                                
+                                if (virtualCode) {
+                                    await module.callBridge('append', 'pieces/apps/fuzzpet_app/fuzzpet/history.txt', 
+                                                            `KEY_PRESSED: ${virtualCode}\n`);
+                                    didSendCommand = true;
+                                }
+                                parser.activeIndex = -1;  // Reset for momentary buttons
+                                // Nav buffer stays "ENTER" for debug - cleared by next key press
+                            }
+                        }
+                        if (hrefMatch) {
+                            module.currentLayout = hrefMatch[1];
+                            parser.focusIndex = 1; 
+                            parser.activeIndex = -1;
+                        }
+                        break;
+                    }
+                }
+            }
+            // Don't clear navBuffer - "ENTER" persists for debug until next key
+            return didSendCommand;
+        }
+
+        // Input Handling
+        window.addEventListener('keydown', async (e) => {
+            await handleInput(e.key);
+        });
+
+        init();
+    </script>
+</body>
+</html>

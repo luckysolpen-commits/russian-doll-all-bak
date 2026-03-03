@@ -1,0 +1,485 @@
+# FX_DIFF_QWEN.TXT - CRITICAL Menu/Index/Hotkey Parity Issues
+
+**Date:** 2026-02-27
+**Analysis:** Qwen Code Investigation (Revised)
+**Status:** CRITICAL - Menu/Index/Hotkey Parity Broken
+
+---
+
+## THE CORE ISSUE: Menu Index → Game Hotkey Parity
+
+You're absolutely right. The critical issue is **how menu indices map to game hotkeys** in both NAVIGATION and INTERACT modes.
+
+### The C Version Flow:
+
+**Layout (main.chtpm) interactive indices:**
+```
+1. [Control Map]    onClick="INTERACT"
+2. [Feed Pet]       onClick="FEED"
+3. [Play]           onClick="PLAY"
+4. [Sleep]          onClick="SLEEP"
+5. [Evolve]         onClick="EVOLVE"
+6. [End Turn]       onClick="END_TURN"
+7. [Exit to Menu]   href="..."
+```
+
+**NAVIGATION Mode (active_index = -1):**
+```
+User presses '2' → do_jump(2) → focus_index = element[2] (Feed Pet button)
+User presses Enter → send_command("FEED") → inject_raw_key('2') + inject_raw_key(2001)
+                     → fuzzpet receives BOTH '2' AND J-B1 → feeds pet
+```
+
+**INTERACT Mode (active_index points to Control Map with onClick="INTERACT"):**
+```
+User presses '2' → inject_raw_key('2') → fuzzpet receives '2' → feeds pet
+User presses J-B1 (2001) → inject_raw_key(2001) → fuzzpet receives 2001 → feeds pet
+```
+
+**The Key Insight:** The interactive_idx (2, 3, 4, 5, 6) IS the hotkey mapping. 
+- Index 2 = '2' = Feed
+- Index 3 = '3' = Play
+- etc.
+
+---
+
+## CRITICAL BUG #1: PHP/JS Missing Joystick Parity in send_command
+
+### C Version (chtpm_parser.c line 475-481):
+```c
+void send_command(const char* cmd) {
+    if (strcmp(cmd, "FEED") == 0) { 
+        inject_raw_key('2');              // ASCII 50 - numeric hotkey
+        inject_raw_key(JOY_BUTTON_0 + 1); // 2001 - J-B1 joystick parity
+    }
+    else if (strcmp(cmd, "PLAY") == 0) { 
+        inject_raw_key('3'); 
+        inject_raw_key(JOY_BUTTON_0 + 2); // 2002 - J-B2
+    }
+    // ... etc for SLEEP(4/2003), EVOLVE(5/2004)
+}
+```
+
+### PHP/JS Version (index.html executeAction):
+```javascript
+if (cmd === 'FEED') virtualCode = 50;  // Only '2'
+else if (cmd === 'PLAY') virtualCode = 51;
+// ...
+if (virtualCode) 
+    await module.callBridge('append', 'pieces/apps/fuzzpet_app/fuzzpet/history.txt', 
+                            `KEY_PRESSED: ${virtualCode}\n`);
+// MISSING: Joystick button parity injection!
+```
+
+### Impact:
+When user clicks "Feed Pet" button via navigation:
+- **C Version**: Fuzzpet receives BOTH '2' AND 2001 (full audit trail, joystick parity)
+- **PHP/JS Version**: Fuzzpet only receives '2' (missing joystick parity)
+
+This breaks the "Virtual Reflection" principle where UI actions should be indistinguishable from direct hotkey/joystick input.
+
+---
+
+## CRITICAL BUG #2: Menu Child Navigation Not Implemented
+
+### C Version (chtpm_parser.c line 519):
+```c
+else if (strcmp(el->type, "menu") == 0) { 
+    active_index = focus_index;           // Menu becomes active
+    if (el->num_children > 0) 
+        el->current_child_focus = 0;      // Initialize child focus to first child
+}
+```
+
+The C version tracks `current_child_focus` for each menu element, and the rendering logic (line 378) highlights the focused child:
+```c
+if (strcmp(par->type, "menu") == 0 && active_index == el->parent_index) {
+    is_focused = 0;
+    for (int c=0; c < par->num_children; c++)
+        if (par->children[c] == idx && par->current_child_focus == c)
+            is_focused = 1;
+}
+```
+
+### PHP/JS Version:
+```javascript
+// parser.js - NO menu state tracking at all
+class CHTPMParser {
+    constructor() {
+        this.focusIndex = 1;
+        this.activeIndex = -1;
+        this.navBuffer = "";
+        // NO menuChildFocus property!
+        // NO elements array to store parsed elements!
+    }
+}
+```
+
+### Impact:
+- Menus cannot be opened
+- Cannot navigate menu children with arrow keys
+- Menu child selection is impossible
+- **The Settings menu in os.chtpm is completely non-functional**
+
+---
+
+## CRITICAL BUG #3: INTERACT Mode Hotkey Handling
+
+### The Expected Flow:
+
+In INTERACT mode (Control Map canvas active), the user should be able to press:
+- **'2'** → Feed pet (hotkey)
+- **'3'** → Play with pet
+- **J-B1 (2001)** → Feed pet (joystick button)
+- **J-B2 (2002)** → Play with pet
+
+### C Version (chtpm_parser.c line 536-548):
+```c
+else if (strcmp(el->onClick, "INTERACT") == 0) {
+    if (key == ESC_KEY) { active_index = -1; }
+    else { 
+        inject_raw_key(key);  // <-- ALL keys forwarded to fuzzpet
+        if (key >= 32 && key <= 126) { 
+            nav_buffer[0] = (char)key; 
+            nav_buffer[1] = '\0'; 
+        } 
+        else if (key >= 2000 && key < 2100) { 
+            snprintf(nav_buffer, sizeof(nav_buffer), "J-B%d", key-2000); 
+        }
+        // ... joystick axes ...
+    }
+}
+```
+
+### PHP/JS Version (index.html handleInput):
+```javascript
+} else {
+    // INTERACT MODE
+    if (code === 27) {
+        parser.activeIndex = -1;
+        parser.navBuffer = "";
+    } else {
+        // Forward to module history
+        await module.callBridge('append', 'pieces/apps/fuzzpet_app/fuzzpet/history.txt', 
+                                `KEY_PRESSED: ${code}\n`);
+        parser.navBuffer = display;
+        clearNavOnNext = true;
+    }
+}
+```
+
+The PHP/JS version LOOKS correct, BUT the issue is that **menu option indices are not being passed as hotkeys**. When the user presses '2' in INTERACT mode:
+- PHP/JS forwards '2' (50) to fuzzpet history ✓
+- orchestrator.js processKey() handles '2' ✓
+
+This actually works! The issue is elsewhere...
+
+---
+
+## CRITICAL BUG #4: Horizontal Navigation Missing
+
+### C Version (chtpm_parser.c line 498-503):
+```c
+else if (key == ARROW_LEFT || key == 'a' || key == 'A' || key == JOY_LEFT) { 
+    if (key == JOY_LEFT) strcpy(nav_buffer, "J-LF"); 
+    else strcpy(nav_buffer, (key == ARROW_LEFT || key == 'a') ? "a" : "A"); 
+    clear_nav_on_next = true; 
+}
+else if (key == ARROW_RIGHT || key == 'd' || key == 'D' || key == JOY_RIGHT) { 
+    if (key == JOY_RIGHT) strcpy(nav_buffer, "J-RT"); 
+    else strcpy(nav_buffer, (key == ARROW_RIGHT || key == 'd') ? "d" : "D"); 
+    clear_nav_on_next = true; 
+}
+```
+
+### PHP/JS Version (index.html handleInput):
+```javascript
+// Focus Movement Parity
+if (code === 119 || code === 87 || code === 1002 || code === 2102) 
+    parser.focusIndex = Math.max(1, parser.focusIndex - 1); // w, W, UP, J-UP
+if (code === 115 || code === 83 || code === 1003 || code === 2103) 
+    parser.focusIndex++; // s, S, DOWN, J-DN
+// MISSING: 'a'/'d' or LEFT/RIGHT or JOY_LEFT/JOY_RIGHT!
+```
+
+### Impact:
+- 'a'/'d' keys do nothing in NAVIGATION mode
+- Joystick LEFT/RIGHT does nothing
+- Nav buffer doesn't show horizontal input
+
+---
+
+## CRITICAL BUG #5: Joystick Axis State Tracking
+
+(See previous analysis - threshold mismatch causes inconsistent behavior)
+
+---
+
+## THE FIX: Complete Parity Implementation
+
+### Fix #1: Add Joystick Parity to executeAction()
+
+```javascript
+// In index.html executeAction()
+if (onClickMatch) {
+    const cmd = onClickMatch[1];
+    if (cmd === 'INTERACT') {
+        parser.activeIndex = parser.focusIndex;
+        parser.navBuffer = "";
+    } else {
+        // VIRTUAL REFLECTION with FULL parity (matches C's send_command)
+        let virtualCode = 0;
+        let joyCode = 0;
+        
+        if (cmd === 'FEED') { 
+            virtualCode = 50;  // '2'
+            joyCode = 2001;    // J-B1
+        }
+        else if (cmd === 'PLAY') { 
+            virtualCode = 51;  // '3'
+            joyCode = 2002;    // J-B2
+        }
+        else if (cmd === 'SLEEP') { 
+            virtualCode = 52;  // '4'
+            joyCode = 2003;    // J-B3
+        }
+        else if (cmd === 'EVOLVE') { 
+            virtualCode = 53;  // '5'
+            joyCode = 2004;    // J-B4
+        }
+        else if (cmd === 'END_TURN') { 
+            virtualCode = 54;  // '6'
+        }
+        
+        if (virtualCode) {
+            await module.callBridge('append', 'pieces/apps/fuzzpet_app/fuzzpet/history.txt', 
+                                    `KEY_PRESSED: ${virtualCode}\n`);
+            // Inject joystick parity (matches C version)
+            if (joyCode) {
+                await module.callBridge('append', 'pieces/apps/fuzzpet_app/fuzzpet/history.txt', 
+                                        `KEY_PRESSED: ${joyCode}\n`);
+            }
+        }
+        parser.activeIndex = -1;
+    }
+}
+```
+
+### Fix #2: Add Menu State to parser.js
+
+```javascript
+// parser.js
+class CHTPMParser {
+    constructor() {
+        this.vars = {};
+        this.focusIndex = 1;
+        this.activeIndex = -1;
+        this.navBuffer = "";
+        this.menuChildFocus = -1;      // NEW: Track menu child focus
+        this.activeMenuElement = null;  // NEW: Track which menu is open
+        this.elements = [];             // NEW: Store parsed elements
+    }
+    
+    // In composeFrame(), store elements for later reference
+    async composeFrame(layoutContent) {
+        this.elements = [];  // Reset
+        let interactiveCount = 0;
+        // ... existing parsing logic, but push to this.elements[]
+    }
+}
+```
+
+### Fix #3: Add Menu Navigation in handleInput()
+
+```javascript
+// In index.html handleInput()
+if (parser.activeIndex === -1) {
+    // NAVIGATION MODE
+    // ... existing code ...
+    else if (code === 13 || code === 2000) { // Enter or Joy B0
+        await executeAction();
+    }
+    // ADD horizontal navigation:
+    else if (code === 97 || code === 65 || code === 1000 || code === 2100) { 
+        parser.navBuffer = (code >= 2100) ? "J-LF" : "a";
+        clearNavOnNext = true;
+    }
+    else if (code === 100 || code === 68 || code === 1001 || code === 2101) { 
+        parser.navBuffer = (code >= 2100) ? "J-RT" : "d";
+        clearNavOnNext = true;
+    }
+} else {
+    // INTERACT MODE - Check if it's a menu or INTERACT canvas
+    const el = parser.elements[parser.activeIndex - 1]; // Adjust for 1-based indexing
+    
+    if (el && el.type === 'menu') {
+        // MENU NAVIGATION
+        if (code === 27) { // ESC - close menu
+            parser.activeIndex = -1;
+            parser.menuChildFocus = -1;
+            parser.activeMenuElement = null;
+        }
+        else if (code === 1002 || code === 119 || code === 87) { // UP
+            parser.menuChildFocus = Math.max(0, parser.menuChildFocus - 1);
+        }
+        else if (code === 1003 || code === 115 || code === 83) { // DOWN
+            parser.menuChildFocus++; // TODO: bounds check
+        }
+        else if (code === 13) { // Enter - select child
+            // TODO: Execute child's onClick
+            parser.activeIndex = -1;
+            parser.menuChildFocus = -1;
+        }
+    }
+    else if (el && el.onClick === 'INTERACT') {
+        // INTERACT CANVAS - forward all keys
+        if (code === 27) {
+            parser.activeIndex = -1;
+            parser.navBuffer = "";
+        } else {
+            await module.callBridge('append', 'pieces/apps/fuzzpet_app/fuzzpet/history.txt', 
+                                    `KEY_PRESSED: ${code}\n`);
+            parser.navBuffer = display;
+            clearNavOnNext = true;
+        }
+    }
+}
+```
+
+---
+
+## SUMMARY TABLE
+
+| Feature | C Version | PHP/JS Version | Status |
+|---------|-----------|----------------|--------|
+| Nav index → hotkey mapping | ✓ | ✓ | OK |
+| UI button sends numeric code | ✓ | ✓ | OK |
+| UI button sends joystick parity | ✓ | ✗ | **BROKEN** |
+| Menu open on Enter | ✓ | ✗ | **BROKEN** |
+| Menu child navigation | Partial | ✗ | **BROKEN** |
+| INTERACT hotkey passthrough | ✓ | ✓ | OK |
+| Horizontal navigation | ✓ | ✗ | **BROKEN** |
+| Joystick axis tracking | ✓ | ✗ | **BROKEN** |
+
+---
+
+## VERIFICATION
+
+After fixes:
+1. Press '2' in INTERACT mode → feeds pet ✓
+2. Press J-B1 in INTERACT mode → feeds pet ✓
+3. Click "Feed Pet" button → sends '2' AND 2001 ✓
+4. Open Settings menu → navigate children with arrows ✓
+5. Press 'a'/'d' in NAV mode → updates nav buffer ✓
+6. Joystick horizontal → works correctly ✓
+
+---
+
+## CRITICAL BUG #6: Nav Buffer Cleared Before Render (Timing Bug)
+
+### The Problem
+
+In `index.html` `renderLoop()` (lines 148-151):
+
+```javascript
+if (clearNavOnNext) {
+    parser.navBuffer = "";      // <-- CLEARED BEFORE COMPOSE!
+    clearNavOnNext = false;
+}
+
+const currentFrame = await parser.composeFrame(layout.content);
+```
+
+This clears the nav buffer **before** `composeFrame()` is called, so the buffer is always empty when rendered!
+
+### C Version Flow (chtpm_parser.c lines 586-596):
+
+```c
+if (dirty || clear_nav_on_next) { 
+    compose_frame();            // <-- 1. Compose WITH nav_buffer content
+    // ...
+    if (clear_nav_on_next) { 
+        nav_buffer[0] = '\0';   // <-- 2. THEN clear AFTER composing
+        clear_nav_on_next = false; 
+        compose_frame();        // <-- 3. Compose again to show cleared state
+    } 
+}
+```
+
+The C version shows the key for **one frame** before clearing. This is the "clear_nav_on_next" mechanism - show the last key for one frame, then clear.
+
+### PHP/JS Bug Flow:
+
+```
+1. User presses 'w'
+2. handleInput() sets: navBuffer = "w", clearNavOnNext = true
+3. renderLoop() runs:
+   - Clears navBuffer = "" (BEFORE compose!)
+   - composeFrame() sees empty buffer
+   - Frame shows empty nav buffer
+4. User never sees "w" in the nav buffer!
+```
+
+### Impact:
+- Nav buffer always appears empty
+- User cannot see what key they pressed
+- Breaks the visual feedback mechanism
+
+### Fix Required:
+
+```javascript
+// In index.html renderLoop()
+async function renderLoop() {
+    await pollGamepad();
+    await module.pulse();
+
+    // ... state loading ...
+
+    const layout = await module.callBridge('read', module.currentLayout);
+    if (layout.content) {
+        parser.setVars(state);
+        
+        // FIX: Compose FIRST with current navBuffer
+        const currentFrame = await parser.composeFrame(layout.content);
+        
+        // THEN handle clearNavOnNext AFTER compose (matches C version)
+        if (clearNavOnNext) {
+            parser.navBuffer = "";
+            clearNavOnNext = false;
+            // Recompose to show cleared state (matches C's second compose_frame())
+            const clearedFrame = await parser.composeFrame(layout.content);
+            
+            // Use the cleared frame if it's different
+            if (clearedFrame !== currentFrame && clearedFrame !== lastFrameContent) {
+                // Render clearedFrame
+            }
+        }
+
+        if (currentFrame !== lastFrameContent) {
+            // ... render currentFrame ...
+        }
+    }
+
+    setTimeout(renderLoop, 100);
+}
+```
+
+---
+
+## UPDATED SUMMARY TABLE
+
+| Feature | C Version | PHP/JS Version | Status |
+|---------|-----------|----------------|--------|
+| Nav index → hotkey mapping | ✓ | ✓ | OK |
+| UI button sends numeric code | ✓ | ✓ | OK |
+| UI button sends joystick parity | ✓ | ✗ | **BROKEN** |
+| Menu open on Enter | ✓ | ✗ | **BROKEN** |
+| Menu child navigation | Partial | ✗ | **BROKEN** |
+| INTERACT hotkey passthrough | ✓ | ✓ | OK |
+| Horizontal navigation | ✓ | ✗ | **BROKEN** |
+| Joystick axis tracking | ✓ | ✗ | **BROKEN** |
+| Nav buffer shows last key | ✓ | ✗ | **BROKEN** |
+
+---
+
+**END OF ANALYSIS**

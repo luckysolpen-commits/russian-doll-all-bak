@@ -1,0 +1,10 @@
+# FX_DIFF.TXT - Functional Differences (C vs. PHP/JS)
+
+1. **Indicator Priority**: In C, `activeIndex` indicator `[^]` always overrides `focusIndex` indicator `[>]`. The PHP/JS version was incorrectly prioritizing focus. (FIXED)
+2. **Interactive Elements**: C includes `cli_io` in its global `interactiveCount` and `interactive_idx` enumeration. The PHP/JS version was omitting it in some logic loops. (FIXED)
+3. **Momentary Buttons**: In C, buttons with standard `onClick` actions (like FEED, PLAY) set `active_index` momentarily then immediately reset it to -1. PHP/JS was leaving them focused without resetting. (FIXED)
+4. **Key Normalization**: C processes standardized integer codes (1000 range for arrows, 2000 range for joystick). PHP/JS was sending literal strings 'up', 'down', which the Module (orchestrator.js) didn't fully recognize for logic. (FIXED)
+5. **Horizontal Navigation**: C allows 'a'/'d' or LEFT/RIGHT to movement focus or update `nav_buffer` in OS mode. PHP/JS was only handling 'w'/'s'. (FIXED)
+6. **Command Mapping (Virtual Reflection)**: C maps `FEED` to code `50` ('2') and `2001` (J-B1). PHP/JS was missing the numeric parity in its history injection. (FIXED)
+7. **Clear Nav Mechanism**: C uses `clear_nav_on_next` to show the last key for one frame before clearing. PHP/JS was clearing too early or not showing the code correctly. (FIXED)
+8. **Interactive Indexing**: PHP/JS used 1-based indexing for labels but internally inconsistent matching. C uses strict global `interactive_idx` based on layout order. (FIXED)

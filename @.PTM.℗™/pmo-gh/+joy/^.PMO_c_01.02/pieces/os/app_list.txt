@@ -1,0 +1,6 @@
+FUZZPET=pieces/apps/fuzzpet_app/fuzzpet/plugins/+x/fuzzpet.+x
+HELP=pieces/apps/fuzzpet_app/fuzzpet/plugins/+x/fuzzpet.+x
+STATUS=pieces/apps/fuzzpet_app/fuzzpet/plugins/+x/fuzzpet.+x
+PS=pieces/apps/fuzzpet_app/fuzzpet/plugins/+x/fuzzpet.+x
+TOGGLE_HISTORY=pieces/display/plugins/+x/toggle_history.+x
+FUZZPET_NEW=pieces/apps/fuzzpet_app/fuzzpet/plugins/+x/fuzzpet_reset.+x

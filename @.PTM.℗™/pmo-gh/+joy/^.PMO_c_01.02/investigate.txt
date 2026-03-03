@@ -1,0 +1,158 @@
+# FUZZPET LAYER INVESTIGATION REPORT
+Date: 2026-02-23
+
+## PROBLEM SUMMARY
+Menu navigation works, but state changes (movement, feeding, etc.) are not reflected 
+in the display. The pet moves internally (state.txt updates) but the frame shows 
+stale data.
+
+## ROOT CAUSE ANALYSIS
+
+### Issue 1: State Source Mismatch (CRITICAL)
+
+**Location:** `pieces/chtpm/plugins/chtpm_parser.c` - `load_vars()` function
+
+**Problem:** The parser loads fuzzpet state from `fuzzpet.pdl` which contains 
+STATIC initial values, not from `fuzzpet/state.txt` which contains DYNAMIC 
+current state.
+
+**Current code (line ~179):**
+```c
+load_vars_pdl("pieces/apps/fuzzpet_app/fuzzpet/fuzzpet.pdl", "fuzzpet");
+```
+
+**Evidence:**
+- `fuzzpet.pdl` shows: hunger=50, happiness=75, energy=100, pos_x=5, pos_y=5
+- `fuzzpet/state.txt` shows: hunger=28, happiness=100, energy=0, pos_x=10, pos_y=5
+- Display frame shows: hunger=50, happiness=75, energy=100 (matches .pdl, NOT state.txt)
+
+**The KISS Solution:**
+Load state from `fuzzpet/state.txt` instead of (or in addition to) the .pdl file.
+The .pdl should only define schema/defaults, not runtime values.
+
+### Issue 2: Map Variable Path Inconsistency
+
+**Location:** `pieces/chtpm/plugins/chtpm_parser.c` - `load_vars()` function
+
+**Problem:** Map is loaded from `pieces/apps/fuzzpet_app/world/map.txt` but other
+state uses `pieces/fuzzpet/` macro path pattern.
+
+**Current code (line ~217):**
+```c
+FILE *mf = fopen("pieces/apps/fuzzpet_app/world/map.txt", "r");
+```
+
+This is actually CORRECT for the current architecture, but inconsistent with the
+`pieces/fuzzpet/` macro folder concept. However, since the world folder is shared
+between parser and fuzzpet app, this works. No change needed if paths are stable.
+
+### Issue 3: No State File Watching for fuzzpet/state.txt
+
+**Location:** `pieces/chtpm/plugins/chtpm_parser.c` - `main()` function
+
+**Problem:** The parser watches `fuzzpet.pdl` for mtime changes to trigger 
+re-render, but state changes write to `fuzzpet/state.txt`, not `fuzzpet.pdl`.
+
+**Current code (line ~430):**
+```c
+if (stat("pieces/fuzzpet/fuzzpet.pdl", &st) == 0) { 
+    if (st.st_mtime != last_sync_file_mtime) { 
+        last_sync_file_mtime = st.st_mtime; 
+        dirty = 1; 
+    } 
+}
+```
+
+**The KISS Solution:**
+Watch `fuzzpet/state.txt` for changes instead of (or in addition to) `fuzzpet.pdl`.
+
+## ARCHITECTURE ASSESSMENT
+
+### What Works Well (PIECE_AUDIT_KISS compliant):
+1. ✅ Input flow: keyboard → keyboard/history.txt → chtpm_parser → fuzzpet/history.txt → fuzzpet
+2. ✅ Command mapping: Menu clicks → send_command() → inject_raw_key() → fuzzpet processes
+3. ✅ State mutation: fuzzpet updates state.txt via piece_manager
+4. ✅ Ledger auditing: All actions logged properly
+
+### What Breaks KISS:
+1. ❌ State reading: Parser reads from wrong file (.pdl instead of state.txt)
+2. ❌ Render triggering: Parser watches wrong file for changes
+
+## RECOMMENDED FIXES
+
+### Fix 1: Load State from state.txt (in chtpm_parser.c)
+
+Add a new function to load fuzzpet state from state.txt:
+
+```c
+void load_fuzzpet_state() {
+    FILE *f = fopen("pieces/apps/fuzzpet_app/fuzzpet/state.txt", "r");
+    if (!f) return;
+    char line[MAX_LINE];
+    while (fgets(line, sizeof(line), f) && var_count < MAX_VARS) {
+        line[strcspn(line, "\n")] = 0;
+        char *eq = strchr(line, '=');
+        if (eq) {
+            *eq = '\0';
+            // Prefix with "fuzzpet_" to match variable naming convention
+            snprintf(vars[var_count].name, MAX_VAR_NAME, "fuzzpet_%.50s", line);
+            strncpy(vars[var_count].value, eq + 1, MAX_VAR_VALUE - 1);
+            var_count++;
+        }
+    }
+    fclose(f);
+}
+```
+
+Then call this in `load_vars()` AFTER loading from .pdl (so state.txt overrides defaults):
+
+```c
+void load_vars() {
+    var_count = 0;
+    load_vars_pdl("pieces/apps/fuzzpet_app/fuzzpet/fuzzpet.pdl", "fuzzpet");
+    load_fuzzpet_state();  // ADD THIS - overrides .pdl values with current state
+    // ... rest of existing code (clock, display, world)
+}
+```
+
+### Fix 2: Watch state.txt for Changes (in main())
+
+Change the file watch from .pdl to state.txt:
+
+```c
+// Change this:
+if (stat("pieces/fuzzpet/fuzzpet.pdl", &st) == 0) { 
+    if (st.st_mtime != last_sync_file_mtime) { 
+        last_sync_file_mtime = st.st_mtime; 
+        dirty = 1; 
+    } 
+}
+
+// To this:
+if (stat("pieces/apps/fuzzpet_app/fuzzpet/state.txt", &st) == 0) { 
+    if (st.st_mtime != last_sync_file_mtime) { 
+        last_sync_file_mtime = st.st_mtime; 
+        dirty = 1; 
+    } 
+}
+```
+
+## VERIFICATION STEPS
+
+After applying fixes:
+1. Start the application
+2. Move the pet with arrow keys or w/a/s/d
+3. Verify the @ symbol moves on the map in real-time
+4. Verify hunger/energy/happiness values update
+5. Check ledger files show proper audit trail
+
+## CONCLUSION
+
+The fuzzpet layer architecture is fundamentally sound and follows KISS principles.
+The issue is a simple data flow bug: the display parser reads from the static 
+definition file instead of the dynamic state file. This is a 2-line fix that 
+maintains the clean separation of concerns:
+
+- .pdl = schema/defaults (read once at init)
+- state.txt = runtime state (read continuously for display)
+- history.txt = input stream (write-once, append-only)

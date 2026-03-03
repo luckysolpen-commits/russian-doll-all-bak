@@ -1,0 +1,34 @@
+# JOY-PLAN-F27.TXT
+
+PHASE 1: THE JOYSTICK PIECE (Hardware Integration) - COMPLETED
+1. ✅ Create Sovereign Piece: `pieces/joystick/`.
+2. ✅ Implement `pieces/joystick/plugins/joystick_input.c` based on `^.joy.stick]BEST_0.0]SHIP.c`.
+   - Updated to handle dynamic `base_path` for robust file writing.
+   - Consolidates output to `pieces/keyboard/history.txt` for unified input processing.
+3. ✅ Update `compile_all.sh` to compile the new joystick plugin.
+4. ✅ Update `run_chtpm.sh` to ensure piece directories and initial file states.
+5. ✅ Update `pieces/chtpm/plugins/orchestrator.c` to launch the joystick thread with `.` as base path.
+
+PHASE 2: NAVIGATION & PASS-THROUGH INTEGRATION
+1. Update `pieces/chtpm/plugins/chtpm_parser.c`:
+   - Add mapping for 2000-range codes in `process_input()`.
+   - Map Axis 0/1 (2100-2103) to Navigation (w/s/a/d equivalent).
+   - Map Button 0 (2000) to Enter/Select.
+   - Ensure `inject_raw_key()` correctly handles 2000-range codes for Module pass-through (INTERACT mode).
+2. Validation:
+   - Run `./run_chtpm.sh`.
+   - Navigate OS menu using Joystick.
+   - Enter FuzzPet INTERACT mode and verify joystick movement/actions.
+
+PHASE 3: MODULE-LEVEL JOYSTICK NATIVE SUPPORT
+1. Update `pieces/apps/fuzzpet_app/fuzzpet/plugins/fuzzpet.c`:
+   - Define Joystick constants (J_LEFT 2100, J_RIGHT 2101, J_UP 2102, J_DOWN 2103).
+   - Update `process_key()` to listen for these codes alongside WASD/Arrows.
+   - Map Joystick Buttons to Actions:
+     - Button 1 (2001) -> Feed Pet (2)
+     - Button 2 (2002) -> Play (3)
+     - Button 3 (2003) -> Sleep (4)
+     - Button 4 (2004) -> Evolve (5)
+2. Final Audit:
+   - Verify all joystick events are logged to `pieces/joystick/ledger.txt` and `pieces/master_ledger/master_ledger.txt`.
+   - Ensure total system reproducibility from the event stream.
