@@ -1,3 +1,0 @@
-focus_index=13
-active_index=-1
-current_layout=pieces/chtpm/layouts/fuzzpet_launcher.chtpm

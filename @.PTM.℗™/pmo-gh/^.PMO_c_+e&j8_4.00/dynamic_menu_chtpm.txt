@@ -1,0 +1,31 @@
+INVESTIGATION: DYNAMIC PIECE-SPECIFIC MENUS
+===========================================
+Date: 2026-03-04
+
+1. THE PROBLEM
+--------------
+The dashboard shows `[ ] 2. [Back to Selector]` instead of the pet's unique methods (Feed, Play, Sleep) or the Selector's unique methods (Scan, Collect, etc.).
+
+2. THE ROOT CAUSE: Parsing & Expansion Synchronization
+------------------------------------------------------
+The system uses a "Hybrid Expansion" model where `${piece_methods}` is expanded into `<button>` tags. However, the current failure occurs because:
+
+a) **Manager Sync vs Parser Load**: When control switches from Selector to Pet, the Manager updates `active_target_id`. But the Parser might have already tokenized the layout using the OLD methods.
+b) **Tokenization of Expansion**: In `parse_chtm()`, we expand `${piece_methods}` from the variable store. If the variable is empty or contains the wrong piece's data at the moment of parsing, the UI is built incorrectly.
+c) **The "Wait for View" Logic**: The Parser waits for `view_changed.txt` before recomposing. If the methods bar update doesn't trigger a full re-parse of the *entire layout string*, the old buttons remain.
+
+3. THE NECESSARY SOLUTION: True Contextual Re-Parsing
+-----------------------------------------------------
+For dynamic menus to work accurately in a multi-piece TPM system:
+1. **Manager must be the Source of Truth**: The Manager is the only one who knows the piece's capabilities.
+2. **Parser must RE-TOKENIZE on Change**: When the `active_target_id` changes, the Parser cannot just update labels—it must throw away the old UI tree and perform a fresh `parse_chtm()` on the raw layout file so the new `<button>` tags are properly identified.
+3. **Registry Awareness**: The Parser must use the `active_target_id` to look up the correct PDL file and populate `${piece_methods}` with the piece's actual methods.
+
+4. WHY THIS IS NECESSARY
+------------------------
+Without this, the UI is a static "mask" that doesn't reflect the soul of the piece. Sovereignty means the piece's methods define the UI, not the other way around. By re-parsing the layout, we allow every entity to provide its own set of interactive controls dynamically.
+
+ACTION PLAN:
+1. Update `load_dynamic_methods` to ensure it always gets the LATEST PDL data.
+2. Force a `parse_chtm()` whenever a target switch is detected.
+3. Verify that `main.chtpm` has the `${piece_methods}` variable in a clean spot.

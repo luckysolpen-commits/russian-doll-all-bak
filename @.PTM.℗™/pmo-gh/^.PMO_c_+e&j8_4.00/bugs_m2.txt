@@ -1,0 +1,52 @@
+# Bugs - M2 (Emoji Mode Implementation)
+**Date:** 2026-03-02  
+**Status:** Tracking known issues
+
+---
+
+## Bug #1: Emoji Mode View Formatting Overflow
+**Severity:** Low (cosmetic)  
+**Status:** Known issue  
+
+### Description
+When emoji_mode=1, the map rendering uses emoji characters which are multi-byte UTF-8 sequences. These display wider than single ASCII characters in the terminal, causing the view.txt lines to exceed the expected width.
+
+### Symptoms
+- In emoji mode, the `[FUZZPET]:` response line and `DEBUG [Last Key]:` line may not be visible in the rendered output
+- The right border `║` of the map may not align properly
+- Menu options still function correctly (this is purely visual)
+
+### Root Cause
+The `write_sovereign_view()` function uses fixed-width padding:
+```c
+fprintf(fp, "                                     ║\n");  // 37 spaces
+```
+
+This padding assumes ASCII characters (1 byte = 1 column), but emoji characters may render as 2+ terminal columns.
+
+### Workaround
+Switch to ASCII mode (press 7) for properly aligned display. Functionality is not affected.
+
+### Fix Priority
+**Low** - Core functionality works in both modes. Visual polish can be addressed later.
+
+---
+
+## Potential Fix Approaches
+
+### Option A: Dynamic Padding Calculation
+Calculate actual terminal column width and adjust padding accordingly.
+
+### Option B: Fixed-Width Map Container
+Use a fixed number of emoji/characters per row regardless of mode.
+
+### Option C: Separate Format Strings
+Maintain separate format strings for ASCII and emoji modes.
+
+---
+
+## Notes
+- Menu navigation works correctly in both modes
+- Toggle between ASCII/Emoji (key 7) works correctly
+- All game actions (Feed, Play, Sleep, Evolve, End Turn) work in both modes
+- The emoji rendering itself is correct and matches the target look from #.ascimo_look.c

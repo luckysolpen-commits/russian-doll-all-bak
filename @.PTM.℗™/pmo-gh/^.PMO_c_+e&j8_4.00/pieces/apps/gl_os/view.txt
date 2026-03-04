@@ -1,0 +1,3 @@
+DESKTOP_VIEW
+BG: #000044
+WINDOW | 0 | 50 | 50 | 400 | 300 | Terminal | pieces/chtpm/frame_buffer/current_frame.txt

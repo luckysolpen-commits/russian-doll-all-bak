@@ -1,9 +1,0 @@
---- Joystick Piece Starting (Base: ., Device: /dev/input/js0) ---
-[2026-03-02 22:23:26] JoyCaptured: 2103 | Info: Axis 1 positive threshold crossed
-[2026-03-02 22:23:27] JoyCaptured: 2000 | Info: Button 0 pressed
-[2026-03-02 22:23:28] JoyCaptured: 2000 | Info: Button 0 pressed
-[2026-03-02 22:23:30] JoyCaptured: 2000 | Info: Button 0 pressed
-[2026-03-02 22:23:31] JoyCaptured: 2103 | Info: Axis 1 positive threshold crossed
-[2026-03-02 22:23:32] JoyCaptured: 2000 | Info: Button 0 pressed
-[2026-03-02 22:23:36] JoyCaptured: 2103 | Info: Axis 1 positive threshold crossed
-[2026-03-02 22:23:37] JoyCaptured: 2000 | Info: Button 0 pressed

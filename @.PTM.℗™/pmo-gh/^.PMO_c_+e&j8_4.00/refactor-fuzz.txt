@@ -1,0 +1,64 @@
+REFACTORING FUZZPET: MODULAR PIECE-MODULE-OS (PMO) STRATEGY
+============================================================
+Date: 2026-03-03
+Objective: Separate Pet, Selector, and Map Render into modular TPM components with Dynamic UI.
+
+1. THE PROBLEM
+--------------
+Current monolithic logic makes it hard to manage multiple entities and shifting UI contexts. We need a system where the interface reflects the "Active Soul" being controlled.
+
+2. THE PROPOSED PMO HIERARCHY
+-----------------------------
+
+### A. PIECES (Atomic Units)
+- **Entity Piece Standard** (`pieces/entities/[ID]/`): Sovereign data for each pet/item.
+- **Selector Piece** (`pieces/apps/fuzzpet_app/selector/`): Owns cursor state and inventory.
+- **Manager Piece**: Owns `active_target_id` and `ui_mode` (SELECTOR vs PET).
+
+### B. MODULES (Logic & Stage Production)
+- **FuzzPet Manager**: Routes input and manages UI state.
+- **Stage Producer**: Composes the `view.txt` (Map + Contextual Info).
+
+3. DYNAMIC UI & INTERACTION (THE NEW STANDARD)
+----------------------------------------------
+
+### A. Contextual Menus (Option Z+)
+The `.chtpm` layout will use `visibility` attributes or variable-driven labels to swap menus:
+- **Selector Active**: UI shows global commands (e.g., "List Pets", "Scan Map", "System Settings").
+- **Pet Active**: UI shows individual pet commands (e.g., "Feed", "Play", "Sleep", "Back to Selector").
+
+### B. "Enter to Select" Interaction
+- When in **Selector Mode**, moving the 'X' cursor over an '@' or '&' icon and pressing **ENTER** will:
+    1. Identify the entity at the cursor coordinates.
+    2. Set `active_target_id` to that Entity's ID.
+    3. Change `ui_mode` to PET.
+    4. Update the layout to show that pet's specific menu.
+- **The "Shadow Selector" Nuance**: 
+    - While a pet is active, the Selector piece continues to exist "behind" the pet. 
+    - Every time the pet moves, the Selector's coordinates are synced to the pet's coordinates. 
+    - The Stage Producer hides the 'X' cursor when a pet is active, preventing visual clutter while ensuring that when you press ESC, the selector is exactly where you left the pet.
+- Pressing **ESC** or a "Back" button returns control to the Selector.
+
+### C. Shared Traits (DRY & Sovereign)
+- **Movement Trait**: Shared by Selector and Pets.
+- **Storage Trait**: Shared by Selector and advanced Pets (e.g., Pet 02).
+
+4. REFACTORING STEPS
+--------------------
+1. **Entity Scaffolding**: Create `pet_01`, `pet_02`, and `selector` pieces.
+2. **Trait Extraction**: Implement shared `.c` traits in `traits/` folder.
+3. **Stage Producer**: Implement the multi-entity map renderer.
+4. **Contextual Layout**: Update `main.chtpm` with visibility flags for different modes.
+5. **The Manager Dispatcher**: Implement the "Enter to Select" and "Mode Swap" logic.
+
+5. PROVING SUCCESS: THE TWO-PET TEST
+------------------------------------
+1. Start as **Selector**. Move 'X' to (5,5).
+2. Press **ENTER**. UI swaps to **Pet 01** menu.
+3. Move Pet 01, then press "Back" (or ESC).
+4. Move 'X' to (10,5). Press **ENTER**. UI swaps to **Pet 02** menu.
+5. Notice Pet 02 has "Collect/Place" buttons while Pet 01 does not (Contextual UI).
+
+6. WHY THIS IS BETTER
+---------------------
+It treats the UI as a reflection of the Piece's sovereignty. If a piece doesn't have a "Feed" method, the "Feed" button shouldn't even exist in its context.
