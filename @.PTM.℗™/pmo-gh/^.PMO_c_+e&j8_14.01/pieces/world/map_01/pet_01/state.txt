@@ -1,0 +1,10 @@
+name=Fuzzball
+type=pet
+pos_x=8
+pos_y=4
+hunger=30
+happiness=55
+energy=100
+level=1
+on_map=1
+owner=selector

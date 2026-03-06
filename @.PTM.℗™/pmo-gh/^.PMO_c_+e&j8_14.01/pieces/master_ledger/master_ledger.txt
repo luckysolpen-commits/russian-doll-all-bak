@@ -1,0 +1,117 @@
+[2026-03-06 00:57:27] ProcessRegister: orchestrator PID=43789
+[2026-03-06 00:57:27] ProcessRegister: keyboard_input PID=43836
+[2026-03-06 00:57:27] ProcessRegister: joystick_input PID=43839
+[2026-03-06 00:57:27] ProcessRegister: response_handler PID=43842
+[2026-03-06 00:57:27] ProcessRegister: chtpm_parser PID=43844
+[2026-03-06 00:57:27] ProcessUnregister: joystick_input
+[2026-03-06 00:57:27] FrameRendered: at 2026-03-06 00:57:27 | Source: renderer
+[2026-03-06 00:57:27] ProcessRegister: clock_daemon PID=43863
+[2026-03-06 00:57:27] ProcessRegister: gl_renderer PID=43865
+[2026-03-06 00:57:27] ProcessRegister: renderer PID=43861
+[2026-03-06 00:57:27] FrameRendered: at 2026-03-06 00:57:27 | Source: renderer
+[2026-03-06 00:57:28] FrameRendered: at 2026-03-06 00:57:28 | Source: renderer
+[2026-03-06 00:57:29] InputReceived: key_code=50 | Source: keyboard_input
+[2026-03-06 00:57:29] FrameRendered: at 2026-03-06 00:57:29 | Source: renderer
+[2026-03-06 00:57:29] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-06 00:57:29] FrameRendered: at 2026-03-06 00:57:29 | Source: renderer
+[2026-03-06 00:57:29] FrameRendered: at 2026-03-06 00:57:29 | Source: renderer
+[2026-03-06 00:57:30] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-06 00:57:30] ProcessRegister: fuzzpet_manager PID=43894
+[2026-03-06 00:57:30] FrameRendered: at 2026-03-06 00:57:30 | Source: renderer
+[2026-03-06 00:57:30] FrameRendered: at 2026-03-06 00:57:30 | Source: renderer
+[2026-03-06 00:57:30] FrameRendered: at 2026-03-06 00:57:30 | Source: renderer
+[2026-03-06 00:57:31] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-06 00:57:31] FrameRendered: at 2026-03-06 00:57:31 | Source: renderer
+[2026-03-06 00:57:31] FrameRendered: at 2026-03-06 00:57:31 | Source: renderer
+[2026-03-06 00:57:32] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-06 00:57:32] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:32] StateChange: selector pos_y 4 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-06 00:57:32] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:32] StateChange: selector pos_y 3 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:32] StateChange: selector pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:32] FrameRendered: at 2026-03-06 00:57:32 | Source: renderer
+[2026-03-06 00:57:33] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] StateChange: pet_01 pos_x 6 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: pet_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon time 08:01:06 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon turn 10 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] StateChange: clock_daemon time 08:01:07 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: selector pos_x 6 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] StateChange: selector pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] StateChange: pet_01 pos_x 7 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: pet_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon time 08:02:07 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] StateChange: clock_daemon turn 11 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon time 08:02:08 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: selector pos_x 7 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: selector pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] StateChange: pet_01 pos_x 8 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: pet_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon time 08:03:08 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon turn 12 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon time 08:03:09 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] StateChange: selector pos_x 8 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: selector pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-06 00:57:33] StateChange: pet_01 pos_x 8 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: pet_01 pos_y 3 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon time 08:04:10 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] StateChange: clock_daemon turn 13 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon time 08:04:11 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: selector pos_x 8 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: selector pos_y 3 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-06 00:57:33] FrameRendered: at 2026-03-06 00:57:33 | Source: renderer
+[2026-03-06 00:57:33] StateChange: pet_01 pos_x 8 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: pet_01 pos_y 4 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:33] StateChange: clock_daemon time 08:05:11 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:34] StateChange: clock_daemon turn 14 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:34] StateChange: clock_daemon time 08:05:12 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:34] StateChange: selector pos_x 8 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:34] StateChange: selector pos_y 4 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:34] FrameRendered: at 2026-03-06 00:57:34 | Source: renderer
+[2026-03-06 00:57:34] FrameRendered: at 2026-03-06 00:57:34 | Source: renderer
+[2026-03-06 00:57:34] FrameRendered: at 2026-03-06 00:57:34 | Source: renderer
+[2026-03-06 00:57:34] FrameRendered: at 2026-03-06 00:57:34 | Source: renderer
+[2026-03-06 00:57:35] FrameRendered: at 2026-03-06 00:57:35 | Source: renderer
+[2026-03-06 00:57:36] StateChange: clock_daemon turn 14 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:36] StateChange: clock_daemon time 08:05:15 | Trigger: piece_manager_set_state
+[2026-03-06 00:57:36] FrameRendered: at 2026-03-06 00:57:36 | Source: renderer
+[2026-03-06 00:57:37] FrameRendered: at 2026-03-06 00:57:37 | Source: renderer
+[2026-03-06 00:57:38] FrameRendered: at 2026-03-06 00:57:38 | Source: renderer
+[2026-03-06 00:57:39] FrameRendered: at 2026-03-06 00:57:39 | Source: renderer
+[2026-03-06 00:57:40] FrameRendered: at 2026-03-06 00:57:40 | Source: renderer
+[2026-03-06 00:57:41] FrameRendered: at 2026-03-06 00:57:41 | Source: renderer

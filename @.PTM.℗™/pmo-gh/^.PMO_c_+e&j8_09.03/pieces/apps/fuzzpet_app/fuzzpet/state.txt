@@ -1,7 +1,0 @@
-name=Fuzzball
-hunger=30
-happiness=55
-energy=100
-level=1
-status=active
-emoji_mode=1
