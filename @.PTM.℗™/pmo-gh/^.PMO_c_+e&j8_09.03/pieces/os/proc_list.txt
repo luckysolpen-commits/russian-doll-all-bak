@@ -1,0 +1,8 @@
+[RUNNING] gl_renderer: 48812
+[RUNNING] joystick_input: 48790
+[RUNNING] chtpm_parser: 48795
+[RUNNING] fuzzpet_manager: 48867
+[RUNNING] response_handler: 48793
+[RUNNING] keyboard_input: 48787
+[RUNNING] orchestrator: 48750
+[RUNNING] renderer: 48810

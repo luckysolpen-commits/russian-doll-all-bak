@@ -1,0 +1,26 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | selector
+META         | version            | 1.0
+META         | determinism        | strict
+
+STATE        | name                 | Cursor
+STATE        | type                 | selector
+STATE        | pos_x                | 8
+STATE        | pos_y                | 2
+STATE        | on_map               | 1
+STATE        | owner                | world
+STATE        | inventory            | []
+STATE        | hunger               | 43
+STATE        | energy               | 0
+
+METHOD       | move                 | void
+METHOD       | select               | void
+METHOD       | scan                 | void
+METHOD       | collect              | void
+METHOD       | place                | void
+METHOD       | inventory            | void
+METHOD       | toggle_emoji         | void
+
+
+RESPONSE     | default              | *scanning...*

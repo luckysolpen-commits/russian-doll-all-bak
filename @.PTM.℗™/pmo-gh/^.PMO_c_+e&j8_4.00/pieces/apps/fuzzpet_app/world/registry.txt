@@ -1,3 +1,0 @@
-pet_01
-pet_02
-selector

@@ -1,0 +1,2 @@
+active_target_id=pet_01
+last_key=RIGHT

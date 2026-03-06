@@ -1,9 +1,0 @@
-name=Cursor
-type=selector
-pos_x=12
-pos_y=3
-on_map=1
-owner=world
-inventory=[]
-hunger=43
-energy=0

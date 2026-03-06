@@ -1,0 +1,28 @@
+# FINAL BUG REPORT - MARCH 5 REFACTOR
+========================================
+
+## 1. SYMPTOM
+When a pet entity (e.g., pet_01) is active, only the 'Feed' button appears to work for some users, or responses are inconsistent (returning the default "*purrs*"). The Selector entity, however, works perfectly.
+
+## 2. ROOT CAUSE ANALYSIS
+The refactor introduced a generic "Stage Manager" (`fuzzpet_manager.c`) that maps UI keys (KEY:2, KEY:3) to piece methods dynamically. 
+
+### A. The "Past Tense" Trap
+To resolve responses, the manager takes the method name (e.g., "play") and attempts to convert it to a response key (e.g., "played") using a simple rule-based algorithm:
+- ends in 'y' -> 'ied'
+- ends in 'e' -> 'd'
+- otherwise -> 'ed'
+
+This works for regular verbs (play -> played) but fails for irregular verbs used in the piece's RESPONSE section:
+- feed -> Result: "feeded" | Expected: "fed"
+- sleep -> Result: "sleeped" | Expected: "slept"
+
+Because "feeded" and "sleeped" do not exist in the .pdl, the `piece_manager` returns the `default` response ("*purrs*").
+
+### B. Selector Immunity
+The Selector works perfectly because its methods (scan, collect, place, inventory) are explicitly handled in the manager's `route_input` logic, bypassing the past-tense generator.
+
+## 3. RESOLUTION PLAN
+1. Update `fuzzpet_manager.c` to include an irregular verb mapping table (e.g., "feed" -> "fed", "sleep" -> "slept").
+2. Ensure the past-tense generator is only a fallback.
+3. Recompile the manager.
