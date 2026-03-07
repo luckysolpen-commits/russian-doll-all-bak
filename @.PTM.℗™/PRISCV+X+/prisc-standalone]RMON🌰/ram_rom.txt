@@ -1,0 +1,92 @@
+# Exploration: External RAM and ROM Implementation
+
+To allow `prisc` programs to share data or load pre-defined constants, we can implement an external memory loader that reads from `.txt` files.
+
+## 1. RAM vs. ROM in pRISC
+- **ROM (Read-Only Memory)**: Used for "Constant Data" or "Firmware." The emulator loads it at startup, but `sw` (store word) instructions targeting these addresses should either fail or be ignored.
+- **RAM (Random Access Memory)**: Used for "Working Memory." It can be initialized from a file (Persistence) and modified during execution.
+
+## 2. Implementation Strategy
+
+### CLI Arguments
+We can extend the command line to support memory initialization:
+`./prisc <prog.asm> [output.txt] [mem_init.txt] [load_offset]`
+
+- `mem_init.txt`: A file containing values to be loaded into the `mem[]` array.
+- `load_offset`: The starting address in `mem[]` where the data should be placed (defaults to 0).
+
+### File Format Options
+1. **Flat List (Binary/Hex/Decimal)**:
+   ```text
+   1024
+   2048
+   0
+   55
+   ```
+   *Pros*: Very easy to parse (`fscanf`).
+   *Cons*: Must provide a value for every address sequentially.
+
+2. **Key-Value Pairs (Sparse Memory)**:
+   ```text
+   0: 1024
+   10: 2048
+   100: 55
+   ```
+   *Pros*: Can load data at specific, non-sequential addresses.
+   *Cons*: Slightly more complex parsing.
+
+### Code Logic (Draft)
+```c
+void load_external_mem(const char *filename, int offset) {
+    FILE *mf = fopen(filename, "r");
+    int val, addr = offset;
+    while (fscanf(mf, "%d", &val) == 1) {
+        if (addr < MEM_SIZE) mem[addr++] = val;
+    }
+    fclose(mf);
+}
+```
+
+## 3. Advanced Feature: Persistent RAM (Write-Back)
+If we want one `prisc` program to "pass" data to another, the emulator should save the state of memory back to the file when it hits `halt`.
+
+- **Workflow**:
+  1. `prog_A.asm` runs, stores `100` at `mem[5]`.
+  2. Emulator writes `mem[5]` to `ram.txt` on exit.
+  3. `prog_B.asm` runs, loads `ram.txt` into its memory at startup.
+  4. `prog_B.asm` reads `100` from its own `mem[5]`.
+
+## 4. Architectural Impact
+- **Shared Memory**: Using the same `.txt` file for multiple instances of the emulator (if running concurrently) would require file locking or a more complex OS-level approach.
+- **Bootstrapping**: This allows for "Bootloader" style programs that load a "Kernel" (ROM) and then operate on "User Data" (RAM).
+
+
+
+
+
+
+
+
+
+For an agent, KVP (Key-Value Pair) is significantly better.
+
+
+  Why KVP is better for Agents:
+   1. Sparse Data: An agent can initialize mem[0] and mem[4000] without having to output
+      3999 zeros. This saves token usage and reduces the chance of counting errors.
+   2. Explicit Intent: Seeing 10 255 (Address 10, Value 255) is easier for an agent to
+      verify than looking at the 11th number in a long list and guessing its index.
+   3. Robustness: If the agent accidentally skips a line in a flat list, every subsequent
+      memory address is shifted and wrong. In KVP, one wrong line only affects that
+      specific address.
+
+
+  I will implement prisc+rm.c using a simple address value KVP format.
+
+  CLI Usage:
+  ./prisc+rm <prog.asm> [output.txt] [mem_in.txt] [mem_out.txt]
+
+
+   - mem_in.txt: Read at startup.
+   - mem_out.txt: Written at halt.
+

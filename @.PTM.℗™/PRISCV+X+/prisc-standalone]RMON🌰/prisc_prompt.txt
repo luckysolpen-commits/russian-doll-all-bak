@@ -1,0 +1,97 @@
+
+i wanna make a risc/risc v 16/32 bit emulator 
+i wanna make a very light (5-10 instructions using "TPM"
+(dont put it inside the PMO architecture yet, can use "CHTPM" tho , 
+but i want to keep it seperate. 
+just reads program .txt file and executes it. can return 2 .txt file if 2nd arg.  
+
+
+including jalr
+
+if i had to use the most versatile riscv jump command which is it?
+In the RISC-V architecture, the most versatile jump command is jalr (Jump and Link Register). 
+
+
+
+(riscv has not and and , not nand tho)
+
+
+Minimalist Philosophy: RISC-V designers omitted nand and nor because they can be easily emulated, keeping the base hardware simple and reducing the instruction count for the core ISA.
+---------------------------
+To build a basic RV32I (32-bit Integer) emulator, you should focus on the subset of instructions that allow for arithmetic, control flow (loops), and memory access. While the full base set has about 40 instructions, you can run simple programs with these core 10: [1, 2, 3, 4, 5] 
+1. Essential Arithmetic & Logic
+
+* ADDI (Add Immediate): The "Swiss Army Knife" of RISC-V. Used to load small constants into registers (e.g., addi x1, x0, 10) and for the MV (Move) pseudoinstruction.
+* ADD / SUB: Basic register-to-register addition and subtraction for standard calculations.
+* LUI (Load Upper Immediate): Critical for loading large 32-bit constants into registers. It places a 20-bit immediate in the top 20 bits of the destination register. [6, 7, 8, 9, 10] 
+
+2. Control Flow (Loops and Jumps)
+
+* BNE (Branch if Not Equal): Essential for implementing loops (e.g., "loop until counter reaches zero").
+* BEQ (Branch if Equal): The counterpart to BNE, used for if statements and basic logic.
+* JAL (Jump and Link): Used for jumping to a specific address and saving the return address, making function calls possible.
+* JALR (Jump and Link Register): Necessary for returning from functions (used with the ra register) and for jumping to addresses stored in registers. [7, 9, 11, 12, 13] 
+
+3. Memory Access
+
+* LW (Load Word): Reads a 4-byte value from memory into a register.
+* SW (Store Word): Writes a 4-byte value from a register into memory. [7, 11, 14, 15, 16] 
+
+4. System / Execution
+
+* ECALL (Environment Call): While not strictly for "logic," it is how your emulated program interacts with the outside world (e.g., printing a character or exiting the program). [11, 17, 18, 19] 
+
+Summary Table for Implementation
+
+| Instruction [3, 9, 20, 21, 22] | Type | Opcode (bits 6-0) | Purpose |
+|---|---|---|---|
+| ADDI | I-Type | 0010011 | Math with constants, loading small numbers |
+| ADD/SUB | R-Type | 0110011 | Core arithmetic between registers |
+| LUI | U-Type | 0110111 | Loading large 32-bit values |
+| LW | I-Type | 0000011 | Reading data from RAM |
+| SW | S-Type | 0100011 | Writing data to RAM |
+| BEQ/BNE | B-Type | 1100011 | Loop and conditional logic |
+| JAL | J-Type | 1101111 | Function calls and absolute jumps |
+
+For a highly visual reference on how these bits are laid out, you can consult the [RISC-V Assembler Cheat Sheet](https://projectf.io/posts/riscv-cheat-sheet/) or the [official RISC-V Unprivileged Spec](https://docs.riscv.org/reference/isa/unpriv/rv-32-64g.html).-------------------------------
+
+
+
+
+
+
+
+💬️💬️💬️💬️💬️💬️💬️💬️💬️💬️💬️💬️💬️
+tldr : 
+
+
+i want to make a very small basic 2 pass risc emulator using 3-5 instructions (jalr)    
+   that reads program from arg1 and outputs any output to cli and arg2 if availiable .     
+   using gcc c , 1 codefile only (no linkers/ headers)                                     
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+✦ To create a minimal 2-pass RISC emulator, I will implement a system that supports a
+  subset of the RISC-V instruction set.
+
+
+  Implementation Strategy
+   1. Architecture: 16 registers (x0-x15), where x0 is hardwired to 0.
+   2. Instruction Set:
+       * addi rd, rs1, imm: R[rd] = R[rs1] + imm
+       * beq rs1, rs2, label: Branch if equal.
+       * lw rd, imm(rs1): Load word from memory.
+       * sw rs2, imm(rs1): Store word to memory.
+       * jalr rd, rs1, imm: Jump and link register (Standard for function calls/returns).
+       * out rs1: Custom instruction to print register value to CLI/File.
+       * halt: Stop execution.
+   3. Two Passes:
+       * Pass 1: Scans the assembly file for labels (e.g., loop:) and maps them to
+         instruction indices.
+       * Pass 2: Parses instructions into an internal executable format, resolving label
+         names to memory offsets.
+
+
+  I will write this into a single file prisc.c.
+
+  I'm starting by writing the complete implementation of the emulator.
+💬️💬️💬️💬️💬️💬️💬️💬️💬️💬️💬️💬️💬️
+
