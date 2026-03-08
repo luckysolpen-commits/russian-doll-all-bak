@@ -1,8 +1,0 @@
-[RUNNING] gl_renderer: 85181
-[RUNNING] clock_daemon: 85183
-[RUNNING] chtpm_parser: 85163
-[DEAD] fuzzpet_manager: 80164
-[RUNNING] response_handler: 85161
-[RUNNING] keyboard_input: 85155
-[RUNNING] orchestrator: 85112
-[RUNNING] renderer: 85178

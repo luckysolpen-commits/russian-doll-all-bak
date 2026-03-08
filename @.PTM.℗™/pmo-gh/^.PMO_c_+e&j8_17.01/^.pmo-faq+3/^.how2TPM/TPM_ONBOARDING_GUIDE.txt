@@ -1,0 +1,456 @@
+# TPM (True Piece Method) - Complete Onboarding Guide
+
+## What is TPM?
+
+TPM is an architectural approach where **everything is a Piece** - a directory containing text files that define state, behavior, and relationships. Code is merely an interpreter, never an originator. All communication happens through the filesystem.
+
+---
+
+## Core Principles
+
+### 1. Everything Is a Piece
+- A NAND gate is a Piece
+- A clock is a Piece  
+- An AI agent is a Piece
+- A game, a galaxy, a corporation - all Pieces
+
+Scale does not change ontology. A galaxy Piece and a NAND gate Piece differ only in state complexity, not structural rules.
+
+### 2. Data Sovereignty
+Each piece owns its state files exclusively. No shared global state. No in-memory shortcuts. All state changes persist to disk immediately.
+
+### 3. Audit Obsession
+Every operation logs to the master ledger with timestamps:
+```
+[2026-02-17 14:30:00] InputReceived: key_code=119 | Source: keyboard_input
+[2026-02-17 14:30:01] StateChange: fuzzpet pos_y 4 | Trigger: movement
+[2026-02-17 14:30:01] EventFire: moved on fuzzpet | Trigger: user_input
+```
+
+### 4. Event-Driven Flow
+All change occurs through Events:
+```
+Old State + Event → New State
+```
+The system is replayable from genesis given the same initial state and event stream.
+
+### 5. No Privileged Scale
+No god-objects. No engine core with secret authority. Systems are built as Piece networks.
+
+---
+
+## Piece Structure
+
+Every piece follows this directory pattern:
+```
+pieces/
+└── piece_name/
+    ├── piece.txt          # Core definition
+    ├── ledger.txt         # Piece-specific audit trail
+    ├── history.txt        # Input history (optional)
+    ├── state.txt          # Current state (optional)
+    └── plugins/           # Piece-specific plugins
+        ├── plugin_name.c  # or .py
+        └── +x/
+            └── plugin_name.+x  # Compiled binary
+```
+
+**CRITICAL**: Plugins live INSIDE their piece directory, NOT in a central `plugins/` folder. This is TPM compliance - each piece owns its behavior, not just its data.
+
+### piece.txt Format
+```
+# Piece: fuzzpet
+state:
+  name: Fuzzball
+  hunger: 50
+  happiness: 75
+  energy: 100
+  level: 1
+  pos_x: 5
+  pos_y: 5
+methods: feed, play, sleep, status, evolve, move_up, move_down
+event_listeners: fed, played, slept, evolved, moved, command_received
+responses:
+  fed: Yum yum~ Feeling so happy!
+  played: Wheee~ Best playtime ever!
+  default: *confused tilt* ...huh?
+```
+
+---
+
+## File-Based Communication
+
+### The Pattern
+Instead of function calls, use system() to execute standalone modules:
+```c
+// C version
+system("./+x/piece_manager.+x fuzzpet set-state hunger 30");
+```
+```python
+# Python version
+subprocess.run(['python3', 'plugins/piece_manager.py', 'fuzzpet', 'set-state', 'hunger', '30'])
+```
+
+### Inter-Module Communication
+- **Input**: Command line arguments
+- **Output**: File writes to piece files or stdout
+- **State changes**: Modify piece.txt through manager
+- **Events**: Separate modules handle event firing
+
+---
+
+## The +x Pattern
+
+The `.+x` extension means "executable":
+- `action.+x` - Standalone executable performing a single function
+- `manager.+x` - Module managing specific responsibilities
+- Located in `pieces/<piece_name>/plugins/+x/`
+
+```
+pieces/
+└── keyboard/
+    ├── piece.txt
+    └── plugins/
+        ├── keyboard_input.c    # Source
+        └── +x/
+            └── keyboard_input.+x  # Compiled binary
+```
+
+**WRONG**: Central `plugins/` directory at project root
+**RIGHT**: Plugins inside each piece's `plugins/` subdirectory
+
+---
+
+## Master Ledger System
+
+Single file logging all system operations:
+```
+pieces/master_ledger/master_ledger.txt
+
+[2026-02-17 14:30:00] InputReceived: key_code=119 | Source: keyboard_input
+[2026-02-17 14:30:01] StateChange: fuzzpet pos_y 4 | Trigger: movement
+[2026-02-17 14:30:01] EventFire: moved on fuzzpet | Trigger: user_input
+[2026-02-17 14:30:02] ResponseRequest: moved on fuzzpet | Source: game_logic
+```
+
+Enables:
+- Time travel debugging
+- Audit trails
+- Parallel world modeling
+- Predictive simulation
+
+---
+
+## Frame Change Detection (Enhanced Pattern)
+
+**Problem**: File modification time (mtime) has 1-second resolution, causing missed updates.
+
+**Solution**: Append-only marker file:
+
+```c
+// In game_logic.c, after writing frame:
+FILE *marker = fopen("pieces/master_ledger/frame_changed.txt", "a");
+fprintf(marker, "X\n");
+fclose(marker);
+```
+
+```python
+# In renderer.py, check marker SIZE (not mtime!):
+current_size = os.path.getsize("pieces/master_ledger/frame_changed.txt")
+if current_size != last_marker_size:
+    render_display()
+    last_marker_size = current_size
+```
+
+**Why this works**:
+- Marker file only grows, never shrinks
+- Every write increases size by at least 1 byte
+- No resolution issues - size is exact
+- Works even with 100+ updates per second
+
+---
+
+## Complete Pipeline Example (FuzzPet)
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    run_fuzzpet.sh / run_fuzzpet.py              │
+│                              │                                  │
+│                              ▼                                  │
+│                    orchestrator.+x                              │
+│                         │   │   │                               │
+│         ┌───────────────┼───┼───┼───────────────┐              │
+│         ▼               ▼   ▼   ▼               ▼              │
+│   keyboard_input    game_logic  renderer    response_handler   │
+│        │               │         │               │              │
+│        ▼               ▼         ▼               │              │
+│  pieces/keyboard/  pieces/   pieces/           │              │
+│    history.txt     display/  display/          │              │
+│                    current_  current_          │              │
+│                    frame.txt frame.txt         │              │
+│                        │                       │              │
+│                        ▼                       │              │
+│              master_ledger/◄───────────────────┘              │
+│                frame_changed.txt                              │
+│                master_ledger.txt                              │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Data Flow
+1. **Input**: `keyboard_input.+x` captures keys → writes to `pieces/keyboard/history.txt`
+2. **Processing**: `game_logic.+x` reads history → updates state → writes `pieces/display/current_frame.txt`
+3. **Signaling**: `game_logic` appends to `pieces/master_ledger/frame_changed.txt`
+4. **Output**: `renderer.+x` detects marker size change → renders frame to terminal
+
+---
+
+## Implementation Checklist
+
+### For Each New Piece
+- [ ] Create directory: `pieces/piece_name/`
+- [ ] Create `piece.txt` with state, methods, event_listeners, responses
+- [ ] Create `ledger.txt` (audit trail)
+- [ ] Create `history.txt` (input history, if needed)
+
+### For Each New Plugin/Executable
+- [ ] Create source: `plugins/plugin_name.c` or `plugins/plugin_name.py`
+- [ ] Compile to: `+x/plugin_name.+x`
+- [ ] Read from appropriate piece files
+- [ ] Write to appropriate piece files
+- [ ] Log to master_ledger
+
+### For Frame Updates
+- [ ] Write frame content to `pieces/display/current_frame.txt`
+- [ ] Append marker: `pieces/master_ledger/frame_changed.txt`
+- [ ] Renderer checks marker SIZE (not mtime!)
+
+---
+
+## Common Patterns
+
+### State Get/Set
+```c
+// C
+system("./+x/piece_manager.+x fuzzpet get-state hunger");
+system("./+x/piece_manager.+x fuzzpet set-state hunger 30");
+```
+```python
+# Python
+subprocess.run(['python3', 'plugins/piece_manager.py', 'fuzzpet', 'get-state', 'hunger'])
+subprocess.run(['python3', 'plugins/piece_manager.py', 'fuzzpet', 'set-state', 'hunger', '30'])
+```
+
+### Event Logging
+```c
+FILE *ledger = fopen("pieces/master_ledger/master_ledger.txt", "a");
+fprintf(ledger, "[%s] EventFire: fed on fuzzpet | Trigger: feed_action\n", timestamp);
+fclose(ledger);
+```
+
+### Response Request
+```c
+FILE *ledger = fopen("pieces/master_ledger/master_ledger.txt", "a");
+fprintf(ledger, "[%s] ResponseRequest: fed on fuzzpet | Source: game_logic\n", timestamp);
+fclose(ledger);
+```
+
+---
+
+## Debugging
+
+### Check File Contents
+```bash
+cat pieces/keyboard/history.txt          # Recent keyboard input
+cat pieces/master_ledger/master_ledger.txt  # All events
+cat pieces/display/current_frame.txt     # Current display frame
+cat pieces/fuzzpet/piece.txt             # Pet state
+```
+
+### Check Marker File
+```bash
+ls -la pieces/master_ledger/frame_changed.txt  # Size should grow with each frame
+```
+
+### Check Logs
+```bash
+cat plugins/logs.txt  # Renderer and GL renderer logs
+```
+
+---
+
+## Quick Start
+
+### C Version
+```bash
+cd c+x_tpm_FUZPET+gl_12
+./compile_all.sh
+./run_fuzzpet.sh      # ASCII only
+# or
+./run_gl_fuzzpet.sh   # ASCII + GL window
+```
+
+### Python Version
+```bash
+cd py+x_tpm_FUZPET+14]SHIP
+python3 run_fuzzpet.py
+```
+
+---
+
+## Key Files Reference
+
+| File | Purpose |
+|------|---------|
+| `pieces/keyboard/history.txt` | Keyboard input queue |
+| `pieces/display/current_frame.txt` | Current display content |
+| `pieces/master_ledger/master_ledger.txt` | Central event log |
+| `pieces/master_ledger/frame_changed.txt` | Frame update marker (append-only) |
+| `pieces/fuzzpet/piece.txt` | Pet state definition |
+| `pieces/clock/state.txt` | Game time and turn count |
+| `pieces/world/map.txt` | Game world map |
+| `plugins/logs.txt` | Runtime logs |
+
+---
+
+## Next Steps
+
+1. **Read**: `^/^.THE_PRACTING_M*+3.txt` for deep dive into principles
+2. **Study**: `*.fuzzpet_pipeline.c+x_0.0.txt` for complete pipeline flow
+3. **Implement**: Start with a simple piece (clock, display)
+4. **Extend**: Add new methods, events, or entire pieces
+5. **Debug**: Use master_ledger to trace event flow
+
+---
+
+## Common Pitfalls & Lessons Learned
+
+### Pitfall 1: Centralized Plugins Directory
+**WRONG**: All plugins in root `plugins/` folder
+**RIGHT**: Plugins inside `pieces/<piece>/plugins/`
+
+```
+❌ project/plugins/game_logic.c
+✅ pieces/world/plugins/game_logic.c
+```
+
+**Why**: TPM requires pieces to own their behavior, not just data. Centralized plugins break modularity and discoverability.
+
+### Pitfall 2: Overwriting piece.txt Structure
+**WRONG**: `write_piece_state()` overwrites entire file with just state values
+**RIGHT**: Preserve piece.txt structure (responses, methods, event_listeners)
+
+```python
+# WRONG - loses responses section
+with open('piece.txt', 'w') as f:
+    for key, value in state_data.items():
+        f.write(f"{key}={value}\n")
+
+# RIGHT - preserve structure
+# Read existing content, update only state section, write back完整
+```
+
+**Why**: Responses and methods are defined in piece.txt for modularity. Overwriting them breaks TPM's customization principle.
+
+### Pitfall 3: Using mtime for Frame Detection
+**WRONG**: Check file modification time (1-second resolution)
+**RIGHT**: Append to marker file, check SIZE
+
+```c
+// WRONG - misses updates within same second
+if (current_mtime != last_mtime) { render(); }
+
+// RIGHT - catches every update
+FILE *marker = fopen("pieces/master_ledger/frame_changed.txt", "a");
+fprintf(marker, "X\n");  // Append-only, size always grows
+```
+
+**Why**: mtime has 1-second resolution. Multiple updates in same second are missed. Marker file size is exact.
+
+### Pitfall 4: Hardcoded Response Messages
+**WRONG**: `strcpy(last_command_output, "Yum yum~");`
+**RIGHT**: Fetch from piece.txt via piece_manager
+
+```c
+// WRONG - not modular, can't customize
+strcpy(last_command_output, "Yum yum~ Feeling happy!");
+
+// RIGHT - modular, customizable
+sprintf(cmd, "./+x/piece_manager.+x fuzzpet get-response fed");
+rsp_fp = popen(response_cmd, "r");
+fgets(response, sizeof(response), rsp_fp);
+sprintf(last_command_output, "[FUZZPET] %s", response);
+```
+
+**Why**: Responses in piece.txt allow customization without code changes. Hardcoding defeats TPM modularity.
+
+### Pitfall 5: Relative Path Confusion
+**WRONG**: `../pieces/keyboard/history.txt` (creates nested directories)
+**RIGHT**: Calculate paths from project root or use absolute paths
+
+```python
+# WRONG - creates pieces/pieces/...
+HISTORY_PATH = os.path.join(script_dir, '../pieces/keyboard/history.txt')
+
+# RIGHT - from pieces/world/plugins/, go up 2 levels to project root
+PIECES_ROOT = os.path.abspath(os.path.join(script_dir, '../../'))
+HISTORY_PATH = os.path.join(PIECES_ROOT, 'pieces/keyboard/history.txt')
+```
+
+**Why**: Incorrect relative paths create nested `pieces/pieces/` directories and file not found errors.
+
+### Pitfall 6: Response Handler Printing Instead of Updating Frame
+**WRONG**: response_handler prints to stdout (lost in background)
+**RIGHT**: game_logic sets `last_command_output` before render
+
+```c
+// WRONG - response_handler runs in background, stdout redirected
+printf("[FUZZPET] Yum yum~");  // Never seen by user
+
+// RIGHT - included in next frame render
+strcpy(last_command_output, "[FUZZPET] Yum yum~");
+render_print();  // Includes message in frame
+```
+
+**Why**: Background processes have stdout redirected. Responses must be in frame file to be visible.
+
+---
+
+## Implementation Checklist
+
+### Before Running
+- [ ] All plugins in `pieces/<piece>/plugins/`
+- [ ] piece.txt files have responses section (not just state)
+- [ ] Marker file path: `pieces/master_ledger/frame_changed.txt`
+- [ ] No hardcoded responses in game logic
+- [ ] Paths calculated from project root, not relative
+
+### During Development
+- [ ] Check master_ledger for event flow
+- [ ] Verify frame_changed.txt size grows with each update
+- [ ] Test responses are fetched from piece.txt, not hardcoded
+- [ ] Verify piece.txt structure preserved after state updates
+
+### Debugging
+```bash
+# Check for nested pieces directories (BAD)
+find . -type d -name "pieces"  # Should only show ./pieces
+
+# Check marker file is growing
+ls -la pieces/master_ledger/frame_changed.txt
+
+# Check responses in piece.txt
+cat pieces/fuzzpet/piece.txt | grep -A 10 "responses:"
+
+# Trace event flow
+tail -f pieces/master_ledger/master_ledger.txt
+```
+
+---
+
+## Remember
+
+> "Data/Persistence: Represented as text files in directory structure
+> Logic: Implemented as functions in plugins
+> Flow: Managed through a master ledger audit trail
+> 
+> TPM treats all application components as 'living souls' stored as humble directories containing text files that define reality. Code is merely an interpreter, never an originator."

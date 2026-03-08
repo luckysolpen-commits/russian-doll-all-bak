@@ -1,0 +1,7 @@
+[DEAD] clock_daemon: 223506
+[RUNNING] chtpm_parser: 224542
+[RUNNING] fuzzpet_manager: 224540
+[RUNNING] response_handler: 224537
+[RUNNING] keyboard_input: 224534
+[RUNNING] orchestrator: 224482
+[DEAD] renderer: 223501
