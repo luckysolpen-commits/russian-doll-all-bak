@@ -1,0 +1,20 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | clock_daemon
+META         | version            | 1.0
+META         | determinism        | strict
+
+STATE        | turn                 | 0
+STATE        | time                 | 08:00:10
+STATE        | mode                 | turn
+STATE        | tick_rate            | 1
+
+METHOD       | toggle_clock         | void
+METHOD       | increment_time       | void
+METHOD       | increment_turn       | void
+METHOD       | end_turn             | void
+
+
+RESPONSE     | toggled              | Clock mode changed.
+RESPONSE     | time_incremented     | Time advanced.
+RESPONSE     | turn_incremented     | Turn advanced.

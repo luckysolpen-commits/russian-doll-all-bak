@@ -1,0 +1,5 @@
+project_id=template
+current_map=map_0001
+current_z=0
+selector_mode=1
+active_piece=selector

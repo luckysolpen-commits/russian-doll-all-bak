@@ -1,0 +1,24 @@
+[2026-03-08 03:29:41] ProcessRegister: orchestrator PID=85112
+[2026-03-08 03:29:41] ProcessRegister: keyboard_input PID=85155
+[2026-03-08 03:29:41] ProcessRegister: joystick_input PID=85158
+[2026-03-08 03:29:41] ProcessRegister: response_handler PID=85161
+[2026-03-08 03:29:41] ProcessRegister: chtpm_parser PID=85163
+[2026-03-08 03:29:41] FrameRendered: at 2026-03-08 03:29:41 | Source: renderer
+[2026-03-08 03:29:41] ProcessRegister: renderer PID=85178
+[2026-03-08 03:29:41] ProcessRegister: gl_renderer PID=85181
+[2026-03-08 03:29:41] ProcessRegister: clock_daemon PID=85183
+[2026-03-08 03:29:43] InputReceived: key_code=2103 | Source: joystick_input
+[2026-03-08 03:29:43] FrameRendered: at 2026-03-08 03:29:43 | Source: renderer
+[2026-03-08 03:29:44] InputReceived: key_code=2000 | Source: joystick_input
+[2026-03-08 03:29:44] FrameRendered: at 2026-03-08 03:29:44 | Source: renderer
+[2026-03-08 03:29:45] InputReceived: key_code=2103 | Source: joystick_input
+[2026-03-08 03:29:45] FrameRendered: at 2026-03-08 03:29:45 | Source: renderer
+[2026-03-08 03:29:45] InputReceived: key_code=2103 | Source: joystick_input
+[2026-03-08 03:29:45] FrameRendered: at 2026-03-08 03:29:45 | Source: renderer
+[2026-03-08 03:29:45] InputReceived: key_code=2000 | Source: joystick_input
+[2026-03-08 03:29:45] FrameRendered: at 2026-03-08 03:29:45 | Source: renderer
+[2026-03-08 03:29:47] ProcessUnregister: joystick_input
+[2026-03-08 03:29:50] StateChange: clock_daemon turn 0 | Trigger: piece_manager_set_state
+[2026-03-08 03:29:50] StateChange: clock_daemon time 08:00:10 | Trigger: piece_manager_set_state
+[2026-03-08 03:29:50] FrameRendered: at 2026-03-08 03:29:50 | Source: renderer
+[2026-03-08 03:30:14] ProcessUnregister: gl_renderer

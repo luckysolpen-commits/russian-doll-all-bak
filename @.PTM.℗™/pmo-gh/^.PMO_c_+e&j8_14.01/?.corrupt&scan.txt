@@ -1,9 +1,0 @@
-# Investigation: Corrupt Files and CPU Usage
-
-## Initial Findings
-- Corrupt files like `D-]` appearing in root.
-
-- Suspected cause: Entity movement logic or clock logic
-
-## Search Results
-(Pending)

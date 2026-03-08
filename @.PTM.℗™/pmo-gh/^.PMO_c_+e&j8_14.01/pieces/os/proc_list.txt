@@ -1,8 +1,0 @@
-[RUNNING] gl_renderer: 43865
-[RUNNING] clock_daemon: 43863
-[RUNNING] chtpm_parser: 43844
-[RUNNING] fuzzpet_manager: 43894
-[RUNNING] response_handler: 43842
-[RUNNING] keyboard_input: 43836
-[RUNNING] orchestrator: 43789
-[RUNNING] renderer: 43861

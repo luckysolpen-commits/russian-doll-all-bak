@@ -1,0 +1,9 @@
+FUZZPET=pieces/apps/fuzzpet_app/manager/plugins/+x/fuzzpet_manager.+x
+HELP=pieces/apps/fuzzpet_app/fuzzpet/plugins/+x/fuzzpet.+x
+STATUS=pieces/apps/fuzzpet_app/fuzzpet/plugins/+x/fuzzpet.+x
+PS=pieces/apps/fuzzpet_app/fuzzpet/plugins/+x/fuzzpet.+x
+TOGGLE_HISTORY=pieces/display/plugins/+x/toggle_history.+x
+FUZZPET_NEW=pieces/apps/fuzzpet_app/fuzzpet/plugins/+x/fuzzpet_reset.+x
+GL-OS=pieces/apps/gl_os/plugins/+x/gl_os.+x
+RMMP=pieces/apps/player_app/manager/plugins/+x/player_manager.+x
+PLAYR=pieces/apps/player_app/manager/plugins/+x/player_manager.+x

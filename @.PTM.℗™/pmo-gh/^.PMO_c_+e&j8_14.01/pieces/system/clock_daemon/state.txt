@@ -1,3 +1,0 @@
-turn=14
-time=08:05:20
-mode=auto

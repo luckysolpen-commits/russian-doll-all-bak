@@ -1,0 +1,1 @@
+name=Cursor\ntype=selector\npos_x=5\npos_y=5\npos_z=0\non_map=1

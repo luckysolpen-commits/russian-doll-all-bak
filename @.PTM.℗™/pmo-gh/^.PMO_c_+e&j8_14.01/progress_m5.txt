@@ -1,4 +1,0 @@
-# Progress Report - March 5 (13.00 Refactor)
-
-## Issues Identified
-1. **Corrupt Filenames:** Files like `D-\357]\005` contain clock state data. This suggests `state_path` in `clock_daemon` or `piece_file` in `piece_manager` is being corrupted. Likely cause: stack corruption or uninitialized buffers in `piece_manager.c`.
