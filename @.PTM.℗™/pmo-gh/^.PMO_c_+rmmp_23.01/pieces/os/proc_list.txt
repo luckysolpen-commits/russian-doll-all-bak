@@ -1,8 +1,0 @@
-orchestrator=566103
-fuzzpet_manager=566160
-keyboard_input=566157
-response_handler=566164
-chtpm_parser=566162
-renderer=566172
-gl_renderer=566175
-clock_daemon=566176

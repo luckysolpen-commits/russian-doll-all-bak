@@ -1,0 +1,7 @@
+[2026-03-09 09:24:39] KeyCaptured: 1003 ('?') | Source: keyboard_input
+[2026-03-09 09:24:40] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 09:24:40] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 09:24:42] KeyCaptured: 54 ('6') | Source: keyboard_input
+[2026-03-09 09:24:43] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 09:24:46] KeyCaptured: 55 ('7') | Source: keyboard_input
+[2026-03-09 09:24:47] KeyCaptured: 13 ('?') | Source: keyboard_input

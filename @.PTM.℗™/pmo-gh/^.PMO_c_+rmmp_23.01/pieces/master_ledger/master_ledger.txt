@@ -1,7 +1,0 @@
-[2026-03-09 07:29:42] FrameRendered: at 2026-03-09 07:29:42 | Source: renderer
-[2026-03-09 07:29:43] InputReceived: key_code=1003 | Source: keyboard_input
-[2026-03-09 07:29:43] FrameRendered: at 2026-03-09 07:29:43 | Source: renderer
-[2026-03-09 07:29:44] InputReceived: key_code=13 | Source: keyboard_input
-[2026-03-09 07:29:44] FrameRendered: at 2026-03-09 07:29:44 | Source: renderer
-[2026-03-09 07:29:45] InputReceived: key_code=13 | Source: keyboard_input
-[2026-03-09 07:29:45] FrameRendered: at 2026-03-09 07:29:45 | Source: renderer

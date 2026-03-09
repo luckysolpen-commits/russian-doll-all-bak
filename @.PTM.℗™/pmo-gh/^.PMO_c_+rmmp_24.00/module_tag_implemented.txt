@@ -1,0 +1,103 @@
+================================================================================
+MODULE TAG IMPLEMENTATION - UPDATED
+================================================================================
+
+IMPLEMENTED: <module> TAG PARSING
+================================================================================
+
+The system now uses the <module> tag as originally intended:
+
+1. LAYOUT FILE (pieces/chtpm/layouts/main.chtpm)
+
+    <panel time_reactive="true">
+        <module>fuzzpet_manager.+x</module>
+        ...
+    </panel>
+
+2. CHTPM_PARSER.C parses <module> tag:
+
+   In parse_chtm():
+   - Detects <module> tag (self-closing: <module path="..."/>)
+   - Or with content: <module>path/to/app.+x</module>
+   - Calls launch_module("fuzzpet_manager.+x")
+
+3. launch_module() does:
+
+   - fork() + execv() to run the module
+   - Registers PID with proc_manager.+x (register <name> <pid>)
+   - Sets is_suspended = true (parser waits for app)
+
+4. PARSER SUSPENDS while module runs:
+
+   main loop checks:
+   if (is_suspended && current_module_pid > 0) {
+       if (waitpid(current_module_pid, &status, WNOHANG) != 0) {
+           // Module exited, resume parser
+           is_suspended = false;
+           current_module_pid = -1;
+       }
+   }
+
+5. MODULE RUNS as sovereign app:
+
+   fuzzpet_manager.+x:
+   - Watches history.txt for input
+   - Calls trait executables (move_entity.+x, storage.+x, etc.)
+   - Writes view.txt + signals view_changed.txt
+   - Parser composes frame from view.txt
+
+================================================================================
+
+FILES CHANGED
+================================================================================
+
+1. pieces/chtpm/plugins/chtpm_parser.c
+   - Added <module> tag parsing in parse_chtm()
+   - Handles both <module>path</module> and <module src="path"/> formats
+
+2. pieces/chtpm/plugins/orchestrator.c
+   - Removed hardcoded fuzzpet_manager launch
+   - Apps now launched via <module> tag only
+
+3. pieces/chtpm/layouts/main.chtpm
+   - Added <module>fuzzpet_manager.+x</module>
+
+================================================================================
+
+MULTIPLE APP SUPPORT
+================================================================================
+
+Now you can have multiple apps, each with their own <module> tag:
+
+fuzzpet_launcher.chtpm:
+    <panel>
+        <module>fuzzpet_manager.+x</module>
+        ...
+    </panel>
+
+gl_os.chtpm:
+    <panel>
+        <module>gl_os.+x</module>
+        ...
+    </panel>
+
+When user navigates to a layout:
+1. Parser parses the layout
+2. Encounters <module> tag
+3. Launches that module
+4. Registers with proc_manager
+5. Parser suspends until module exits
+
+================================================================================
+
+BENEFITS
+================================================================================
+
+✓ Apps launched on-demand (not at system startup)
+✓ Multiple apps can run (each in their own layout)
+✓ Apps registered with proc_manager (visible in process monitor)
+✓ Clean lifecycle (launch on parse, exit on quit)
+✓ No hardcoded app names in orchestrator
+✓ CHTPM-driven (layout defines which app runs)
+
+================================================================================

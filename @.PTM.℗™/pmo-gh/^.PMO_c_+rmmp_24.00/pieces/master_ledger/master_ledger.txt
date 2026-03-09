@@ -1,0 +1,24 @@
+[2026-03-09 09:24:38] FrameRendered: at 2026-03-09 09:24:38 | Source: renderer
+[2026-03-09 09:24:39] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 09:24:39] FrameRendered: at 2026-03-09 09:24:39 | Source: renderer
+[2026-03-09 09:24:40] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 09:24:40] FrameRendered: at 2026-03-09 09:24:40 | Source: renderer
+[2026-03-09 09:24:40] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 09:24:40] FrameRendered: at 2026-03-09 09:24:40 | Source: renderer
+[2026-03-09 09:24:42] InputReceived: key_code=54 | Source: keyboard_input
+[2026-03-09 09:24:42] FrameRendered: at 2026-03-09 09:24:42 | Source: renderer
+[2026-03-09 09:24:43] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 09:24:43] FrameRendered: at 2026-03-09 09:24:43 | Source: renderer
+[2026-03-09 09:24:43] FrameRendered: at 2026-03-09 09:24:43 | Source: renderer
+[2026-03-09 09:24:46] InputReceived: key_code=55 | Source: keyboard_input
+[2026-03-09 09:24:46] FrameRendered: at 2026-03-09 09:24:46 | Source: renderer
+[2026-03-09 09:24:47] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 09:24:47] StateChange: clock_daemon mode auto | Trigger: piece_manager_set_state
+[2026-03-09 09:24:47] FrameRendered: at 2026-03-09 09:24:47 | Source: renderer
+[2026-03-09 09:24:47] FrameRendered: at 2026-03-09 09:24:47 | Source: renderer
+[2026-03-09 09:24:47] FrameRendered: at 2026-03-09 09:24:47 | Source: renderer
+[2026-03-09 09:24:48] FrameRendered: at 2026-03-09 09:24:48 | Source: renderer
+[2026-03-09 09:24:49] FrameRendered: at 2026-03-09 09:24:49 | Source: renderer
+[2026-03-09 09:24:50] FrameRendered: at 2026-03-09 09:24:50 | Source: renderer
+[2026-03-09 09:24:51] FrameRendered: at 2026-03-09 09:24:51 | Source: renderer
+[2026-03-09 09:24:52] FrameRendered: at 2026-03-09 09:24:52 | Source: renderer
