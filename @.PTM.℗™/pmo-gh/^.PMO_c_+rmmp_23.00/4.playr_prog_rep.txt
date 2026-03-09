@@ -1,0 +1,27 @@
+# PLAYR Progress Report: Theater Handover Verified (4.playr_prog_rep.txt)
+
+## 1. Status: Major Breakthrough
+We have successfully broken the "Silence." 
+- **The Sovereign Runner (`chtpm_player.c`):** Is now compiling and executing correctly.
+- **Theater Handover:** The OS Parser correctly "suspends" its loop when the Player is launched, and "resumes" control when the Player exits.
+- **Rendering Verified:** The `player_test.chtpm` layout is correctly displayed in the CLI when selecting PLAYR or RMMP.
+
+## 2. Technical Win: Non-Blocking Modules
+We successfully implemented `<module>` tag support with non-blocking I/O (via `fcntl`). This ensures the Player can host logic modules (like the Prisc VM) without hanging the UI thread.
+
+## 3. UI Refinement (User Request)
+The test layout was slightly ambiguous. I will perform the following surgical updates:
+- Change the "Quit" button label to "Back to Project Manager."
+- Ensure the exit sequence properly returns the user to the `projects.chtpm` menu.
+
+## 4. Current Work Path (Phase 2 Begins)
+Now that the foundation is 100% verified, we move to **Wiring the Prisc VM**.
+- **The Bridge:** `chtpm_player_pal.c` will be created to act as the conduit between the CHTM view and the PAL logic.
+- **Recursive PAL:** We will test a layout that triggers a PAL script, which then modifies a UI variable.
+
+## 5. Summary of Achievements
+1. **Redraw War Fixed:** No more flicker between OS and App.
+2. **Path Resolution Stable:** The runner finds its project root after the fork.
+3. **Sovereign Lifecycle:** Handover -> Execution -> Return is fully functional.
+
+**Next Foundational Step: The Prisc-Bridge Module.**

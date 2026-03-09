@@ -1,0 +1,7 @@
+name=
+hunger=43
+happiness=unknown
+energy=0
+level=unknown
+status=active
+emoji_mode=0
