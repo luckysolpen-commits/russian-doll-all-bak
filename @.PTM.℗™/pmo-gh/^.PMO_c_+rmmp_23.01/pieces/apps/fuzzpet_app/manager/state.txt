@@ -1,2 +1,2 @@
 active_target_id=selector
-last_key=7
+last_key=None

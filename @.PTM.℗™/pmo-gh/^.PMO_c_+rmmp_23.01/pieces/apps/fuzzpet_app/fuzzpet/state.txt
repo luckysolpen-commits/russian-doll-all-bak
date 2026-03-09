@@ -4,4 +4,4 @@ happiness=0
 energy=0
 level=0
 status=active
-emoji_mode=1
+emoji_mode=0

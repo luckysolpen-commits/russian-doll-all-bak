@@ -1,9 +1,3 @@
-[2026-03-09 07:17:10] KeyCaptured: 1003 ('?') | Source: keyboard_input
-[2026-03-09 07:17:11] KeyCaptured: 13 ('?') | Source: keyboard_input
-[2026-03-09 07:17:12] KeyCaptured: 13 ('?') | Source: keyboard_input
-[2026-03-09 07:17:15] KeyCaptured: 54 ('6') | Source: keyboard_input
-[2026-03-09 07:17:16] KeyCaptured: 13 ('?') | Source: keyboard_input
-[2026-03-09 07:17:18] KeyCaptured: 55 ('7') | Source: keyboard_input
-[2026-03-09 07:17:18] KeyCaptured: 13 ('?') | Source: keyboard_input
-[2026-03-09 07:17:20] KeyCaptured: 13 ('?') | Source: keyboard_input
-[2026-03-09 07:21:24] KeyCaptured: 1002 ('?') | Source: keyboard_input
+[2026-03-09 07:29:43] KeyCaptured: 1003 ('?') | Source: keyboard_input
+[2026-03-09 07:29:44] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 07:29:45] KeyCaptured: 13 ('?') | Source: keyboard_input
