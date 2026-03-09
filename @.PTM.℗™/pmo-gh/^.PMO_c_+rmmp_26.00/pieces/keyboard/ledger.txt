@@ -1,0 +1,4 @@
+[2026-03-09 14:26:48] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 14:26:49] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 14:26:50] KeyCaptured: 53 ('5') | Source: keyboard_input
+[2026-03-09 14:26:50] KeyCaptured: 13 ('?') | Source: keyboard_input
