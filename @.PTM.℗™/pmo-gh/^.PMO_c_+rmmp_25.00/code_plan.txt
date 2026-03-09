@@ -1,0 +1,439 @@
+================================================================================
+CODE_PLAN.TXT - Editor + Player Parallel Implementation Plan
+================================================================================
+Date: 2026-03-09
+Status: AUTHORITATIVE IMPLEMENTATION PLAN
+Architecture: TPM + PMO + Ops + Prisc (for events only)
+
+================================================================================
+1. CORE PRINCIPLES
+================================================================================
+
+### SEPARATE APPS, SHARED OPS
+- **Editor** (`pieces/apps/editor/`) - Map editing, piece placement, event scripting
+- **Player** (`pieces/apps/playrm/`) - Project selection → Title → Game
+- **Shared Ops** (`pieces/apps/playrm/ops/`) - Both apps call the same +x binaries
+
+### PLAYER = PROJECT LOADER
+Player IS the demo runner. When you launch Player:
+1. Shows project list from `projects/` folder
+2. User selects project (e.g., "demo_1")
+3. Loads project's title screen
+4. Game begins
+
+### EDITOR + PLAYER DEVELOPED TOGETHER
+We develop both simultaneously so:
+- Ops work in both contexts (editor places tile, player moves on tile)
+- Event scripts can be tested immediately (edit in editor, play in player)
+- No "throwaway code" - everything is reusable
+
+================================================================================
+2. FILE STRUCTURE (Complete)
+================================================================================
+
+    ^^.PMO_c_+rmmp_23.01/
+    ├── pieces/apps/
+    │   ├── editor/
+    │   │   ├── plugins/
+    │   │   │   ├── editor_module.c       # Main editor logic
+    │   │   │   └── +x/editor_module.+x   # Compiled binary
+    │   │   └── layouts/
+    │   │       └── editor.chtpm          # Editor UI layout
+    │   │
+    │   └── playrm/
+    │       ├── plugins/
+    │       │   ├── playrm_module.c       # Main player logic
+    │       │   └── +x/playrm_module.+x   # Compiled binary
+    │       ├── layouts/
+    │       │   ├── loader.chtpm          # Project selection screen
+    │       │   ├── title.chtpm           # Title screen (project-specific)
+    │       │   └── game.chtpm            # Game UI layout
+    │       └── ops/                      # SHARED OPS LIBRARY
+    │           ├── src/
+    │           │   ├── move_player.c
+    │           │   ├── move_z.c
+    │           │   ├── interact.c
+    │           │   ├── render_map.c
+    │           │   ├── place_tile.c
+    │           │   ├── pick_tile.c
+    │           │   ├── console_print.c
+    │           │   └── layout_op.c
+    │           └── +x/
+    │               ├── move_player.+x
+    │               ├── move_z.+x
+    │               ├── interact.+x
+    │               ├── render_map.+x
+    │               ├── place_tile.+x
+    │               ├── pick_tile.+x
+    │               ├── console_print.+x
+    │               └── layout_op.+x
+    │
+    ├── #.prisc-xpanse+4]SHIP/
+    │   ├── prisc+x                       # VM executable
+    │   ├── prisc+x.c                     # VM source
+    │   └── default_op.txt                # Op definitions
+    │
+    └── projects/
+        ├── demo_1/                       # Demo Project
+        │   ├── config.pdl                # Project metadata
+        │   ├── maps/
+        │   │   ├── map_001_z0.txt
+        │   │   └── map_001_z1.txt
+        │   ├── pieces/
+        │   │   ├── player.pdl
+        │   │   ├── npc_01.pdl
+        │   │   └── chest_01.pdl
+        │   ├── scripts/                  # Prisc event scripts
+        │   │   ├── title_screen.asm
+        │   │   ├── game_init.asm
+        │   │   ├── npc_greeting.asm
+        │   │   ├── chest_open.asm
+        │   │   └── win_condition.asm
+        │   └── config/
+        │       └── title.txt             # ASCII art title screen
+        │
+        └── template/                     # Empty project template
+            ├── config.pdl
+            ├── maps/map_001_z0.txt
+            └── pieces/
+
+================================================================================
+3. IMPLEMENTATION PHASES (Parallel Development)
+================================================================================
+
+### PHASE 1: SHARED OPS LIBRARY (2 hours)
+**Goal:** Core Ops work for both Editor and Player
+
+Files:
+- `pieces/apps/playrm/ops/src/move_player.c`
+- `pieces/apps/playrm/ops/src/move_z.c`
+- `pieces/apps/playrm/ops/src/interact.c`
+- `pieces/apps/playrm/ops/src/render_map.c`
+- `pieces/apps/playrm/ops/src/place_tile.c`
+- `pieces/apps/playrm/ops/src/pick_tile.c`
+- `pieces/apps/playrm/ops/src/console_print.c`
+- `pieces/apps/playrm/ops/src/layout_op.c`
+
+KPI:
+[ ] All Ops compile without warnings
+[ ] Ops accept piece_id as argument
+[ ] Ops use dynamic path resolution (location_kvp)
+[ ] Ops hit frame_changed.txt after state change
+[ ] Test: `./move_player.+x selector up` works from command line
+
+---
+
+### PHASE 2: PLAYER MODULE (3 hours)
+**Goal:** Player loads projects, shows title, runs game
+
+Files:
+- `pieces/apps/playrm/plugins/playrm_module.c`
+- `pieces/apps/playrm/layouts/loader.chtpm`
+- `pieces/apps/playrm/layouts/title.chtpm`
+- `pieces/apps/playrm/layouts/game.chtpm`
+
+KPI:
+[ ] Player launches via `<module>` tag
+[ ] Project loader shows projects/ folder contents
+[ ] User can select project (number keys)
+[ ] Title screen displays (reads projects/demo_1/config/title.txt)
+[ ] "New Game" starts gameplay
+[ ] Player moves with WASD
+[ ] ENTER interacts with entities
+[ ] Z-level changes with X/Z
+
+---
+
+### PHASE 3: EDITOR MODULE (3 hours)
+**Goal:** Editor has 4 tabs, can place tiles, edit pieces
+
+Files:
+- `pieces/apps/editor/plugins/editor_module.c`
+- `pieces/apps/editor/layouts/editor.chtpm`
+
+KPI:
+[ ] Editor launches via `<module>` tag
+[ ] Tab switching works (1-4 keys: MAP, PIECES, DB, EVENTS)
+[ ] Cursor moves with WASD
+[ ] SPACE places tile on map (calls place_tile.+x)
+[ ] Number keys select tile from palette
+[ ] map.txt updates on disk immediately
+[ ] X/Z changes cursor Z-level
+
+---
+
+### PHASE 4: DEMO PROJECT (3 hours)
+**Goal:** Complete demo_1 project with title → game → win loop
+
+Files:
+- `projects/demo_1/config.pdl`
+- `projects/demo_1/maps/map_001_z0.txt`
+- `projects/demo_1/pieces/player.pdl`
+- `projects/demo_1/pieces/npc_01.pdl`
+- `projects/demo_1/pieces/chest_01.pdl`
+- `projects/demo_1/scripts/title_screen.asm`
+- `projects/demo_1/scripts/game_init.asm`
+- `projects/demo_1/scripts/npc_greeting.asm`
+- `projects/demo_1/scripts/chest_open.asm`
+- `projects/demo_1/scripts/win_condition.asm`
+- `projects/demo_1/config/title.txt`
+
+KPI:
+[ ] Player loads demo_1 from project list
+[ ] Title screen displays with menu
+[ ] "New Game" initializes game state
+[ ] Player can move and interact
+[ ] NPC shows dialogue (Prisc script)
+[ ] Chest shows choice menu (Prisc script)
+[ ] Reaching goal shows victory
+[ ] Returns to title screen
+
+---
+
+### PHASE 5: INTEGRATION TESTING (2 hours)
+**Goal:** Edit in Editor, test in Player, iterate
+
+KPI:
+[ ] Place tile in Editor → load in Player → tile is there
+[ ] Edit NPC dialogue in Editor → test in Player → dialogue updated
+[ ] No C recompilation needed for script changes
+[ ] State persists between Editor and Player sessions
+
+================================================================================
+4. OPS SPECIFICATION (Detailed)
+================================================================================
+
+### move_player.c
+```c
+/*
+ * Op: move_player
+ * Usage: ./+x/move_player.+x <piece_id> <direction>
+ * Args: piece_id (e.g., "player"), direction (up/down/left/right)
+ * Reads: projects/{project_id}/pieces/{piece_id}/state.txt
+ * Writes: pos_x, pos_y updated
+ * Signals: frame_changed.txt
+ */
+```
+
+### move_z.c
+```c
+/*
+ * Op: move_z
+ * Usage: ./+x/move_z.+x <piece_id> <direction>
+ * Args: piece_id, direction (up/down)
+ * Reads: pos_z from state.txt
+ * Writes: pos_z incremented/decremented
+ * Signals: frame_changed.txt
+ */
+```
+
+### interact.c
+```c
+/*
+ * Op: interact
+ * Usage: ./+x/interact.+x <piece_id>
+ * Args: piece_id (the interactor, e.g., "player")
+ * Behavior: Scans for entities at adjacent tiles
+ *           If entity found with on_interact script:
+ *             Calls prisc+x to run script
+ * Reads: entity pieces, their on_interact scripts
+ * Writes: N/A (script does the writing)
+ * Signals: N/A (script signals)
+ */
+```
+
+### place_tile.c
+```c
+/*
+ * Op: place_tile
+ * Usage: ./+x/place_tile.+x <map_id> <x> <y> <tile_char>
+ * Args: map_id (e.g., "map_001"), x, y, tile_char (e.g., "#")
+ * Reads: projects/{project_id}/maps/{map_id}_z{z}.txt
+ * Writes: tile_char at position (x, y)
+ * Signals: frame_changed.txt
+ */
+```
+
+### pick_tile.c
+```c
+/*
+ * Op: pick_tile
+ * Usage: ./+x/pick_tile.+x <map_id> <x> <y>
+ * Args: map_id, x, y
+ * Reads: tile character at position
+ * Writes: selected_tile to editor state
+ * Signals: N/A
+ */
+```
+
+### render_map.c
+```c
+/*
+ * Op: render_map
+ * Usage: ./+x/render_map.+x <map_id> <z>
+ * Args: map_id, z (Z-level)
+ * Reads: map file, all piece state.txt files
+ * Writes: view.txt (composed map with entities)
+ * Signals: view_changed.txt (for parser to pick up)
+ */
+```
+
+### console_print.c
+```c
+/*
+ * Op: console_print
+ * Usage: ./+x/console_print.+x <message>
+ * Args: message (string)
+ * Behavior: Shows message to user (last_response.txt)
+ * Signals: frame_changed.txt
+ */
+```
+
+### layout_op.c
+```c
+/*
+ * Op: layout_op
+ * Usage: ./+x/layout_op.+x <menu_id>
+ * Args: menu_id (1 = main menu, 2 = options, etc.)
+ * Reads: layout.txt for menu structure
+ * Returns: selected option number via stdout
+ * Signals: N/A
+ */
+```
+
+================================================================================
+5. PRISC SCRIPT SPECIFICATION (Demo Project)
+================================================================================
+
+### title_screen.asm
+```asm
+# Title Screen Script
+# Called when project loads
+
+start:
+    layout_op x2, x1      # Show title menu (x1=1)
+    beq x2, x0, exit      # 0 = exit
+    addi x3, x2, -1
+    beq x3, x0, new_game
+    addi x3, x2, -2
+    beq x3, x0, load_game
+    j start
+
+new_game:
+    jal x0, game_init.asm # Jump to game init script
+    j start
+
+load_game:
+    jal x0, game_load.asm # Jump to game load script
+    j start
+
+exit:
+    halt
+```
+
+### npc_greeting.asm
+```asm
+# NPC Dialogue Script
+# Called when player interacts with NPC
+
+start:
+    console_print "Welcome, traveler!"
+    addi x1, x0, 2        # Menu ID 2 = dialogue choices
+    layout_op x2, x1
+    beq x2, x0, end       # 0 = cancel
+    addi x3, x2, -1
+    beq x3, x0, give_quest
+    j end
+
+give_quest:
+    console_print "Find the treasure in the chest!"
+    set_flag quest_started, 1
+    j end
+
+end:
+    halt
+```
+
+### chest_open.asm
+```asm
+# Chest Interaction Script
+# Called when player opens chest
+
+start:
+    console_print "Choose your prize!"
+    addi x1, x0, 3        # Menu ID 3 = prize choices
+    layout_op x2, x1
+    beq x2, x0, end
+    addi x3, x2, -1
+    beq x3, x0, prize_gold
+    addi x3, x2, -2
+    beq x3, x0, prize_item
+    j end
+
+prize_gold:
+    console_print "You found 100 gold!"
+    add_gold 100
+    j end
+
+prize_item:
+    console_print "You found a potion!"
+    add_item potion
+    j end
+
+end:
+    halt
+```
+
+================================================================================
+6. KPI CHECKLIST (All Phases)
+================================================================================
+
+### Code Quality
+[ ] All C files compile with -Wall -Wextra (no warnings)
+[ ] All Ops use build_path_malloc() for paths
+[ ] All Ops hit frame_changed.txt after state change
+[ ] All .asm scripts parse without errors
+[ ] All .pdl files validate (correct format)
+
+### Player Functionality
+[ ] Project loader shows projects/ contents
+[ ] User can select project with number keys
+[ ] Title screen displays ASCII art + menu
+[ ] "New Game" starts gameplay
+[ ] Player moves with WASD
+[ ] Player changes Z-level with X/Z
+[ ] ENTER interacts with entities
+[ ] Win condition returns to title
+
+### Editor Functionality
+[ ] Editor has 4 tabs (MAP, PIECES, DB, EVENTS)
+[ ] Tab switching works (1-4 keys)
+[ ] Cursor moves with WASD
+[ ] SPACE places tile on map
+[ ] Number keys select tile from palette
+[ ] X/Z changes cursor Z-level
+[ ] map.txt updates on disk immediately
+
+### Demo Project
+[ ] demo_1 loads from project list
+[ ] Title → Game → Interact → Win → Title loop works
+[ ] NPC dialogue shows (Prisc script)
+[ ] Chest choice menu works (Prisc script)
+[ ] State persists (position, flags, inventory)
+
+### Integration
+[ ] Edit in Editor → test in Player → changes visible
+[ ] No C recompilation for script changes
+[ ] Ops work in both contexts (Editor and Player)
+
+================================================================================
+7. THE MANTRA
+================================================================================
+
+"Editor and Player are SEPARATE.
+They share the same Ops.
+Player loads projects.
+The Demo proves the pipeline.
+Keep it simple, stupid."
+
+================================================================================

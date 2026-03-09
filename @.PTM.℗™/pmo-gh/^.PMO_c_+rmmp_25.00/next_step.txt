@@ -1,0 +1,203 @@
+================================================================================
+NEXT_STEP.TXT - Analysis & Recommendations for PAL Assembly Game Editor
+================================================================================
+Date: 2026-03-09
+Context: Post-FuzzPet Success, Pre-PLAYR/RMMP Development
+
+================================================================================
+1. MY READ ON THE SITUATION
+================================================================================
+
+You've just proven the <module> tag system works with FuzzPet. The pipeline is:
+- Parser launches module via <module> tag
+- Module runs side-by-side with parser
+- Both communicate via file-based IPC (history.txt, view.txt, frame_changed.txt)
+- INTERACT mode injects keys from parser to module
+- Z-levels, entity selection, method execution all working
+
+Now you're asking: "How do we evolve this into a PAL-driven game editor?"
+
+The progress docs outline an ambitious vision:
+- PLAYR: A "Prisc Runner" for playing games
+- RMMP: An editor for creating games
+- Both share the same engine (chtpm_player.c)
+- All game logic is in .asm (PAL) scripts, not hardcoded C
+
+================================================================================
+2. WHAT I THINK ABOUT THE PLAN
+================================================================================
+
+THE GOOD:
+1. **Engine/Content Separation** - This is the right move. FuzzPet proved the
+   pipeline works, but the logic is still hardcoded in fuzzpet_manager.c.
+   Moving to PAL scripts means agents can add features without touching C code.
+
+2. **<module> Tag is the Key** - We just proved modules can launch and run
+   independently. This is exactly what PLAYR needs - each project can have
+   its own module script.
+
+3. **File-Based IPC is Proven** - history.txt, view.txt, frame_changed.txt all
+   work. No need to reinvent this wheel.
+
+THE RISKY:
+1. **chtpm_player.c Duplication** - The docs suggest creating a NEW runner
+   separate from chtpm_parser.c. But we JUST got parser+module working.
+   Why duplicate the parser logic?
+
+2. **"Bridge Module" Complexity** - rmmp_mechs.txt describes a "chtpm_player_pal.c"
+   that bridges between CHTM and Prisc VM. This is essentially what
+   fuzzpet_manager.c already does!
+
+3. **Over-Engineering** - Some docs suggest recursive CHTPM, child ops,
+   hierarchical stacks. This is getting complex fast.
+
+================================================================================
+3. MY RECOMMENDATION: THE "KISS" PATH
+================================================================================
+
+DON'T create chtpm_player.c. Instead, EXTEND what we have:
+
+CURRENT ARCHITECTURE (Working):
+    os.chtpm → chtpm_parser.c → <module> → fuzzpet_manager.c
+
+NEW ARCHITECTURE (Recommended):
+    os.chtpm → chtpm_parser.c → <module> → playrm_module.c → prisc+x → game.asm
+
+The "playrm_module.c" is just a THIN BRIDGE:
+- Reads keys from parser (via history.txt)
+- Passes keys to prisc+x VM
+- Prisc runs game.asm which calls Ops
+- Ops update piece state
+- Module writes view.txt
+- Parser composes frame
+
+This is EXACTLY what fuzzpet_manager.c does, but instead of hardcoded
+switch-case logic, it dispatches to Prisc scripts.
+
+================================================================================
+4. WHY THIS IS MORE COMPLIANT
+================================================================================
+
+1. **TPM Compliant** - Each project is a Piece with its own DNA (.pdl),
+   Mirror (state.txt), and Plugins (.asm scripts).
+
+2. **PMO Compliant** - Clear hierarchy:
+   - PIECE: The project folder
+   - MODULE: playrm_module.c + prisc+x
+   - OS: chtpm_parser.c (unchanged)
+
+3. **KISS Compliant** - We're not reinventing the parser. We're just
+   swapping the module's brain from "C switch-case" to "Prisc VM".
+
+4. **Agent-Safe** - Future agents add game mechanics by writing .asm files,
+   not by modifying C code. This is the whole point of PAL.
+
+================================================================================
+5. CONCRETE NEXT STEPS (In Order)
+================================================================================
+
+STEP 1: Create playrm_module.c (The Thin Bridge)
+- Copy fuzzpet_manager.c as starting point
+- Remove hardcoded method handling
+- Add prisc+x integration:
+  - On key press: prisc+x run_script pieces/scripts/on_key.asm
+  - Script decides what to do based on key code
+- Keep all the file IPC (history.txt, view.txt, etc.)
+
+STEP 2: Create First PAL Scripts
+- pieces/scripts/boot.asm - Initialize game state
+- pieces/scripts/on_key.asm - Handle input
+- pieces/scripts/move.asm - Movement logic
+- pieces/scripts/interact.asm - Entity interaction
+
+STEP 3: Create Project Template
+- projects/template/config.pdl - Project metadata
+- projects/template/maps/map_001_z0.txt - Ground floor
+- projects/template/maps/map_001_z1.txt - Upper floor
+- projects/template/pieces/player.pdl - Player piece
+- projects/template/pieces/chest_01.pdl - Example interactable
+
+STEP 4: Test Basic Movement
+- Launch via <module> tag from os.chtpm
+- Press w/a/s/d → Prisc runs move.asm → player pos updates
+- View updates via existing pipeline
+
+STEP 5: Add Entity Interaction
+- Walk into chest_01 → Prisc runs interact.asm
+- Script calls "open_chest" Op
+- Op modifies chest state, shows message
+
+STEP 6: Build Editor Tools
+- Same playrm_module.c, different .asm scripts
+- "Paint" tool: place_tile.asm writes to map.txt
+- "Picker" tool: select_piece.asm reads piece at cursor
+- Editor is just a different "game mode"
+
+================================================================================
+6. WHAT TO AVOID
+================================================================================
+
+1. **Don't Duplicate the Parser** - chtpm_parser.c works. Use it.
+
+2. **Don't Hardcode Game Logic** - If you're writing switch-case for
+   game mechanics in C, you're doing it wrong. That's what PAL is for.
+
+3. **Don't Skip Testing** - Test each Op individually before integrating.
+   The FuzzPet pipeline had bugs because we didn't test incrementally.
+
+4. **Don't Forget Signaling** - Every state change must hit frame_changed.txt.
+   Silent updates = frozen UI.
+
+5. **Don't Over-Engineer** - Start with movement and interaction.
+   Add recursive CHTPM, dialogue trees, etc. LATER.
+
+================================================================================
+7. THE "PAL ASSEMBLY" VISION
+================================================================================
+
+The end goal is that a complete RPG looks like this:
+
+    projects/my_rpg/
+    ├── config.pdl           # Game metadata
+    ├── boot.asm             # Entry point
+    ├── maps/
+    │   ├── map_001_z0.txt   # Terrain
+    │   └── map_001_z1.txt
+    ├── pieces/
+    │   ├── player.pdl       # Player definition
+    │   ├── chest_01.pdl     # Chest with on_interact script
+    │   └── zombie_01.pdl    # Zombie with on_tick script
+    └── scripts/
+        ├── move.asm         # Movement logic
+        ├── open_chest.asm   # Chest interaction
+        └── zombie_chase.asm # AI logic
+
+And the Engine (playrm_module.c + prisc+x) just runs it.
+
+No C code changes needed to add new mechanics.
+
+================================================================================
+8. MY VERDICT
+================================================================================
+
+The plan in the progress docs is SOUND but risks over-engineering.
+
+My recommendation:
+1. Keep chtpm_parser.c as the universal runner
+2. Create playrm_module.c as a thin Prisc bridge
+3. Move ALL game logic to .asm scripts
+4. Test incrementally (movement → interaction → editor tools)
+5. Don't duplicate working code
+
+This gives you:
+- TPM compliance (file-based everything)
+- PMO hierarchy (Piece → Module → OS)
+- KISS (reuse working parser, swap module brain)
+- Agent safety (edit .asm, not .c)
+
+The FuzzPet pipeline PROVED this works. Now we just need to
+generalize it from "Pet Simulator" to "RPG Engine."
+
+================================================================================
+MANTRA: "The Engine is the Console. The Project is the Cartridge."
+================================================================================

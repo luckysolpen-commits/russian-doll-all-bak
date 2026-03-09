@@ -1,0 +1,119 @@
+[2026-03-09 13:30:20] FrameRendered: at 2026-03-09 13:30:20 | Source: renderer
+[2026-03-09 13:30:21] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 13:30:22] FrameRendered: at 2026-03-09 13:30:22 | Source: renderer
+[2026-03-09 13:30:23] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 13:30:23] FrameRendered: at 2026-03-09 13:30:23 | Source: renderer
+[2026-03-09 13:30:23] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 13:30:23] FrameRendered: at 2026-03-09 13:30:23 | Source: renderer
+[2026-03-09 13:30:23] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 13:30:23] FrameRendered: at 2026-03-09 13:30:23 | Source: renderer
+[2026-03-09 13:30:24] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 13:30:24] FrameRendered: at 2026-03-09 13:30:24 | Source: renderer
+[2026-03-09 13:30:24] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 13:30:24] FrameRendered: at 2026-03-09 13:30:24 | Source: renderer
+[2026-03-09 13:30:25] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 13:30:25] FrameRendered: at 2026-03-09 13:30:25 | Source: renderer
+[2026-03-09 13:30:25] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 13:30:25] FrameRendered: at 2026-03-09 13:30:25 | Source: renderer
+[2026-03-09 13:30:26] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-09 13:30:26] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] FrameRendered: at 2026-03-09 13:30:26 | Source: renderer
+[2026-03-09 13:30:26] StateChange: selector pos_y 4 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] StateChange: zombie_01 pos_x 14 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] StateChange: zombie_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] FrameRendered: at 2026-03-09 13:30:26 | Source: renderer
+[2026-03-09 13:30:26] FrameRendered: at 2026-03-09 13:30:26 | Source: renderer
+[2026-03-09 13:30:26] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-09 13:30:26] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] FrameRendered: at 2026-03-09 13:30:26 | Source: renderer
+[2026-03-09 13:30:26] StateChange: selector pos_y 3 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] StateChange: zombie_01 pos_x 13 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] StateChange: zombie_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] FrameRendered: at 2026-03-09 13:30:26 | Source: renderer
+[2026-03-09 13:30:26] FrameRendered: at 2026-03-09 13:30:26 | Source: renderer
+[2026-03-09 13:30:26] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-09 13:30:26] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] FrameRendered: at 2026-03-09 13:30:26 | Source: renderer
+[2026-03-09 13:30:26] StateChange: selector pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] StateChange: zombie_01 pos_x 12 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] StateChange: zombie_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:26] FrameRendered: at 2026-03-09 13:30:26 | Source: renderer
+[2026-03-09 13:30:26] FrameRendered: at 2026-03-09 13:30:26 | Source: renderer
+[2026-03-09 13:30:27] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] StateChange: pet_01 pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: pet_01 pos_y 3 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: selector pos_y 3 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] StateChange: zombie_01 pos_x 11 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: zombie_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 13:30:27] StateChange: pet_01 pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: pet_01 pos_y 4 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: selector pos_y 4 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: zombie_01 pos_x 10 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: zombie_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] StateChange: pet_01 pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: pet_01 pos_y 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: selector pos_y 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: zombie_01 pos_x 9 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] StateChange: zombie_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:27] FrameRendered: at 2026-03-09 13:30:27 | Source: renderer
+[2026-03-09 13:30:35] InputReceived: key_code=120 | Source: keyboard_input
+[2026-03-09 13:30:35] FrameRendered: at 2026-03-09 13:30:35 | Source: renderer
+[2026-03-09 13:30:35] StateChange: pet_01 pos_z 1 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:35] StateChange: selector pos_z 1 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:35] FrameRendered: at 2026-03-09 13:30:35 | Source: renderer
+[2026-03-09 13:30:35] FrameRendered: at 2026-03-09 13:30:35 | Source: renderer
+[2026-03-09 13:30:35] InputReceived: key_code=122 | Source: keyboard_input
+[2026-03-09 13:30:35] FrameRendered: at 2026-03-09 13:30:35 | Source: renderer
+[2026-03-09 13:30:35] StateChange: pet_01 pos_z 0 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:35] StateChange: selector pos_z 0 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:35] FrameRendered: at 2026-03-09 13:30:35 | Source: renderer
+[2026-03-09 13:30:36] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 13:30:36] FrameRendered: at 2026-03-09 13:30:36 | Source: renderer
+[2026-03-09 13:30:36] StateChange: pet_01 pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:36] StateChange: pet_01 pos_y 6 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:36] StateChange: selector pos_x 5 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:36] StateChange: selector pos_y 6 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:36] StateChange: zombie_01 pos_x 8 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:36] FrameRendered: at 2026-03-09 13:30:36 | Source: renderer
+[2026-03-09 13:30:36] StateChange: zombie_01 pos_y 2 | Trigger: piece_manager_set_state
+[2026-03-09 13:30:36] FrameRendered: at 2026-03-09 13:30:36 | Source: renderer
+[2026-03-09 13:30:38] InputReceived: key_code=113 | Source: keyboard_input
+[2026-03-09 13:30:38] FrameRendered: at 2026-03-09 13:30:38 | Source: renderer
+[2026-03-09 13:30:38] FrameRendered: at 2026-03-09 13:30:38 | Source: renderer
+[2026-03-09 13:30:39] InputReceived: key_code=49 | Source: keyboard_input
+[2026-03-09 13:30:39] FrameRendered: at 2026-03-09 13:30:39 | Source: renderer
+[2026-03-09 13:30:39] FrameRendered: at 2026-03-09 13:30:39 | Source: renderer
+[2026-03-09 13:30:39] InputReceived: key_code=50 | Source: keyboard_input
+[2026-03-09 13:30:39] FrameRendered: at 2026-03-09 13:30:39 | Source: renderer
+[2026-03-09 13:30:39] FrameRendered: at 2026-03-09 13:30:39 | Source: renderer
+[2026-03-09 13:30:39] InputReceived: key_code=51 | Source: keyboard_input
+[2026-03-09 13:30:39] FrameRendered: at 2026-03-09 13:30:39 | Source: renderer
+[2026-03-09 13:30:39] FrameRendered: at 2026-03-09 13:30:39 | Source: renderer
+[2026-03-09 13:30:40] InputReceived: key_code=52 | Source: keyboard_input
+[2026-03-09 13:30:40] FrameRendered: at 2026-03-09 13:30:40 | Source: renderer
+[2026-03-09 13:30:40] FrameRendered: at 2026-03-09 13:30:40 | Source: renderer
+[2026-03-09 13:30:40] InputReceived: key_code=24 | Source: keyboard_input
+[2026-03-09 13:30:41] FrameRendered: at 2026-03-09 13:30:41 | Source: renderer
+[2026-03-09 13:30:41] FrameRendered: at 2026-03-09 13:30:41 | Source: renderer
+[2026-03-09 13:30:41] InputReceived: key_code=24 | Source: keyboard_input
+[2026-03-09 13:30:41] FrameRendered: at 2026-03-09 13:30:41 | Source: renderer
+[2026-03-09 13:30:41] FrameRendered: at 2026-03-09 13:30:41 | Source: renderer
+[2026-03-09 13:30:41] InputReceived: key_code=24 | Source: keyboard_input
+[2026-03-09 13:30:41] FrameRendered: at 2026-03-09 13:30:41 | Source: renderer
+[2026-03-09 13:30:41] FrameRendered: at 2026-03-09 13:30:41 | Source: renderer

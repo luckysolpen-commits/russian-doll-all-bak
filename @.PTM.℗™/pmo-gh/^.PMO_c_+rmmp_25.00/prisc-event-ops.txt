@@ -1,0 +1,393 @@
+================================================================================
+PRISC-EVENT-OPS.TXT - Execution Model Clarified
+================================================================================
+Date: 2026-03-09
+Status: AUTHORITATIVE EXECUTION SPECIFICATION
+
+================================================================================
+1. THE KEY INSIGHT: TWO MODES OF EXECUTION
+================================================================================
+
+I understand now. There are TWO different execution contexts:
+
+### MODE 1: REALTIME INPUT (FuzzPet Style - Direct C)
+    keyboard → parser → module → Op (+x binary) → state.txt
+
+This is for REALTIME gameplay:
+- Player movement (w/a/s/d)
+- Z-level changes (x/z)
+- Quick interactions (ENTER on chest)
+- Editor painting (SPACE to place tile)
+
+**Why Direct C?** Fast, responsive, no VM overhead. This is what FuzzPet
+does and it WORKS.
+
+### MODE 2: EVENT SCRIPTS (Prisc Style - User Scripting)
+    trigger → module → prisc+x → event.asm → Ops (+x) → state.txt
+
+This is for USER SCRIPTING:
+- NPC dialogue trees
+- Cutscenes
+- Quest logic
+- Custom event sequences
+- "When player enters zone, do X, then Y, then Z"
+
+**Why Prisc?** Users can create scripts via no-code event editor (drag-drop
+Ops). No C compilation needed. Agent-safe.
+
+================================================================================
+2. THE EXECUTION MODEL (Nitty Gritty)
+================================================================================
+
+### REALTIME INPUT (Direct C Call)
+
+When player presses 'w':
+
+    1. keyboard_input.c writes "KEY_PRESSED: 119" to keyboard/history.txt
+    2. chtpm_parser.c reads key, sees INTERACT mode active
+    3. Parser injects "119" to playrm/history.txt
+    4. playrm_module.c polls history.txt, sees key 119
+    5. Module calls Op DIRECTLY:
+       system("./pieces/apps/playrm/ops/+x/move_player.+x player up");
+    6. move_player.+x:
+       - Reads player/state.txt for pos_x, pos_y
+       - Calculates new position
+       - Updates player/state.txt
+       - Hits frame_changed.txt
+    7. Parser detects frame change, re-renders
+
+**Total latency:** ~16ms (one frame)
+**No Prisc involved.**
+
+### EVENT SCRIPT (Prisc Execution)
+
+When player steps on trigger tile:
+
+    1. move_player.+x detects player entered trigger zone
+    2. Op reads trigger.pdl, finds on_enter: "scripts/chest_reveal.asm"
+    3. Module calls Prisc:
+       system("./prisc+x projects/template/scripts/chest_reveal.asm");
+    4. Prisc executes script:
+       start:
+           addi x1, x0, 1        # x1 = menu_id
+           layout_op x2, x1      # show "Choose a prize!" menu
+           beq x2, x0, end       # 0 = cancel
+           addi x3, x2, -1
+           beq x3, x0, prize_gold
+           addi x3, x2, -2
+           beq x3, x0, prize_item
+           j end
+       prize_gold:
+           console_print "You found 100 gold!"
+           addi x4, x0, 100
+           # call add_gold Op
+           j end
+       prize_item:
+           console_print "You found a potion!"
+           # call add_item Op
+           j end
+       end:
+           halt
+    5. Each Op in script updates state
+    6. Script completes, returns to game
+
+**Total latency:** ~50-100ms (script execution)
+**Prisc IS involved.**
+
+================================================================================
+3. OPS: THE BRIDGE BETWEEN BOTH MODES
+================================================================================
+
+Ops are +x binaries that work in BOTH contexts:
+
+### Called from C (Realtime):
+    // In playrm_module.c
+    system("./+x/move_player.+x player up");
+
+### Called from Prisc (Event Script):
+    ; In event.asm
+    move_player player up
+
+The Op doesn't know or care how it was called. It just:
+1. Reads arguments (piece_id, direction, etc.)
+2. Updates state.txt
+3. Hits frame_changed.txt
+4. Returns success/failure
+
+**This is the key insight:** Ops are the universal interface.
+- C calls Ops for realtime (fast path)
+- Prisc calls Ops for events (user scripting)
+
+================================================================================
+4. THE NOCODE EVENT EDITOR
+================================================================================
+
+Users don't write .asm files directly. They use an Event Editor UI:
+
+    ┌──────────────────────────────────────────────────────────┐
+    │  Event Editor: chest_01/on_interact.asm                  │
+    ├──────────────────────────────────────────────────────────┤
+    │  [Add Command ▼]                                         │
+    │                                                          │
+    │  1. [Show Message] "You found a treasure chest!"         │
+    │  2. [Add Item] gold, amount: 100                         │
+    │  3. [Play Sound] "chest_open.wav"                        │
+    │  4. [Set Flag] chest_01_opened = true                    │
+    │                                                          │
+    │  [Move Up] [Move Down] [Delete]                          │
+    │                                                          │
+    │  [Save] [Cancel] [Test Script]                           │
+    └──────────────────────────────────────────────────────────┘
+
+When user clicks "Save":
+1. Editor serializes commands to .asm format
+2. Writes to projects/template/pieces/chest_01/on_interact.asm
+3. No C compilation needed!
+
+**This is why Prisc exists:** Users can create complex event logic
+without touching C code.
+
+================================================================================
+5. FILE STRUCTURE (Complete Picture)
+================================================================================
+
+    ^^.PMO_c_+rmmp_23.01/
+    ├── pieces/apps/playrm/
+    │   ├── playrm_module.c          # The Bridge
+    │   │                            # Realtime: calls Ops directly
+    │   │                            # Events: calls prisc+x
+    │   └── ops/+x/                  # Reusable Ops
+    │       ├── move_player.+x       # Works in both modes
+    │       ├── layout_op.+x         # Works in both modes
+    │       └── console_print.+x     # Works in both modes
+    │
+    ├── #.prisc-xpanse+4]SHIP/
+    │   ├── prisc+x                  # VM executable
+    │   ├── prisc+x.c                # VM source
+    │   └── default_op.txt           # Op definitions for Prisc
+    │
+    └── projects/template/
+        ├── pieces/
+        │   ├── player.pdl           # DNA with METHOD entries
+        │   │   METHOD: move → +x/move_player.+x
+        │   │   # Realtime Op (called from C)
+        │   └── chest_01.pdl         # DNA with event scripts
+        │       on_interact: scripts/chest_01/on_interact.asm
+        │       # Event script (called from Prisc)
+        └── scripts/
+            └── chest_01/
+                └── on_interact.asm  # Generated by Event Editor
+                                     # Calls Ops via Prisc
+
+================================================================================
+6. EXECUTION FLOW DIAGRAM (Complete)
+================================================================================
+
+                         ┌─────────────────┐
+                         │  KEYBOARD INPUT │
+                         └────────┬────────┘
+                                  │
+                         ┌────────▼────────┐
+                         │  chtpm_parser   │
+                         │  (injects key)  │
+                         └────────┬────────┘
+                                  │
+                         ┌────────▼────────┐
+                         │ playrm_module.c │
+                         │   (The Bridge)  │
+                         └────────┬────────┘
+                                  │
+              ┌───────────────────┴───────────────────┐
+              │                                       │
+    ┌─────────▼─────────┐                   ┌────────▼────────┐
+    │   REALTIME MODE   │                   │   EVENT MODE    │
+    │   (Direct C Call) │                   │ (Prisc Script)  │
+    └─────────┬─────────┘                   └────────┬────────┘
+              │                                       │
+              │ system("./+x/op.+x ...")              │ ./prisc+x script.asm
+              │                                       │
+              ▼                                       ▼
+    ┌─────────────────┐                     ┌─────────────────┐
+    │  Op (+x binary) │                     │  prisc+x (VM)   │
+    │  move_player    │                     │  executes .asm  │
+    └────────┬────────┘                     └────────┬────────┘
+             │                                       │
+             │ (Op called directly)                  │ (Op called from script)
+             │                                       │
+             └──────────────┬────────────────────────┘
+                            │
+                   ┌────────▼────────┐
+                   │  state.txt      │
+                   │  (piece state)  │
+                   └────────┬────────┘
+                            │
+                   ┌────────▼────────┐
+                   │ frame_changed   │
+                   │ (trigger render)│
+                   └─────────────────┘
+
+================================================================================
+7. WHY BOTH MODES ARE NEEDED
+================================================================================
+
+### Realtime Mode (Direct C → Op)
+- **Fast:** No VM overhead, direct system() call
+- **Responsive:** ~16ms latency (one frame)
+- **For:** Movement, quick interactions, editor tools
+- **Example:** Player presses 'w' → moves immediately
+
+### Event Mode (Prisc → Op)
+- **Flexible:** Users can create custom logic
+- **Agent-Safe:** No C compilation needed
+- **For:** Dialogue, cutscenes, quest logic, triggers
+- **Example:** Player opens chest → shows menu → gives reward → plays sound
+
+**You need BOTH:**
+- Realtime for responsive gameplay
+- Events for user scripting
+
+================================================================================
+8. PRISC INTEGRATION POINTS
+================================================================================
+
+Prisc is called from playrm_module.c in these situations:
+
+### 1. Entity Interaction (on_interact)
+    // In playrm_module.c
+    if (key == ENTER && entity_at_cursor) {
+        char *script = get_script_from_pdl(entity_id, "on_interact");
+        if (script) {
+            sprintf(cmd, "./prisc+x %s", script);
+            system(cmd);
+        }
+    }
+
+### 2. Zone Triggers (on_enter)
+    // In move_player.+x Op
+    if (new_tile_is_trigger) {
+        char *script = get_trigger_script(tile_x, tile_y);
+        if (script) {
+            sprintf(cmd, "./prisc+x %s", script);
+            system(cmd);
+        }
+    }
+
+### 3. Background AI (on_tick)
+    // In playrm_module.c main loop
+    if (clock_tick) {
+        for each entity with on_tick script:
+            sprintf(cmd, "./prisc+x %s", script);
+            system(cmd);
+    }
+
+### 4. Cutscenes (on_event)
+    // Anywhere in game logic
+    play_cutscene("intro_scene.asm");
+
+================================================================================
+10. THE DEMO PROJECT: END-TO-END VERIFICATION
+================================================================================
+
+We are building a DEMO PROJECT that proves the entire pipeline works:
+
+    LOAD → demo_1 → TITLE SCREEN → GAME → WIN/LOSE
+
+### Demo Flow:
+
+    1. User launches PLAYR
+    2. Project loader shows: "demo_1"
+    3. User selects demo_1
+    4. title_screen.asm runs (Prisc script):
+       - Shows ASCII art title
+       - Menu: "New Game" / "Load Game" / "Exit"
+       - User selects "New Game"
+    5. game_init.asm runs:
+       - Sets player pos_x=2, pos_y=2
+       - Sets flags: quest_started=false
+    6. Gameplay begins (Realtime mode):
+       - Player moves with w/a/s/d (Direct C → Op)
+       - Player changes Z-level with x/z (Direct C → Op)
+    7. Player encounters NPC:
+       - Presses ENTER
+       - npc_greeting.asm runs (Prisc script):
+         * Shows dialogue tree
+         * Gives quest: "Find the treasure!"
+         * Sets flag: quest_started=true
+    8. Player explores, finds treasure chest:
+       - Presses ENTER
+       - chest_open.asm runs (Prisc script):
+         * Shows "Choose your prize!" menu
+         * Gives reward (gold or item)
+         * Plays sound
+    9. Player reaches goal:
+       - win_condition.asm runs:
+         * Shows victory message
+         * Returns to title screen
+
+### What This Proves:
+
+[ ] Realtime movement works (Direct C → Op)
+[ ] Event scripts work (Prisc → Op)
+[ ] Ops are reusable (same Op called from C and Prisc)
+[ ] State persists (flags, position, inventory)
+[ ] Title screen → Game → Win → Title loop works
+[ ] Event Editor can generate scripts (no C needed)
+
+### Ops Required for Demo:
+
+**Realtime (Direct C):**
+- move_player.+x      # w/a/s/d movement
+- move_z.+x           # x/z floor changes
+- render_map.+x       # Compose view.txt
+
+**Event Scripts (Prisc):**
+- console_print.+x    # Show message
+- layout_op.+x        # Show menu
+- add_gold.+x         # Add gold to inventory
+- add_item.+x         # Add item to inventory
+- set_flag.+x         # Set quest flag
+- play_sound.+x       # Play sound effect
+- teleport_player.+x  # Move player to position
+
+### Script Files for Demo:
+
+    projects/demo_1/
+    ├── scripts/
+    │   ├── title_screen.asm      # Title menu
+    │   ├── game_init.asm         # Initialize game state
+    │   ├── npc_greeting.asm      # NPC dialogue tree
+    │   ├── chest_open.asm        # Treasure choice menu
+    │   └── win_condition.asm     # Victory sequence
+    └── pieces/
+        ├── player.pdl            # Player DNA
+        ├── npc_01.pdl            # NPC with on_interact script
+        └── chest_01.pdl          # Chest with on_interact script
+
+### Success Criteria:
+
+The demo is COMPLETE when:
+1. User can load demo_1 from project loader
+2. Title screen displays with menu
+3. "New Game" starts the game
+4. Player can move (w/a/s/d) and change floors (x/z)
+5. NPC interaction shows dialogue (Prisc script)
+6. Chest interaction shows choice menu (Prisc script)
+7. Reaching goal shows victory and returns to title
+8. ALL state persists (position, flags, inventory)
+9. Event Editor can modify npc_greeting.asm (no C changes)
+
+**This is the foundation.** Once this works, we can build:
+- Full RPG with quests, combat, inventory
+- Editor that generates scripts via drag-drop
+- Multiple projects using same Ops library
+
+================================================================================
+11. THE MANTRA
+================================================================================
+
+"Realtime for reflexes. Prisc for stories.
+Ops are the bridge between both.
+The Demo proves the pipeline.
+The Files are the Truth."
+
+================================================================================

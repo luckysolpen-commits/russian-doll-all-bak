@@ -1,0 +1,398 @@
+================================================================================
+?.OPS_PLAN.TXT - Reusable Ops Implementation Blueprint
+================================================================================
+Date: 2026-03-09
+Status: AUTHORITATIVE IMPLEMENTATION PLAN
+Architecture: TPM + PMO + Ops (Reusable +x Binaries)
+
+================================================================================
+1. EXECUTIVE SUMMARY: THE VISION
+================================================================================
+
+We are transitioning from "Hardcoded C" (FuzzPet) to "Reusable Ops" (PLAYR/RMMP).
+
+CURRENT (FuzzPet):
+    keyboard → parser → fuzzpet_manager.c → trait.c (+x binary) → state.txt
+
+NEW (PLAYR/RMMP):
+    keyboard → parser → playrm_module.c → reusable_op.c (+x binary) → state.txt
+
+The key insight: FUZZPET TRAITS ALREADY WORK. We just need to:
+1. Generalize them (work for any piece_id, not just "selector")
+2. Make them discoverable (piece.pdl lists available Ops)
+3. Build a library of reusable Ops (movement, interaction, editor tools)
+
+NO PRISC VM LAYER. Direct Op calls like FuzzPet does. KISS.
+
+================================================================================
+2. WHAT WE HAVE (FuzzPet Traits as Reference)
+================================================================================
+
+LOCATION: ^^.PMO_c_+rmmp_23.01/pieces/apps/fuzzpet_app/traits/
+
+EXISTING TRAITS (Already Working):
+├── move_entity.c          # Handles w/a/s/d movement
+├── storage_trait.c        # Handles scan/collect/place/inventory
+├── zombie_ai.c            # Handles enemy chase behavior
+└── +x/                    # Compiled binaries
+
+HOW THEY WORK:
+    ./move_entity.+x selector up      # Moves selector up
+    ./storage_trait.+x selector scan  # Scans for entities
+
+THESE ARE ALREADY OPS! We just need to:
+1. Move to shared location (pieces/apps/playrm/ops/)
+2. Make them generic (accept any piece_id)
+3. Add more Ops (render_map, place_tile, etc.)
+
+================================================================================
+3. ARCHITECTURE: OPS-BASED PIPELINE
+================================================================================
+
+THE PIPELINE:
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    CHTPM_PARSER.C (The Theater)                 │
+│  - Parses .chtpm layouts                                        │
+│  - Handles navigation ([>] focus)                               │
+│  - Injects keys to module via history.txt                       │
+│  - Composes final frame from view.txt + ${vars}                 │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              │ history.txt (KEY:119 for 'w')
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                  PLAYRM_MODULE.C (The Bridge)                   │
+│  - Polls history.txt continuously                               │
+│  - Reads active_target_id from state.txt                        │
+│  - Looks up piece.pdl to find available methods                 │
+│  - Calls appropriate Op: +x/move_player.+x piece_id direction   │
+│  - Op updates piece state.txt                                   │
+│  - Writes view.txt for parser                                   │
+│  - Hits frame_changed.txt                                       │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              │ Op executes
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    REUSABLE OPS (The Muscles)                   │
+│  pieces/apps/playrm/ops/+x/                                     │
+│  ├── move_player.+x      # Generic movement (any piece)         │
+│  ├── move_z.+x           # Z-level changes (any piece)          │
+│  ├── interact.+x         # Entity interaction                   │
+│  ├── render_map.+x       # Compose view.txt from map + pieces   │
+│  ├── place_tile.+x       # Editor: write char to map.txt        │
+│  └── pick_tile.+x        # Editor: read char from map.txt       │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              │ Updates state
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    GAME PROJECT (The Data)                      │
+│  projects/TEMPLATE/                                             │
+│  ├── config.pdl           # Project metadata                    │
+│  ├── maps/map_001_z0.txt  # Terrain                             │
+│  └── pieces/              # Entity pieces with .pdl             │
+│      ├── player.pdl       # Player DNA with METHOD entries      │
+│      │   METHOD: move → +x/move_player.+x                      │
+│      │   METHOD: interact → +x/interact.+x                     │
+│      └── chest_01.pdl     # Chest with custom Ops               │
+│          METHOD: open → +x/open_chest.+x                       │
+└─────────────────────────────────────────────────────────────────┘
+
+================================================================================
+4. IMPLEMENTATION PHASES (In Order)
+================================================================================
+
+PHASE 1: EXTRACT FUZZPET TRAITS AS REUSABLE OPS (2 hours)
+----------------------------------------------------------
+KPI: move_entity.c works for any piece_id (not just "selector")
+
+Steps:
+1. Create pieces/apps/playrm/ops/ directory
+2. Copy move_entity.c → ops/move_player.c
+3. Generalize: accept piece_id as argument
+4. Compile to +x/move_player.+x
+5. Test: ./move_player.+x pet_01 up (works)
+
+Audit Check:
+[ ] Op accepts any piece_id argument
+[ ] Op reads piece state.txt for current pos_x/pos_y
+[ ] Op updates state.txt with new position
+[ ] Op hits frame_changed.txt after update
+[ ] Op compiles without warnings
+
+PHASE 2: CREATE PLAYRM_MODULE.C (The Bridge) (3 hours)
+----------------------------------------------------------
+KPI: Module calls Ops dynamically based on piece.pdl methods
+
+Steps:
+1. Copy fuzzpet_manager.c as starting point
+2. Remove hardcoded switch-case for methods
+3. Add PDL parser:
+   - Read piece.pdl for active_target_id
+   - Extract METHOD entries (e.g., "move → +x/move_player.+x")
+4. On key press:
+   - Look up method from PDL
+   - Call Op: system("./+x/move_player.+x %s %s", piece_id, direction)
+5. Keep existing file IPC (history.txt, view.txt, frame_changed.txt)
+
+Audit Check:
+[ ] Module compiles without warnings
+[ ] Module launches via <module> tag in main.chtpm
+[ ] Key press triggers Op execution
+[ ] PDL methods discovered dynamically
+[ ] frame_changed.txt hit after Op completes
+
+PHASE 3: CREATE PROJECT TEMPLATE (2 hours)
+----------------------------------------------------------
+KPI: Player moves, chest opens, all via Ops
+
+Steps:
+1. Create projects/template/config.pdl:
+   - Project metadata (name, version, spawn_point)
+2. Create projects/template/pieces/player.pdl:
+   - STATE: pos_x=5, pos_y=5, pos_z=0
+   - METHOD: move → +x/move_player.+x
+   - METHOD: interact → +x/interact.+x
+3. Create projects/template/pieces/chest_01.pdl:
+   - STATE: open=0, pos_x=3, pos_y=3
+   - METHOD: open → +x/open_chest.+x
+   - METHOD: examine → +x/examine_chest.+x
+4. Create projects/template/maps/map_001_z0.txt
+
+Audit Check:
+[ ] player.pdl has correct state/methods
+[ ] chest_01.pdl has correct state/methods
+[ ] Player moves with w/a/s/d
+[ ] ENTER on chest opens it
+[ ] State persists to state.txt files
+
+PHASE 4: Z-LEVEL SUPPORT (1-2 hours)
+----------------------------------------------------------
+KPI: x/z keys change floors, map updates
+
+Steps:
+1. Create +x/move_z.+x Op:
+   - Accepts piece_id, direction (up/down)
+   - Updates pos_z in state.txt
+2. Modify render_map.+x:
+   - Load map_{id}_z{N}.txt based on pos_z
+   - Filter entities by pos_z
+3. Wire x/z keys in playrm_module.c
+
+Audit Check:
+[ ] x key increments pos_z
+[ ] z key decrements pos_z
+[ ] Correct map file loads
+[ ] Only entities on current floor render
+[ ] UI shows current Z-level
+
+PHASE 5: EDITOR TOOLS (3 hours)
+----------------------------------------------------------
+KPI: Select tile, press SPACE, paint on map
+
+Steps:
+1. Create +x/place_tile.+x Op:
+   - Accepts x, y, tile_char
+   - Writes to projects/TEMPLATE/maps/map_001_z0.txt
+   - Hits frame_changed.txt
+2. Create +x/pick_tile.+x Op:
+   - Reads tile at x, y
+   - Sets selected_tile in editor state
+3. Create editor.chtpm layout:
+   - Map viewport (center)
+   - Tile palette (sidebar)
+   - Tool menu (bottom)
+4. Wire editor keys in playrm_module.c
+
+Audit Check:
+[ ] place_tile.+x writes to map.txt
+[ ] pick_tile.+x reads from map.txt
+[ ] Number keys select tile from palette
+[ ] SPACE places tile on map
+[ ] map.txt updates on disk immediately
+
+PHASE 6: OP LIBRARY EXPANSION (Ongoing)
+----------------------------------------------------------
+KPI: 20+ reusable Ops for RPG mechanics
+
+Planned Ops:
+- Movement: move_player, move_z, teleport, set_spawn
+- Interaction: interact, open_chest, talk_npc, use_item
+- Combat: attack, defend, cast_spell, take_damage
+- Editor: place_tile, pick_tile, place_piece, delete_piece
+- Rendering: render_map, render_minimap, render_status
+- System: save_game, load_game, show_message, play_sound
+
+Each Op is:
+- A +x binary (compiled from .c source)
+- Reusable (works for any piece with required state)
+- Documented (usage in op_library.txt)
+
+================================================================================
+5. KPI CHECKLIST (Testing & Auditing)
+================================================================================
+
+CODE QUALITY KPIs:
+[ ] All C files compile with -Wall -Wextra (no warnings)
+[ ] All Ops accept piece_id as first argument
+[ ] All Ops use build_path_malloc() for paths
+[ ] All Ops hit frame_changed.txt after state change
+[ ] All .pdl files validate (correct format)
+
+FUNCTIONAL KPIs:
+[ ] Player moves with w/a/s/d
+[ ] Player changes Z-level with x/z
+[ ] Entity interaction works (ENTER on chest)
+[ ] Menu navigation works (layout_op if used)
+[ ] Save/load persists state correctly
+[ ] Editor places tiles on map
+[ ] GL renderer shows emoji correctly
+
+PIPELINE KPIs:
+[ ] history.txt written by parser, read by module
+[ ] view.txt written by render_map Op, read by parser
+[ ] frame_changed.txt hit on every Op state change
+[ ] state.txt mirrors sync with .pdl DNA
+[ ] master_ledger.txt logs all Op executions
+
+AGENT-SAFETY KPIs:
+[ ] New mechanics can be added as new Ops (+x binaries)
+[ ] New entities can be added via .pdl files (no C changes)
+[ ] Ops are documented in op_library.txt
+[ ] Projects are isolated (projects/TEMPLATE/ is self-contained)
+[ ] Example .pdl files provided for reference
+
+================================================================================
+6. FILE STRUCTURE (Where Everything Goes)
+================================================================================
+
+CURRENT (Keep Working):
+    ^^.PMO_c_+rmmp_23.01/
+    ├── pieces/chtpm/plugins/chtpm_parser.c    # Universal runner
+    ├── pieces/display/plugins/+x/             # Renderers
+    └── pieces/system/clock_daemon/            # Background daemon
+
+NEW (Ops Integration):
+    ^^.PMO_c_+rmmp_23.01/
+    ├── pieces/apps/playrm/
+    │   ├── plugins/+x/playrm_module.+x        # The Bridge
+    │   ├── plugins/playrm_module.c            # Source
+    │   └── ops/                               # Reusable Ops
+    │       ├── +x/
+    │       │   ├── move_player.+x
+    │       │   ├── move_z.+x
+    │       │   ├── interact.+x
+    │       │   ├── render_map.+x
+    │       │   ├── place_tile.+x
+    │       │   └── pick_tile.+x
+    │       └── src/
+    │           ├── move_player.c
+    │           ├── move_z.c
+    │           └── ...
+    │
+    └── projects/template/                     # Default project
+        ├── config.pdl                         # Project metadata
+        ├── maps/
+        │   ├── map_001_z0.txt                 # Ground floor
+        │   └── map_001_z1.txt                 # Upper floor
+        └── pieces/
+            ├── player.pdl                     # Player DNA
+            │   METHOD: move → +x/move_player.+x
+            │   METHOD: interact → +x/interact.+x
+            └── chest_01.pdl                   # Example entity
+                METHOD: open → +x/open_chest.+x
+
+EXISTING (Reuse from FuzzPet):
+    ^^.PMO_c_+rmmp_23.01/pieces/apps/fuzzpet_app/traits/
+    ├── move_entity.c                          # → becomes move_player.c
+    ├── storage_trait.c                        # → becomes storage_ops.c
+    └── zombie_ai.c                            # → becomes ai_chase.c
+
+================================================================================
+7. OP SPECIFICATION TEMPLATE
+================================================================================
+
+Every Op follows this pattern:
+
+FILE: pieces/apps/playrm/ops/src/move_player.c
+
+    /*
+     * Op: move_player
+     * Usage: ./+x/move_player.+x <piece_id> <direction>
+     * Args:
+     *   piece_id  - The piece to move (e.g., "player", "chest_01")
+     *   direction - One of: up, down, left, right
+     * 
+     * Behavior:
+     *   1. Reads piece state.txt for pos_x, pos_y
+     *   2. Calculates new position based on direction
+     *   3. Checks collision (walls, other entities)
+     *   4. Updates state.txt with new pos_x, pos_y
+     *   5. Hits frame_changed.txt to trigger re-render
+     *   6. Logs to master_ledger.txt
+     */
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+    
+    #define MAX_PATH 4096
+    
+    char* build_path_malloc(const char* rel) {
+        // ... (from existing code)
+    }
+    
+    int main(int argc, char *argv[]) {
+        if (argc < 3) {
+            fprintf(stderr, "Usage: %s <piece_id> <direction>\n", argv[0]);
+            return 1;
+        }
+        
+        const char *piece_id = argv[1];
+        const char *direction = argv[2];
+        
+        // Read current position from state.txt
+        // Calculate new position
+        // Check collision
+        // Update state.txt
+        // Hit frame_changed.txt
+        // Log to master_ledger.txt
+        
+        return 0;
+    }
+
+================================================================================
+8. RISKS & MITIGATIONS
+================================================================================
+
+RISK 1: Ops become too coupled (need to know about specific pieces)
+MITIGATION: Ops only require standard state fields (pos_x, pos_y, pos_z).
+            Any piece with these fields can use movement Ops.
+
+RISK 2: Too many Ops, hard to find the right one
+MITIGATION: Organize by category (movement/, interaction/, editor/).
+            Maintain op_library.txt with index.
+
+RISK 3: Performance (spawning +x for every Op)
+MITIGATION: Ops are lightweight. If performance becomes issue,
+            batch multiple Ops into single execution.
+
+RISK 4: State desync (Op updates state.txt, module has stale cache)
+MITIGATION: Module always reads state.txt after Op completes.
+            No caching of piece state in module.
+
+RISK 5: Agent confusion (where do I add new mechanics?)
+MITIGATION: Document in op_library.txt. Provide template Op source.
+            Example: "To add combat, create attack.c following move_player.c pattern"
+
+================================================================================
+9. THE MANTRA
+================================================================================
+
+"The Engine is the Console. The Project is the Cartridge.
+The Ops are the Muscles. The Files are the Truth.
+Build on what works. Keep it simple, stupid."
+
+================================================================================

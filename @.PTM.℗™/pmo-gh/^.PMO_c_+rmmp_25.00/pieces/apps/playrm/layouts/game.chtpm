@@ -1,0 +1,13 @@
+<panel time_reactive="true">
+    <text label="╔══════════════ P I E C E M A R K   P L A Y E R ════════════╗" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="║  Project: demo_1                                          ║" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="║  GAME MAP:                                                ║" /><br/>
+    <text label="${game_map}" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║ [RESP]: ${last_response}                                    ║" /><br/>
+    <text label="║ [Z-LEVEL]: ${clock_turn}   | [ACTIVE]: selector   | [KEY]: ${last_key}       ║" /><br/>
+    <text label="╚═══════════════════════════════════════════════════════════╝" /><br/>
+</panel>

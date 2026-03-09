@@ -1,0 +1,186 @@
+================================================================================
+EDITOR_UI_SPEC.TXT - Editor Interface Specification
+================================================================================
+Date: 2026-03-09
+Status: AUTHORITATIVE UI SPECIFICATION
+
+================================================================================
+1. EDITOR LAYOUT (Correct Design)
+================================================================================
+
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │  ══════════ P I E C E M A R K   E D I T O R ══════════              │
+    │  [>] 1. [[MAP]] [ ] 2. [[PIECES]] [ ] 3. [[DB]] [ ] 4. [[EVENTS]]   │
+    ├──────────────────────────────────────────────────────────────────────┤
+    │  ####################             │  PALETTE:                        │
+    │  #  ...............T#             │  [1] # Wall                      │
+    │  #  ..@.........Z..T#             │  [2] . Floor                     │
+    │  #  ....R..........T#             │  [3] R Rock                      │
+    │  #  ....R..........T#             │  [4] T Tree                      │
+    │  #  ..X.R..?.......T#             │  [5] ? Mystery                   │
+    │  #  ....R..........T#             │                                  │
+    │  #  ................#             │  TOOL: [Paint]                   │
+    │  #                  #             │  POS: (5, 3, 0)                  │
+    │  ####################             │                                  │
+    ├──────────────────────────────────────────────────────────────────────┤
+    │ [RESP]: Tile placed.                                                  │
+    │ [Z-LEVEL]: 0   | [ACTIVE]: selector   | [KEY]: SPACE                 │
+    ├──────────────────────────────────────────────────────────────────────┤
+    │  [ ] 5. [Back to Menu]                                                │
+    └──────────────────────────────────────────────────────────────────────┘
+    
+    [1-4]: Switch Tab | [WASD]: Move | [SPACE]: Use Tool | [Q]: Quit
+
+================================================================================
+2. TABS (Four Editor Modes)
+================================================================================
+
+### TAB 1: MAP (Default)
+- Viewport shows terrain grid
+- Palette shows tile types
+- Tool: Paint, Pick, Fill, Rectangle
+- SPACE: Use current tool on cursor position
+
+### TAB 2: PIECES
+- List of all pieces in project
+- Select piece to edit properties
+- Add/Delete pieces
+- Set piece pos_x, pos_y, pos_z
+
+### TAB 3: DB (Database)
+- Items, actors, enemies, skills
+- Edit stats, descriptions, icons
+- Similar to RMMV Database
+
+### TAB 4: EVENTS
+- List of event scripts
+- Visual event editor (drag-drop Ops)
+- Edit .asm scripts without coding
+
+================================================================================
+3. KEY BINDINGS (Editor-Wide)
+================================================================================
+
+| Key | Action |
+|-----|--------|
+| 1-4 | Switch tab (MAP, PIECES, DB, EVENTS) |
+| WASD | Move cursor/selector |
+| SPACE | Use current tool / Confirm |
+| Q | Quit editor |
+| X | Move cursor UP one Z-level |
+| Z | Move cursor DOWN one Z-level |
+| S | Save project |
+| L | Load project |
+
+================================================================================
+4. EDITOR OPS (Reusable for Both Editor and Player)
+================================================================================
+
+The SAME Ops work in both contexts:
+
+### Editor Context:
+    ./place_tile.+x map_001 5 3 '#'    # Place wall at (5,3)
+    ./pick_tile.+x map_001 5 3         # Read tile at (5,3)
+
+### Player Context:
+    ./move_player.+x player up         # Move player up
+    ./interact.+x chest_01             # Open chest
+
+**This is the key:** Editor and Player share the same Op library.
+Editor just calls different Ops (place_tile vs move_player).
+
+================================================================================
+5. FILE STRUCTURE (Editor + Player Separate)
+================================================================================
+
+    ^^.PMO_c_+rmmp_23.01/
+    ├── pieces/apps/
+    │   ├── editor/                    # Editor Application
+    │   │   ├── editor_module.c        # Main editor logic
+    │   │   ├── layouts/
+    │   │   │   └── editor.chtpm       # Editor UI layout
+    │   │   └── ops/                   # Editor-specific Ops
+    │   │       ├── place_tile.c
+    │   │       ├── pick_tile.c
+    │   │       └── fill_area.c
+    │   │
+    │   └── playrm/                    # Player Application
+    │       ├── playrm_module.c        # Main player logic
+    │       ├── layouts/
+    │       │   ├── title.chtpm        # Title screen
+    │       │   └── game.chtpm         # Game UI layout
+    │       └── ops/                   # Player-specific Ops
+    │           ├── move_player.c
+    │           ├── interact.c
+    │           └── render_map.c
+    │
+    └── projects/
+        └── demo_1/                    # Demo Project
+            ├── maps/
+            ├── pieces/
+            └── scripts/               # Prisc event scripts
+
+================================================================================
+6. IMPLEMENTATION ORDER
+================================================================================
+
+### PHASE 1: Editor Module (3 hours)
+1. Create editor_module.c (copy from fuzzpet_manager.c)
+2. Create editor.chtpm layout (matches spec above)
+3. Wire tab switching (1-4 keys)
+4. Wire cursor movement (WASD)
+
+### PHASE 2: Editor Ops (2 hours)
+1. Create place_tile.+x Op
+2. Create pick_tile.+x Op
+3. Wire SPACE to use current tool
+4. Test: place wall, pick tile, works
+
+### PHASE 3: Player Module (3 hours)
+1. Create playrm_module.c (copy from fuzzpet_manager.c)
+2. Create title.chtpm layout
+3. Create game.chtpm layout
+4. Wire movement (WASD), interaction (ENTER)
+
+### PHASE 4: Demo Project (2 hours)
+1. Create projects/demo_1/
+2. Create title_screen.asm (Prisc script)
+3. Create test map with NPC and chest
+4. Test: Load → Title → Game → Interact → Win
+
+================================================================================
+7. SUCCESS CRITERIA
+================================================================================
+
+Editor is DONE when:
+[ ] Editor launches independently (not via PLAYR)
+[ ] Tab switching works (1-4 keys)
+[ ] Cursor moves with WASD
+[ ] SPACE places tile on map
+[ ] map.txt updates on disk
+[ ] Save/Load project works
+
+Player is DONE when:
+[ ] Player launches independently
+[ ] Title screen displays
+[ ] "New Game" starts gameplay
+[ ] Player moves with WASD
+[ ] ENTER interacts with entities
+[ ] Win condition returns to title
+
+Demo is DONE when:
+[ ] Load demo_1 from project loader
+[ ] Title → Game → Interact → Win → Title loop works
+[ ] Event scripts run via Prisc
+[ ] Realtime movement works via direct Op calls
+
+================================================================================
+8. THE MANTRA
+================================================================================
+
+"Editor and Player are SEPARATE.
+They share the same Ops.
+The Demo proves the pipeline.
+Keep it simple, stupid."
+
+================================================================================

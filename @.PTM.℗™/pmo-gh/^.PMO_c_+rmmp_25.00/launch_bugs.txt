@@ -1,0 +1,153 @@
+================================================================================
+LAUNCH_BUGS.TXT - Editor/Player Launch Investigation
+================================================================================
+Date: 2026-03-09
+Status: CRITICAL - Modules Not Launching
+
+================================================================================
+1. THE BUG
+================================================================================
+
+**What User Sees:**
+- Main Menu → Project Manager → Select "RMMP Editor" or "PLAYR Player"
+- Press ENTER on option
+- **NOTHING HAPPENS** - module doesn't launch, no error message
+
+**What SHOULD Happen:**
+- Press ENTER on "RMMP Editor"
+- editor_module.+x launches
+- Editor UI appears with cursor, palette, etc.
+
+================================================================================
+2. EXPECTED FLOW
+================================================================================
+
+1. User presses ENTER on button with onClick="LAUNCH:RMMP"
+2. chtpm_parser.c process_key() detects ENTER on button
+3. Calls send_command("LAUNCH:RMMP")
+4. send_command() calls handle_launch_command("LAUNCH:RMMP")
+5. handle_launch_command():
+   - Opens pieces/os/app_list.txt
+   - Finds line: "RMMP=pieces/apps/editor/plugins/+x/editor_module.+x"
+   - Calls launch_module("pieces/apps/editor/plugins/+x/editor_module.+x")
+6. launch_module():
+   - Forks process
+   - execv() the module
+   - Module starts polling history.txt
+
+================================================================================
+3. POTENTIAL ISSUES TO INVESTIGATE
+================================================================================
+
+### Issue A: onClick Not Being Triggered
+**Check:** Is ENTER on button actually calling send_command()?
+**Test:** Add debug logging to process_key() when button activated
+
+### Issue B: app_list.txt Not Being Read
+**Check:** Is the file path correct? Is it being opened?
+**Test:** Add debug output in handle_launch_command()
+**Possible bug:** path resolution - uses build_path_malloc() which needs project_root
+
+### Issue C: launch_module() Not Forking
+**Check:** Is launch_module() being called? Does fork() succeed?
+**Test:** Add debug output before/after fork
+**Possible bug:** Module path is wrong, execv() fails silently
+
+### Issue D: Module Crashes Immediately
+**Check:** Does module start then exit?
+**Test:** Run module directly: ./pieces/apps/editor/plugins/+x/editor_module.+x
+**Possible bug:** Module needs history.txt to exist first
+
+### Issue E: Parser Not Detecting Button Click
+**Check:** Is the button being recognized as interactive?
+**Test:** Check is_interactive() returns true for button type
+
+================================================================================
+4. DEBUG STEPS
+================================================================================
+
+### Step 1: Test Module Directly
+```bash
+cd ^^.PMO_c_+rmmp_23.01
+# Create history.txt if it doesn't exist
+mkdir -p pieces/apps/fuzzpet_app/fuzzpet
+touch pieces/apps/fuzzpet_app/fuzzpet/history.txt
+# Run module directly
+./pieces/apps/editor/plugins/+x/editor_module.+x &
+# Press WASD in another terminal, see if module responds
+```
+
+### Step 2: Check app_list.txt Path
+```bash
+# Verify file exists and has correct content
+cat pieces/os/app_list.txt
+# Should show:
+# RMMP=pieces/apps/editor/plugins/+x/editor_module.+x
+# PLAYR=pieces/apps/playrm/plugins/+x/playrm_module.+x
+```
+
+### Step 3: Add Debug Output to handle_launch_command()
+Add fprintf(stderr, ...) to see:
+- Is function being called?
+- What app_name is received?
+- Is file being opened?
+- What path is being passed to launch_module()?
+
+### Step 4: Check launch_module() Execution
+Add debug output to see:
+- Is launch_module() being called?
+- Does fork() return positive PID?
+- Does execv() succeed?
+
+================================================================================
+5. LIKELY CULPRITS (In Order)
+================================================================================
+
+1. **history.txt doesn't exist** - Module polls it, crashes if missing
+2. **app_list.txt path wrong** - build_path_malloc() resolves incorrectly
+3. **onClick not wired** - Button ENTER doesn't trigger send_command()
+4. **Module needs working directory** - execv() fails without chdir()
+
+================================================================================
+6. IMMEDIATE FIX TO TRY
+================================================================================
+
+### Fix 1: Ensure history.txt Exists Before Launch
+In launch_module(), create history.txt before forking:
+```c
+// Ensure history file exists
+mkdir_p("pieces/apps/fuzzpet_app/fuzzpet");
+FILE *hf = fopen("pieces/apps/fuzzpet_app/fuzzpet/history.txt", "a");
+if (hf) fclose(hf);
+```
+
+### Fix 2: Add Debug Output
+Add to handle_launch_command():
+```c
+fprintf(stderr, "DEBUG: Launching '%s'\n", app_name);
+fprintf(stderr, "DEBUG: Looking in %s\n", path_list);
+// ... after finding path
+fprintf(stderr, "DEBUG: Found path: %s\n", trim_pmo(eq + 1));
+```
+
+### Fix 3: Test Direct Launch
+Add a test key binding that directly launches editor:
+```c
+// In process_key(), add:
+if (key == 'F1') {
+    launch_module("pieces/apps/editor/plugins/+x/editor_module.+x");
+}
+```
+Then press F1 to test.
+
+================================================================================
+7. NEXT STEPS
+================================================================================
+
+1. Try Fix 1 (ensure history.txt exists)
+2. Recompile and test
+3. If still broken, add Fix 2 (debug output)
+4. Check stderr for debug messages
+5. Try Fix 3 (direct key binding) to isolate the issue
+
+================================================================================
