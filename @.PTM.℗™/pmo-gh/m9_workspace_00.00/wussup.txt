@@ -1,0 +1,37 @@
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+ > the player demo game will also have an interact mode, so maybe it would be best  
+   to just build the player demo game and ops first, then we can build pieces/ ops  
+   for maps, interact mode, menus etc. then we may can decide if it would be better 
+   to use those ops for editor , or use more of a hardcoding strategy , lets        
+   outline this though processes and its pros and cons, and steps and kpis in       
+   8.piece_opts.txt
+   
+   
+  We are now aligned on building the "Muscles" (Ops) first. How would you like to
+  proceed with STEP 1: Core Op Standardization?
+
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+ > priority?i still want to get the player showing an ops menu , an ops map  , an   
+   ops interact mode for the map, an ops selector that moves around the map, for    
+   human testing/sanity... (all these are individual pieces as well ; we will       
+   instatiate them manually but when the editor is build , they will spin up when   
+   placed on the map and/or in the "PAL" script. does this make sense to you ? do   
+   you want to include this information in @8.piece_opts.txt in a certain way ?     
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+ I have updated 8.piece_opts.txt to include the prioritized "Ops Pieces" (Menu,
+  Map, Interact Mode, and Selector). These will be the primary vehicles for human
+  testing and sanity checks.
+
+
+  They will be instantiated manually in the demo_1 project initially, with the
+  long-term goal of being automatically managed by the Editor.
+
+
+  I've also integrated these into STEP 1 of the implementation plan and added a
+  corresponding KPI for the "Sanity Check."
+
+
+  How would you like to start? We can begin by creating the source files for these
+  Ops in pieces/apps/playrm/ops/src/.
+
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄

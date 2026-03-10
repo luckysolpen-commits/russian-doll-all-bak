@@ -1,0 +1,11 @@
+[1773116191] Manager Started. Root: /home/no/Desktop/Piecemark-IT/[CALENDARS]00.04/mar_9/m9_workspace_00.00/^.PMO_c_+rmmp_26.01
+[1773116192] Input Received: 1002
+[1773116192] Input Received: 1002
+[1773116193] Input Received: 1002
+[1773116193] Input Received: 13
+[1773116193] Input Received: 1003
+[1773116194] Input Received: 1003
+[1773116194] Input Received: 120
+[1773116195] Input Received: 122
+[1773116196] Input Received: 50
+[1773116196] Input Received: 51

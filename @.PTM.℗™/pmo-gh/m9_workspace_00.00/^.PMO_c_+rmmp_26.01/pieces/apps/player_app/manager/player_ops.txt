@@ -1,0 +1,14 @@
+# Player Engine Standardized Operations (v2.0)
+# Format: name type handler {description}
+
+# Movement
+move_z void ../../playrm/ops/+x/move_z.+x {Relative vertical move}
+move_player void ../../playrm/ops/+x/move_player.+x {Move entity to X,Y,Z}
+
+# Engine
+halt void builtin_halt {stop execution}
+out void builtin_out {print register}
+console_print void ../../playrm/ops/+x/console_print.+x {Show message}
+menu_op void ../../playrm/ops/+x/menu_op.+x {Render PDL menu and get selection}
+project_loader void ../../playrm/ops/+x/project_loader.+x {Scan projects and select}
+render_map void ../../playrm/ops/+x/render_map.+x {Compose map view}

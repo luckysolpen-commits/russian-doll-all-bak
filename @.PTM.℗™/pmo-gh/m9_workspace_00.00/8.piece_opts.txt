@@ -1,0 +1,120 @@
+================================================================================
+8.PIECE_OPTS.TXT - Player-First Strategy & Architectural Options
+================================================================================
+Date: 2026-03-09
+Status: STRATEGIC DECISION DOCUMENT
+Goal: Pivot to Player Demo Game first, then evaluate Editor implementation.
+
+================================================================================
+1. THE PIVOT: PLAYER-FIRST DEVELOPMENT
+================================================================================
+
+Instead of fixing the Editor's MAP tab immediately, we will build the 
+"Data-Driven Player" (PLAYR) and its reusable Ops library first.
+
+**Rationale:** The Player's INTERACT mode (moving a character, checking 
+collisions, triggering events) provides the "Game Rules." If we build these 
+as reusable Ops, the Editor might simply be "Player Mode with a palette."
+
+================================================================================
+2. PROS & CONS: REUSABLE OPS vs. HARDCODED EDITOR
+================================================================================
+
+### OPTION A: Shared Reusable Ops (The "Unity/Godot" Way)
+*Same Ops (+x binaries) used by both Editor and Player.*
+
+**PROS:**
+- **Perfect Parity:** "What you see is what you play." If movement works in 
+  the Editor, it works in the Game.
+- **Single Point of Failure:** Fix a bug in `move_player.c`, and both apps 
+  are fixed.
+- **Data-Driven:** Hardcore TPM compliance. Everything is a piece/script.
+
+**CONS:**
+- **Constraint Friction:** Players shouldn't walk through walls, but Editors 
+  often need to "ghost" or fly. Reusable Ops need "Editor Flags."
+- **Input Complexity:** The Op needs to handle `active_target_id` dynamically 
+  (sometimes it's @Hero, sometimes it's XCursor).
+
+---
+
+### OPTION B: Hardcoded Editor logic (The "Surgical Tool" Way)
+*Editor uses dedicated C logic for painting; Player uses Ops for playing.*
+
+**PROS:**
+- **Tool Speed:** Painting tiles at 60fps is easier with direct C loops in 
+  `editor_module.c` than spawning `place_tile.+x` 60 times a second.
+- **Unconstrained Editing:** Easier to implement "Fill Area" or "Multi-tile 
+  Select" without worrying about player collision rules.
+
+**CONS:**
+- **Logic Duplication:** You end up writing "find entity at position" twice.
+- **Maintenance Debt:** Changing how Z-levels work requires updating two 
+  separate codebases.
+
+================================================================================
+3. PRIORITIZED PIECES (Human Testing/Sanity)
+================================================================================
+
+Before the full game loop is finished, we need four "Sanity Pieces" to 
+validate the human-system interface. These are individual TPM pieces that 
+will be instantiated manually in `demo_1` for now.
+
+1. **Ops Menu Piece:** A standalone UI component that lists available methods 
+   for the currently selected piece.
+2. **Ops Map Piece:** A viewport component that renders terrain and entity 
+   mirrors into `view.txt`.
+3. **Ops Interact Mode Piece:** The logic bridge that handles the "handover" 
+   from Parser navigation to Module-specific key injection.
+4. **Ops Selector Piece:** A movable cursor entity (X) used to navigate the 
+   Map Piece and select other entities.
+
+**Instantiation Strategy:**
+- **Manual (Current):** We create these as directories in `projects/demo_1/`.
+- **Automatic (Future):** The Editor will "spin up" these pieces when they 
+  are dragged onto a map or referenced in a PAL script.
+
+================================================================================
+4. IMPLEMENTATION STEPS (Player-First)
+================================================================================
+
+### STEP 1: Core Op Standardization & Sanity Pieces
+Standardize the "Muscles" and create the initial Sanity Pieces:
+- `move_player.c`: Generic movement with collision detection.
+- `interact.c`: Scans for entities and executes PAL/ASM scripts.
+- `render_map.c`: Composes `view.txt` (The "Ops Map").
+- `menu_op.c`: Renders PDL menus (The "Ops Menu").
+
+### STEP 2: The Player Bridge (`playrm_module.c`)
+Implement the project-aware module:
+- Polls `history.txt` for raw keys.
+- Maps keys to Ops (WASD -> `move_player`, ENTER -> `interact`).
+- Manages the "Ops Interact Mode" state transition.
+
+### STEP 3: The Demo Project (`demo_1`)
+Create a complete data-driven project with the Sanity Pieces:
+- `projects/demo_1/pieces/`: Hero, NPC, Chest, and Selector.
+- `projects/demo_1/scripts/`: PAL scripts for dialogue and rewards.
+- `projects/demo_1/maps/`: Multi-floor terrain files.
+
+### STEP 4: Strategy Evaluation
+Once `demo_1` is playable via Ops, we attempt to use `place_tile.+x` in 
+the Editor. If it's too slow or clunky, we switch to Option B.
+
+================================================================================
+5. KPIs (Key Performance Indicators)
+================================================================================
+
+[ ] **Audit Purity:** Every move in the Player Demo logs to `master_ledger.txt`.
+[ ] **State Isolation:** `demo_1` state never touches `pieces/world/map_01/`.
+[ ] **Sanity Check:** The "Ops Selector" can move across the "Ops Map" and 
+    interact with entities.
+[ ] **Script Trigger:** Pressing ENTER on an NPC executes its `.asm` script.
+[ ] **Op Reusability:** `move_player.+x` successfully moves both the Player 
+    (@) and the Selector (X).
+[ ] **Signaling:** `view_changed.txt` triggers the Parser composition 
+    without "Redraw Wars" (flicker).
+
+================================================================================
+MANTRA: "Muscles (Ops) first, Brain (Module) second, World (Project) third."
+================================================================================

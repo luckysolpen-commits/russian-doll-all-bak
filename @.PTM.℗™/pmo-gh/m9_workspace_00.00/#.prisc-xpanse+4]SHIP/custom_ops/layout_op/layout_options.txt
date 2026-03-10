@@ -1,0 +1,9 @@
+# Options sub-menu layout
+title=Options Menu
+
+btn1|Sound|KEY:1
+btn2|Graphics|KEY:2
+btn3|Controls|KEY:3
+btn4|Back|KEY:0
+
+focus=1

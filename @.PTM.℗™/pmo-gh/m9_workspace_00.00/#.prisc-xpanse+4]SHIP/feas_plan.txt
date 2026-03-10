@@ -1,0 +1,152 @@
+# Feasibility Plan: layout_op - Simple Terminal Menu (PoC)
+
+## Request
+Create `custom_ops/layout_op.c` that displays a console menu:
+- Read layout from external `layout.txt` (simplified CHTPM format)
+- Render menu, take input, return selection
+- Simple PoC - not full CHTPM complexity
+
+## CHTPM-Inspired Simple Format
+
+### layout.txt (PoC Version)
+```
+# Simple menu layout (CHTPM-inspired, stripped down)
+title=Main Menu
+
+btn1|Start Game|KEY:1
+btn2|Load Game|KEY:2
+btn3|Options|KEY:3
+btn4|Exit|KEY:0
+
+focus=1
+```
+
+### view.txt (Rendered Output)
+```
+=== Main Menu ===
+[>] 1. Start Game
+    2. Load Game
+    3. Options
+    4. Exit
+Select: _
+```
+
+## Simplified Architecture (vs Full CHTPM)
+
+| Full CHTPM | PoC layout_op |
+|------------|---------------|
+| XML tags `<button>` | Pipe-delimited `btn1|Label|KEY:1` |
+| `${variable}` substitution | Simple text render |
+| Parser engine | Single C program |
+| frame_changed.txt signaling | Direct popen() call |
+| Multi-process | Single process |
+
+## Implementation
+
+### layout.txt Parser
+```c
+typedef struct {
+    char title[64];
+    char labels[16][64];
+    int keys[16];          // KEY:n values
+    int count;
+    int focus;
+} Menu;
+
+Menu load_layout(const char *path) {
+    Menu m = {0};
+    FILE *f = fopen(path, "r");
+    char line[256];
+    while (fgets(line, sizeof(line), f)) {
+        if (strncmp(line, "title=", 6) == 0)
+            strncpy(m.title, line+6, 63);
+        else if (strncmp(line, "btn", 3) == 0) {
+            char label[64], keypart[32];
+            sscanf(line, "%*[^|]|%63[^|]|%31s", label, keypart);
+            strncpy(m.labels[m.count], label, 63);
+            m.keys[m.count] = atoi(keypart+4);  // KEY:1 -> 1
+            m.count++;
+        }
+        else if (strncmp(line, "focus=", 6) == 0)
+            m.focus = atoi(line+6);
+    }
+    fclose(f);
+    return m;
+}
+```
+
+### Menu Renderer
+```c
+void render(Menu *m) {
+    printf("\n=== %s ===\n", m->title);
+    for (int i = 0; i < m->count; i++) {
+        if (i+1 == m->focus) printf("[>] ");
+        else printf("    ");
+        printf("%d. %s\n", i+1, m->labels[i]);
+    }
+    printf("Select: ");
+    fflush(stdout);
+}
+```
+
+### Input Handler
+```c
+int get_input() {
+    char buf[16];
+    if (fgets(buf, sizeof(buf), stdin)) {
+        return atoi(buf);
+    }
+    return 0;
+}
+```
+
+### Main (layout_op.c)
+```c
+int main(int argc, char *argv[]) {
+    const char *layout_path = argc > 1 ? argv[1] : "layout.txt";
+    
+    Menu m = load_layout(layout_path);
+    render(&m);
+    int sel = get_input();
+    
+    // Return selection to emulator
+    printf("%d\n", sel);
+    return 0;
+}
+```
+
+## Usage in Assembly
+
+```asm
+# Point x1 to layout file path (stored in memory)
+addi x1, x0, 500      # mem[500] = path to layout.txt
+layout_op x1          # show menu, returns selection
+
+# Selection returned via popen capture
+# Emulator stores it in predefined memory location
+lw x2, 200(x0)        # load selection
+beq x2, x0, exit_game
+```
+
+## Key Differences from Full CHTPM
+
+1. **No XML parsing** - pipe-delimited format
+2. **No variable substitution** - static text
+3. **No frame_changed.txt** - direct return value
+4. **No multi-process** - single popen() call
+5. **No focus navigation** - direct number input
+
+## Future Expansion (Post-PoC)
+
+If PoC works, can add:
+- `${var}` substitution (read from emulator memory)
+- Arrow key navigation (update focus, re-render)
+- Sub-menus (load different layout.txt)
+- view.txt output file (for emulator to read)
+
+## Next Steps
+
+1. Confirm this simplified format is acceptable
+2. Implement `custom_ops/layout_op.c`
+3. Create sample `layout.txt`
+4. Test with assembly program
