@@ -1,1 +1,0 @@
-name=Hero\ntype=player\npos_x=2\npos_y=2\npos_z=0\non_map=1

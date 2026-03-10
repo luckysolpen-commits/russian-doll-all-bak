@@ -1,9 +1,0 @@
-# Sample menu layout (CHTPM-inspired PoC)
-title=Main Menu
-
-btn1|Start Game|KEY:1
-btn2|Load Game|KEY:2
-btn3|Options|KEY:3
-btn4|Exit|KEY:0
-
-focus=1

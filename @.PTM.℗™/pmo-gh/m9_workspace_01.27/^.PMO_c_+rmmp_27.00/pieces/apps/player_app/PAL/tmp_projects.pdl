@@ -1,8 +1,0 @@
-SECTION      | KEY                | VALUE
-----------------------------------------
-META         | piece_id           | tmp_projects
-META         | title              | Select Project
-
-METHOD       | demo_1 | void
-METHOD       | template | void
-METHOD       | DEMO-0 | void

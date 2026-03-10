@@ -1,0 +1,26 @@
+# 3_player.txt - The Three Player Projects Explained
+
+## 1. The Three Projects
+There are currently 3 project folders in the system:
+
+1. **demo_1:** The canonical **Gameplay Project**. It features a Hero (@), an NPC Old Man (&), and a Treasure Chest (T). It uses standardized Ops for movement and interaction. Interaction triggers scripts like `scripts/npc_greeting.asm`. **This is the recommended project for testing interaction.**
+2. **template:** The **Base Template**. This is now an **empty directory**, ready for a fresh project initialization.
+3. **op-ed:** The **"Editor-as-a-Project"** (formerly DEMO-0). This project is a specialized proof-of-concept. It represents the "Inception" architectural goal: an Editor that is itself a TPM project you can "play." When you load it, the system switches to the **PIECEMARK EDITOR** layout because `op-ed` is configured to behave as a creation tool rather than a standard game.
+
+## 2. Why you see the Editor title
+The discrepancy where the Editor layout appears even in the FuzzPet dashboard or other screens is caused by **Resource Leakage**:
+
+- **Shared Pipes:** Currently, `fuzzpet_app`, `editor`, and `player_app` are all writing to the same `pieces/apps/fuzzpet_app/fuzzpet/history.txt` and reading from the same `last_response.txt`.
+- **Render Overlap:** The `map_render.c` (FuzzPet) and `editor_module.c` are both hitting the same frame markers and writing to similar view files. If the Editor module is running in the background, its "PIECEMARK EDITOR" header can bleed into other dashboard views that use the `${game_map}` variable.
+- **Project-in-Player:** In `op-ed`, the Editor logic is explicitly active because that project's purpose is to demonstrate the Editor's functionality using the shared Ops library.
+
+## 3. Ops in the Player
+The Player module (`playrm_module.c`) uses the **SAME Reusable Ops** as the Editor:
+- `move_player.+x` for WASD movement.
+- `interact.+x` for ENTER-based script triggers.
+- `render_map.+x` for viewport composition.
+
+The Editor in the 'Player' context is not there by mistake; it's there to prove that **"Creation is just a specialized form of Play."** By using the same Muscles (Ops) for both, we ensure perfect parity between what you build and what you experience.
+
+## 4. Next Verification Step
+We have verified the **Interaction** in `demo_1`. By moving the Hero to (6, 4) — next to the Old Man at (7, 4) — and pressing ENTER, the Prisc VM correctly executes the dialogue script.

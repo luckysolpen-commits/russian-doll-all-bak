@@ -1,1 +1,0 @@
-name=Stairs Down\ntype=event\npos_x=7\npos_y=4\npos_z=1\non_map=1\non_interact=events/stairs_down.asm

@@ -1,0 +1,119 @@
+[2026-03-10 04:37:46] FrameRendered: at 2026-03-10 04:37:46 | Source: renderer
+[2026-03-10 04:37:48] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-10 04:37:48] FrameRendered: at 2026-03-10 04:37:48 | Source: renderer
+[2026-03-10 04:37:48] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-10 04:37:48] FrameRendered: at 2026-03-10 04:37:48 | Source: renderer
+[2026-03-10 04:37:49] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-10 04:37:49] FrameRendered: at 2026-03-10 04:37:49 | Source: renderer
+[2026-03-10 04:37:50] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-10 04:37:50] FrameRendered: at 2026-03-10 04:37:50 | Source: renderer
+[2026-03-10 04:37:51] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-10 04:37:51] FrameRendered: at 2026-03-10 04:37:51 | Source: renderer
+[2026-03-10 04:37:51] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-10 04:37:51] FrameRendered: at 2026-03-10 04:37:51 | Source: renderer
+[2026-03-10 04:37:52] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-10 04:37:52] FrameRendered: at 2026-03-10 04:37:52 | Source: renderer
+[2026-03-10 04:37:53] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-10 04:37:53] FrameRendered: at 2026-03-10 04:37:53 | Source: renderer
+[2026-03-10 04:37:53] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-10 04:37:53] MoveEntity: hero | from (2,2) to (2,3) project=demo_1 direction=down
+[2026-03-10 04:37:53] FrameRendered: at 2026-03-10 04:37:53 | Source: renderer
+[2026-03-10 04:37:53] FrameRendered: at 2026-03-10 04:37:53 | Source: renderer
+[2026-03-10 04:37:54] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-10 04:37:54] MoveEntity: hero | from (2,3) to (2,4) project=demo_1 direction=down
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:54] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:54] MoveEntity: hero | from (2,4) to (3,4) project=demo_1 direction=right
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:54] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:54] MoveEntity: hero | from (3,4) to (4,4) project=demo_1 direction=right
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:54] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:54] MoveEntity: hero | from (4,4) to (5,4) project=demo_1 direction=right
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:54] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:37:54] MoveEntity: hero | from (5,4) to (6,4) project=demo_1 direction=right
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:54] FrameRendered: at 2026-03-10 04:37:54 | Source: renderer
+[2026-03-10 04:37:55] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] MoveEntity: hero | from (6,4) to (7,4) project=demo_1 direction=right
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-10 04:37:55] MoveEntity: hero | from (7,4) to (7,5) project=demo_1 direction=down
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] MoveEntity: hero | from (7,5) to (7,6) project=demo_1 direction=down
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] MoveEntity: hero | from (7,6) to (7,7) project=demo_1 direction=down
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] MoveEntity: hero | from (7,7) to (8,7) project=demo_1 direction=right
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:55] MoveEntity: hero | from (8,7) to (9,7) project=demo_1 direction=right
+[2026-03-10 04:37:55] FrameRendered: at 2026-03-10 04:37:55 | Source: renderer
+[2026-03-10 04:37:56] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:37:56] FrameRendered: at 2026-03-10 04:37:56 | Source: renderer
+[2026-03-10 04:37:56] MoveEntity: hero | from (9,7) to (10,7) project=demo_1 direction=right
+[2026-03-10 04:37:56] FrameRendered: at 2026-03-10 04:37:56 | Source: renderer
+[2026-03-10 04:37:56] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-10 04:37:56] FrameRendered: at 2026-03-10 04:37:56 | Source: renderer
+[2026-03-10 04:37:56] Interact: hero | interacted with chest_01 at (10,7) script=scripts/chest_open.asm
+[2026-03-10 04:37:56] ConsolePrint: You found the test treasure!
+[2026-03-10 04:37:56] ConsolePrint: Sanity check PASSED.
+[2026-03-10 04:37:56] FrameRendered: at 2026-03-10 04:37:56 | Source: renderer
+[2026-03-10 04:37:56] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:37:56] FrameRendered: at 2026-03-10 04:37:56 | Source: renderer
+[2026-03-10 04:37:56] MoveEntity: hero | from (10,7) to (11,7) project=demo_1 direction=right
+[2026-03-10 04:37:56] FrameRendered: at 2026-03-10 04:37:56 | Source: renderer
+[2026-03-10 04:37:57] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-10 04:37:57] Interact: hero | interacted with chest_01 at (10,7) script=scripts/chest_open.asm
+[2026-03-10 04:37:57] FrameRendered: at 2026-03-10 04:37:57 | Source: renderer
+[2026-03-10 04:37:57] ConsolePrint: You found the test treasure!
+[2026-03-10 04:37:57] ConsolePrint: Sanity check PASSED.
+[2026-03-10 04:37:57] FrameRendered: at 2026-03-10 04:37:57 | Source: renderer
+[2026-03-10 04:37:57] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-10 04:37:57] FrameRendered: at 2026-03-10 04:37:57 | Source: renderer
+[2026-03-10 04:37:57] MoveEntity: hero | from (11,7) to (11,6) project=demo_1 direction=up
+[2026-03-10 04:37:57] FrameRendered: at 2026-03-10 04:37:57 | Source: renderer
+[2026-03-10 04:37:57] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-10 04:37:57] FrameRendered: at 2026-03-10 04:37:57 | Source: renderer
+[2026-03-10 04:37:58] MoveEntity: hero | from (11,6) to (11,5) project=demo_1 direction=up
+[2026-03-10 04:37:58] FrameRendered: at 2026-03-10 04:37:58 | Source: renderer
+[2026-03-10 04:37:58] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-10 04:37:58] MoveEntity: hero | from (11,5) to (11,4) project=demo_1 direction=up
+[2026-03-10 04:37:58] FrameRendered: at 2026-03-10 04:37:58 | Source: renderer
+[2026-03-10 04:37:58] FrameRendered: at 2026-03-10 04:37:58 | Source: renderer
+[2026-03-10 04:37:58] InputReceived: key_code=1000 | Source: keyboard_input
+[2026-03-10 04:37:58] FrameRendered: at 2026-03-10 04:37:58 | Source: renderer
+[2026-03-10 04:37:58] MoveEntity: hero | from (11,4) to (10,4) project=demo_1 direction=left
+[2026-03-10 04:37:58] FrameRendered: at 2026-03-10 04:37:58 | Source: renderer
+[2026-03-10 04:37:59] InputReceived: key_code=1000 | Source: keyboard_input
+[2026-03-10 04:37:59] MoveEntity: hero | from (10,4) to (9,4) project=demo_1 direction=left
+[2026-03-10 04:37:59] FrameRendered: at 2026-03-10 04:37:59 | Source: renderer
+[2026-03-10 04:37:59] FrameRendered: at 2026-03-10 04:37:59 | Source: renderer
+[2026-03-10 04:38:00] InputReceived: key_code=1000 | Source: keyboard_input
+[2026-03-10 04:38:00] FrameRendered: at 2026-03-10 04:38:00 | Source: renderer
+[2026-03-10 04:38:00] MoveEntity: hero | from (9,4) to (8,4) project=demo_1 direction=left
+[2026-03-10 04:38:00] FrameRendered: at 2026-03-10 04:38:00 | Source: renderer
+[2026-03-10 04:38:00] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-10 04:38:00] Interact: hero | interacted with npc_01 at (7,4) script=scripts/npc_greeting.asm
+[2026-03-10 04:38:00] ConsolePrint: Hello there! I am the project anchor.
+[2026-03-10 04:38:00] ConsolePrint: Can you move the selector to that chest?
+[2026-03-10 04:38:00] FrameRendered: at 2026-03-10 04:38:00 | Source: renderer
+[2026-03-10 04:38:00] FrameRendered: at 2026-03-10 04:38:00 | Source: renderer
+[2026-03-10 04:38:04] InputReceived: key_code=1001 | Source: keyboard_input
+[2026-03-10 04:38:04] FrameRendered: at 2026-03-10 04:38:04 | Source: renderer
+[2026-03-10 04:38:04] MoveEntity: hero | from (8,4) to (9,4) project=demo_1 direction=right
+[2026-03-10 04:38:04] FrameRendered: at 2026-03-10 04:38:04 | Source: renderer

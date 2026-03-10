@@ -1,8 +1,0 @@
-orchestrator=839905
-keyboard_input=839978
-chtpm_parser=839981
-response_handler=839983
-gl_renderer=839992
-clock_daemon=839990
-renderer=839994
-loader_module=840023
