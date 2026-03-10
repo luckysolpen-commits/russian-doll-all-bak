@@ -1,0 +1,8 @@
+pieces/chtpm/layouts/editor.chtpm
+pieces/chtpm/layouts/editor.chtpm
+pieces/chtpm/layouts/editor.chtpm
+pieces/chtpm/layouts/editor.chtpm
+pieces/chtpm/layouts/editor.chtpm
+pieces/chtpm/layouts/editor.chtpm
+pieces/apps/playrm/layouts/game.chtpm
+pieces/apps/playrm/layouts/game.chtpm

@@ -1,0 +1,30 @@
+[2026-03-09 22:38:00] FrameRendered: at 2026-03-09 22:38:00 | Source: renderer
+[2026-03-09 22:38:02] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 22:38:02] FrameRendered: at 2026-03-09 22:38:02 | Source: renderer
+[2026-03-09 22:38:03] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 22:38:03] FrameRendered: at 2026-03-09 22:38:03 | Source: renderer
+[2026-03-09 22:38:03] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 22:38:03] FrameRendered: at 2026-03-09 22:38:03 | Source: renderer
+[2026-03-09 22:38:04] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 22:38:04] FrameRendered: at 2026-03-09 22:38:04 | Source: renderer
+[2026-03-09 22:38:05] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 22:38:05] FrameRendered: at 2026-03-09 22:38:05 | Source: renderer
+[2026-03-09 22:38:05] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 22:38:05] FrameRendered: at 2026-03-09 22:38:05 | Source: renderer
+[2026-03-09 22:38:05] FrameRendered: at 2026-03-09 22:38:05 | Source: renderer
+[2026-03-09 22:38:07] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 22:38:07] FrameRendered: at 2026-03-09 22:38:07 | Source: renderer
+[2026-03-09 22:38:08] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-09 22:38:08] FrameRendered: at 2026-03-09 22:38:08 | Source: renderer
+[2026-03-09 22:38:08] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 22:38:08] FrameRendered: at 2026-03-09 22:38:08 | Source: renderer
+[2026-03-09 22:38:08] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 22:38:08] FrameRendered: at 2026-03-09 22:38:08 | Source: renderer
+[2026-03-09 22:38:09] InputReceived: key_code=1003 | Source: keyboard_input
+[2026-03-09 22:38:09] FrameRendered: at 2026-03-09 22:38:09 | Source: renderer
+[2026-03-09 22:38:09] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-09 22:38:09] FrameRendered: at 2026-03-09 22:38:09 | Source: renderer
+[2026-03-09 22:38:09] InputReceived: key_code=1002 | Source: keyboard_input
+[2026-03-09 22:38:09] FrameRendered: at 2026-03-09 22:38:09 | Source: renderer
+[2026-03-09 22:38:10] InputReceived: key_code=13 | Source: keyboard_input
+[2026-03-09 22:38:10] FrameRendered: at 2026-03-09 22:38:10 | Source: renderer

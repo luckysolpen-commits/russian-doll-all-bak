@@ -1,0 +1,14 @@
+[2026-03-09 22:38:02] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 22:38:03] KeyCaptured: 1003 ('?') | Source: keyboard_input
+[2026-03-09 22:38:03] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 22:38:04] KeyCaptured: 1003 ('?') | Source: keyboard_input
+[2026-03-09 22:38:05] KeyCaptured: 1003 ('?') | Source: keyboard_input
+[2026-03-09 22:38:05] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 22:38:07] KeyCaptured: 1003 ('?') | Source: keyboard_input
+[2026-03-09 22:38:08] KeyCaptured: 1002 ('?') | Source: keyboard_input
+[2026-03-09 22:38:08] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-09 22:38:08] KeyCaptured: 1003 ('?') | Source: keyboard_input
+[2026-03-09 22:38:09] KeyCaptured: 1003 ('?') | Source: keyboard_input
+[2026-03-09 22:38:09] KeyCaptured: 1002 ('?') | Source: keyboard_input
+[2026-03-09 22:38:09] KeyCaptured: 1002 ('?') | Source: keyboard_input
+[2026-03-09 22:38:10] KeyCaptured: 13 ('?') | Source: keyboard_input

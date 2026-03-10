@@ -1,0 +1,13 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | loader
+META         | version            | 1.0
+META         | determinism        | strict
+
+STATE        | name                 | Project Loader
+STATE        | status               | active
+
+METHOD       | move                 | void
+METHOD       | demo_1 | void
+METHOD       | template | void
+METHOD       | DEMO-0 | void
