@@ -1,0 +1,41 @@
+PHASE 2: GLYPH SCROLLING & EMOJI TOGGLE (m10)
+Status: UPDATED / AWAITING APPROVAL
+
+1. DETAILED TASKS:
+-----------------
+A. GLYPH PALETTE SCROLLING (Priority 1):
+   - Expand 'glyph_palette' to include a base set of terrain symbols.
+   - Implement Arrow-Key cycling (Left/Right) when 'gui_focus_index == 3'.
+   - Visual Sync: Ensure the 'selected_tile' variable updates as the user scrolls.
+
+B. EMOJI TOGGLE SYSTEM:
+   - Replace [[PIECES]] menu button (Index 4) with [[TOGGLE EMOJI]].
+   - State Tracking: Add 'emoji_mode' (0 or 1) to editor state.
+   - Set Switching: When 'emoji_mode == 1', the Glyph Palette should display Emojis (🐶, 🐱, 🌲, 🏰) instead of ASCII.
+   - Reference: Use FuzzPet's 'toggle_emoji' logic as the architectural standard.
+
+C. MAP PALETTE LOGIC (Priority 2):
+   - Update 'scan_maps()' to populate the project_maps array.
+   - Implement Arrow-Key cycling (Left/Right) when 'gui_focus_index == 2'.
+   - Functional Load: Pressing ENTER on a map updates the active map buffer.
+
+D. THE PAINTING LINK (The "Arming" Mechanism):
+   - Ensure 'place_tile.+x' uses the glyph/emoji currently highlighted in Focus 3.
+   - Status Bar Feedback: Update 'editor_status_2' to show "ARMED: [ 🐶 ]" or "ARMED: [ # ]".
+
+E. UI REFINEMENT (The <scroller> tag):
+   - Finalize the '<scroller>' tag in chtpm_parser.c to handle UTF-8/Emoji widths correctly in the terminal.
+
+2. KPIs (KEY PERFORMANCE INDICATORS):
+------------------------------------
+[ ] KPI 1 (Focus): Pressing '3' focuses the Glyph Palette; '4' toggles Emoji mode.
+[ ] KPI 2 (Toggle): Clicking 'TOGGLE EMOJI' immediately swaps the Glyph Palette from ASCII to Emojis.
+[ ] KPI 3 (Scroll): While Focus 3 is active, RIGHT arrow moves the selector across emojis/glyphs.
+[ ] KPI 4 (Paint): Selecting an emoji (🐶), then moving to Focus 1 and pressing SPACE, paints that emoji on the map.
+[ ] KPI 5 (Load): Map Palette scrolling and ENTER-to-load remains functional and stable.
+
+3. NEXT STEPS AFTER APPROVAL:
+----------------------------
+1. Update editor_module.c with emoji_mode state and set-switching logic.
+2. Replace PIECES button with TOGGLE EMOJI in editor.chtpm.
+3. Re-compile and test against KPI 1-5.

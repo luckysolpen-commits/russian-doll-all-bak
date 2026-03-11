@@ -1,0 +1,105 @@
+RMMP EDITOR - ADVANCED OPERATIONS PLAN (v1.0)
+Project Code: 10.editor-ops
+
+1. OBJECTIVES:
+-------------
+A. Project Context: Editor must load/save specific projects instead of hardcoded paths.
+B. Scrolling Palette: A horizontal or vertical array of selectable ASCII glyphs for Terrain and Pieces.
+C. Entity Scripting: Pressing ENTER on a piece opens an "Op Selector" to build its .asm script.
+D. Save/Play Bridge: Save changes to projects/{id}/ and immediately launch the player with that project.
+E. Map Palette: A scrolling list of maps in the project with creation and metadata editing capabilities.
+F. Project Browser: A way to switch between existing projects from within the editor.
+G. Global Variables: Support for defining project-wide variables (e.g., world_time, gold, player_score).
+H. Blueprint System (RPG Database): 
+   - Actors: Default hero templates with level-up stat curves.
+   - Monsters: Enemy templates with HP, ATK, and loot tables.
+   - Items/Magic: Definition of usable skills and consumables.
+   - XP Curves: Calculation logic for level thresholds (e.g., Lvl * 100).
+
+2. ARCHITECTURAL CHANGES:
+------------------------
+A. EDITOR STATE (manager/state.txt):
+   - Add: project_id, active_map, active_z, palette_index, selected_glyph, map_palette_index, db_category_index.
+   
+B. SCROLLING PALETTES:
+   - Glyph Palette: Standard ASCII + Special glyphs for painting.
+   - Map Palette: Scans projects/{id}/maps/*.txt to populate ${map_list_view}.
+   - DB Palette: Switches between [ACTORS], [MONSTERS], [ITEMS], [SKILLS], [GLOBALS].
+   - Controls: '{' and '}' for maps; '[' and ']' for glyphs; '<' and '>' for DB categories.
+
+C. THE BLUEPRINT MODEL (projects/{id}/config/database.pdl):
+   - This is the central RPG Database.
+   - [ACTORS]: Hero templates, base stats, and growth curves.
+   - [MONSTERS]: Enemy stats, AI behavior types, and loot.
+   - [ITEMS]: Usable objects, prices, and effects.
+   - [MAGIC/SKILLS]: Spells, MP costs, and damage formulas.
+   - [XP_CURVES]: Tables or formulas defining level-up thresholds.
+   - Format: [CATEGORY:ID] | KEY=VALUE | KEY2=VALUE2
+   - When placing a piece, user can "apply blueprint" to link it to these templates.
+
+3. NEW OPERATIONS (Ops):
+-----------------------
+A. op_save_project:
+   - Scans current editor buffer and writes to projects/{project_id}/maps/ and pieces/.
+   
+B. op_add_script_op:
+   - Interface to select from player_ops.txt (e.g., console_print, move_player).
+   - Appends selected command to the piece's .asm script.
+
+C. op_manage_map:
+   - New Map: Generates a blank 20x10 grid of '.' and adds it to the project map list.
+   - Load Map: Switches the editor's active terrain buffer to the selected map file.
+   - Map Metadata: Opens 'map_properties.chtpm' to edit dimensions (Width/Height), Name, and:
+     - BGM (Background Music): ID of track to play. (LOW PRIORITY)
+     - Encounter Rate: Steps between random battles. (LOW PRIORITY)
+
+D. op_set_global:
+   - Sets a value in the project's global variable pool.
+
+E. op_calculate_xp:
+   - PRISC-compatible op to check if an actor levels up based on a curve.
+4. USER INTERFACE (editor.chtpm):
+-------------------------------
+A. DUAL-LAYER NAVIGATION:
+   - GUI Mode: Standard button navigation (Tabs, Save, Play).
+   - Interaction Mode: Triggered by pressing ENTER on the Map area (onClick="INTERACT").
+   - Controls: In this mode, WASD moves the selector, SPACE places glyphs.
+   - Exit: Pressing ESC returns focus to the GUI buttons.
+
+B. TAB LAYOUTS:
+- TAB 1 [MAP]: 
+    - Map Interaction Area (Button wrapping ${game_map}).
+...
+    - Scrolling Map Palette (Left/Right scroll).
+    - ENTER on selected map: LOAD.
+    - ENTER again on active map: Open Metadata Editor (href="map_properties.chtpm").
+- TAB 2 [PIECES]: 
+    - Entity placement + Piece Palette.
+    - Button: "Assign Blueprint" (Link piece to Actor/Monster template).
+    - ENTER on piece to Script.
+- TAB 3 [DB]:
+    - Scrolling Category Palette (Actors -> Monsters -> Items -> Globals).
+    - Data Table for selected category.
+    - Growth Curve Visualizer (Text-based: "Lvl 1: 10HP, Lvl 2: 15HP...").
+- TAB 4 [PROJECT]: 
+    - Scrolling Project Palette / Project Browser.
+    - Save Project / Save As / PLAY (href to player).
+
+5. EARLY TEST CASE: THE CLOCK SYSTEM
+-----------------------------------
+Objective: Verify Global Variables and Automated Ops.
+Steps:
+1. Create a Global Variable: `world_time` (Initial: 0).
+2. Create an Entity: `Clock` (Icon: @).
+3. Add Op to Clock Script: `increment_global world_time 1`.
+4. Run Player: Ensure the screen updates every turn showing `world_time` increasing.
+
+6. IMPLEMENTATION PHASES:
+------------------------
+Phase 1: Project Loading & Browser. Update editor_module.c to read engine state project_id and scan projects/ directory.
+Phase 2: Palette Scroll (Glyphs & Maps). Add key handling for [] and {} and display logic.
+Phase 3: DB Tab (Basic Globals). Implement the reading/writing of the [GLOBALS] section in project.pdl.
+Phase 4: RPG Database (Blueprints). Implement 'database.pdl' parser for Actors and Monsters.
+Phase 5: The "Play" Button. Implement LOAD_PROJECT command inside the editor.
+Phase 6: Scripting & XP Curves. Create 'script_builder.chtpm' and calculation ops.
+Phase 7: Multimedia & Mechanics (Future). Implement BGM playback and Random Encounter triggers.
