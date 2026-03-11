@@ -1,0 +1,5 @@
+pos_x=5
+pos_y=6
+pos_z=0
+on_map=1
+type=selector

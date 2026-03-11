@@ -1,0 +1,2 @@
+[2026-03-11 05:22:55] KeyCaptured: 13 ('?') | Source: keyboard_input
+[2026-03-11 05:22:56] KeyCaptured: 13 ('?') | Source: keyboard_input

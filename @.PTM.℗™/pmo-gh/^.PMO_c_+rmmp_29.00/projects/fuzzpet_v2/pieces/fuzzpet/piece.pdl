@@ -1,0 +1,20 @@
+# Fuzzpet Piece DNA
+META         | piece_id           | fuzzpet
+STATE        | pos_x              | 5
+STATE        | pos_y              | 2
+STATE        | pos_z              | 0
+STATE        | on_map             | 1
+STATE        | type               | player
+STATE        | hunger             | 50
+STATE        | happiness          | 55
+STATE        | energy             | 100
+STATE        | level              | 1
+STATE        | emoji_mode         | 0
+STATE        | selector_active    | 0
+
+METHOD       | move               | ./pieces/apps/playrm/ops/+x/move_player.+x fuzzpet {direction}
+METHOD       | interact           | ./pieces/apps/playrm/ops/+x/interact.+x fuzzpet
+METHOD       | stat_decay         | ./pieces/apps/playrm/ops/+x/stat_decay.+x fuzzpet
+METHOD       | feed               | ./pieces/apps/playrm/ops/+x/fuzzpet_action.+x fuzzpet feed
+METHOD       | play               | ./pieces/apps/playrm/ops/+x/fuzzpet_action.+x fuzzpet play
+METHOD       | sleep              | ./pieces/apps/playrm/ops/+x/fuzzpet_action.+x fuzzpet sleep

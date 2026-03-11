@@ -1,0 +1,4 @@
+# Fuzzpet V2 Config
+META         | project_id         | fuzzpet_v2
+STATE        | script_path        | scripts/game_loop.asm
+STATE        | piece_id           | fuzzpet
