@@ -1,0 +1,76 @@
+THE TRUE PIECE METHOD PIPELINE (MARCH 3, 2026 EDITION)
+=======================================================
+Status: AUTHORITATIVE CANONICAL STANDARD
+Project: CHTPM+OS v2.0 (Modular Entities Refactor)
+
+1. THE CORE PHILOSOPHY: PIECE -> MODULE -> OS
+---------------------------------------------
+The system follows a strict bottom-up building priority:
+1. PIECE (Atomic Soul): Every entity (pet, item, selector) is a directory with a PDL file. It owns its data SOVEREIGNLY.
+2. MODULE (Logic Agent): Orchestrates pieces. The Manager routes input; the Renderer produces the 'Stage'.
+3. OS/LAYOUT (Theater): The shell that contains the variables and provides the user's window into reality.
+
+2. THE 'OPTION Z' PIPELINE (Theater vs Stage)
+---------------------------------------------
+To prevent flickering and ensure a permanent UI:
+- THE THEATER: The OS Parser (`chtpm_parser.c`) writes the final frame.
+- THE STAGE: The Module (e.g., `map_render.c`) writes its specific view to `view.txt`.
+- THE COMPOSITE: The Parser reads `view.txt` and substitutes it into `${game_map}` in the layout.
+
+3. THE INPUT-LOGIC-RENDER CYCLE
+-------------------------------
+1. Hardware (`keyboard_input.+x`) logs to system history.
+2. Parser (`chtpm_parser.c`) reads history and INJECTS relevant keys into the App's local `history.txt`.
+3. Manager (`fuzzpet_manager.c`) polls local history, routes input to sovereign plugins (traits), and performs 'Mirror Sync'.
+4. Stage Producer (`map_render.c`) reads all piece states and terrain to write `view.txt`.
+5. Signal: Manager appends 'X' to `view_changed.txt`.
+6. Final Frame: Parser detects change, composes full screen, and signals the terminal renderer.
+
+4. KEY ARCHITECTURAL WISDOMS
+----------------------------
+
+### A. The Mirror Sync (DNA vs Mirror)
+- DNA: The `.pdl` file is the ultimate source of truth. Plugins update this.
+- MIRROR: The Dashboard `${var}` variables expect a flat `state.txt` key=value file.
+- RULE: The Manager MUST perform a 'Mirror Sync' (copy DNA to Mirror) to update the dashboard stats.
+
+### B. The Shadow Selector Nuance
+- When a pet is active, the Selector ('X') is HIDDEN to prevent clutter.
+- The Manager SYNCS the Selector's position to the active pet's position every frame.
+- RESULT: When you return to Selector mode (ESC), the cursor is exactly where the pet is.
+
+### C. Dynamic UI (The Contextual Standard)
+- Buttons in the layout should use `${selector_active}` and `${pet_active}` visibility flags.
+- Navigability: The Parser must skip invisible elements when moving focus or jumping via numbers.
+
+5. DIRECTORY STRUCTURE & RESOLUTION
+-----------------------------------
+- Macro Folder: `pieces/apps/[APP_NAME]/` (Self-contained ecosystem).
+- Entities: `pieces/entities/[ID]/` (Sovereign souls).
+- Traits: `pieces/apps/[APP_NAME]/traits/` (Shared source code).
+- System Daemons: `pieces/system/clock_daemon/` (Time management).
+- Resolution: `pieces/locations/location_kvp` MUST map every Piece ID to its physical path.
+
+### D. System Clock Daemon (v0.3 Addition)
+- **Location:** `pieces/system/clock_daemon/`
+- **DNA:** `clock_daemon.pdl` (turn, time, mode, tick_rate)
+- **Mirror:** `state.txt` (key=value for fast parser reads)
+- **Daemon:** `clock_daemon.+x` (background thread, ticks every second, hits frame marker)
+- **Integration:** Parser loads `${clock_time}`, `${clock_turn}`, `${clock_mode}` in `load_vars()`
+
+6. FAQ & TROUBLESHOOTING
+------------------------
+Q: Why is the dashboard stats frozen?
+A: You updated the DNA (pdl) but didn't run a Mirror Sync to the dashboard's mirror (state.txt).
+
+Q: Why did my pet disappear from the map?
+A: Check `location_kvp`. If the Piece ID is not mapped to its directory, the renderer can't find its position.
+
+Q: Why is the UI frozen after I click a button?
+A: The Parser is waiting for a `view_changed.txt` signal. If the Manager ignores the command, no signal is sent. Always trigger a re-render for EVERY input.
+
+Q: How do I handle shared logic (like movement) without repeating code?
+A: Use 'Shared Source, Sovereign Binaries'. Keep the `.c` in `traits/` and compile a unique `+x` into each entity's `plugins/` folder.
+
+Q: Why isn't the clock time updating in the UI?
+A: The clock daemon must hit `pieces/master_ledger/frame_changed.txt` after each tick. Without this signal, the parser won't recompose the frame.

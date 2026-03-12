@@ -1,0 +1,3 @@
+pieces/chtpm/layouts/fuzzpet_v2.chtpm
+X
+pieces/apps/playrm/layouts/loader.chtpm

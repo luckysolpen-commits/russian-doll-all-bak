@@ -1,4 +1,0 @@
-[2026-03-11 05:22:51] FrameRendered: from current_frame.txt | Source: renderer
-[2026-03-11 05:22:55] FrameRendered: from current_frame.txt | Source: renderer
-[2026-03-11 05:22:57] FrameRendered: from current_frame.txt | Source: renderer
-[2026-03-11 05:22:57] FrameRendered: from current_frame.txt | Source: renderer

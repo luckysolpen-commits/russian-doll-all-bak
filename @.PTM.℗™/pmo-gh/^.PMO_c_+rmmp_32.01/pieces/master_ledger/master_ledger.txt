@@ -1,0 +1,11 @@
+[2026-03-11 22:31:56] FrameRendered: at 2026-03-11 22:31:56 | Source: renderer
+[2026-03-11 22:31:59] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-11 22:31:59] FrameRendered: at 2026-03-11 22:31:59 | Source: renderer
+[2026-03-11 22:32:00] InputReceived: key_code=1003 | Source: orchestrator
+[2026-03-11 22:32:00] FrameRendered: at 2026-03-11 22:32:00 | Source: renderer
+[2026-03-11 22:32:00] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-11 22:32:00] FrameRendered: at 2026-03-11 22:32:00 | Source: renderer
+[2026-03-11 22:32:03] InputReceived: key_code=99 | Source: orchestrator
+[2026-03-11 22:32:03] FrameRendered: at 2026-03-11 22:32:03 | Source: renderer
+[2026-03-11 22:32:04] InputReceived: key_code=99 | Source: orchestrator
+[2026-03-11 22:32:04] FrameRendered: at 2026-03-11 22:32:04 | Source: renderer

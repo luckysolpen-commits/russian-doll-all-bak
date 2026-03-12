@@ -1,0 +1,130 @@
+# FuzzPet Codebase Pipeline Flow
+
+This document outlines the execution pipeline of the "tpm fuzzpet" codebase, detailing how keyboard input is processed, game logic is applied, and the display is rendered. The system is designed around a "Piece" architecture, where independent components (executables) communicate primarily through a file-based system using `.txt` files in the `pieces/` directory for state management and event logging.
+
+## 1. System Initialization and Orchestration
+
+The entire system is launched and managed by shell scripts and a central orchestrator.
+
+*   **`run_fuzzpet.sh`**: This is the main entry point.
+    *   It sets up the environment by creating necessary directories (`pieces/{fuzzpet,keyboard,master_ledger,display,world}`).
+    *   It initializes default state files for `pieces/world/map.txt` and various `pieces/<component>/piece.txt` files (e.g., for `fuzzpet`, `keyboard`, `master_ledger`, `display`, `world`). These `piece.txt` files define the initial state, methods, event listeners, and responses for each component.
+    *   It clears previous session data from `pieces/keyboard/history.txt` and `pieces/master_ledger/master_ledger.txt`.
+    *   Finally, it executes the `+x/orchestrator.+x` binary, which takes over the management of the core game components.
+*   **`orchestrator.+x` (compiled from `plugins/orchestrator.c`)**:
+    *   This component acts as a lightweight process manager.
+    *   It launches the main game components as separate concurrent processes (implemented using `pthread_create` and `system()` calls to execute binaries):
+        *   `+x/keyboard_input.+x`
+        *   `+x/game_logic.+x`
+        *   `+x/renderer.+x`
+        *   `+x/response_handler.+x`
+    *   It adheres to a "TPM +X" principle by having "no business logic" itself, focusing solely on orchestrating the execution of other components.
+
+## 2. Keyboard Input Capture
+
+User input is captured and logged through the `keyboard_input` component.
+
+*   **`keyboard_input.+x` (compiled from `plugins/keyboard_input.c`)**:
+    *   Sets the terminal into "raw mode" to capture individual key presses without requiring an Enter key.
+    *   Continuously reads key presses from standard input (`STDIN_FILENO`).
+    *   For each key press:
+        *   It appends a timestamped entry (e.g., `[2026-02-17 12:34:56] KEY_PRESSED: 1000`) to `pieces/keyboard/history.txt`. This file acts as an event queue for keyboard input.
+        *   It also logs the input event to `pieces/master_ledger/master_ledger.txt`, serving as a comprehensive audit trail for all system events.
+        *   It provides immediate visual feedback by echoing the pressed key to the console where it runs.
+
+## 3. Game Logic Processing
+
+The core game rules, state updates, and interactions are handled by the `game_logic` component.
+
+*   **`game_logic.+x` (compiled from `plugins/game_logic.c`)**:
+    *   **Initialization**: On startup, it loads the game world map from `pieces/world/map.txt` (creating a default one if it doesn't exist) and initializes the player's position.
+    *   **Input Consumption**: It continuously monitors `pieces/keyboard/history.txt`. It reads new `KEY_PRESSED` entries, processing each command sequentially.
+    *   **Command Processing (`process_key_command`)**:
+        *   **Movement (w, a, s, d, arrow keys)**: Updates the player's coordinates (`player_x`, `player_y`) on an in-memory representation of the map. It checks for collisions with walls (`#`) and interactions with treasures (`T`). If the map changes (e.g., player moves), it calls `save_map_to_file("map.txt")` to persist the updated `pieces/world/map.txt`.
+        *   **Pet Actions (1=feed, 2=play, 3=sleep, 4=status, 5=evolve)**: These commands trigger specific effects on the FuzzPet's attributes (hunger, happiness, energy, level). These attribute changes are managed by executing `system("./+x/piece_manager.+x fuzzpet set-state <attribute> <value>")` commands.
+        *   **Time & Turn Advancement (6=end_turn, or movement)**:
+            *   Pressing '6' executes `system("./+x/end_turn.+x")`.
+            *   Any player movement also executes `system("./+x/increment_time.+x")` and `system("./+x/increment_turn.+x")` independently.
+            *   These executables (covered below) modify the `turn` and `time` entries in `pieces/clock/state.txt`.
+        *   **Master Ledger Logging**: Every significant action and state change (movement, pet actions, turn end) is logged to `pieces/master_ledger/master_ledger.txt` as `EventFire` entries. Crucially, it also logs `ResponseRequest` entries for pet actions, indicating a request for user feedback.
+    *   **State Interaction via `piece_manager.+x`**: `game_logic.+x` extensively uses `system("./+x/piece_manager.+x ...")` calls to:
+        *   `get-state <attribute>`: Retrieve current FuzzPet stats (e.g., hunger, happiness) or other piece states (e.g., keyboard's `last_key_logged`).
+        *   `set-state <attribute> <value>`: Update FuzzPet stats.
+    *   **Dashboard Preparation**: It constructs a comprehensive game dashboard by combining:
+        *   Current FuzzPet stats (fetched via `piece_manager.+x`).
+        *   Current turn and time (read from `pieces/clock/state.txt`).
+        *   The current game map.
+        *   Any `last_command_output` messages.
+    *   **Display Output**: This prepared dashboard is written to `pieces/display/current_frame.txt`. This file serves as the raw, ready-to-display content for the renderer.
+
+## 4. Clock Management
+
+The game's internal clock (time and turn) is managed by dedicated utilities.
+
+*   **`pieces/clock/state.txt`**: This file stores the current `turn` and `time` of the game (e.g., `turn 5`, `time 09:30:00`).
+*   **`increment_time.+x` (compiled from `plugins/increment_time.c`)**: Reads `pieces/clock/state.txt`, increments the game time by 5 minutes, handles time overflows (hours, days), and writes the updated time back to the `state.txt` file.
+*   **`increment_turn.+x` (compiled from `plugins/increment_turn.c`)**: Reads `pieces/clock/state.txt`, increments the game turn by 1, and writes the updated turn back to the `state.txt` file.
+*   **`end_turn.+x` (compiled from `plugins/end_turn.c`)**: This utility combines the logic of `increment_time.+x` and `increment_turn.+x`, providing a single command to advance both the game time (by 5 minutes) and the turn count (by 1). It directly reads and writes to `pieces/clock/state.txt`.
+
+## 5. Piece State Management Utility
+
+The `piece_manager` acts as the standardized interface for interacting with the state of individual "pieces."
+
+*   **`piece_manager.+x` (compiled from `plugins/piece_manager.c`)**:
+    *   This is a command-line utility designed to be called by other components (like `game_logic.+x` and `response_handler.+x`).
+    *   It parses `pieces/<piece_id>/piece.txt` files to extract state variables, responses, methods, and event listeners.
+    *   **Key Actions**:
+        *   `get-state <key>`: Retrieves the value of a specific state variable from a piece's `piece.txt` file.
+        *   `set-state <key> <value>`: Updates a state variable in a piece's `piece.txt` file. After modification, it rewrites the entire `piece.txt` file to ensure persistence and logs the `StateChange` to `pieces/master_ledger/master_ledger.txt`.
+        *   `get-response <event_type>`: Retrieves a predefined response string for a given event type from a piece's `piece.txt` file (e.g., "fed" -> "Yum yum~ Feeling so happy!").
+    *   This centralized management of piece files ensures consistency and modularity in state handling.
+
+## 6. Response Handling
+
+User feedback based on game events is provided by the `response_handler`.
+
+*   **`response_handler.+x` (compiled from `plugins/response_handler.c`)**:
+    *   Continuously monitors `pieces/master_ledger/master_ledger.txt` for new entries.
+    *   Specifically looks for `ResponseRequest` entries logged by `game_logic.+x`.
+    *   Upon detecting a `ResponseRequest`, it parses the event type and piece ID.
+    *   It then calls `system("./+x/piece_manager.+x <piece_id> get-response <event_type>")` to fetch the appropriate response message.
+    *   The retrieved response message is printed directly to the main console, providing textual feedback to the user.
+    *   It also logs a `ResponseTriggered` event to `pieces/master_ledger/master_ledger.txt`, documenting that the response was delivered.
+
+## 7. Display Rendering
+
+The final visual output is handled by the `renderer` component.
+
+*   **`renderer.+x` (compiled from `plugins/renderer.c`)**:
+    *   Continuously monitors the modification time of `pieces/display/current_frame.txt`.
+    *   Whenever `game_logic.+x` writes a new frame to `pieces/display/current_frame.txt` (causing its modification time to change), `renderer.+x` detects this.
+    *   It reads the entire content of `pieces/display/current_frame.txt` and prints it to standard output (`stdout`), effectively displaying the game's current state to the user.
+    *   It adds a timestamped separator `--- FRAME UPDATE ---` to delineate new frames, enhancing readability.
+
+## Pipeline Summary
+
+The FuzzPet system operates as a **file-driven, event-based pipeline**:
+
+1.  **Input**: `keyboard_input.+x` captures raw keyboard input and writes it to `pieces/keyboard/history.txt` and `pieces/master_ledger/master_ledger.txt`.
+2.  **Processing**:
+    *   `game_logic.+x` reads input from `pieces/keyboard/history.txt`.
+    *   It applies game rules, updates internal state (map), and manipulates piece states (e.g., FuzzPet's hunger) by interacting with `piece_manager.+x` (which in turn modifies `pieces/<piece_id>/piece.txt` files).
+    *   It updates the game clock via `increment_time.+x`, `increment_turn.+x`, or `end_turn.+x` (modifying `pieces/clock/state.txt`).
+    *   All significant events and state changes are logged to `pieces/master_ledger/master_ledger.txt`.
+    *   The complete visual state of the game is rendered into `pieces/display/current_frame.txt`.
+3.  **Output & Feedback**:
+    *   `renderer.+x` detects changes in `pieces/display/current_frame.txt` and prints its content to the user's console.
+    *   `response_handler.+x` monitors `pieces/master_ledger/master_ledger.txt` for `ResponseRequest` entries, fetches appropriate responses via `piece_manager.+x`, and prints them to the console.
+
+This architecture ensures modularity and allows each "piece" to focus on its specific responsibility, with inter-component communication facilitated entirely through the filesystem.
+
+---
+**To make modifications or fix things:**
+
+*   **Identify the relevant component**: Determine which part of the pipeline (input, logic, display, clock, piece management, response) is responsible for the functionality you want to change.
+*   **Locate the source file**: Find the corresponding `.c` file in the `plugins/` directory.
+*   **Understand file interactions**: Pay attention to which `.txt` files in `pieces/` the component reads from and writes to, and which `+x/` executables it calls via `system()`.
+*   **Modify code**: Make your changes in the `.c` file.
+*   **Recompile**: Recompile the modified `.c` file into its `+x` executable. (The `compile_all.sh` script probably handles this.)
+*   **Test**: Run `run_fuzzpet.sh` to test your changes.
+*   **Debugging**: Examine the various `.txt` files in `pieces/` (especially `history.txt`, `master_ledger.txt`, `current_frame.txt`, `state.txt`, `piece.txt` files) to trace data flow and identify where issues occur. The `master_ledger.txt` is particularly useful for auditing all events.

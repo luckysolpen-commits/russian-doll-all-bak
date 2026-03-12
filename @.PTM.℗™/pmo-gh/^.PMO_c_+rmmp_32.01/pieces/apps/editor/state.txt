@@ -1,0 +1,9 @@
+gui_focus=1
+emoji_mode=0
+cursor_x=5
+cursor_y=5
+cursor_z=0
+last_key=None
+project_id=template
+map_idx=0
+glyph_idx=0

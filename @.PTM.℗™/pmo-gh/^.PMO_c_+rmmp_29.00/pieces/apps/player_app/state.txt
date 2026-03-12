@@ -1,4 +1,0 @@
-project_id=template
-pet_status=                                                         
-last_response=                                             
-current_z=0

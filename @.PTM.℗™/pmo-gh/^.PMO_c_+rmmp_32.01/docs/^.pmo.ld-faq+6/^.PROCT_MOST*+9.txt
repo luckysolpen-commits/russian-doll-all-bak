@@ -1,0 +1,340 @@
+THE PRACTICAL MASTER - THE AUTHORITATIVE TPM v3.0 IMPLEMENTATION GUIDE
+========================================================================
+Updated: 2026-03-04 - Includes v3.0 Universal Input, Contextual Re-Parsing, Mirror Sync Mandate, and the 10-Step IO Pipeline.
+
+TABLE OF CONTENTS
+-----------------
+1. THE GLOSSARY: Defining TPM and PMO
+2. Core TPM Principles
+3. Directory Structure (TPM-Compliant)
+4. Piece Definition Format (PDL)
+5. The Three-Manager Pipeline (Detailed Logic)
+6. Master Ledger System & Monitor Threads
+7. Plugin Architecture (Sovereign Binaries)
+8. Input/Output Systems & The 10-Step Pipeline
+9. Event Management & Propagation
+10. Practical Examples (Pet & User Systems)
+11. FAQ & THE 7 DEADLY PITFALLS (Technical Pitfalls)
+12. Advanced TPM Patterns
+13. NEW: Clock Piece & Time Management
+14. NEW: Frame Change Detection (Marker-File Pattern)
+15. NEW: Dual Renderer Architecture (ASCII + GL)
+16. NEW: Orchestrator Pattern with Threads
+17. NEW: THE THEATER AND THE STAGE (OPTION Z)
+18. NEW: THE PMO HIERARCHY (PIECE-MODULE-OS)
+19. NEW: HYBRID VARIABLE EXPANSION (UI VS DATA)
+20. NEW: THE MIRROR SYNC MANDATE (DNA VS MIRROR)
+21. NEW: THE SHADOW SELECTOR NUANCE
+22. NEW: UNIVERSAL INPUT LAYER (JOYSTICK + KEYBOARD)
+23. NEW: CONTEXTUAL RE-PARSING (DYNAMIC UI INDEXING)
+24. NEW: HIGH-SPEED DIRECT MIRROR ACCESS
+25. NEW: UNIVERSAL TRAIT ENGINES (SHARED LOGIC)
+
+1. THE GLOSSARY: DEFINING TPM AND PMO
+=====================================
+
+### TRUE PIECE METHOD (TPM)
+TPM is a philosophy of software construction where every entity is a "Piece"—a self-contained directory on the filesystem that owns its own data (DNA), its own high-speed view (Mirror), its own behavior (Plugins), and its own history. 
+
+### PIECE-MODULE-OS (PMO)
+PMO is the hierarchical framework built upon TPM principles:
+- **PIECE**: The atomic unit of state (The Soul).
+- **MODULE**: The logic engine that animates pieces (The Brain).
+- **OS**: The shell/theater that provides navigation and layout (The World).
+
+2. CORE TPM PRINCIPLES
+======================
+
+PRINCIPLE 1: EVERYTHING IS A PIECE
+- Every application component is a directory with a piece.txt or piece.pdl file.
+- Examples: users, items, UI panels, clocks, ledgers, input handlers.
+
+PRINCIPLE 2: DATA SOVEREIGNTY
+- Pieces own their state - no shared global state. All state changes persist to disk immediately.
+
+PRINCIPLE 3: AUDIT OBSESSION  
+- Every operation logs to the master ledger. Complete traceability enables time-travel debugging.
+
+PRINCIPLE 4: PIPELINE FLOW
+- Sequential processing: Reader → Interpreter → Writer → Next Node. No direct calls.
+
+PRINCIPLE 5: NO IN-MEMORY SHORTCUTS
+- All data passes through files for auditability. behavior must be reproducible from the starting file state.
+
+3. DIRECTORY STRUCTURE (TPM-COMPLIANT)
+======================================
+
+**CRITICAL**: Plugins live INSIDE their piece directories, NOT in a central folder.
+
+```
+project/
+├── pieces/                 # All application pieces
+│   ├── keyboard/           # Keyboard input piece
+│   │   ├── piece.txt       # Core definition
+│   │   ├── history.txt     # Input history
+│   │   └── plugins/        # Piece-specific plugins
+│   │
+│   ├── display/            # Display piece
+│   │   ├── current_frame.txt
+│   │   └── frame_changed.txt
+│   │
+│   ├── apps/               # Macro-folders for applications
+│   │   └── fuzzpet_app/
+│   │       ├── world/      # Shared world piece
+│   │       └── traits/     # Shared capability engines
+│   │
+│   └── entities/           # Sovereign entities
+│       └── pet_01/
+│           ├── pet_01.pdl  # DNA (Truth)
+│           ├── state.txt   # Mirror (Performance)
+│           └── plugins/    # Sovereign behavior
+```
+
+4. PIECE DEFINITION FORMAT (PDL)
+================================
+
+A Piece Definition Language (PDL) file uses a section-based structure:
+```
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | pet_01
+STATE        | hunger             | 30
+METHOD       | feed               | void
+RESPONSE     | fed                | Yum yum!
+```
+
+5. THE THREE-MANAGER PIPELINE (DETAILED LOGIC)
+==============================================
+
+A) PIECE MANAGER (Logic Reference)
+```python
+class PieceManager:
+    def set_state(self, piece_id, key, value):
+        self.pieces[piece_id]['state'][key] = str(value)
+        self.save_piece(piece_id) # Updates .pdl DNA
+        self.sync_mirror(piece_id) # Updates state.txt Mirror (MANDATORY)
+        
+        # Log to master ledger for audit
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+        log_entry = f"[{timestamp}] StateChange: {piece_id} {key} {value}\n"
+        with open('pieces/master_ledger/master_ledger.txt', 'a') as ledger:
+            ledger.write(log_entry)
+```
+
+B) METHODS MANAGER: Registry of callable methods.
+C) EVENT MANAGER: Triggers response methods based on ledger events.
+
+6. MASTER LEDGER SYSTEM & MONITOR THREADS
+==========================================
+
+The master ledger is the centralized audit trail:
+```
+[2026-03-04 18:58:25] MethodCall: feed on pet_01 | Caller: user_input
+[2026-03-04 18:58:26] StateChange: pet_01 hunger 25 | Trigger: feed_method
+```
+
+MONITOR THREAD CODE:
+```python
+class MasterLedgerMonitor:
+    def _monitor_loop(self):
+        while self.monitoring:
+            with open(self.file_path, 'r') as ledger:
+                ledger.seek(self.last_position)
+                new_lines = ledger.readlines()
+                self.last_position = ledger.tell()
+            for line in new_lines:
+                self.parse_and_execute_line(line)
+            time.sleep(0.1)
+```
+
+7. PLUGIN ARCHITECTURE (SOVEREIGN BINARIES)
+===========================================
+
+Plugins reside in `plugins/+x/` binaries.
+```python
+# LOADING PLUGINS IN MAIN
+with open('plugin.config', 'r') as f:
+    for line in f:
+        spec = importlib.util.spec_from_file_location("plugin", line.strip())
+        plugin = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(plugin)
+        for name, func in plugin.__dict__.items():
+            if callable(func): methods_manager.register(name, func)
+```
+
+8. INPUT/OUTPUT SYSTEMS & THE 10-STEP PIPELINE
+==============================================
+
+This is the definitive flow of data in TPM v3.0:
+
+1.  **INPUT**: User types 'w' or moves a joystick.
+2.  **CAPTURE**: `keyboard_input` writes code 119 to `keyboard/history.txt`.
+3.  **TRANSLATION**: `chtpm_parser` reads 119, sees it's 'w', and detects `INTERACT` mode.
+4.  **RELAY**: Parser calls `inject_raw_key(119)` to append to the Module's `history.txt`.
+5.  **TICK**: `fuzzpet_manager` reads 119 from its local history.
+6.  **LOGIC**: Manager calls `move_entity.+x pet_01 w`.
+7.  **STATE**: `move_entity` updates `pos_y` in `pet_01.pdl`.
+8.  **MIRROR**: `piece_manager` immediately flushes `pos_y` to `pet_01/state.txt` (Mirror Sync).
+9.  **VIEW**: `map_render` reads `state.txt` mirrors directly and writes to `view.txt`.
+10. **RENDER**: Parser substitutes `view.txt` into the layout and writes the final frame to `current_frame.txt`.
+
+9. EVENT MANAGEMENT & PROPAGATION
+=================================
+
+```python
+def respond_to_event(piece_id, event_name):
+    responses = piece_manager.pieces[piece_id].get('responses', {})
+    message = responses.get(event_name, "Default message")
+    # Log response to maintain audit trail
+    log_entry = f"[{timestamp}] Response: {piece_id} {event_name} | Message: {message}\n"
+    with open('pieces/master_ledger/master_ledger.txt', 'a') as ledger:
+        ledger.write(log_entry)
+```
+
+10. PRACTICAL EXAMPLES
+======================
+
+Example: User Management
+- `pieces/user_alice/piece.txt`: Flat state (name, age).
+- `pieces/user_manager/piece.txt`: Methods (create_user, list_users).
+
+11. FAQ & THE 7 DEADLY PITFALLS
+===============================
+
+#### PITFALL 1: THE TRIM TRAP
+Filesystem mirrors often have trailing spaces or newlines (e.g., `on_map=1 `).
+```c
+// THE FIX:
+char* trim(char *str) {
+    while(isspace(*str)) str++;
+    char *end = str + strlen(str) - 1;
+    while(end > str && isspace(*end)) end--;
+    *(end + 1) = '\0';
+    return str;
+}
+```
+
+#### PITFALL 2: popen OVERHEAD
+Calling `popen` 100 times per frame will drop FPS to 5.
+**FIX**: Bypass the manager for READS; use Direct Mirror Access (parsing `state.txt` in C).
+
+#### PITFALL 3: mtime RESOLUTION
+mtime has 1-second resolution. Updates within the same second are missed.
+**FIX**: Watch the **SIZE** of `frame_changed.txt`.
+
+#### PITFALL 4: BUFFER TRUNCATION
+Expanding large maps into tag attributes causes corruption.
+**FIX**: Hybrid Expansion (Expand large variables during final render).
+
+#### PITFALL 5: RELATIVE PATH CONFUSION
+**WRONG**: `../pieces/history.txt` (creates nested folders).
+**RIGHT**: Calculate paths from project root via `location_kvp`.
+
+#### PITFALL 6: OVERWRITING STRUCTURE
+**WRONG**: `write_piece_state()` overwrites responses/methods.
+**RIGHT**: Preserve structure using a section-aware parser.
+
+#### PITFALL 7: REDUNDANT RESPONSES
+**ISSUE**: Background processes printing to stdout are lost.
+**FIX**: Log responses to `last_response.txt` and bake them into the frame.
+
+#### PITFALL 8: THE MEMORY CORRUPTION PULSE (v3.1)
+**ISSUE**: `fopen()` using a pointer that has already been `free()`'d.
+**SYMPTOM**: Files with corrupted names (e.g., `D-]`) appearing in the root directory.
+**FIX**: Ensure string lifetimes exceed their usage in I/O operations.
+
+#### PITFALL 9: THE STALE ROOT DRIFTER (v3.1)
+**ISSUE**: `location_kvp` hardcoding a `project_root` from a previous version/folder.
+**SYMPTOM**: System writes data to old versions or the current root instead of the active `pieces/` directory.
+**FIX**: Always resolve `project_root` dynamically using `SCRIPT_DIR` in `run_chtpm.sh`.
+
+12. ADVANCED TPM PATTERNS
+=========================
+
+- **Hierarchy**: Parent pieces owning children.
+- **Time-Travel**: Replaying the ledger to reconstruct state.
+
+13. NEW: CLOCK PIECE & TIME MANAGEMENT
+======================================
+
+Utilities like `increment_time.+x` ensure a shared temporal reality across all modules.
+
+14. NEW: FRAME CHANGE DETECTION (MARKER-FILE)
+=============================================
+
+```c
+// CONSUMER (RENDERER)
+struct stat st;
+stat("frame_changed.txt", &st);
+if (st.st_size != last_size) { render(); last_size = st.st_size; }
+```
+
+15. NEW: DUAL RENDERER ARCHITECTURE (ASCII + GL)
+================================================
+
+GL KEYBOARD HANDLING (Qt/PySide6):
+```python
+def keyPressEvent(self, event):
+    key_code = self.map_to_tpm(event.key())
+    with open("pieces/keyboard/history.txt", 'a') as fp:
+        fp.write(f"KEY_PRESSED: {key_code}\n")
+```
+
+16. NEW: ORCHESTRATOR PATTERN
+=============================
+
+The Orchestrator is the "Lungs" that launches the "Organs" (Parser, Manager, Renderer) as concurrent processes.
+
+17. NEW: THE THEATER AND THE STAGE (OPTION Z)
+=============================================
+
+- **Theater**: OS/Parser (Fixed Shell).
+- **Stage**: Module (Dynamic Content).
+- Parser is the SOLE final writer.
+
+18. NEW: THE PMO HIERARCHY (PIECE-MODULE-OS)
+============================================
+
+1. **Piece**: State Truth.
+2. **Module**: Logic Tick.
+3. **OS**: View Composition.
+
+19. NEW: HYBRID VARIABLE EXPANSION
+==================================
+
+- **Phase 1**: Expand `${piece_methods}` into XML tags for button tokenization.
+- **Phase 2**: Expand `${game_map}` during final render to protect attribute buffers.
+
+20. NEW: THE MIRROR SYNC MANDATE
+================================
+
+DNA (`.pdl`) is for the Soul; Mirror (`state.txt`) is for the Eyes. The core `piece_manager` must synchronize both.
+
+21. NEW: THE SHADOW SELECTOR NUANCE
+===================================
+
+Selector cursor 'X' is hidden during entity control but follows coordinates. ESC returns control to the Selector at the entity's position.
+
+22. NEW: UNIVERSAL INPUT LAYER
+==============================
+
+The OS Parser normalizes all directional input (1000-1003 and 2100-2103) to a shared character-based interface ('w/a/s/d').
+
+23. NEW: CONTEXTUAL RE-PARSING
+==============================
+
+When the target changes, the Parser forces a full re-tokenization of the layout to re-index entity-specific dynamic buttons.
+
+24. NEW: HIGH-SPEED DIRECT MIRROR ACCESS
+========================================
+
+Modules bypass `popen` for READ operations, parsing `state.txt` directly in C for true 60 FPS performance.
+
+25. NEW: UNIVERSAL TRAIT ENGINES
+================================
+
+Shared traits (like `move_entity.c`) apply consistent world rules (bounds, costs) to all entity types via context arguments.
+
+CONCLUSION
+==========
+TPM v3.0 is the definitive standard for auditable, high-performance modular systems. logic, state, and view remain decoupled yet perfectly synchronized via the Filesystem API.

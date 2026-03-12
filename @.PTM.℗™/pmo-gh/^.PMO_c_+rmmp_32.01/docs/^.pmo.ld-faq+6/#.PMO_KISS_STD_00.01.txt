@@ -1,0 +1,110 @@
+# PMO_KISS_STD_00.00.txt - The TPM Architecture Standard
+
+**Document Type:** Canonical Standard for Piece-Module-OS (PMO) Architecture
+**Status:** Foundational Standard
+**Principles:** True Piece Method (TPM) & K.I.S.S. (Keep It Simple, Stupid)
+**Date:** 2026-02-23
+
+---
+
+## 1. Core Philosophy: The PMO Hierarchy
+
+The architecture follows a strict thought priority: **PIECE -> MODULE -> OS**. This ensures that the system is built from the bottom up, with each layer remaining independent and auditable.
+
+### 1.1 PIECE (The Atomic Unit)
+- **Priority:** First. Every application component must be a Piece.
+- **Definition:** A directory containing text files that define reality.
+- **Components:**
+    - `piece.txt` / `.pdl`: Core definition (state, methods, listeners, responses).
+    - `ledger.txt`: Piece-specific audit trail.
+    - `history.txt`: Piece-specific input history.
+    - `plugins/`: Piece-specific logic (source and `+x/` binaries).
+- **Mandate:** **Data Sovereignty**. A Piece owns its state exclusively. No in-memory shortcuts or shared global variables.
+
+### 1.2 MODULE (The Business Logic)
+- **Priority:** Second. Modules orchestrate Pieces to perform complex actions.
+- **Communication:** Uses **File-Based IPC** (or `VARS:` via pipes).
+- **Responsibility:** Implements high-level application flow (e.g., game rules, task processing).
+- **Mandate:** **Stateless Logic**. Modules should ideally rely on Piece state for persistence, using `piece_manager` for standardized access.
+
+### 1.3 OS / LAYOUT (The Orchestration & View)
+- **Priority:** Third. The "OS" provides the environment, navigation, and user interface.
+- **Components:**
+    - `.chtpm` Layout files: UI structure and variable placeholders `${var}`.
+    - `chtpm_parser`: Hosts modules, handles UI navigation, and composes frames.
+    - `orchestrator`: Manages concurrent processes (Threads/Processes).
+- **Mandate:** **Separation of Concerns**. The UI should reflect the state of Pieces and Modules without owning the underlying logic.
+
+---
+
+## 2. Core Operational Mandates
+
+### 2.1 Audit Obsession (The Master Ledger)
+Every meaningful action MUST be logged to the **Master Ledger** (`pieces/master_ledger/master_ledger.txt`).
+- **Standard Format:** `[TIMESTAMP] EventType: details | Source: component`
+- **Goal:** Total system reproducibility. The system should be replayable from the event stream.
+
+### 2.2 Pipeline Flow (KISS Principle)
+- **Reader -> Interpreter -> Writer -> Next Node**.
+- Avoid redundant processes doing the same thing. If multiple components have similar code, determine if it's for **Sovereign Independence** (good) or **Readability Confusion** (bad).
+- **Sovereignty Rule:** Two pieces may have similar "audit" logic because they are independent Macro Modules. This is not redundancy; it's modularity.
+
+### 2.3 Macro Folder Organization
+Related pieces must be grouped into Macro Folders (e.g., `pieces/apps/fuzzpet_app/`).
+- Prevents file scattering.
+- Enables "Drop-in" application portability.
+- Each Macro Folder is a self-contained ecosystem.
+
+---
+
+## 3. UI Nuances: Navigation vs. Passthrough
+
+One of the most critical nuances in PMO architecture is how keyboard input is routed between the OS/Parser and the active Module.
+
+### 3.1 Navigation Mode (Parser Priority)
+- **When:** `active_index == -1`.
+- **Behavior:** The Parser captures all keys.
+- **Standard Keys:** `w/s/a/d` or arrow keys move focus; numbers jump to indices; Enter activates elements.
+- **Frame Composition:** The Parser writes the frame to reflect focus changes.
+- **Module Pulsing:** The Module MUST still pulse continuously (see 3.3).
+
+### 3.2 Passthrough / INTERACT Mode (Module Priority)
+- **When:** An element with `onClick="INTERACT"` is active.
+- **Behavior:** The Parser stops processing game-related keys and **injects** them into the module's `history.txt`.
+- **Mechanism:** `inject_raw_key(code)`.
+- **Frame Composition:** The **Module** (not the parser) becomes the primary frame composer for the canvas area. This ensures K.I.S.S. (one process handles the game logic AND the game view).
+
+### 3.3 The "Always Pulse" Mandate (CRITICAL)
+- **C Version:** The Module (`fuzzpet.+x`) runs as a **separate process**, continuously polling its `history.txt` regardless of UI mode.
+- **Web/JS Version:** Must emulate this by calling `module.pulse()` unconditionally on every render loop.
+- **Anti-Pattern:** Only pulsing when `isInteractMode === true`. This causes UI button clicks (FEED, PLAY, etc.) to be written but never read.
+- **Correct Pattern:**
+```javascript
+// ALWAYS pulse - the module is a "separate process" in spirit
+await module.pulse();
+// Only add extra signaling in INTERACT mode
+if (isInteractMode) {
+    await pulseFrameChanged();
+}
+```
+
+---
+
+## 4. Signaling & Synchronization
+
+### 4.1 The Marker-File Pattern
+To solve the 1-second resolution limit of `mtime`, use the **Append-Only Marker**:
+- Writer appends "X
+" to `pieces/master_ledger/frame_changed.txt`.
+- Reader monitors the **FILE SIZE** (exact resolution).
+- This is the only reliable way to achieve 60+ FPS synchronization in a file-based system.
+
+---
+
+## 5. Summary Mantra
+
+> **"Build the Piece first. Connect it to a Module. Wrap it in a Layout. Log every breath to the Ledger. Keep it file-based, keep it independent, keep it simple."**
+
+---
+**Standard Maintainer:** TPM Architecture Team
+**Reference Implementation:** `c+x_tpm_FUZPET+gl_12+PDLON/`
