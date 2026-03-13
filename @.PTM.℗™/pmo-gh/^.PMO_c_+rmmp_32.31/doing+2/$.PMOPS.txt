@@ -1,0 +1,1013 @@
+# $.PMOPS.txt - THE PAL/OPS MONOLITH
+**Date:** 2026-03-11
+**Status:** AUTHORITATIVE CANONICAL MONOLITH
+**Version:** 1.0 (PAL/OPS Integration Edition)
+**Supersedes:** !TPM2.PAL.MONOLITH.md (v5.0)
+
+---
+
+## EXECUTIVE SUMMARY: THE THREE ERAS
+
+### ERA 1: LEGACY FUZZPET (SOLID ✓)
+**Location:** `pieces/apps/fuzzpet_app/`
+**Status:** PRODUCTION-READY, SELF-CONTAINED
+
+The original FuzzPet application is a complete, working implementation of TPM principles:
+- Self-contained macro folder with isolated state
+- Dedicated manager (`fuzzpet_manager.c`) handling input → logic → render
+- Trait-based architecture (`traits/` folder with `move_entity.c`, `zombie_ai.c`)
+- Clock integration with turn/time system
+- Direct C execution (no Prisc VM overhead)
+
+**Key Files:**
+```
+pieces/apps/fuzzpet_app/
+├── manager/fuzzpet_manager.c    # Main game loop
+├── fuzzpet/                     # Pet piece (state + behavior)
+├── traits/                      # Shared logic (move_entity, zombie_ai)
+├── world/                       # Map rendering
+└── clock/                       # Time management
+```
+
+**Why It's Solid:**
+- Single responsibility: Pet simulation only
+- No project system complexity
+- Direct file I/O, no abstraction layers
+- Tested pipeline: keyboard → history → manager → trait → state → render
+
+---
+
+### ERA 2: TPM/PMO CORE (SOLID ✓)
+**Location:** `pieces/chtpm/`, `pieces/master_ledger/`, `pieces/system/`
+**Status:** CANONICAL INFRASTRUCTURE
+
+The core OS layer providing:
+- **CHTPM Parser:** Layout parsing, variable substitution, input routing
+- **Orchestrator:** Multi-process lifecycle management
+- **Piece Manager:** Standardized state read/write operations
+- **Clock Daemon:** System-wide time management
+- **Master Ledger:** Centralized audit trail
+
+**Key Files:**
+```
+pieces/chtpm/
+├── plugins/chtpm_parser.c       # UI composition, input routing
+├── plugins/orchestrator.c       # Process management
+└── layouts/*.chtpm              # UI templates
+
+pieces/master_ledger/
+└── plugins/piece_manager.+x     # State CRUD operations
+
+pieces/system/
+├── clock_daemon/                # Background time ticking
+├── prisc/                       # PAL VM (prisc+x.c)
+└── input_dispatcher/            # Keyboard/joystick capture
+```
+
+**Why It's Solid:**
+- Mathematically precise pipeline (12-step I/O cycle)
+- Battle-tested marker-file synchronization
+- Proper process isolation with signal handling
+- Environment-agnostic path resolution via `location_kvp`
+
+---
+
+### ERA 3: NEW EDITOR + PROJECTS + PAL/OPS (SHAKY ⚠️)
+**Location:** `pieces/apps/editor/`, `pieces/apps/playrm/`, `projects/`
+**Status:** ACTIVE DEVELOPMENT, ARCHITECTURAL TENSION
+
+The new architecture introduces:
+- **Project System:** Games as loadable projects (`projects/{id}/`)
+- **Shared Ops Library:** Reusable binaries (`pieces/apps/playrm/ops/`)
+- **PAL Scripting:** Prisc VM for event-driven behavior
+- **Editor/Player Duality:** Same ops, different contexts
+
+**Why It's Shaky:**
+1. **Identity Crisis:** Editor calls ops that were designed for player
+2. **Path Resolution Chaos:** Three priority systems (env vars, location_kvp, manager state)
+3. **State Fragmentation:** Editor state vs player state vs project state
+4. **PAL Integration Half-Complete:** Prisc VM exists but ops don't fully use it
+5. **Undo/Redo Complexity:** Ledger-based undo conflicts with op-driven architecture
+
+---
+
+## 1. THE PMO HIERARCHY (UPDATED)
+
+### 1.1 PIECE (The Atomic Unit / Soul)
+**Unchanged from TPM v5.0**
+
+```
+projects/{id}/pieces/{piece_name}/
+├── piece.pdl          # DNA (Truth) - state, methods, responses
+├── state.txt          # Mirror (Speed) - flat key=value
+├── ledger.txt         # Audit trail
+└── plugins/+x/        # Behavior binaries (optional)
+```
+
+**NEW:** Pieces can now be instantiated dynamically via `create_piece.+x` op.
+
+---
+
+### 1.2 MODULE (The Logic Agent / Brain)
+**EVOLVED:** Modules now come in two flavors:
+
+#### Type A: Monolithic Module (Legacy FuzzPet)
+```c
+// fuzzpet_manager.c - Does everything
+while (1) {
+    poll_history();
+    route_input();      // Internal routing
+    execute_logic();    // Direct function calls
+    update_state();     // Direct file writes
+    trigger_render();
+}
+```
+
+#### Type B: Op-Driven Module (New Player/Editor)
+```c
+// playrm_module.c - Thin orchestrator
+while (1) {
+    poll_history();
+    if (key == 'w')
+        system("./ops/+x/move_entity.+x hero up");  // Delegate to op
+    if (project == "fuzzpet_v2")
+        system("prisc+x scripts/game_loop.asm");    // Delegate to PAL
+}
+```
+
+**MANDATE:** New modules MUST be Type B (Op-Driven).
+
+---
+
+### 1.3 OS / CHTPM (The Theater / View)
+**ENHANCED:** Now supports dynamic layout switching based on project.
+
+```c
+// chtpm_parser.c - Layout routing
+if (project_id == "fuzzpet_v2")
+    current_layout = "fuzzpet_v2.chtpm";
+else if (strstr(layout, "editor"))
+    current_layout = "editor.chtpm";
+else
+    current_layout = "playrm/layouts/game.chtpm";
+```
+
+---
+
+### 1.4 PAL (The Script Layer / Nervous System)
+**NEW TIER:** Sits between Module and Ops for event-driven behavior.
+
+```
+INPUT → MODULE → PAL SCRIPT → OPS → STATE
+              (Prisc VM)   (Muscles)
+```
+
+**Purpose:**
+- Allows users to create complex behavior without C compilation
+- Provides conditional logic, loops, and state checks
+- Enables "no-code" event editing via visual Op selector
+
+---
+
+## 2. THE 14-STEP PIPELINE (UPDATED FOR PAL/OPS)
+
+### MODE 1: DIRECT C EXECUTION (Legacy FuzzPet Style)
+```
+1. INPUT: keyboard_input.+x → pieces/keyboard/history.txt
+2. ROUTING: chtpm_parser.c reads key, injects to app history
+3. TICK: fuzzpet_manager.c polls local history
+4. TRAIT: Manager calls move_entity.c (direct C function)
+5. SOVEREIGNTY: Trait updates piece.pdl
+6. MIRROR SYNC: Update flushed to state.txt
+7. STAGE: map_render.c reads mirrors, writes view.txt
+8. SIGNAL: Manager hits frame_changed.txt
+9. COMPOSITION: Parser substitutes ${game_map}, ${clock_time}
+10. RENDER: Parser writes current_frame.txt
+11. DISPLAY: renderer.+x prints to terminal
+12. AUDIT: Response handler logs to master_ledger.txt
+13. PULSE: Clock daemon ticks (background thread)
+14. SYNC: Active GUI index exported for focus tracking
+```
+
+### MODE 2: OP-DRIVEN EXECUTION (New Player/Editor)
+```
+1. INPUT: keyboard_input.+x → pieces/keyboard/history.txt
+2. ROUTING: chtpm_parser.c injects to pieces/apps/player_app/history.txt
+3. TICK: playrm_module.c polls history
+4. DELEGATE: Module calls system("./ops/+x/move_entity.+x ...")
+5. OP EXEC: move_entity.+x runs as separate process
+6. SOVEREIGNTY: Op reads/writes projects/{id}/pieces/{piece}/state.txt
+7. MIRROR SYNC: Op updates state.txt directly
+8. SIGNAL: Op hits frame_changed.txt
+9. STAGE: render_map.+x reads all piece states
+10. COMPOSITION: Parser substitutes ${game_map}
+11. RENDER: Parser writes current_frame.txt
+12. DISPLAY: renderer prints frame
+13. AUDIT: Op logs to master_ledger.txt
+14. PULSE: Clock daemon ticks (independent)
+```
+
+### MODE 3: PAL SCRIPT EXECUTION (Event-Driven)
+```
+1. TRIGGER: Player steps on tile / clicks NPC / timer fires
+2. MODULE: playrm_module.c detects trigger
+3. PAL BOOT: Module launches prisc+x scripts/event.asm
+4. ENV SETUP: Module sets PRISC_PROJECT_ID, PRISC_ACTIVE_TARGET
+5. SCRIPT: Prisc VM executes PAL instructions
+6. OP CALL: PAL script calls ops via `exec` or custom op handlers
+7. STATE: Ops update piece state
+8. SIGNAL: hit_frame instruction triggers re-render
+9. RETURN: Script halts, control returns to module
+10. RESUME: Module continues polling for next input
+```
+
+---
+
+## 3. THE SHARED OPS LIBRARY (CUTTING EDGE)
+
+### 3.1 OPS ARCHITECTURE
+
+**Location:** `pieces/apps/playrm/ops/`
+
+```
+ops/
+├── src/
+│   ├── move_entity.c        # Move any piece (player, selector, NPC)
+│   ├── move_selector.c      # Editor-specific cursor movement
+│   ├── place_tile.c         # Terrain modification
+│   ├── create_piece.c       # Dynamic piece instantiation
+│   ├── undo_action.c        # Ledger-based undo
+│   ├── render_map.c         # View composition
+│   ├── interact.c           # Entity interaction handler
+│   ├── menu_op.c            # Menu display/selection
+│   ├── project_loader.c     # Project initialization
+│   ├── console_print.c      # Debug output
+│   ├── fuzzpet_action.c     # Pet-specific actions (feed, play, sleep)
+│   ├── stat_decay.c         # Passive stat reduction
+│   ├── inspect_tile.c       # Tile/piece info display
+│   ├── scan_op.c            # Area scanning
+│   ├── collect_op.c         # Item collection
+│   └── inventory_op.c       # Inventory management
+└── +x/
+    └── *.+x                 # Compiled binaries
+```
+
+### 3.2 OP INTERFACE STANDARD
+
+**Signature Pattern:**
+```bash
+./op_name.+x <arg1> <arg2> <arg3> [--flag value]
+```
+
+**Examples:**
+```bash
+# Movement
+./move_entity.+x <piece_id> <direction>
+./move_entity.+x hero up
+./move_entity.+x selector right
+
+# Terrain
+./place_tile.+x <map_id> <x> <y> <tile_char>
+./place_tile.+x map_001 5 5 #
+
+# Piece Management
+./create_piece.+x <type> <x> <y> [project_id]
+./create_piece.+x npc 7 3 demo_1
+
+# Undo
+./undo_action.+x [project_id]
+
+# Rendering (no args, reads state)
+./render_map.+x
+```
+
+### 3.3 OP LIFECYCLE
+
+```c
+int main(int argc, char *argv[]) {
+    // 1. Parse arguments
+    if (argc < 2) { fprintf(stderr, "Usage: ..."); return 1; }
+    
+    // 2. Resolve paths (location_kvp → manager state → env vars)
+    resolve_paths();
+    
+    // 3. Read current state
+    get_piece_state(piece_id, "pos_x", &x);
+    
+    // 4. Execute logic
+    new_x = x + delta;
+    
+    // 5. Write new state
+    set_piece_state(piece_id, "pos_x", new_x);
+    
+    // 6. Log to ledger
+    log_event("MoveEntity", "piece=%s new_x=%d", piece_id, new_x);
+    
+    // 7. Hit frame marker
+    hit_frame_marker();
+    
+    return 0;
+}
+```
+
+---
+
+## 4. PRISC VM & PAL SCRIPTING (CUTTING EDGE)
+
+### 4.1 PRISC VM ARCHITECTURE
+
+**Location:** `pieces/system/prisc/prisc+x.c`
+
+**Instruction Set:**
+| Opcode | Name | Description |
+|--------|------|-------------|
+| 0x00 | ADDI | Add immediate: `rd = rs1 + imm` |
+| 0x01 | BEQ | Branch if equal: `if (rs1 == rs2) goto label` |
+| 0x02 | LW | Load word: `rd = mem[rs1 + imm]` |
+| 0x03 | SW | Store word: `mem[rs1 + imm] = rs2` |
+| 0x04 | JALR | Jump and link register |
+| 0x05 | J | Unconditional jump |
+| 0x06 | HALT | Stop execution |
+| 0x10 | CUSTOM | Custom op call |
+| 0x11 | READ_HISTORY | Read from history file |
+| 0x12 | EXEC | Execute shell command |
+| 0x13 | HIT_FRAME | Trigger frame re-render |
+| 0x14 | READ_STATE | Read piece state file |
+| 0x15 | READ_ACTIVE_TARGET | Get active target from env |
+| 0x16 | READ_ENV_KEY | Get key code from env |
+
+### 4.2 PAL SCRIPT FORMAT
+
+```asm
+# game_loop.asm - FuzzPet V2 Main Loop
+# Variables (parsed at load time)
+int key 0
+int menu_result 0
+string piece_id "fuzzpet"
+
+# Labels
+start:
+    # Read keyboard input
+    read_history r1
+    
+    # Branch on input
+    beq r1, x0, end          # r1 == 0? skip
+    addi r2, r1, -119        # 'w' key
+    beq r2, x0, move_up
+    addi r2, r1, -115        # 's' key
+    beq r2, x0, move_down
+    
+    # FuzzPet actions (keys 1-4)
+    addi r2, r1, -49         # '1' = feed
+    beq r2, x0, feed_pet
+    addi r2, r1, -50         # '2' = play
+    beq r2, x0, play_pet
+    
+    j end
+
+move_up:
+    exec ./ops/+x/move_entity.+x fuzzpet up
+    hit_frame
+    j end
+
+move_down:
+    exec ./ops/+x/move_entity.+x fuzzpet down
+    hit_frame
+    j end
+
+feed_pet:
+    exec ./ops/+x/fuzzpet_action.+x fuzzpet feed
+    hit_frame
+    j end
+
+play_pet:
+    exec ./ops/+x/fuzzpet_action.+x fuzzpet play
+    hit_frame
+    j end
+
+end:
+    halt
+```
+
+### 4.3 CUSTOM OPS INTEGRATION
+
+**Ops File Format:** `default_op.txt` or `player_ops.txt`
+
+```
+# Op definitions for Prisc VM
+# FORMAT: op_name type handler {description}
+
+move_entity    op     ./ops/+x/move_entity.+x    {Move piece in direction}
+fuzzpet_action op     ./ops/+x/fuzzpet_action.+x {Feed, play, sleep pet}
+layout_op      op     ./ops/+x/menu_op.+x        {Display menu, return selection}
+console_print  op     ./ops/+x/console_print.+x  {Debug output}
+hit_frame      op     ./ops/+x/hit_frame.+x      {Trigger re-render}
+```
+
+**Prisc Execution Flow:**
+```c
+// prisc+x.c - exec_custom_op()
+void exec_custom_op(Inst *i) {
+    CustomOp *op = &custom_ops[op_idx];
+    
+    // Handler is path to +x binary
+    if (strncmp(op->handler, "+x/", 3) == 0) {
+        char *cmd = NULL;
+        
+        // Pass literal arg if present
+        if (strlen(i->literal_arg) > 0) {
+            asprintf(&cmd, "%s \"%s\"", op->handler, i->literal_arg);
+        } else {
+            // Pass register value
+            asprintf(&cmd, "%s %d", op->handler, regs[i->rs1]);
+        }
+        
+        // Execute and capture output
+        FILE *pipe = popen(cmd, "r");
+        // ... read output ...
+        pclose(pipe);
+    }
+}
+```
+
+### 4.4 ENVIRONMENT VARIABLES FOR PAL
+
+**Set by Module before launching Prisc:**
+```bash
+PRISC_PROJECT_ID=demo_1       # Current project
+PRISC_PROJECT_ROOT=/path/to   # Absolute root
+PRISC_ACTIVE_TARGET=hero      # Active piece
+PRISC_KEY=119                 # Last key code
+```
+
+**Used by Ops for path resolution:**
+```c
+// move_entity.c - Priority-based resolution
+void resolve_paths() {
+    // PRIORITY 1: Environment variable (highest)
+    char *env_project = getenv("PRISC_PROJECT_ID");
+    if (env_project) {
+        strncpy(current_project, env_project, sizeof(current_project));
+        return;
+    }
+    
+    // PRIORITY 2: location_kvp
+    FILE *kvp = fopen("pieces/locations/location_kvp", "r");
+    // ... parse ...
+    
+    // PRIORITY 3: Manager state (fallback)
+    FILE *mgr = fopen("pieces/apps/player_app/manager/state.txt", "r");
+    // ... parse ...
+}
+```
+
+---
+
+## 5. THE EDITOR/PLAYER DUALITY (SHAKY BUT EVOLVING)
+
+### 5.1 EDITOR MODULE (Op-Driven Refactor)
+
+**Location:** `pieces/apps/editor/plugins/editor_module.c`
+
+**Key Features:**
+- WASD movement via `move_selector.+x` op
+- Space places tiles via `place_tile.+x` or `create_piece.+x`
+- Ctrl+Z undo via `undo_action.+x`
+- Backspace deletes terrain
+- Emoji toggle (key 4)
+- Glyph palette scrolling (keys 1000/1001)
+- Map palette scrolling
+
+**Code Pattern:**
+```c
+// editor_module.c - Op-driven input handling
+if (key == 'w' || key == 'W' || key == 1002) {
+    char cmd[MAX_CMD];
+    snprintf(cmd, sizeof(cmd), 
+             "%s/pieces/apps/playrm/ops/+x/move_selector.+x up > /dev/null 2>&1",
+             project_root);
+    system(cmd);
+}
+
+// Sync cursor from selector state
+char selector_state[MAX_CMD];
+snprintf(selector_state, sizeof(selector_state),
+         "%s/projects/%s/pieces/selector/state.txt", project_root, current_project);
+FILE *ssf = fopen(selector_state, "r");
+// ... parse pos_x, pos_y ...
+```
+
+### 5.2 PLAYER MODULE (PAL Bridge)
+
+**Location:** `pieces/apps/playrm/plugins/playrm_module.c`
+
+**Key Features:**
+- Project loading via `project_loader.+x`
+- Input routing to ops OR Prisc VM
+- FuzzPet V2 uses PAL scripts exclusively
+- Other projects use direct op calls
+
+**Code Pattern:**
+```c
+// playrm_module.c - PAL integration
+if (strcmp(current_project, "fuzzpet_v2") == 0) {
+    char *prisc_cmd = NULL;
+    asprintf(&prisc_cmd, 
+             "PRISC_KEY=%d PRISC_ACTIVE_TARGET=%s PRISC_PROJECT_ROOT=%s PRISC_PROJECT_ID=%s "
+             "%s/pieces/system/prisc/prisc+x %s/projects/%s/scripts/game_loop.asm",
+             key, active_target_id, project_root, current_project,
+             project_root, project_root, current_project);
+    system(prisc_cmd);
+} else {
+    // Direct op calls for non-PAL projects
+    if (key == 'w') call_op("move_entity", active_target_id, "up", NULL);
+}
+```
+
+### 5.3 THE TENSION POINTS
+
+#### 5.3.1 Path Resolution Chaos
+
+**Three competing systems:**
+1. **Environment Variables** (Prisc): `PRISC_PROJECT_ID`, `PRISC_PROJECT_ROOT`
+2. **Location KVP** (System): `pieces/locations/location_kvp`
+3. **Manager State** (App): `pieces/apps/{app}/manager/state.txt`
+
+**Problem:** Ops don't know which to trust. Editor ops use location_kvp, PAL ops use env vars, player ops use manager state.
+
+**Proposed Resolution:**
+```c
+// Standardized resolution order (ALL ops must follow)
+void resolve_paths_standard() {
+    // 1. Environment (if set, use exclusively)
+    if (getenv("PRISC_PROJECT_ROOT")) {
+        use_env_resolution();
+        return;
+    }
+    
+    // 2. Location KVP (system standard)
+    if (parse_location_kvp()) {
+        return;
+    }
+    
+    // 3. Manager state (app-specific fallback)
+    parse_manager_state();
+}
+```
+
+#### 5.3.2 State Fragmentation
+
+**Current State Locations:**
+```
+pieces/apps/editor/state.txt          # Editor preferences
+pieces/apps/editor/manager/state.txt  # Editor engine state
+pieces/apps/player_app/state.txt      # Player preferences
+pieces/apps/player_app/manager/state.txt  # Player engine state
+projects/{id}/manager/state.txt       # Project-specific state
+projects/{id}/pieces/{piece}/state.txt # Piece state
+```
+
+**Problem:** Which state file does an op read when called from editor vs player?
+
+**Current Hack:** Ops check `PRISC_PROJECT_ID` env var to determine context.
+
+#### 5.3.3 Undo/Ledger Complexity
+
+**Ledger Format:**
+```
+PLACE_TILE|map_0001|5|5|.|#
+CREATE_PIECE|npc|7|3
+DELETE_PIECE|chest|10|8
+```
+
+**Problem:** Editor ops log to `projects/{id}/config/editor_history.ledger`, but player ops log to `master_ledger.txt`. Undo only works for editor actions.
+
+**Proposed Unified Ledger:**
+```
+# projects/{id}/config/action_ledger.txt
+TIMESTAMP|CONTEXT|OP|ARGS|PREV_STATE|NEW_STATE
+2026-03-11T10:30:00|EDITOR|PLACE_TILE|map_001,5,5,#|.|#
+2026-03-11T10:30:05|PLAYER|MOVE_ENTITY|hero,up|5,5|5,4
+```
+
+---
+
+## 6. PROJECT SYSTEM (CUTTING EDGE)
+
+### 6.1 PROJECT STRUCTURE
+
+```
+projects/{id}/
+├── config.pdl             # Project metadata
+├── config/
+│   ├── editor_history.ledger  # Undo ledger
+│   ├── database.pdl           # RPG blueprints (actors, monsters, items)
+│   └── globals.txt            # Project-wide variables
+├── maps/
+│   ├── map_001.txt
+│   ├── map_002.txt
+│   └── map_001_z1.txt     # Z-levels
+├── pieces/
+│   ├── hero/
+│   │   ├── piece.pdl
+│   │   └── state.txt
+│   ├── npc_5_3/
+│   │   ├── piece.pdl
+│   │   └── state.txt
+│   └── selector/
+│       ├── piece.pdl
+│       └── state.txt
+└── scripts/
+    ├── game_loop.asm      # Main PAL script
+    ├── npc_greeting.asm   # Event scripts
+    └── cutscene_01.asm
+```
+
+### 6.2 PROJECT LOADER OP
+
+**Location:** `pieces/apps/playrm/ops/src/project_loader.c`
+
+**Responsibilities:**
+1. Validate project structure
+2. Load `config.pdl` metadata
+3. Initialize piece states from PDL
+4. Set engine state (`project_id`, `active_target_id`)
+5. Trigger initial render
+
+**Usage:**
+```bash
+./project_loader.+x [project_id]
+# If no arg, reads from manager state
+```
+
+### 6.3 BLUEPRINT SYSTEM (RPG DATABASE)
+
+**Location:** `projects/{id}/config/database.pdl`
+
+**Format:**
+```
+# Actor Blueprints
+[ACTOR:hero_base]
+type=actor
+hp=100
+mp=50
+atk=20
+def=15
+xp_curve=linear_100
+growth_hp=10
+growth_mp=5
+
+[ACTOR:npc_villager]
+type=actor
+hp=30
+dialogue=Hello traveler!
+behavior=passive
+
+# Monster Blueprints
+[MONSTER:zombie_basic]
+type=monster
+hp=50
+atk=15
+speed=1
+loot_table=common_items
+
+# Item Blueprints
+[ITEM:potion_small]
+type=item
+effect=heal
+value=25
+price=10
+```
+
+**Usage in Ops:**
+```c
+// create_piece.c - Apply blueprint
+void apply_blueprint(const char *piece_type, const char *blueprint_id) {
+    char *db_path = NULL;
+    asprintf(&db_path, "%s/projects/%s/config/database.pdl", 
+             project_root, current_project);
+    
+    // Parse [ACTOR:xxx] or [MONSTER:xxx] section
+    // Extract key=value pairs
+    // Write to piece state.txt
+}
+```
+
+---
+
+## 7. TECHNICAL PITFALLS (EXPANDED)
+
+### 7.1 THE TRIM TRAP (v5.0)
+**Unchanged:** Always `trim()` values from files.
+
+### 7.2 popen OVERHEAD (v5.0)
+**Unchanged:** Use direct mirror access for high-frequency reads.
+
+### 7.3 mtime RESOLUTION (v5.0)
+**Unchanged:** Use marker-file size detection.
+
+### 7.4 THE DUAL INJECTION BUG (v5.0)
+**Unchanged:** Don't inject both numeric and joystick codes.
+
+### 7.5 THE ENV VAR DRIFT (NEW ⚠️)
+**Problem:** Ops called from PAL scripts don't inherit environment variables if launched via `system()` without explicit export.
+
+**Wrong:**
+```c
+// Module sets env var, but child process doesn't see it
+setenv("PRISC_PROJECT_ID", "demo_1", 1);
+system("./ops/+x/move_entity.+x hero up");  // Env var lost!
+```
+
+**Correct:**
+```c
+// Explicitly pass env vars in command
+system("PRISC_PROJECT_ID=demo_1 PRISC_PROJECT_ROOT=/path ./ops/+x/move_entity.+x hero up");
+```
+
+### 7.6 THE LEDGER CONTEXT GAP (NEW ⚠️)
+**Problem:** Undo ledger doesn't track which context (editor vs player) created the entry.
+
+**Current:**
+```
+PLACE_TILE|map_001|5|5|.|#
+```
+
+**Should Be:**
+```
+EDITOR|PLACE_TILE|map_001|5|5|.|#
+PLAYER|MOVE_ENTITY|hero|5,5|5,4
+```
+
+### 7.7 THE SELECTOR VISIBILITY CONFLICT (NEW ⚠️)
+**Problem:** Editor renders selector as 'X', but player also has a selector piece. When switching contexts, selector may be invisible or in wrong position.
+
+**Current Hack:** Editor writes to `pieces/apps/editor/pieces/selector/state.txt`, player reads from `projects/{id}/pieces/selector/state.txt`.
+
+**Proposed:** Single selector piece at `projects/{id}/pieces/selector/` with context-aware rendering.
+
+### 7.8 THE PAL BOOTSTRAP PARADOX (NEW ⚠️)
+**Problem:** PAL scripts need ops to function, but ops are defined in `default_op.txt` which is parsed by Prisc. Circular dependency if ops file is missing.
+
+**Resolution:** Prisc must have hardcoded fallback ops (`addi`, `beq`, `halt`, `exec`, `hit_frame`).
+
+### 7.9 THE ASYMMETRIC HISTORY TRAP (NEW ⚠️)
+**Problem:** The `chtpm_parser` injects keys into one file (e.g., `pieces/apps/player_app/history.txt`) while the Module polls another (e.g., `pieces/apps/editor/history.txt`).
+**Symptoms:** Input is captured in `pieces/keyboard/history.txt` but the app doesn't react.
+**Resolution:** Standardize on `pieces/apps/player_app/history.txt` for all unified player/editor contexts, or use project-specific history.
+
+### 7.10 THE GHOST RENDERER (NEW ⚠️)
+**Problem:** Graphical windows (like `gl_renderer`) may not receive `SIGINT` if the terminal session is closed or `Ctrl+C` is hit.
+**Resolution:** The Orchestrator MUST handle `SIGHUP` and `SIGTERM` and call `kill(0, SIGTERM)` to clean up the entire process group.
+
+### 7.11 THE TRUNCATION TERROR (NEW ⚠️)
+**Problem:** The project enforces `-Wformat-truncation=1`. Using `snprintf` with fixed buffers for paths often triggers warnings.
+**Resolution:** Use `asprintf` for all path constructions. MANDATORY: Define `#define _GNU_SOURCE` before includes and always `free()` the result.
+
+---
+
+## 8. ARCHITECTURAL DECISIONS (EXPLAINED)
+
+### 8.1 WHY OPS ARE SEPARATE PROCESSES
+
+**Rationale:**
+1. **Crash Isolation:** Op crash doesn't bring down module
+2. **Language Agnostic:** Ops can be C, Python, Bash, etc.
+3. **Audit Trail:** Each op execution is a discrete event
+4. **Memory Clean:** No state leakage between calls
+
+**Trade-off:** Process spawn overhead (~5-10ms per op call)
+
+### 8.2 WHY PAL EXISTS
+
+**Rationale:**
+1. **User Scripting:** Non-programmers can create game logic
+2. **Hot Reload:** Scripts can be edited without recompilation
+3. **Event-Driven:** Cleaner than polling for triggers
+4. **Composable:** Scripts can call other scripts
+
+**Trade-off:** VM overhead, debugging complexity
+
+### 8.3 WHY PROJECTS USE PDL
+
+**Rationale:**
+1. **Human Readable:** Plain text, version-control friendly
+2. **Self-Describing:** Metadata embedded with data
+3. **Extensible:** New fields don't break parsers
+4. **TPM Compliant:** DNA/Mirror pattern
+
+**Trade-off:** Slower than binary formats, parsing complexity
+
+### 8.4 WHY EDITOR AND PLAYER SHARE OPS
+
+**Rationale:**
+1. **Code Reuse:** Fix bug once, benefits both
+2. **Consistency:** Same collision logic, same tile format
+3. **Bootstrap:** Game inherits editor-tested ops
+4. **TPM Compliant:** Ops are "muscles" - stateless, reusable
+
+**Trade-off:** Op interface must satisfy both contexts
+
+---
+
+## 9. THE ROADMAP (WHAT'S NEXT)
+
+### 9.1 IMMEDIATE PRIORITIES (M11-M12)
+
+1. **Stabilize Path Resolution:** Single source of truth for all ops
+2. **Unified Ledger:** Context-aware action logging
+3. **Selector Unification:** Single selector piece, context-aware rendering
+4. **PAL Debugging:** Step-through debugger for Prisc scripts
+5. **Visual Op Editor:** No-code interface for building PAL scripts
+
+### 9.2 SHORT TERM (M13-M15)
+
+1. **Blueprint System:** Full RPG database integration
+2. **Global Variables:** Project-wide state accessible from PAL
+3. **Multi-Z Support:** Z-level transitions in editor and player
+4. **Entity Scripting:** Per-piece PAL scripts (on_interact, on_enter)
+5. **Save/Load:** Project serialization for distribution
+
+### 9.3 LONG TERM (M16+)
+
+1. **P2P Trading:** Piece-based item exchange between projects
+2. **GL Renderer:** OpenGL visualization of piece states
+3. **AI Integration:** LLM-driven NPC behavior via PAL
+4. **Web Parity:** PHP/JS implementation of Prisc VM
+5. **3D Projection:** Piece-based 3D coordinate system
+
+---
+
+## 10. DEBUGGING GUIDE
+
+### 10.1 COMMON ISSUES
+
+**Issue:** Op doesn't update state
+**Check:**
+1. Is `project_root` resolved correctly?
+2. Does piece directory exist?
+3. Is state.txt writable?
+4. Did op hit `frame_changed.txt`?
+
+**Issue:** PAL script doesn't execute
+**Check:**
+1. Is `prisc+x` compiled?
+2. Is ops file (`default_op.txt`) present?
+3. Are environment variables set?
+4. Does script path exist?
+
+**Issue:** Input is captured but App is frozen
+**Check:**
+1. Run `ls -l pieces/apps/*/history.txt`. Which one is growing?
+2. Check `chtpm_parser.c` `inject_raw_key` logic.
+3. Check `module.c` `history_path` resolution. They MUST match.
+
+**Issue:** Editor and player out of sync
+**Check:**
+1. Are both using same `project_id`?
+2. Is selector state in correct location?
+3. Is ledger being written to correct file?
+4. Is render triggered after op execution?
+
+### 10.2 DEBUG COMMANDS
+
+```bash
+# Check active project
+cat pieces/apps/player_app/manager/state.txt | grep project_id
+
+# Check selector position
+cat projects/*/pieces/selector/state.txt
+
+# View recent ledger entries
+tail -20 pieces/master_ledger/master_ledger.txt
+
+# Check op compilation
+ls -la pieces/apps/playrm/ops/+x/
+
+# Test op directly
+./pieces/apps/playrm/ops/+x/move_selector.+x up
+
+# Check Prisc VM
+./pieces/system/prisc/prisc+x test.asm
+```
+
+### 10.3 LOG LOCATIONS
+
+```
+pieces/master_ledger/master_ledger.txt    # Global audit trail
+pieces/apps/editor/response.txt           # Editor feedback
+pieces/apps/fuzzpet_app/fuzzpet/last_response.txt  # FuzzPet responses
+projects/{id}/config/editor_history.ledger  # Undo ledger
+pieces/display/current_frame.txt          # Last composed frame
+pieces/keyboard/history.txt               # Input history
+```
+
+---
+
+## 11. GLOSSARY
+
+| Term | Definition |
+|------|------------|
+| **Piece** | Directory containing text files defining state and behavior |
+| **PDL** | Piece Definition Language - structured text format for piece DNA |
+| **Mirror** | `state.txt` - flat key=value cache of piece state |
+| **Module** | Logic agent that orchestrates pieces |
+| **Op** | Reusable +x binary (muscle) for state manipulation |
+| **PAL** | Prisc Assembly Language - scripting layer |
+| **Prisc VM** | Virtual machine executing PAL scripts |
+| **CHTPM** | Console HTMl Parser - UI composition engine |
+| **TPM** | True Piece Method - architectural philosophy |
+| **PMO** | Piece-Module-OS - hierarchical framework |
+| **Marker File** | File used for synchronization via size detection |
+| **Location KVP** | `pieces/locations/location_kvp` - path registry |
+| **Project** | Loadable game/application bundle |
+| **Blueprint** | Template for piece creation (RPG database) |
+
+---
+
+## 12. FINAL WISDOMS
+
+### 12.1 THE MANTRA
+> "Editor and Player are SEPARATE. They share the same Ops. Player loads projects. The Demo proves the pipeline. Keep it simple, stupid."
+
+### 12.2 THE PRAYER
+> "Hardware logs to History. Logic consumes History. Logic updates Pieces. Logic writes the View. Parser writes the Frame. Marker signals the Renderer. Time ticks in the background."
+
+### 12.3 THE COMMANDMENT
+> "Thou shalt not pass data in memory. All state shall be written to disk. All actions shall be logged. The Ledger is Truth."
+
+### 12.4 THE PROPHECY
+> "Scale does not change ontology. A NAND gate Piece and a Galaxy Piece differ only in state complexity, not structural rules."
+
+---
+
+**"If it's not in a file, it's a lie."**
+
+---
+
+## APPENDIX A: FILE TREE (COMPLETE)
+
+```
+^.PMO_c_+rmmp_31.00/
+├── run_chtpm.sh                    # System bootstrap
+├── compile_all.sh                  # Build all +x binaries
+├── kill_all.sh                     # Process cleanup
+├── pieces/
+│   ├── chtpm/                      # OS Parser
+│   │   ├── plugins/chtpm_parser.c
+│   │   ├── plugins/orchestrator.c
+│   │   └── layouts/*.chtpm
+│   ├── master_ledger/              # Audit system
+│   │   └── plugins/piece_manager.+x
+│   ├── system/
+│   │   ├── prisc/prisc+x.c         # PAL VM
+│   │   ├── clock_daemon/           # Time management
+│   │   └── input_dispatcher/       # Keyboard/joystick
+│   ├── keyboard/                   # Input capture
+│   ├── joystick/                   # Gamepad support
+│   ├── display/                    # Rendering
+│   │   ├── renderer.c              # ASCII renderer
+│   │   └── gl_renderer.c           # OpenGL renderer
+│   ├── locations/                  # Path resolution
+│   │   └── location_kvp
+│   ├── os/                         # Process management
+│   │   └── plugins/proc_manager.c
+│   └── apps/
+│       ├── editor/                 # Game editor
+│       │   ├── plugins/editor_module.c
+│       │   ├── ops/                # Editor-specific ops
+│       │   └── pieces/selector/    # Editor cursor
+│       ├── playrm/                 # Player bridge
+│       │   ├── plugins/playrm_module.c
+│       │   ├── loader/             # Project loader
+│       │   └── ops/                # SHARED OPS LIBRARY
+│       │       ├── src/
+│       │       └── +x/
+│       ├── player_app/             # Player application
+│       │   ├── manager/player_manager.c
+│       │   └── world/              # World rendering
+│       └── fuzzpet_app/            # Legacy FuzzPet
+│           ├── manager/fuzzpet_manager.c
+│           ├── fuzzpet/
+│           ├── traits/
+│           └── world/
+├── projects/                       # Game projects
+│   ├── fuzzpet_v2/
+│   │   ├── pieces/
+│   │   ├── maps/
+│   │   ├── scripts/
+│   │   └── manager/
+│   └── demo_1/
+│       ├── config.pdl
+│       ├── maps/
+│       ├── pieces/
+│       └── scripts/
+└── docs/                           # Documentation
+    ├── !TPM2.PAL.MONOLITH.md
+    ├── AGENT_ONBOARDING.md
+    └── ...
+```
+
+---
+
+**END OF MONOLITH**

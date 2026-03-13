@@ -1,0 +1,875 @@
+# PIPELINE DIFF: LEGACY FUZZPET vs NEW PIPELINE (V2)
+**Date:** 2026-03-12
+**Purpose:** Rigorous comparison of working legacy fuzzpet pipeline vs broken new pipeline
+**Goal:** Mirror working pipeline, remove broken parts
+
+---
+
+## EXECUTIVE SUMMARY
+
+**LEGACY FUZZPET WORKS. NEW PIPELINE DOESN'T.**
+
+The difference is not subtle - it's a fundamental architectural divergence in how input flows through the system.
+
+### The Core Problem
+
+| Aspect | Legacy Fuzzpet | New Pipeline (V2) |
+|--------|---------------|-------------------|
+| **Input Path** | Direct: `keyboard_input.+x` → `fuzzpet/history.txt` → `fuzzpet.c` | Indirect: `keyboard_input.+x` → `keyboard/history.txt` → Parser → Inject → `player_app/history.txt` → Module |
+| **Module Location** | `pieces/apps/fuzzpet_app/fuzzpet/plugins/fuzzpet.c` | `projects/fuzzpet_v2/manager/fuzzpet_v2_module.c` OR `pieces/apps/playrm/plugins/playrm_module.c` |
+| **State Location** | `pieces/apps/fuzzpet_app/fuzzpet/state.txt` | `pieces/apps/player_app/manager/state.txt` OR `projects/fuzzpet_v2/pieces/*/state.txt` |
+| **History File** | `pieces/apps/fuzzpet_app/fuzzpet/history.txt` | `pieces/apps/player_app/history.txt` (injected by parser) |
+| **Render Trigger** | Direct: `write_sovereign_view()` writes `fuzzpet/view.txt` | Indirect: `trigger_render()` calls `render_map.+x` which writes `player_app/view.txt` |
+| **Parser Role** | Passive: reads `view_changed.txt` marker | Active: injects keys, routes layout, launches module |
+
+---
+
+## 0.5 OP-ED ARCHITECTURE (THE TARGET PATTERN ✓)
+
+**CRITICAL INSIGHT:** op-ed IS working. It uses the "new pipeline" but SUCCESSFULLY. The problem isn't the architecture - it's incomplete implementation.
+
+### op-ed Pipeline (WORKING):
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ 1. KEYBOARD INPUT                                           │
+│    keyboard_input.+x → pieces/keyboard/history.txt         │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│ 2. PARSER (chtpm_parser.c)                                 │
+│    - Polls keyboard/history.txt                            │
+│    - NAV mode: Parser consumes (menu navigation)           │
+│    - INTERACT mode: Injects to project history             │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ (injects based on project)
+┌─────────────────────────────────────────────────────────────┐
+│ 3. INJECTED HISTORY                                        │
+│    projects/op-ed/history.txt (or player_app/history.txt)  │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ (module polls)
+┌─────────────────────────────────────────────────────────────┐
+│ 4. OP-ED MODULE (op-ed_module.c) - THIN ORCHESTRATOR       │
+│    - Polls history.txt (project-specific or player_app)    │
+│    - Routes input DIRECTLY to shared ops                   │
+│    - NO hardcoded game logic                               │
+│    - State sync from selector piece                        │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ (calls shared ops)
+┌─────────────────────────────────────────────────────────────┐
+│ 5. SHARED OPS (pieces/apps/playrm/ops/+x/)                │
+│    - move_player.+x selector up/down/left/right            │
+│    - place_tile.+x map x y glyph                           │
+│    - create_piece.+x glyph x y                             │
+│    - undo_action.+x                                         │
+│    - render_map.+x                                          │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ (ops update state + render)
+┌─────────────────────────────────────────────────────────────┐
+│ 6. STATE LAYER (TPM PIECES)                                │
+│    projects/op-ed/pieces/selector/state.txt                │
+│    projects/op-ed/maps/map_0001_z0.txt                     │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Why op-ed WORKS:
+
+1. **THIN MODULE**: `op-ed_module.c` is ~400 lines of pure routing. NO game logic.
+2. **SHARED OPS**: Uses `move_player.+x`, `place_tile.+x`, `create_piece.+x` from `playrm/ops/`
+3. **PROJECT ENCAPSULATION**: All state in `projects/op-ed/pieces/` and `projects/op-ed/maps/`
+4. **DIRECT OP CALLS**: Module calls ops directly via `system()` - no PAL complexity
+5. **STATE SYNC**: Module reads selector state after move ops to stay synchronized
+
+### op-ed Module Pattern (THE GOLDEN TEMPLATE):
+
+```c
+// op-ed_module.c - THIN ORCHESTRATOR (lines ~250-300)
+if (gui_focus_index == 1) {
+    /* TPM COMPLIANT: Use SHARED move_player op with 'selector' target */
+    if (key == 'w' || key == 'W' || key == 1002) {
+        char cmd[MAX_CMD];
+        snprintf(cmd, sizeof(cmd), "%s/pieces/apps/playrm/ops/+x/move_player.+x selector up > /dev/null 2>&1", project_root);
+        system(cmd);
+    }
+    // Sync local cursor vars from selector state
+    char selector_state_path[MAX_CMD];
+    snprintf(selector_state_path, sizeof(selector_state_path),
+             "%s/projects/%s/pieces/selector/state.txt", project_root, current_project);
+    FILE *ssf = fopen(selector_state_path, "r");
+    if (ssf) {
+        // Read pos_x, pos_y, pos_z from selector/state.txt
+        // Update local cursor_x, cursor_y, cursor_z
+    }
+}
+```
+
+**KEY TAKEAWAY:** op-ed doesn't use PAL scripts. It uses DIRECT OP CALLS. This is the pattern fuzzpet_v2 should follow.
+
+---
+
+## 1. LEGACY FUZZPET PIPELINE (WORKING ✓)
+
+### 1.1 File Locations
+
+```
+pieces/apps/fuzzpet_app/
+├── fuzzpet/
+│   ├── plugins/fuzzpet.c           ← MAIN BINARY (input + logic + render)
+│   ├── history.txt                  ← INPUT FILE (raw key codes)
+│   ├── state.txt                    ← STATE FILE (mirror)
+│   ├── view.txt                     ← VIEW FILE (composed frame)
+│   └── view_changed.txt             ← MARKER FILE (triggers parser refresh)
+├── manager/
+│   ├── fuzzpet_manager.c            ← ROUTER (input distribution)
+│   ├── state.txt                    ← MANAGER STATE (active_target_id, last_key)
+│   └── debug_log.txt                ← DEBUG LOG
+└── world/
+    ├── map.txt                      ← WORLD MAP
+    └── plugins/+x/map_render.+x     ← RENDERER BINARY
+```
+
+### 1.2 Input Pipeline (LEGACY)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ 1. KEYBOARD INPUT                                           │
+│    keyboard_input.+x (launched by orchestrator)            │
+│    - Reads raw terminal input                               │
+│    - Writes to pieces/apps/fuzzpet_app/fuzzpet/history.txt │
+│    - Format: "KEY_PRESSED: 119\n"                          │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ writes KEY_PRESSED: N
+┌─────────────────────────────────────────────────────────────┐
+│ 2. HISTORY FILE (fuzzpet_app/fuzzpet/history.txt)          │
+│    [2026-03-11 23:00:00] KEY_PRESSED: 119                  │
+│    [2026-03-11 23:00:01] KEY_PRESSED: 1002                 │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ READS DIRECTLY (no parser injection)
+┌─────────────────────────────────────────────────────────────┐
+│ 3. FUZZPET.C (fuzzpet/plugins/fuzzpet.c)                   │
+│    - Polls history.txt via input_thread()                  │
+│    - Reads from LAST_POSITION (incremental)                │
+│    - Calls process_key() for each new key                  │
+│    - Updates state.txt DIRECTLY                            │
+│    - Calls write_sovereign_view()                          │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ writes view.txt + view_changed.txt
+┌─────────────────────────────────────────────────────────────┐
+│ 4. VIEW FILE (fuzzpet/view.txt)                            │
+│    ╔═══════════════════════════════════════════════╗       │
+│    ║  ####################                          ║       │
+│    ║  #..................#                          ║       │
+│    ║  #..@...............#                          ║       │
+│    ║  #..................#                          ║       │
+│    ║  ####################                          ║       │
+│    ╠═══════════════════════════════════════════════╣       │
+│    ║  [FUZZPET]: Moved up                          ║       │
+│    ║  [SELECTOR]: Press 9 or J-B8 to toggle        ║       │
+│    ╚═══════════════════════════════════════════════╝       │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ appends to view_changed.txt
+┌─────────────────────────────────────────────────────────────┐
+│ 5. MARKER FILE (fuzzpet/view_changed.txt)                  │
+│    X\n (triggers parser to refresh frame)                  │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ READS (parser polls)
+┌─────────────────────────────────────────────────────────────┐
+│ 6. PARSER (chtpm_parser.c)                                 │
+│    - Polls view_changed.txt                                │
+│    - On change: calls compose_frame()                      │
+│    - Reads view.txt into ${game_map} variable              │
+│    - Writes to display/current_frame.txt                   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 1.3 Key Code Flow (LEGACY)
+
+```c
+// keyboard_input.c (lines ~50-80)
+while (1) {
+    c = getchar();  // Raw terminal input
+    if (c == 27) {  // Escape sequence for arrow keys
+        getchar();  // Skip '['
+        c = getchar();  // Get actual key code
+        if (c == 'A') key = 1002;  // UP
+        else if (c == 'B') key = 1003;  // DOWN
+        else if (c == 'D') key = 1000;  // LEFT
+        else if (c == 'C') key = 1001;  // RIGHT
+    }
+    
+    // Write to FUZZPET-SPECIFIC history
+    FILE *hf = fopen("pieces/apps/fuzzpet_app/fuzzpet/history.txt", "a");
+    fprintf(hf, "KEY_PRESSED: %d\n", key);
+    fclose(hf);
+}
+
+// fuzzpet.c (lines ~350-400)
+void* input_thread(void* arg) {
+    long last_pos = 0;
+    FILE *h_init = fopen("pieces/apps/fuzzpet_app/fuzzpet/history.txt", "r");
+    if (h_init) {
+        fseek(h_init, 0, SEEK_END);
+        last_pos = ftell(h_init);
+        fclose(h_init);
+    }
+    
+    while (1) {
+        FILE *hf = fopen("pieces/apps/fuzzpet_app/fuzzpet/history.txt", "r");
+        if (hf) {
+            struct stat st;
+            if (fstat(fileno(hf), &st) == 0) {
+                if (st.st_size > last_pos) {
+                    fseek(hf, last_pos, SEEK_SET);
+                    int key;
+                    while (fscanf(hf, "%d", &key) == 1) {
+                        process_key(key);  // DIRECT PROCESSING
+                    }
+                    last_pos = ftell(hf);
+                }
+            }
+            fclose(hf);
+        }
+        usleep(16667);
+    }
+}
+```
+
+### 1.4 Why It Works
+
+1. **DIRECT INPUT PATH**: `keyboard_input.c` writes directly to `fuzzpet/history.txt`, `fuzzpet.c` reads directly from it. No parser injection, no routing logic.
+
+2. **SELF-CONTAINED STATE**: All state files are in `pieces/apps/fuzzpet_app/fuzzpet/` - no cross-contamination with other apps.
+
+3. **SOVEREIGN VIEW**: `fuzzpet.c` composes its own view and writes to `fuzzpet/view.txt`. Parser just reads and displays.
+
+4. **CLEAR MARKER**: `view_changed.txt` is a simple trigger - parser doesn't need to guess what changed.
+
+5. **NO PROJECT COMPLEXITY**: Legacy fuzzpet doesn't use the project system. It's a standalone app with hardcoded paths.
+
+---
+
+## 2. NEW PIPELINE (V2 - BROKEN ⚠️)
+
+### 2.1 File Locations
+
+```
+projects/fuzzpet_v2/
+├── pieces/
+│   ├── fuzzpet/state.txt           ← PET STATE (project-local)
+│   ├── selector/state.txt          ← SELECTOR STATE
+│   └── zombie_01/state.txt         ← ENEMY STATE
+├── scripts/
+│   └── game_loop.asm               ← PAL SCRIPT (logic layer - NOT YET WORKING)
+├── manager/
+│   └── fuzzpet_v2_module.c         ← MODULE (input router)
+└── history.txt                      ← PROJECT HISTORY (unused?)
+
+pieces/apps/player_app/
+├── history.txt                      ← INJECTED INPUT (from parser)
+├── manager/
+│   └── state.txt                    ← ENGINE STATE (active_target_id, project_id)
+└── view.txt                         ← COMPOSED VIEW (from render_map.+x)
+
+pieces/apps/playrm/
+├── plugins/
+│   └── playrm_module.c             ← BRIDGE MODULE (alternative - HAS HYBRID LOGIC)
+└── ops/
+    ├── src/move_entity.c           ← SHARED OP
+    ├── src/render_map.c            ← SHARED OP
+    ├── src/move_selector.c         ← SHARED OP (used by op-ed)
+    ├── src/place_tile.c            ← SHARED OP (used by op-ed)
+    ├── src/create_piece.c          ← SHARED OP (used by op-ed)
+    └── +x/*.+x                     ← COMPILED OPS
+```
+
+### 2.2 Input Pipeline (NEW - BROKEN)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ 1. KEYBOARD INPUT                                           │
+│    keyboard_input.+x (launched by orchestrator)            │
+│    - Reads raw terminal input                               │
+│    - Writes to pieces/keyboard/history.txt                 │
+│    - Format: "KEY_PRESSED: 119\n"                          │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ writes KEY_PRESSED: N
+┌─────────────────────────────────────────────────────────────┐
+│ 2. KEYBOARD HISTORY (pieces/keyboard/history.txt)          │
+│    [2026-03-11 23:00:00] KEY_PRESSED: 119                  │
+│    [2026-03-11 23:00:01] KEY_PRESSED: 1002                 │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ READS (parser polls)
+┌─────────────────────────────────────────────────────────────┐
+│ 3. PARSER (chtpm_parser.c)                                 │
+│    - Polls keyboard/history.txt                            │
+│    - Checks: NAV mode or INTERACT mode?                    │
+│    - NAV mode: Parser consumes key (menu navigation)       │
+│    - INTERACT mode: Parser INJECTS to player_app/history.txt│
+│    - Injection logic (inject_raw_key):                     │
+│      1. Check <interact> tag (highest priority)            │
+│      2. Check project_id (projects/{id}/history.txt)       │
+│      3. Fallback to player_app/history.txt                 │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ INJECTS (parser writes)
+┌─────────────────────────────────────────────────────────────┐
+│ 4. INJECTED HISTORY (pieces/apps/player_app/history.txt)   │
+│    119                                                      │
+│    1002                                                     │
+│    (raw key codes, no timestamp)                           │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ READS (module polls)
+┌─────────────────────────────────────────────────────────────┐
+│ 5A. FUZZPET_V2_MODULE (projects/fuzzpet_v2/manager/...)    │
+│     OR                                                       │
+│ 5B. PLAYRM_MODULE (pieces/apps/playrm/plugins/...)         │
+│    - Polls player_app/history.txt                          │
+│    - Reads incremental keys                                │
+│    - Routes to ops or PAL scripts                          │
+│    - Updates project-local state                           │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ calls ops
+┌─────────────────────────────────────────────────────────────┐
+│ 6. OPS (pieces/apps/playrm/ops/+x/*.+x)                    │
+│    - move_entity.+x fuzzpet up                             │
+│    - render_map.+x                                          │
+│    - Updates state, writes view                            │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ writes player_app/view.txt
+┌─────────────────────────────────────────────────────────────┐
+│ 7. VIEW FILE (pieces/apps/player_app/view.txt)             │
+│    (composed by render_map.+x)                             │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ triggers frame_changed.txt
+┌─────────────────────────────────────────────────────────────┐
+│ 8. PARSER REFRESH                                          │
+│    - Polls display/frame_changed.txt                       │
+│    - Reads player_app/view.txt into ${game_map}            │
+│    - Writes display/current_frame.txt                      │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 2.3 Key Code Flow (NEW - BROKEN)
+
+**playrm_module.c has HYBRID LOGIC (BAD):**
+```c
+// HYBRID APPROACH: Movement direct, actions via PAL
+if (strcmp(current_project, "fuzzpet_v2") == 0) {
+    // MOVEMENT: Direct op calls (works for arrows + WASD)
+    int moved = 0;
+    const char* dir = NULL;
+    if (key == 'w' || key == 'W' || key == 1002) { dir = "up"; moved = 1; }
+    else if (key == 's' || key == 'S' || key == 1003) { dir = "down"; moved = 1; }
+    else if (key == 'a' || key == 'A' || key == 1000) { dir = "left"; moved = 1; }
+    else if (key == 'd' || key == 'D' || key == 1001) { dir = "right"; moved = 1; }
+    
+    if (moved) {
+        call_op("move_entity", active_target_id, dir, NULL);
+        trigger_render();
+        hit_frame_marker();
+        continue;  // Skip PAL for movement
+    }
+    
+    // ACTIONS: PAL script for complex logic
+    if (key >= '1' && key <= '7') {
+        char *prisc_cmd = NULL;
+        asprintf(&prisc_cmd, "PRISC_KEY=%d ... %s/projects/%s/scripts/game_loop.asm",
+                 key, project_root, current_project);
+        system(prisc_cmd);
+        // PAL calls render + hit_frame
+    }
+}
+```
+
+**Problem:** This is HALF op-driven, HALF PAL-driven. op-ed is 100% op-driven (no PAL).
+
+### 2.4 Why It's Broken
+
+1. **PATH MISMATCH**: Parser injects to `player_app/history.txt`, but module might read from `projects/fuzzpet_v2/history.txt` or `pieces/keyboard/history.txt`.
+
+2. **LAYOUT ROUTING**: `fuzzpet_v2.chtpm` should launch `fuzzpet_v2_module`, but parser might launch `playrm_module` instead (or both).
+
+3. **STATE SCATTER**: State is split between:
+   - `pieces/apps/player_app/manager/state.txt` (engine state)
+   - `projects/fuzzpet_v2/pieces/fuzzpet/state.txt` (pet state)
+   - `projects/fuzzpet_v2/manager/state.txt` (project state)
+   
+   **op-ed has ONE source of truth:** `projects/op-ed/pieces/selector/state.txt`
+
+4. **PAL COMPLEXITY**: op-ed doesn't use PAL scripts. fuzzpet_v2 has incomplete PAL integration that adds a layer of indirection without benefit.
+
+5. **MODULE AMBIGUITY**: Which module is active?
+   - `fuzzpet_v2_module.c` (project-local)
+   - `playrm_module.c` (shared bridge)
+   
+   Both poll the same history file = double processing or race conditions.
+   
+   **op-ed has ONE module:** `op-ed_module.c`
+
+6. **MISSING MARKER**: Legacy writes `view_changed.txt` to trigger parser. New pipeline writes `frame_changed.txt`, but parser might not be polling the right file.
+
+7. **HARDCODED LOGIC**: `playrm_module.c` has hardcoded pet logic (feed/play/sleep values). op-ed has ZERO game logic - pure routing.
+
+---
+
+## 3. CRITICAL DIFFERENCES
+
+### 3.1 Input Path Comparison
+
+| Step | Legacy | New | op-ed (TARGET) |
+|------|--------|-----|----------------|
+| 1 | `keyboard_input.c` → `fuzzpet/history.txt` | `keyboard_input.c` → `keyboard/history.txt` | Same as New ✓ |
+| 2 | `fuzzpet.c` reads directly | Parser reads, then injects | Same as New ✓ |
+| 3 | Direct processing | Parser routes based on mode | Same as New ✓ |
+| 4 | N/A | Inject to `player_app/history.txt` | Inject to `projects/{id}/history.txt` ✓ |
+| 5 | `process_key()` | Module polls, calls ops+PAL | Module polls, calls ops DIRECTLY ✓ |
+| 6 | N/A | PAL script runs (incomplete) | NO PAL - pure op calls ✓ |
+
+### 3.2 State Location Comparison
+
+| State Type | Legacy | New | op-ed (TARGET) |
+|------------|--------|-----|----------------|
+| Pet/Entity State | `fuzzpet/state.txt` | `projects/fuzzpet_v2/pieces/fuzzpet/state.txt` | `projects/{id}/pieces/{entity}/state.txt` ✓ |
+| Manager State | `manager/state.txt` | `player_app/manager/state.txt` | `player_app/manager/state.txt` ✓ |
+| View | `fuzzpet/view.txt` | `player_app/view.txt` | `player_app/view.txt` ✓ |
+| Marker | `fuzzpet/view_changed.txt` | `display/frame_changed.txt` | `display/frame_changed.txt` + `editor/view_changed.txt` ✓ |
+
+### 3.3 Module Comparison
+
+| Aspect | Legacy | New (fuzzpet_v2) | New (playrm) | op-ed (TARGET) |
+|--------|--------|------------------|--------------|----------------|
+| Lines of Code | ~490 | ~280 | ~350 | ~400 |
+| Game Logic | YES (hardcoded) | PARTIAL (PAL) | PARTIAL (hybrid) | NONE (pure router) |
+| Op Calls | N/A (monolithic) | YES (via PAL) | YES (direct) | YES (direct) ✓ |
+| State Sync | Internal | Via PAL | Via ops | Direct read from piece ✓ |
+| PAL Usage | NONE | YES (incomplete) | YES (fallback) | NONE ✓ |
+
+### 3.4 The Key Insight
+
+**op-ed PROVES the new pipeline CAN work.** It uses:
+- Same parser injection ✓
+- Same shared ops ✓
+- Same project encapsulation ✓
+- Same marker files ✓
+
+**The difference:** op-ed module calls ops DIRECTLY. No PAL. No hybrid logic. Pure routing.
+
+```
+op-ed: Input → Module → Op → State → Render (WORKS ✓)
+fuzzpet_v2: Input → Module → PAL → Op → State → Render (BROKEN - incomplete PAL)
+legacy: Input → Logic+Render (WORKS - but no op reuse)
+```
+
+---
+
+## 4. ROOT CAUSES OF FAILURE
+
+### 4.1 Primary Root Cause: INCOMPLETE OP-ED PATTERN
+
+**fuzzpet_v2 was supposed to follow op-ed but took a wrong turn.**
+
+**op-ed pattern (CORRECT):**
+```
+Module polls history → Key detected → Call op directly → Sync state → Render
+```
+
+**fuzzpet_v2 pattern (INCORRECT):**
+```
+Module polls history → Key detected → Call op OR PAL? → Sometimes render → State scatter
+```
+
+**The PAL detour:** Someone decided fuzzpet_v2 needed PAL scripts for "complex logic". But:
+- op-ed has complex logic (undo, glyph placement, entity creation) - NO PAL
+- PAL scripts are INCOMPLETE - movement works via direct ops, actions via PAL
+- This hybrid approach means NEITHER path is fully working
+
+### 4.2 Secondary Root Cause: MODULE LAUNCH FAILURE
+
+From `doing+2/module_fix.txt`:
+> **Symptom:** Module debug.txt is empty, module not in process list
+
+**Parser launch debug (chtpm_parser.c:launch_module):**
+```c
+void launch_module(const char* launch_str) { 
+    // DEBUG: Log module launch attempt
+    FILE *dbg = fopen("debug.txt", "a");
+    if (dbg) {
+        time_t t; struct tm *tm;
+        time(&t); tm = localtime(&t);
+        fprintf(dbg, "[%02d:%02d:%02d] PARSER: launch_module(%s) pid=%d\n",
+                tm->tm_hour, tm->tm_min, tm->tm_sec, launch_str, current_module_pid);
+        fclose(dbg);
+    }
+    // ... fork/exec ...
+}
+```
+
+**Expected in debug.txt:**
+```
+[00:30:00] PARSER: launch_module(projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x)
+[00:30:00] PARSER: forked module pid=12345
+```
+
+**If NOT present:**
+- Parser isn't parsing `<module>` tag in `fuzzpet_v2.chtpm`
+- Layout file might have wrong path
+- Parser's tag handling code is broken
+
+**op-ed doesn't have this problem** because it uses the SAME parser code. The difference is in the MODULE implementation, not the parser.
+
+### 4.3 Tertiary Root Cause: STATE OVERWRITE
+
+From `doing+2/proc_fix.txt`:
+> **Issue:** [KEY] shows "None" in interact mode
+> **Root Cause:** playrm_module.c overwrites last_key after PAL script runs
+
+**Broken code in playrm_module.c:**
+```c
+// Line 217-226: Key processed, last_key_str set, saved to disk ✓
+if (key >= 32 && key <= 126) snprintf(last_key_str, ...);
+save_engine_state();  // Saves last_key=ENTER
+
+// Line 229-237: PAL script runs
+system(prisc_cmd);
+
+// Line 238: BUG - reloads STALE state from disk!
+load_engine_state();  // ← Overwrites last_key_str with last_key=None from disk!
+```
+
+**Fix:** Remove line 238 (`load_engine_state();`).
+
+**op-ed doesn't have this problem** because it doesn't use PAL scripts and doesn't reload state after op calls.
+
+### 4.4 The Fundamental Issue: TWO MODULES, ONE HISTORY
+
+**Current broken setup:**
+```
+pieces/apps/player_app/history.txt
+    ↓ (read by BOTH)
+    ├─→ fuzzpet_v2_module.c (project-local, calls ops+PAL)
+    └─→ playrm_module.c (shared bridge, hybrid logic)
+```
+
+**Result:** Race conditions, double processing, or neither module processes keys.
+
+**op-ed setup (CORRECT):**
+```
+projects/op-ed/history.txt (or player_app/history.txt for template)
+    ↓ (read by ONE)
+    └─→ op-ed_module.c (ONLY module for this project)
+```
+
+**The fix:** ONE module per project. For fuzzpet_v2, either:
+1. Use `fuzzpet_v2_module.c` ONLY (remove playrm_module from the equation)
+2. OR use `playrm_module.c` ONLY (remove fuzzpet_v2_module)
+
+**Recommendation:** Follow op-ed - use project-local module that calls ops directly.
+
+---
+
+## 4.5 OP-ED ANALYSIS (THE WORKING TEMPLATE)
+
+**CRITICAL INSIGHT:** op-ed IS working. It uses the "new pipeline" but SUCCESSFULLY. The problem isn't the architecture - it's incomplete implementation in fuzzpet_v2.
+
+### op-ed Module Pattern (THE GOLDEN TEMPLATE):
+
+**File:** `pieces/apps/op-ed/plugins/op-ed_module.c` (~400 lines)
+
+**Key characteristics:**
+1. **THIN ORCHESTRATOR** - Pure input routing, ZERO game logic
+2. **DIRECT OP CALLS** - No PAL, no hybrid logic
+3. **STATE SYNC** - Reads from `projects/{id}/pieces/selector/state.txt` after ops
+4. **SHARED OPS** - Uses `move_player.+x`, `place_tile.+x`, `create_piece.+x` from `playrm/ops/`
+
+**Code pattern (lines ~250-300):**
+```c
+if (gui_focus_index == 1) {
+    /* TPM COMPLIANT: Use SHARED move_player op with 'selector' target */
+    if (key == 'w' || key == 'W' || key == 1002) {
+        char cmd[MAX_CMD];
+        snprintf(cmd, sizeof(cmd), "%s/pieces/apps/playrm/ops/+x/move_player.+x selector up > /dev/null 2>&1", project_root);
+        system(cmd);
+    }
+    // Sync local cursor vars from selector state
+    char selector_state_path[MAX_CMD];
+    snprintf(selector_state_path, sizeof(selector_state_path),
+             "%s/projects/%s/pieces/selector/state.txt", project_root, current_project);
+    FILE *ssf = fopen(selector_state_path, "r");
+    if (ssf) {
+        char line[MAX_LINE];
+        while (fgets(line, sizeof(line), ssf)) {
+            char *eq = strchr(line, '=');
+            if (eq) {
+                *eq = '\0';
+                char *k = trim_str(line);
+                char *v = trim_str(eq + 1);
+                if (strcmp(k, "pos_x") == 0) cursor_x = atoi(v);
+                else if (strcmp(k, "pos_y") == 0) cursor_y = atoi(v);
+            }
+        }
+        fclose(ssf);
+    }
+}
+```
+
+**Compare to fuzzpet_v2_module.c:**
+```c
+// HYBRID APPROACH: Movement direct, actions via PAL (INCOMPLETE)
+if (strcmp(current_project, "fuzzpet_v2") == 0) {
+    if (key == 'w' || key == 'W' || key == 1002) {
+        call_op("move_entity", active_target_id, "up", NULL);  // Direct ✓
+    }
+    if (key >= '1' && key <= '7') {
+        // PAL script (incomplete, untested) ⚠️
+        system(prisc_cmd);
+    }
+}
+```
+
+**The difference:** op-ed has ONE path (direct op calls). fuzzpet_v2 has TWO paths (ops + PAL).
+
+### op-ed Pipeline (WORKING):
+
+```
+keyboard_input.+x → keyboard/history.txt
+                        ↓
+                  chtpm_parser.c (injects to projects/op-ed/history.txt)
+                        ↓
+              projects/op-ed/history.txt
+                        ↓
+                op-ed_module.c (polls, calls ops directly)
+                        ↓
+        move_player.+x / place_tile.+x / create_piece.+x
+                        ↓
+        projects/op-ed/pieces/selector/state.txt
+                        ↓
+              render_map.+x → player_app/view.txt
+                        ↓
+              display/frame_changed.txt
+```
+
+**Every step is WORKING. No PAL. No hybrid logic.**
+
+### Shared Ops Library (playrm/ops/):
+
+**Available ops (ALL compiled in +x/):**
+| Op | Purpose | Used by op-ed | Used by fuzzpet_v2 |
+|----|---------|---------------|-------------------|
+| `move_player.+x` | Move selector | ✓ | ✗ (uses move_entity) |
+| `move_selector.+x` | Move selector (alt) | ✗ | ✓ |
+| `move_entity.+x` | Move any entity | ✗ | ✓ |
+| `place_tile.+x` | Place terrain | ✓ | ✗ |
+| `create_piece.+x` | Create entity | ✓ | ✗ |
+| `render_map.+x` | Compose view | ✓ | ✓ |
+| `undo_action.+x` | Undo last action | ✓ | ✗ |
+| `fuzzpet_action.+x` | Pet-specific actions | ✗ | ✓ |
+| `stat_decay.+x` | Passive decay | ✗ | ✓ |
+| `toggle_selector.+x` | Toggle selector mode | ✗ | ✓ |
+| `inspect_tile.+x` | Inspect tile | ✗ | ✓ |
+| `scan_op.+x` | Scan action | ✗ | ✓ |
+| `collect_op.+x` | Collect action | ✗ | ✓ |
+| `place_op.+x` | Place action | ✗ | ✓ |
+| `inventory_op.+x` | Inventory | ✗ | ✓ |
+
+**Key insight:** op-ed uses a SUBSET of ops. fuzzpet_v2 uses a DIFFERENT subset. Both share `render_map.+x`.
+
+**Future generalization:**
+- `move_player.+x` and `move_selector.+x` could be unified
+- `fuzzpet_action.+x` could become `entity_action.+x` (generic)
+- `stat_decay.+x` is already generic (works for any piece)
+
+### op-ed Project Structure:
+
+```
+projects/op-ed/
+├── project.pdl                  # Project metadata
+├── maps/
+│   └── map_0001_z0.txt         # Map file
+└── pieces/
+    └── selector/
+        └── state.txt            # Selector state (pos_x, pos_y, pos_z)
+```
+
+**Compare to fuzzpet_v2:**
+```
+projects/fuzzpet_v2/
+├── project.pdl
+├── maps/
+│   └── map_0001_z0.txt
+├── pieces/
+│   ├── fuzzpet/                # Pet piece
+│   │   └── state.txt
+│   ├── selector/               # Selector piece
+│   │   └── state.txt
+│   └── zombie_01/              # Enemy piece
+│       └── state.txt
+└── scripts/
+    └── game_loop.asm           # PAL script (INCOMPLETE)
+```
+
+**The difference:** fuzzpet_v2 has MORE pieces (fuzzpet, zombie_01) and PAL scripts. But the STRUCTURE is the same.
+
+### Why op-ed Works (SUMMARY):
+
+1. **ONE MODULE** - `op-ed_module.c` only. No hybrid, no PAL.
+2. **DIRECT OP CALLS** - `system("./ops/+x/move_player.+x ...")`
+3. **STATE SYNC** - Reads from piece state files after ops
+4. **SHARED OPS** - Uses common ops from `playrm/ops/`
+5. **NO PAL COMPLEXITY** - All logic in C (module), not assembly
+6. **CLEAN HISTORY PATH** - `projects/op-ed/history.txt` or `player_app/history.txt`
+
+### Why fuzzpet_v2 Doesn't Work (SUMMARY):
+
+1. **TWO MODULES** - `fuzzpet_v2_module.c` AND `playrm_module.c` (race condition)
+2. **HYBRID LOGIC** - Direct ops for movement, PAL for actions (incomplete)
+3. **NO STATE SYNC** - Doesn't read from piece state after ops
+4. **PARTIAL OP REUSE** - Some ops shared, some pet-specific
+5. **PAL COMPLEXITY** - Incomplete PAL scripts add indirection
+6. **UNCLEAR HISTORY PATH** - Parser injects one place, module might read another
+
+### The Fix (OBVIOUS NOW):
+
+**Make fuzzpet_v2 match op-ed:**
+
+1. Remove PAL scripts (or make optional)
+2. Use direct op calls for ALL actions
+3. Sync state from piece files after ops
+4. Ensure ONE module per project
+5. Align history path (parser inject = module read)
+
+**This is EASIER than gutting and rebuilding.** The ops already exist. The pipeline works. Just follow the pattern.
+
+---
+
+## 5. RECOMMENDED FIXES
+
+### 5.1 Option A: GUT AND REBUILD (RECOMMENDED)
+
+**Mirror legacy fuzzpet EXACTLY:**
+
+1. **Create standalone binary:**
+   ```
+   projects/fuzzpet_v2/plugins/fuzzpet_v2.c
+   ```
+   - Copy `fuzzpet.c` structure
+   - Change paths to use `projects/fuzzpet_v2/` instead of `pieces/apps/fuzzpet_app/`
+   - Keep direct input polling (no parser injection)
+
+2. **Direct history file:**
+   ```
+   projects/fuzzpet_v2/history.txt
+   ```
+   - `keyboard_input.c` writes directly (no parser injection)
+
+3. **Sovereign view:**
+   ```
+   projects/fuzzpet_v2/view.txt
+   projects/fuzzpet_v2/view_changed.txt
+   ```
+   - Binary writes directly (no render_map.+x op)
+
+4. **Local state:**
+   ```
+   projects/fuzzpet_v2/state.txt
+   ```
+   - All state in one file (no scatter)
+
+5. **Remove dependencies:**
+   - No PAL scripts
+   - No ops (except maybe move_entity for reuse)
+   - No project system complexity
+
+### 5.2 Option B: FIX NEW PIPELINE
+
+**If you must keep the new architecture:**
+
+1. **Fix module launch:**
+   - Verify `fuzzpet_v2.chtpm` has correct `<module>` tag
+   - Add debug logging to parser's `launch_module()`
+   - Check parser's tag parsing code
+
+2. **Fix state overwrite:**
+   - Remove `load_engine_state()` after PAL script runs
+   - Or save/restore `last_key_str` around PAL call
+
+3. **Fix path alignment:**
+   - Ensure parser's `inject_raw_key()` matches module's read path
+   - Use `<interact>` tag explicitly in layout
+
+4. **Simplify render:**
+   - Have module write view directly (like legacy)
+   - Remove `render_map.+x` dependency
+
+5. **Fix marker file:**
+   - Ensure module writes `view_changed.txt` (not just `frame_changed.txt`)
+   - Parser polls correct marker
+
+---
+
+## 6. VERIFICATION CHECKLIST
+
+After fixes, verify:
+
+- [ ] Module starts (check `debug.txt` for "MODULE STARTED")
+- [ ] Keys are logged (check `player_app/history.txt` has key codes)
+- [ ] Module processes keys (check `debug.txt` for "KEY=X")
+- [ ] State updates (check `state.txt` changes after key press)
+- [ ] View updates (check `view.txt` changes after key press)
+- [ ] Marker triggers (check parser refreshes frame)
+- [ ] Selector moves (visual confirmation)
+- [ ] [KEY] shows last key (visual confirmation)
+
+---
+
+## 7. CONCLUSION
+
+**LEGACY WORKS BECAUSE:**
+- Direct paths (no indirection)
+- Self-contained (no project system)
+- Sovereign view (no op dependencies)
+- Simple markers (view_changed.txt)
+
+**NEW IS BROKEN BECAUSE:**
+- Indirect paths (parser injection)
+- Project complexity (dynamic resolution)
+- Op dependencies (render_map.+x)
+- Complex markers (frame_changed.txt)
+
+**BUT WAIT - OP-ED WORKS WITH THE NEW PIPELINE!**
+
+**op-ed PROVES the architecture is sound:**
+- Same parser injection ✓
+- Same shared ops ✓
+- Same project encapsulation ✓
+- Same marker files ✓
+
+**The difference:** op-ed module calls ops DIRECTLY. No PAL. No hybrid logic. Pure routing.
+
+**RECOMMENDATION:**
+Follow op-ed pattern. Remove PAL complexity. Use direct op calls. Sync state from pieces.
+
+**"fuzzpet_v2 IS op-ed with a pet theme. Same ops, same patterns, different content."**
+
+---
+
+**"Respect the Past, Build the Future, Isolate the Present."**
+
+But also: **"If it ain't broke, don't fix it. If it is broke, copy what works."**
+
+And now: **"If op-ed works, copy op-ed."**

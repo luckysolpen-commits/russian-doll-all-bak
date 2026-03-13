@@ -1,0 +1,18 @@
+# 2do.txt - RMMP Editor & Fuzz Legacy Fixes
+
+## 1. RMMP EDITOR: MOVABLE SELECTOR
+- [ ] Debug why arrow keys aren't moving the selector in RMMP Editor.
+- [ ] Check if `projects/template/maps/map_01.txt` exists (used by `move_entity.+x`).
+- [ ] Ensure `editor_module.c` correctly reloads state after calling `move_entity.+x`.
+- [ ] Verify `move_entity.+x` project resolution logic for `template` project.
+
+## 2. FUZZ_LEGACY: RESTORE ENTITIES & PERSISTENCE
+- [ ] Identify original entities from `pieces/world/map_01/`.
+- [ ] Copy these entities (e.g., `pet_01`, `pet_02`, `zombie_01`) to `projects/fuzz_legacy/pieces/`.
+- [ ] Ensure `fuzz_legacy_manager.c` correctly selects entities in the project folder.
+- [ ] Fix "entities disappeared" by ensuring `on_map=1` and `type` are correct in project pieces.
+- [ ] Ensure map loads from `projects/fuzz_legacy/maps/map_01.txt` consistently.
+
+## 3. SHARED OPS REFINEMENT
+- [ ] Verify `move_entity.+x` handles `selector` piece without energy/happiness logic if not applicable.
+- [ ] Ensure `render_map.+x` is used by both modules for consistency.

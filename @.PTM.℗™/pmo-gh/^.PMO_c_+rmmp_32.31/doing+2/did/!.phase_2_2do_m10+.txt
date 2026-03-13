@@ -1,0 +1,51 @@
+PHASE 2: PALETTES, SELECTOR & PIECE CREATION (m10)
+Status: IN PROGRESS (Focus Synced)
+
+1. COMPLETED TASKS:
+------------------
+[X] Glyph Palette Scrolling: Arrows cycle through glyphs in Active Mode.
+[X] Focus Synchronization: Module reads 'active_gui_index.txt' to sync state.
+[X] Compact UI: Scroller and Row tags providing stable terminal layout.
+
+2. REMAINING TASKS:
+------------------
+A. SELECTOR AS A TPM PIECE (Priority 1):
+   - Identity: The editor selector is a Piece located at 'projects/{id}/pieces/selector/'.
+   - Visibility: 'render_map' must always render the selector (Icon: X or 🎯) as an entity.
+   - Persistence: Movement (WASD) updates the selector's 'state.txt' via piece_manager.
+
+B. DESTRUCTIVE EDITING (Backspace):
+   - Terrain: Pressing Backspace over terrain reverts the tile to the default '.' (via place_tile).
+   - Pieces: Pressing Backspace over an entity deletes its 'projects/{id}/pieces/{dir}/' folder.
+
+C. TPM HISTORY LEDGER (Undo / Ctrl+Z):
+   - File: 'projects/{id}/config/editor_history.ledger'.
+   - Logic: Every 'place_tile' or 'piece_creation' appends a record with the PREVIOUS state.
+   - Undo: Ctrl+Z reads the last entry, executes the inverse Op, and pops the line.
+
+D. PROJECT AS A PIECE:
+   - Metadata: Ensure each project folder contains 'project.pdl' (the Project Piece).
+   - Fields: Store 'title', 'author', 'description', and 'starting_map'.
+
+E. DYNAMIC PIECE CREATION:
+   - Logic: Painting an entity glyph (@, &, Z) triggers:
+     1. Creation of 'projects/{id}/pieces/{type}_{x}_{y}/'.
+     2. Generation of 'state.txt' with pos_x, pos_y, and 'type' blueprint.
+
+F. EMOJI TOGGLE INTEGRATION:
+   - Fix: Route Key 4 to toggle module 'emoji_mode'.
+   - Asset Swap: Swap ASCII set for Emojis in the Glyph Palette.
+
+3. KPIs (KEY PERFORMANCE INDICATORS):
+------------------------------------
+[X] KPI 1 (Scroll): Focus 3 scrolling is functional.
+[ ] KPI 2 (Selector): Selector 'X' is visible on map and moves with WASD.
+[ ] KPI 3 (Undo): Placing a tile and pressing Ctrl+Z reverts the map correctly.
+[ ] KPI 4 (Backspace): Deleting an entity removes its directory from the filesystem.
+[ ] KPI 5 (Instantiation): Placing an NPC creates a sovereign TPM Piece directory.
+
+4. NEXT STEPS:
+-------------
+1. Implement 'selector' movement and piece_manager integration in editor_module.c.
+2. Create the 'editor_history.ledger' handling logic.
+3. Update render_map.c to prioritize the selector icon for visibility.

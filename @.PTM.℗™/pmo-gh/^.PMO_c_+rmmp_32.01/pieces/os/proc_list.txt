@@ -1,7 +1,0 @@
-orchestrator=17830
-response_handler=17935
-chtpm_parser=17937
-gl_renderer=17945
-clock_daemon=17947
-renderer=17949
-loader_module=17976

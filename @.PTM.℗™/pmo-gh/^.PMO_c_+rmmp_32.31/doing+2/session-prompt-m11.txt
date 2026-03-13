@@ -1,0 +1,259 @@
+# SESSION PROMPT: M11 Input Pipeline Debugging
+**Date:** 2026-03-12
+**Session Goal:** Make parser write to a file, make module read from it
+
+---
+
+## WHAT WE DID THIS SESSION
+
+### 1. Discovered Module Wasn't Starting
+- Added debug logging to parser (`launch_module()`)
+- Added debug logging to module (`main()` and key processing)
+- Found: Module WAS starting, WAS reading keys
+
+### 2. Discovered History File Mismatch
+- Parser injects to: `pieces/apps/player_app/history.txt`
+- Module reads from: `pieces/keyboard/history.txt` (WRONG!)
+- Fix: Changed module to read from `pieces/apps/player_app/history.txt`
+
+### 3. Created `<interact>` Tag
+- Problem: Parser didn't know which file to inject to for different projects
+- Solution: `<interact src="pieces/apps/player_app/history.txt" />` in layout
+- Parser now uses `<interact>` path with highest priority
+
+### 4. Created Debug Tools
+- `check_history.sh` - Shows last 3 entries of all history files with FULL PATHS
+- `debug.txt` - Module and parser log startup and key processing
+- `troubleshooting.txt` - Step-by-step debug guide
+
+---
+
+## MISCONCEPTIONS WE HAD
+
+### ❌ "One History File Is Enough"
+**Wrong:** Module should read keyboard/history.txt directly like legacy fuzzpet.
+
+**Right:** Parser needs to inject to a SEPARATE file for INTERACT mode, otherwise nav and interact keys mix.
+
+### ❌ "Parser Should Guess Inject Path"
+**Wrong:** Parser can guess based on `project_id` or layout name.
+
+**Right:** Layout should EXPLICITLY specify inject path with `<interact>` tag.
+
+### ❌ "Module Can Hardcode Read Path"
+**Wrong:** Module hardcodes where it reads.
+
+**Right:** Layout's `<interact>` tag and module's read path must MATCH.
+
+---
+
+## WHAT WE LEARNED
+
+### 1. FuzzPet Pipeline Is Solid
+```
+keyboard_input.+x → keyboard/history.txt
+                        ↓
+                  chtpm_parser.c
+                        ↓ (injects in INTERACT mode)
+           player_app/history.txt
+                        ↓
+                fuzzpet_module.+x
+                        ↓ (calls ops)
+                  state.txt
+                        ↓
+                render_map.+x
+                        ↓
+                current_frame.txt
+```
+
+**Why it works:**
+- Clear separation: keyboard → parser → module → ops → state → render
+- Each component has ONE responsibility
+- File-based IPC = auditable, debuggable
+
+### 2. TPM Works With Ops
+- **TPM:** Everything is a Piece (directory with state files)
+- **Ops:** Reusable muscles (move_entity, place_tile, etc.)
+- **Together:** Module orchestrates ops, ops update pieces
+
+**Pattern:**
+```
+Module (brain) → Op (muscle) → Piece State (data)
+```
+
+### 3. Keep It Simple
+**Don't over-complicate:**
+- No PAL scripts for simple movement
+- No complex path resolution
+- No guessing
+
+**Do:**
+- Parser writes to file
+- Module reads from SAME file
+- Ops update state
+- Render displays state
+
+---
+
+## WHY FUZZPET PIPELINE IS THE TRUTH
+
+### Legacy FuzzPet (SOLID)
+```c
+// game_logic.c - monolithic but WORKING
+while (1) {
+    fseek(history, last_pos, SEEK_SET);  // Read keyboard/history.txt
+    while (fgets(line, ...)) {
+        key = atoi(...);
+        process_key(key);  // Direct function call
+        update_state();
+        render();
+    }
+}
+```
+
+### New Ops-Based (ALSO SOLID)
+```c
+// fuzzpet_v2_module.c - modular, same pipeline
+while (1) {
+    fseek(history, last_pos, SEEK_SET);  // Read player_app/history.txt
+    while (fgets(line, ...)) {
+        key = atoi(...);
+        call_op("move_entity", ...);  // Same logic, extracted to op
+        update_state();
+        render();
+    }
+}
+```
+
+**Same pipeline, just modular!**
+
+---
+
+## NEXT SESSION PRIORITIES
+
+### 1. Create Minimal Test Project (#.man-add)
+**Goal:** Prove the pipeline works in isolation
+
+**Structure:**
+```
+projects/#.man-add/
+├── project.pdl
+├── maps/map_0001.txt
+├── pieces/selector/state.txt
+├── manager/+x/man_add_module.+x
+└── manager/man_add_module.c
+```
+
+**Layout:**
+```xml
+<panel>
+    <module>projects/#.man-add/manager/+x/man_add_module.+x</module>
+    <interact src="projects/#.man-add/history.txt" />
+    
+    <button label="Test" onClick="INTERACT" />
+    <text>${game_map}</text>
+</panel>
+```
+
+**Module:**
+```c
+// Read from projects/#.man-add/history.txt
+// Call move_selector op
+// Update state
+// Trigger render
+```
+
+**Test:**
+1. Press arrow keys
+2. Check `projects/#.man-add/history.txt` has keys
+3. Check selector position changes
+4. Check view updates
+
+### 2. Verify All Projects Work
+- [ ] #.man-add (minimal test)
+- [ ] fuzzpet_v2 (full game)
+- [ ] demo_1 (simple demo)
+- [ ] editor (map editor)
+
+### 3. Document The Pattern
+- Copy working pattern to all projects
+- Ensure all layouts have `<interact>` tag
+- Ensure all modules read from correct file
+
+---
+
+## DEBUG TOOLS WE CREATED
+
+### 1. check_history.sh
+```bash
+./check_history.sh
+```
+Shows last 3 entries of ALL history files with full paths.
+
+**Use when:** Keys not working, don't know which file to check.
+
+### 2. debug.txt
+Location: `debug.txt` in project root
+
+**Contains:**
+- Parser launch attempts
+- Module startup
+- Key processing
+
+**Use when:** Module not starting, keys not processed.
+
+### 3. troubleshooting.txt
+Location: `doing+2/troubleshooting.txt`
+
+**Contains:**
+- Step-by-step debug guide
+- Common issues and fixes
+- Quick tests
+
+**Use when:** Stuck, don't know what to check next.
+
+### 4. interact.txt
+Location: `doing+2/interact.txt`
+
+**Contains:**
+- `<interact>` tag design
+- Why explicit is better than implicit
+- Example layouts
+
+**Use when:** Adding new project, need to configure inject path.
+
+---
+
+## THE PATTERN (SIMPLE)
+
+```
+1. Parser reads keyboard/history.txt
+2. In INTERACT mode, parser injects to <interact> path
+3. Module reads from SAME path
+4. Module calls ops
+5. Ops update state
+6. Render displays state
+```
+
+**That's it. Don't over-complicate.**
+
+---
+
+## RESOURCES
+
+| File | Purpose |
+|------|---------|
+| `check_history.sh` | View all history files |
+| `debug.txt` | Module/parser logs |
+| `troubleshooting.txt` | Debug guide |
+| `interact.txt` | `<interact>` tag spec |
+| `ops-faq_m11.txt` | Input routing FAQ |
+| `module_fix.txt` | Module launch debug |
+
+---
+
+**"Parser writes. Module reads. Ops update. Render displays. Keep it simple."**
+
+---
+
+**END OF SESSION PROMPT**

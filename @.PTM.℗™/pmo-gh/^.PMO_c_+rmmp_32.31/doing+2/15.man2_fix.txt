@@ -1,0 +1,32 @@
+# MAN-OPS/MAN-PAL FIX - THE SHARED TRAIT SUCCESS
+**Date:** 2026-03-12
+**Status:** ✅ RESOLVED
+**Outcome:** Standardized movement and interaction pipeline achieved.
+
+---
+
+## THE BREAKTHROUGH
+
+The complexity of the "Man-Ops" tracks was solved by identifying the core pipeline failure: **Map Resolution**. Previous attempts at movement failed because ops couldn't find the map files, defaulting to "collision" states.
+
+## KEY FIXES APPLIED
+
+1. **Standardized Interaction:** All tracks (Man-Ops, Man-Pal, Editor) now use `<interact src="pieces/apps/player_app/history.txt" />`. This ensures the OS routes keys to a single, predictable location.
+2. **Dynamic Map Resolution:** Updated `move_entity.c` to read `starting_map` from `project.pdl`. It now searches for `_z0.txt`, `.txt`, and `_zX.txt` variations, fixing the "immobile selector" bug in the `template` project.
+3. **Project-Aware Trait Calls:** Modules now pass the `current_project` ID as an argument to shared ops.
+   - Example: `./move_entity.+x selector w template`
+4. **Compile Clean Standards:** Adopted `asprintf` across all core modules to ensure 100% warning-free compilation and robust path handling.
+
+## WHAT WE LEARNED
+
+- **"Copy what works"** means copying the *pipeline*, not just the code.
+- The `fuzzpet_app` legacy logic is the most stable reference for entity interaction.
+- Shared traits (Ops) must be agnostic to map naming conventions via dynamic resolution.
+
+## CURRENT STATUS
+
+- `man-ops`: Working. Uses shared `move_entity` logic.
+- `op-ed`: Working. Uses shared `move_entity` logic.
+- `editor`: Working. Fully modernized with selection and shadow sync.
+
+**"The pipeline is now universal. Any project can move any piece."**

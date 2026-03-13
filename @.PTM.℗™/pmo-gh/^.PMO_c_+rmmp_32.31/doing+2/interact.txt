@@ -1,0 +1,262 @@
+# INTERACT.TXT - Dynamic Inject Path Specification
+**Date:** 2026-03-12 00:45
+**Problem:** Parser doesn't know which history file to inject to for different projects
+**Proposal:** `<interact>` tag in layout to specify inject target
+
+---
+
+## CURRENT CONFUSION
+
+### The Problem
+
+| Layout | Module | Parser Injects To | Module Reads |
+|--------|--------|-------------------|--------------|
+| main.chtpm (legacy fuzzpet) | fuzzpet_manager.+x | pieces/apps/fuzzpet_app/fuzzpet/history.txt | pieces/apps/fuzzpet_app/fuzzpet/history.txt ✓ |
+| fuzzpet_v2.chtpm | fuzzpet_v2_module.+x | pieces/apps/player_app/history.txt | pieces/apps/player_app/history.txt ✓ |
+| game.chtpm (generic) | playrm_module.+x | pieces/apps/player_app/history.txt | pieces/apps/player_app/history.txt ✓ |
+| loader.chtpm | loader_module.+x | pieces/apps/fuzzpet_app/fuzzpet/history.txt | ??? |
+
+**Parser's inject logic (chtpm_parser.c):**
+```c
+void inject_raw_key(int code) {
+    const char* project_id = get_var("project_id");
+    
+    if (strlen(project_id) > 0 && strcmp(project_id, "template") != 0) {
+        // Project-specific: projects/{id}/history.txt
+        asprintf(&path, "%s/projects/%s/history.txt", project_root_path, project_id);
+    } else if (strstr(current_layout, "editor") != NULL || 
+               strstr(current_layout, "playrm") != NULL || 
+               strstr(current_layout, "player") != NULL) {
+        // Player/Editor apps
+        path = build_path_malloc("pieces/apps/player_app/history.txt");
+    } else {
+        // Legacy fuzzpet
+        path = build_path_malloc("pieces/apps/fuzzpet_app/fuzzpet/history.txt");
+    }
+}
+```
+
+**Module's read logic (fuzzpet_v2_module.c):**
+```c
+asprintf(&history_path, "%s/pieces/apps/player_app/history.txt", project_root);
+```
+
+**The Mismatch:**
+- Parser injects based on `project_id` var and layout name
+- Module hardcodes its read path
+- If they don't match, keys are lost!
+
+---
+
+## PROPOSED SOLUTION: `<interact>` TAG
+
+### Syntax
+
+```xml
+<panel>
+    <module>projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x</module>
+    
+    <!-- Specify where parser injects keys in INTERACT mode -->
+    <interact>pieces/apps/player_app/history.txt</interact>
+    
+    <!-- Layout content -->
+    <button label="Control Map" onClick="INTERACT" />
+</panel>
+```
+
+### Parser Changes
+
+**File:** `chtpm_parser.c`
+
+**Add global variable:**
+```c
+char interact_history_path[MAX_PATH] = "";  // Default empty
+```
+
+**Parse `<interact>` tag:**
+```c
+if (strncmp(token, "<interact>", 10) == 0) {
+    char* end = strstr(token, "</interact>");
+    if (end) {
+        char path[512];
+        int len = end - (token + 10);
+        strncpy(path, token + 10, len);
+        path[len] = '\0';
+        strncpy(interact_history_path, trim_pmo(path), MAX_PATH-1);
+    }
+}
+```
+
+**Update `inject_raw_key()`:**
+```c
+void inject_raw_key(int code) {
+    FILE *fp;
+    
+    // 1. Use <interact> path if specified (HIGHEST PRIORITY)
+    if (interact_history_path[0] != '\0') {
+        char *full_path = build_path_malloc(interact_history_path);
+        fp = fopen(full_path, "a");
+        if (fp) { fprintf(fp, "%d\n", code); fclose(fp); }
+        free(full_path);
+        return;
+    }
+    
+    // 2. Fallback to project-specific
+    const char* project_id = get_var("project_id");
+    if (strlen(project_id) > 0 && strcmp(project_id, "template") != 0) {
+        char *path = NULL;
+        if (asprintf(&path, "%s/projects/%s/history.txt", project_root_path, project_id) != -1) {
+            fp = fopen(path, "a");
+            if (fp) { fprintf(fp, "%d\n", code); fclose(fp); }
+            free(path);
+        }
+        return;
+    }
+    
+    // 3. Fallback to legacy paths
+    // ... existing logic ...
+}
+```
+
+### Module Changes
+
+**No changes needed!** Module reads from hardcoded path, layout specifies same path in `<interact>`.
+
+---
+
+## EXAMPLE LAYOUTS
+
+### fuzzpet_v2.chtpm
+```xml
+<panel time_reactive="true">
+    <module>projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x</module>
+    <interact>pieces/apps/player_app/history.txt</interact>
+    
+    <!-- Rest of layout -->
+</panel>
+```
+
+### game.chtpm (generic player)
+```xml
+<panel time_reactive="true">
+    <module>pieces/apps/playrm/plugins/+x/playrm_module.+x</module>
+    <interact>pieces/apps/player_app/history.txt</interact>
+    
+    <!-- Rest of layout -->
+</panel>
+```
+
+### editor.chtpm
+```xml
+<panel time_reactive="true">
+    <module>pieces/apps/editor/plugins/+x/editor_module.+x</module>
+    <interact>pieces/apps/editor/history.txt</interact>
+    
+    <!-- Rest of layout -->
+</panel>
+```
+
+### loader.chtpm
+```xml
+<panel>
+    <module>pieces/apps/playrm/loader/plugins/+x/loader_module.+x</module>
+    <interact>pieces/apps/fuzzpet_app/fuzzpet/history.txt</interact>
+    
+    <!-- Rest of layout -->
+</panel>
+```
+
+---
+
+## FEASIBILITY
+
+### Pros
+
+1. **Explicit is better than implicit** - Layout author specifies exactly where keys go
+2. **No guessing** - Parser doesn't need complex logic to determine inject path
+3. **Flexible** - Each project can use its own history file
+4. **Auditable** - Easy to trace where keys flow
+5. **Backward compatible** - If no `<interact>` tag, use existing fallback logic
+
+### Cons
+
+1. **Extra tag** - Layout authors must add `<interact>` to every layout
+2. **Potential mismatch** - Module and layout must agree on path (but this is already the case)
+3. **Parser complexity** - One more tag to parse
+
+### Likelihood of Success
+
+**HIGH** - This directly addresses the root cause:
+- Parser currently guesses inject path based on `project_id` and layout name
+- Module hardcodes read path
+- They often don't match
+
+With `<interact>`:
+- Layout explicitly specifies inject path
+- Module reads from same path
+- Match is guaranteed (if layout author doesn't make a mistake)
+
+---
+
+## ALTERNATIVE: Module Specifies Read Path
+
+Instead of layout specifying inject path, module could register its history path:
+
+```c
+// Module startup
+register_history_path("pieces/apps/player_app/history.txt");
+```
+
+**Pros:**
+- Module controls where it reads
+- Parser injects to registered path
+
+**Cons:**
+- Requires module-parser communication
+- More complex than layout tag
+
+---
+
+## RECOMMENDATION
+
+**Implement `<interact>` tag.**
+
+**Reason:**
+1. Simple - just parse one more tag
+2. Explicit - layout author controls the path
+3. Auditable - easy to see where keys flow
+4. Flexible - works for any project structure
+
+**Implementation Priority:**
+1. Add `<interact>` parsing to `chtpm_parser.c`
+2. Update `inject_raw_key()` to use `<interact>` path first
+3. Add `<interact>` to all layouts
+4. Test each layout
+
+---
+
+## AUDIT TRAIL
+
+After implementation, debug should show:
+
+```bash
+# Check where parser is injecting
+cat debug.txt | grep "inject"
+
+# Check where module is reading
+cat debug.txt | grep "history_path"
+
+# Verify match
+echo "Parser injects to: $(grep 'inject' debug.txt | tail -1)"
+echo "Module reads from: $(grep 'history_path' debug.txt | tail -1)"
+```
+
+**Expected:** Both paths match!
+
+---
+
+**"Explicit configuration beats implicit guessing every time."**
+
+---
+
+**END OF INTERACT.TXT**

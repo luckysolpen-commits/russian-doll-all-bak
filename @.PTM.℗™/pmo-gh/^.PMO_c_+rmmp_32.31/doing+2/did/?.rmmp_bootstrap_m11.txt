@@ -1,0 +1,418 @@
+# RMMP BOOTSTRAP STRATEGY - M11 (Op-Driven Architecture)
+**Date:** 2026-03-11
+**Status:** EXPLORATION / PLANNING
+**Context:** Phase 2 Implementation - Editor/Player Op Reuse
+
+---
+
+## 1. KEY INSIGHT: PLAYER USES OPS, NOT MONOLITHIC MODULES
+
+The `player_app` doesn't have hardcoded logic. It uses **reusable Ops**:
+
+```
+pieces/apps/playrm/ops/
+├── src/
+│   ├── move_player.c    → Move any piece (player, selector, npc)
+│   ├── place_tile.c     → Place terrain on any map
+│   ├── render_map.c     → Compose view from terrain + entities
+│   ├── interact.c       → Handle entity interactions
+│   ├── menu_op.c        → Menu operations
+│   ├── move_z.c         → Z-level transitions
+│   ├── project_loader.c → Load project state
+│   └── console_print.c  → Debug output
+└── +x/
+    └── *.+x             → Compiled binaries
+```
+
+**Pattern:**
+```
+Module (player_manager.c)
+    ↓
+PAL Boot Script (boot.asm)
+    ↓
+Ops (move_player.+x, place_tile.+x, render_map.+x, etc.)
+    ↓
+Piece State (projects/{id}/pieces/{piece}/state.txt)
+```
+
+---
+
+## 2. CURRENT EDITOR: MONOLITHIC (BEFORE ISOLATION)
+
+**Problem:** `editor_module.c` was doing EVERYTHING:
+- Input polling
+- State management
+- Tile placement (hardcoded call to playrm's place_tile)
+- Response handling (reading fuzzpet's files!)
+- Render triggering
+
+**Code Smell:**
+```c
+// editor_module.c - HARDCODED COUPLING
+snprintf(cmd, sizeof(cmd), 
+  "%s/pieces/apps/playrm/ops/+x/place_tile.+x %s %d %d %s",
+  project_root, project_maps[map_idx], cursor_x, cursor_y, active_set[glyph_idx]);
+system(cmd);
+```
+
+This is BETTER than direct file writes, but still:
+- Calls a specific op path
+- No undo/ledger support
+- No selector movement op
+- No delete_piece op (we just created it)
+
+---
+
+## 3. PROPOSED: EDITOR USES SAME OPS AS PLAYER
+
+### 3.1 OP SHARING ARCHITECTURE
+
+```
+pieces/apps/playrm/ops/     ← SHARED OPS LIBRARY
+├── move_player.c           → Works for: player, selector, npc, editor_cursor
+├── place_tile.c            → Works for: editor, in-game building
+├── render_map.c            → Works for: player view, editor view
+├── delete_piece.c          → Works for: editor backspace, in-game destruction
+└── interact.c              → Works for: player interact, editor inspect
+```
+
+**Editor Module Becomes Thin:**
+```c
+// editor_module.c - THIN ORCHESTRATOR
+while (1) {
+    poll_input();
+    
+    if (key == 'w' || key == 'UP') {
+        // Use SHARED move op
+        system("./pieces/apps/playrm/ops/+x/move_player.+x selector up");
+    }
+    else if (key == ' ') {
+        // Use SHARED place_tile op
+        system("./pieces/apps/playrm/ops/+x/place_tile.+x map_0001 5 5 #");
+    }
+    else if (key == 'Backspace') {
+        // Use SHARED delete_piece op
+        system("./pieces/apps/playrm/ops/+x/delete_piece.+x npc 5 5");
+    }
+    
+    // Use SHARED render op
+    system("./pieces/apps/playrm/ops/+x/render_map.+x");
+    
+    hit_frame_marker();
+}
+```
+
+### 3.2 BENEFITS
+
+1. **Code Reuse:** Fix a bug in `move_player.c` → Both editor AND player benefit
+2. **Consistency:** Editor and player use same collision logic, same tile format
+3. **Bootstrap:** Game inherits all editor ops automatically
+4. **Undo Support:** Single `place_tile.c` can log to `editor_history.ledger` for both contexts
+5. **TPM Compliance:** Ops are "Muscles" - stateless, read/write piece state only
+
+---
+
+## 4. OP INTERFACE STANDARDIZATION
+
+### 4.1 CURRENT OP SIGNATURES (playrm/ops/)
+
+```bash
+# move_player: Move any piece
+./move_player.+x <piece_id> <direction>
+# Example: ./move_player.+x selector up
+
+# place_tile: Place terrain
+./place_tile.+x <map_id> <x> <y> <tile_char>
+# Example: ./place_tile.+x map_0001 5 5 #
+
+# render_map: Compose view (no args, reads state)
+./render_map.+x
+
+# delete_piece: Remove entity
+./delete_piece.+x <piece_type> <x> <y>
+# Example: ./delete_piece.+x npc 5 5
+```
+
+### 4.2 NEEDED OPS FOR EDITOR
+
+| Op | Current Status | Notes |
+|----|----------------|-------|
+| `move_selector` | Use `move_player` | Same logic, just different piece_id |
+| `place_tile` | ✅ Exists | Editor version logs to ledger |
+| `delete_piece` | ✅ Created | Works for projects/ pieces |
+| `render_editor_view` | Use `render_map` | Can share if selector is a piece |
+| `undo_last_action` | ❌ Needed | Reads ledger, executes inverse |
+| `create_piece` | ❌ Needed | Dynamic piece instantiation |
+| `inspect_tile` | ❌ Needed | Show tile/piece info |
+
+---
+
+## 5. SELECTOR AS A PIECE - TPM COMPLIANT
+
+### 5.1 CURRENT STATE (AFTER ISOLATION)
+
+We created:
+```
+pieces/apps/editor/pieces/selector/
+├── selector.pdl
+└── state.txt
+```
+
+**But Phase 2 spec says:**
+> The editor selector is a Piece located at `projects/{id}/pieces/selector/`
+
+**Resolution:** Selector exists in BOTH places:
+- `pieces/apps/editor/pieces/selector/` - App-level selector (for editor navigation)
+- `projects/{id}/pieces/selector/` - Project-level selector (saved with project)
+
+### 5.2 SELECTOR MOVEMENT VIA OP
+
+```c
+// Instead of hardcoded cursor_x++, cursor_y-- in editor_module.c:
+
+// Call move_player op (works for ANY piece)
+system("./pieces/apps/playrm/ops/+x/move_player.+x selector up");
+
+// move_player.c reads:
+//   projects/{id}/pieces/selector/state.txt
+// Updates pos_x, pos_y
+// Checks collision (optional for editor mode)
+// Hits frame_changed.txt
+```
+
+**Editor Module Simplification:**
+```c
+// BEFORE (Monolithic)
+if (key == 'w') {
+    cursor_y--;
+    // Update state file manually
+    FILE *f = fopen("pieces/apps/editor/state.txt", "w");
+    fprintf(f, "cursor_x=%d\ncursor_y=%d\n", cursor_x, cursor_y);
+    fclose(f);
+}
+
+// AFTER (Op-Driven)
+if (key == 'w') {
+    system("./pieces/apps/playrm/ops/+x/move_player.+x selector up");
+    // move_player.c handles state update, collision, logging
+}
+```
+
+---
+
+## 6. UNDO / LEDGER STRATEGY
+
+### 6.1 CURRENT PLACE_TILE.C (playrm)
+
+```c
+// Logs to master_ledger (generic)
+log_event("PlaceTile", "map=map_0001 x=5 y=5 tile=#");
+```
+
+### 6.2 EDITOR PLACE_TILE.C (Our Version)
+
+```c
+// Logs to project-specific ledger (undo-support)
+fprintf(ledger, "PLACE_TILE|%s|%d|%d|.|%c\n", map_file, x, y, prev_tile);
+```
+
+### 6.3 UNIFIED APPROACH
+
+**Option A: Single Op with Context Flag**
+```bash
+./place_tile.+x <map_id> <x> <y> <tile> [--ledger <project_id>]
+```
+
+**Option B: Editor Wraps Shared Op**
+```c
+// editor_place_tile.c (thin wrapper)
+char prev = get_tile_at(map, x, y);
+system("./pieces/apps/playrm/ops/+x/place_tile.+x map 5 5 #");
+// Log undo info
+fprintf(ledger, "PLACE_TILE|%s|%d|%d|%c|#\n", map, x, y, prev);
+```
+
+**Recommended:** Option B - Editor adds ledger support, base op stays simple.
+
+---
+
+## 7. DYNAMIC PIECE CREATION - OP DESIGN
+
+### 7.1 SPEC REQUIREMENT
+
+> Painting an entity glyph (@, &, Z) triggers:
+> 1. Creation of `projects/{id}/pieces/{type}_{x}_{y}/`
+> 2. Generation of `state.txt` with pos_x, pos_y, and type blueprint
+
+### 7.2 PROPOSED OP: `create_piece`
+
+```c
+// Usage: ./create_piece.+x <type> <x> <y> [project_id]
+// Example: ./create_piece.+x npc 5 5 demo_1
+
+int main(int argc, char *argv[]) {
+    const char *type = argv[1];  // "npc", "chest", "player"
+    int x = atoi(argv[2]);
+    int y = atoi(argv[3]);
+    
+    // Determine piece_id from type
+    char piece_id[64];
+    if (strcmp(type, "@") == 0 || strcmp(type, "player") == 0)
+        strcpy(piece_id, "player");
+    else if (strcmp(type, "&") == 0 || strcmp(type, "npc") == 0)
+        strcpy(piece_id, "npc");
+    else if (strcmp(type, "Z") == 0 || strcmp(type, "zombie") == 0)
+        strcpy(piece_id, "zombie");
+    
+    // Create directory
+    char dir_path[MAX_PATH];
+    snprintf(dir_path, sizeof(dir_path),
+             "projects/%s/pieces/%s_%d_%d", project_id, piece_id, x, y);
+    mkdir(dir_path, 0755);
+    
+    // Create state.txt
+    char state_path[MAX_PATH];
+    snprintf(state_path, sizeof(state_path), "%s/state.txt", dir_path);
+    FILE *f = fopen(state_path, "w");
+    fprintf(f, "name=%s\n", piece_id);
+    fprintf(f, "type=%s\n", type);
+    fprintf(f, "pos_x=%d\n", x);
+    fprintf(f, "pos_y=%d\n", y);
+    fprintf(f, "pos_z=0\n");
+    fprintf(f, "on_map=1\n");
+    fclose(f);
+    
+    // Create piece.pdl (minimal)
+    char pdl_path[MAX_PATH];
+    snprintf(pdl_path, sizeof(pdl_path), "%s/piece.pdl", dir_path);
+    f = fopen(pdl_path, "w");
+    fprintf(f, "# Piece: %s\n", piece_id);
+    fprintf(f, "META | piece_id | %s\n", piece_id);
+    fclose(f);
+    
+    // Log to ledger (for undo)
+    fprintf(ledger, "CREATE_PIECE|%s|%d|%d\n", piece_id, x, y);
+}
+```
+
+### 7.3 EDITOR INTEGRATION
+
+```c
+// editor_module.c - Glyph placement
+if (key == ' ' && gui_focus_index == 1) {
+    const char *glyph = active_set[glyph_idx];
+    
+    if (strcmp(glyph, "@") == 0 || strcmp(glyph, "&") == 0 || strcmp(glyph, "Z") == 0) {
+        // Entity glyph - create piece
+        system("./pieces/apps/playrm/ops/+x/create_piece.+x glyph 5 5");
+    } else {
+        // Terrain glyph - place tile
+        system("./pieces/apps/playrm/ops/+x/place_tile.+x map 5 5 glyph");
+    }
+}
+```
+
+---
+
+## 8. RENDER_MAP INTEGRATION
+
+### 8.1 CURRENT render_map.c
+
+Reads from:
+- `pieces/apps/player_app/manager/state.txt` → project_id, current_z
+- `projects/{id}/pieces/*/state.txt` → entity positions
+- `projects/{id}/maps/{map}.txt` → terrain
+
+Writes to:
+- `pieces/apps/player_app/view.txt`
+
+### 8.2 EDITOR VIEW
+
+**Option A: Separate Editor Render**
+```c
+// render_editor_view.c
+// Same as render_map.c but:
+// - Reads editor state
+// - Writes to pieces/apps/editor/view.txt
+// - Overlays selector 'X' at cursor position
+```
+
+**Option B: Shared Render with Selector Support**
+```c
+// render_map.c enhancement
+// If selector piece exists, render it automatically
+get_piece_state("selector", "pos_x", &sel_x);
+get_piece_state("selector", "pos_y", &sel_y);
+// Render 'X' at selector position (highest priority)
+```
+
+**Recommended:** Option B - Single render op, selector is just another entity.
+
+---
+
+## 9. MIGRATION PLAN
+
+### Phase 2A: Op Integration (Current Priority)
+
+1. **Move Selector Movement to Op**
+   - Replace `cursor_x++` with `move_player.+x selector right`
+   - Selector state in `projects/{id}/pieces/selector/state.txt`
+
+2. **Use Shared place_tile**
+   - Call `playrm/ops/place_tile.+x` directly
+   - Add ledger logging wrapper for undo support
+
+3. **Use Shared render_map**
+   - Ensure selector renders as entity
+   - Editor view = player view + selector overlay
+
+4. **Create Remaining Ops**
+   - `create_piece.+x` - Dynamic piece instantiation
+   - `undo_action.+x` - Ledger-based undo
+
+### Phase 2B: Full Op-Driven Editor
+
+```
+pieces/apps/editor/
+├── editor_module.c  ← THIN: Only input polling + op dispatch
+├── state.txt        ← Editor preferences (gui_focus, emoji_mode)
+└── PAL/
+    └── editor.asm   ← Boot script (optional, for complex macros)
+
+pieces/apps/playrm/ops/  ← SHARED
+├── move_player.+x
+├── place_tile.+x
+├── render_map.+x
+├── delete_piece.+x
+├── create_piece.+x
+└── undo_action.+x
+```
+
+---
+
+## 10. BENEFITS SUMMARY
+
+| Aspect | Monolithic Editor | Op-Driven Editor |
+|--------|------------------|------------------|
+| Code Reuse | None | 100% shared with player |
+| Bug Fixes | Fix in 2+ places | Fix once, benefits all |
+| New Features | Edit each module | Add op, all apps benefit |
+| Undo Support | Custom per app | Single ledger format |
+| TPM Compliance | Partial | Full (ops are muscles) |
+| Bootstrap | Manual | Automatic (ops → game) |
+| Testing | Test each app | Test ops once |
+
+---
+
+## 11. NEXT STEPS
+
+1. **Review with Team:** Confirm op-driven architecture is desired direction
+2. **Refactor editor_module.c:** Replace hardcoded logic with op calls
+3. **Create Missing Ops:** `create_piece.+x`, `undo_action.+x`
+4. **Test Parity:** Verify editor and player produce identical results
+5. **Document Op API:** Standard interface for all ops
+
+---
+
+**KEY INSIGHT:** The editor IS the game. The game IS the editor. They share the same ops.
+The only difference is input routing (editor: keyboard, game: PAL scripts + player input).

@@ -1,0 +1,225 @@
+# TODO: FUZZPET_V2 M11 - CRITICAL PATH
+**Date:** 2026-03-11
+**Status:** ACTIVE
+**Goal:** Key debug, selector movement, dynamic menus/responses
+
+---
+
+## PRIORITY ORDER
+
+### 🔴 SUPER #1: KEY DEBUG ON NAV AND MAP CONTROL
+### 🟡 #2: DYNAMIC MENUS AND RESPONSES  
+### 🟢 #3: MOVING SELECTOR
+
+**NOT NEEDED:** Stat decay, clock integration, complex PAL logic
+
+---
+
+## 🔴 SUPER #1: KEY DEBUG ON NAV AND MAP CONTROL
+
+**Goal:** See what key was pressed in BOTH nav mode and interact mode
+
+### Current State:
+- Nav buffer shows: `Nav > 2_` (only in nav mode)
+- In interact mode (map control): No key feedback
+- [KEY] field exists but may not update
+
+### Tasks:
+- [ ] 1.1 Check `chtpm_parser.c` - nav_buffer updates on key press
+- [ ] 1.2 Check `render_map.c` - reads last_key from manager state
+- [ ] 1.3 Ensure `pieces/apps/player_app/manager/state.txt` has `last_key` field
+- [ ] 1.4 Ensure ops update `last_key` after execution
+- [ ] 1.5 Test: Press 'w' in nav mode → `Nav > w_`
+- [ ] 1.6 Test: Press 'w' in interact mode → `[KEY]: w` or `[KEY]: 119`
+- [ ] 1.7 Test: Key debug persists until next key press
+
+### Expected Result:
+```
+# Nav mode
+╔═══════════════════════════════════════════════════════════╗
+║  [>] 1. [Feed Pet]                                        ║
+╚═══════════════════════════════════════════════════════════╝
+Nav > w_
+
+# Interact mode (map control)
+╔═══════════════════════════════════════════════════════════╗
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                     ║
+║  ####################                                     ║
+║  #..................#                                     ║
+║  #..@...............#                                     ║
+║  #..................#                                     ║
+║  ####################                                     ║
+╠═══════════════════════════════════════════════════════════╣
+║ [RESP]: Moved up                                          ║
+║ [Z]: 0 | [TOOL]: Move | [KEY]: w                          ║
+╚═══════════════════════════════════════════════════════════╝
+```
+
+### Files to Check/Modify:
+- `pieces/chtpm/plugins/chtpm_parser.c` - nav_buffer handling
+- `pieces/apps/playrm/ops/src/render_map.c` - [KEY] display
+- `pieces/apps/player_app/manager/state.txt` - last_key field
+
+---
+
+## 🟡 #2: DYNAMIC MENUS AND RESPONSES
+
+**Goal:** Methods show in menu, responses show after actions
+
+### Current State:
+- `${piece_methods}` should populate from loader.pdl
+- `${last_response}` should show after actions
+
+### Tasks:
+- [ ] 2.1 Check `load_dynamic_methods()` in `chtpm_parser.c`
+- [ ] 2.2 Verify `active_target_id` is set correctly (loader, fuzzpet, selector)
+- [ ] 2.3 Verify piece.pdl has METHOD entries
+- [ ] 2.4 Check `${piece_methods}` substitution in layout
+- [ ] 2.5 Test: Loader shows project buttons (fuzzpet_v2, demo_1, etc.)
+- [ ] 2.6 Test: Fuzzpet shows action buttons (Feed, Play, Sleep)
+- [ ] 2.7 Check response system - ops write to `last_response.txt`
+- [ ] 2.8 Check `render_map.c` reads and displays `${last_response}`
+- [ ] 2.9 Test: Action → Response shows in [RESP] field
+
+### Expected Result:
+```
+# Loader menu (projects list)
+╔══════════════ P I E C E M A R K   L O A D E R ════════════╗
+║  Select a project to begin:                               ║
+║  [>] 1. [fuzzpet_v2][ ] 2. [op-ed][ ] 3. [demo_1]         ║
+╚═══════════════════════════════════════════════════════════╝
+
+# Fuzzpet menu (actions)
+╔══════════════ F U Z Z P E T   G A M E ════════════════════╗
+║  [>] 1. [Feed][ ] 2. [Play][ ] 3. [Sleep]                 ║
+╠═══════════════════════════════════════════════════════════╣
+║ [RESP]: Yum yum~ Thanks!                                  ║
+╚═══════════════════════════════════════════════════════════╝
+```
+
+### Files to Check/Modify:
+- `pieces/chtpm/plugins/chtpm_parser.c` - `load_dynamic_methods()`, `load_vars()`
+- `pieces/apps/playrm/layouts/loader.chtpm` - `${piece_methods}` placeholder
+- `pieces/apps/playrm/layouts/game.chtpm` - `${piece_methods}` placeholder
+- `pieces/apps/playrm/ops/src/fuzzpet_action.c` - response writing
+- `pieces/apps/playrm/ops/src/render_map.c` - response display
+
+---
+
+## 🟢 #3: MOVING SELECTOR
+
+**Goal:** Selector moves with arrow keys in interact mode
+
+### Current State:
+- Selector piece exists at `projects/fuzzpet_v2/pieces/selector/`
+- `toggle_selector.+x` op exists
+- Selector should move with w/a/s/d or arrows in selector mode
+
+### Tasks:
+- [ ] 3.1 Check selector piece exists with state.txt
+- [ ] 3.2 Check `toggle_selector.+x` op works
+- [ ] 3.3 Check `move_entity.+x` or `move_selector.+x` op exists
+- [ ] 3.4 Add selector movement to PAL script or module
+- [ ] 3.5 Test: Key 9 toggles selector mode
+- [ ] 3.6 Test: 'w' moves selector up
+- [ ] 3.7 Test: 'a' moves selector left
+- [ ] 3.8 Test: 's' moves selector down
+- [ ] 3.9 Test: 'd' moves selector right
+- [ ] 3.10 Test: Selector renders as 'X' on map
+
+### Expected Result:
+```
+# Selector mode (X visible on map)
+╔══════════════ F U Z Z P E T   G A M E ════════════════════╗
+║  GAME MAP:                                                ║
+║  [^] 1. [Control Map]                                     ║
+║  ####################                                     ║
+║  #..................#                                     ║
+║  #..X...............#   ← Selector at 5,5                 ║
+║  #..................#                                     ║
+║  ####################                                     ║
+╠═══════════════════════════════════════════════════════════╣
+║ [RESP]: Moved selector up | [KEY]: w | [MODE]: Selector   ║
+╚═══════════════════════════════════════════════════════════╝
+```
+
+### Files to Check/Modify:
+- `projects/fuzzpet_v2/pieces/selector/state.txt` - selector state
+- `pieces/apps/playrm/ops/src/toggle_selector.c` - toggle logic
+- `pieces/apps/playrm/ops/src/move_selector.c` or `move_entity.c` - movement
+- `pieces/apps/playrm/ops/src/render_map.c` - selector rendering
+- `projects/fuzzpet_v2/scripts/game_loop.asm` - selector input handling
+
+---
+
+## VERIFICATION CHECKLIST
+
+After completion:
+
+### Key Debug:
+- [ ] Nav mode: `Nav > [key]_` shows pressed key
+- [ ] Interact mode: `[KEY]: [key]` shows in status bar
+- [ ] Key persists until next press
+
+### Dynamic Menus:
+- [ ] Loader shows project buttons (fuzzpet_v2, demo_1, template, etc.)
+- [ ] Fuzzpet shows action buttons (Feed, Play, Sleep, etc.)
+- [ ] Buttons are numbered for quick access
+
+### Responses:
+- [ ] Actions write to `last_response.txt`
+- [ ] `[RESP]:` field shows last response
+- [ ] Response clears on next action
+
+### Selector:
+- [ ] Key 9 toggles selector mode
+- [ ] Selector moves with w/a/s/d
+- [ ] Selector renders as 'X' on map
+- [ ] Selector position persists in state.txt
+
+---
+
+## BLOCKERS
+
+| Task | Blocker | Resolution |
+|------|---------|------------|
+| 1.x Key Debug | None | - |
+| 2.x Dynamic Menus | loader.pdl not populating | Fix `load_dynamic_methods()` path resolution |
+| 3.x Selector Movement | Need selector piece | Create in `projects/fuzzpet_v2/pieces/selector/` |
+
+---
+
+## ESTIMATED EFFORT
+
+| Priority | Tasks | Time |
+|----------|-------|------|
+| 🔴 #1 Key Debug | 7 tasks | 1-2 hours |
+| 🟡 #2 Dynamic Menus | 9 tasks | 2-3 hours |
+| 🟢 #3 Selector | 10 tasks | 2-3 hours |
+| **Total** | **26 tasks** | **5-8 hours** |
+
+---
+
+## DO NEEDED (NOT NEEDED)
+
+**SKIP THESE FOR NOW:**
+- ❌ Stat decay implementation
+- ❌ Clock daemon integration
+- ❌ Complex PAL scripting
+- ❌ Undo/ledger system
+- ❌ Entity creation ops
+
+**FOCUS ONLY ON:**
+- ✅ Key debug working
+- ✅ Menus populating dynamically
+- ✅ Responses showing
+- ✅ Selector moving
+
+---
+
+**"Keys show. Menus work. Selector moves. Nothing else matters right now."**
+
+---
+
+**END OF TODO**

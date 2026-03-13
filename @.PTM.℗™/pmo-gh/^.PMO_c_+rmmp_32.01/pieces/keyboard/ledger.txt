@@ -1,5 +1,0 @@
-[2026-03-11 22:31:59] KeyCaptured: 13 ('?') | Source: orchestrator
-[2026-03-11 22:32:00] KeyCaptured: 1003 ('?') | Source: orchestrator
-[2026-03-11 22:32:00] KeyCaptured: 13 ('?') | Source: orchestrator
-[2026-03-11 22:32:03] KeyCaptured: 99 ('c') | Source: orchestrator
-[2026-03-11 22:32:04] KeyCaptured: 99 ('c') | Source: orchestrator

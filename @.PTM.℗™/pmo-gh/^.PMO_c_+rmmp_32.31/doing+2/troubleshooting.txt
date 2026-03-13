@@ -1,0 +1,327 @@
+# TROUBLESHOOTING: MODULE LAUNCH DEBUG
+**Date:** 2026-03-12 00:30
+**Purpose:** Track module launch from parser to execution
+
+---
+
+## DEBUG LOGGING LOCATIONS
+
+### 1. Parser Launch Attempt (chtpm_parser.c)
+
+**Location:** `pieces/chtpm/plugins/chtpm_parser.c` → `launch_module()`
+
+**Code:**
+```c
+void launch_module(const char* launch_str) {
+    // DEBUG: Log EVERY launch attempt
+    FILE *dbg = fopen("debug.txt", "a");
+    if (dbg) {
+        time_t t; struct tm *tm;
+        time(&t); tm = localtime(&t);
+        fprintf(dbg, "[%02d:%02d:%02d] PARSER: launch_module(%s)\n",
+                tm->tm_hour, tm->tm_min, tm->tm_sec, launch_str);
+        fclose(dbg);
+    }
+    
+    // ... fork/exec code ...
+}
+```
+
+**Expected Output:**
+```
+[00:30:00] PARSER: launch_module(projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x)
+[00:30:00] PARSER: forked module pid=12345
+```
+
+**If NOT present:**
+- Parser isn't parsing `<module>` tag
+- Check layout file has valid `<module>` tag
+- Check parser tag handling code
+
+---
+
+### 2. Module Start Confirmation (fuzzpet_v2_module.c)
+
+**Location:** `projects/fuzzpet_v2/manager/fuzzpet_v2_module.c` → `main()`
+
+**Code:**
+```c
+int main() {
+    resolve_root();
+    load_state();
+    
+    // DEBUG: Log module start
+    FILE *dbg = fopen("debug.txt", "a");
+    if (dbg) {
+        time_t t; struct tm *tm;
+        time(&t); tm = localtime(&t);
+        fprintf(dbg, "[%02d:%02d:%02d] MODULE: STARTED (pid=%d) project=%s\n",
+                tm->tm_hour, tm->tm_min, tm->tm_sec, getpid(), current_project);
+        fclose(dbg);
+    }
+    
+    // ... rest of init ...
+}
+```
+
+**Expected Output:**
+```
+[00:30:01] MODULE: STARTED (pid=12345) project=fuzzpet_v2
+```
+
+**If NOT present (but parser logged launch):**
+- Module crashed during startup
+- Check `resolve_root()` - can't find location_kvp
+- Check binary exists and is executable
+- Run module directly to see stderr: `./projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x`
+
+---
+
+### 3. Key Processing (fuzzpet_v2_module.c)
+
+**Location:** `fuzzpet_v2_module.c` → key processing loop
+
+**Code:**
+```c
+if (key <= 0) continue;
+if (key == last_key_processed) continue;
+last_key_processed = key;
+
+// DEBUG: Log key processed
+FILE *dbg = fopen("debug.txt", "a");
+if (dbg) {
+    time_t t; struct tm *tm;
+    time(&t); tm = localtime(&t);
+    fprintf(dbg, "[%02d:%02d:%02d] MODULE: KEY=%d (%s) target=%s\n",
+            tm->tm_hour, tm->tm_min, tm->tm_sec, key, last_key_str, active_target_id);
+    fclose(dbg);
+}
+```
+
+**Expected Output:**
+```
+[00:30:05] MODULE: KEY=119 (w) target=selector
+[00:30:06] MODULE: KEY=1002 (UP) target=selector
+```
+
+**If NOT present (but module started):**
+- Module not reading history file
+- Check `history_path` is correct
+- Check keyboard_input.+x is writing to history
+
+---
+
+## DEBUG WORKFLOW
+
+### Step 1: Clear Debug Log
+```bash
+> debug.txt
+```
+
+### Step 2: Start System
+```bash
+./run_chtpm.sh
+```
+
+### Step 3: Navigate to FuzzPet V2
+- Select "Project Manager" from main menu
+- Select "PLAYR Player" 
+- Select "fuzzpet_v2"
+
+### Step 4: Check Debug Log
+```bash
+cat debug.txt
+```
+
+### Step 5: Interpret Results
+
+| Debug Output | Meaning | Next Step |
+|--------------|---------|-----------|
+| Nothing | Parser not running | Check orchestrator |
+| "PARSER: launch_module" only | Module crashed | Check module binary |
+| "MODULE: STARTED" only | Parser debug missing | Check parser rebuild |
+| Both but no keys | History not read | Check history_path |
+| Keys but no movement | Op not working | Test op manually |
+
+---
+
+## QUICK TEST: Manual Key Injection
+
+Test if module reads keys without keyboard input:
+
+```bash
+cd /home/no/Desktop/Piecemark-IT/[CALENDARS]02.01/mar_11/^.PMO_c_+rmmp_32.01
+
+# Clear debug and history
+> debug.txt
+> pieces/apps/player_app/history.txt
+
+# Manually write keys to the injected history file
+# (This simulates what parser does in INTERACT mode)
+echo "119" >> pieces/apps/player_app/history.txt  # 'w' key
+echo "1002" >> pieces/apps/player_app/history.txt # UP arrow
+
+# Wait 2 seconds for module to read
+sleep 2
+
+# Check if module processed the keys
+cat debug.txt | grep "KEY="
+```
+
+**Expected:**
+```
+[00:30:05] MODULE: KEY=119 (w) target=selector
+[00:30:05] MODULE: KEY=1002 (UP) target=selector
+```
+
+**If keys NOT processed:**
+- Module not reading correct file
+- Check `history_path` in module matches where you wrote
+
+**Verify selector moved:**
+```bash
+cat projects/fuzzpet_v2/pieces/selector/state.txt | grep pos_y
+```
+
+**Expected:** `pos_y` should be less than starting value (moved up)
+
+---
+
+## QUICK TEST: Run Module Directly
+
+Bypass parser and run module directly:
+
+```bash
+cd /home/no/Desktop/Piecemark-IT/[CALENDARS]02.01/mar_11/^.PMO_c_+rmmp_32.01
+
+# Clear debug
+> debug.txt
+
+# Run module directly
+./projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x &
+
+# Wait 2 seconds
+sleep 2
+
+# Check if it started
+cat debug.txt
+ps aux | grep fuzzpet_v2_module
+```
+
+**Expected:**
+```
+[00:30:00] MODULE: STARTED (pid=12345) project=fuzzpet_v2
+```
+
+**If module crashes:**
+```bash
+# Run in foreground to see stderr
+./projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x
+```
+
+---
+
+## QUICK TEST: Run Parser Directly
+
+Test parser with specific layout:
+
+```bash
+cd /home/no/Desktop/Piecemark-IT/[CALENDARS]02.01/mar_11/^.PMO_c_+rmmp_32.01
+
+# Clear debug
+> debug.txt
+
+# Run parser with fuzzpet_v2 layout
+./pieces/chtpm/plugins/+x/chtpm_parser.+x pieces/chtpm/layouts/fuzzpet_v2.chtpm &
+
+# Wait 2 seconds
+sleep 2
+
+# Check debug
+cat debug.txt
+```
+
+**Expected:**
+```
+[00:30:00] PARSER: launch_module(projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x)
+[00:30:00] PARSER: forked module pid=12345
+[00:30:01] MODULE: STARTED (pid=12345) project=fuzzpet_v2
+```
+
+---
+
+## COMMON ISSUES
+
+### Issue 1: Parser Doesn't Launch Module
+
+**Symptom:** No "launch_module" in debug.txt
+
+**Check:**
+1. Layout has `<module>` tag
+2. Parser parses `<module>` tag correctly
+3. `launch_module()` is called
+
+**Fix:** Check parser's tag handling code
+
+---
+
+### Issue 2: Module Crashes Immediately
+
+**Symptom:** "launch_module" present, but no "MODULE: STARTED"
+
+**Check:**
+1. Binary exists: `ls -la projects/fuzzpet_v2/manager/+x/`
+2. Binary is executable: `file projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x`
+3. Run directly for stderr: `./projects/fuzzpet_v2/manager/+x/fuzzpet_v2_module.+x`
+
+**Common crash:** `resolve_root()` can't find `pieces/locations/location_kvp`
+
+**Fix:** Run `./run_chtpm.sh` first to create location_kvp
+
+---
+
+### Issue 3: Module Runs But Doesn't Process Keys
+
+**Symptom:** "MODULE: STARTED" present, but no "KEY=" lines
+
+**Check:**
+1. Module reads correct history file
+2. keyboard_input.+x is writing to history
+3. Module's `is_active_layout()` returns true
+
+**Fix:** Check `history_path` in module matches where keyboard writes
+
+---
+
+### Issue 4: Module Processes Keys But No Movement
+
+**Symptom:** "KEY=" lines present, selector doesn't move
+
+**Check:**
+1. Op binary exists: `ls pieces/apps/playrm/ops/+x/move_selector.+x`
+2. Op runs: `./pieces/apps/playrm/ops/+x/move_selector.+x up fuzzpet_v2`
+3. Selector state changes: `cat projects/fuzzpet_v2/pieces/selector/state.txt`
+
+**Fix:** Test op manually, check path resolution in op
+
+---
+
+## DEBUG CHECKLIST
+
+After applying debug logging:
+
+- [ ] Parser logs "launch_module(...)"
+- [ ] Parser logs "forked module pid=..."
+- [ ] Module logs "MODULE: STARTED"
+- [ ] Module logs "KEY=XXX" when keys pressed
+- [ ] Module logs op execution
+- [ ] Selector position changes in state.txt
+- [ ] [KEY] shows in status bar
+
+---
+
+**"If it's not in debug.txt, it didn't happen."**
+
+---
+
+**END OF TROUBLESHOOTING**

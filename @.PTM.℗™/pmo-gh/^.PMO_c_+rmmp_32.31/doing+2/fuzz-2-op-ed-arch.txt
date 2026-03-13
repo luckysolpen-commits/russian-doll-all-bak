@@ -1,0 +1,562 @@
+# FUZZPET_V2 → OP-ED ARCHITECTURE CONVERSION PLAN
+**Date:** 2026-03-11
+**Status:** ARCHITECTURAL ANALYSIS & ROADMAP
+**Context:** Making fuzzpet_v2 follow the op-ed architectural pattern
+
+---
+
+## EXECUTIVE SUMMARY
+
+**The Problem:** fuzzpet_v2 was converted from a monolithic C application to a PAL/OPS architecture, but the conversion is incomplete. The result is architectural tension between:
+- Legacy monolithic patterns (direct C function calls)
+- New op-driven patterns (separate process execution)
+- PAL scripting layer (Prisc VM orchestration)
+
+**The Goal:** Restructure fuzzpet_v2 to follow the same clean op-driven architecture as the RMMP editor, achieving:
+1. 100% op reuse between editor and player
+2. Clean separation of concerns (Module = thin orchestrator)
+3. PAL scripts for complex behavior (no hardcoded logic)
+4. Project encapsulation (isolated state, portable)
+
+**The Vision:** "fuzzpet_v2 IS op-ed with a pet theme. Same ops, same patterns, different content."
+
+---
+
+## 1. ARCHITECTURAL COMPARISON
+
+### 1.1 RMMP EDITOR (TARGET ARCHITECTURE ✓)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    RMMP EDITOR STACK                        │
+├─────────────────────────────────────────────────────────────┤
+│  INPUT LAYER                                                │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ keyboard_input.+x → pieces/keyboard/history.txt     │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                            ↓                                │
+│  ORCHESTRATION LAYER                                        │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ editor_module.c (THIN)                              │   │
+│  │ - Polls history.txt                                 │   │
+│  │ - Routes input to ops                               │   │
+│  │ - NO business logic                                 │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                            ↓                                │
+│  OPS LAYER (SHARED MUSCLES)                                 │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ move_selector.+x  → Move cursor                     │   │
+│  │ place_tile.+x     → Modify terrain                  │   │
+│  │ create_piece.+x   → Instantiate entity              │   │
+│  │ undo_action.+x    → Revert last action              │   │
+│  │ render_map.+x     → Compose view                    │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                            ↓                                │
+│  STATE LAYER (TPM PIECES)                                   │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ projects/{id}/pieces/selector/state.txt             │   │
+│  │ projects/{id}/pieces/{entity}/state.txt             │   │
+│  │ projects/{id}/maps/{map}.txt                        │   │
+│  └─────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Key Characteristics:**
+- Module is THIN (input router only)
+- Ops are STATELESS (no internal state, read/write piece state only)
+- Ops are SHARED (editor and player use same binaries)
+- State is ENCAPSULATED (project-local)
+- PAL scripts for complex behavior (optional)
+
+---
+
+### 1.2 FUZZPET_V2 (CURRENT STATE ⚠️)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                  FUZZPET_V2 STACK (HYBRID)                  │
+├─────────────────────────────────────────────────────────────┤
+│  INPUT LAYER                                                │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ keyboard_input.+x → pieces/keyboard/history.txt     │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                            ↓                                │
+│  ORCHESTRATION LAYER                                        │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ playrm_module.c (THICK - hybrid)                    │   │
+│  │ - Polls history.txt                                 │   │
+│  │ - Routes SOME input to ops ✓                        │   │
+│  │ - Has HARDCODED logic for pet actions ⚠️            │   │
+│  │ - Launches PAL scripts ✓                            │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                            ↓                                │
+│  OPS LAYER (PARTIAL REUSE)                                  │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ move_entity.+x    → Move pet ✓                      │   │
+│  │ fuzzpet_action.+x → Pet-specific actions ✓          │   │
+│  │ stat_decay.+x     → Passive decay ✓                 │   │
+│  │ render_map.+x     → Compose view ✓                  │   │
+│  │ inspect_tile.+x   → Tile inspection ✓               │   │
+│  │ toggle_selector.+x → Selector mode ✓                │   │
+│  └─────────────────────────────────────────────────────┘   │
+│                            ↓                                │
+│  STATE LAYER (ENCAPSULATED ✓)                               │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │ projects/fuzzpet_v2/pieces/fuzzpet/state.txt        │   │
+│  │ projects/fuzzpet_v2/pieces/selector/state.txt       │   │
+│  │ projects/fuzzpet_v2/maps/map_0001_z0.txt            │   │
+│  └─────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Key Issues:**
+- Module has HARDCODED pet logic (should be in PAL or ops)
+- Some ops are FUZZPET-SPECIFIC (not reusable)
+- PAL scripts exist but module still has fallback logic
+- State is properly encapsulated ✓
+
+---
+
+### 1.3 SIDE-BY-SIDE COMPARISON
+
+| Aspect | RMMP Editor | fuzzpet_v2 | Target |
+|--------|-------------|------------|--------|
+| **Module Thickness** | Thin (router only) | Thick (has logic) | Thin |
+| **Op Reuse** | 100% shared | ~60% shared | 100% |
+| **PAL Usage** | Optional | Partial | Full |
+| **Hardcoded Logic** | None | Some (pet actions) | None |
+| **State Location** | projects/{id}/ | projects/{id}/ | ✓ |
+| **Input Routing** | Direct to ops | Mixed (ops + PAL) | PAL-first |
+| **Undo Support** | Via ledger op | Not implemented | Via ledger |
+| **Selector Mode** | Via op | Via op | ✓ |
+
+---
+
+## 2. THE CONVERSION PLAN
+
+### 2.1 PHASE 1: MODULE THINNING (Priority 1)
+
+**Current playrm_module.c (fuzzpet_v2 branch):**
+```c
+// HARDCODED LOGIC - BAD
+if (strcmp(current_project, "fuzzpet_v2") == 0) {
+    if (key == '1') {
+        // Feed pet - DIRECT LOGIC
+        system("./ops/+x/fuzzpet_action.+x fuzzpet feed");
+        hunger -= 20;  // ⚠️ HARDCODED VALUE
+    }
+    if (key == 'w') {
+        // Move pet - DIRECT LOGIC  
+        system("./ops/+x/move_entity.+x fuzzpet up");
+        energy -= 5;  // ⚠️ HARDCODED VALUE
+    }
+}
+```
+
+**Target playrm_module.c:**
+```c
+// THIN ORCHESTRATOR - GOOD
+if (strcmp(current_project, "fuzzpet_v2") == 0) {
+    // ALL logic in PAL script, module just launches it
+    char *prisc_cmd = NULL;
+    asprintf(&prisc_cmd,
+             "PRISC_KEY=%d PRISC_PROJECT_ID=fuzzpet_v2 "
+             "%s/pieces/system/prisc/prisc+x "
+             "%s/projects/fuzzpet_v2/scripts/game_loop.asm",
+             key, project_root, project_root);
+    system(prisc_cmd);
+    free(prisc_cmd);
+}
+```
+
+**Action Items:**
+1. Move ALL pet action logic to `game_loop.asm`
+2. Remove hardcoded stat values from C code
+3. Module becomes PAL launcher only
+
+---
+
+### 2.2 PHASE 2: OP GENERALIZATION (Priority 2)
+
+**Current fuzzpet-specific ops:**
+```bash
+./fuzzpet_action.+x fuzzpet feed    # Pet-specific
+./stat_decay.+x fuzzpet             # Pet-specific
+```
+
+**Target generalized ops:**
+```bash
+./modify_stat.+x fuzzpet hunger -20    # Generic stat modification
+./stat_decay.+x fuzzpet hunger=1 energy=5  # Configurable decay
+```
+
+**Benefits:**
+- `modify_stat` works for ANY piece (hero, npc, monster, pet)
+- `stat_decay` configurable per piece type
+- No more "fuzzpet_" prefix (reusability)
+
+**Action Items:**
+1. Create `modify_stat.+x` op (generic)
+2. Update `stat_decay.+x` to accept config params
+3. Rename/refactor `fuzzpet_action.+x` → `entity_action.+x`
+
+---
+
+### 2.3 PHASE 3: PAL SCRIPT COMPLETION (Priority 3)
+
+**Current game_loop.asm (partial):**
+```asm
+# game_loop.asm - INCOMPLETE
+start:
+    read_history r1
+    
+    # Movement
+    beq r1, x0, end
+    addi r2, r1, -119    # 'w'
+    beq r2, x0, move_up
+    
+    # Pet actions (MISSING)
+    # addi r2, r1, -49   # '1' = feed
+    # beq r2, x0, feed_pet
+    
+    j end
+
+move_up:
+    exec ./ops/+x/move_entity.+x fuzzpet up
+    hit_frame
+    j end
+
+end:
+    halt
+```
+
+**Target game_loop.asm (complete):**
+```asm
+# game_loop.asm - COMPLETE
+# Variables
+int key 0
+int hunger 50
+int energy 100
+int happiness 75
+
+start:
+    read_history r1
+    beq r1, x0, end          # No input? skip
+    
+    # Movement (WASD)
+    addi r2, r1, -119        # 'w'
+    beq r2, x0, move_up
+    addi r2, r1, -115        # 's'
+    beq r2, x0, move_down
+    addi r2, r1, -97         # 'a'
+    beq r2, x0, move_left
+    addi r2, r1, -100        # 'd'
+    beq r2, x0, move_right
+    
+    # Pet actions (1-4)
+    addi r2, r1, -49         # '1' = feed
+    beq r2, x0, feed_pet
+    addi r2, r1, -50         # '2' = play
+    beq r2, x0, play_pet
+    addi r2, r1, -51         # '3' = sleep
+    beq r2, x0, sleep_pet
+    addi r2, r1, -52         # '4' = toggle emoji
+    beq r2, x0, toggle_emoji
+    
+    # Selector mode (Key 9)
+    addi r2, r1, -57         # '9'
+    beq r2, x0, toggle_selector
+    
+    j end
+
+move_up:
+    exec ./ops/+x/move_entity.+x fuzzpet up
+    exec ./ops/+x/stat_decay.+x fuzzpet energy=5
+    hit_frame
+    j end
+
+move_down:
+    exec ./ops/+x/move_entity.+x fuzzpet down
+    exec ./ops/+x/stat_decay.+x fuzzpet energy=5
+    hit_frame
+    j end
+
+feed_pet:
+    exec ./ops/+x/modify_stat.+x fuzzpet hunger -20
+    exec ./ops/+x/modify_stat.+x fuzzpet happiness 5
+    hit_frame
+    j end
+
+play_pet:
+    exec ./ops/+x/modify_stat.+x fuzzpet happiness 15
+    exec ./ops/+x/stat_decay.+x fuzzpet energy -10
+    hit_frame
+    j end
+
+sleep_pet:
+    exec ./ops/+x/modify_stat.+x fuzzpet energy 30
+    hit_frame
+    j end
+
+toggle_emoji:
+    exec ./ops/+x/fuzzpet_action.+x fuzzpet toggle_emoji
+    hit_frame
+    j end
+
+toggle_selector:
+    exec ./ops/+x/toggle_selector.+x
+    hit_frame
+    j end
+
+end:
+    halt
+```
+
+**Action Items:**
+1. Complete PAL script with ALL key bindings
+2. Add stat decay calls to movement
+3. Add response system integration
+4. Test all key bindings
+
+---
+
+### 2.4 PHASE 4: UNDO/LEDGER INTEGRATION (Priority 4)
+
+**Current State:** No undo support in fuzzpet_v2
+
+**Target State:** Full undo via action ledger
+
+**Ledger Format:**
+```
+# projects/fuzzpet_v2/config/action_ledger.txt
+TIMESTAMP|OP|ARGS|PREV_STATE|NEW_STATE
+2026-03-11T10:30:00|MOVE_ENTITY|fuzzpet,up|5,5|5,4
+2026-03-11T10:30:05|MODIFY_STAT|fuzzpet,hunger,-20|70|50
+```
+
+**Undo Op:**
+```c
+// undo_action.+x
+void undo_last() {
+    // Read last line from ledger
+    // Parse: OP|ARGS|PREV_STATE|NEW_STATE
+    // Execute inverse:
+    //   MOVE_ENTITY fuzzpet up → MOVE_ENTITY fuzzpet down
+    //   MODIFY_STAT hunger -20 → MODIFY_STAT hunger +20
+}
+```
+
+**Action Items:**
+1. Create `action_ledger.txt` in fuzzpet_v2 config
+2. Update ops to log actions
+3. Create `undo_action.+x` op
+4. Bind Ctrl+Z to undo in PAL script
+
+---
+
+### 2.5 PHASE 5: SELECTOR UNIFICATION (Priority 5)
+
+**Current State:** Selector exists in both editor and fuzzpet_v2
+
+**Target State:** Single selector piece, context-aware rendering
+
+**Selector Piece Structure:**
+```
+projects/fuzzpet_v2/pieces/selector/
+├── piece.pdl          # DNA
+├── state.txt          # Mirror (pos_x, pos_y, active)
+└── plugins/+x/
+    └── selector_ai.+x # Optional behavior
+```
+
+**Render Map Integration:**
+```c
+// render_map.c - Selector rendering
+void render_selector(char *view, int sel_x, int sel_y, int active) {
+    if (!active) return;  // Hidden when pet is active
+    
+    // Render 'X' at selector position (highest priority)
+    set_tile(view, sel_x, sel_y, 'X');
+}
+```
+
+**Action Items:**
+1. Move selector state to `projects/fuzzpet_v2/pieces/selector/`
+2. Update `toggle_selector.+x` to save/restore position
+3. Ensure `render_map.+x` always renders selector when active
+
+---
+
+## 3. ARCHITECTURAL DECISIONS
+
+### 3.1 WHY THIN MODULE?
+
+**Rationale:**
+1. **Hot Reload:** Change behavior without recompiling C
+2. **User Scripting:** Players can modify game logic
+3. **Debugging:** PAL scripts easier to debug than C
+4. **Consistency:** Same pattern as editor
+
+**Trade-off:** Slight performance overhead (~5ms per PAL launch)
+
+---
+
+### 3.2 WHY GENERALIZED OPS?
+
+**Rationale:**
+1. **Code Reuse:** Fix bug in `modify_stat` → benefits ALL pieces
+2. **Consistency:** Same stat modification logic everywhere
+3. **Bootstrap:** New pieces inherit working ops
+4. **TPM Compliance:** Ops are "muscles" - stateless, reusable
+
+**Trade-off:** More complex op interface (more arguments)
+
+---
+
+### 3.3 WHY PAL-FIRST?
+
+**Rationale:**
+1. **Separation of Concerns:** Module = router, PAL = logic
+2. **Extensibility:** Add features without C changes
+3. **Parity with Editor:** Editor uses PAL for complex macros
+4. **Future-Proof:** PAL can be replaced without touching module
+
+**Trade-off:** Learning curve for PAL scripting
+
+---
+
+## 4. MIGRATION CHECKLIST
+
+### Phase 1: Module Thinning
+- [ ] Move feed logic to PAL script
+- [ ] Move play logic to PAL script
+- [ ] Move sleep logic to PAL script
+- [ ] Remove hardcoded stat values from C
+- [ ] Test: Module launches PAL correctly
+
+### Phase 2: OP Generalization
+- [ ] Create `modify_stat.+x` (generic)
+- [ ] Update `stat_decay.+x` interface
+- [ ] Rename `fuzzpet_action.+x` → `entity_action.+x`
+- [ ] Update PAL script to use new ops
+- [ ] Test: All ops work with generic interface
+
+### Phase 3: PAL Completion
+- [ ] Add all movement keys to PAL
+- [ ] Add all action keys to PAL
+- [ ] Add selector toggle to PAL
+- [ ] Add stat decay calls
+- [ ] Test: All keys trigger correct ops
+
+### Phase 4: Undo/Ledger
+- [ ] Create `action_ledger.txt`
+- [ ] Update ops to log actions
+- [ ] Create `undo_action.+x`
+- [ ] Bind Ctrl+Z in PAL
+- [ ] Test: Undo reverts last action
+
+### Phase 5: Selector Unification
+- [ ] Move selector to project pieces
+- [ ] Update toggle_selector op
+- [ ] Update render_map op
+- [ ] Test: Selector visible/hidden correctly
+
+---
+
+## 5. SUCCESS METRICS
+
+| Metric | Before | After | Target |
+|--------|--------|-------|--------|
+| Module LOC | ~500 | ~100 | <150 |
+| PAL Script LOC | ~50 | ~200 | ~250 |
+| Fuzzpet-Specific Ops | 3 | 1 | 0 |
+| Generic Ops | 5 | 7 | 10+ |
+| Hardcoded Values | 10+ | 5 | 0 |
+| Undo Support | None | Partial | Full |
+| Test Coverage | ~40% | ~60% | 90%+ |
+
+---
+
+## 6. RISKS & MITIGATIONS
+
+### Risk 1: PAL Performance
+**Issue:** PAL script execution adds overhead
+**Mitigation:** Profile and optimize hot paths; cache frequently-used values
+
+### Risk 2: Op Interface Complexity
+**Issue:** Generic ops need more arguments
+**Mitigation:** Use sensible defaults; document interface clearly
+
+### Risk 3: State Migration
+**Issue:** Moving selector state may break existing saves
+**Mitigation:** Migration script to copy old state to new location
+
+### Risk 4: Regression Bugs
+**Issue:** Conversion may break working features
+**Mitigation:** Comprehensive test suite; rollback plan
+
+---
+
+## 7. TIMELINE
+
+| Phase | Duration | Dependencies |
+|-------|----------|--------------|
+| Phase 1: Module Thinning | 1-2 days | None |
+| Phase 2: OP Generalization | 2-3 days | Phase 1 |
+| Phase 3: PAL Completion | 3-4 days | Phase 2 |
+| Phase 4: Undo/Ledger | 2-3 days | Phase 3 |
+| Phase 5: Selector Unification | 1-2 days | Phase 4 |
+
+**Total:** 9-14 days
+
+---
+
+## 8. KEY INSIGHTS
+
+### 8.1 THE MANTRA
+> "fuzzpet_v2 IS op-ed. Same ops, same patterns, different content. The pet is just another piece. The game is just another project."
+
+### 8.2 THE PATTERN
+```
+Editor: Input → Module → Ops → State → Render
+Player: Input → Module → PAL → Ops → State → Render
+```
+
+The ONLY difference is PAL. Everything else is identical.
+
+### 8.3 THE PRINCIPLE
+> "If the editor can do it with ops, the player should too. If it's in C, it's in the wrong place."
+
+---
+
+## 9. APPENDIX: FILE CHANGES
+
+### 9.1 FILES TO CREATE
+```
+projects/fuzzpet_v2/scripts/game_loop.asm (complete)
+projects/fuzzpet_v2/config/action_ledger.txt
+pieces/apps/playrm/ops/src/modify_stat.c
+pieces/apps/playrm/ops/src/undo_action.c
+```
+
+### 9.2 FILES TO MODIFY
+```
+pieces/apps/playrm/plugins/playrm_module.c (thin it)
+pieces/apps/playrm/ops/src/fuzzpet_action.c (generalize)
+pieces/apps/playrm/ops/src/stat_decay.c (add params)
+projects/fuzzpet_v2/pieces/selector/state.txt (move location)
+```
+
+### 9.3 FILES TO DEPRECATE
+```
+pieces/apps/playrm/ops/src/fuzzpet_action.c (replace with entity_action.c)
+Hardcoded logic in playrm_module.c (remove)
+```
+
+---
+
+**"The pet is a piece. The game is a project. The logic is PAL. The muscles are ops. The module is thin. The state is sovereign. The ledger is truth."**
+
+---
+
+**END OF ARCHITECTURE DOCUMENT**

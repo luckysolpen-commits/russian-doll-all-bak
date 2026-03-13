@@ -1,0 +1,182 @@
+
+📅️mar11🚨️
+editor and editor mirror is going well. 
+fuzzpet isn't dead. but its really bad. 
+
+id almost rather gut it and ask it 2 rebuild based on "op-ed" but w/e
+u can always do that later, dont mention fuzzpet and u will be fine , 3
+
+⌛️manually do editor more ; leave op-ed how it is 
+till u are sure u can do it right, cuz fuzzpet will need 2 scaff off it. 
+⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️
+if u do it in a hurry u will certainly waste hours/days⌛️
+⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️⛔️
+🆘️
+editor and ops go hand in hand. fuzzpets an unwanted interloper by agent 2 
+and agent prefers editor is done b4 ops. 
+so just do it how it wants. 2 4 1. u win. 341 tbh . so go "slower" 
+enjoy the sights. ffs. 🆘️
+🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️🚨️
+/home/no/Desktop/Piecemark-IT/[CALENDARS]02.01/mar_11/^.PMO_c_+rmmp_32.01/doing+1/did/EDITOR_OPS_BOOTSTRAP_COMPLETE.txt
+🦙️🦙️🦙️🦙️🦙️🦙️🦙️🦙️🦙️🦙️
+- **Legacy Editor (editor-nop)**: The existing `pieces/apps/editor` is now tagged as `editor-nop`. It serves as a functional reference but will not receive the new Op-driven features.
+- **Op-Driven Editor (projects/op-ed)**: A new editor will be built strictly under the `projects/op-ed` structure. This editor will use the same **Brain/Muscle** architecture as FuzzPet V2, utilizing PAL scripts for tool selection and Op binaries for map modification.
+
+🦙️🦙️🦙️🦙️🦙️🦙️🦙️🦙️
+## 3. ARCHITECTURAL SYNERGY
+By building the new editor (Op-Ed) and FuzzPet V2 on the same PAL+Op foundation, we create a unified "Game Engine" where:
+- **Ops are Shared**: Both the editor and the player use the same `move_entity` and `place_tile` binaries.
+- **Logic is Hot-Swappable**: Game rules and Editor tools can be modified in `.asm` files without recompiling the core system.
+
+🦙️
+- [x] Selector visible on map (`X` icon) - VERIFIED at (5,5)
+- [x] Fuzzpet visible on map (`@` icon) - VERIFIED at (5,2)
+- [x] Zombie visible on map (`Z` icon) - VERIFIED at (10,2)
+- [x] Arrow keys move active entity
+- [x] Stats update after feed/play/sleep actions
+- [x] Debug line shows [ACTIVE]: selector | [KEY]: UP/DOWN/etc
+🦙️
+# FUZZPET V2 - SIMPLIFICATION PLAN (fuz-doing+1.txt)
+**Date:** 2026-03-11
+**Status:** RE-ARCHITECTURE PROPOSAL
+**Inspiration:** doing+1/10.editor-ops.txt - Editor ops worked cleanly, why is FuzzPet complex?
+
+---
+
+## 1. THE PROBLEM: OVER-ENGINEERING
+
+### Editor (Simple - Worked Well)
+```
+Input → Module → Op → State → Render
+  ↓      ↓       ↓     ↓       ↓
+WASD  editor  move_  state  render_
+      module  selector .txt  map.+x
+```
+
+
+### FuzzPet V2 (Complex - Broken)
+```
+Input → Keyboard → History → Module → PAL → ASM → Op → State → Render
+  ↓       ↓          ↓         ↓       ↓     ↓     ↓     ↓       ↓
+Arrow  input.c   history   fuzzpet  prisc  game  move  state  render
+         .+x      .txt     _v2_    +x    loop  _sel  .txt  _map
+                          module        .asm  .+x
+```
+
+y? cuz we dont have proven ops doing anything real. 
+this was supposed 2 be proof, but its really proof that its not!
+(no 'low level practical direction' becase 'op-ed' is fine...
+
+(this is actualy comparing that an op-ed. 
+can we just compare their kbd?)
+
+## 9. SUCCESS CRITERIA
+
+After simplification:
+- [ ] Selector moves with arrow keys
+- [ ] [KEY]: debug shows last key pressed
+🦙️
+## EXECUTIVE SUMMARY
+
+FuzzPet V2 has achieved architectural parity with legacy in terms of basic movement and state management. However, two critical features remain incomplete:
+
+1. **Selector Control**: The selector ('X') can move but lacks full functionality (Scan, Collect, Inspect)
+2. **Dynamic Menu Options**: The UI shows `[No Methods]` because PDL files are missing for selector and fuzzpet pieces
+
+This plan addresses both issues using the PAL+Op architecture mandated by the Three Pillars.
+🦙️
+🦙️
+🦙️
+🦙️
+                              │
+ │    248 ## SUMMARY                                             │
+ │    249                                                        │
+ │    250 **Throw Out:**                                         │
+ │    251 - ❌ Parser must route all input                       │
+ │    252 - ❌ Two history files                                 │
+ │    253 - ❌ PAL for everything                                │
+ │    254                                                        │
+ │    255 **Keep:**                                              │
+ │    256 - ✅ Module reads keyboard directly (like legacy)      │
+ │    257 - ✅ Single history file                               │
+ │    258 - ✅ Direct ops for simple actions                     │
+ │    259 - ✅ PAL for complex logic                             │
+ │    260                                                        │
+ │    261 **Fix:**                                               │
+ │    262 1. Module handles movement directly (arrows + WASD)    │
+ │    263 2. PAL handles actions (feed, play, sleep)             │
+ │    264 3. `save_engine_state()` after EVERY key               │
+ │    265 4. `move_selector.+x` op exists and works              │
+ │    266                                                        │
+ │    267 ---                                                    │
+ │    268                                                        │
+ │    269 **"The parser is for menus. The module is for games.   │
+ │        Don't mix them."**                                     │
+ │    270                                                        │
+ │    271 ---                                                    │
+ │    272                                                        │
+ │    273 **END OF OPS-FAQ**       
+ 
+ how does module know to read keys instead of nav. 
+ thats why we had a seperate history 
+ parser would send keys to module thru a different history file
+ when interact mode was triggered!
+ 
+ 
+ 
+ 
+ 
+ 
+ ------------------
+ 
+ 
+ ╰───────────────────────────────────────────────────────────────╯
+✦ I see the issue - the top status bar shows [KEY]: 4 but the bottom shows
+  [KEY]: None. The selector isn't moving either (still at ..X.R.. same
+  position).
+
+  The pipeline is:
+   1. ✅ Keys ARE being captured (nav shows d, w, a)
+   2. ✅ Parser IS injecting (top bar shows [KEY]: 4)
+   3. ❌ Module NOT processing OR render NOT updating (bottom bar [KEY]: None,
+      selector doesn't move)
+
+  Let me check if the module is even running and reading the right history
+  file. First, let me create a simpler test in the man-add project to isolate
+  the issue:
++++++
+> no  . parser is supposed to launch modules. its like script tag in js. doesn't 
+  @^.PMO_c_+rmmp_32.01/pieces/chtpm/layouts/main.chtpm work like that? does this 
+  help?  @^.PMO_c_+rmmp_32.01/docs/^.pmo.ld-faq+6/^.chtpm-faq/CHTPM_TPM_DOX+1.md
+
+=======================================
+
+
+> hey , lets make sure the parser that runs fuzpet module v2 actually parses and 
+  starts module first, thats the actual bottleneck were having. write 
+  module_fix.txt explaining how we will fix this first. u can test it . just run 
+  parser and see if it starts module and debugs. try till u fix it . explain that 
+  in fix doc
+
+============================
+✦ FOUND IT!
+
+   - pieces/keyboard/history.txt - Has old nav keys (13=ENTER, 1003=DOWN)
+   - pieces/apps/player_app/history.txt - Has LOTS of keys (1002=UP, 1003=DOWN,
+     1000=LEFT, 1001=RIGHT, 57=9, 67=C)
+
+  The parser IS injecting to player_app/history.txt but the module is reading
+  from keyboard/history.txt!
+
+  The fix is simple - change the module to read from the INJECTED history
+  file:
+
+------------
+═╝
+  Active [^]: b (ESC to exit)
+  ; parser isn't writing to the history  : cat debug.txt 
+----------
+  [23:57:20] V2 KEY=1002 (UP) target=fuzzpet
+  (make sure all kbd history files clear each new load, so we dont have to sort 
+  thru old info)
+

@@ -1,0 +1,425 @@
+# OPS-FAQ_M11: INPUT ROUTING - CORRECTED
+**Date:** 2026-03-11 23:55
+**Status:** ARCHITECTURAL CORRECTION
+
+---
+
+## MY MISCONCEPTION (WRONG)
+
+I said: "Use one history file, module reads keyboard directly"
+
+**That's WRONG because:**
+- Parser needs to capture keys for NAV mode (menu navigation)
+- Module needs to capture keys for INTERACT mode (game control)
+- If both read from same file, they BOTH process EVERY key = double processing!
+
+---
+
+## THE CORRECT PATTERN (FROM LEGACY FUZZPET)
+
+### Pipeline of Truth:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ KEYBOARD INPUT (orchestrator → keyboard_input.+x)          │
+│ - Reads raw terminal input                                  │
+│ - Writes to pieces/keyboard/history.txt                     │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ writes KEY_PRESSED: N
+┌─────────────────────────────────────────────────────────────┐
+│ pieces/keyboard/history.txt                                 │
+│ [2026-03-11 23:00:00] KEY_PRESSED: 119                      │
+│ [2026-03-11 23:00:01] KEY_PRESSED: 1002                     │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            ↓ READS (parser OR module, NOT BOTH)
+        ┌───────────────────┴───────────────────┐
+        │                                       │
+        ↓ (NAV mode)                            ↓ (INTERACT mode)
+┌───────────────────┐                   ┌───────────────────┐
+│ CHTPM PARSER      │                   │ GAME MODULE       │
+│ - Menu navigation │                   │ - Game logic      │
+│ - Button select   │                   │ - Op calls        │
+│ - Layout changes  │                   │ - State updates   │
+└───────────────────┘                   └───────────────────┘
+```
+
+### Key Insight:
+
+**The parser decides WHO reads the key:**
+- NAV mode: Parser consumes key (menu navigation)
+- INTERACT mode: Parser INJECTS key to app history (module reads)
+
+---
+
+## THE TWO HISTORY FILES (CORRECT DESIGN)
+
+| File | Purpose | Who Writes | Who Reads |
+|------|---------|------------|-----------|
+| `pieces/keyboard/history.txt` | System input buffer | `keyboard_input.+x` | Parser (always) |
+| `pieces/apps/player_app/history.txt` | App input buffer | Parser (inject) | Module (always) |
+
+**Flow:**
+```
+User presses 'w'
+    ↓
+keyboard_input.+x writes to pieces/keyboard/history.txt
+    ↓
+chtpm_parser.c reads keyboard/history.txt
+    ↓
+Parser checks: NAV mode or INTERACT mode?
+    ↓
+NAV mode: Parser uses key for menu navigation
+INTERACT mode: Parser injects to player_app/history.txt
+    ↓
+playrm_module.c reads player_app/history.txt
+    ↓
+Module calls ops based on key
+```
+
+---
+
+## WHY I WAS WRONG
+
+I said: "Module should read keyboard/history.txt directly"
+
+**Problem with that:**
+- Parser ALSO reads keyboard/history.txt
+- Both would process the same key = BUG!
+- Menu would navigate AND game would move = double input
+
+**Correct approach:**
+- Parser ALWAYS reads keyboard/history.txt
+- Parser decides: consume (NAV) or inject (INTERACT)
+- Module reads player_app/history.txt (only injected keys)
+
+---
+
+## THE REAL BUG: PARSER NOT INJECTING ARROW KEYS
+
+Looking at `chtpm_parser.c`, the `inject_raw_key()` function might be filtering out arrow keys!
+
+**Check this code:**
+```c
+void inject_raw_key(int key) {
+    // Is arrow key being filtered?
+    if (key == 1000 || key == 1001 || key == 1002 || key == 1003) {
+        // ARE ARROW KEYS BEING SKIPPED HERE?
+        return;  // ← BUG if this exists!
+    }
+    
+    // Write to app history
+    FILE *f = fopen("pieces/apps/player_app/history.txt", "a");
+    if (f) {
+        fprintf(f, "%d\n", key);
+        fclose(f);
+    }
+}
+```
+
+**Fix:** Ensure arrow keys (1000-1003) are injected just like any other key!
+
+---
+
+## THE LEGACY PATTERN (TRANSLATED TO OPS)
+
+Legacy fuzzpet had `game_logic.c` as a monolith. We're replacing it with OPS.
+
+### Legacy Code (game_logic.c):
+```c
+if (key == 'w' || key == 1002) {
+    player_y--;  // Direct C code
+    check_collision();
+    update_map();
+}
+```
+
+### New OPS Code (move_entity.+x):
+```c
+// Same logic, just extracted to op
+int main(int argc, char *argv[]) {
+    const char *piece_id = argv[1];
+    const char *dir = argv[2];
+    
+    get_piece_state(piece_id, "pos_y", &y);
+    y--;  // Same logic!
+    set_piece_state(piece_id, "pos_y", y);
+}
+```
+
+### Module Bridge (playrm_module.c):
+```c
+// Reads injected keys, calls ops
+if (key == 'w' || key == 1002) {
+    call_op("move_entity", active_target_id, "up", NULL);
+}
+```
+
+**Same pipeline, just modular!**
+
+---
+
+## WHAT NEEDS TO BE FIXED
+
+### 1. Parser Must Inject Arrow Keys
+
+**File:** `pieces/chtpm/plugins/chtpm_parser.c`
+
+**Find `inject_raw_key()` and ensure it doesn't filter arrow keys:**
+```c
+void inject_raw_key(int key) {
+    // DON'T filter arrow keys!
+    // if (key >= 1000 && key <= 1003) return;  ← WRONG!
+    
+    char *path = build_path_malloc("pieces/apps/player_app/history.txt");
+    FILE *f = fopen(path, "a");
+    if (f) {
+        fprintf(f, "%d\n", key);
+        fclose(f);
+    }
+    free(path);
+}
+```
+
+### 2. Module Must Read Injected Keys
+
+**File:** `pieces/apps/playrm/plugins/playrm_module.c`
+
+**Already correct - reads from player_app/history.txt:**
+```c
+asprintf(&history_path, "%s/pieces/apps/player_app/history.txt", project_root);
+```
+
+### 3. Module Must Handle Arrow Keys
+
+**File:** `pieces/apps/playrm/plugins/playrm_module.c`
+
+**Already correct - handles both WASD and arrows:**
+```c
+if (key == 'w' || key == 'W' || key == 1002) call_op("move_entity", ...);
+```
+
+### 4. move_entity.+x Op Must Work
+
+**File:** `pieces/apps/playrm/ops/src/move_entity.c`
+
+**Check this op exists and handles all piece types (fuzzpet, selector, hero).**
+
+---
+
+## TROUBLESHOOT: DEBUG THE PIPELINE
+
+**Symptom:** Keys not working, no [KEY] display, module not responding
+
+### Step 1: Check Module is Running
+
+```bash
+ps aux | grep playrm_module | grep -v grep
+```
+
+**Expected:**
+```
+no  12345  0.5  0.0  50228  9008 ?  S  23:00  0:00 ./pieces/apps/playrm/plugins/+x/playrm_module.+x
+```
+
+**If NOT running:**
+- Module crashed or wasn't launched
+- Check orchestrator: `ps aux | grep orchestrator`
+- Restart system: `./run_chtpm.sh`
+
+---
+
+### Step 2: Check Keyboard History (System Input)
+
+```bash
+cat pieces/keyboard/history.txt
+```
+
+**Expected:**
+```
+119
+1002
+119
+```
+
+**If EMPTY:**
+- `keyboard_input.+x` not running
+- Terminal not in raw mode
+- Check orchestrator launched keyboard_input
+
+---
+
+### Step 3: Check App History (Injected Keys)
+
+```bash
+cat pieces/apps/player_app/history.txt
+```
+
+**Expected:**
+```
+119
+1002
+119
+```
+
+**If EMPTY but keyboard/history.txt has data:**
+- Parser NOT injecting keys
+- Check if in INTERACT mode (active_index != -1)
+- Check if focused element has `onClick="INTERACT"`
+- Check parser process: `ps aux | grep chtpm_parser`
+
+---
+
+### Step 4: Check Manager State (last_key)
+
+```bash
+cat pieces/apps/player_app/manager/state.txt
+```
+
+**Expected:**
+```
+project_id=fuzzpet_v2
+active_target_id=selector
+current_z=0
+last_key=w
+```
+
+**If `last_key=None`:**
+- Module not processing keys
+- Module not calling `save_engine_state()`
+- Check module logs/stderr
+
+---
+
+### Step 5: Check Op Execution
+
+```bash
+# Check if op exists
+ls -la pieces/apps/playrm/ops/+x/move_entity.+x
+
+# Test op manually
+./pieces/apps/playrm/ops/+x/move_entity.+x selector up fuzzpet_v2
+
+# Check if state changed
+cat projects/fuzzpet_v2/pieces/selector/state.txt
+```
+
+**Expected after manual op:**
+```
+name=Selector
+type=selector
+pos_x=5
+pos_y=4
+pos_z=0
+```
+
+**If pos_y didn't change:**
+- Op has bug
+- Wrong piece_id
+- Wrong path resolution
+
+---
+
+### Step 6: Check Render Output
+
+```bash
+cat pieces/apps/player_app/view.txt
+```
+
+**Expected:**
+```
+║  ####################                                     ║
+║  #  ...............T#                                     ║
+║  #  ..X............T#   ← Selector at 5,4                 ║
+```
+
+**If view not updated:**
+- `render_map.+x` not called
+- `hit_frame_marker()` not called
+- Parser not detecting frame change
+
+---
+
+### Step 7: Check Frame Marker
+
+```bash
+cat pieces/display/frame_changed.txt | tail -5
+```
+
+**Expected:**
+```
+M
+M
+M
+```
+
+**If EMPTY:**
+- No one is hitting frame marker
+- Module not calling `hit_frame_marker()`
+- Parser not composing frame
+
+---
+
+### Step 8: Check Parser Mode
+
+```bash
+cat pieces/display/current_layout.txt
+```
+
+**Expected:**
+```
+pieces/apps/playrm/layouts/game.chtpm
+```
+
+**If different layout:**
+- Wrong layout loaded
+- Module might not start for this layout
+
+---
+
+### Quick Debug Script
+
+```bash
+#!/bin/bash
+echo "=== PIPELINE DEBUG ==="
+echo "1. Module running:"
+ps aux | grep playrm_module | grep -v grep | head -1
+
+echo -e "\n2. Keyboard history:"
+tail -3 pieces/keyboard/history.txt
+
+echo -e "\n3. App history:"
+tail -3 pieces/apps/player_app/history.txt
+
+echo -e "\n4. Manager state:"
+cat pieces/apps/player_app/manager/state.txt | grep last_key
+
+echo -e "\n5. Selector state:"
+cat projects/fuzzpet_v2/pieces/selector/state.txt | grep pos_
+
+echo -e "\n6. Frame marker:"
+tail -3 pieces/display/frame_changed.txt
+
+echo -e "\n=== END DEBUG ==="
+```
+
+---
+
+## COMMON ISSUES
+
+| Symptom | Likely Cause | Fix |
+|---------|--------------|-----|
+| No keys work | Module not running | Restart system |
+| Nav works, interact doesn't | Parser not injecting | Check `onClick="INTERACT"` |
+| [KEY] shows None | State not saved | Check `save_engine_state()` |
+| Selector doesn't move | Op not working | Test op manually |
+| View not updated | Render not called | Check `trigger_render()` |
+
+---
+
+**"Follow the data. If history is empty, the key didn't arrive. If state is stale, save wasn't called."**
+
+---
+
+**END OF OPS-FAQ (CORRECTED)**

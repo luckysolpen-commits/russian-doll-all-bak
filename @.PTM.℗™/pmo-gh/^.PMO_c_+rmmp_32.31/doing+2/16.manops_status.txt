@@ -1,0 +1,110 @@
+# MAN-OPS/OP-ED STATUS
+**Date:** 2026-03-12
+**Status:** BACKEND WORKS, UI LOADING NEEDS FIX
+
+---
+
+## WHAT'S WORKING ✅
+
+1. **Selector Movement Backend**
+   - `move_selector.+x DIR PROJECT` works correctly
+   - State updates properly in `projects/{id}/pieces/selector/state.txt`
+   - `render_map.+x` renders selector at correct position
+
+2. **Module Code**
+   - Both `man-ops_module.c` and `op-ed_module.c` fixed
+   - Read from `player_app/history.txt` (where parser injects)
+   - Use `move_selector.+x` instead of `move_player.+x`
+   - Read `project_id` from manager state at startup
+
+3. **Layout Files**
+   - Both have `<interact src="pieces/apps/player_app/history.txt" />` tag
+   - Parser will inject keys to correct location
+
+4. **Cleanup Script**
+   - `kill_all.sh` updated to kill `man-ops_module`, `man-pal_module`, `op-ed_module`
+
+---
+
+## WHAT'S NOT WORKING ⚠️
+
+1. **Module Launch**
+   - Parser not launching module when layout loads
+   - Multiple module instances can accumulate (fixed with kill_all.sh update)
+
+2. **Layout Loading**
+   - Setting `pieces/display/layout_changed.txt` doesn't trigger layout change
+   - Parser might not be parsing the new layout correctly
+
+3. **UI Display**
+   - Even when backend works, UI doesn't show selector moving
+   - Frame refresh might not be triggering
+
+---
+
+## HOW TO TEST MANUALLY
+
+```bash
+cd /path/to/project
+
+# 1. Clean start
+./kill_all.sh
+sleep 2
+
+# 2. Set up man-ops state
+echo "project_id=man-ops" > pieces/apps/player_app/manager/state.txt
+echo "active_target_id=selector" >> pieces/apps/player_app/manager/state.txt
+
+# 3. Reset selector
+cat > projects/man-ops/pieces/selector/state.txt << 'EOF'
+name=Selector
+type=selector
+pos_x=5
+pos_y=5
+pos_z=0
+on_map=1
+icon=X
+EOF
+
+# 4. Start system
+./run_chtpm.sh &
+sleep 3
+
+# 5. Trigger layout
+echo "pieces/apps/man-ops/layouts/man-ops.chtpm" > pieces/display/layout_changed.txt
+sleep 2
+
+# 6. Check module is running
+ps aux | grep man-ops | grep -v grep
+
+# 7. Test key injection
+echo "1002" >> pieces/apps/player_app/history.txt  # UP key
+sleep 0.5
+
+# 8. Check state changed
+cat projects/man-ops/pieces/selector/state.txt | grep pos
+
+# 9. Render and view
+./pieces/apps/playrm/ops/+x/render_map.+x
+cat pieces/apps/player_app/view.txt | head -12
+```
+
+---
+
+## FIXES APPLIED
+
+1. `man-ops_module.c` - Use `move_selector.+x DIR man-ops`, read from `player_app/history.txt`
+2. `op-ed_module.c` - Same fixes
+3. `man-ops.chtpm` - Added `<interact>` tag
+4. `op-ed.chtpm` - Added `<interact>` tag
+5. `kill_all.sh` - Added man-ops, man-pal, op-ed module cleanup
+
+---
+
+## NEXT STEPS
+
+1. Test manual key injection (step 7-9 above) - THIS WORKS ✅
+2. Figure out why parser isn't launching module automatically
+3. Figure out why layout change isn't triggering
+
+**The backend is solid. The issue is orchestration.**
