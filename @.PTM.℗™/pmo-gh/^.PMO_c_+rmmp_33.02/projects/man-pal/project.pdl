@@ -1,0 +1,14 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | project_id         | man-pal
+META         | version            | 1.0
+META         | author             | TPM-Brain-Unit
+
+STATE        | selector_enabled   | 1
+STATE        | starting_map       | map_01
+STATE        | player_piece       | selector
+STATE        | current_z          | 0
+STATE        | title              | MAN-PAL BRAIN DEMO
+
+RESPONSE     | project_start      | PAL Brain Initialized.
+RESPONSE     | default            | *listening...*

@@ -1,0 +1,46 @@
+# 18.leg-vs-ops.txt - Legacy vs. Ops Architectural Analysis
+# Date: 2026-03-12
+# Status: AUTHORITATIVE CANONICAL ANALYSIS
+
+## 1. THE ARCHITECTURAL DIVIDE
+As of March 12, 2026, Piecemark reality is divided into two primary execution tracks:
+
+### A. The Legacy Track (The "Hardcoded" Brain)
+- **Example:** `fuzz_legacy` (Project Manager Option 7)
+- **Logic:** Direct C implementation within the Module.
+- **Pros:** Extremely stable, battle-tested logic.
+- **Cons:** Rigid. Adding new behaviors requires recompiling the entire Manager.
+- **State Pattern:** Updates piece state files directly via internal C functions.
+
+### B. The Ops Track (The "Muscle" Brain)
+- **Example:** `man-ops`, `RMMP Editor`
+- **Logic:** Thin C Module that delegates to standalone `+x` binaries.
+- **Pros:** Highly modular. New behaviors (Ops) can be added without changing the Module.
+- **Cons:** More complex I/O pipeline; requires robust map and path resolution.
+- **State Pattern:** Calls `move_entity.+x` or `place_tile.+x`. The Module is a **Relay**, not an **Originator**.
+
+---
+
+## 2. THE "STATE COLLISION" DISCOVERY
+Today we identified a critical bug where `man-ops` and `editor` UI elements (Palettes, Positions) were appearing empty.
+
+### The Problem: Destructive Overwriting
+`render_map.c` (The Stage Producer) was hardcoded to overwrite `pieces/apps/player_app/state.txt` at the end of every render. 
+- **The Module:** Wrote `selector_pos=(5,5,0)` and `glyph_palette_view=[#]...`.
+- **The Renderer:** Wiped the file and wrote `pet_hunger=0`, `pet_energy=0`, etc.
+- **Result:** The UI variables were deleted before the Parser could read them.
+
+### The Fix: Non-Destructive Update Pattern
+We refactored `render_map.c` to use the `set_state_field()` helper. 
+- It now reads the existing `state.txt` first.
+- It updates only the fields it owns (Project ID, Title, Pet Stats).
+- It **PRESERVES** all other variables (Selector position, Editor response).
+
+---
+
+## 3. KEY LESSONS FOR DEVELOPERS
+1. **Never Overwrite App State:** Always use a non-destructive update pattern if multiple components write to the same `state.txt`.
+2. **Unified Buffer Sovereignty:** `<interact src="pieces/apps/player_app/history.txt" />` is the gold standard. It allows the Parser to remain agnostic of the project's internal structure.
+3. **Ops Compliance:** A module is only 100% "Ops Compliant" if it has zero internal movement logic. It must delegate to `move_entity.+x`.
+
+"If one component writes, and another component blinds, reality is lost."

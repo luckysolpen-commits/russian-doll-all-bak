@@ -1,0 +1,23 @@
+<panel>
+    <module>pieces/apps/man-pal/plugins/+x/man-pal_module.+x</module>
+    
+    <text label="╔══════════════ M A N - P A L   D E M O ════════════╗" /><br/>
+    <row label="BRAIN: ${project_id} | LAYOUT: man-pal.chtpm" /><br/>
+    <row label=" " /><br/>
+    
+    <row label=" GAME MAP:" /><br/>
+    <button label="Control Map" onClick="INTERACT" /><br/>
+    <text label="${game_map}" /><br/>
+    
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <row label="${editor_response}" /><br/>
+    <row label="${editor_status_2}" /><br/>
+    
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║  " /><button label="Exit to Menu" href="pieces/chtpm/layouts/os.chtpm" /><text label="                          ║" /><br/>
+    <text label="╚═══════════════════════════════════════════════════════════╝" /><br/>
+    <text label=" [ESC]: Nav | Movement delegated to PAL script" /><br/>
+    
+    <!-- Interact: Inject keys to player_app/history.txt -->
+    <interact src="pieces/apps/player_app/history.txt" />
+</panel>

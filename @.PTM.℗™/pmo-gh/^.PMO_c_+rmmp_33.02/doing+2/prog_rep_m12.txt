@@ -1,0 +1,30 @@
+# prog_rep_m12.txt - Regression & Success Analysis
+# Date: 2026-03-12
+# Status: 🚧 DEBUGGING (Partial Success)
+
+## 1. SUCCESSES
+- **Unified Pipeline:** The `<interact>` tag is successfully injecting keys into `pieces/apps/player_app/history.txt`. Verified via `check_history.sh`.
+- **Dynamic Routing:** `chtpm_parser.c` is correctly resolving module paths based on project IDs.
+- **Legacy Preservation:** `fuzz_legacy` is established and project-aware.
+- **Selector Movement:** Working in both Editor and Man-Ops demo.
+
+## 2. IDENTIFIED FAILURES (Regressions)
+
+### A. Debug "KEY" Display Failure - ✅ FIXED
+- **Fix:** Reversed load order in `chtpm_parser.c`. Unified app state now wins.
+
+### B. Glyph Scroll Failure
+- **Issue:** Focus on GLYPHS doesn't scroll palette; moves selector instead.
+- **Root Cause:** Removed `sync_focus()` from the module main loop. The module never knew the focus changed to index 3.
+- **Fix:** Restore `sync_focus()` in `man-ops_module.c` and `editor_module.c`.
+
+### C. Redundant Frame Updates
+- **Issue:** Single keypress triggers 3+ frames.
+- **Root Cause:** Multiple components (`move_entity`, `render_map`, `hit_markers`) all hitting the frame changed marker independently.
+- **Fix:** Remove redundant `hit_markers()` calls in main modules. Rely on the "Stage Producer" (Renderer) to hit the final marker.
+
+## 3. OP COMPLIANCE CHECK
+- **Status:** ✅ IMPROVED. 
+- **Achievement:** Movement logic is 100% extracted to shared ops.
+
+"The pipeline is flowing, but we need to stop hitting the heart so hard."

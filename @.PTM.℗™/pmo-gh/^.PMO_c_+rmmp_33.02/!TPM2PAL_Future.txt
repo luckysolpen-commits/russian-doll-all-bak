@@ -1,0 +1,36 @@
+# !TPM2PAL_Future.txt - Visionary Roadmap for Piecemark-IT
+# Date: 2026-03-12
+# Status: VISIONARY DRAFT
+
+## 1. THE DECENTRALIZED PIECE-TO-PIECE (P2P) NETWORK
+The current legacy C implementation (c2c_tpm) will be refactored into a fully TPM-Ops compliant application.
+- **Refactor Goal:** Extract core functions (Wallet, Mining, Auction, Chat) into standalone `+x` Ops.
+- **Sovereign Peers:** Each peer in the network is a "Piece" containing its own keys, history, and blockchain fragment.
+- **Ops Pipeline:**
+    - `mine_block.+x`: Triggers SHA256 PoW and updates the blockchain piece.
+    - `send_message.+x`: Injects encrypted text into a peer's incoming history Piece.
+    - `escrow_item.+x`: Moves an NFT Piece into an auction-specific escrow directory.
+
+## 2. GL VIRTUAL DESKTOP (The Meta-OS)
+A modern, web-parity (JS/HTML/PHP) dashboard that serves as a visual wrapper for the CHTPM environment.
+- **Visuals:** Uses CSS/GL to render windows, terminals, and interactive maps.
+- **Bridge.php:** Serves as the file manipulation bridge, allowing the web frontend to read `state.txt` mirrors and inject keys into `history.txt`.
+- **Multi-App Context:** Enables running multiple modernized apps (Editor, Player, P2P Chat) in floating windows, each pulsing their own history.
+
+## 3. THE TPM-KERNEL & RISC-V VM
+The ultimate evolution of the True Piece Method: A hardware-software parity layer.
+- **RISC-V VM:** A Prisc-like VM that executes standardized RISC-V instructions where registers and memory segments are individual TPM Pieces.
+- **TPM-Kernel:** A microkernel architecture where:
+    - Interrupts are history injections.
+    - Process States are Mirror Syncs.
+    - Syscalls are delegation calls to sovereign Ops.
+- **Determinism:** The entire kernel state can be replayed from the Master Ledger.
+
+## 4. CHRONOLOGY
+1. ✅ **Ops Baseline:** Prove muscles in Man-Ops (Track 1).
+2. 🚧 **Brain Layer:** Prove PAL scripts in Man-Pal (Track 2).
+3. ⏳ **Decentralization:** Refactor P2P Network into Ops Pieces.
+4. ⏳ **Aesthetics:** Build the GL Virtual Desktop.
+5. ⏳ **Foundations:** Implement the RISC-V TPM-Kernel.
+
+"If it's not in a file, it's a lie. If it's in the Ledger, it's Eternal."

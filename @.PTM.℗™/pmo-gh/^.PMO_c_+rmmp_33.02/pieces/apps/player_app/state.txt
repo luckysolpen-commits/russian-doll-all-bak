@@ -1,0 +1,16 @@
+project_id=man-pal
+gui_focus=1
+last_key=None
+selector_pos=(5,5,0)
+editor_response=[RESP]: PAL BRAIN ONLINE
+editor_status_2=[POS]: (5,5,0) | [KEY]: None                             
+app_title=MAN-PAL BRAIN DEMO
+pet_status=
+pet_name=FuzzPet
+pet_hunger=0
+pet_happiness=0
+pet_energy=0
+pet_level=0
+last_response=
+current_z=0
+active_target_id=selector

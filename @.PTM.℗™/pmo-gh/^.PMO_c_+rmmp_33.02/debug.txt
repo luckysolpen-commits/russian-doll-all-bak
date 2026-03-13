@@ -1,0 +1,6 @@
+[02:12:25] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=-1
+[02:12:25] PARSER: forked module pid=4230
+[02:12:25] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=4230
+[02:12:28] PARSER: launch_module(pieces/apps/man-pal/plugins/+x/man-pal_module.+x) pid=4230
+[02:12:28] PARSER: forked module pid=4251
+[02:12:28] PARSER: launch_module(pieces/apps/man-pal/plugins/+x/man-pal_module.+x) pid=4251

@@ -1,0 +1,56 @@
+# CPU Health & Throttling Exploration
+**Date:** 2026-03-13
+**Author:** Gemini Code Agent
+**Objective:** Analyze CPU usage patterns and implement health-preserving strategies.
+
+---
+
+## 1. ANALYSIS OF CURRENT PATTERNS
+
+### 1.1 Legacy Pattern (fuzz_legacy_manager.c)
+- **Mechanism:** Main loop with `usleep(16667)` (approx. 60 FPS).
+- **Efficiency:** Uses `stat()` to check for history file changes before opening it.
+- **Throttling:** Implements `if (!is_active_layout()) { usleep(100000); continue; }` which drops CPU usage by 6x when the project is not in focus.
+- **CPU Tax:** Launches `move_entity.+x` and `zombie_ai.+x` via `fork/exec/waitpid`. This is relatively heavy but only occurs on input.
+
+### 1.2 Ops Pattern (man-ops_module.c)
+- **Mechanism:** Similar to Legacy, using `usleep(16667)` and `stat()` polling.
+- **Efficiency:** Updates UI state (`write_ops_state`) and triggers render only when `processed == 1`.
+- **Throttling:** Same "Inactive Sleep" (100ms) when layout is not active.
+- **CPU Tax:** Calls Shared Traits (`move_entity.+x`) directly via `system()`.
+
+### 1.3 PAL Pattern (man-pal_module.c)
+- **Mechanism:** Relay module that launches `prisc+x` (VM) to process input.
+- **Efficiency:** Same "Inactive Sleep" (100ms) when layout is not active.
+- **CPU Tax (CRITICAL):** Launches the Prisc VM for **EVERY SINGLE KEY** in the history buffer. If multiple keys are pressed, multiple VM instances are launched sequentially via `system()`. This is significantly more taxing than direct trait calls.
+
+---
+
+## 2. CPU HEALTH RECOMMENDATIONS
+
+### 2.1 The "Active Pulse" Strategy
+Future projects should move away from high-frequency polling when idle. 
+- **Idle State:** 100ms - 500ms sleep.
+- **Active State (Input detected):** 16ms sleep (60 FPS) for a short burst (Pulse), then back to Idle.
+
+### 2.2 Prisc VM Optimization (Self-Killing Mandate)
+- **Problem:** `prisc+x` is a full VM. Launching it repeatedly is the primary source of throttling issues.
+- **Fix:** `prisc+x` must be "Self-Killing". The `halt` instruction correctly sets `pc = inst_count`, terminating the loop.
+- **Optimization:** Modify `man-pal_module.c` to launch `prisc+x` **ONCE** per history update, passing ALL keys as an argument or allowing `prisc+x` to consume the entire buffer in one go.
+
+### 2.3 The "PAL Fix"
+- **Implementation:** Ensure `prisc+x` always hits the `halt` path.
+- **Validation:** Add `exit(0)` explicitly at the end of `prisc+x` to ensure OS-level cleanup.
+- **Integration:** Use `system(cmd)` for synchronous execution but consider `&` and manual `wait` if parallel non-blocking execution is needed (though sequential is safer for state consistency).
+
+---
+
+## 3. FUTURE PROJECT STANDARDS (CPU COMPLIANCE)
+
+1. **Focus Throttling:** ALWAYS use `is_active_layout()` to sleep longer when not in focus.
+2. **Stat-First Polling:** Never open state/history files unless `stat()` confirms they have changed (`st_mtime` or `st_size`).
+3. **VM Batching:** If using Prisc, batch operations. Do not launch the VM in a tight loop.
+4. **Z-Process Cleanup:** Use `surgical_kill` (via `kill_all.sh`) during development to prevent zombie processes.
+
+---
+*Status: Exploratory Phase Complete. Implementing PAL fixes next.*

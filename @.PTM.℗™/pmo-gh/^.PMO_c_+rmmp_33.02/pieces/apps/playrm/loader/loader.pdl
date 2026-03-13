@@ -1,0 +1,18 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | loader
+META         | version            | 1.0
+META         | determinism        | strict
+
+STATE        | name                 | Project Loader
+STATE        | status               | active
+
+METHOD       | move                 | void
+METHOD       | man-ops | LOAD_PROJECT:man-ops
+METHOD       | fuzzpet_v2 | LOAD_PROJECT:fuzzpet_v2
+METHOD       | op-ed | LOAD_PROJECT:op-ed
+METHOD       | demo_1 | LOAD_PROJECT:demo_1
+METHOD       | man-pal | LOAD_PROJECT:man-pal
+METHOD       | man-add | LOAD_PROJECT:man-add
+METHOD       | template | LOAD_PROJECT:template
+METHOD       | fuzz_legacy | LOAD_PROJECT:fuzz_legacy
