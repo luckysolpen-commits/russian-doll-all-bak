@@ -1,1 +1,0 @@
-pieces/apps/man-pal/layouts/man-pal.chtpm

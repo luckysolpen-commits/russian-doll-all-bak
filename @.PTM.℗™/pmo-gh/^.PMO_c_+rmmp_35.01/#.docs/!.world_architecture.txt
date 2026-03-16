@@ -1,0 +1,182 @@
+# TPM World Architecture - Piece/Map Association Evolution
+**Date:** 2026-03-15
+**Status:** Transitional Architecture (Phase 1 → Phase 2)
+
+---
+
+## 1. CURRENT STATE (Phase 1 - Flat Structure)
+
+### Current Architecture
+```
+projects/mygame/
+├── maps/
+│   ├── map_0001.txt
+│   ├── map_0002.txt
+│   └── map_0003.txt
+└── pieces/
+    ├── selector/
+    ├── hero/
+    ├── npc_7_5/
+    └── chest_3_2/
+```
+
+**Problem:** All pieces live in a flat `pieces/` directory with no inherent map association. The renderer must scan ALL pieces and filter by `on_map=1` and position, causing "NPC bleed-through" where pieces appear on every map.
+
+---
+
+## 2. IMMEDIATE FIX (Phase 1.5 - map_id Field)
+
+### Solution: Add `map_id` Field to Piece State
+
+Each piece's `state.txt` gets a `map_id` field that explicitly associates it with a map file:
+
+```
+# projects/mygame/pieces/npc_7_5/state.txt
+name=npc_7_5
+type=npc
+pos_x=7
+pos_y=5
+pos_z=0
+on_map=1
+map_id=map_0001.txt    ← PRIMARY SOURCE OF TRUTH
+icon=&
+behavior=passive
+```
+
+### Renderer Behavior
+1. Load terrain from `active_map_file` (e.g., `map_0002.txt`)
+2. Scan all pieces in `pieces/` directory
+3. For each piece with `on_map=1`:
+   - **If `map_id` exists:** Only render if `map_id == active_map_file`
+   - **If `map_id` missing:** Piece renders on ALL maps (backward compatibility)
+
+### Implementation Files
+- `pieces/apps/playrm/ops/src/render_map.c` - Filter by `map_id`
+- `pieces/apps/playrm/ops/src/create_piece.c` - Record current map when creating
+
+---
+
+## 3. LONG-TERM VISION (Phase 2 - World Directories)
+
+### The "World as Piece" Architecture
+
+In the final architecture, a **World** is itself a piece container, and maps are properties of worlds:
+
+```
+projects/mygame/
+├── pieces/
+│   ├── selector/              ← Global piece (not in any world)
+│   └── world_01/              ← World container (ITSELF A PIECE)
+│       ├── state.txt          ← World properties
+│       ├── map_file=map_0001.txt
+│       ├── map_file=map_0002.txt
+│       └── pieces/            ← Pieces belonging to this world
+│           ├── hero/
+│           ├── npc_7_5/
+│           └── chest_3_2/
+└── maps/
+    ├── map_0001.txt
+    ├── map_0002.txt
+    └── map_0003.txt
+```
+
+### Key Concepts
+
+1. **World Container (`world_<#>/`)**: A special piece that "contains" other pieces
+2. **Map as Property**: A world has one or more `map_file=` entries in its state
+3. **Nested Pieces**: Pieces inside `world_01/pieces/` belong to that world
+4. **Flexible Association**: A piece can be:
+   - In a world directory (explicit containment)
+   - Have `map_id` field (explicit map association)
+   - Have neither (global piece, shows everywhere)
+
+### Resolution Order (Future)
+When determining if a piece should render:
+1. **Check directory structure:** Is piece inside `world_<X>/pieces/`?
+2. **Check `map_id` field:** Does `piece.map_id` match current map?
+3. **Default:** If neither, piece is "global" (selector, player, etc.)
+
+---
+
+## 4. MIGRATION PATH
+
+### Phase 1.5 (Now) - Add `map_id` Field
+- ✅ Add `map_id` to new pieces via `create_piece.c`
+- ✅ Filter by `map_id` in `render_map.c`
+- ✅ Existing pieces without `map_id` show on all maps (temporary)
+
+### Phase 2 (Future) - World Directories
+- Create `world_01/`, `world_02/` directories under `pieces/`
+- Move relevant pieces into `world_<X>/pieces/`
+- Update renderer to scan world directories
+- `map_id` field becomes secondary to directory structure
+
+### Phase 2.5 (Optional) - Migration Script
+```bash
+# Future script to organize existing pieces
+./organize_pieces_by_map.sh
+# Scans all pieces, reads their map_id (or position heuristic)
+# Creates world_<X>/pieces/ directories
+# Moves pieces into appropriate subdirectories
+```
+
+---
+
+## 5. WHY THIS EVOLUTION?
+
+### Problem with Flat Structure
+- No visual organization
+- All pieces scanned for every render
+- No "world boundaries" for game logic
+- Hard to have multiple disconnected areas
+
+### Benefits of World Directories
+- **Logical grouping:** All pieces in "dungeon level 1" are together
+- **Efficient rendering:** Only scan `world_01/pieces/` when in that world
+- **World transitions:** Load/unload entire worlds at once
+- **Multi-map worlds:** A world can span multiple map files (overworld + dungeon)
+
+### Why Not Skip to Phase 2?
+- Existing projects have pieces in flat structure
+- Need `map_id` fix urgently to stop bleed-through
+- World directory structure requires more refactoring
+- `map_id` is a stepping stone that works with BOTH architectures
+
+---
+
+## 6. FUTURE AGENT NOTES
+
+### If You're Implementing Phase 2
+
+1. **Preserve `map_id` field** - It's the primary source of truth even in Phase 2
+2. **Directory structure is organizational** - Don't break pieces that aren't in world dirs
+3. **World piece itself** - `world_01/` should have its own `state.txt` with:
+   ```
+   name=World 01
+   type=world
+   map_file=map_0001.txt
+   map_file=map_0002.txt
+   ```
+4. **Backward compatibility** - Pieces at root `pieces/` level should still work as "global"
+
+### Key Files to Modify for Phase 2
+- `render_map.c` - Also scan `world_<X>/pieces/` directories
+- `create_piece.c` - Option to create piece in specific world directory
+- New: `create_world.c` - Create world container piece
+- New: `move_to_world.c` - Transfer piece between worlds
+
+---
+
+## 7. CURRENT IMPLEMENTATION STATUS
+
+| Feature | Status | File |
+|---------|--------|------|
+| `map_id` field in state | ✅ Implemented | `create_piece.c` |
+| Filter by `map_id` in renderer | ✅ Implemented | `render_map.c` |
+| Backward compatibility (no map_id) | ✅ Implemented | `render_map.c` |
+| World directory structure | 🚧 Future | - |
+| Migration script | 🚧 Future | - |
+
+---
+
+*This document explains the transitional architecture. The `map_id` field is the bridge between the current flat structure and the future world-based organization.*

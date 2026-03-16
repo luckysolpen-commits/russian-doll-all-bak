@@ -1,0 +1,347 @@
+# op-ed Module Completion Prompt
+**Date:** 2026-03-15
+**Status:** Partial Implementation - Needs Completion
+**Reference:** `pieces/apps/editor/plugins/editor_module.c` (working editor)
+
+---
+
+## TASK
+
+Complete the op-ed module (`pieces/apps/op-ed/plugins/op-ed_module.c`) to match editor_module functionality. The selector renders and moves, but **glyph placement is not working**.
+
+---
+
+## CURRENT STATUS
+
+### ✅ Working Features
+- [x] CPU safety (signal handlers, fork/exec/waitpid)
+- [x] Selector rendering (`X` at cursor position)
+- [x] Selector movement (arrow keys)
+- [x] Map palette display (ADD + map list)
+- [x] Glyph palette display ([#] . R T @ & Z X ? !)
+- [x] `stage_map_idx` initialization in main()
+- [x] `hit_frame_marker()` calls for responsive rendering
+- [x] Map creation (ADD → ENTER creates new map)
+
+### ❌ Broken Features
+- [ ] **Glyph placement on map** (SPACE/ENTER places but nothing appears)
+- [ ] **Entity creation** (@, &, Z, T should create pieces)
+- [ ] **Tile placement** (#, ., R, etc. should modify map file)
+- [ ] **Backspace clear tile** (currently uses wrong map index)
+- [ ] **Context menu for piece selection** (SPACE on piece should select it)
+
+---
+
+## ROOT CAUSE ANALYSIS
+
+### Issue: Glyph Placement Not Working
+
+**Symptom:** Pressing SPACE shows "[RESP]: Tile placed" but no glyph appears on map.
+
+**Current Code (op-ed_module.c line ~375-380):**
+```c
+if (key == ' ' && gui_focus_index == 1 && map_count > 0) {
+    const char **active_set = emoji_mode ? emoji_glyphs : ascii_glyphs;
+    const char *glyph = active_set[glyph_idx];
+    int is_entity = (strcmp(glyph, "@") == 0 || strcmp(glyph, "&") == 0 || 
+                     strcmp(glyph, "Z") == 0 || strcmp(glyph, "T") == 0);
+    char *cmd = NULL;
+    if (is_entity)
+        asprintf(&cmd, "%s/pieces/apps/playrm/ops/+x/create_piece.+x %s %d %d > /dev/null 2>&1",
+                 project_root, glyph, cursor_x, cursor_y);
+    else
+        asprintf(&cmd, "%s/pieces/apps/editor/ops/+x/place_tile.+x %s %d %d %s > /dev/null 2>&1",
+                 project_root, project_maps[stage_map_idx], cursor_x, cursor_y, glyph);
+    if (cmd) { run_command(cmd); free(cmd); set_response("Piece created"); }
+}
+```
+
+**Problem:** The code LOOKS correct but placement doesn't work. Possible issues:
+
+1. **`stage_map_idx` might be 0 or -1** when placement is attempted
+   - Should be ≥1 for real maps
+   - Check initialization in main()
+
+2. **`project_maps[stage_map_idx]` might be empty string**
+   - Verify `scan_maps()` populates the array correctly
+   - Check if map files exist in `projects/op-ed/maps/`
+
+3. **`place_tile.+x` op might be failing silently**
+   - The `> /dev/null 2>&1` hides errors
+   - Check if the op binary exists and is executable
+
+4. **Map file permissions**
+   - Check if map files are writable
+
+---
+
+## REFERENCE: editor_module Working Code
+
+### editor_module Placement (Line ~395-405):
+```c
+if (key == 10 || key == 13) {  // ENTER key
+    if (stage_map_idx > 0 && stage_map_idx < map_count) {
+        const char **active_set = emoji_mode ? emoji_glyphs : ascii_glyphs;
+        const char *glyph = active_set[glyph_idx];
+        int is_entity = (strcmp(glyph, "@") == 0 || strcmp(glyph, "&") == 0 || 
+                         strcmp(glyph, "Z") == 0 || strcmp(glyph, "T") == 0);
+        char *cmd = NULL; 
+        if (is_entity)
+            asprintf(&cmd, "%s/pieces/apps/playrm/ops/+x/create_piece.+x '%s' %d %d > /dev/null 2>&1",
+                     project_root, glyph, cursor_x, cursor_y);
+        else
+            asprintf(&cmd, "%s/pieces/apps/editor/ops/+x/place_tile.+x %s %d %d '%s' > /dev/null 2>&1",
+                     project_root, project_maps[stage_map_idx], cursor_x, cursor_y, glyph);
+        if (cmd) { 
+            run_command(cmd); 
+            free(cmd); 
+            if (is_entity) set_response("Piece created"); 
+            else set_response("Tile placed"); 
+        }
+    } else if (stage_map_idx == 0) set_response("Select a map first!");
+}
+```
+
+### Key Differences to Copy:
+1. **editor checks `stage_map_idx > 0 && stage_map_idx < map_count`** before placement
+2. **editor shows "Select a map first!"** if no map is active
+3. **editor uses ENTER key (10/13)** for placement, not SPACE
+4. **editor wraps glyph in quotes:** `'%s'` in format string
+
+---
+
+## REQUIRED FIXES (Ordered by Complexity)
+
+### 🔵 Fix 1: Add Map Validation Check (EASY - 2 lines)
+**Complexity:** ⭐ Very Easy  
+**Lines to add:** 4  
+**Risk:** None - just adds a safety check
+
+**Location:** At start of placement code in `process_key()`
+
+**Add:**
+```c
+if (stage_map_idx < 1 || stage_map_idx >= map_count) {
+    set_response("Select a map first!");
+    return;
+}
+```
+
+**Test:** Try to place glyph without selecting a map → should show "Select a map first!"
+
+---
+
+### 🔵 Fix 2: Add Proper Response Messages (EASY - 2 lines)
+**Complexity:** ⭐ Very Easy  
+**Lines to modify:** 2  
+**Risk:** None - just adds feedback
+
+**Location:** After `run_command()` in placement code
+
+**Change:**
+```c
+// FROM:
+if (cmd) { run_command(cmd); free(cmd); }
+
+// TO:
+if (cmd) { 
+    run_command(cmd); 
+    free(cmd); 
+    if (is_entity) set_response("Piece created"); 
+    else set_response("Tile placed"); 
+}
+```
+
+**Test:** Place glyph → should show "Tile placed" or "Piece created"
+
+---
+
+### 🟡 Fix 3: Add Quotes Around Glyph Parameter (EASY - 2 lines)
+**Complexity:** ⭐⭐ Easy  
+**Lines to modify:** 2 (both `asprintf()` calls)  
+**Risk:** Low - just format string change
+
+**Location:** Both `asprintf()` calls in placement code
+
+**Change:**
+```c
+// FROM:
+asprintf(&cmd, "...place_tile.+x %s %d %d %s > ...", ..., glyph);
+
+// TO:
+asprintf(&cmd, "...place_tile.+x %s %d %d '%s' > ...", ..., glyph);
+```
+
+**Test:** Place glyph with space in name (if any) → should work correctly
+
+---
+
+### 🟡 Fix 4: Fix Backspace Clear Tile (MEDIUM - 3 lines)
+**Complexity:** ⭐⭐ Easy-Medium  
+**Lines to modify:** 3  
+**Risk:** Low - uses same pattern as placement
+
+**Location:** Backspace handler (~line 304)
+
+**Ensure it uses `stage_map_idx`:**
+```c
+if (key == 127 || key == 8) {
+    if (gui_focus_index == 1 && stage_map_idx > 0 && stage_map_idx < map_count) {
+        char *cmd = NULL;
+        asprintf(&cmd, "%s/pieces/apps/editor/ops/+x/place_tile.+x %s %d %d . > /dev/null 2>&1",
+                 project_root, project_maps[stage_map_idx], cursor_x, cursor_y);
+        if (cmd) { run_command(cmd); free(cmd); set_response("Tile cleared"); }
+    }
+}
+```
+
+**Test:** Press Backspace → should clear tile to `.`
+
+---
+
+### 🟠 Fix 5: Change SPACE to ENTER for Placement (MEDIUM - 5 lines)
+**Complexity:** ⭐⭐⭐ Medium  
+**Lines to modify:** 5  
+**Risk:** Medium - changes key binding, may conflict with other features
+
+**Location:** `if (key == ' ' && ...)` block
+
+**Change to:**
+```c
+if (key == 10 || key == 13) {  // ENTER key
+    if (gui_focus_index == 1 && stage_map_idx > 0 && stage_map_idx < map_count) {
+        // ... existing placement code ...
+    }
+}
+```
+
+**Test:** Press ENTER with glyph armed → should place on map
+
+---
+
+### 🔴 Fix 6: Add Context Menu for Piece Selection (HARD - 20 lines)
+**Complexity:** ⭐⭐⭐⭐ Hard  
+**Lines to add:** ~25  
+**Risk:** High - new feature, may have edge cases
+
+**Location:** After movement code in `process_key()`
+
+**Add:**
+```c
+if (strcmp(active_target_id, "selector") == 0 && key == ' ') {
+    char *pieces_p = NULL;
+    if (asprintf(&pieces_p, "%s/projects/%s/pieces", project_root, current_project) != -1) {
+        DIR *dir = opendir(pieces_p);
+        if (dir) {
+            struct dirent *entry;
+            while ((entry = readdir(dir)) != NULL) {
+                if (entry->d_name[0] == '.' || strcmp(entry->d_name, "selector") == 0) continue;
+                int tx = get_state_int_fast(entry->d_name, "pos_x");
+                int ty = get_state_int_fast(entry->d_name, "pos_y");
+                if (tx == cursor_x && ty == cursor_y) {
+                    strncpy(active_target_id, entry->d_name, 63);
+                    set_response("Piece selected");
+                    break;
+                }
+            }
+            closedir(dir);
+        }
+        free(pieces_p);
+    }
+}
+```
+
+**Test:** Press SPACE on piece → should select it
+
+---
+
+## RECOMMENDED ORDER
+
+1. **Fix 1** (2 min) - Map validation
+2. **Fix 2** (2 min) - Response messages
+3. **Fix 3** (3 min) - Quote glyphs
+4. **Fix 4** (5 min) - Backspace fix
+5. **Fix 5** (5 min) - ENTER placement
+6. **Fix 6** (15 min) - Context menu (optional)
+
+**Total time:** ~30 minutes for all fixes
+
+---
+
+## TESTING CHECKLIST
+
+After fixes, verify:
+- [ ] Selector `X` renders at (5,5) on load
+- [ ] Arrow keys move selector responsively (no lag)
+- [ ] Press ENTER with `#` armed → `#` appears on map at cursor
+- [ ] Press ENTER with `@` armed → creates piece, shows "Piece created"
+- [ ] Press Backspace → clears tile to `.`, shows "Tile cleared"
+- [ ] Press SPACE on piece → selects piece, shows "Piece selected"
+- [ ] Map list shows: `[ADD] [map_0001_z0.txt] [map_01.txt]`
+- [ ] ENTER on ADD → creates new map, shows "New Map Created"
+- [ ] ENTER on map → switches to that map, shows "Map Switched"
+- [ ] Ctrl+Z → shows "Undo performed"
+
+---
+
+## FILES TO MODIFY
+
+1. **`pieces/apps/op-ed/plugins/op-ed_module.c`**
+   - Add map validation before placement
+   - Change SPACE to ENTER for placement
+   - Add quotes around glyph parameter
+   - Fix backspace to use `stage_map_idx`
+   - Add context menu for piece selection
+
+2. **`projects/op-ed/maps/`**
+   - Ensure at least one map file exists
+   - Check file permissions (writable)
+
+---
+
+## DEBUG STEPS
+
+If placement still doesn't work after fixes:
+
+1. **Check map file:**
+   ```bash
+   cat projects/op-ed/maps/map_01.txt
+   ls -la projects/op-ed/maps/
+   ```
+
+2. **Check ops exist:**
+   ```bash
+   ls -la pieces/apps/editor/ops/+x/place_tile.+x
+   ls -la pieces/apps/playrm/ops/+x/create_piece.+x
+   ```
+
+3. **Test op directly:**
+   ```bash
+   ./pieces/apps/editor/ops/+x/place_tile.+x map_01.txt 5 5 #
+   cat projects/op-ed/maps/map_01.txt
+   ```
+
+4. **Add debug output:**
+   ```c
+   fprintf(stderr, "DEBUG: stage_map_idx=%d, map=%s, pos=(%d,%d), glyph=%s\n",
+           stage_map_idx, project_maps[stage_map_idx], cursor_x, cursor_y, glyph);
+   ```
+
+---
+
+## SUCCESS CRITERIA
+
+op-ed is complete when:
+1. ✅ Selector renders and moves responsively
+2. ✅ ENTER places glyphs on map (tiles AND entities)
+3. ✅ Backspace clears tiles
+4. ✅ SPACE selects pieces at cursor
+5. ✅ Map creation/switching works
+6. ✅ All responses display correctly
+
+**Reference behavior:** Match editor_module exactly.
+
+---
+
+*Created: 2026-03-15*
+*For: Next agent to complete op-ed implementation*

@@ -1,8 +1,0 @@
-orchestrator=3966
-response_handler=4080
-chtpm_parser=4082
-renderer=4103
-gl_renderer=4106
-clock_daemon=4108
-loader_module=4230
-man-pal_module=4251

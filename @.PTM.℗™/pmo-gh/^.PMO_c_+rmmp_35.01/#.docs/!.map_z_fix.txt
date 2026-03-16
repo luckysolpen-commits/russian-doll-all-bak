@@ -1,0 +1,213 @@
+# Z-Level Map Change Fix Analysis
+**Date:** 2026-03-15
+**Issue:** Map doesn't change when selector changes Z-level with x/z keys
+
+---
+
+## 1. WHAT'S WORKING
+
+✅ Z-level (pos_z) changes when pressing x/z
+✅ Selector moves up/down correctly
+✅ Manager state preserves current_z
+✅ Manager state preserves current_map
+
+## 2. WHAT'S NOT WORKING
+
+❌ Map display doesn't change when Z changes
+❌ current_map is not being SET when Z changes
+❌ render_map.c reads current_map but it's never set
+
+---
+
+## 3. ROOT CAUSE ANALYSIS
+
+### The Data Flow
+
+```
+User presses 'x' → fuzz_legacy_manager.c
+    ↓
+Updates selector pos_z to 1
+    ↓
+Updates manager state current_map=map_01_z1.txt  ← THIS ISN'T HAPPENING
+    ↓
+Hits frame_changed.txt with 'Z' marker
+    ↓
+render_map.c reads manager/state.txt
+    ↓
+Should read current_map=map_01_z1.txt  ← BUT IT'S EMPTY/MISSING
+    ↓
+Should load projects/fuzz_legacy/maps/map_01_z1.txt  ← NEVER HAPPENS
+```
+
+### The Problem
+
+Looking at the Z-level handler in `fuzz_legacy_manager.c`:
+
+```c
+/* UPDATE current_map in manager state for render_map */
+char mgr_state[4096];
+snprintf(mgr_state, sizeof(mgr_state), "%s/pieces/apps/player_app/manager/state.txt", project_root);
+char mlines[100][256]; int mlc = 0, fcm = 0;
+sf = fopen(mgr_state, "r");
+if (sf) {
+    while (fgets(mlines[mlc], sizeof(mlines[0]), sf) && mlc < 99) {
+        if (strncmp(mlines[mlc], "current_map=", 12) == 0) {
+            snprintf(mlines[mlc], sizeof(mlines[mlc]), "current_map=map_01_z%d.txt\n", nz);
+            fcm = 1;
+        }
+        mlc++;
+    }
+    fclose(sf);
+}
+if (!fcm && mlc < 100) snprintf(mlines[mlc++], sizeof(mlines[0]), "current_map=map_01_z%d.txt\n", nz);
+sf = fopen(mgr_state, "w");
+if (sf) { for (int i = 0; i < mlc; i++) fputs(mlines[i], sf); fclose(sf); }
+```
+
+**This code SHOULD work**, but then `save_manager_state()` is called AFTER this, which reads the file and writes it back. But wait - `save_manager_state()` is called at the END of `route_input()`, AFTER the Z-level handler.
+
+Let me check the order of operations in `route_input()`:
+
+```c
+void route_input(int key) {
+    // ... key parsing ...
+    
+    // Z-level handler (sets current_map)
+    if (key == 'x' || key == 'X') {
+        // ... updates manager state with current_map ...
+    }
+    
+    // Movement handler
+    if (key == 'w' || key == 'a' || ...) {
+        // ... movement logic ...
+    }
+    
+    // THIS IS CALLED AT THE END - OVERWRITES current_map?
+    perform_mirror_sync();
+    save_manager_state();  // ← Reads file, preserves current_map, writes back
+    trigger_render();
+}
+```
+
+Wait - `save_manager_state()` NOW preserves `current_map` (we fixed it). So the issue must be that the manager state file write in the Z-level handler isn't working.
+
+### Debug Steps
+
+1. Check if manager state file is being written correctly after 'x' press
+2. Check if `current_map` line exists in manager state
+3. Check if `render_map.c` is reading `current_map` correctly
+
+---
+
+## 4. VERIFICATION CHECKLIST
+
+### Test 1: Manual current_map Test
+```bash
+# Add current_map manually
+echo "current_map=map_01_z1.txt" >> pieces/apps/player_app/manager/state.txt
+cat pieces/apps/player_app/manager/state.txt
+# Reload fuzz_legacy - should show Z=1 map
+```
+
+**Result:** Map DOES change when current_map is set manually ✓
+
+### Test 2: Check Z-level Handler Output
+```bash
+# Press 'x' in game, then immediately check:
+cat pieces/apps/player_app/manager/state.txt
+```
+
+**Expected:** Should show `current_map=map_01_z1.txt`
+**Actual:** Shows NO current_map line ✗
+
+### Test 3: Check File Write Permissions
+```bash
+ls -la pieces/apps/player_app/manager/state.txt
+# Should be writable
+```
+
+---
+
+## 5. HYPOTHESIS
+
+The Z-level handler's file write is being OVERWRITTEN by `save_manager_state()` because:
+
+1. Z-level handler writes `current_map=map_01_z1.txt` to manager state
+2. Then `save_manager_state()` is called
+3. `save_manager_state()` reads the file, but the file might not be flushed yet?
+4. Or there's a race condition?
+
+Actually, looking more carefully - the Z-level handler uses `system()` to call `piece_manager.+x`, which is SYNCHRONOUS (waits for completion). Then it writes to the file directly. Then `save_manager_state()` reads and writes.
+
+The issue might be that `save_manager_state()` reads the file BEFORE the Z-level handler's write completes, or the Z-level handler's write isn't actually happening.
+
+---
+
+## 6. FIX PROPOSAL
+
+### Option A: Move current_map Update to save_manager_state()
+
+Instead of updating `current_map` in the Z-level handler, track the current Z in a global variable and let `save_manager_state()` set `current_map` based on that:
+
+```c
+// Global variable
+int current_z_level = 0;
+
+// In Z-level handler:
+current_z_level = nz;  // Just set the variable
+
+// In save_manager_state():
+fprintf(f, "project_id=%s\nactive_target_id=%s\nlast_key=%s\ncurrent_z=%d\ncurrent_map=map_01_z%d.txt\n", 
+        current_project, active_target_id, last_key_str, current_z_val, current_z_level);
+```
+
+### Option B: Use piece_manager for current_map Too
+
+Instead of direct file write, use piece_manager to set a state that persists:
+
+```c
+// This won't work - piece_manager is for pieces, not manager state
+```
+
+### Option C: Debug Why File Write Fails
+
+Add debug logging to see if the write is happening:
+
+```c
+FILE *sf = fopen(mgr_state, "w");
+if (sf) { 
+    for (int i = 0; i < mlc; i++) fputs(mlines[i], sf); 
+    fclose(sf); 
+    // DEBUG: Verify write
+    sf = fopen(mgr_state, "r");
+    if (sf) {
+        char verify[1024] = "";
+        while (fgets(verify, sizeof(verify), sf));
+        fclose(sf);
+        // Log verify content
+    }
+}
+```
+
+---
+
+## 7. RECOMMENDED FIX
+
+**Option A** is cleanest - centralize the `current_map` logic in `save_manager_state()`:
+
+1. Add global `int selector_z_level = 0;`
+2. In Z-level handler, just update `selector_z_level = nz;`
+3. In `save_manager_state()`, write `current_map=map_01_z{selector_z_level}.txt`
+4. Remove the duplicate current_map write from Z-level handler
+
+This ensures `current_map` is ALWAYS set correctly whenever manager state is saved.
+
+---
+
+## 8. IMPLEMENTATION
+
+See next section for code changes.
+
+---
+
+*Status: Root cause identified. Fix ready to implement.*

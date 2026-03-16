@@ -1,0 +1,104 @@
+
+# RMMP Editor Bug Analysis
+**Last Updated:** 2026-03-15
+
+---
+
+## 1. Unintended "&" (NPC) on New Maps
+
+### Observed
+When a new map is created, the "&" sign appears on it even though it's supposed to be blank.
+
+### Original Root Cause (TPM Entity Persistence)
+In the current TPM architecture, pieces (like NPCs) are stored at the project level (`projects/{project}/pieces/`). The renderer currently draws every piece that is marked `on_map=1` based on its coordinates, regardless of which `.txt` map file is loaded.
+
+### Goal
+Pieces should be associated with a specific map name to prevent them from "bleeding through" to every map in the project.
+
+---
+
+### Top 3 Theories for Fix (2026-03-15 Investigation)
+
+#### Theory 1: Add `map_id` Field to Piece State (RECOMMENDED)
+**Proposal:** Add `map_id=map_0001.txt` to each piece's state.txt file.
+
+**Example:**
+```
+name=npc_7_5
+type=npc
+pos_x=7
+pos_y=5
+pos_z=0
+on_map=1
+map_id=map_0001.txt    ← NEW FIELD
+icon=&
+```
+
+**Renderer Change:** In `render_map.c`, check if `piece.map_id == active_map_file` before rendering.
+
+**Pros:**
+- Minimal file structure changes
+- Backward compatible (pieces without map_id show on all maps)
+- Easy to add to `create_piece.c`
+
+**Cons:**
+- Requires updating all existing pieces
+- Need to handle map switching (move piece to new map or hide?)
+
+---
+
+#### Theory 2: Map-Specific Pieces Subdirectories
+**Proposal:** Reorganize piece storage to be map-specific:
+
+```
+projects/template/pieces/
+├── map_0001_z0/
+│   ├── npc_7_5/
+│   └── chest_3_2/
+├── map_0002/
+│   └── selector/
+└── global/              (for selector, player that persist across maps)
+    └── selector/
+```
+
+**Renderer Change:** Only scan pieces from the current map's subdirectory.
+
+**Pros:**
+- Clean separation of map-specific entities
+- No rendering ambiguity
+- File system enforces the separation
+
+**Cons:**
+- Requires migrating all existing piece directories
+- Breaks current `get_piece_state()` path resolution
+- Need to handle "global" pieces (selector, player) differently
+- More complex path resolution in all piece operations
+
+---
+
+#### Theory 3: Default Map Assignment (Fallback Behavior)
+**Proposal:** Pieces without explicit `map_id` default to the FIRST map in the project (`map_0001_z0.txt`). Only render on that map.
+
+**Renderer Change:** If piece has no `map_id`, compare `active_map_file` to the first map name.
+
+**Pros:**
+- No changes to existing piece state files
+- Immediate fix for new maps appearing blank
+- Simple heuristic
+
+**Cons:**
+- Doesn't solve the problem for pieces that should appear on multiple maps
+- Requires knowing the "first map" at render time
+- Still need `map_id` for explicit multi-map support
+
+---
+
+### Recommended Implementation Order
+1. **Immediate:** Implement Theory 1 (add `map_id` field) + Theory 3 fallback
+2. **Short-term:** Update `create_piece.c` to record current map when creating pieces
+3. **Long-term:** Create migration script to add `map_id` to existing pieces based on heuristic
+
+### Files to Modify
+- `pieces/apps/playrm/ops/src/render_map.c` - Add map_id filtering
+- `pieces/apps/playrm/ops/src/create_piece.c` - Record current_map in piece state
+- `pieces/apps/editor/plugins/editor_module.c` - Show/edit piece map_id (optional UI)

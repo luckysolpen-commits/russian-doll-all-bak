@@ -1,0 +1,219 @@
+# NPC Bleed-Through Bug Analysis - Complete Investigation
+**Date:** 2026-03-15
+**Bug:** Unintended "&" (NPC) appears on newly created maps
+**Status:** Root Cause Identified - Fix Proposed
+
+---
+
+## 1. ORIGINAL BUG REPORT (rmmp-bugs.txt)
+
+> **Observed:** When a new map is created, the "&" sign appears on it even though it's supposed to be blank.
+> 
+> **Original Root Cause:** In the current TPM architecture, pieces (like NPCs) are stored at the project level (`projects/{project}/pieces/`). The renderer currently draws every piece that is marked `on_map=1` based on its coordinates, regardless of which `.txt` map file is loaded.
+> 
+> **Goal:** Pieces should likely be associated with a specific map name to prevent them from "bleeding through" to every map in the project.
+
+---
+
+## 2. WHY PREVIOUS ATTEMPTS DIDN'T FIX THIS
+
+The original bug report correctly identified the symptom but **no fix was ever implemented**. The codebase still has:
+
+1. **No map association in piece state files** - Pieces have no `current_map` or `map_id` field
+2. **No map filtering in render_map.c** - The renderer doesn't check which map a piece belongs to
+3. **Project-level piece storage** - All pieces live in `projects/{project}/pieces/` with no map subdirectory
+
+The bug report was created but no code changes followed. This is why the issue persists.
+
+---
+
+## 3. TRUE ROOT CAUSE ANALYSIS
+
+### 3.1 Current Architecture
+
+```
+projects/template/
+├── maps/
+│   ├── map_0001_z0.txt    (has walls "#")
+│   ├── map_0002.txt       (empty ".")
+│   └── map_0003.txt       (empty ".")
+└── pieces/
+    ├── selector/          (pos_x=5, pos_y=5, on_map=1)
+    └── npc_7_5/           (pos_x=7, pos_y=5, on_map=1)  ← THE PROBLEM
+```
+
+### 3.2 The Rendering Flow (render_map.c lines 203-225)
+
+```c
+// Step 1: Load terrain from CURRENT map file
+if (asprintf(&map_path, "%s/projects/%s/maps/%s", project_root, current_project, active_map_file) != -1) {
+    mf = fopen(map_path, "r");
+    // ... load terrain grid from map file ...
+}
+
+// Step 2: Load ALL pieces from project pieces directory
+if (asprintf(&pieces_dir, "%s/projects/%s/pieces", project_root, current_project) != -1) {
+    DIR *dir = opendir(pieces_dir);
+    while ((entry = readdir(dir)) != NULL) {
+        // Check 1: Is on_map == 1?
+        get_piece_state(entry->d_name, "on_map", val);
+        if (atoi(val) != 1 && strcmp(entry->d_name, "selector") != 0) continue;
+        
+        // Check 2: Is pos_z == current_z?
+        get_piece_state(entry->d_name, "pos_z", val);
+        if (atoi(val) != current_z) continue;
+        
+        // Check 3: Is position in viewport?
+        if (ex >= map_offset_x && ex < map_offset_x + MAP_COLS && 
+            ey >= map_offset_y && ey < map_offset_y + MAP_ROWS) {
+            // RENDER IT - NO MAP CHECK!
+            entities[entity_count].x = ex - map_offset_x;
+            entities[entity_count].y = ey - map_offset_y;
+        }
+    }
+}
+```
+
+### 3.3 The Missing Check
+
+**CRITICAL:** There is NO check for `current_map` or `map_id` in the piece's state. The renderer:
+
+1. Loads terrain from `active_map_file` (e.g., `map_0002.txt`)
+2. Renders ALL pieces with `on_map=1` that are in viewport
+3. **Never checks if the piece belongs to THIS map**
+
+### 3.4 Concrete Example
+
+- `npc_7_5` has `pos_x=7, pos_y=5, on_map=1` in `projects/template/pieces/npc_7_5/state.txt`
+- NPC was placed while viewing `map_0001_z0.txt`
+- User switches to `map_0002.txt` (blank map)
+- Renderer loads blank terrain from `map_0002.txt`
+- Renderer scans all pieces, finds `npc_7_5` with `on_map=1`
+- NPC is at (7,5) which is in viewport
+- **"&" appears on the "blank" map at position (7,5)**
+
+---
+
+## 4. ADDITIONAL THEORIES & COMPLICATIONS
+
+### 4.1 Theory: Map-Specific Pieces Directory
+
+**Idea:** Store pieces in map-specific subdirectories:
+```
+projects/template/pieces/
+├── map_0001/
+│   ├── npc_7_5/
+│   └── chest_3_2/
+├── map_0002/
+│   └── selector/
+└── global/              (for selector, player that persist across maps)
+    └── selector/
+```
+
+**Pros:**
+- Clean separation of map-specific entities
+- No rendering ambiguity
+- Easy to implement in render_map.c
+
+**Cons:**
+- Requires migrating all existing piece directories
+- Breaks current `get_piece_state()` path resolution
+- Need to handle "global" pieces (selector, player) differently
+
+### 4.2 Theory: Add `map_id` Field to Piece State
+
+**Idea:** Add `map_id=map_0001` to each piece's state.txt:
+```
+name=npc_7_5
+type=npc
+pos_x=7
+pos_y=5
+pos_z=0
+on_map=1
+map_id=map_0001          ← NEW FIELD
+icon=&
+```
+
+**Pros:**
+- Minimal file structure changes
+- Backward compatible (pieces without map_id show on all maps)
+- Easy to add to create_piece.c
+
+**Cons:**
+- Requires updating all existing pieces
+- Need to handle map switching (move piece to new map or hide?)
+- Renderer must check this field
+
+### 4.3 Theory: Active Map Tracking in Manager State
+
+**Idea:** The `pieces/apps/player_app/manager/state.txt` already tracks `current_map`:
+```
+project_id=template
+active_target_id=selector
+current_z=0
+current_map=map_0002.txt    ← Already exists!
+```
+
+The renderer reads this but pieces don't have a corresponding field to match against.
+
+---
+
+## 5. RECOMMENDED FIX (Combined Approach)
+
+### 5.1 Short-Term Fix (Renderer Filter)
+
+Modify `render_map.c` to check if piece has a `map_id` field, and if not, only render on the map where it was created (inferred from position or default to first map):
+
+```c
+// In render_map.c entity scanning loop:
+char piece_map_id[64] = "";
+get_piece_state(entry->d_name, "map_id", piece_map_id);
+
+// If piece has map_id, only render on that map
+if (strlen(piece_map_id) > 0 && strcmp(piece_map_id, active_map_file) != 0) {
+    continue;  // Skip this piece - belongs to different map
+}
+```
+
+### 5.2 Medium-Term Fix (Add map_id to create_piece.c)
+
+When creating a piece, record which map is active:
+
+```c
+// In create_piece.c, read current_map from manager state:
+char current_map[MAX_LINE] = "";
+// ... read from manager/state.txt ...
+fprintf(f, "name=%s_%d_%d\ntype=%s\npos_x=%d\npos_y=%d\npos_z=0\non_map=1\nmap_id=%s\nicon=%s\n",
+        piece_id, x, y, piece_id, x, y, current_map, icon);
+```
+
+### 5.3 Long-Term Fix (Migration Script)
+
+Create a script to add `map_id` to existing pieces based on some heuristic (e.g., first map, or a specific default).
+
+---
+
+## 6. IMPLEMENTATION CHECKLIST
+
+- [ ] Add `map_id` field to piece state template
+- [ ] Update `create_piece.c` to record current map
+- [ ] Update `render_map.c` to filter by `map_id`
+- [ ] Update `move_entity.c` to handle map transitions
+- [ ] Create migration script for existing pieces
+- [ ] Update editor module to show/set piece map association
+- [ ] Add UI indicator for which map a piece belongs to
+
+---
+
+## 7. RELATED FILES TO MODIFY
+
+| File | Change Required |
+|------|-----------------|
+| `pieces/apps/playrm/ops/src/render_map.c` | Add map_id filtering |
+| `pieces/apps/playrm/ops/src/create_piece.c` | Record current_map in piece state |
+| `pieces/apps/editor/plugins/editor_module.c` | Show/edit piece map_id |
+| `pieces/apps/playrm/ops/src/move_entity.c` | Handle map boundary transitions |
+
+---
+
+*Status: Root cause fully documented. Ready for implementation.*

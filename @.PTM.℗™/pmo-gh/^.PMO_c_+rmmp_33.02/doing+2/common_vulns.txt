@@ -1,1 +1,0 @@
-- **Synchronized Editor/Player State:** Fixed path mismatch where Editor was polling `pieces/apps/editor/history.txt` while CHTPM Parser was writing to `pieces/apps/player_app/history.txt`.

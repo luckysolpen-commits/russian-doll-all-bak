@@ -1,0 +1,280 @@
+# The Three Fuzzpets - Architecture Comparison
+**Date:** 2026-03-15
+**Purpose:** Clarify the differences between the three fuzzpet implementations
+
+---
+
+## QUICK REFERENCE
+
+| Name | Directory | Type | Status | Best For |
+|------|-----------|------|--------|----------|
+| **fuzzpet_app** | `pieces/apps/fuzzpet_app/` | App (shared) | ✅ Active | Shared ops, traits, clock |
+| **fuzz_legacy** | `projects/fuzz_legacy/` | **Player Project** | ✅ CPU-Safe Reference | PDL POC, learning |
+| **fuzzpet_v2** | `projects/fuzzpet_v2/` | Player Project | ⚠️ In Development | Future features |
+
+---
+
+## 1. fuzzpet_app (The Shared App)
+
+**Location:** `pieces/apps/fuzzpet_app/`
+
+**Type:** **Shared Application** (like `editor/`, `player_app/`)
+
+**Purpose:** Contains shared infrastructure used by ALL fuzzpet-based projects:
+- `fuzzpet/` - The base fuzzpet plugin
+- `fuzzpet_reset/` - Reset functionality
+- `manager/` - Manager module
+- `traits/` - Shared traits (`move_entity`, `zombie_ai`, `storage_trait`)
+- `clock/` - Clock plugins (`increment_time`, `increment_turn`, `end_turn`)
+- `world/` - World rendering (`map_render`)
+
+**Key Files:**
+```
+pieces/apps/fuzzpet_app/
+├── fuzzpet/
+│   ├── plugins/fuzzpet.c          ← Base fuzzpet logic
+│   └── plugins/fuzzpet_reset.c
+├── manager/
+│   └── fuzzpet_manager.c          ← Manager module (shared)
+├── traits/
+│   ├── move_entity.c              ← SHARED across projects
+│   ├── zombie_ai.c                ← SHARED across projects
+│   └── storage_trait.c
+├── clock/
+│   ├── increment_time.c
+│   ├── increment_turn.c
+│   └── end_turn.c
+└── world/
+    └── map_render.c
+```
+
+**Not a Player Project:** You don't "play" fuzzpet_app directly. It's the library of shared code that player projects use.
+
+**Analogy:** Like `pieces/apps/editor/` - it's the editor engine, not a specific project you edit.
+
+---
+
+## 2. fuzz_legacy (The Player Project - CPU-Safe Reference)
+
+**Location:** `projects/fuzz_legacy/`
+
+**Type:** **Player Project** (like `projects/template/`, `projects/demo_1/`)
+
+**Purpose:** The original, proven, CPU-safe fuzzpet implementation. This is the **reference implementation** that all CPU safety standards are based on.
+
+**Key Characteristics:**
+- ✅ **CPU-Safe validated** - Never causes throttle or crashes
+- ✅ **Self-contained** - Has its own manager, pieces, maps
+- ✅ **Player-selectable** - You can load this as "a game" from the PMO menu
+- ✅ **Uses shared traits** - Calls `pieces/apps/fuzzpet_app/traits/+x/`
+
+**Structure:**
+```
+projects/fuzz_legacy/
+├── manager/
+│   ├── fuzz_legacy_manager.c      ← Project-specific manager
+│   └── +x/fuzz_legacy_manager.+x
+├── pieces/
+│   ├── fuzzpet/                   ← This project's fuzzpet instance
+│   ├── pet_01/
+│   ├── pet_02/
+│   ├── zombie_01/
+│   └── selector/
+├── maps/
+│   └── map_0001.txt
+└── config/
+    └── editor_history.ledger
+```
+
+**How It Works:**
+1. User selects "Fuzz Legacy" from PMO project menu
+2. `fuzz_legacy_manager.+x` starts
+3. Reads input from `pieces/apps/player_app/history.txt`
+4. Routes input to shared traits (`move_entity.+x`, `zombie_ai.+x`)
+5. Updates this project's pieces in `projects/fuzz_legacy/pieces/`
+
+**Why It's Special:**
+- **Proven pattern** - This is THE CPU-safe reference
+- **Simple architecture** - Easy to understand
+- **Has PDL files** - Pieces have `piece.pdl` with METHOD sections
+- **Low risk to modify** - Can always compare to working binary
+
+**Best For:**
+- ✅ **PDL POC implementation** (recommended target)
+- ✅ Learning the TPM architecture
+- ✅ Testing new shared ops/traits
+- ✅ Reference for CPU-safe patterns
+
+---
+
+## 3. fuzzpet_v2 (The Player Project - In Development)
+
+**Location:** `projects/fuzzpet_v2/`
+
+**Type:** **Player Project** (same category as `fuzz_legacy`)
+
+**Purpose:** Next-generation fuzzpet with planned enhancements:
+- Emoji mode support
+- Enhanced stat system
+- Better piece evolution
+- Irregular verb responses
+
+**Key Characteristics:**
+- ⚠️ **In development** - Not feature-complete
+- ⚠️ **More complex** - Additional features = more code paths
+- ✅ **Also CPU-safe** - Follows legacy patterns
+- ✅ **Has PDL files** - Like legacy
+
+**Structure:**
+```
+projects/fuzzpet_v2/
+├── manager/
+│   ├── fuzzpet_v2_module.c        ← New manager with v2 features
+│   └── +x/fuzzpet_v2_module.+x
+├── pieces/
+│   ├── fuzzpet/
+│   └── selector/
+└── config/
+    └── editor_history.ledger
+```
+
+**Differences from fuzz_legacy:**
+| Feature | fuzz_legacy | fuzzpet_v2 |
+|---------|-------------|------------|
+| Manager | `fuzz_legacy_manager.c` | `fuzzpet_v2_module.c` |
+| Stat decay | Simple | Enhanced with actions |
+| Response system | Basic | Irregular verbs |
+| Emoji support | No | Yes |
+| Evolution | No | Planned |
+| Complexity | Low | Medium |
+
+**Best For:**
+- ⚠️ **Not ideal for PDL POC** - More complex, harder to debug
+- ✅ Future feature testing
+- ✅ Emoji mode development
+- ✅ Advanced stat system experiments
+
+---
+
+## ARCHITECTURE DIAGRAM
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    SHARED INFRASTRUCTURE                         │
+│                   (pieces/apps/fuzzpet_app/)                     │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐        │
+│  │ fuzzpet  │  │ manager  │  │  traits  │  │  clock   │        │
+│  │ plugin   │  │ module   │  │  (ops)   │  │  system  │        │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘        │
+└─────────────────────────────────────────────────────────────────┘
+                              ▲         ▲
+                              │         │
+                    Uses      │         │     Uses
+                              │         │
+┌─────────────────────────────┴┐  ┌────┴─────────────────────────┐
+│     PLAYER PROJECT:          │  │     PLAYER PROJECT:          │
+│     fuzz_legacy              │  │     fuzzpet_v2               │
+├──────────────────────────────┤  ├──────────────────────────────┤
+│  manager/                    │  │  manager/                    │
+│    fuzz_legacy_manager.c     │  │    fuzzpet_v2_module.c       │
+│  pieces/                     │  │  pieces/                     │
+│    fuzzpet/, pet_01, etc.    │  │    fuzzpet/                  │
+│  maps/                       │  │  config/                     │
+│    map_0001.txt              │  │                              │
+└──────────────────────────────┘  └──────────────────────────────┘
+        ✅ CPU-Safe Reference            ⚠️ In Development
+        ✅ Best for PDL POC              ⚠️ Too complex for POC
+```
+
+---
+
+## COMMON CONFUSIONS
+
+### ❌ "fuzzpet_app is the game"
+**No.** `fuzzpet_app` is the shared library. You play `fuzz_legacy` or `fuzzpet_v2` (the player projects).
+
+### ❌ "fuzz_legacy is old/deprecated"
+**No.** `fuzz_legacy` is the **reference implementation**. It's called "legacy" because it was first, not because it's obsolete. It's the CPU-safe gold standard.
+
+### ❌ "fuzzpet_v2 replaces fuzz_legacy"
+**No.** They're parallel player projects. You can have both loaded (in different sessions). `fuzz_legacy` will always be the stable reference.
+
+### ❌ "I should modify fuzzpet_app for the PDL POC"
+**No.** The PDL POC should target a **player project** (`fuzz_legacy`), not the shared app. You're adding PDL *reading* to the manager, not changing shared traits.
+
+---
+
+## FOR PDL POC: WHICH TO CHOOSE?
+
+### ✅ Recommended: fuzz_legacy
+
+**Why:**
+1. **Simple** - Single manager, straightforward input routing
+2. **Proven** - If you break it, you know exactly what "working" looks like
+3. **Has PDL files** - Pieces already have `piece.pdl` with METHOD sections
+4. **Low risk** - Easy to revert, easy to test
+5. **Clear integration point** - `route_input()` function is obvious
+
+**What You'll Modify:**
+- `projects/fuzz_legacy/manager/fuzz_legacy_manager.c` - Add PDL reading
+- `pieces/system/pdl/pdl_reader.c` - New utility (shared)
+
+**What You WON'T Modify:**
+- `pieces/apps/fuzzpet_app/*` - Shared infrastructure stays unchanged
+- `projects/fuzzpet_v2/*` - Not yet, wait until POC is proven
+
+---
+
+## SHARED OPS FLOW (How Traits Work)
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Player presses WASD in fuzz_legacy                         │
+└─────────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────────┐
+│  fuzz_legacy_manager.c (line ~200)                          │
+│  route_input(key)                                           │
+│    → Determines direction                                   │
+│    → Needs to move active_target_id                         │
+└─────────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────────┐
+│  CURRENT (Hardcoded):                                       │
+│  char* trait = build_path_malloc(                           │
+│      "pieces/apps/playrm/ops/+x/move_entity.+x");           │
+│  fork/exec/waitpid(trait, active_target_id, dir_str);       │
+└─────────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────────┐
+│  WITH PDL (Future):                                         │
+│  char handler[MAX_PATH];                                    │
+│  if (get_method(active_target_id, "on_move", handler) == 0) │
+│      fork/exec(handler);     ← From PDL                     │
+│  else                                                        │
+│      fork/exec(default_move_entity); ← Fallback             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Key Point:** The shared traits (`move_entity.+x`, `zombie_ai.+x`) don't change. What changes is **how the manager decides which trait to call**.
+
+---
+
+## SUMMARY
+
+| Question | Answer |
+|----------|--------|
+| Which is the "real" fuzzpet? | Both `fuzz_legacy` and `fuzzpet_v2` are player projects |
+| Which should I use for PDL POC? | `fuzz_legacy` (simple, proven, low risk) |
+| Is `fuzzpet_app` a game? | No, it's shared infrastructure (like a library) |
+| Can I play both legacy and v2? | Yes, they're separate projects |
+| Which is CPU-safe? | Both, but `fuzz_legacy` is the validated reference |
+| Where are traits stored? | `pieces/apps/fuzzpet_app/traits/` (shared) |
+| Where are piece states stored? | `projects/{project_name}/pieces/` (per-project) |
+
+---
+
+*Remember: `fuzz_legacy` is your friend. It's the simplest, most proven implementation. Start there for any new feature POC.*

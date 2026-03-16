@@ -1,4 +1,0 @@
-[Fri Mar 13 02:03:18 AM PDT 2026] PAL Watchdog started. Max runtime: 5s
-[Fri Mar 13 02:03:31 AM PDT 2026] [watchdog] Killing runaway Prisc process (PID: 9116, Elapsed: 6s)
-[Fri Mar 13 02:03:31 AM PDT 2026] [watchdog] Killing runaway Prisc process (PID: 9117, Elapsed: 6s)
-[Fri Mar 13 02:12:21 AM PDT 2026] PAL Watchdog started. Max runtime: 5s

@@ -1,0 +1,278 @@
+# Fix ENTER Placement in op-ed
+**Date:** 2026-03-15
+**Priority:** HIGH - Core functionality
+**Complexity:** ⭐⭐⭐ Medium (5-10 lines)
+
+---
+
+## THE PROBLEM
+
+**Symptom:** Pressing SPACE or ENTER shows "[RESP]: Tile placed" but no glyph appears on the map.
+
+**Expected:** Press ENTER with `#` armed → `#` appears on map at cursor position.
+
+---
+
+## WHAT WAS ALREADY TRIED (AND FAILED)
+
+### ❌ Attempt 1: Added `stage_map_idx` variable
+**What:** Added `int stage_map_idx = -1;` to track active map  
+**Result:** Still doesn't work - variable was uninitialized on load
+
+### ❌ Attempt 2: Initialized `stage_map_idx` in main()
+**What:** Added `if (map_count > 1) { map_idx = 1; stage_map_idx = 1; }`  
+**Result:** Still doesn't work - initialization is correct but placement still fails
+
+### ❌ Attempt 3: Changed placement to use `stage_map_idx`
+**What:** Changed `project_maps[map_idx]` to `project_maps[stage_map_idx]`  
+**Result:** Still doesn't work - correct index but something else is wrong
+
+### ❌ Attempt 4: Added `hit_frame_marker()`
+**What:** Added frame marker calls for responsive rendering  
+**Result:** Selector moves responsively, but placement still fails
+
+---
+
+## WHAT WORKS (For Reference)
+
+✅ Selector `X` renders at cursor position  
+✅ Selector moves with arrow keys (no lag)  
+✅ Map palette shows: `[ADD] map_0001_z0.txt map_01.txt`  
+✅ `stage_map_idx` initializes to 1 on load  
+✅ "[RESP]: Tile placed" message shows when pressing SPACE  
+
+**Conclusion:** The UI and state management work. The issue is specifically with the **placement command execution**.
+
+---
+
+## WHERE TO LOOK
+
+### File: `pieces/apps/op-ed/plugins/op-ed_module.c`
+
+### Current Placement Code (~Line 370-380):
+```c
+if (key == ' ' && gui_focus_index == 1 && map_count > 0) {
+    const char **active_set = emoji_mode ? emoji_glyphs : ascii_glyphs;
+    const char *glyph = active_set[glyph_idx];
+    int is_entity = (strcmp(glyph, "@") == 0 || strcmp(glyph, "&") == 0 || 
+                     strcmp(glyph, "Z") == 0 || strcmp(glyph, "T") == 0);
+    char *cmd = NULL;
+    if (is_entity)
+        asprintf(&cmd, "%s/pieces/apps/playrm/ops/+x/create_piece.+x %s %d %d > /dev/null 2>&1",
+                 project_root, glyph, cursor_x, cursor_y);
+    else
+        asprintf(&cmd, "%s/pieces/apps/editor/ops/+x/place_tile.+x %s %d %d %s > /dev/null 2>&1",
+                 project_root, project_maps[stage_map_idx], cursor_x, cursor_y, glyph);
+    if (cmd) { run_command(cmd); free(cmd); set_response("Piece created"); }
+}
+```
+
+---
+
+## HOW TO DEBUG
+
+### Step 1: Check What `stage_map_idx` Actually Is
+
+**Add debug output BEFORE placement:**
+```c
+fprintf(stderr, "DEBUG: stage_map_idx=%d, map_count=%d, map='%s'\n",
+        stage_map_idx, map_count, 
+        (stage_map_idx > 0 && stage_map_idx < map_count) ? project_maps[stage_map_idx] : "INVALID");
+```
+
+**Expected output:** `DEBUG: stage_map_idx=1, map_count=3, map='map_0001_z0.txt'`
+
+**If you see:** `stage_map_idx=0` or `stage_map_idx=-1` → initialization isn't working
+
+**If you see:** `map='INVALID'` → index out of bounds
+
+---
+
+### Step 2: Check What Command Is Being Run
+
+**Add debug output AFTER `asprintf`:**
+```c
+fprintf(stderr, "DEBUG CMD: %s\n", cmd);
+```
+
+**Expected output:** `DEBUG CMD: /path/to/pieces/apps/editor/ops/+x/place_tile.+x map_0001_z0.txt 5 5 #`
+
+**If you see:** `map_01.txt` (wrong map) → using wrong index
+
+**If you see:** `(null)` or empty → `asprintf` failed
+
+---
+
+### Step 3: Test the Command Manually
+
+**Run the exact command from terminal:**
+```bash
+cd /home/no/Desktop/Piecemark-IT/[CALENDARS]04.00/mar_13/^.PMO_c_+rmmp_35.01
+./pieces/apps/editor/ops/+x/place_tile.+x map_0001_z0.txt 5 5 #
+cat projects/op-ed/maps/map_0001_z0.txt
+```
+
+**If glyph appears in file:** The op works, issue is with how op-ed calls it
+
+**If glyph doesn't appear:** The op itself is broken or wrong path
+
+---
+
+### Step 4: Check Map File Path
+
+**The op expects:** `projects/{project}/maps/{map_file}`
+
+**Verify the path is correct:**
+```c
+fprintf(stderr, "DEBUG PATH: %s/projects/%s/maps/%s\n", 
+        project_root, current_project, project_maps[stage_map_idx]);
+```
+
+**Check if file exists:**
+```bash
+ls -la projects/op-ed/maps/
+```
+
+---
+
+## COMPARISON WITH editor_module
+
+### Reference File: `pieces/apps/editor/plugins/editor_module.c`
+
+### editor_module Placement (~Line 395-405):
+```c
+if (key == 10 || key == 13) {  // ENTER key
+    if (stage_map_idx > 0 && stage_map_idx < map_count) {
+        const char **active_set = emoji_mode ? emoji_glyphs : ascii_glyphs;
+        const char *glyph = active_set[glyph_idx];
+        int is_entity = (strcmp(glyph, "@") == 0 || strcmp(glyph, "&") == 0 || 
+                         strcmp(glyph, "Z") == 0 || strcmp(glyph, "T") == 0);
+        char *cmd = NULL; 
+        if (is_entity)
+            asprintf(&cmd, "%s/pieces/apps/playrm/ops/+x/create_piece.+x '%s' %d %d > /dev/null 2>&1",
+                     project_root, glyph, cursor_x, cursor_y);
+        else
+            asprintf(&cmd, "%s/pieces/apps/editor/ops/+x/place_tile.+x %s %d %d '%s' > /dev/null 2>&1",
+                     project_root, project_maps[stage_map_idx], cursor_x, cursor_y, glyph);
+        if (cmd) { 
+            run_command(cmd); 
+            free(cmd); 
+            if (is_entity) set_response("Piece created"); 
+            else set_response("Tile placed"); 
+        }
+    } else if (stage_map_idx == 0) set_response("Select a map first!");
+}
+```
+
+### Key Differences:
+
+| Aspect | editor_module | op-ed (current) | Fix Needed? |
+|--------|---------------|-----------------|-------------|
+| **Key** | `key == 10 || key == 13` (ENTER) | `key == ' '` (SPACE) | ✅ YES |
+| **Bounds check** | `stage_map_idx > 0 && stage_map_idx < map_count` | `map_count > 0` | ✅ YES |
+| **Glyph quotes** | `'%s'` (with quotes) | `%s` (no quotes) | ✅ YES |
+| **Error message** | `"Select a map first!"` | None | Optional |
+| **Response** | Both "Piece created" and "Tile placed" | Only "Piece created" | ✅ YES |
+
+---
+
+## THE FIX
+
+### Change 1: Use ENTER Key Instead of SPACE
+```c
+// FROM:
+if (key == ' ' && gui_focus_index == 1 && map_count > 0) {
+
+// TO:
+if ((key == 10 || key == 13) && gui_focus_index == 1) {
+```
+
+### Change 2: Add Bounds Check
+```c
+// ADD at start of placement block:
+if (stage_map_idx < 1 || stage_map_idx >= map_count) {
+    set_response("Select a map first!");
+    return;
+}
+```
+
+### Change 3: Add Quotes Around Glyph
+```c
+// FROM:
+asprintf(&cmd, "...place_tile.+x %s %d %d %s > ...", ..., glyph);
+
+// TO:
+asprintf(&cmd, "...place_tile.+x %s %d %d '%s' > ...", ..., glyph);
+```
+
+### Change 4: Fix Response Message
+```c
+// FROM:
+if (cmd) { run_command(cmd); free(cmd); set_response("Piece created"); }
+
+// TO:
+if (cmd) { 
+    run_command(cmd); 
+    free(cmd); 
+    if (is_entity) set_response("Piece created"); 
+    else set_response("Tile placed"); 
+}
+```
+
+---
+
+## TESTING
+
+After applying fixes:
+
+1. **Reload op-ed**
+2. **Press ENTER** with `#` armed
+3. **Check:**
+   - "[RESP]: Tile placed" appears
+   - `#` appears on map at cursor position
+   - Map file is updated: `cat projects/op-ed/maps/map_0001_z0.txt`
+
+4. **Test entity creation:**
+   - Cycle to `@` in glyph palette
+   - Press ENTER
+   - Check: "[RESP]: Piece created" and piece directory created
+
+---
+
+## IF IT STILL DOESN'T WORK
+
+### Check 1: Does `run_command()` Actually Execute?
+
+**Add after `run_command()`:**
+```c
+fprintf(stderr, "run_command returned, cmd was: %s\n", cmd);
+```
+
+### Check 2: Is the Op Binary Executable?
+```bash
+ls -la pieces/apps/editor/ops/+x/place_tile.+x
+chmod +x pieces/apps/editor/ops/+x/place_tile.+x  # If needed
+```
+
+### Check 3: Does `place_tile.+x` Need Different Arguments?
+
+**Check the op source:**
+```bash
+cat pieces/apps/editor/ops/place_tile.c | head -50
+```
+
+**Look for:** How it parses arguments (project name vs map name)
+
+---
+
+## SUCCESS CRITERIA
+
+✅ Press ENTER → glyph appears on map immediately  
+✅ Press ENTER with `@` → creates piece directory  
+✅ Backspace → clears tile to `.`  
+✅ Error message if no map selected  
+
+---
+
+*Created: 2026-03-15*
+*Focus: ENTER placement only - other fixes can wait*
