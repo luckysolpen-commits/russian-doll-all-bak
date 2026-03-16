@@ -1,0 +1,10 @@
+project_id=op-ed
+gui_focus=1
+last_key=SPACE
+selector_pos=(6,5,0)
+editor_response=[RESP]: No piece at cursor                               
+editor_status_2=[POS]: (6,5,0) | [H-BEAT]: 1 | [KEY]: SPACE              
+map_palette_view=ADD [map_0001_z0.txt] map_01.txt 
+glyph_palette_view=[#] . R T @ & Z X ? ! 
+armed_glyph=#
+app_title=PIECEMARK PLAYER
