@@ -1,0 +1,10 @@
+project_id=op-ed
+gui_focus=2
+last_key=LEFT
+selector_pos=(5,5,0)
+editor_response=[RESP]:                                                  
+editor_status_2=[POS]: (5,5,0) | [H-BEAT]: 2 | [KEY]: LEFT               
+map_palette_view=ADD [map_0001_z0.txt] map_01.txt 
+glyph_palette_view=[#] . R T @ & Z X ? ! 
+armed_glyph=#
+app_title=PIECEMARK PLAYER

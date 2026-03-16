@@ -1,0 +1,242 @@
+# CRITICAL: Remove fuzzpet_v2 from Project Menu
+**Date:** 2026-03-16  
+**Priority:** BLOCKER - Cannot proceed until fixed  
+**Status:** FAILED - Multiple attempts unsuccessful
+
+---
+
+## THE PROBLEM
+
+**Symptom:** The project loader menu still shows `fuzzpet_v2` even after:
+1. ✅ Deleted `projects/fuzzpet_v2/` directory (multiple times)
+2. ✅ Removed all `fuzzpet_v2` references from `chtpm_parser.c`
+3. ✅ Removed `fuzzpet_v2` compilation from `compile_all.sh`
+4. ✅ Deleted cached `pieces/apps/playrm/loader/loader.pdl`
+5. ✅ Recompiled everything successfully
+
+**Current Menu Shows:**
+```
+[>] 1. [man-ops][ ] 2. [fuzzpet_v2][ ] 3. [fuzz-op][ ] 4. [op-ed]...
+```
+
+**Should Show:**
+```
+[>] 1. [man-ops][ ] 2. [fuzz-op][ ] 3. [op-ed][ ] 4. [demo_1]...
+```
+
+---
+
+## WHAT WE KNOW
+
+### 1. Loader Scans Projects Directory Dynamically
+**File:** `pieces/apps/playrm/loader/loader_module.c`
+
+**Code (line ~60-95):**
+```c
+void scan_projects() {
+    char *projects_dir_path = NULL;
+    if (asprintf(&projects_dir_path, "%s/projects", project_root) != -1) {
+        DIR *dir = opendir(projects_dir_path);
+        if (dir) {
+            struct dirent *entry;
+            while ((entry = readdir(dir)) != NULL && project_count < MAX_ITEMS) {
+                if (entry->d_name[0] == '.') continue;
+                // Adds ALL directories to project list
+                strncpy(projects[project_count++], entry->d_name, MAX_LINE - 1);
+            }
+            closedir(dir);
+        }
+    }
+    // ... generates loader.pdl with METHOD entries
+}
+```
+
+**Conclusion:** The loader reads from `projects/` directory. If `fuzzpet_v2` shows, the directory MUST exist somewhere.
+
+---
+
+### 2. Loader.pdl is Generated at Runtime
+**File:** `pieces/apps/playrm/loader/loader_module.c` (line ~78-95)
+
+**Code:**
+```c
+if (asprintf(&pdl_path, "%s/pieces/apps/playrm/loader/loader.pdl", project_root) != -1) {
+    FILE *f = fopen(pdl_path, "w");
+    if (f) {
+        fprintf(f, "SECTION      | KEY                | VALUE\n");
+        // ... header ...
+        for (int i = 0; i < project_count; i++) {
+            fprintf(f, "METHOD       | %s | LOAD_PROJECT:%s\n", projects[i], projects[i]);
+        }
+        fclose(f);
+    }
+    free(pdl_path);
+}
+```
+
+**Conclusion:** `loader.pdl` is regenerated every time loader runs. Deleting it should force regeneration.
+
+---
+
+### 3. Parser Has Hardcoded Project Routing
+**File:** `pieces/chtpm/plugins/chtpm_parser.c`
+
+**What we fixed:**
+- Removed `fuzzpet_v2` from project routing (lines 337-339, 485, 554, 566-567)
+- Fixed broken `if/else` syntax after sed removal
+
+**Status:** ✅ Parser compiles without errors
+
+---
+
+## WHAT WE HAVEN'T CHECKED
+
+### 1. Is fuzzpet_v2 Being Recreated?
+**Check:**
+```bash
+# Watch for directory creation
+inotifywait -m -r projects/ 2>/dev/null | grep fuzzpet_v2
+
+# Or check modification time
+ls -la projects/ | grep fuzzpet_v2
+stat projects/fuzzpet_v2 2>/dev/null
+```
+
+**Possible culprits:**
+- `run_chtpm.sh` initialization script
+- `loader_module.c` project initialization code
+- Some other setup script
+
+---
+
+### 2. Is There Another Projects Directory?
+**Check:**
+```bash
+# Find ALL projects directories
+find /home/no/Desktop/Piecemark-IT -type d -name "projects" 2>/dev/null
+
+# Check location_kvp for alternate paths
+cat pieces/locations/location_kvp | grep -i project
+```
+
+---
+
+### 3. Is the Layout Cached?
+**Check:**
+```bash
+# Check for cached layouts
+find pieces -name "*.chtpm" -newer pieces/chtpm/plugins/+x/chtpm_parser.+x 2>/dev/null
+
+# Check current_frame.txt
+cat pieces/display/current_frame.txt | grep -i fuzzpet_v2
+```
+
+---
+
+### 4. Is loader_module.c Creating It?
+**Check:** `pieces/apps/playrm/loader/loader_module.c` lines 115-145
+
+**Code we saw:**
+```c
+if (strcmp(name, "fuzzpet_v2") == 0) {
+    char *cmd = NULL;
+    asprintf(&cmd, "mkdir -p %s/projects/fuzzpet_v2/pieces/fuzzpet", project_root);
+    system(cmd); free(cmd);
+    // ... more initialization ...
+}
+```
+
+**This code INITIALIZES fuzzpet_v2 if selected, but doesn't explain why it's in the menu.**
+
+---
+
+## DEBUG STEPS FOR NEXT AI
+
+### Step 1: Verify Directory is REALLY Gone
+```bash
+cd /home/no/Desktop/Piecemark-IT/[CALENDARS]04.00/mar_13/^.PMO_c_+rmmp_35.01
+ls -la projects/ | grep fuzz
+find . -type d -name "*fuzzpet_v2*" 2>/dev/null
+```
+
+### Step 2: Check What Loader Sees
+```bash
+# Add debug output to loader_module.c
+fprintf(stderr, "DEBUG: Found project: %s\n", entry->d_name);
+
+# Recompile and run, check stderr
+```
+
+### Step 3: Check loader.pdl Content
+```bash
+cat pieces/apps/playrm/loader/loader.pdl | grep METHOD
+```
+
+### Step 4: Check if run_chtpm.sh Creates It
+```bash
+grep -n "fuzzpet_v2" run_chtpm.sh
+grep -n "fuzzpet_v2" pieces/apps/playrm/loader/loader_module.c
+```
+
+### Step 5: Nuclear Option - Find ALL References
+```bash
+grep -r "fuzzpet_v2" --include="*.c" --include="*.sh" --include="*.txt" --include="*.pdl" --include="*.chtpm" . 2>/dev/null
+```
+
+---
+
+## HYPOTHESIS
+
+**Most Likely:** The `projects/fuzzpet_v2/` directory is being recreated by:
+1. `run_chtpm.sh` initialization
+2. `loader_module.c` when it scans and initializes projects
+3. Some other startup script we haven't found
+
+**Second Most Likely:** There's a SECOND projects directory somewhere that we haven't found.
+
+**Least Likely:** The layout is cached somewhere and not regenerating.
+
+---
+
+## SUCCESS CRITERIA
+
+✅ `projects/fuzzpet_v2/` directory does NOT exist  
+✅ `grep -r "fuzzpet_v2"` returns NO results (or only historical docs)  
+✅ Project menu shows: `man-ops`, `fuzz-op`, `op-ed`, `demo_1`, etc. (NO fuzzpet_v2)  
+✅ `loader.pdl` has no `METHOD | fuzzpet_v2` entry  
+
+---
+
+## FILES TO CHECK
+
+1. `run_chtpm.sh` - Main startup script
+2. `pieces/apps/playrm/loader/loader_module.c` - Project scanner
+3. `pieces/locations/location_kvp` - Path registry
+4. `pieces/display/current_frame.txt` - Cached display
+5. Any `.chtpm` layout files that might have hardcoded project list
+
+---
+
+## CONTEXT
+
+**What we did:**
+- Renamed `fuzz_legacy` → `fuzz-op` (successful)
+- Deleted `fuzzpet_v2` directory (keeps coming back)
+- Updated all code references (successful)
+- Recompiled everything (successful)
+
+**What's broken:**
+- Menu still shows `fuzzpet_v2` as option 2
+- Can't select it (no directory)
+- Looks unprofessional
+
+**Why it matters:**
+- TPM architecture relies on dynamic project discovery
+- If project list is wrong, the whole system is untrustworthy
+- Need to demonstrate TPM compliance
+
+---
+
+*Created: 2026-03-16*  
+*For: Next AI with more powerful debugging capabilities*  
+*Priority: BLOCKER*
