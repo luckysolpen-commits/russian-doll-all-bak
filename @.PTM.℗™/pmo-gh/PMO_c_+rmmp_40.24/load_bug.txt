@@ -1,0 +1,26 @@
+# Bug Investigation: Project Loading Off-by-One
+
+## Issue:
+When selecting a project in the PIECEMARK LOADER, the system loads the project at index (N+1) instead of index N. For example, selecting option 2 ([fuzz-op]) loads option 3 ([man-add]).
+
+## Root Cause:
+The `chtpm_parser.c` module initializes `method_idx` to 2 when generating dynamic method buttons:
+```c
+// pieces/chtpm/plugins/chtpm_parser.c:240
+int method_idx = 2;
+```
+This causes the first visible project in the loader to have `onClick="KEY:2"`, the second to have `KEY:3`, etc.
+
+The `loader_module.c` (and other manager modules) expect 1-based indexing for keyboard input:
+```c
+// pieces/apps/playrm/loader/loader_module.c:192
+int idx = key - '1';
+```
+So when the user selects the 2nd project (`fuzz-op`), the parser sends `KEY:3`. `loader_module` reads `3`, subtracts `1`, and gets index `2`, which corresponds to `man-add` (the 3rd project).
+
+## Fix Strategy:
+1. Update `pieces/chtpm/plugins/chtpm_parser.c` to start `method_idx` at 1.
+2. Update `pieces/apps/playrm/plugins/playrm_module.c` to start its internal `current_idx` at 1 for consistency.
+3. Verify that `loader_module.c` now correctly maps `KEY:1` to index 0.
+
+This alignment ensures that the 1st interactive element (numbered '1.' in the UI) always sends `KEY:1`, matching the expectations of the manager modules.

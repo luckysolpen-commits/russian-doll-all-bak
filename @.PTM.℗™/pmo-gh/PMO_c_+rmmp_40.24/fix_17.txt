@@ -1,0 +1,34 @@
+# Fix 17: fuzz-op Rendering & Zombie AI Recovery
+
+## Issue 1: fuzz-op Rendering Failures
+The `fuzz-op` project shows empty stats and no map.
+- **Root Cause (Stats):** `chtpm_parser.c` looks for state variables in `pieces/apps/player_app/state.txt` and `pieces/apps/fuzzpet_app/fuzzpet/state.txt`. However, `fuzz-op` stores its pet state in `projects/fuzz-op/pieces/fuzzpet/state.txt`. The parser lacks logic to load project-specific stats.
+- **Root Cause (Map):** `chtpm_parser.c` reads `pieces/apps/player_app/view.txt`. While `fuzz-op_manager` calls `render_map`, it doesn't seem to be updating the view in a way that the parser sees, or the parser is looking at the wrong place.
+- **Root Cause (Markup):** `${piece_methods}` is producing raw `<button ... />` markup which is being rendered as literal text because it's already inside a text label or getting double-processed.
+
+## Issue 2: Zombie AI Broken
+The zombie in `fuzzpet_app` (legacy) stopped moving.
+- **Root Cause:** `zombie_ai.c` has hardcoded paths to `projects/fuzz-op/pieces/`. When running in `fuzzpet_app`, it should look in `pieces/world/map_01/`.
+- **Conflict:** `fuzz-op_manager.c` also calls `zombie_ai.c`.
+
+## Fix Plan:
+
+### 1. Update `chtpm_parser.c` (Variable Loading)
+- Modify `load_vars()` to load stats from `projects/${project_id}/pieces/fuzzpet/state.txt` when a project is active.
+- Ensure `pet_name`, `hunger`, `happiness`, `energy`, `level` are mapped correctly for projects.
+- Fix `${piece_methods}` rendering. It should NOT be wrapped in a `<text>` tag if it already contains tags, or the parser should handle nested tags better. In `fuzz-op.chtpm`, it is: `<text label="║  ${piece_methods} ║" />`. This is the problem. The parser substitutes `${piece_methods}` into the label, then renders it as text.
+
+### 2. Update `fuzz-op.chtpm`
+- Change `<text label="║  ${piece_methods} ║" />` to just `${piece_methods}` (or wrap it properly in the parser).
+
+### 3. Update `zombie_ai.c` (Path Resolution)
+- Make `zombie_ai.c` project-aware. It should read `project_id` from `pieces/apps/player_app/manager/state.txt`.
+- If `project_id` is "template" or empty, use legacy paths (`pieces/world/map_01/`).
+- Otherwise, use `projects/${project_id}/pieces/`.
+
+### 4. Update `fuzz-op_manager.c`
+- Ensure it syncs `emoji_mode` and other stats to the mirror correctly.
+- Ensure it writes `view.txt` to the correct location.
+
+### 5. Re-compile
+- Re-compile `chtpm_parser`, `zombie_ai`, and `fuzz-op_manager`.

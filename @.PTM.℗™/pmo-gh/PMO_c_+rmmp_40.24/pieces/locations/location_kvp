@@ -1,0 +1,12 @@
+project_root=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21
+pieces_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces
+fuzzpet_app_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/apps/fuzzpet_app
+fuzzpet_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/apps/fuzzpet_app/fuzzpet
+editor_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/apps/editor
+system_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/system
+pet_01_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/world/map_01/pet_01
+pet_02_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/world/map_01/pet_02
+selector_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/world/map_01/selector
+os_procs_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/os/procs
+clock_daemon_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/system/clock_daemon
+manager_dir=/home/debilu/Desktop/SERVICE.MOD_DEBILU/march-17/PMO_c_+rmmp_40.21/pieces/apps/fuzzpet_app/manager

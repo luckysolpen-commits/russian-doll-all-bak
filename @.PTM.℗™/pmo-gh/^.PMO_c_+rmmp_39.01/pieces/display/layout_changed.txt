@@ -1,1 +1,0 @@
-pieces/apps/editor/layouts/editor.chtpm

@@ -1,0 +1,80 @@
+[2026-03-17 06:25:15] FrameRendered: at 2026-03-17 06:25:15 | Source: renderer
+[2026-03-17 06:25:19] InputReceived: key_code=1003 | Source: orchestrator
+[2026-03-17 06:25:19] FrameRendered: at 2026-03-17 06:25:19 | Source: renderer
+[2026-03-17 06:25:20] InputReceived: key_code=1002 | Source: orchestrator
+[2026-03-17 06:25:20] FrameRendered: at 2026-03-17 06:25:20 | Source: renderer
+[2026-03-17 06:25:20] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-17 06:25:20] FrameRendered: at 2026-03-17 06:25:20 | Source: renderer
+[2026-03-17 06:25:21] InputReceived: key_code=50 | Source: orchestrator
+[2026-03-17 06:25:21] FrameRendered: at 2026-03-17 06:25:21 | Source: renderer
+[2026-03-17 06:25:21] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-17 06:25:21] FrameRendered: at 2026-03-17 06:25:21 | Source: renderer
+[2026-03-17 06:25:22] InputReceived: key_code=50 | Source: orchestrator
+[2026-03-17 06:25:22] FrameRendered: at 2026-03-17 06:25:22 | Source: renderer
+[2026-03-17 06:25:22] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-17 06:25:22] FrameRendered: at 2026-03-17 06:25:22 | Source: renderer
+[2026-03-17 06:25:22] FrameRendered: at 2026-03-17 06:25:22 | Source: renderer
+[2026-03-17 06:25:22] FrameRendered: at 2026-03-17 06:25:22 | Source: renderer
+[2026-03-17 06:25:24] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-17 06:25:24] FrameRendered: at 2026-03-17 06:25:24 | Source: renderer
+[2026-03-17 06:25:24] InputReceived: key_code=1002 | Source: orchestrator
+[1773743124] EntityMoved: selector | from (10,6) to (10,5)
+[2026-03-17 06:25:24] FrameRendered: at 2026-03-17 06:25:24 | Source: renderer
+[2026-03-17 06:25:24] FrameRendered: at 2026-03-17 06:25:24 | Source: renderer
+[2026-03-17 06:25:25] InputReceived: key_code=1002 | Source: orchestrator
+[1773743125] EntityMoved: selector | from (10,5) to (10,4)
+[2026-03-17 06:25:25] FrameRendered: at 2026-03-17 06:25:25 | Source: renderer
+[2026-03-17 06:25:25] FrameRendered: at 2026-03-17 06:25:25 | Source: renderer
+[2026-03-17 06:25:25] InputReceived: key_code=1002 | Source: orchestrator
+[2026-03-17 06:25:25] FrameRendered: at 2026-03-17 06:25:25 | Source: renderer
+[1773743125] EntityMoved: selector | from (10,4) to (10,3)
+[2026-03-17 06:25:25] FrameRendered: at 2026-03-17 06:25:25 | Source: renderer
+[2026-03-17 06:25:26] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-17 06:25:26] FrameRendered: at 2026-03-17 06:25:26 | Source: renderer
+[2026-03-17 06:25:26] FrameRendered: at 2026-03-17 06:25:26 | Source: renderer
+[2026-03-17 06:25:27] InputReceived: key_code=1001 | Source: orchestrator
+[2026-03-17 06:25:27] FrameRendered: at 2026-03-17 06:25:27 | Source: renderer
+[1773743127] EntityMoved: fuzzpet | from (10,3) to (11,3)
+[2026-03-17 06:25:27] FrameRendered: at 2026-03-17 06:25:27 | Source: renderer
+[2026-03-17 06:25:27] InputReceived: key_code=1001 | Source: orchestrator
+[2026-03-17 06:25:27] FrameRendered: at 2026-03-17 06:25:27 | Source: renderer
+[1773743127] EntityMoved: fuzzpet | from (11,3) to (12,3)
+[2026-03-17 06:25:27] FrameRendered: at 2026-03-17 06:25:27 | Source: renderer
+[2026-03-17 06:25:27] FrameRendered: at 2026-03-17 06:25:27 | Source: renderer
+[2026-03-17 06:25:31] InputReceived: key_code=57 | Source: orchestrator
+[2026-03-17 06:25:31] FrameRendered: at 2026-03-17 06:25:31 | Source: renderer
+[2026-03-17 06:25:31] FrameRendered: at 2026-03-17 06:25:31 | Source: renderer
+[2026-03-17 06:25:31] InputReceived: key_code=1002 | Source: orchestrator
+[2026-03-17 06:25:31] FrameRendered: at 2026-03-17 06:25:31 | Source: renderer
+[1773743131] EntityMoved: selector | from (12,3) to (12,2)
+[2026-03-17 06:25:31] FrameRendered: at 2026-03-17 06:25:31 | Source: renderer
+[2026-03-17 06:25:31] FrameRendered: at 2026-03-17 06:25:31 | Source: renderer
+[2026-03-17 06:25:31] InputReceived: key_code=1002 | Source: orchestrator
+[1773743131] EntityMoved: selector | from (12,2) to (12,1)
+[2026-03-17 06:25:31] FrameRendered: at 2026-03-17 06:25:31 | Source: renderer
+[2026-03-17 06:25:32] FrameRendered: at 2026-03-17 06:25:32 | Source: renderer
+[2026-03-17 06:25:32] InputReceived: key_code=1000 | Source: orchestrator
+[1773743132] EntityMoved: selector | from (12,1) to (11,1)
+[2026-03-17 06:25:32] FrameRendered: at 2026-03-17 06:25:32 | Source: renderer
+[2026-03-17 06:25:32] FrameRendered: at 2026-03-17 06:25:32 | Source: renderer
+[2026-03-17 06:25:32] InputReceived: key_code=1000 | Source: orchestrator
+[2026-03-17 06:25:32] FrameRendered: at 2026-03-17 06:25:32 | Source: renderer
+[1773743132] EntityMoved: selector | from (11,1) to (10,1)
+[2026-03-17 06:25:32] FrameRendered: at 2026-03-17 06:25:32 | Source: renderer
+[2026-03-17 06:25:32] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-17 06:25:33] FrameRendered: at 2026-03-17 06:25:33 | Source: renderer
+[2026-03-17 06:25:33] FrameRendered: at 2026-03-17 06:25:33 | Source: renderer
+[2026-03-17 06:25:35] InputReceived: key_code=50 | Source: orchestrator
+[2026-03-17 06:25:35] FrameRendered: at 2026-03-17 06:25:35 | Source: renderer
+[1773743135] ResponseRequest: pet_01 | fed: Yum! Thanks for the food.
+[2026-03-17 06:25:35] FrameRendered: at 2026-03-17 06:25:35 | Source: renderer
+[2026-03-17 06:25:35] FrameRendered: at 2026-03-17 06:25:35 | Source: renderer
+[2026-03-17 06:25:37] InputReceived: key_code=27 | Source: orchestrator
+[2026-03-17 06:25:37] FrameRendered: at 2026-03-17 06:25:37 | Source: renderer
+[2026-03-17 06:25:37] InputReceived: key_code=50 | Source: orchestrator
+[2026-03-17 06:25:37] FrameRendered: at 2026-03-17 06:25:37 | Source: renderer
+[2026-03-17 06:25:37] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-17 06:25:37] FrameRendered: at 2026-03-17 06:25:37 | Source: renderer
+[1773743137] ResponseRequest: pet_01 | fed: Yum! Thanks for the food.
+[2026-03-17 06:25:37] FrameRendered: at 2026-03-17 06:25:37 | Source: renderer
+[2026-03-17 06:25:37] FrameRendered: at 2026-03-17 06:25:37 | Source: renderer

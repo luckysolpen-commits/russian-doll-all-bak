@@ -1,0 +1,110 @@
+# PMO Development TODO List
+**Last Updated:** 2026-03-15
+**Project:** fuzz_legacy + PDL Implementation
+
+---
+
+## ✅ COMPLETED
+
+### Phase 1: Basic Functionality (DONE)
+- [x] Entity rendering (selector, pet, zombie)
+- [x] Shadow selector sync (follows entity when selected)
+- [x] Selector renders BEHIND entity (hides when on same tile)
+- [x] Selector passes through obstacles when alone
+- [x] Zombie chase AI
+- [x] Zombie can't be selected
+- [x] Zombie collision avoidance (won't move onto entity tiles)
+
+### Phase 2: Z-Level Support (DONE)
+- [x] Z-level change with 'x' (up) and 'z' (down) keys
+- [x] Map changes based on Z-level (surface → underground → sky)
+- [x] Z-level display in UI (`[Z-LEVEL]: X`)
+- [x] Frame deduplication (only render when view changes)
+- [x] Z-level persistence via piece_manager (matches fuzzpet_app)
+
+### Phase 3: map_id Association (DONE)
+- [x] `map_id` field in piece state
+- [x] `create_piece.c` records current_map when creating pieces
+- [x] `render_map.c` filters pieces by `map_id`
+- [x] Selector inherits entity's `map_id` on select
+
+### Phase 4: PDL Reader Implementation (DONE)
+- [x] Create `pieces/system/pdl/pdl_reader.c`
+  - [x] `get_method(piece_id, event)` - Get handler for event
+  - [x] `list_methods(piece_id)` - List all methods
+  - [x] `has_method(piece_id, event)` - Check if method exists
+- [x] Compile PDL reader as standalone binary
+- [x] Update `compile_all.sh` to include PDL reader
+
+### Phase 5: Project Cleanup (DONE - 2026-03-16)
+- [x] Renamed `fuzz_legacy` → `fuzz-op`
+- [x] Removed `fuzzpet_v2` directory and all references
+- [x] Updated all code references (chtpm_parser.c, compile_all.sh, etc.)
+- [x] Fixed broken syntax after sed removal
+- [x] Updated documentation (`^.RMMPMO-editor1.md`)
+- [x] Recompiled successfully
+
+---
+
+## 🚧 IN PROGRESS
+
+*(Nothing currently in progress - all Phase 1-5 complete!)*
+
+---
+
+## 📋 PENDING
+
+### Phase 6: Hotkey/Method System (op-ed/fuzz-op)
+**CRITICAL REQUIREMENT:** Hotkeys (2-8) must use the SELECTED ENTITY's methods, NOT selector's methods.
+
+- [ ] Add method key handling (keys 2-8) to module
+  - [ ] Check if `active_target_id != "selector"`
+  - [ ] Call `get_method()` from pdl_reader
+  - [ ] Execute method from selected entity's PDL
+- [ ] Wire up method execution:
+  - [ ] `scan`, `collect`, `place`, `inventory` → storage ops
+  - [ ] `toggle_emoji` → toggle emoji mode
+  - [ ] `toggle_clock` → toggle clock mode
+  - [ ] `feed`, `sleep`, etc. → execute and log response
+- [ ] Update UI layout to show method buttons dynamically
+
+### Phase 7: PDL Writing (Dynamic Skills)
+- [ ] Create `add_method(piece_id, event, handler)` - Add method to PDL
+- [ ] Create `remove_method(piece_id, event)` - Remove method from PDL
+- [ ] Implement "learn skill" functionality
+- [ ] Implement "forget skill" functionality
+
+### Phase 8: Documentation Cleanup
+- [ ] Remove or consolidate old scattered docs in `#.docs/`
+- [ ] Update `23.critical_fuzzpet_v2_removal.txt` with resolution
+- [ ] Create migration guide for PDL integration
+
+---
+
+## 🔍 KNOWN ISSUES
+
+*(All major issues resolved!)*
+
+---
+
+## 📝 REFERENCE FILES
+
+- `pieces/apps/fuzzpet_app/manager/fuzzpet_manager.c` - Reference for Z-level changes, method handling
+- `pieces/apps/op-ed/plugins/op-ed_module.c` - Current editor implementation
+- `pieces/system/pdl/pdl_reader.c` - PDL reading utility
+- `#.docs/^.RMMPMO-editor1.md` - Authoritative architecture guide
+- `22.oped_pdl_integration.txt` - PDL migration guide (optional)
+- `23.critical_fuzzpet_v2_removal.txt` - Project cleanup documentation
+
+---
+
+## 🎯 NEXT STEPS
+
+1. **Optional: PDL Integration** (Phase 6) - Add optional PDL method dispatch to op-ed/fuzz-op
+2. **Optional: Dynamic Skills** (Phase 7) - Implement PDL writing for runtime method changes
+3. **Optional: Documentation Cleanup** (Phase 8) - Consolidate scattered docs
+
+---
+
+*Last Updated: 2026-03-16*  
+*Status: Phases 1-5 COMPLETE! Project renamed (fuzz-op), fuzzpet_v2 removed, PDL reader implemented.*

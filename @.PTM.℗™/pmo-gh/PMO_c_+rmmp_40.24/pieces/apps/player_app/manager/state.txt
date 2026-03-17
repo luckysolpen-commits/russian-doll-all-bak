@@ -1,0 +1,5 @@
+project_id=fuzz-op
+active_target_id=pet_01
+last_key=2
+current_z=0
+current_map=map_01_z0.txt
