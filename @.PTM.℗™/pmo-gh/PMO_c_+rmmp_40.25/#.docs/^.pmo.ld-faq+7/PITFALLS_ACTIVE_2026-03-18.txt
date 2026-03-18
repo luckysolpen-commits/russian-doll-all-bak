@@ -1,0 +1,90 @@
+PMO/TPM Pitfalls Playbook (Active)
+Date: 2026-03-18
+Purpose: Preserve high-value implementation pitfalls so future agents do not repeat known regressions.
+
+1) WORLD/MAP PATHING DRIFT
+- Canonical path is: projects/<project>/pieces/world_<id>/map_<id>/<piece_id>/
+- Do not require an extra /pieces/ under map dirs.
+- Keep fallback/root lookup only as migration bridge.
+- New writes should be canonical-first.
+
+2) HARDCODED PIECE IDS
+- Never hardcode scan/load assumptions around fixed ids.
+- Pieces can be dynamically created/removed.
+- Selection and rendering must be directory/data driven.
+
+2b) HARDCODED LOGIC DRIFT (ARCHITECTURAL RISK)
+- Do not hardcode behavior where modular contracts already exist (piece/module/op boundaries).
+- Hardcoded shortcuts increase token cost, increase agent confusion, and block partial upgrades.
+- Keep editor-player recursion contract-driven so one side can evolve without breaking the other.
+
+3) PDL FILE-NAME MISMATCH
+- Runtime may encounter both piece.pdl and <piece_id>.pdl conventions.
+- Resolver must support both (with deterministic precedence).
+- If parser/reader disagree on naming, methods silently fail (nav/hotkeys appear dead).
+
+4) SELECTOR STATE LOSS (0,0 BUG CLASS)
+- State rewrite loops can accidentally drop pos_x/pos_y/pos_z lines.
+- Any state-rewrite code must preserve unrelated keys.
+- Add default guards for selector keys when missing.
+
+5) LOADER PATH REGRESSIONS
+- Project loader can fail from wrong layout path mapping.
+- Always verify loader target paths exist on disk after changes.
+
+5b) CHTPM MODULE HARD-CODING LEAK
+- In CHTPM modules (not parser), avoid baking project-specific behavior into infrastructure code.
+- `chtpm_player`, `orchestrator`, and render helpers should stay generic plumbing.
+- If project-specific rules appear there, agents copy them and architecture drifts away from PMO modular recursion.
+
+6) FALLBACK ABUSE
+- Temporary fallback is useful, but if used as primary path it masks migration bugs.
+- Rule: canonical path first; fallback only if canonical is absent.
+- Document each fallback location and planned removal criteria.
+
+7) MAP MEMBERSHIP CONFUSION
+- `map_id` in state is compatibility metadata, not sole source of truth.
+- Directory containment (world/map path) is authoritative for membership.
+
+8) EVENT FLOW FRAGILITY (STEP 1 SCOPE)
+- No-code pal/op-event create/bind must persist to disk, not UI-only memory.
+- Save/load parity must include event bindings.
+- Local play must boot from saved artifacts without manual edits.
+
+9) PATH CONSTRUCTION WARNINGS
+- Watch truncation in snprintf path building.
+- Use bounded writes and explicit null-termination where fixed buffers remain.
+- Re-run compile_all after path changes.
+
+10) PROCESS/CPU SAFETY
+- Avoid runaway loops and orphaned subprocesses.
+- Prefer controlled fork/exec/wait patterns for critical calls.
+- Keep focus-aware throttling and bounded polling.
+
+11) MIGRATION DEDUP RISK
+- During transition, same logical piece may appear in root + world/map.
+- Renderer should prefer canonical nested entries and dedup deterministically.
+
+12) CHANGE HYGIENE
+- When touching core pathing, verify:
+  a) loader launch
+  b) save/load roundtrip
+  c) local play boot
+  d) event trigger path
+  e) compile_all warnings in touched components
+
+13) NO-GIT BACKUP MANDATE (MANUAL SNAPSHOTS REQUIRED)
+- This workspace may not have usable git history; do not assume rollback exists.
+- Before editing high-risk files, create manual backups in-place (same directory) with clear suffixes.
+- Recommended suffix pattern:
+  - `<filename>.bak.<YYYYMMDD-HHMM>`
+  - or folder snapshot: `<dir>.bak.<YYYYMMDD-HHMM>/`
+- Minimum backup-required areas:
+  1) path resolution / loader / parser files
+  2) state rewrite loops
+  3) event persistence files
+  4) major docs being consolidated/rewritten
+- After successful validation, backups can be retained or pruned intentionally; never silently overwrite originals without a backup.
+
+Operational rule:
+If a change touches path resolution, state rewriting, loader mapping, or event persistence, treat it as high-risk and run full Step-1 matrix before merge.

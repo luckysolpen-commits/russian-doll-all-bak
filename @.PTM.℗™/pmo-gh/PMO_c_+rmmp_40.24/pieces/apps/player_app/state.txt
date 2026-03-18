@@ -1,3 +1,0 @@
-project_id=fuzz-op
-active_target_id=loader
-app_title=LEGACY FUZZPET PROJECT

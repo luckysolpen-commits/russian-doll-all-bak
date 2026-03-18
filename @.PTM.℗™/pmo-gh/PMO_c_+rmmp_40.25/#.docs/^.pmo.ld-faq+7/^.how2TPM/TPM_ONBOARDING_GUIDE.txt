@@ -1,0 +1,46 @@
+[2026-03-18 ACTIVE ONBOARDING]
+This is the active onboarding guide for implementers.
+
+# TPM Onboarding Guide (Current)
+
+## What TPM means in this codebase now
+TPM means file-backed, auditable, modular systems where pieces own state and modules orchestrate behavior through explicit contracts.
+
+## Core philosophy reminder (do not skip)
+This project is intentionally designed so agents can change one slice without rewriting the whole system.
+That only works if implementations remain modular and data-driven rather than hardcoded.
+
+## Current architecture truths
+1. Canonical pathing is world/map-first:
+   `projects/<project>/pieces/world_<id>/map_<id>/<piece_id>/`
+2. Maps contain pieces, and pieces may contain pieces.
+3. Fallback root paths may still exist during migration, but are not canonical.
+4. Deterministic local behavior is required for save/load/local-play parity.
+
+## Current top priority (Step 1)
+Implement and stabilize:
+1. `op-ed` save-to-file
+2. save/load roundtrip parity
+3. local play bootstrap from saved artifacts
+4. no-code `pal` + op-event create/bind/test flow
+
+## Guardrails for contributors
+- Prefer world/map-first resolution and keep fallbacks explicit.
+- Do not hardcode piece IDs.
+- Keep state and event bindings persisted in inspectable files.
+- Avoid coupling parser/view logic with app business logic.
+- Keep editor-player recursion modular:
+  - shared ops/contracts
+  - minimal duplicated hardcoded logic
+  - same rules apply across nested containers/pieces.
+
+## What is not Step 1
+AI ops, voice, full simulation, networking, gl-os, install/versioning, and kernel work are later phases.
+
+## Required validation mindset
+Before claiming done on Step 1:
+- verify loader launch
+- verify save/load parity
+- verify local play from saved artifacts
+- verify no-code event trigger in play
+- run compile checks for touched components
