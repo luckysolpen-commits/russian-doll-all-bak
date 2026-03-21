@@ -1,0 +1,13 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | project_id         | gl-os
+META         | author             | TPM-OS
+META         | version            | 1.0
+
+STATE        | resolution_x       | 800
+STATE        | resolution_y       | 600
+STATE        | bg_color           | #000044
+STATE        | active_focus       | desktop
+
+PIECES       | desktop            | projects/gl-os/pieces/desktop
+PIECES       | terminal_01        | projects/gl-os/pieces/terminal

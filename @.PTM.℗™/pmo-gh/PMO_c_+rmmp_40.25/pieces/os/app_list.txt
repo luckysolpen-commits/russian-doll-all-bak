@@ -1,2 +1,0 @@
-RMMP=pieces/apps/editor/plugins/+x/editor_module.+x
-PLAYR=pieces/apps/playrm/plugins/+x/playrm_module.+x

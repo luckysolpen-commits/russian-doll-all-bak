@@ -1,0 +1,151 @@
+PMO/TPM Pitfalls Playbook (Active)
+Date: 2026-03-18
+Purpose: Preserve high-value implementation pitfalls so future agents do not repeat known regressions.
+
+1) WORLD/MAP PATHING DRIFT
+- Canonical path is: projects/<project>/pieces/world_<id>/map_<id>/<piece_id>/
+- Do not require an extra /pieces/ under map dirs.
+- Keep fallback/root lookup only as migration bridge.
+- New writes should be canonical-first.
+
+2) HARDCODED PIECE IDS
+- Never hardcode scan/load assumptions around fixed ids.
+- Pieces can be dynamically created/removed.
+- Selection and rendering must be directory/data driven.
+
+2b) HARDCODED LOGIC DRIFT (ARCHITECTURAL RISK)
+- Do not hardcode behavior where modular contracts already exist (piece/module/op boundaries).
+- Hardcoded shortcuts increase token cost, increase agent confusion, and block partial upgrades.
+- Keep editor-player recursion contract-driven so one side can evolve without breaking the other.
+
+3) PDL FILE-NAME MISMATCH
+- Runtime may encounter both piece.pdl and <piece_id>.pdl conventions.
+- Resolver must support both (with deterministic precedence).
+- If parser/reader disagree on naming, methods silently fail (nav/hotkeys appear dead).
+
+4) SELECTOR STATE LOSS (0,0 BUG CLASS)
+- State rewrite loops can accidentally drop pos_x/pos_y/pos_z lines.
+- Any state-rewrite code must preserve unrelated keys.
+- Add default guards for selector keys when missing.
+
+5) LOADER PATH REGRESSIONS
+- Project loader can fail from wrong layout path mapping.
+- Always verify loader target paths exist on disk after changes.
+
+5b) CHTPM MODULE HARD-CODING LEAK
+- In CHTPM modules (not parser), avoid baking project-specific behavior into infrastructure code.
+- `chtpm_player`, `orchestrator`, and render helpers should stay generic plumbing.
+- If project-specific rules appear there, agents copy them and architecture drifts away from PMO modular recursion.
+
+5c) TEMPLATE DEFAULT TRAP (`project.pdl` / entry_layout / player_piece)
+- Do not hardcode `entry_layout=game.chtpm` or fixed `player_piece` assumptions in generic templates.
+- Missing fields must resolve via scan/registry rules (app/module/layout discovery), not guessed defaults.
+- Wrong default entry layout can break visibility/movement and misroute editor vs op-ed flows.
+- Rule: detect available layouts/modules from project/app context and write resolved values to explicit metadata.
+
+6) FALLBACK ABUSE
+- Temporary fallback is useful, but if used as primary path it masks migration bugs.
+- Rule: canonical path first; fallback only if canonical is absent.
+- Document each fallback location and planned removal criteria.
+
+7) MAP MEMBERSHIP CONFUSION
+- `map_id` in state is compatibility metadata, not sole source of truth.
+- Directory containment (world/map path) is authoritative for membership.
+
+8) EVENT FLOW FRAGILITY (STEP 1 SCOPE)
+- No-code pal/op-event create/bind must persist to disk, not UI-only memory.
+- Save/load parity must include event bindings.
+- Local play must boot from saved artifacts without manual edits.
+
+9) PATH CONSTRUCTION WARNINGS
+- Watch truncation in snprintf path building.
+- Use bounded writes and explicit null-termination where fixed buffers remain.
+- Re-run compile_all after path changes.
+
+10) PROCESS/CPU SAFETY
+- Avoid runaway loops and orphaned subprocesses.
+- Prefer controlled fork/exec/wait patterns for critical calls.
+- Keep focus-aware throttling and bounded polling.
+
+11) MIGRATION DEDUP RISK
+- During transition, same logical piece may appear in root + world/map.
+- Renderer should prefer canonical nested entries and dedup deterministically.
+
+12) CHANGE HYGIENE
+- When touching core pathing, verify:
+  a) loader launch
+  b) save/load roundtrip
+  c) local play boot
+  d) event trigger path
+  e) compile_all warnings in touched components
+  f) entry_layout/player_piece resolution (no stale hardcoded defaults)
+
+13) NO-GIT BACKUP MANDATE (MANUAL SNAPSHOTS REQUIRED)
+- This workspace may not have usable git history; do not assume rollback exists.
+- Before editing high-risk files, create manual backups in-place (same directory) with clear suffixes.
+- Recommended suffix pattern:
+  - `<filename>.bak.<YYYYMMDD-HHMM>`
+  - or folder snapshot: `<dir>.bak.<YYYYMMDD-HHMM>/`
+- Minimum backup-required areas:
+  1) path resolution / loader / parser files
+  2) state rewrite loops
+  3) event persistence files
+  4) major docs being consolidated/rewritten
+- After successful validation, backups can be retained or pruned intentionally; never silently overwrite originals without a backup.
+
+14) DUAL INJECTION BUG (INPUT PARITY, NOT DUPLICATION)
+- For one UI action, do not inject both keyboard code and joystick code.
+- UI/menu clicks should inject one normalized action key path.
+- Joystick codes should come from actual joystick input path only.
+
+15) PULSE SKIP TRAP (CONDITIONAL WAIT BUG)
+- Never skip module pulse while waiting for marker files (`view_changed.txt`, etc.).
+- Keep pulse/update heartbeat unconditional; only gate composition/render timing.
+- If pulse is skipped, history is never consumed and controls appear dead.
+
+16) MARKER FILE DISCIPLINE
+- Initialize marker files at startup before watch loops (`view_changed.txt`, `frame_changed.txt`).
+- For change detection, prefer marker size/append delta over mtime-only checks.
+- Daemons that mutate visible state must append frame marker or UI appears frozen.
+
+17) ONE WRITER RULE (FRAME OWNERSHIP)
+- `current_frame.txt` must have a single owner/writer.
+- Parser/composer writes the frame; renderer prints only.
+- Dual writers cause flicker/corruption and nondeterministic behavior.
+
+18) STATE/PDL INTEGRITY RULE
+- Never overwrite whole piece definitions when setting state.
+- State writes must preserve METHOD/RESPONSE/other sections.
+- Use section-aware updates; avoid destructive rewrites.
+
+19) ACTION RESPONSE TRACKING
+- Responses should reflect the last action/route, not only threshold-derived state.
+- If response routing is state-only, user feedback becomes misleading (appears random).
+
+20) ROOT/PATH DRIFT + MEMORY LIFETIME RISKS
+- Always resolve `project_root` dynamically from `pieces/locations/location_kvp` (runtime instance-aware).
+- Do not rely on relative-path assumptions tied to cwd.
+- Never free path buffers before I/O operations complete (use-after-free can create corrupted filenames/filesystem artifacts).
+
+21) DIRECT READ PERFORMANCE TRAP
+- High-frequency loops should avoid repeated heavyweight subprocess reads (`popen` storms).
+- Use direct mirror/state file reads in hot paths; reserve manager/ops calls for writes/mutations.
+
+22) INPUT/MODULE NORMALIZATION RULE
+- Module logic should consume normalized input actions, not device-specific branching everywhere.
+- Keep keyboard/joystick mapping in input/parser layers so app modules stay device-agnostic.
+
+23) TRIM/SANITIZE TRAP (MIRROR READS)
+- Mirror/state reads often include trailing spaces/newlines; always trim before compare/parse.
+- Untrimmed keys/values cause false mismatches and silent branch failures.
+
+24) HYBRID EXPANSION RULE (LARGE DATA IN LAYOUTS)
+- Do not force large map payloads into brittle early-stage tag attributes.
+- Expand heavy variables at final render/composition stage to avoid truncation/corruption risk.
+
+25) RESPONSE SINK RULE (BACKGROUND OUTPUT)
+- Background/plugin stdout is not a reliable user-visible response channel.
+- Persist meaningful responses to response files/state and include them in composed frame output.
+
+Operational rule:
+If a change touches path resolution, state rewriting, loader mapping, or event persistence, treat it as high-risk and run full Step-1 matrix before merge.

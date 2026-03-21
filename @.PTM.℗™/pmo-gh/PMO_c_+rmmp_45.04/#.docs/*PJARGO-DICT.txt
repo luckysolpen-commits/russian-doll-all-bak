@@ -1,0 +1,242 @@
+Tiny Command Set (Use in Prompts)
+---------------------------------
+1) Run W-first = world/map canonical path resolution first.
+2) Check RT parity = verify save/load equivalence.
+3) Enforce Ref-only = treat module/layout paths as wiring, not ownership.
+4) Avoid ghost hardcodes = remove hidden app-specific assumptions.
+5) Stay slice-safe = isolate changes so other subsystems keep running.
+6) Bridge only = fallback paths allowed only for migration.
+7) Snapshot first = manual .bak before risky edits (no-git mode).
+8) Pass S1 matrix = loader + save/load + local boot + event trigger + compile check.
+9) Keep infra-only = chtpm support modules stay generic plumbing.
+10) Protect EP recursion = editor/player share contracts, avoid hardcoded divergence.
+
+PJARGO Dictionary (Agent Jargon + Aliases)
+Date: 2026-03-18
+Purpose: Shared high-leverage vocabulary for faster, clearer agent collaboration.
+
+How to use this
+---------------
+- Prefer short aliases in planning, prompts, and reviews.
+- When a term appears, agent should follow the mapped meaning, not guess.
+- If two terms conflict, follow PMO KISS + active roadmap docs.
+
+Core Ontology
+-------------
+PMO
+- Alias: piece-module-os
+- Meaning: architectural priority order PIECE -> MODULE -> OS.
+
+TPM
+- Alias: true-piece-method
+- Meaning: file-backed, auditable, modular design where pieces own state.
+
+Piece
+- Alias: unit, atom, node
+- Meaning: directory-backed sovereign state/behavior unit.
+
+Container Piece
+- Alias: holder, nest-node
+- Meaning: a piece that contains child pieces.
+
+Recursive Containment
+- Alias: recursion model, nested-piece model
+- Meaning: maps contain pieces; pieces can contain pieces.
+
+Theater
+- Alias: view layer
+- Meaning: CHTPM composition/routing layer.
+
+Stage
+- Alias: rendered artifact
+- Meaning: module/op-produced view content inserted into theater.
+
+Mirror
+- Alias: runtime mirror
+- Meaning: fast mutable state representation (usually `state.txt`).
+
+DNA
+- Alias: definition layer
+- Meaning: canonical capability/definition view (often PDL or equivalent piece definition).
+
+Critical CHTPM/Module Clarifications
+------------------------------------
+CHTPM Module Reference
+- Alias: ref-only module link
+- Meaning: `<module>` in layout is a reference/wiring pointer, not architectural ownership of app logic.
+
+CHTPM Support Module
+- Alias: infra module
+- Meaning: `chtpm_player`, `orchestrator`, render helpers; generic plumbing only.
+
+Parser Ownership Boundary
+- Alias: eye-not-mind rule
+- Meaning: parser composes/reroutes; it should not own app gameplay/business rules.
+
+Reference Wiring
+- Alias: wiring layer
+- Meaning: paths in layout/config that point to modules/ops; these connect systems but should stay data-driven.
+
+Hardcoded Gameplay Leak
+- Alias: leak
+- Meaning: app-specific behavior accidentally embedded in infra module code.
+
+Infra Default
+- Alias: startup default
+- Meaning: boot fallback (e.g., initial layout) acceptable if configurable and not gameplay-specific.
+
+Architecture + Pathing
+----------------------
+Canonical Path
+- Alias: canon path
+- Meaning: `projects/<project>/pieces/world_<id>/map_<id>/<piece_id>/`
+
+World-First
+- Alias: W-first
+- Meaning: resolve world/map path before legacy fallback.
+
+Fallback Bridge
+- Alias: bridge mode
+- Meaning: temporary compatibility path; not canonical.
+
+Map Truth
+- Alias: containment truth
+- Meaning: directory containment is authoritative map membership.
+
+Map Hint
+- Alias: map_id hint
+- Meaning: `map_id` in state is compatibility metadata, not sole truth.
+
+Root Anchor
+- Alias: project_root anchor
+- Meaning: location_kvp/getcwd root resolution that all relative paths must normalize against.
+
+Operational Priorities
+----------------------
+Step 1
+- Alias: local loop
+- Meaning: op-ed save/load/local-play + pal/op-event no-code flow.
+
+Roundtrip Parity
+- Alias: RT parity
+- Meaning: save -> reload yields equivalent state/bindings.
+
+Local Boot
+- Alias: zero-touch play
+- Meaning: local play starts from saved artifacts with no manual edits.
+
+No-Code Bind Flow
+- Alias: create-bind-trigger
+- Meaning: user can create event, bind target, trigger in play.
+
+Step-1 Matrix
+- Alias: S1 matrix
+- Meaning: loader launch + save/load parity + local boot + event trigger + compile checks.
+
+Modularity Doctrine
+-------------------
+Modular-over-Hardcoded
+- Alias: MOH rule
+- Meaning: prefer composable contracts over one-off hardcoded branches.
+
+Slice-Safe
+- Alias: partial-evolve
+- Meaning: one subsystem can be changed without breaking others.
+
+Recursion-Safe
+- Alias: nest-safe
+- Meaning: logic works at map->piece and piece->piece levels.
+
+Editor-Player Recursion
+- Alias: EP recursion
+- Meaning: editor/player share contracts/ops instead of duplicated hardcoded logic.
+
+Contract Surface
+- Alias: interface seam
+- Meaning: explicit boundary where components interact (file schema, op args, event envelope).
+
+Swap Surface
+- Alias: hot-swap seam
+- Meaning: designed boundary where one part can be replaced while the rest keeps running.
+
+Pitfall Vocabulary
+------------------
+Ghost Hardcode
+- Meaning: hidden project-specific assumption in supposedly generic code.
+
+Path Drift
+- Meaning: code writes/reads outside canonical world/map path by accident.
+
+Fallback Creep
+- Meaning: temporary fallback becomes de facto primary path.
+
+Selector Sink
+- Meaning: selector state corruption drops to 0,0 class failure.
+
+PDL Split-Brain
+- Meaning: parser/reader disagreement (`piece.pdl` vs `<id>.pdl`).
+
+Loader Blindspot
+- Meaning: launch path points to non-existent layout/module path.
+
+Dedup Clash
+- Meaning: same logical piece appears in root + world/map during migration.
+
+Reference Trap
+- Meaning: agents mistake module path references for ownership/canonical behavior definitions.
+
+Template Default Trap
+- Meaning: missing `entry_layout`/`player_piece` is silently guessed (e.g., game.chtpm) instead of scan/registry-derived.
+
+Token Trap
+- Meaning: architecture confusion that forces huge prompts/context every turn.
+
+Recovery + Safety Terms
+-----------------------
+No-Git Mode
+- Alias: manual-recovery mode
+- Meaning: assume no reliable git rollback exists.
+
+Manual Snapshot
+- Alias: hand-backup
+- Meaning: create `.bak.<YYYYMMDD-HHMM>` before risky edits.
+
+High-Risk Touch
+- Meaning: path resolution, state rewrite loops, loader mapping, event persistence.
+
+Communication Shorthand
+-----------------------
+"Run W-first"
+- Meaning: enforce canonical world/map path resolution first.
+
+"Check RT parity"
+- Meaning: run save/load equivalence verification.
+
+"Avoid ghost hardcodes"
+- Meaning: do not bake app-specific assumptions into generic modules.
+
+"Ref-only, not ownership"
+- Meaning: module/layout path is wiring, not where logic doctrine should be inferred from.
+
+"Stay slice-safe"
+- Meaning: keep changes isolated and modular; don’t tangle layers.
+
+"Bridge only"
+- Meaning: fallback allowed only for migration compatibility.
+
+"Snapshot first"
+- Meaning: manual backup before high-risk edits.
+
+Suggested New Alias Pack (for future prompts)
+----------------------------------------------
+- Canon path = canonical world/map directory truth.
+- Local loop = Step 1 full workflow.
+- MOH = modular-over-hardcoded doctrine.
+- EP recursion = editor-player shared contract model.
+- Ref-only = CHTPM module/layout pointers are wiring, not ownership.
+- Ghost hardcode = hidden non-modular assumption.
+- Bridge creep = fallback becoming accidental primary.
+- Slice-safe = change one part while others keep running.
+- Token trap = design confusion that inflates prompt/context cost.
+
+End of PJARGO dictionary.

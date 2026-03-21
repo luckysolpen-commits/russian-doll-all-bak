@@ -1,0 +1,207 @@
+You are the next implementation agent for this repository.
+Your mission is to complete **Step 1 only** from the roadmap with production-quality execution.
+
+====================
+STEP 1 TARGET (STRICT)
+====================
+Complete local no-code authoring + play loop:
+1) `op-ed` save-to-file
+2) `op-ed` save/load roundtrip
+3) local play boot of op-ed-created projects without manual edits
+4) complete `pal` + op-event no-code piece workflow (create/bind/test)
+
+Do not implement Step 2+ (AI ops, voice, simulation, networking, gl-os, install/versioning, kernel), except tiny schema prep directly required by Step 1.
+
+====================
+PROJECT REALITIES YOU MUST RESPECT
+====================
+1) Canonical storage direction:
+- `projects/<project>/pieces/world_<id>/map_<id>/<piece_id>/`
+- no extra `/pieces/` under `map_<id>/`
+
+2) Container model:
+- maps contain pieces
+- pieces may contain pieces (inventory/interior)
+
+3) Transitional state:
+- some fallback/root behavior still exists
+- do not remove fallback paths unless Step 1 parity is proven and user asks for cleanup
+
+4) Determinism:
+- Step 1 must be deterministic for save/load/local play
+- no hidden mutable side-channel state
+
+5) Existing known sensitive areas (do not regress):
+- path resolution and root anchoring (`location_kvp`, getcwd fallback)
+- PDL resolution (`piece.pdl` vs `<piece_id>.pdl`)
+- selector state integrity (`pos_x/pos_y/pos_z` retention)
+- loader-to-layout path mapping
+
+====================
+DEFINITION OF DONE (STEP 1)
+====================
+A. In `op-ed`, user can create/edit piece content with no-code flow and save project to disk.
+B. User can load the same project and get identical piece/event state (roundtrip parity).
+C. User can launch local play directly from saved op-ed project artifacts with no manual path edits.
+D. `pal` + op-event authoring flow supports at minimum:
+   - create event
+   - bind event to target piece/method
+   - trigger event in local play
+   - observe expected state/result
+E. Paths resolve world/map-first and remain compatible with current migration state.
+F. `compile_all.sh` passes without introducing new warnings in touched modules.
+G. Regression checks pass for existing op-ed launch and basic fuzz-op map interactions.
+
+====================
+IMPLEMENTATION PLAN (EXECUTE IN THIS ORDER)
+====================
+PHASE 1: Audit and map current Step 1 path
+1) Trace op-ed project lifecycle currently:
+- where project/session is represented
+- where save currently writes (if any)
+- where load currently reads
+- where local play entrypoint expects artifacts
+2) Trace pal/op-event current no-code flow:
+- creation path
+- bind path
+- trigger path
+- persistence path
+3) Identify gaps between current behavior and DoD A-D.
+
+PHASE 2: Define explicit project artifact contract (Step 1 scope)
+Create or formalize a minimal project manifest contract that includes:
+- `project_id`
+- `world_id`
+- `map_id`
+- piece inventory refs
+- event bindings refs
+- optional metadata (timestamps/version)
+Keep format simple and file-based; no large architectural expansion.
+
+PHASE 3: Implement save-to-file
+1) Implement atomic-ish save pattern:
+- write temp
+- validate parse
+- replace final
+2) Save must include:
+- pieces (world/map location + state)
+- event bindings required for local play
+- enough metadata for load bootstrap
+3) Ensure ids are not hardcoded (no static `piece_id` assumptions).
+
+PHASE 4: Implement load roundtrip
+1) Load reconstructs active op-ed state from saved artifacts.
+2) Missing optional fields should degrade gracefully with clear defaults.
+3) Roundtrip test:
+- save
+- unload/reset
+- load
+- verify deterministic equivalence on key fields and bindings.
+
+PHASE 5: Implement local play bootstrap from op-ed project
+1) Add explicit local-play entrypoint that consumes the saved project artifact.
+2) Resolve world/map directories first.
+3) Ensure local play starts with correct world/map and piece set.
+4) No manual file edits required to run.
+
+PHASE 6: pal + op-event no-code completion
+1) Ensure UI/menu path supports create -> bind -> test end-to-end.
+2) Persist event definitions and bindings in project artifacts.
+3) Trigger path in local play must execute bound behavior and log visible response.
+4) Keep terminology/menu labels understandable for non-coders.
+
+PHASE 7: Validation and hardening
+1) Run compile and fix warnings in touched files.
+2) Run manual integration checks (see matrix below).
+3) Document any intentional temporary fallback left in place.
+
+====================
+LIKELY FILES TO TOUCH (VERIFY BEFORE EDIT)
+====================
+Use this as guidance, not dogma:
+- `pieces/apps/op-ed/plugins/op-ed_module.c`
+- `pieces/apps/playrm/ops/src/create_piece.c`
+- `pieces/apps/playrm/ops/src/render_map.c`
+- `pieces/apps/playrm/loader/loader_module.c`
+- `pieces/chtpm/plugins/chtpm_parser.c`
+- `pieces/system/pdl/pdl_reader.c`
+- project-specific manager/module files under `projects/op-ed/` and/or `projects/fuzz-op/` if they participate in bootstrap flow
+- any pal/op-event modules/plugins used by op-ed no-code workflows
+
+Do not edit unrelated systems unless required by Step 1 behavior.
+
+====================
+NON-NEGOTIABLE ENGINEERING RULES
+====================
+1) World/map-aware first; fallback second.
+2) No hardcoded piece ids in scan/load logic.
+3) Keep event and piece persistence explicit and inspectable on disk.
+4) Preserve backward compatibility where practical during migration.
+5) Do not break loader launch for `op-ed`.
+6) Do not break existing fuzz-op behaviors while implementing Step 1.
+7) CHTPM module guardrail (excluding parser): keep `chtpm` support modules infrastructure-generic; do not hardcode project-specific gameplay rules there.
+8) Metadata rule: do not hardcode `entry_layout` or `player_piece` defaults in templates; derive from scan/registry context when missing.
+
+====================
+MANUAL TEST MATRIX (REQUIRED)
+====================
+T1. Loader launch
+- From loader, launch `op-ed`; confirm layout enters correctly.
+
+T2. Save baseline project
+- In op-ed, create or modify at least one piece and one event binding.
+- Save project.
+- Confirm expected files are written under canonical world/map structure.
+
+T3. Load roundtrip
+- Restart/re-enter op-ed.
+- Load same project.
+- Confirm pieces and bindings match pre-save state.
+
+T4. Local play boot
+- Start local play directly from saved op-ed project.
+- Confirm correct world/map and expected pieces are present.
+
+T5. Event execution
+- Trigger bound event in local play.
+- Confirm observable state/response change.
+
+T6. Regression
+- Quick check op-ed loader launch still works.
+- Quick check no obvious selector/map regressions.
+
+T7. Build hygiene
+- Run `./compile_all.sh` and fix warnings in touched areas.
+
+====================
+DELIVERABLES FOR FINAL REPORT
+====================
+1) What changed and why (by file).
+2) Artifact contract summary (manifest + key files).
+3) Which fallbacks remain and why.
+4) Test evidence by matrix item T1-T7.
+5) Known limitations left for later steps.
+
+====================
+HIGH-RISK PITFALLS TO AVOID
+====================
+1) Writing save artifacts in root-only paths that bypass world/map.
+2) Serializing partial state that loads but drops event bindings.
+3) Creating UI-only event definitions that never execute in play.
+4) Hidden reliance on current runtime state instead of saved artifacts.
+5) Breaking method parsing/dispatch by drifting PDL filename/path conventions.
+6) Reintroducing position/state loss in selector-style rewrite loops.
+
+====================
+IF YOU MUST CUT SCOPE
+====================
+Cut in this order:
+1) Nice-to-have metadata fields
+2) minor UX polish
+3) non-essential fallback cleanup
+Do not cut:
+- save/load determinism
+- local play bootstrap from saved artifacts
+- pal/op-event no-code end-to-end bind/trigger path
+
+End of prompt.

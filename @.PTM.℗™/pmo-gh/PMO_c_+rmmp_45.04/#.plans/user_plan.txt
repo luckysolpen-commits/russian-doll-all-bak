@@ -1,0 +1,56 @@
+USER IDENTITY & PROFILE PLAN (M21)
+=====================================
+
+1. PROJECT GOAL
+---------------
+To provide a secure authentication layer and persistent profile management for the TPM ecosystem.
+
+2. ARCHITECTURE (PROJECT-BASED)
+-------------------------------
+Path: `projects/user/`
+
+- manager/user_manager.+x: Handles logic for Login, Sign-up, and Profile Sync.
+- pieces/profiles/: Global registry of user pieces.
+    - pieces/profiles/${username}/state.txt: Core attributes (name, password_hash, balance, rank).
+    - pieces/profiles/${username}/projects/: Sub-dir for owned projects.
+    - pieces/profiles/${username}/pieces/: Sub-dir for owned individual pieces.
+- pieces/session/state.txt: Tracks the current active session (current_user_id, login_time, token).
+
+3. CORE FEATURES
+----------------
+
+A. SIGN-UP / ONBOARDING
+- Command: `create_user <username> <password>`
+- Logic:
+    - Verifies username is unique in `pieces/profiles/`.
+    - Hashes password using OpenSSL (SHA256).
+    - Initializes `state.txt` with default balance (e.g., 100 TPM coins).
+    - Creates ownership subdirectories.
+
+B. LOGIN / AUTHENTICATION
+- Command: `login <username> <password>`
+- Logic:
+    - Locates profile piece.
+    - Compares hashed password.
+    - Updates `pieces/session/state.txt` with the active user pointer.
+
+C. SOVEREIGN OWNERSHIP
+- "User" piece acts as a root for other pieces. 
+- When a user buys an NFT in P2P-NET, the NFT piece is symlinked or moved into `pieces/profiles/${username}/pieces/`.
+
+4. UI LAYOUT (user.chtpm)
+-------------------------
+- Auth Screen:
+    [1] Login (Input username/password)
+    [2] Sign Up (New Account)
+- Profile Dashboard (Post-Login):
+    - Welcome, ${user_name}
+    - Balance: ${user_balance}
+    - Reputation: ${user_rank}
+    [3] View My Assets (Owned Pieces/Projects)
+    [4] Logout
+
+5. INFRASTRUCTURE NOTES
+-----------------------
+- Integrates with P2P-NET for balance synchronization.
+- Uses `location_kvp` for global profile discovery.

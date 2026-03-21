@@ -1,0 +1,19 @@
+<panel>
+    <text label="╔═══════════════════════════════════════════════════════════╗" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="║           P M O   G L - O S   D E S K T O P               ║" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="║  The GL Desktop is now running in a separate window.      ║" /><br/>
+    <text label="║  You can interact with it using your mouse.               ║" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="║  [Right-Click] for Context Menu                           ║" /><br/>
+    <text label="║  [Drag Titlebar] to move windows                          ║" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║  System Time: ${clock_time} | Turn: ${clock_turn}         ║" /><br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="║  " /><button label="Shutdown GL-OS" href="pieces/chtpm/layouts/os.chtpm" /><text label="                             ║" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <module src="projects/gl-os/manager/+x/gl_os_manager.+x" />
+</panel>

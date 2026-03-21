@@ -1,0 +1,5 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | app_id             | op-ed
+META         | layout_path        | pieces/apps/op-ed/layouts/op-ed.chtpm
+META         | version            | 1.0

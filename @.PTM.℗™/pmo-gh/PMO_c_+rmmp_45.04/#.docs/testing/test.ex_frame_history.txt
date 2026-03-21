@@ -1,0 +1,126 @@
+=== NEW SESSION at 2026-03-18 09:49:33 ===
+
+--- FRAME UPDATE at 2026-03-18 09:49:33 ---
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║           C H T P M + O S   C L I   v2.0                 ║
+║                                                           ║
+║  CHTPM+OS Main Menu                                      ║
+║                                                           ║
+║  [>] 1. [Project Manager (V2/Editor)]                    ║
+║  [ ] 2. [Launch Legacy FuzzPet]                           ║
+║  [ ] 3. [Status]                                          ║
+║  [ ] 4. [Process Monitor]                            ║
+║  [ ] 5. [Toggle Frame History (Current: )]                                         ║
+║  [ ] 6. [GL-OS]                                             ║
+║  [ ] 7. [Help]                                            ║
+║      Applications                                        ║
+╠═══════════════════════════════════════════════════════════╣
+║  Running Applications: None                               ║
+║  System Time: 08:00:00 | Turn: 0 | Key: None ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  $ [ ] 8. []                                                 ║
+║                                                           ║
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+--- FRAME UPDATE at 2026-03-18 09:49:37 ---
+╔════════════ L O A D   P R O J E C T ══════════╗
+║ Select an op-ed project:                                  ║
+║                                                           ║
+║ [>] 1. PROJECTS  : [man-ops] fuzz-op op-ed demo_1 man-pal man-add template ║
+║                                                           ║
+[ ] 2. [1. [BACK TO FILE MENU]]
+[ ] 3. [2. [BACK TO EDITOR]]
+╠══════════════════════════════════════════════╣
+║ [RESP]:                                                   ║
+╚══════════════════════════════════════════════╝
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+--- FRAME UPDATE at 2026-03-18 09:49:37 ---
+╔════════════ L O A D   P R O J E C T ══════════╗
+║ Select an op-ed project:                                  ║
+║                                                           ║
+║ [>] 1. PROJECTS  : [man-ops] fuzz-op op-ed demo_1 man-pal man-add template ║
+║                                                           ║
+[ ] 2. [1. [BACK TO FILE MENU]]
+[ ] 3. [2. [BACK TO EDITOR]]
+╠══════════════════════════════════════════════╣
+║ [RESP]:                                                   ║
+╚══════════════════════════════════════════════╝
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+--- FRAME UPDATE at 2026-03-18 09:49:39 ---
+╔════════════ L O A D   P R O J E C T ══════════╗
+║ Select an op-ed project:                                  ║
+║                                                           ║
+║ [>] 1. PROJECTS  : man-ops [fuzz-op] op-ed demo_1 man-pal man-add template ║
+║                                                           ║
+[ ] 2. [1. [BACK TO FILE MENU]]
+[ ] 3. [2. [BACK TO EDITOR]]
+╠══════════════════════════════════════════════╣
+║ [RESP]:                                                   ║
+╚══════════════════════════════════════════════╝
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+--- FRAME UPDATE at 2026-03-18 09:49:40 ---
+╔════════════ L O A D   P R O J E C T ══════════╗
+║ Select an op-ed project:                                  ║
+║                                                           ║
+║ [>] 1. PROJECTS  : man-ops fuzz-op [op-ed] demo_1 man-pal man-add template ║
+║                                                           ║
+[ ] 2. [1. [BACK TO FILE MENU]]
+[ ] 3. [2. [BACK TO EDITOR]]
+╠══════════════════════════════════════════════╣
+║ [RESP]:                                                   ║
+╚══════════════════════════════════════════════╝
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+--- FRAME UPDATE at 2026-03-18 09:49:41 ---
+╔════════════ L O A D   P R O J E C T ══════════╗
+║ Select an op-ed project:                                  ║
+║                                                           ║
+║ [>] 1. PROJECTS  : man-ops [fuzz-op] op-ed demo_1 man-pal man-add template ║
+║                                                           ║
+[ ] 2. [1. [BACK TO FILE MENU]]
+[ ] 3. [2. [BACK TO EDITOR]]
+╠══════════════════════════════════════════════╣
+║ [RESP]:                                                   ║
+╚══════════════════════════════════════════════╝
+
+╚═══════════════════════════════════════════════════════════╝
+Nav > _
+
+
+=== TEST SUMMARY (M18 SCROLLER FIX) at 2026-03-18 09:50 ===
+Scope:
+- Validate op-ed load-menu scroller after active-layout suite fix.
+- Runtime window: 2026-03-18 09:49:33 to 2026-03-18 09:49:43.
+- Forced layout: pieces/apps/op-ed/layouts/load_menu.chtpm.
+- Injected keys to pieces/apps/player_app/history.txt: RIGHT (1001), RIGHT (1001), LEFT (1000).
+
+Observed Frame Evidence:
+- 09:49:37 -> PROJECTS highlight: [man-ops]
+- 09:49:39 -> PROJECTS highlight: [fuzz-op]
+- 09:49:40 -> PROJECTS highlight: [op-ed]
+- 09:49:41 -> PROJECTS highlight: [fuzz-op]
+
+Result:
+- PASS. Scroller is responsive and updates selection with left/right key injections while in load_menu.
+- This confirms op-ed module remained active across op-ed menu layouts during the test.
+=== END TEST SUMMARY ===
