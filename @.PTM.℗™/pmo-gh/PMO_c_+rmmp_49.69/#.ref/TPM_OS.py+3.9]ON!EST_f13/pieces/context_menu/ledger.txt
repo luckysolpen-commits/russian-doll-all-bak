@@ -1,2 +1,0 @@
-# Context Menu Piece Ledger - Audit Trail
-# All context menu operations are logged here for auditability

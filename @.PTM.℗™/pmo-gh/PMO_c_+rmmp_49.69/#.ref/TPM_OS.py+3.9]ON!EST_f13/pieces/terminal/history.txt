@@ -1,2 +1,0 @@
-# Terminal Piece History - Command History
-# All commands entered in the terminal are recorded here

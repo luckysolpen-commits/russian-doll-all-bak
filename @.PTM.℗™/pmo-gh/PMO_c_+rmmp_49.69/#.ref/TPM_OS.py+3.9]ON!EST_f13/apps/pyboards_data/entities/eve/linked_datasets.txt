@@ -1,3 +1,0 @@
-chemistry/molecules.csv
-chemistry/reactions.csv
-../bio/physiology.csv

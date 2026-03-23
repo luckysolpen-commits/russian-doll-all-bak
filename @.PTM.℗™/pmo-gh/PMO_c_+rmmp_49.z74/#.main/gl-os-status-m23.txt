@@ -1,0 +1,58 @@
+# GL-OS Status & Architecture Correction - M23
+**Date:** 2026-03-23
+**Status:** IMPLEMENTING - Window Logic Fixed, Moving to Terminal Integration
+
+---
+
+## Reference Architecture (from Python TPM_OS)
+
+**What GL-OS Should Be (based on #.ref/TPM_OS.py+3.9]ON!EST_f13/):**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│              GL-OS Window (OpenGL Desktop)                  │
+│  BG: #000044 (dark blue)                                    │
+│                                                              │
+│  ┌─────────────────┐  ┌─────────────────┐                  │
+│  │  Terminal App   │  │  File Browser   │  ← Widgets/Apps  │
+│  │  (GL Render)    │  │  (GL Render)    │    inside GL     │
+│  └─────────────────┘  └─────────────────┘                  │
+│                                                              │
+│  Right-click → Context Menu                                │
+│    [New Terminal] [New Folder] [New File]                  │
+│                                                              │
+│  Windows: Draggable, resizable, Z-order (Focus)            │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## TPM-Compliant C Implementation
+
+**Current Focus:** Integrating Terminal functionality into GL windows.
+
+**Implementation Status:**
+
+**Completed:**
+- ✅ OpenGL Window opening (800x600, bg #000044)
+- ✅ Basic window structure and rendering
+- ✅ Window creation (Terminal) via 'T' key, right-click menu, or startup
+- ✅ Session state and view persistence
+- ✅ **Drag Logic Fixed:** GLUT to OpenGL coordinate conversion corrected.
+- ✅ **Right-click Menu Fixed:** Menu selection handled for "New Terminal".
+- ✅ **Z-order (Focus) Fixed:** Clicking a window brings it to the front of the render stack.
+
+**In Progress / Broken:**
+- ❌ **Terminal Content:** Terminals are currently static boxes with a dummy prompt.
+- ❌ **Terminal Input:** Need to capture keyboard events specifically for the active terminal window.
+- ❌ **Inner GL Windows:** Goal is to have apps that open inside the virtual desktop with their own logic.
+
+**Next Steps:**
+1. Implement keyboard input buffer for the active window.
+2. Integrate a basic CLI interpreter into the "terminal" window type.
+3. Add support for different window types ("file browser", "editor").
+4. Verify "gl z position" refers to 3D depth or just the 2D Z-order fixed today.
+
+---
+
+**End of gl-os-status-m23.txt**

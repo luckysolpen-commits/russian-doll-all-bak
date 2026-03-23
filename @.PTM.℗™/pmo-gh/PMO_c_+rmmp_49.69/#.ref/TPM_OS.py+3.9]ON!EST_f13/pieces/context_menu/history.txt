@@ -1,2 +1,0 @@
-# Context Menu Piece History - Input Log
-# All user inputs affecting the context menu are recorded here

@@ -1,2 +1,0 @@
-# Desktop Piece Ledger - Audit Trail
-# All desktop operations are logged here for auditability

@@ -1,2 +1,0 @@
-chemistry/atmospheric_composition.csv
-chemistry/surface_composition.csv

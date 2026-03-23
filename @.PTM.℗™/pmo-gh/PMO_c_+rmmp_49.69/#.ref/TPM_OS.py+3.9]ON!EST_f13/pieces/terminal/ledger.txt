@@ -1,2 +1,0 @@
-# Terminal Piece Ledger - Audit Trail
-# All terminal operations are logged here for auditability
