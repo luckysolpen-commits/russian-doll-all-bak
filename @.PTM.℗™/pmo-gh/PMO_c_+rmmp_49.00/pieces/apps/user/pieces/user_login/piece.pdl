@@ -1,0 +1,8 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | user_login
+
+METHOD       | username          | void
+METHOD       | password          | void
+METHOD       | confirm           | void
+METHOD       | back              | void

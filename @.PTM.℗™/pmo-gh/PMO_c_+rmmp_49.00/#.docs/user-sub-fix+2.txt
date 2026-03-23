@@ -1,0 +1,243 @@
+# User Authentication Submenu Fix - TPM Implementation Guide
+**File:** `#.docs/user-sub-fix.txt`
+**Date:** 2026-03-22
+**Status:** IMPLEMENTATION SPECIFICATION (FINAL - State Sync Trigger)
+**Priority:** Critical (Core System App)
+
+---
+
+## The Race Condition Problem
+
+The parser reads `state.txt` in `load_vars()` → `compose_frame()`.
+The module writes `state.txt` after reading keys from history.
+
+**Race:** Parser reads state BEFORE module writes new `active_target_id`.
+
+## The Solution: State Change Trigger File
+
+The parser already checks `pieces/master_ledger/frame_changed.txt` for changes (line 1164).
+We add a **state change trigger**: module writes state, then touches `pieces/apps/player_app/state_changed.txt`.
+
+**Parser modification:** Check `state_changed.txt` and reload state when it changes.
+
+---
+
+## Implementation
+
+### Step 1: Add State Change Detection to Parser
+
+**File:** `pieces/chtpm/plugins/chtpm_parser.c`
+
+**Add near line 1151 (after other file path declarations):**
+```c
+char *state_ch = build_path_malloc("pieces/apps/player_app/state_changed.txt");
+```
+
+**Add near line 1158 (after other size initializations):**
+```c
+if (stat(state_ch, &st) == 0) last_state_file_size = st.st_size;
+```
+
+**Add near line 1166 (after other stat checks in main loop):**
+```c
+/* Check for module state changes (fixes race condition) */
+if (stat(state_ch, &st) == 0 && st.st_size > last_state_file_size) {
+    last_state_file_size = st.st_size;
+    /* Force state reload by clearing and re-reading */
+    var_count = 0;  /* Clear cached variables */
+    load_vars();    /* Re-read state.txt */
+    /* Check if active_target_id changed */
+    const char* new_active_id = get_var("active_target_id");
+    if (strcmp(new_active_id, last_active_id) != 0) {
+        strncpy(last_active_id, new_active_id, 63);
+        parse_chtm();  /* Re-parse with new methods */
+        initialize_focus();
+    }
+    dirty = 1;
+}
+```
+
+**Add variable declaration near line 80:**
+```c
+long last_state_file_size = 0;
+```
+
+### Step 2: Module Writes State and Touches Trigger
+
+**File:** `pieces/apps/user/plugins/user_module.c`
+
+**Add state change trigger function:**
+```c
+static void trigger_state_change(void) {
+    char *path = NULL;
+    if (asprintf(&path, "%s/pieces/apps/player_app/state_changed.txt", project_root) == -1) return;
+    FILE *f = fopen(path, "a");
+    if (f) {
+        fprintf(f, "S\n");  /* Append single byte to change file size */
+        fclose(f);
+    }
+    free(path);
+}
+```
+
+**Modify write_parser_state():**
+```c
+static void write_parser_state(void) {
+    char *path = NULL;
+    if (asprintf(&path, "%s/pieces/apps/player_app/state.txt", project_root) == -1) return;
+    
+    FILE *f = fopen(path, "w");
+    if (f) {
+        fprintf(f, "project_id=user\n");
+        
+        const char* active_target = "user_main";
+        if (auth_screen == 1) active_target = "user_login";
+        else if (auth_screen == 2) active_target = "user_signup";
+        else if (auth_screen == 3) active_target = "user_profile";
+        fprintf(f, "active_target_id=%s\n", active_target);
+        
+        fprintf(f, "app_title=USER AUTHENTICATION\n");
+        fprintf(f, "session_status=%s\n", session_status);
+        fprintf(f, "current_user=%s\n", current_user);
+        fprintf(f, "last_key=%s\n", last_key_str);
+        
+        if (input_mode == 1)
+            fprintf(f, "cli_input=Username: %s\n", cli_buffer);
+        else if (input_mode == 2) {
+            char masked[32] = "";
+            for (size_t i = 0; i < strlen(cli_buffer) && i < 20; i++) strcat(masked, "*");
+            fprintf(f, "cli_input=Password: %s\n", masked);
+        } else
+            fprintf(f, "cli_input=\n");
+        
+        fprintf(f, "response=%s\n", auth_response);
+        fclose(f);
+        
+        /* CRITICAL: Trigger state change detection */
+        trigger_state_change();
+    }
+    free(path);
+}
+```
+
+**Main loop (no need for ultra-fast polling now):**
+```c
+int main(void) {
+    signal(SIGINT, handle_sigint);
+    signal(SIGTERM, handle_sigint);
+    setpgid(0, 0);
+    srand(time(NULL));
+    resolve_paths();
+    
+    run_command("mkdir -p pieces/apps/user/pieces/session");
+    run_command("mkdir -p pieces/apps/user/pieces/profiles");
+    
+    save_session_state("auth_required", "guest");
+    clear_view();
+    
+    /* Write initial state and trigger */
+    write_parser_state();
+    hit_frame_marker();
+    
+    char hist_path[MAX_PATH];
+    snprintf(hist_path, sizeof(hist_path), "%s/pieces/apps/player_app/history.txt", project_root);
+    
+    long last_history_pos = 0;
+    struct stat st;
+    
+    while (!g_shutdown) {
+        if (!is_active_layout()) { usleep(10000); continue; }
+        
+        if (stat(hist_path, &st) == 0 && st.st_size > last_history_pos) {
+            FILE *hf = fopen(hist_path, "r");
+            if (hf) {
+                fseek(hf, last_history_pos, SEEK_SET);
+                int key;
+                while (fscanf(hf, "%d", &key) == 1) {
+                    process_key(key);
+                }
+                last_history_pos = ftell(hf);
+                fclose(hf);
+                
+                /* Write state AFTER processing all keys, trigger parser reload */
+                write_parser_state();
+                hit_frame_marker();
+            }
+        } else if (st.st_size < last_history_pos) {
+            last_history_pos = 0;
+        }
+        
+        usleep(16667);  /* 60 FPS - no race condition anymore! */
+    }
+    
+    return 0;
+}
+```
+
+---
+
+## Why This Works
+
+1. **Module writes state** → **touches `state_changed.txt`**
+2. **Parser detects `state_changed.txt` size increase** → **re-reads state.txt**
+3. **Parser checks if `active_target_id` changed** → **re-parses layout if so**
+4. **No race condition** - Parser explicitly reloads state AFTER module writes
+
+This is the **TPM-correct pattern**: file-based synchronization, no shared memory, no timing dependencies.
+
+---
+
+## Alternative: Use Existing frame_changed.txt
+
+If modifying the parser is not desired, the module can use the existing `pieces/display/frame_changed.txt`:
+
+**Module:**
+```c
+static void trigger_state_change(void) {
+    char *path = NULL;
+    if (asprintf(&path, "%s/pieces/display/frame_changed.txt", project_root) == -1) return;
+    FILE *f = fopen(path, "a");
+    if (f) {
+        fprintf(f, "S\n");  /* 'S' for state change */
+        fclose(f);
+    }
+    free(path);
+}
+```
+
+The parser already checks this file (line 1165) and sets `dirty=1` when it changes, causing `compose_frame()` to be called, which calls `load_vars()`.
+
+**But:** This still has the race condition because `load_vars()` happens at the START of `compose_frame()`, before the module has written state.
+
+**The proper fix is adding `state_changed.txt` detection as shown above.**
+
+---
+
+## Validation Checklist
+
+- [ ] Parser modified to check `pieces/apps/player_app/state_changed.txt`
+- [ ] Parser re-reads state when trigger file changes
+- [ ] Parser re-parses layout if `active_target_id` changed
+- [ ] Module calls `trigger_state_change()` after writing state
+- [ ] PDL files at `pieces/apps/user/pieces/<screen>/piece.pdl`
+- [ ] Fallback at `pieces/<screen>/<screen>.pdl`
+- [ ] No `_` prefix on METHOD names
+- [ ] Layout uses `${piece_methods}` and `<cli_io>`
+
+---
+
+## Test Sequence
+
+1. Launch CHTPM, navigate to User Auth
+2. Parser loads initial state (`active_target_id=user_main`)
+3. Press Enter on "login" (KEY:2)
+4. Module reads KEY:2, sets `auth_screen=1`, writes `active_target_id=user_login`
+5. Module touches `state_changed.txt`
+6. Parser detects `state_changed.txt` change
+7. Parser re-reads state.txt, sees `active_target_id=user_login`
+8. Parser re-parses layout, loads methods from `user_login.pdl`
+9. Frame shows: `[>] 1. [username] [ ] 2. [password] [ ] 3. [confirm] [ ] 4. [cancel]`
+
+---
+
+**End of Final User Authentication Submenu Fix Specification**

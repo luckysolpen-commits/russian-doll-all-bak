@@ -1,6 +1,0 @@
-SECTION      | KEY                | VALUE
-----------------------------------------
-META         | project_id         | user
-META         | version            | 1.0
-STATE        | current_user       | guest
-STATE        | session_active     | 0

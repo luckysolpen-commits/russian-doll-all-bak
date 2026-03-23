@@ -1,0 +1,89 @@
+# CLI Input View Persistence Fix
+**Date:** 2026-03-22
+**Status:** CRITICAL - ESC CLEARS UI (but file is correct)
+**Deadline:** IMMEDIATE
+
+---
+
+## The Problem
+
+**What works:**
+- ✅ Typing in cli_io fields works (characters appear)
+- ✅ Writing to `pieces/apps/player_app/cli_buffers.txt` works
+- ✅ File contains correct data (e.g., `Uhi\n` for username "hi")
+
+**What's broken:**
+- ❌ When ESC is pressed, UI shows empty field `[]` instead of `[hi]`
+
+---
+
+## Root Cause
+
+**The file read logic is buggy:**
+
+1. **Write:** Appends `U\n`, `Uh\n`, `Uhi\n` to cli_buffers.txt ✅
+2. **Read:** Should get last value ("hi") but gets empty ❌
+
+---
+
+## The Fix Needed
+
+**In `pieces/chtpm/plugins/chtpm_parser.c`:**
+
+**Find the cli_io initialization code** (where we read from cli_buffers.txt)
+
+**Replace with this simple logic:**
+```c
+if (strcmp(t->tag_name, "cli_io") == 0) {
+    FILE *f = fopen("pieces/apps/player_app/cli_buffers.txt", "r");
+    if (f) {
+        char line[512], last_val[256] = "";
+        char prefix = strstr(el->id, "username") ? 'U' : 'P';
+        
+        /* Read all lines, keep last matching value */
+        while (fgets(line, sizeof(line), f)) {
+            if (line[0] == prefix) {
+                /* Skip prefix char, remove newline */
+                char* val = line + 1;
+                val[strcspn(val, "\n")] = 0;
+                strcpy(last_val, val);
+            }
+        }
+        
+        /* Copy to element buffer */
+        if (strlen(last_val) > 0) {
+            strncpy(el->input_buffer, last_val, sizeof(el->input_buffer) - 1);
+        }
+        
+        fclose(f);
+    }
+}
+```
+
+**Key points:**
+- Read ALL lines
+- Each time we see a line starting with 'U' or 'P', overwrite `last_val`
+- At end, `last_val` holds the LAST (most recent) value
+- Copy to `el->input_buffer`
+
+---
+
+## Test Steps
+
+1. Launch CHTPM, navigate to User Auth
+2. Press Enter on username field to activate
+3. Type "hi" → should show `[hi_]`
+4. Press ESC → should show `[hi]` (NOT empty `[]`)
+5. Done - input persisted through ESC ✅
+
+---
+
+## Files to Edit
+
+**`pieces/chtpm/plugins/chtpm_parser.c`**
+- Find cli_io read/initialization code
+- Fix to correctly get last U/P value from file
+
+---
+
+**End of input-view-fix.txt**
