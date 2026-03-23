@@ -1,0 +1,5 @@
+checksum: abc123def456...
+created_timestamp: 2026-01-08T10:30:00Z
+last_modified: 2026-01-08T15:45:00Z
+tags: human,entity,adam
+version: 1.0

@@ -1,0 +1,5 @@
+project_id=gl-os
+session_status=active
+window_count=2
+windows=1:Terminal 1(70,70),2:Terminal 2(90,90),
+active_window=2

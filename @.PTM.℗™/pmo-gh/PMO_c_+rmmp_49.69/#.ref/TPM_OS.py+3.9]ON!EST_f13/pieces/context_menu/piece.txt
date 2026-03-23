@@ -1,0 +1,21 @@
+# Piece: context_menu
+state:
+  visible: false
+  position_x: 0
+  position_y: 0
+  selected_option: ""
+  options: ["open_terminal", "show_apps", "settings", "screensaver", "hangman", "pyboard2d", "pyboard3d"]
+  width: 200
+  height: 250
+methods: show_at_position, hide, select_option, execute_selected, update_position
+event_listeners: context_menu_shown, context_menu_hidden, option_selected, position_updated
+responses:
+  context_menu_shown: Context menu displayed at position
+  context_menu_hidden: Context menu hidden
+  option_selected: Option selected in context menu
+  position_updated: Context menu position updated
+  default: Context menu event processed
+
+relations:
+  parent: desktop
+  children: []

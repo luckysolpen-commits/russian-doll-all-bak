@@ -1,0 +1,2 @@
+# Desktop Piece History - Input Log
+# All user inputs affecting the desktop are recorded here[2026-02-13 03:06:48] RightClick: (625, 225) | Source: user_input

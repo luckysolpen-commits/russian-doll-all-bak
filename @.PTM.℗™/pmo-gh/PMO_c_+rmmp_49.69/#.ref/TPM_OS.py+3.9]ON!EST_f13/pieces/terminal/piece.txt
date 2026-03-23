@@ -1,0 +1,19 @@
+# Piece: terminal
+state:
+  visible: true
+  content: 
+  command_history: []
+  current_command: 
+  prompt: $ 
+methods: execute_command, display_message, display_error, clear_history, open, close, resize
+event_listeners: command_entered, command_executed, terminal_opened, terminal_closed, terminal_resized
+responses:
+  command_executed: Command processed in terminal
+  terminal_opened: Terminal window opened
+  terminal_closed: Terminal window closed
+  terminal_resized: Terminal window resized
+  default: Terminal event processed
+
+relations:
+  parent: desktop
+  children: []

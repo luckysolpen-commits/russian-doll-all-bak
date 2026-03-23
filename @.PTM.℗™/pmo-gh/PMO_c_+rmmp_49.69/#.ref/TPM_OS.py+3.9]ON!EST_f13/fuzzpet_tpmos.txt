@@ -1,0 +1,102 @@
+FuzzPet Implementation in PyOS-TPM (TPM OS)
+============================================
+
+DATE: February 13, 2026
+
+PROJECT: PyOS-TPM (True Piece Method Compliant Virtual Desktop)
+GOAL: Integrated FuzzPet Game Inside PyOS Terminal
+
+CURRENT ISSUE:
+- GUI functionality was broken during integration attempts
+- Need to restore basic functionality while preserving TPM architecture
+- Goal is to have FuzzPet run inside PyOS Terminal (not Linux CLI)
+
+IMPLEMENTATION PLAN:
+
+PHASE 1: RESTORE BASIC FUNCTIONALITY
+-----------------------------------
+1. Ensure GUI desktop opens properly
+2. Maintain existing TPM architecture (pieces, ledger, plugins)
+3. Preserve core desktop, context menu, and terminal functionality
+4. Keep all existing piece structures intact
+
+PHASE 2: PROPER FUZZPET INTEGRATION DESIGN
+------------------------------------------
+1. Create FuzzPet commands that work within PyOS Terminal App:
+   - Commands: feed, play, sleep, status, evolve
+   - Integration point: apps/terminal_app.py
+   
+2. Terminal App Integration:
+   - Add fuzzpet command handlers to execute_command() method
+   - When user types 'feed', 'play', etc. in terminal, it should:
+     a. Write MethodCall event to master ledger: "MethodCall: feed on fuzzpet"
+     b. Display appropriate response in terminal
+     c. Update fuzzpet state through ledger processing
+
+3. TPM Flow for FuzzPet Commands:
+   Input (user types 'feed') → Terminal App → Master Ledger → Game Plugin → State Update → Response
+
+PHASE 3: IMPLEMENTATION STEPS
+----------------------------- 
+
+Step 1: Terminal App Modification
+- In apps/terminal_app.py, modify execute_command() method
+- Add check: if cmd in ['feed', 'play', 'sleep', 'status', 'evolve']:
+- Instead of calling external systems, write directly to ledger
+- Use: with open('pieces/master_ledger/ledger.txt', 'a') as ledger:
+        ledger.write(f"[timestamp] MethodCall: {cmd} on fuzzpet | Caller: terminal\n")
+
+Step 2: Game Plugin Enhancement  
+- In plugins/core/game.py, enhance update() method
+- Monitor ledger for MethodCall events targeting 'fuzzpet'
+- Process commands: update fuzzpet state based on command
+- Write response events back to ledger
+- Update fuzzpet piece state via piece manager
+
+Step 3: Response Integration
+- When game plugin processes command, update terminal display
+- Either through piece state update or by writing response to ledger
+- Terminal receives and displays the result
+
+PHASE 4: MAINTAIN TPM INTEGRITY
+-------------------------------
+1. All events still go through master ledger (audit trail preserved)
+2. All state changes logged properly to piece histories
+3. Pieces remain autonomous with their own state
+4. Event flow: Input → History → Ledger → Processing → State Change → Response
+
+TECHNICAL SPECIFICATION:
+
+1. Terminal Command Recognition:
+   - Modify apps/terminal_app.py to recognize fuzzpet commands
+   - Commands should be top priority in execute_command()
+   - Format: [timestamp] MethodCall: {command} on fuzzpet | Caller: terminal
+
+2. Game Processing:
+   - Game plugin (plugins/core/game.py) monitors master ledger
+   - Processes MethodCall events targeting fuzzpet piece
+   - Updates state according to command rules:
+     * feed: decreases hunger, triggers 'fed' event
+     * play: increases happiness, triggers 'played' event  
+     * sleep: increases energy, triggers 'slept' event
+     * status: displays current stats
+     * evolve: increases level, triggers 'evolve' event
+
+3. Response Mechanism:
+   - After processing, update terminal content to show results
+   - Use piece manager to update terminal content state
+   - Or write response event back to ledger for terminal to process
+
+BENEFITS:
+- Game runs natively within PyOS environment
+- Preserves full TPM auditability 
+- Maintains separation of concerns
+- Users can interact with game through familiar terminal interface
+- Complete traceability of all game interactions
+
+ARCHITECTURAL INTEGRITY:
+- No direct coupling between terminal and game logic
+- All communication through master ledger (true TPM style)
+- Each piece manages its own state
+- Complete audit trail maintained
+- Event-driven architecture preserved

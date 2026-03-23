@@ -1,0 +1,7 @@
+id,name,scale,x,y,z,mass,parent_id,health,energy,stamina,inventory,status
+adam,Adam,4,0.00,0.00,0.00,70.00,EARTH,100.00,100.00,100.00,none,active
+eve,Eve,4,1.00,0.00,0.00,60.00,EARTH,100.00,100.00,100.00,none,active
+earth,Earth,1,0.00,0.00,0.00,5970000000000000281018368.00,SOLAR_SYSTEM,100.00,100.00,100.00,none,active
+mars,Mars,1,2.00,0.00,0.00,638999999999999976931328.00,SOLAR_SYSTEM,100.00,100.00,100.00,none,active
+sol,Sun,0,0.00,0.00,0.00,1990000000000000042385153196032.00,GALAXY,100.00,100.00,100.00,none,active
+space_station,Space Station,3,0.50,0.50,0.50,10000.00,EARTH,100.00,100.00,100.00,none,active
