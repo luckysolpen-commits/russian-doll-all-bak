@@ -1,0 +1,54 @@
+# GL-OS PROGRESS REPORT
+**Date:** March 24, 2026
+**Status:** Menu Format FIXED | Navigation (Joy/Arrows) still BROKEN
+
+---
+
+## WORKING ✓
+
+### 1. TPM-Compliant Frame Rendering (innerHTML Pattern)
+- **Shared Parser Logic:** `gl_desktop.c` now correctly parses `.chtml` layouts and substitutes `${var}` from `state.txt`.
+- **Multi-line Support:** The state parser has been upgraded to handle multi-line variables (like `menu_options`), preventing the "missing item 2" bug.
+- **Unified Layout:** The terminal layout now matches the ASCII-OS "Theater" pattern (single unified box, no duplicate indexes).
+- **Correct Formatting:** Menu lines now have proper side borders (`║`) and the `[>]` indicator is correctly placed.
+
+### 2. State & History
+- **State Synchronization:** `write_gl_os_state()` correctly reflects the active window's `selected_index`.
+- **Frame History:** `frame_history.txt` is being appended to with correct timestamps, matching the Linux terminal "scroll-up" behavior.
+- **Number Key Navigation:** Pressing '1' or '2' on the keyboard correctly updates the selection and triggers an immediate frame refresh.
+
+### 3. TPM Input Isolation
+- GL-OS uses direct GLUT input.
+- CHTPM daemons respect focus lock.
+- No input conflicts.
+
+---
+
+## NOT WORKING ✗
+
+### 1. Joystick Navigation (CRITICAL)
+**Status:** Movement BROKEN.
+**Issue:** Pushing the joystick UP or DOWN does not yet move the `[>]` indicator in the menu.
+**Investigation Needed:** Verify `y` axis thresholds and edge-triggering logic in the `joystick()` callback.
+
+### 2. Arrow Key Navigation
+**Status:** MISSING/BROKEN.
+**Issue:** The standard arrow keys do not yet navigate the menu options.
+**Investigation Needed:** Check if `glutSpecialFunc` is implemented and if it correctly calls `move_selection()`.
+
+---
+
+## NEXT STEPS (FOR VIRGIN CONTEXT)
+
+### Priority 1: Fix Input Navigation
+1. **Debug Joystick `y` axis:** Ensure the `y` values are correctly captured and that `last_joy_y` allows for edge-triggering.
+2. **Implement Special Keys:** Add or fix the `special_keyboard` callback to handle `GLUT_KEY_UP` and `GLUT_KEY_DOWN`.
+3. **Unified Input:** Ensure all navigation inputs (Joy, Arrows, Numbers) call the same `move_selection` -> `write_state` -> `parse_frame` pipeline.
+
+### Priority 2: Refine execute_option
+1. Ensure `execute_option` correctly transitions between sub-menus (e.g., from Main Menu to Desktop Apps list) and resets the `selected_index` and `option_count` accordingly.
+
+---
+
+**Successor Note:** The infrastructure is now solid. The parser works, the layout is correct, and the history is logging perfectly. Focus exclusively on the input-to-state-change bridge.
+"If it's not in a file, it's a lie."

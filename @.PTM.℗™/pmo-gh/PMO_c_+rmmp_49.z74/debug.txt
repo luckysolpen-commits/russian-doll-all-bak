@@ -1,6 +1,0 @@
-[07:14:00] PARSER: launch_module(pieces/apps/gl_os/plugins/+x/gl_desktop.+x) pid=-1
-[07:14:00] PARSER: forked module pid=1794784
-[07:14:00] PARSER: launch_module(pieces/apps/gl_os/plugins/+x/gl_desktop.+x) pid=1794784
-[07:14:14] PARSER: launch_module(pieces/apps/gl_os/plugins/+x/gl_desktop.+x) pid=-1
-[07:14:14] PARSER: forked module pid=1794921
-[07:14:14] PARSER: launch_module(pieces/apps/gl_os/plugins/+x/gl_desktop.+x) pid=1794921

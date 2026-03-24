@@ -1,0 +1,651 @@
+# GL-OS MODULE ARCHITECTURE SPECIFICATION
+**Date:** March 24, 2026 (FINAL - innerHTML + Module Code Pattern)
+**Status:** AUTHORITATIVE - Follow This Exactly
+
+---
+
+## CORE ARCHITECTURE (The Truth)
+
+**GL-OS modules use "innerHTML" pattern:**
+- Module code calls parser RECURSIVELY
+- Parser renders CHTPM layout → frame
+- Module ALSO does direct OpenGL/code
+- Like HTML/JS: `<module innerHTML="layout.chtml">/* + custom JS */</module>`
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    GL-OS MAIN CANVAS                            │
+│                         (gl_desktop.c)                          │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌───────────────────────────────────────────────────────────┐ │
+│  │  TERMINAL MODULE (terminal_module.c or gl_desktop.c)      │ │
+│  │                                                           │ │
+│  │  Module Code:                                             │ │
+│  │  ├── innerHTML part:                                      │ │
+│  │  │   └── parse_chtml("terminal_layout.chtml")            │ │
+│  │  │       └── Renders frame to file                       │ │
+│  │  │                                                           │ │
+│  │  └── Direct code part:                                    │ │
+│  │      ├── Scroll thumb rendering                           │ │
+│  │      ├── Cursor animation                                 │ │
+│  │      └── Input handling                                   │ │
+│  │                                                           │ │
+│  │  Like HTML:                                               │ │
+│  │  <module innerHTML="terminal.chtml">                      │ │
+│  │    /* Custom scroll/animation code */                     │ │
+│  │  </module>                                                │ │
+│  └───────────────────────────────────────────────────────────┘ │
+│                                                                 │
+│  ┌───────────────────────────────────────────────────────────┐ │
+│  │  CUBE MODULE (cube_module.c or gl_desktop.c)              │ │
+│  │                                                           │ │
+│  │  Module Code:                                             │ │
+│  │  └── Direct 2D/3D OpenGL:                                 │ │
+│  │      ├── glRotatef()                                      │ │
+│  │      ├── draw_cube_model()                                │ │
+│  │      └── Animation loop                                   │ │
+│  │                                                           │ │
+│  │  Like HTML:                                               │ │
+│  │  <module type="cube">                                     │ │
+│  │    /* Direct WebGL code */                                │ │
+│  │  </module>                                                │ │
+│  └───────────────────────────────────────────────────────────┘ │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## innerHTML PATTERN (Why It's Called "innerHTML")
+
+### HTML/JS Analogy
+
+```html
+<!-- HTML/JS Module -->
+<div id="terminal" class="module">
+    <!-- innerHTML: Parse HTML layout -->
+    <div innerHTML="terminal_layout.html"></div>
+    
+    <!-- Custom JS: Do additional stuff -->
+    <script>
+        animate_cursor();
+        handle_scroll();
+        custom_logic();
+    </script>
+</div>
+```
+
+### GL-OS Equivalent
+
+```c
+/* GL-OS Module (terminal_module.c) */
+void terminal_module_render(void) {
+    /* innerHTML: Parse CHTPM layout */
+    parse_chtml("terminal_layout.chtml");
+    render_frame_to_file();
+    
+    /* Custom code: Do additional stuff */
+    draw_scroll_thumb();
+    animate_cursor();
+    custom_logic();
+}
+```
+
+**Why "innerHTML"?**
+- Module code **USES the parser recursively**
+- Parser reads `.chtml` → renders frame
+- Module **ALSO** does direct OpenGL/code
+- **Both together** = complete module
+
+---
+
+## MODULE ANATOMY (Complete Breakdown)
+
+### Terminal Module Example
+
+**File:** `pieces/apps/gl_os/plugins/terminal_module.c` (or in `gl_desktop.c` for now)
+
+```c
+/* ============================================
+ * TERMINAL MODULE
+ * Like: <module innerHTML="terminal.chtml">
+ * ============================================ */
+
+/* --- innerHTML PART (Parser Usage) --- */
+
+void terminal_parse_layout(void) {
+    /* Recursively use CHTPM parser */
+    parse_chtml("pieces/apps/gl_os/layouts/terminal.chtml");
+    /* Parser substitutes ${var} from state files */
+    /* Parser renders to frame buffer */
+}
+
+void terminal_write_frame(void) {
+    /* Write parsed frame to file */
+    FILE *f = fopen("pieces/apps/gl_os/session/current_frame.txt", "w");
+    fprintf(f, "%s", parsed_frame_content);
+    fclose(f);
+    
+    /* Append to history */
+    FILE *h = fopen("pieces/apps/gl_os/session/frame_history.txt", "a");
+    fprintf(h, "\n--- FRAME UPDATE at %s ---\n", timestamp);
+    fprintf(h, "%s", parsed_frame_content);
+    fclose(h);
+    
+    /* Touch marker */
+    FILE *m = fopen("pieces/apps/gl_os/session/gl_os_pulse.txt", "a");
+    fprintf(m, "G\n");
+    fclose(m);
+}
+
+/* --- DIRECT CODE PART (Custom Logic) --- */
+
+void terminal_draw_scroll_thumb(void) {
+    /* Custom OpenGL rendering - NOT from CHTPM */
+    int thumb_y = calculate_thumb_position();
+    draw_rect(thumb_x, thumb_y, thumb_w, thumb_h, 0.5f, 0.5f, 0.5f);
+}
+
+void terminal_animate_cursor(void) {
+    /* Custom animation - NOT from CHTPM */
+    cursor_blink_counter++;
+    if (cursor_blink_counter >= 20) {
+        cursor_visible = !cursor_visible;
+        cursor_blink_counter = 0;
+    }
+}
+
+void terminal_handle_input(unsigned char key) {
+    /* Custom input handling - NOT from CHTPM */
+    if (key == ARROW_UP) {
+        scroll_offset++;
+        terminal_redisplay();
+    }
+    else if (key == ARROW_DOWN) {
+        scroll_offset--;
+        terminal_redisplay();
+    }
+}
+
+/* --- COMBINED RENDER FUNCTION --- */
+
+void terminal_render(void) {
+    /* Step 1: innerHTML - Parse CHTPM layout */
+    terminal_parse_layout();
+    terminal_write_frame();
+    
+    /* Step 2: Direct code - Read frame and display */
+    terminal_display_frame();
+    
+    /* Step 3: Direct code - Custom rendering */
+    terminal_draw_scroll_thumb();
+    terminal_animate_cursor();
+}
+```
+
+### Cube Module Example
+
+**File:** `pieces/apps/gl_os/plugins/cube_module.c` (or in `gl_desktop.c` for now)
+
+```c
+/* ============================================
+ * CUBE MODULE
+ * Like: <module type="cube">/* WebGL */</module>
+ * ============================================ */
+
+/* --- DIRECT 2D/3D PART (OpenGL Code) --- */
+
+float cube_rotation = 0.0f;
+
+void cube_render(void) {
+    /* Direct OpenGL - NO CHTPM parsing */
+    glEnable(GL_DEPTH_TEST);
+    glClear(GL_DEPTH_BUFFER_BIT);
+    
+    glMatrixMode(GL_PROJECTION);
+    gluPerspective(45.0, aspect_ratio, 0.1, 100.0);
+    
+    glMatrixMode(GL_MODELVIEW);
+    glTranslatef(0, 0, -5);
+    glRotatef(cube_rotation, 1.0f, 1.0f, 0.0f);
+    
+    draw_cube_geometry();
+}
+
+void cube_update(void) {
+    /* Animation update */
+    cube_rotation += 2.0f;
+    if (cube_rotation > 360.0f) {
+        cube_rotation -= 360.0f;
+    }
+}
+```
+
+---
+
+## IMPLEMENTATION: Existing Features (Done Correctly)
+
+### Feature 1: Terminal Display
+
+**Current (WRONG):**
+```c
+/* Hardcoded text in terminal */
+add_history(win, "CHTPM Virtual Terminal v0.01");
+add_history(win, "Type 'help' for available applications.");
+```
+
+**Correct (innerHTML Pattern):**
+```c
+/* terminal_module.c */
+
+void terminal_render(void) {
+    /* innerHTML: Parse CHTPM layout */
+    parse_chtml("pieces/apps/gl_os/layouts/terminal.chtml");
+    
+    /* innerHTML: Write frame to file */
+    terminal_write_frame();
+    
+    /* Direct code: Read and display frame */
+    FILE *f = fopen("pieces/apps/gl_os/session/current_frame.txt", "r");
+    char line[MAX_LINE];
+    while (fgets(line, sizeof(line), f)) {
+        draw_text(x, y, line);
+        y += line_height;
+    }
+    fclose(f);
+    
+    /* Direct code: Custom scroll thumb */
+    terminal_draw_scroll_thumb();
+}
+```
+
+### Feature 2: Scroll History
+
+**Current (PARTIAL):**
+```c
+/* Scroll works but shows text lines, not frames */
+for (int i = 0; i < win->history_count; i++) {
+    draw_text(x, y, win->output_history[i]);
+}
+```
+
+**Correct (Frame-Based):**
+```c
+/* terminal_module.c */
+
+void terminal_scroll(int offset) {
+    /* Direct code: Read frame history */
+    FILE *f = fopen("pieces/apps/gl_os/session/frame_history.txt", "r");
+    
+    /* Find frame at offset */
+    int frame_num = 0;
+    char line[MAX_LINE];
+    while (fgets(line, sizeof(line), f)) {
+        if (strstr(line, "--- FRAME UPDATE at")) {
+            frame_num++;
+            if (frame_num == offset) {
+                /* Display this frame */
+                while (fgets(line, sizeof(line), f)) {
+                    if (strstr(line, "--- FRAME UPDATE")) break;
+                    draw_text(x, y, line);
+                    y += line_height;
+                }
+                break;
+            }
+        }
+    }
+    fclose(f);
+    
+    /* Direct code: Update scroll thumb position */
+    terminal_update_scroll_thumb(offset);
+}
+```
+
+### Feature 3: Navigation/Selection
+
+**Current (WRONG - Nav outside frame):**
+```c
+/* Nav drawn separately from frame */
+if (i == selected_index) {
+    draw_text(x, y, "[>] 1. Terminal");  /* Hardcoded */
+}
+```
+
+**Correct (Nav IN Frame):**
+```c
+/* terminal_layout.chtml */
+<panel>
+    <text label="G L - O S   D E S K T O P" />
+    <loop var="windows">
+        <text label="[${is_active}] ${id}. ${title}" />
+    </loop>
+</panel>
+
+/* state.txt */
+window_1_is_active=>
+window_2_is_active=
+
+/* Parser substitutes ${is_active} → ">" or " " */
+/* Frame contains: "║  [>] 1. Terminal                        ║" */
+/* Terminal displays frame - nav is IN the frame */
+```
+
+### Feature 4: Joystick/Keyboard Input
+
+**Current (PARTIAL):**
+```c
+/* Input handled but doesn't update frame */
+void keyboard(unsigned char key) {
+    if (key == ARROW_UP) {
+        move_selection(-1);
+        /* Frame doesn't update */
+    }
+}
+```
+
+**Correct (Input → State → Frame → Display):**
+```c
+/* terminal_module.c */
+
+void terminal_handle_input(unsigned char key) {
+    if (key == ARROW_UP) {
+        /* Update state */
+        move_selection(-1);
+        write_state_file();
+        
+        /* innerHTML: Re-parse layout with new state */
+        parse_chtml("terminal_layout.chtml");
+        
+        /* innerHTML: Write new frame */
+        terminal_write_frame();
+        
+        /* Direct code: Redisplay */
+        terminal_redisplay();
+    }
+}
+```
+
+### Feature 5: Thumb Scroll (Mouse Drag)
+
+**Current (WORKS - Keep This):**
+```c
+/* Mouse drag on thumb - this is correct */
+void motion(int x, int y) {
+    if (is_scroll_thumb_drag) {
+        float mouse_ratio = calculate_mouse_ratio(y);
+        scroll_offset = mouse_ratio * max_scroll;
+        terminal_redisplay();
+    }
+}
+```
+
+**Just ensure it reads from frame history:**
+```c
+void terminal_redisplay(void) {
+    /* Read frame at scroll_offset from history */
+    terminal_scroll(scroll_offset);
+}
+```
+
+---
+
+## FILE STRUCTURE (Complete)
+
+```
+pieces/
+└── apps/
+    └── gl_os/
+        ├── layouts/
+        │   └── terminal.chtml          ← Terminal layout (innerHTML)
+        ├── session/
+        │   ├── state.txt               ← Window state (${var} values)
+        │   ├── current_frame.txt       ← Current frame (for display)
+        │   ├── gl_os_pulse.txt         ← Marker file (frame changed)
+        │   └── frame_history.txt       ← Frame history (for scroll)
+        └── plugins/
+            └── gl_desktop.c            ← Main GL-OS (includes modules)
+                ├── terminal_module_*() ← Terminal module functions
+                ├── cube_module_*()     ← Cube module functions
+                └── ...
+```
+
+---
+
+## IMPLEMENTATION STEPS (Correct Order)
+
+### Phase 1: Get innerHTML Working (CURRENT PRIORITY)
+
+**Step 1:** Create Terminal Layout File
+```bash
+pieces/apps/gl_os/layouts/terminal.chtml
+```
+
+**Content:**
+```xml
+<panel>
+    <text label="G L - O S   D E S K T O P" />
+    <text label="Windows: ${window_count}" />
+    <loop var="windows" max="${window_count}">
+        <text label="[${is_active}] ${id}. ${title}" />
+    </loop>
+    <text label="[t] Terminal  [c] Cube  [x] Close" />
+</panel>
+```
+
+**Step 2:** Add State Variables
+```c
+/* In gl_desktop.c */
+void write_state_file(void) {
+    FILE *f = fopen("pieces/apps/gl_os/session/state.txt", "w");
+    fprintf(f, "window_count=%d\n", window_count);
+    fprintf(f, "active_window=%d\n", active_window_id);
+    
+    for (int i = 0; i < window_count; i++) {
+        if (windows[i].active) {
+            fprintf(f, "window_%d_title=%s\n", i+1, windows[i].title);
+            fprintf(f, "window_%d_is_active=%s\n", 
+                    i+1, (windows[i].id == active_window_id) ? ">" : " ");
+        }
+    }
+    fclose(f);
+}
+```
+
+**Step 3:** Simple Parser (innerHTML)
+```c
+/* Simple variable substitution parser */
+void parse_terminal_layout(char *output, size_t output_size) {
+    FILE *layout = fopen("pieces/apps/gl_os/layouts/terminal.chtml", "r");
+    FILE *state = fopen("pieces/apps/gl_os/session/state.txt", "r");
+    
+    /* Load state variables */
+    char *window_count = get_var(state, "window_count");
+    char *active_window = get_var(state, "active_window");
+    /* etc. */
+    
+    /* Parse layout, substitute ${var} */
+    char line[MAX_LINE];
+    while (fgets(line, sizeof(line), layout)) {
+        /* Replace ${window_count} with value */
+        /* Replace ${is_active} with ">" or " " */
+        strcat(output, line);
+    }
+    
+    fclose(layout);
+    fclose(state);
+}
+```
+
+**Step 4:** Write Frame
+```c
+void write_gl_os_frame(void) {
+    char frame[MAX_FRAME_SIZE];
+    
+    /* innerHTML: Parse layout */
+    parse_terminal_layout(frame, sizeof(frame));
+    
+    /* Write to file */
+    FILE *f = fopen("pieces/apps/gl_os/session/current_frame.txt", "w");
+    fprintf(f, "%s", frame);
+    fclose(f);
+    
+    /* Append to history */
+    FILE *h = fopen("pieces/apps/gl_os/session/frame_history.txt", "a");
+    fprintf(h, "\n--- FRAME UPDATE at %s ---\n", timestamp);
+    fprintf(h, "%s", frame);
+    fclose(h);
+    
+    /* Touch marker */
+    FILE *m = fopen("pieces/apps/gl_os/session/gl_os_pulse.txt", "a");
+    fprintf(m, "G\n");
+    fclose(m);
+}
+```
+
+**Step 5:** Display Frame
+```c
+void draw_terminal(DesktopWindow* win) {
+    /* innerHTML: Read frame from file */
+    FILE *f = fopen("pieces/apps/gl_os/session/current_frame.txt", "r");
+    char line[MAX_LINE];
+    while (fgets(line, sizeof(line), f)) {
+        draw_text(x, y, line);
+        y += line_height;
+    }
+    fclose(f);
+    
+    /* Direct code: Scroll thumb */
+    draw_scroll_thumb(win);
+}
+```
+
+**Step 6:** Test
+- Navigate → state updates → frame updates → display updates
+- Scroll → read from frame history
+- Nav/selection IN frame (from `${is_active}` substitution)
+
+---
+
+## TESTING CRITERIA
+
+### Test 1: innerHTML Pattern
+- [ ] Module calls parser (`parse_chtml()`)
+- [ ] Parser reads `.chtml` layout
+- [ ] Parser substitutes `${var}` from state
+- [ ] Frame written to file
+
+### Test 2: Frame Display
+- [ ] Terminal reads from `current_frame.txt`
+- [ ] Displays frame content (not hardcoded)
+- [ ] Frame matches layout + state
+
+### Test 3: Scroll History
+- [ ] Scroll up → read older frames from `frame_history.txt`
+- [ ] Frames separated by timestamps
+- [ ] Nav/selection visible in old frames
+
+### Test 4: Nav IN Frame
+- [ ] `[>]` comes from `${is_active}` substitution
+- [ ] Not hardcoded in terminal display
+- [ ] Changes when state changes
+
+### Test 5: Input → State → Frame → Display
+- [ ] Input updates state
+- [ ] State triggers frame write
+- [ ] Frame display updates
+- [ ] Full cycle works
+
+---
+
+## COMMON MISTAKES (DON'T MAKE THESE)
+
+### ❌ MISTAKE 1: Hardcoding Instead of innerHTML
+```c
+// WRONG - Hardcoded text
+add_history(win, "$ help");
+
+// RIGHT - innerHTML (parse CHTPM)
+parse_chtml("terminal.chtml");
+write_frame();
+```
+
+### ❌ MISTAKE 2: Nav Outside Frame
+```c
+// WRONG - Nav drawn separately
+draw_text(x, y, "[>] 1. Terminal");
+
+// RIGHT - Nav IN frame (from ${is_active})
+/* terminal.chtml: <text label="[${is_active}] ${title}" /> */
+/* state.txt: window_1_is_active=> */
+/* Frame contains: "[>] 1. Terminal" */
+```
+
+### ❌ MISTAKE 3: Not Using Parser Recursively
+```c
+// WRONG - Module doesn't use parser
+void terminal_render(void) {
+    draw_text(x, y, "Terminal");  /* Direct draw */
+}
+
+// RIGHT - Module uses parser (innerHTML)
+void terminal_render(void) {
+    parse_chtml("terminal.chtml");  /* Recursive parser call */
+    render_frame();
+}
+```
+
+### ❌ MISTAKE 4: No State → Frame → Display Cycle
+```c
+// WRONG - Input doesn't trigger frame update
+void keyboard(unsigned char key) {
+    move_selection(-1);
+    /* Frame doesn't update */
+}
+
+// RIGHT - Full cycle
+void keyboard(unsigned char key) {
+    move_selection(-1);
+    write_state_file();      /* State */
+    write_gl_os_frame();     /* Frame */
+    glutPostRedisplay();     /* Display */
+}
+```
+
+---
+
+## SUMMARY (The Elevator Pitch)
+
+**GL-OS Module Architecture:**
+1. **Modules use "innerHTML" pattern** - Call parser recursively
+2. **Parser reads .chtml → substitutes ${var} → writes frame**
+3. **Module ALSO does direct code** - Scroll, animation, custom logic
+4. **Like HTML/JS:** `<module innerHTML="layout.chtml">/* + custom code */</module>`
+
+**Terminal Module:**
+- innerHTML: Parse `terminal.chtml`, write frame
+- Direct code: Scroll thumb, cursor animation, input handling
+
+**Cube Module:**
+- Direct 2D/3D: OpenGL rendering, animation
+
+**Implementation:**
+1. Create `.chtml` layout files
+2. Write state variables to file
+3. Simple parser substitutes `${var}`
+4. Write frame to file
+5. Display reads from file
+6. Test full cycle (input → state → frame → display)
+
+**Files:**
+- `pieces/apps/gl_os/layouts/terminal.chtml` (layout)
+- `pieces/apps/gl_os/session/state.txt` (variables)
+- `pieces/apps/gl_os/session/current_frame.txt` (rendered frame)
+- `pieces/apps/gl_os/session/frame_history.txt` (scroll history)
+
+---
+
+**END OF MODULE ARCHITECTURE SPECIFICATION**
+
+**If you understand this, you can implement GL-OS correctly.**
+**If not, re-read until "Module calls parser recursively (innerHTML) + does direct code" is crystal clear.**

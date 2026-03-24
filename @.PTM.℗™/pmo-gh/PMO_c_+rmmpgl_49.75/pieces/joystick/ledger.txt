@@ -1,0 +1,3 @@
+--- Joystick Piece Starting (Base: ., Device: /dev/input/js0) ---
+[2026-03-24 10:17:48] JoyCaptured: 2103 | Info: Axis 1 positive threshold crossed
+[2026-03-24 10:17:49] JoyCaptured: 2103 | Info: Axis 1 positive threshold crossed

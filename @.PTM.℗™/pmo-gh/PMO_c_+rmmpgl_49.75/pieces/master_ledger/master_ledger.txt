@@ -1,0 +1,5 @@
+[2026-03-24 10:17:46] FrameRendered: at 2026-03-24 10:17:46 | Source: renderer
+[2026-03-24 10:17:48] InputReceived: key_code=2103 | Source: joystick_input
+[2026-03-24 10:17:48] FrameRendered: at 2026-03-24 10:17:48 | Source: renderer
+[2026-03-24 10:17:49] InputReceived: key_code=2103 | Source: joystick_input
+[2026-03-24 10:17:49] FrameRendered: at 2026-03-24 10:17:49 | Source: renderer
