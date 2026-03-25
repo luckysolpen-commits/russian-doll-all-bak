@@ -1,0 +1,39 @@
+[2026-03-25 14:44:07] FrameRendered: at 2026-03-25 14:44:07 | Source: renderer
+[2026-03-25 14:44:09] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-25 14:44:09] FrameRendered: at 2026-03-25 14:44:09 | Source: renderer
+[2026-03-25 14:44:10] InputReceived: key_code=50 | Source: orchestrator
+[2026-03-25 14:44:10] FrameRendered: at 2026-03-25 14:44:10 | Source: renderer
+[2026-03-25 14:44:10] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-25 14:44:10] FrameRendered: at 2026-03-25 14:44:10 | Source: renderer
+[2026-03-25 14:44:11] InputReceived: key_code=49 | Source: orchestrator
+[2026-03-25 14:44:11] FrameRendered: at 2026-03-25 14:44:11 | Source: renderer
+[2026-03-25 14:44:11] InputReceived: key_code=49 | Source: orchestrator
+[2026-03-25 14:44:11] FrameRendered: at 2026-03-25 14:44:11 | Source: renderer
+[2026-03-25 14:44:12] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-25 14:44:12] FrameRendered: at 2026-03-25 14:44:12 | Source: renderer
+[2026-03-25 14:44:12] InputReceived: key_code=13 | Source: orchestrator
+[2026-03-25 14:44:12] FrameRendered: at 2026-03-25 14:44:12 | Source: renderer
+[2026-03-25 14:44:13] InputReceived: key_code=1001 | Source: orchestrator
+[2026-03-25 14:44:13] FrameRendered: at 2026-03-25 14:44:13 | Source: renderer
+[2026-03-25 14:44:13] FrameRendered: at 2026-03-25 14:44:13 | Source: renderer
+[2026-03-25 14:44:13] InputReceived: key_code=1001 | Source: orchestrator
+[2026-03-25 14:44:13] FrameRendered: at 2026-03-25 14:44:13 | Source: renderer
+[2026-03-25 14:44:13] FrameRendered: at 2026-03-25 14:44:13 | Source: renderer
+[2026-03-25 14:44:13] InputReceived: key_code=1003 | Source: orchestrator
+[2026-03-25 14:44:13] FrameRendered: at 2026-03-25 14:44:13 | Source: renderer
+[2026-03-25 14:44:13] FrameRendered: at 2026-03-25 14:44:13 | Source: renderer
+[2026-03-25 14:44:15] InputReceived: key_code=1001 | Source: orchestrator
+[2026-03-25 14:44:15] FrameRendered: at 2026-03-25 14:44:15 | Source: renderer
+[2026-03-25 14:44:15] FrameRendered: at 2026-03-25 14:44:15 | Source: renderer
+[2026-03-25 14:44:16] InputReceived: key_code=127 | Source: orchestrator
+[2026-03-25 14:44:16] FrameRendered: at 2026-03-25 14:44:16 | Source: renderer
+[2026-03-25 14:44:16] FrameRendered: at 2026-03-25 14:44:16 | Source: renderer
+[2026-03-25 14:44:16] InputReceived: key_code=1001 | Source: orchestrator
+[2026-03-25 14:44:16] FrameRendered: at 2026-03-25 14:44:16 | Source: renderer
+[2026-03-25 14:44:16] FrameRendered: at 2026-03-25 14:44:16 | Source: renderer
+[2026-03-25 14:44:16] InputReceived: key_code=1001 | Source: orchestrator
+[2026-03-25 14:44:16] FrameRendered: at 2026-03-25 14:44:16 | Source: renderer
+[2026-03-25 14:44:16] FrameRendered: at 2026-03-25 14:44:16 | Source: renderer
+[2026-03-25 14:44:16] InputReceived: key_code=1001 | Source: orchestrator
+[2026-03-25 14:44:16] FrameRendered: at 2026-03-25 14:44:16 | Source: renderer
+[2026-03-25 14:44:16] FrameRendered: at 2026-03-25 14:44:16 | Source: renderer

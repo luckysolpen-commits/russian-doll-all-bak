@@ -1,3 +1,0 @@
-RMMP=pieces/apps/editor/plugins/+x/editor_module.+x
-PLAYR=pieces/apps/playrm/plugins/+x/playrm_module.+x
-GL-OS=projects/gl-os/manager/+x/gl_os_manager.+x
