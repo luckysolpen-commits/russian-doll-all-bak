@@ -1,6 +1,0 @@
-[14:44:10] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
-[14:44:10] PARSER: forked module pid=105314
-[14:44:10] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=105314
-[14:44:12] PARSER: launch_module(pieces/apps/op-ed/plugins/+x/op-ed_module.+x) pid=105314
-[14:44:12] PARSER: forked module pid=105326
-[14:44:12] PARSER: launch_module(pieces/apps/op-ed/plugins/+x/op-ed_module.+x) pid=105326
