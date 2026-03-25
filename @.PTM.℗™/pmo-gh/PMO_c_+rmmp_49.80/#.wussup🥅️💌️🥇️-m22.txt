@@ -1,5 +1,7 @@
 
-
+📅️mar24🧲️go back 2 finish "file save/load and PAL" before we worry about 'parity' 
+with gl-os(another layer of complication, focuz on remaining hard stuff in ascii-os 
+it will be ok <3 ; do ai everything. no need to spread ur strategic mind that thin <3🧲️
 🤳️
 for 3d view we are going to have toggle 
 like emoji 
