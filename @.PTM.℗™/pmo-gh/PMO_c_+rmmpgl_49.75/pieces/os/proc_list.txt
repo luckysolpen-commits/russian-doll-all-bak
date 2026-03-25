@@ -1,6 +1,0 @@
-orchestrator=125228
-response_handler=125721
-chtpm_parser=125723
-renderer=125745
-gl_renderer=125748
-clock_daemon=125750

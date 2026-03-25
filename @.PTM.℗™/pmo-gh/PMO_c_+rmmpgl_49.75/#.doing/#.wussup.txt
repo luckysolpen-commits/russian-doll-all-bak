@@ -1,4 +1,0 @@
-
-🚨️
-make sure it understands gl-os  terminal is text only (always)
-so it can use the same chtpm parser + module etc as ascii-os if possible. 🚨️
