@@ -1,7 +1,0 @@
-orchestrator=130325
-response_handler=130495
-chtpm_parser=130498
-renderer=130514
-clock_daemon=130519
-gl_renderer=130517
-gl_desktop=130544

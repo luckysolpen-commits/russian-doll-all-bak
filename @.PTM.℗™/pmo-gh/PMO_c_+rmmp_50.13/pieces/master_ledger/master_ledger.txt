@@ -1,0 +1,12 @@
+[2026-03-26 01:15:58] FrameRendered: at 2026-03-26 01:15:58 | Source: renderer
+[2026-03-26 01:36:00] FrameRendered: at 2026-03-26 01:36:00 | Source: renderer
+[2026-03-26 01:36:42] FrameRendered: at 2026-03-26 01:36:42 | Source: renderer
+[2026-03-26 01:38:29] FrameRendered: at 2026-03-26 01:38:29 | Source: renderer
+[2026-03-26 01:40:06] FrameRendered: at 2026-03-26 01:40:06 | Source: renderer
+[2026-03-26 01:45:08] FrameRendered: at 2026-03-26 01:45:08 | Source: renderer
+[2026-03-26 01:45:52] FrameRendered: at 2026-03-26 01:45:52 | Source: renderer
+[2026-03-26 01:45:52] StateChange: selector pos_x 6 | Trigger: piece_manager_set_state
+[2026-03-26 01:45:52] StateChange: selector pos_y 5 | Trigger: piece_manager_set_state
+[2026-03-26 01:45:52] FrameRendered: at 2026-03-26 01:45:52 | Source: renderer
+[2026-03-26 01:45:52] FrameRendered: at 2026-03-26 01:45:52 | Source: renderer
+[2026-03-26 01:47:03] FrameRendered: at 2026-03-26 01:47:03 | Source: renderer
