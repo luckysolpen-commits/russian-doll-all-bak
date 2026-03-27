@@ -89,6 +89,8 @@ graph TD
     *   *PJARGO, PMO, and TPM definitions.*
 *   **[The Final Exam (Q&A)](QUIZ.md)** 📝
     *   *Test your knowledge of the Mono-OS.*
+*   **[Answer Key (Study Questions)](ANSWER_KEY.md)** 🔑
+    *   *Solutions for all chapter study questions.*
 
 ---
 "Softness wins. The empty center of the flexbox holds ten thousand things." 🧘‍♂️

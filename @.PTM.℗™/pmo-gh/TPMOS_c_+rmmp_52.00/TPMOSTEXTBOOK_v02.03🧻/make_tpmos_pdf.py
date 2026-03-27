@@ -6,7 +6,7 @@ from fpdf.enums import XPos, YPos
 # CONFIGURATION
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = SCRIPT_DIR
-OUTPUT_PDF = os.path.join(SCRIPT_DIR, "TPMOS_TEXTBOOK_v02.02.pdf")
+OUTPUT_PDF = os.path.join(SCRIPT_DIR, "TPMOS_TEXTBOOK_v02.03.pdf")
 
 # PATH TO CHINESE-SUPPORTING FONT (Found via fc-list)
 # Using UMing as it is a common TrueType collection often accessible directly
@@ -51,7 +51,7 @@ class TPMOS_PDF(FPDF):
             self.set_font("Hanzi", "B", 10)
             self.set_text_color(100, 100, 100)
             self.set_x(0)
-            header_text = clean_emojis("📚 TPMOS TEXTBOOK v02.02 🎓  ")
+            header_text = clean_emojis("📚 TPMOS TEXTBOOK v02.03 🎓  ")
             self.cell(210, 10, header_text, align="R", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
             self.ln(5)
 
