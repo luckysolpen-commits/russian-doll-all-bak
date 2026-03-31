@@ -1,0 +1,212 @@
+# Windows Compatibility Plan (win-compat-mod-m30.txt)
+# Date: 2026-03-30
+# Goal: Make CHTPM v0.01 fully functional on Windows using PowerShell.
+# STATUS: COMPILATION ✓ | GL-OS RUNTIME ✓ | ASCII CLI: NEEDS BASH TERMINAL
+
+## 1. Environment Prerequisites
+To compile and run this project on Windows, we need a GCC-based environment that supports POSIX headers (like `unistd.h`).
+
+*   **Compiler**: Install **MSYS2** (https://www.msys2.org/) or **MinGW-w64**.
+    *   Add `C:\msys64\mingw64\bin` (or your MinGW path) to your Windows System PATH.
+*   **Libraries**:
+    *   `pacman -S mingw-w64-x86_64-gcc`
+    *   `pacman -S mingw-w64-x86_64-freeglut`
+    *   `pacman -S mingw-w64-x86_64-freetype`
+    *   `pacman -S mingw-w64-x86_64-openssl`
+
+## 2. Porting Scripts to PowerShell (.ps1)
+
+### 2.1 compile_all.ps1 ✓ COMPLETE
+*   **Status**: All components compile successfully!
+
+### 2.2 run_chtpm.ps1 ⚠ PARTIAL - See Bash Scripts Below
+*   **Issue**: PowerShell doesn't properly display ASCII terminal output from renderer
+*   **Solution**: Use MSYS2 bash scripts instead (see Section 3)
+
+### 2.3 kill_all.ps1 ✓ COMPLETE
+
+### 2.4 pal_watchdog.ps1 ⏸ DISABLED
+*   **Status**: Removed until basic runtime is fully stable
+*   **Reason**: Simplify debugging
+
+---
+
+## 3. MSYS2 Bash Scripts (RECOMMENDED FOR RUNTIME) ✓
+
+Because the ASCII renderer outputs ANSI escape sequences and box-drawing characters, it works best in a bash terminal, not PowerShell.
+
+### 3.1 Shell Scripts (WORKING)
+
+**run_gl_desktop.sh** - Launches GL-OS OpenGL desktop:
+```bash
+#!/bin/bash
+export PATH=/c/msys64/mingw64/bin:/c/msys64/usr/bin:$PATH
+WIN_PATH=$(pwd -W)  # Windows path for C code
+exec ./pieces/apps/gl_os/plugins/+x/gl_desktop.+x
+```
+
+**run_orchestrator.sh** - Launches ASCII CHTPM CLI:
+```bash
+#!/bin/bash
+export PATH=/c/msys64/mingw64/bin:/c/msys64/usr/bin:$PATH
+WIN_PATH=$(pwd -W)  # Windows path for C code
+exec ./pieces/chtpm/plugins/+x/orchestrator.+x
+```
+
+### 3.2 Batch Wrappers (WORKING)
+
+**win_debug.bat** - Launches GL-OS desktop:
+```batch
+@echo off
+C:\msys64\usr\bin\bash.exe -lc "cd '%CD%' && exec ./run_gl_desktop.sh"
+```
+
+**run_chtpm_debug.bat** - Launches full CHTPM pipeline with verification.
+
+### 3.3 Path Handling
+
+**Problem**: C code on Windows needs Windows paths (`C:/Users/...`), not bash paths (`/c/Users/...`).
+
+**Solution**: Use `pwd -W` which returns native Windows paths:
+```bash
+WIN_PATH=$(pwd -W)
+# Returns: C:/Users/jbro8/... (works with Windows fopen())
+```
+
+---
+
+## 4. C Code Compatibility
+
+### 4.1 What Works ✓
+*   **Headers**: unistd.h, windows.h, conio.h all include correctly
+*   **Console**: GetConsoleMode/SetConsoleMode for raw-like input
+*   **Keyboard**: _kbhit()/_getch() capture keypresses
+*   **Compilation**: All .c files compile without errors
+*   **Process Spawning**: _spawnl(_P_DETACH) successfully spawns child processes
+*   **GL-OS Desktop**: OpenGL window renders correctly
+
+### 4.2 What Needs Bash Terminal ⚠️
+*   **ASCII Renderer**: Outputs ANSI escape sequences and box-drawing characters
+*   **PowerShell Limitation**: Doesn't properly render the ASCII frames
+*   **Solution**: Run orchestrator via MSYS2 bash (`run_orchestrator.sh`)
+
+### 4.3 The Solution: win_spawn.h
+
+```c
+#ifdef _WIN32
+int pid = _spawnl(_P_DETACH, exe_path, exe_path, args, NULL);
+#else
+pid_t pid = fork();
+if (pid == 0) { execv(exe_path, args); }
+#endif
+```
+
+### 4.4 Files Using Spawn
+
+**orchestrator.c**:
+- `proc_mgr_call()` - spawns proc_manager.+x
+- `launch_and_register()` - spawns renderer, clock_daemon, etc.
+- `joystick_thread_func()` - spawns joystick_input.+x
+
+---
+
+## 5. Compilation Status ✓
+
+All components compile successfully:
+```
+=== Compilation Complete ===
+```
+
+---
+
+## 6. Runtime Status
+
+### GL-OS Desktop: WORKING ✓
+```cmd
+.\win_debug.bat
+```
+**Result**: OpenGL window opens, shows GL-OS desktop menu.
+
+### ASCII CHTPM CLI: NEEDS BASH TERMINAL ⚠️
+```cmd
+.\run_chtpm_debug.bat
+```
+**Result**: Processes spawn, but ASCII frames don't render in PowerShell.
+
+**Workaround**: Run directly in bash:
+```bash
+./run_orchestrator.sh
+```
+
+---
+
+## 7. Architecture Comparison
+
+| Component | Linux | Windows |
+|-----------|-------|---------|
+| Process creation | fork() + exec() | _spawnl(_P_DETACH) |
+| Console raw mode | termios.h | GetConsoleMode/SetConsoleMode |
+| Keyboard input | read() with timeout | _kbhit()/_getch() + Sleep() |
+| Path handling | /home/user/... | C:/Users/... (via pwd -W) |
+| Terminal rendering | ANSI/box chars ✓ | Needs bash terminal |
+
+---
+
+## 8. Known Issues
+
+### ASCII Terminal Not Rendering in PowerShell
+
+**Symptom**: GL-OS desktop works, but ASCII CHTPM CLI shows no menu.
+
+**Cause**: PowerShell doesn't properly handle the ANSI escape sequences and box-drawing characters that the renderer outputs.
+
+**Workaround**: Run the orchestrator directly in MSYS2 bash:
+```bash
+./run_orchestrator.sh
+```
+
+**Future Fix**: Either:
+1. Create a Windows-native console renderer using Win32 API
+2. Use a bash terminal wrapper for the orchestrator
+3. Modify renderer to use Windows Console API directly
+
+---
+
+## 9. Quick Reference
+
+### Compile All
+```powershell
+$env:Path += ";C:\msys64\mingw64\bin"; .\compile_all.ps1
+```
+
+### Launch GL-OS Desktop (WORKING)
+```cmd
+.\win_debug.bat
+```
+
+### Launch CHTPM CLI (needs bash)
+```cmd
+.\run_chtpm_debug.bat
+```
+Or directly in bash:
+```bash
+./run_orchestrator.sh
+```
+
+### Kill All Processes
+```powershell
+.\kill_all.ps1
+```
+
+---
+
+## 10. Summary
+
+**Problem**: fork() is POSIX-only, not available on Windows.
+
+**Solution**: Use `_spawnl(_P_DETACH)` for process spawning + MSYS2 bash for terminal rendering.
+
+**Result**: 
+- ✓ GL-OS desktop works (OpenGL window)
+- ⚠ ASCII CLI needs bash terminal (PowerShell doesn't render ANSI properly)
+- ✓ All binaries compile and spawn correctly

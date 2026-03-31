@@ -1,2 +1,0 @@
-[1774514309] Manager Started. Root: /home/no/Desktop/Piecemark-IT/[CALENDARS]05.00/mar_25.12/PMO_c_+rmmp_50.13
-[1774514752] Input Received: 1001

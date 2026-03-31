@@ -1,0 +1,10 @@
+[22:42:16] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
+[22:42:16] PARSER: forked module pid=358548
+[22:42:16] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=358548
+[22:42:16] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=358548
+[22:42:16] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=358548
+[22:42:20] PARSER: launch_module(projects/fuzz-op/manager/+x/fuzz-op_manager.+x) pid=358548
+[22:42:20] PARSER: forked module pid=358579
+[22:42:20] PARSER: launch_module(projects/fuzz-op/manager/+x/fuzz-op_manager.+x) pid=358579
+[22:42:20] PARSER: launch_module(projects/fuzz-op/manager/+x/fuzz-op_manager.+x) pid=358579
+[22:42:20] PARSER: launch_module(projects/fuzz-op/manager/+x/fuzz-op_manager.+x) pid=358579

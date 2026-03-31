@@ -1,0 +1,3 @@
+DESKTOP_VIEW
+BG: #000044
+WINDOW | 0 | 50 | 50 | 500 | 400 | Terminal | /home/no/.local/share/Trash/files/TPMOS_c_+rmmp_52.07/TPMOS_c_+rmmp_52.01/pieces/display/current_frame.txt
