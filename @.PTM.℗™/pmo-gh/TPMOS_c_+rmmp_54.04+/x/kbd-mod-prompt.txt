@@ -1,0 +1,28 @@
+# Keyboard Module Modification Prompt - April 1, 2026 (v3: The Lag Critical Fix)
+
+## CONTEXT
+We are moving keyboard logic out of the Orchestrator's internal threads and into dedicated platform-specific binaries to solve the "Waiting Bug" on Windows.
+
+## THE CRITICAL ISSUE: "Multi-Key Lag"
+- **Observation:** On Windows, the `Enter` key is not processed immediately upon being pressed. Instead, it often requires several subsequent number keys (or another Enter) to be pressed before the previous `Enter` is registered by the system.
+- **Comparison:** On Linux, every key press (including Enter) is processed instantly and independently.
+- **Diagnosis:** This confirms that the current Windows input method (using `stdin` via the Orchestrator thread) is trapped in a line-buffering or pipe-buffering state inherited from the terminal emulator (MSYS2/mintty).
+
+## THE ARCHITECTURE: "Two Muscles, One Brain"
+The Orchestrator will now act purely as the Brain, detecting the platform at runtime and launching the appropriate external binary.
+
+### 1. The Windows Muscle (`keyboard_input_win.c`)
+- **Direct-to-Hardware:** MUST use native Windows handles (`CONIN$`) or low-level Console API calls (`ReadConsoleInput`) to completely bypass terminal buffering.
+- **Responsiveness:** Every key, including single `Enter` taps, must be written to `pieces/keyboard/history.txt` the microsecond it is captured.
+- **Behavior:** Maintains the `[TIMESTAMP] KEY_PRESSED: <code>` format.
+
+### 2. The Linux Muscle (`keyboard_input_linux.c`)
+- **Direct Access:** Opens `/dev/tty` and uses `termios` for true raw mode.
+- **Behavior:** Mirrors the Windows version's output format.
+
+### 3. The Orchestrator (Brain)
+- **Role:** Orchestrates the launch of the correct Muscle binary based on OS detection.
+- **Cleanliness:** No longer contains any internal keyboard capture logic, preventing handle conflicts.
+
+## GOAL
+Achieve 1:1 behavioral parity with Linux. Pressing `Enter` once on Windows must trigger an immediate navigation or activation event without requiring any "buffer-flushing" subsequent keys.

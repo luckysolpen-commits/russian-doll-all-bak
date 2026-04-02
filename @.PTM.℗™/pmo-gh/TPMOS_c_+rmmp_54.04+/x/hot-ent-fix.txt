@@ -1,0 +1,42 @@
+# Investigation Report: Hotkey and Entity Selection Fix - April 1, 2026
+
+## ISSUES IDENTIFIED
+
+### 1. Project Encapsulation Break (CRITICAL)
+In the current version, piece entries in `projects/fuzz-op/pieces/` (e.g., `pet_01`, `pet_02`, `fuzzpet`, `zombie_01`) have been converted from directories to **redirect files** containing paths like `world_01/map_01/pet_01`.
+- **Impact:** `fuzz-op_manager.c` and `pdl_reader.c` do not handle these redirect files. They expect directories containing `state.txt` and `piece.pdl`.
+- **Result:** Selection fails because the manager cannot correctly find and compare the position of the piece with the selector. Hotkeys fail because `pdl_reader` cannot find the piece's methods.
+
+### 2. History Path & Format Mismatch
+- **Format:** The keyboard now writes timestamped lines (`[TIMESTAMP] KEY_PRESSED: <code>`). 
+- **Translation:** While `chtpm_parser.c` translates these to integers for `pieces/apps/player_app/history.txt`, any modules relying on the raw history or project-specific history files (if `<interact>` is not present) will fail due to the `fscanf(hf, "%d", &key)` call.
+- **Path:** `fuzz-op_manager.c` reads from `pieces/apps/player_app/history.txt`, while `chtpm_parser.c` may write to `projects/fuzz-op/history.txt` if not properly overridden by `<interact>`.
+
+### 3. Manager/Renderer Desync
+The "Shadow Sync" logic in the manager is intended to keep the project's view of a piece in sync with the global world. Since pieces were moved to redirects, the manager is effectively trying to sync a project selector against a global piece position that it cannot reliably find or update.
+
+## PROPOSED SOLUTION (ROLLBACK STRATEGY)
+
+To restore 1:1 behavioral parity with the working Linux version (v52.00), the following steps are required:
+
+### Phase 1: Restore Directory Structure
+1.  **Delete Redirects:** Remove the file-based redirects in `projects/fuzz-op/pieces/`.
+2.  **Copy Directories:** Copy the original piece directories from `#.ref/TPMOS_c_+rmmp_52.00/projects/fuzz-op/pieces/` back to the active project.
+    - Specifically: `fuzzpet`, `pet_01`, `pet_02`, `zombie_01`, and `world_01`.
+
+### Phase 2: Binary Re-alignment
+1.  **Restore PDL Reader:** Recompile `pdl_reader.c` using the v52.00 source if any breaking "optimizations" were added.
+2.  **Restore Fuzz-Op Manager:** Ensure `fuzz-op_manager.c` is using the project-aware path resolution that matches the restored directory structure.
+
+### Phase 3: Keyboard Logic Consolidation
+1.  **Unified Input:** Standardize on `pieces/apps/player_app/history.txt` as the primary relay.
+2.  **Resilient Parsing:** Update `fuzz-op_manager.c` to handle the timestamped keyboard format natively to prevent future breaks when the "Brain/Muscle" keyboard module is fully deployed.
+
+## CONCLUSION
+The "over-enthusiastic" changes broke the core architectural assumption that project pieces are self-contained directories. Restoring the v52.00 project structure is the most viable path to immediate functionality.
+
+## BACKUP PLAN
+If the restoration of the v52.00 directory structure and the primary fix do not resolve the issues:
+1.  **Selective Integration:** Re-introduce only the essential `windows/linux` compile and run buttons from the `#.buttons/` directory.
+2.  **Minimal Windows Functions:** Port only the bare minimum Windows-specific functions required for the environment to function.
+3.  **Defer Keyboard Modularization:** Hold off on any further changes to the keyboard logic or history format until the dedicated platform-specific binaries (as per `kbd-mod-prompt.txt`) are ready for a clean, separate implementation. This prevents further "buffering" or "lag" issues on Windows from polluting the main logic.
