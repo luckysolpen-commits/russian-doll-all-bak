@@ -1,0 +1,337 @@
+================================================================================
+DOCUMENTATION CONSOLIDATION PLAN
+================================================================================
+Date: April 2, 2026
+Status: PHASE 2 - READY FOR EXECUTION
+Priority: HIGH
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+Current State:
+- 35+ documentation files in #.docs/ alone
+- Scattered across multiple subdirectories
+- Duplicate content in multiple files
+- Some docs outdated or superseded
+- No single source of truth
+
+Goal:
+- Consolidate into fewer, better-organized files
+- Archive outdated dev sprint notes
+- Create clear documentation hierarchy
+- Reduce maintenance burden
+
+================================================================================
+CURRENT DOCUMENTATION INVENTORY
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ #.docs/ ROOT (23 files)                                                     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ACTIVE / CURRENT:                                                          │
+│  ✓ documentation-cleanup-summary.txt     [NEW - Apr 2, 2026]               │
+│  ✓ fondu-investigation-report.txt        [NEW - Apr 2, 2026]               │
+│  ✓ op-ed-investigation-report.txt        [NEW - Apr 2, 2026]               │
+│  ✓ AGENT_ONBOARDING.txt                  [NEEDS UPDATE]                    │
+│  ✓ TPMOS_APP_REFERENCE.txt               [NEEDS UPDATE]                    │
+│  ✓ COMPILE_SYSTEM.md                     [CURRENT]                         │
+│  ✓ OPS_DICTIONARY.txt                    [CURRENT]                         │
+│  ✓ op-ed-ops-section.txt                 [CURRENT]                         │
+│  ✓ op-setup.txt                          [CURRENT]                         │
+│  ✓ cpu_safe_module_template.c            [CODE TEMPLATE - KEEP]            │
+│  ✓ windows_renderer.md                   [CURRENT]                         │
+│                                                                             │
+│  OUTDATED / SUPERSEDED:                                                     │
+│  ⚠ tomokazu-tpm.txt                      [Historical anecdote only]        │
+│  ⚠ user_finalization-m22.txt             [Superseded by Fondu]             │
+│  ⚠ user-sub-fix.txt                      [Specific fix - archive]          │
+│  ⚠ user-sub-fix+2.txt                    [Specific fix - archive]          │
+│  ⚠ tpmos_gant_m30+2.txt                  [Old gantt chart - archive]       │
+│  ⚠ #.piece.mark.c-look_0.txt             [Dev notes - archive]             │
+│  ⚠ !.cpu_health+1.txt                    [Superseded]                      │
+│                                                                             │
+│  DUPLICATE / OVERLAPPING:                                                   │
+│  ℹ GL-OS_LEDGER_AUDIT.md                 [Overlap with WINDOWS-RUN-GUIDE]  │
+│  ℹ !TPM2.PAL.MONOLITH+0.md               [Overlap with textbook]           │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ #.docs/^.pmo.ld-faq+8/ (Subdirectory)                                       │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ACTIVE:                                                                    │
+│  ✓ PITFALLS_ACTIVE_2026-03-18.txt        [CURRENT - Keep updated]          │
+│  ✓ INDEX_ACTIVE_2026-03-18.txt           [CURRENT index]                   │
+│  ✓ !.compile_clean.txt                   [CURRENT]                         │
+│  ✓ !READ_THIS_FIRST_2026-03-18.txt       [Entry point]                     │
+│  ✓ #.PMO_KISS_STD_00.01.txt              [Standards doc]                   │
+│                                                                             │
+│  SUBDIRECTORIES:                                                            │
+│  - ^.chtpm-faq/                          [FAQ - keep organized]            │
+│  - ^.how2TPM/                            [How-to guides - keep]            │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ #.docs/future-facing/ (Subdirectory)                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  CONCEPTUAL / PLANNING:                                                     │
+│  ℹ PROJECT_ROADMAP.md                    [Future planning]                 │
+│  ℹ AGENT_ONBOARDING.md                   [Duplicate of .txt version?]      │
+│  ℹ PRISC_EXECUTION_MODEL.md              [Specific topic]                  │
+│  ℹ ^.RMMPMO-editor1.md                   [Editor concepts]                 │
+│  ℹ !.world_architecture+1.txt            [Architecture planning]           │
+│  ℹ fix_old_pieces_faq.txt                [Migration FAQ]                   │
+│  ⚠ !.cpu_health+1.txt                    [Duplicate of root version]       │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+CONSOLIDATION ACTIONS
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ACTION 1: ARCHIVE OUTDATED DEV SPRINT NOTES                                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  Create: #.docs/ARCHIVE/ directory                                          │
+│                                                                             │
+│  Move to Archive:                                                           │
+│  - tomokazu-tpm.txt              → Historical (fun anecdote)               │
+│  - user_finalization-m22.txt     → Superseded by Fondu                     │
+│  - user-sub-fix.txt              → Specific fix, no longer relevant        │
+│  - user-sub-fix+2.txt            → Specific fix, no longer relevant        │
+│  - tpmos_gant_m30+2.txt          → Old timeline, outdated                  │
+│  - #.piece.mark.c-look_0.txt     → Dev notes, not reference                │
+│  - !.cpu_health+1.txt (root)     → Superseded                              │
+│  - !.cpu_health+1.txt (future)   → Duplicate                               │
+│                                                                             │
+│  Impact: Removes 8 outdated files from main view                            │
+│  Risk: LOW - These are historical/superseded docs                           │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ACTION 2: MERGE DUPLICATE CONTENT                                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  2a. AGENT_ONBOARDING Consolidation:                                        │
+│      - Compare: AGENT_ONBOARDING.txt vs future-facing/AGENT_ONBOARDING.md  │
+│      - Merge into: AGENT_ONBOARDING.md (modern format)                     │
+│      - Delete: AGENT_ONBOARDING.txt                                        │
+│      - UPDATE: Remove reference to #.ref/ (directory is empty)             │
+│                                                                             │
+│  2b. GL-OS Documentation:                                                   │
+│      - Compare: GL-OS_LEDGER_AUDIT.md vs WINDOWS-RUN-GUIDE.md              │
+│      - Merge Windows-specific content into WINDOWS-RUN-GUIDE.md            │
+│      - Keep GL-OS_LEDGER_AUDIT.md for GL-specific architecture             │
+│      - Add cross-reference between files                                   │
+│                                                                             │
+│  2c. PAL/Monolith Docs:                                                     │
+│      - Review: !TPM2.PAL.MONOLITH+0.md                                     │
+│      - Merge relevant content into TPMOS_TEXTBOOK CH4 or CH9               │
+│      - Archive if superseded by textbook                                   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ACTION 3: UPDATE CRITICAL REFERENCES                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  3a. TPMOS_APP_REFERENCE.txt:                                               │
+│      - Fix: APP vs PROJECT topology (remove man-ops, man-pal, man-add)     │
+│      - Add: Fondu installation workflow                                    │
+│      - Update: op-ed as PROJECT example (not APP)                          │
+│                                                                             │
+│  3b. AGENT_ONBOARDING.txt:                                                  │
+│      - Remove: "CHECK REFERENCE FIRST - #.ref/TPMOS_c_+rmmp_52.00/"        │
+│      - Add: Emphasis on manual backups in no-git mode                      │
+│      - Add: Link to investigation reports                                  │
+│                                                                             │
+│  3c. OPS_DICTIONARY.txt:                                                    │
+│      - Add: Fondu ops (--install, --uninstall, etc.)                       │
+│      - Update: op-ed ops completion status (81%)                           │
+│      - Mark: P2P ops as CONCEPTUAL/PLANNED                                 │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ACTION 4: CREATE MASTER INDEX                                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  New File: #.docs/INDEX.md                                                  │
+│                                                                             │
+│  Structure:                                                                 │
+│  ┌────────────────────────────────────────────────────────────────────┐    │
+│  │ TPMOS DOCUMENTATION INDEX                                          │    │
+│  ├────────────────────────────────────────────────────────────────────┤    │
+│  │                                                                    │    │
+│  │ START HERE:                                                        │    │
+│  │ - README.md (project root) - Main entry point                     │    │
+│  │ - TPMOS_TEXTBOOK_v03.00/ - Comprehensive guide                    │    │
+│  │ - AGENT_ONBOARDING.txt - New developer/agent onboarding           │    │
+│  │                                                                    │    │
+│  │ REFERENCE:                                                         │    │
+│  │ - OPS_DICTIONARY.txt - All ops catalog                            │    │
+│  │ - TPMOS_APP_REFERENCE.txt - App/Project topology                  │    │
+│  │ - COMPILE_SYSTEM.md - Build system documentation                  │    │
+│  │ - PITFALLS_ACTIVE_2026-03-18.txt - Known issues                   │    │
+│  │                                                                    │    │
+│  │ INVESTIGATION REPORTS:                                             │    │
+│  │ - fondu-investigation-report.txt - Fondu status (100%)            │    │
+│  │ - op-ed-investigation-report.txt - op-ed status (81%)             │    │
+│  │                                                                    │    │
+│  │ HOW-TO GUIDES:                                                     │    │
+│  │ - #.main/#.fondu.2.do/^.fondu-how2.txt - Fondu usage              │    │
+│  │ - #.main/#.fondu.2.do/#.fondu-kpis.txt - Fondu testing            │    │
+│  │ - #.testing/op-ed-testing-guide.txt - op-ed testing               │    │
+│  │                                                                    │    │
+│  │ ARCHIVED:                                                          │    │
+│  │ - ARCHIVE/ - Historical documents, superseded specs               │    │
+│  └────────────────────────────────────────────────────────────────────┘    │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ACTION 5: REORGANIZE DIRECTORY STRUCTURE                                    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  Proposed Structure:                                                        │
+│                                                                             │
+│  #.docs/                                                                    │
+│  ├── INDEX.md (NEW - master index)                                         │
+│  ├── README.md (symlink to root README)                                    │
+│  │                                                                          │
+│  ├── 01-START-HERE/                                                        │
+│  │   ├── AGENT_ONBOARDING.md (merged from .txt)                           │
+│  │   └── QUICK_START.md (extracted from README)                           │
+│  │                                                                          │
+│  ├── 02-REFERENCE/                                                         │
+│  │   ├── OPS_DICTIONARY.txt                                                │
+│  │   ├── TPMOS_APP_REFERENCE.txt (updated)                                │
+│  │   └── COMPILE_SYSTEM.md                                                 │
+│  │                                                                          │
+│  ├── 03-INVESTIGATION-REPORTS/                                             │
+│  │   ├── fondu-investigation-report.txt                                   │
+│  │   ├── op-ed-investigation-report.txt                                   │
+│  │   └── README.md (index to reports)                                     │
+│  │                                                                          │
+│  ├── 04-HOW-TO-GUIDES/                                                     │
+│  │   ├── Fondu/ (symlink to #.main/#.fondu.2.do/)                        │
+│  │   ├── op-ed/ (symlink to #.testing/)                                   │
+│  │   └── Development/ (symlink to #.docs/^.pmo.ld-faq+8/)                │
+│  │                                                                          │
+│  ├── 05-PITFALLS-AND-FAQ/                                                  │
+│  │   └── (contents from #.pmo.ld-faq+8/)                                  │
+│  │                                                                          │
+│  ├── 06-ARCHIVED/                                                          │
+│  │   ├── Dev-Sprints/ (old sprint notes)                                  │
+│  │   ├── Superseded/ (replaced by newer docs)                             │
+│  │   └── Historical/ (interesting but not active)                         │
+│  │                                                                          │
+│  └── 07-FUTURE-CONCEPTS/                                                   │
+│      └── (contents from future-facing/)                                   │
+│                                                                             │
+│  Benefits:                                                                  │
+│  - Clear hierarchy and navigation                                          │
+│  - Active docs separated from archived                                     │
+│  - Investigation reports have dedicated space                              │
+│  - Symlinks preserve existing paths                                        │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+IMPLEMENTATION PRIORITY
+================================================================================
+
+Phase 2A - Quick Wins (Do First):
+  1. Create ARCHIVE/ directory
+  2. Move 8 outdated files to archive
+  3. Create INDEX.md
+  4. Update AGENT_ONBOARDING.txt (remove #.ref/ reference)
+
+Phase 2B - Critical Updates:
+  1. Update TPMOS_APP_REFERENCE.txt (fix topology)
+  2. Update OPS_DICTIONARY.txt (add Fondu, mark P2P)
+  3. Merge duplicate AGENT_ONBOARDING files
+
+Phase 2C - Reorganization:
+  1. Create new directory structure
+  2. Move files to organized locations
+  3. Create symlinks for backward compatibility
+  4. Update all cross-references
+
+Phase 2D - Polish:
+  1. Add README.md files to each subdirectory
+  2. Create documentation map
+  3. Update all internal links
+  4. Test navigation flow
+
+================================================================================
+FILES TO PRESERVE (DO NOT MODIFY)
+================================================================================
+
+Per User Instruction: "dont touch any code or path docs till i say u can"
+
+The following should NOT be modified in this consolidation:
+- Any files in pieces/ directory
+- Any files in projects/ directory
+- project_routes.kvp
+- Any .c, .h, .pdl, .chtpm files
+- Any binaries or +x executables
+
+Focus ONLY on documentation files in:
+- #.docs/
+- TPMOSTEXTBOOK_v03.00/
+- #.main/
+- #.plans/
+- #.testing/
+
+================================================================================
+ESTIMATED EFFORT
+================================================================================
+
+| Phase | Tasks | Estimated Time |
+|-------|-------|----------------|
+| 2A    | Archive + INDEX.md | 30 min |
+| 2B    | Critical updates | 45 min |
+| 2C    | Reorganization | 1-2 hours |
+| 2D    | Polish | 30 min |
+| TOTAL | | 2.5-3.5 hours |
+
+================================================================================
+RISK ASSESSMENT
+================================================================================
+
+Risk Level: LOW
+
+Mitigation:
+- All moves are copy-then-delete (reversible)
+- Symlinks preserve existing paths
+- Archive directory keeps historical docs accessible
+- No code or configuration files modified
+
+Potential Issues:
+- Broken internal links (fixed in Phase 2D)
+- Confusion during transition (minimized by INDEX.md)
+- Lost context from archived docs (mitigated by categorization)
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+To proceed with consolidation:
+
+1. Review this plan with user
+2. Get approval for each phase
+3. Start with Phase 2A (lowest risk)
+4. Test navigation after each phase
+5. Update doc_diff.txt with completed actions
+
+================================================================================
+END OF PLAN
+================================================================================

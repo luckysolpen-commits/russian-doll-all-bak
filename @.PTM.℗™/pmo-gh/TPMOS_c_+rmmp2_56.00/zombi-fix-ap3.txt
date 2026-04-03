@@ -1,0 +1,153 @@
+# Zombie AI Fix Report - zombi-fix-ap3.txt
+# Date: 2026-04-03
+# Agent: ap3
+# Project: fuzz-op (TPMOS_c_+rmmp_55.25)
+
+## ISSUE SUMMARY
+Zombie (zombie_01) was not following the player in fuzz-op project.
+
+## ROOT CAUSE
+The zombie_ai.+x binary and its source code (zombie_ai.c) were MISSING from the codebase.
+
+The fuzz-op_manager.c calls zombie_ai at line ~545-552:
+```c
+char* zombie_cmd = build_path_malloc("pieces/apps/fuzzpet_app/traits/+x/zombie_ai.+x");
+p = fork();
+if (p == 0) {
+    freopen("/dev/null", "w", stdout); freopen("/dev/null", "w", stderr);
+    execl(zombie_cmd, zombie_cmd, "zombie_01", active_target_id, NULL); exit(1);
+} else waitpid(p, NULL, 0);
+```
+
+The execl() call was silently failing (stdout/stderr redirected to /dev/null), so:
+- No error was visible to the user
+- The zombie never moved from its position
+- Debug logs showed zombie WAS moving in past sessions (confirming it once worked)
+
+## WHY IT WAS MISSING
+1. The compile_all.sh script had NO entry for zombie_ai.c
+2. The source file zombie_ai.c did not exist anywhere in the codebase
+3. The fuzzpet_app directory structure was never created
+4. This was a KNOWN P0 BUG documented in:
+   - #.tools/ai-profile+1.txt (lines 433-479)
+   - #.docs/^.pmo.ld-faq+8/PITFALLS_ACTIVE_2026-03-18.txt (pitfall #47)
+   - #.docs/02-REFERENCE/OPS_DICTIONARY.txt (lines 444-450)
+
+## P2P CHANGES DID NOT CAUSE THIS
+The recent p2p-net project additions were completely separate:
+- p2p-net has its own manager, ops, and state
+- No game entity or AI code was modified
+- The zombie_ai binary/source was already missing BEFORE p2p work began
+- The last agent's path changes did not affect zombie behavior
+
+## FIX IMPLEMENTED
+
+### 1. Created zombie_ai.c source file
+Location: pieces/apps/fuzzpet_app/traits/zombie_ai.c
+
+Key features:
+- Proper path resolution using project_root from pieces/locations/location_kvp
+- Reads current_project from pieces/apps/player_app/manager/state.txt
+- Resolves zombie and target positions from project-specific state files
+- Falls back to global pieces/world/map_01/ if project-specific not found
+- Simple chase AI: moves X then Y toward target
+- Respects Z-level (zombie only chases if on same Z)
+- Bounds checking (keeps zombie within 0-19 map range)
+- Won't chase if already in attack range (distance <= 1)
+
+### 2. Created fuzzpet_app directory structure
+```
+pieces/apps/fuzzpet_app/
+  traits/
+    zombie_ai.c          <- Source code
+    +x/
+      zombie_ai.+x       <- Compiled binary (19K)
+```
+
+### 3. Updated compile_all.sh
+Added section "7. SHARED APP TRAITS (FUZZPET_APP)" with compile entry for zombie_ai.c
+
+### 4. Compiled successfully
+```
+=== 7. SHARED APP TRAITS (FUZZPET_APP) ===
+  ✓ pieces/apps/fuzzpet_app/traits/+x/zombie_ai.+x
+
+=== COMPILE SUMMARY ===
+  Compiled: 43 binaries
+  Failed:   0 binaries
+✓ All binaries compiled successfully!
+```
+
+## CRITICAL: MANAGER RUNNING FROM WRONG DIRECTORY
+
+**PROBLEM:** The fuzz-op_manager is running from Trash directory:
+```
+/home/no/.local/share/Trash/files/TPMOS_c_+rmmp_55.29p2p/TPMOS_c_+rmmp_55.25/
+```
+
+**NOT from the current working directory:**
+```
+/home/no/Desktop/Piecemark-IT/[CALENDARS]06.00/apr_2.11/TPMOS_c_+rmmp_55.30/TPMOS_c_+rmmp_55.25/
+```
+
+**This means the manager is using the OLD binary without zombie_ai fix!**
+
+## HOW TO FIX AND TEST
+
+### Step 1: Kill all CHTPM processes
+```bash
+cd "/home/no/Desktop/Piecemark-IT/[CALENDARS]06.00/apr_2.11/TPMOS_c_+rmmp_55.30/TPMOS_c_+rmmp_55.25"
+./button.sh kill
+```
+
+### Step 2: Verify binaries
+```bash
+./button.sh check
+```
+
+### Step 3: Restart CHTPM
+```bash
+./button.sh run
+```
+
+### Step 4: Test zombie behavior
+1. Select fuzz-op project (option 4)
+2. Move the selector with w/a/s/d or arrow keys
+3. Observe zombie_01 (Z) should now chase the selector (X)
+4. Check debug log: projects/fuzz-op/manager/debug_log.txt
+5. Verify zombie position updates in:
+   projects/fuzz-op/pieces/world_01/map_01/zombie_01/state.txt
+
+## HOW IT WORKS NOW
+
+1. Player moves (w/a/s/d or arrow keys)
+2. fuzz-op_manager.c calls route_input()
+3. After move_entity op, manager calls zombie_ai.+x:
+   - Passes zombie_01 as the NPC to move
+   - Passes active_target_id (selector or selected entity) as chase target
+4. zombie_ai.+x:
+   - Resolves project root and current project
+   - Reads zombie_01 position from state.txt
+   - Reads target position from state.txt
+   - Calculates next position (chase X then Y)
+   - Updates zombie_01 state.txt with new position
+5. Manager calls render_map to display updated positions
+6. Zombie appears to chase player on screen
+
+## FILES CHANGED
+
+1. CREATED: pieces/apps/fuzzpet_app/traits/zombie_ai.c (200 lines)
+2. CREATED: pieces/apps/fuzzpet_app/traits/+x/zombie_ai.+x (compiled binary, 19K)
+3. MODIFIED: #.tools/compile_all.sh (added section 7 for fuzzpet_app traits)
+
+## NOTES
+
+- The zombie AI uses simple greedy chase (X axis first, then Y)
+- This matches the original npc_chase.c behavior pattern
+- If diagonal movement is desired, modify the chase logic to update both X and Y
+- Attack logic is not implemented (zombie stops when adjacent to target)
+- The zombie respects the "aggressive" behavior flag from state.txt
+
+---
+Fix verified: zombie_ai.+x binary exists and compiles cleanly
+Status: READY FOR TESTING (after restarting manager from correct directory)

@@ -1,7 +1,0 @@
-window_count=1
-active_window_id=1
-selected_index=1
-debug_info=M(280,337) S=0
-window_list=  [>] 1. Terminal 1          
-menu_options=|    [ ] 1. [Desktop Apps        ]           |
-|    [>] 2. [Terminal Apps       ]           |
