@@ -1,9 +1,0 @@
-[2026-04-03 20:34:41] FrameRendered: at 2026-04-03 20:34:41 | Source: renderer
-[2026-04-03 20:34:42] InputReceived: key_code=1003 | Source: keyboard_linux
-[2026-04-03 20:34:42] FrameRendered: at 2026-04-03 20:34:42 | Source: renderer
-[2026-04-03 20:34:42] InputReceived: key_code=1003 | Source: keyboard_linux
-[2026-04-03 20:34:42] FrameRendered: at 2026-04-03 20:34:42 | Source: renderer
-[2026-04-03 20:34:42] InputReceived: key_code=1003 | Source: keyboard_linux
-[2026-04-03 20:34:42] FrameRendered: at 2026-04-03 20:34:42 | Source: renderer
-[2026-04-03 20:34:43] InputReceived: key_code=13 | Source: keyboard_linux
-[2026-04-03 20:34:43] FrameRendered: at 2026-04-03 20:34:43 | Source: renderer

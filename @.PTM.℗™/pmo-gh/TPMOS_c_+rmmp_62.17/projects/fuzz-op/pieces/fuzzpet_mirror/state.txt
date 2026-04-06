@@ -1,0 +1,7 @@
+name=Pet1
+hunger=0
+happiness=100
+energy=99
+level=1
+status=active
+emoji_mode=0
