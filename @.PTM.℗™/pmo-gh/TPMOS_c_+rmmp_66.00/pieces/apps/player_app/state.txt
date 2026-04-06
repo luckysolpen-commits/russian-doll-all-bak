@@ -1,0 +1,12 @@
+project_id=fuzz-op
+gui_focus=4
+last_key=4
+xlector_pos=(4,6,0)
+editor_response=[RESP]:                                                  
+editor_status_2=[POS]: (4,6,0) | [H-BEAT]: 4 | [KEY]: 4                  
+map_palette_view=ADD [map_0001_z0.txt] 
+glyph_palette_view=# . [R] T @ & Z X ? ! 
+armed_glyph=R
+projects_list_view=[user] man-add lsr test_fondu trunk blank op-ed ai-labs 404-test man-ops template fuzz-op man-pal demo_1 
+app_title=FUZZ-OP PET SIM
+emoji_mode=OFF

@@ -1,0 +1,10 @@
+project_root=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01
+pieces_dir=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01/pieces
+fuzzpet_app_dir=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01/pieces/apps/fuzzpet_app
+fuzzpet_dir=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01/pieces/apps/fuzzpet_app/fuzzpet
+editor_dir=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01/pieces/apps/editor
+system_dir=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01/pieces/system
+selector_dir=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01/pieces/world/map_01/selector
+os_procs_dir=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01/pieces/os/procs
+clock_daemon_dir=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01/pieces/system/clock_daemon
+manager_dir=/home/jb/Desktop/ele-desk+cal/apr_5/TPMOS_c_+rmmp_65.01/pieces/apps/fuzzpet_app/manager

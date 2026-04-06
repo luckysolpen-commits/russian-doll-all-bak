@@ -1,0 +1,5 @@
+[2026-04-06 05:58:07] FrameRendered: at 2026-04-06 05:58:07 | Source: renderer
+[2026-04-06 05:58:10] InputReceived: key_code=52 | Source: keyboard_linux
+[2026-04-06 05:58:10] FrameRendered: at 2026-04-06 05:58:10 | Source: renderer
+[2026-04-06 05:58:10] InputReceived: key_code=13 | Source: keyboard_linux
+[2026-04-06 05:58:10] FrameRendered: at 2026-04-06 05:58:10 | Source: renderer
