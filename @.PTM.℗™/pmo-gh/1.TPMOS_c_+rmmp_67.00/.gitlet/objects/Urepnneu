@@ -1,0 +1,5 @@
+tree ay07y4IU
+parent kxcm7gBr
+Date: Mon Apr 13 16:39:11 2026
+
+Gitlet trunk+delta: first commit stores full trunk, subsequent commits store only diffs. Checkout reconstructs from trunk+delta. Storage efficient.
