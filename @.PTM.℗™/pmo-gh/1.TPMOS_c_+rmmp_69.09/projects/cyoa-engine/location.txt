@@ -1,1 +1,1 @@
-data_xl=../^.TPMOS_DATA_XL_67.00/books
+data_xl=../^.CYOA_DATA_XL_69/books

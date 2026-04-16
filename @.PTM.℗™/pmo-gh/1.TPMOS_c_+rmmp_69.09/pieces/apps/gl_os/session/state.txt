@@ -9,7 +9,7 @@ width=800
 height=600
 session_status=active
 selected_index=0
-debug_info=M(0,0) S=0
+debug_info=M(293,908) S=0
 window_list=  [>] 1. Terminal 1          
 menu_options=║    [>] 1. [Desktop Apps        ]           ║
 ║    [ ] 2. [Terminal Apps       ]           ║

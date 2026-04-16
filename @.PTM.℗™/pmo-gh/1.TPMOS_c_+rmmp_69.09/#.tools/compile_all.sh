@@ -48,6 +48,7 @@ compile_op "pieces/joystick/plugins/joystick_input.c" "pieces/joystick/plugins/+
 compile_op "pieces/chtpm/plugins/chtpm_parser.c" "pieces/chtpm/plugins/+x/chtpm_parser.+x"
 compile_op "pieces/chtpm/plugins/orchestrator.c" "pieces/chtpm/plugins/+x/orchestrator.+x"
 compile_op "pieces/display/renderer.c" "pieces/display/plugins/+x/renderer.+x"
+compile_gl "pieces/display/gl_renderer.c" "pieces/display/plugins/+x/gl_renderer.+x" "-lglut -lGLU -lGL -I/usr/include/freetype2 -lfreetype"
 compile_op "pieces/system/pdl/pdl_reader.c" "pieces/system/pdl/+x/pdl_reader.+x"
 
 # Process management (proc_manager CLI tool)

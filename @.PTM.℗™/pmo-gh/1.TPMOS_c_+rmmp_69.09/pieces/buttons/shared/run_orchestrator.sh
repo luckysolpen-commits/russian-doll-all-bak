@@ -38,7 +38,7 @@ selector_dir=${WIN_PATH}\pieces\world\map_01\selector
 os_procs_dir=${WIN_PATH}\pieces\os\procs
 clock_daemon_dir=${WIN_PATH}\pieces\system\clock_daemon
 manager_dir=${WIN_PATH}\pieces\apps\fuzzpet_app\manager
-data_xl=${WIN_PATH}\..\^.TPMOS_DATA_XL_67.00
+data_xl=${WIN_PATH}\..\^.CYOA_DATA_XL_69
 EOF
     echo "Windows path: ${WIN_PATH}"
 else
@@ -55,7 +55,7 @@ selector_dir=${POSIX_PATH}/pieces/world/map_01/selector
 os_procs_dir=${POSIX_PATH}/pieces/os/procs
 clock_daemon_dir=${POSIX_PATH}/pieces/system/clock_daemon
 manager_dir=${POSIX_PATH}/pieces/apps/fuzzpet_app/manager
-data_xl=${POSIX_PATH}/../^.TPMOS_DATA_XL_67.00
+data_xl=${POSIX_PATH}/../^.CYOA_DATA_XL_69
 EOF
     echo "POSIX path: ${POSIX_PATH}"
 fi

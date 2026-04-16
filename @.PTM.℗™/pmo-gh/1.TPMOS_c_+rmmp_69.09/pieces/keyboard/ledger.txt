@@ -329,3 +329,16 @@
 [2026-04-16 01:51:52] KeyCaptured: 13 ('?') | Source: keyboard_linux
 [2026-04-16 01:51:53] KeyCaptured: 13 ('?') | Source: keyboard_linux
 [2026-04-16 01:51:54] KeyCaptured: 101 ('e') | Source: keyboard_linux
+[2026-04-16 02:24:52] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 02:24:54] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 02:24:55] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 02:24:55] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 02:24:56] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 02:24:58] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 02:25:03] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 02:25:04] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 02:25:04] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 02:46:29] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 02:46:30] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 02:46:30] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 02:46:31] KeyCaptured: 13 ('?') | Source: keyboard_linux

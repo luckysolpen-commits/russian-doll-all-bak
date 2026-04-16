@@ -1,26 +1,22 @@
-╔══════════════ P A L   E D I T O R ════════════════════════╗
-║ LAYOUT ID: projects/op-ed/layouts/pal_editor.chtpm          ║
-║                                                           ║
-║  Piece: common_event                                     ║
-║  Event: on_interact                                     ║
-║                                                           ║
-║  INSTRUCTIONS:                                            ║
-op_palette=[0:addi] [1:beq] [2:lw] [3:sw] [4:j] [5:jalr] [6:halt] [7:sleep]
-║                                                           ║
-║  OPS:  ║
-║                                                           ║
-║  REGISTERS: r0=0 r1=0 r2=0 r3=0 r1= r2= r3=                ║
-║             r4=0 r5=0 r6=0 r7=0 r5= r6= r7=                ║
-║                                                           ║
-╠═══════════════════════════════════════════════════════════╣
-║ [RESP]:                                     ║
-╠═══════════════════════════════════════════════════════════╣
-║  [No Methods] ║
-║  [ ] 1. [Save Script (S)]                         ║
-║  [ ] 2. [Add Instruction (A)]                       ║
-║  [ ] 3. [Delete Line (D)]                        ║
-║  [ ] 4. [Back to Editor (ESC)]                     ║
-╚═══════════════════════════════════════════════════════════╝
++===========================================================+
+|                                                           |
+|           C H T P M + O S   C L I   v2.0                 |
+|                                                           |
+|  CHTPM+OS Main Menu                                      |
+|                                                           |
+|  [>] 1. [Project Loader]                             |
+|  [ ] 2. [App Store (Fondu)]                          |
+|  [ ] 3. [Status]  [ ] 4. [GL-OS]                                          |
+|  [ ] 5. [Process Monitor]                            |
+|  [ ] 6. [Toggle Frame History (Current: )]                                         |
+|  [ ] 7. [Help]                                            |
+|                                                           |
++===========================================================+
+|  Running Applications: None                               |
+|  System Time: 08:00:00 | Turn: 0 | Key: None |
++===========================================================+
+|                                                           |
+|  $ | [ ] 8. [****]                                                 |                                                 |
 
 +=========================================================+
-Active [^]:  (ESC to exit)
+Nav > _

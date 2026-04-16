@@ -3,7 +3,7 @@ SECTION      | KEY                | VALUE
 META         | piece_id           | engine
 STATE        | name               | CYOA Engine
 
-METHOD       | If you burst into the room and surrender, (Page 12) | CYOA:SELECT:0
-METHOD       | If you try to listen in on their conversation, (Page 13) | CYOA:SELECT:1
+METHOD       | If you shout "Yes, your Majesty!" with the other clones, (Page 2) | CYOA:SELECT:0
+METHOD       | If you remain silent, (Page 3) | CYOA:SELECT:1
 METHOD       | Audio: PLAY | CYOA:PLAY
 METHOD       | Audio: STOP | CYOA:STOP
