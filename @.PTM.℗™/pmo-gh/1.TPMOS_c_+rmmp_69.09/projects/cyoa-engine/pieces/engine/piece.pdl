@@ -1,0 +1,11 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | engine
+STATE        | name               | CYOA Engine
+
+METHOD       | book_0 | CYOA:SELECT:0
+METHOD       | book_1 | CYOA:SELECT:1
+METHOD       | book_2 | CYOA:SELECT:2
+METHOD       | book_3 | CYOA:SELECT:3
+METHOD       | Audio: PLAY | CYOA:PLAY
+METHOD       | Audio: STOP | CYOA:STOP

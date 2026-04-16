@@ -1,0 +1,7 @@
+project_id=cyoa-engine
+app_title=RED WHITE AND U: CYOA PLAYER
+active_target_id=engine
+book_name=Select a Book
+page_num=0
+page_content=║  Please select a book from the menu below:      ║
+choices_content=║  Use Arrows to navigate, ENTER to select        ║

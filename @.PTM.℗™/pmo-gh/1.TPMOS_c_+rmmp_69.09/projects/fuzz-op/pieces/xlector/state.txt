@@ -1,0 +1,7 @@
+pos_x=12
+pos_y=4
+map_id=map_01_z0.txt
+pos_z=0
+name=Xlector
+type=xlector
+on_map=1

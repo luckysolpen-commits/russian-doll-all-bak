@@ -1,0 +1,120 @@
+## CYOA-ENGINE Project Loader Investigation Report
+## Date: 2026-04-15
+
+### PROBLEM
+cyoa-engine does not appear in the Project Loader menu despite having a valid project.pdl file.
+
+### ROOT CAUSE: TWO ISSUES
+
+#### ISSUE 1: Stale loader.pdl (Primary Cause)
+File: pieces/apps/playrm/loader/loader.pdl
+Last Modified: Apr 13 15:21 (BEFORE cyoa-engine was created on Apr 15 07:09)
+
+The loader_module.c daemon scans projects/ at startup and regenerates loader.pdl dynamically.
+It requires each project directory to contain a project.pdl file (line 68-72):
+
+    if (asprintf(&pdl_path, "%s/project.pdl", abs_p) != -1) {
+        if (access(pdl_path, F_OK) == 0) {
+            strncpy(projects[project_count++], entry->d_name, MAX_LINE - 1);
+        }
+        free(pdl_path);
+    }
+
+cyoa-engine/project.pdl EXISTS and is valid, but the loader_module daemon was started
+BEFORE cyoa-engine was created. The daemon caches the project list at startup and never
+re-scans. It must be RESTARTED to pick up new projects.
+
+Current loader.pdl contains 13 projects (404-test through user) — no cyoa-engine.
+
+#### ISSUE 2: Missing from project_routes.kvp (Secondary Cause)
+File: pieces/os/project_routes.kvp
+
+This file maps project names to layout paths for the LOAD_PROJECT command path.
+cyoa-engine is NOT listed. If loaded via the parser's LOAD_PROJECT command (rather than
+the loader_module daemon), it would show the 404.chtpm page.
+
+Current entries: op-ed, man-ops, man-pal, man-add, fuzz-op, demo_1, template, user,
+                 ai-labs, p2p-net, lsr, blank
+
+Missing: cyoa-engine, gitlet, 404-test, test_fondu
+
+### HOW EXISTING PROJECTS WORK (Code Standards)
+
+The system uses a PDL-based dynamic discovery pattern — NO hardcoded project lists.
+
+**Pattern 1: loader_module.c (Daemon-based, PRIMARY)**
+- Scans projects/ directory at startup
+- Filters: skips dotfiles, "trunk" archive, and dirs WITHOUT project.pdl
+- Regenerates loader.pdl with METHOD entries for each valid project
+- Reads entry_layout from project.pdl to switch layouts on load
+- Uses MODULAR FALLBACKS for legacy projects without entry_layout (lines 149-160):
+    - op-ed, template → projects/op-ed/layouts/op-ed.chtpm
+    - man-ops → pieces/apps/man-ops/layouts/man-ops.chtpm
+    - man-pal → pieces/apps/man-pal/layouts/man-pal.chtpm
+    - everything else → pieces/apps/playrm/layouts/game.chtpm
+
+**Pattern 2: project_loader.c (On-demand Op, SECONDARY)**
+- Two versions exist (playrm/ops/src/ and player_app/world/plugins/)
+- Scans projects/ at runtime (no restart needed)
+- Does NOT check for project.pdl (less strict than loader_module)
+- Generates tmp_projects.pdl, calls menu_op, writes to state.txt
+- player_app version reads entry_layout and writes to layout_changed.txt
+
+**Pattern 3: project_routes.kvp (Fallback routing)**
+- Used by LOAD_PROJECT command in parser
+- If project not listed → shows 404.chtpm
+- Should be kept in sync with actual projects
+
+### cyoa-engine PROJECT STATUS
+
+Directory: projects/cyoa-engine/
+project.pdl: EXISTS, valid (755 bytes, Apr 15 07:09)
+  - project_id: cyoa-engine
+  - entry_layout: projects/cyoa-engine/layouts/cyoa.chtpm
+  - exposes_ops: true
+  - Has: layouts/cyoa.chtpm, manager/, ops/, pieces/, books (symlink)
+
+The project is PROPERLY CONFIGURED. It follows the same PDL standard as op-ed and fuzz-op.
+
+### FIX REQUIRED
+
+**Option A: Restart loader_module daemon (RECOMMENDED)**
+    killall loader_module  # or find PID and kill
+    # Then restart via normal boot process
+
+The daemon will re-scan projects/, find cyoa-engine/project.pdl, and regenerate
+loader.pdl with cyoa-engine included. No code changes needed.
+
+**Option B: Add to project_routes.kvp (for LOAD_PROJECT command path)**
+Add this line to pieces/os/project_routes.kvp:
+    cyoa-engine=projects/cyoa-engine/layouts/cyoa.chtpm
+
+**Option C: Fix the hardcoded fallback in loader_module.c (NOT RECOMMENDED)**
+The user explicitly stated preference to NOT hardcode dynamic elements.
+The current modular fallback (lines 149-160) is a legacy compatibility layer.
+cyoa-engine has entry_layout in its PDL, so it will work without adding to fallbacks.
+
+### WHY op-ed AND fuzz-op WORK
+
+Both were created BEFORE the loader_module daemon was last started (Apr 13).
+They are in the stale loader.pdl file. They also have project.pdl files with
+proper structure. op-ed has entry_layout, fuzz-op does NOT (uses fallback).
+
+cyoa-engine follows the SAME pattern as op-ed (has entry_layout in PDL).
+It just wasn't there when the daemon last started.
+
+### ADDITIONAL NOTES
+
+- gitlet project also has project.pdl but is missing from loader.pdl (same stale file issue)
+- blank project is in project_routes.kvp but has NO project.pdl (would be skipped by loader_module)
+- 404-test and test_fondu are in loader.pdl but NOT in project_routes.kvp
+- The system has INCONSISTENT state across these three discovery mechanisms
+
+### RECOMMENDED LONG-TERM FIX
+
+1. Restart loader_module daemon → picks up cyoa-engine and gitlet automatically
+2. Add cyoa-engine to project_routes.kvp → ensures LOAD_PROJECT command works
+3. Consider removing hardcoded fallbacks from loader_module.c (lines 149-160)
+   since all projects should have entry_layout in their PDL
+4. Consider making loader_module re-scan periodically or on file change event
+   instead of only at startup
