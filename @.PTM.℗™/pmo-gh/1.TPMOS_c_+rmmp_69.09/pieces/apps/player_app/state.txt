@@ -1,7 +1,11 @@
-project_id=cyoa-engine
-app_title=RED WHITE AND U: CYOA PLAYER
-active_target_id=engine
-book_name=Select a Book
-page_num=0
-page_content=║  Please select a book from the menu below:      ║
-choices_content=║  Use Arrows to navigate, ENTER to select        ║
+project_id=op-ed
+active_target_id=common_event
+pal_editor_piece=common_event
+pal_editor_event=on_interact
+pal_editor_cursor=0
+pal_editor_instr_count=0
+instruction_list=op_palette=[0:addi] [1:beq] [2:lw] [3:sw] [4:j] [5:jalr] [6:halt] [7:sleep] 
+r0=0 r1=0 r2=0 r3=0
+r4=0 r5=0 r6=0 r7=0
+last_response=
+piece_methods=║  [1-9] Select Op  [A]dd  [D]el  [S]ave  [ESC]Back  ║

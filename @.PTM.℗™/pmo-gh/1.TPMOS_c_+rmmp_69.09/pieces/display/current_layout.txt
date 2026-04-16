@@ -1,1 +1,1 @@
-projects/cyoa-engine/layouts/cyoa.chtpm
+projects/op-ed/layouts/pal_editor.chtpm

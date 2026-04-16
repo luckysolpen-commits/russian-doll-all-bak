@@ -941,6 +941,19 @@ APRIL 5, 2026 — XLECTOR REFACTOR & RENDER CHAIN FIXES
 - FIX (Bounds): Use `count_navigable()` instead of hardcoded limits to bound digit accumulation so jumping to "11" or "15" works reliably.
 - TPM PRINCIPLE: "The user's eye is faster than your poll loop. Render immediately, execute decisively."
 
+92) EXTERNAL DATA PATH DRIFT (DATA_XL MANDATE)
+- SYMPTOM: Books or external project data fail to load when the workspace moves or changes version (e.g., c3 to c4).
+- ROOT CAUSE: Using absolute paths for external data sources or assuming fixed relative offsets that break during migration.
+- MANDATE: ALWAYS resolve `data_xl` dynamically in `run_orchestrator.sh` and write to `location_kvp`.
+- FIX: Implement a local `location.txt` in the project directory for relative overrides (e.g., `data_xl=../^.TPMOS_DATA_XL_67.00/books`).
+- FIX: Update the project manager to prioritize `location.txt` and correctly join it with `project_root`.
+
+93) DYNAMIC METHOD REFRESH (UI STALE ON PIECE UPDATE)
+- SYMPTOM: Dynamic methods (`${piece_methods}`) show "No Methods" or stale options even though the underlying `piece.pdl` has been updated by the manager.
+- ROOT CAUSE: The parser's `compose_frame()` only triggered a re-parse (`parse_chtm()`) when the `active_target_id` changed. If the active piece remained the same but its methods were updated (e.g., switching from "Book List" to "Page Choices" within the same `engine` piece), the UI would not reflect the changes.
+- FIX: Implement tracking of `last_methods_raw` in `compose_frame()`. If the content of the `piece_methods` variable changes, force a call to `parse_chtm()` and `initialize_focus()`.
+- RULE: Any change to the *content* of methods must trigger a re-parse of the layout to regenerate the interactive button elements.
+
 ================================================================================
 END OF NEW PITFALLS
 ================================================================================

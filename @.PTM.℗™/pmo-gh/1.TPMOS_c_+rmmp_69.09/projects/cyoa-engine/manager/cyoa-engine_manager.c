@@ -41,6 +41,9 @@ static volatile sig_atomic_t g_shutdown = 0;
 void handle_sigint(int sig) { (void)sig; g_shutdown = 1; }
 
 void resolve_paths() {
+    FILE *df = fopen("debug.txt", "a");
+    if (df) { fprintf(df, "MANAGER: resolve_paths called\n"); fclose(df); }
+
     // 1. Try local location.txt first for project-specific overrides
     FILE *loc = fopen("projects/cyoa-engine/location.txt", "r");
     if (loc) {
@@ -56,6 +59,8 @@ void resolve_paths() {
             }
         }
         fclose(loc);
+        df = fopen("debug.txt", "a");
+        if (df) { fprintf(df, "MANAGER: Read data_xl from location.txt: %s\n", data_xl_root); fclose(df); }
     }
 
     // 2. Read global location_kvp
@@ -71,7 +76,11 @@ void resolve_paths() {
                 v[strcspn(v, "\n\r")] = 0;
                 if (strcmp(k, "project_root") == 0) strncpy(project_root, v, MAX_PATH - 1);
                 // Only use data_xl from kvp if not already set by location.txt
-                if (strcmp(k, "data_xl") == 0 && data_xl_root[0] == '\0') strncpy(data_xl_root, v, MAX_PATH - 1);
+                if (strcmp(k, "data_xl") == 0 && data_xl_root[0] == '\0') {
+                    strncpy(data_xl_root, v, MAX_PATH - 1);
+                    df = fopen("debug.txt", "a");
+                    if (df) { fprintf(df, "MANAGER: Read data_xl from kvp: %s\n", data_xl_root); fclose(df); }
+                }
             }
         }
         fclose(kvp);
@@ -79,6 +88,8 @@ void resolve_paths() {
 
     if (data_xl_root[0] == '\0') {
         snprintf(data_xl_root, MAX_PATH, "%s/projects/cyoa-engine/books", project_root);
+        df = fopen("debug.txt", "a");
+        if (df) { fprintf(df, "MANAGER: data_xl defaulted to: %s\n", data_xl_root); fclose(df); }
     } else {
         // If it's a relative path starting with ../, it's relative to CWD
         // If it's an absolute path, we might still need to ensure /books is appended if it's pointing to the data root
@@ -94,6 +105,8 @@ void resolve_paths() {
             snprintf(tmp, MAX_PATH, "%s/books", data_xl_root);
             strncpy(data_xl_root, tmp, MAX_PATH - 1);
         }
+        df = fopen("debug.txt", "a");
+        if (df) { fprintf(df, "MANAGER: final data_xl_root: %s\n", data_xl_root); fclose(df); }
     }
 }
 
@@ -213,6 +226,8 @@ void write_mirror() {
 void resolve_books() {
     book_count = 0;
     DIR *dir = opendir(data_xl_root);
+    FILE *df = fopen("debug.txt", "a");
+    if (df) { fprintf(df, "MANAGER: resolve_books opendir(%s) -> %p\n", data_xl_root, dir); fclose(df); }
     if (!dir) return;
     struct dirent *entry;
     while ((entry = readdir(dir)) != NULL) {
@@ -220,6 +235,8 @@ void resolve_books() {
         if (book_count < MAX_BOOKS) {
             strncpy(books[book_count].name, entry->d_name, 127);
             snprintf(books[book_count].path, MAX_PATH, "%s/%s", data_xl_root, entry->d_name);
+            df = fopen("debug.txt", "a");
+            if (df) { fprintf(df, "MANAGER: Found book: %s\n", entry->d_name); fclose(df); }
             book_count++;
         }
     }

@@ -151,3 +151,536 @@ LOAD_PROJECT: name=cyoa-engine, found=1, current_layout=projects/cyoa-engine/lay
 [00:07:31] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1141454
 [00:07:31] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1141454
 [00:07:31] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1141454
+[00:16:38] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
+[00:16:38] PARSER: forked module pid=1144296
+[00:16:38] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1144296
+[00:16:38] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1144296
+[00:16:38] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1144296
+LOAD_PROJECT: name=cyoa-engine, found=1, current_layout=projects/cyoa-engine/layouts/cyoa.chtpm
+[00:16:40] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=-1
+[00:16:40] PARSER: forked module pid=1144307
+MANAGER: resolve_paths called
+MANAGER: Read data_xl from location.txt: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: final data_xl_root: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: resolve_books opendir(../^.TPMOS_DATA_XL_67.00/books) -> 0x58873cf31480
+MANAGER: Found book: book_3
+MANAGER: Found book: book_1
+MANAGER: Found book: book_0
+MANAGER: Found book: book_2
+[00:16:40] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1144307
+[00:16:40] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1144307
+[00:16:40] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1144307
+[00:23:09] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
+[00:23:09] PARSER: forked module pid=1146995
+[00:23:09] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1146995
+[00:23:09] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1146995
+[00:23:09] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1146995
+LOAD_PROJECT: name=cyoa-engine, found=1, current_layout=projects/cyoa-engine/layouts/cyoa.chtpm
+[00:23:11] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=-1
+[00:23:11] PARSER: forked module pid=1146997
+MANAGER: resolve_paths called
+MANAGER: Read data_xl from location.txt: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: final data_xl_root: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: resolve_books opendir(../^.TPMOS_DATA_XL_67.00/books) -> 0x62086bb86480
+MANAGER: Found book: book_3
+MANAGER: Found book: book_1
+MANAGER: Found book: book_0
+MANAGER: Found book: book_2
+[00:23:11] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1146997
+[00:33:46] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
+[00:33:46] PARSER: forked module pid=1150191
+[00:33:46] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1150191
+[00:33:46] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1150191
+[00:33:46] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1150191
+LOAD_PROJECT: name=cyoa-engine, found=1, current_layout=projects/cyoa-engine/layouts/cyoa.chtpm
+[00:33:48] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=-1
+[00:33:48] PARSER: forked module pid=1150193
+MANAGER: resolve_paths called
+MANAGER: Read data_xl from location.txt: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: final data_xl_root: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: resolve_books opendir(../^.TPMOS_DATA_XL_67.00/books) -> 0x61a40c84c480
+MANAGER: Found book: book_3
+MANAGER: Found book: book_1
+MANAGER: Found book: book_0
+MANAGER: Found book: book_2
+[00:33:48] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1150193
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[00:48:36] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
+[00:48:36] PARSER: forked module pid=1154498
+[00:48:36] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1154498
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[00:48:36] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1154498
+[00:48:36] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1154498
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+LOAD_PROJECT: name=cyoa-engine, found=1, current_layout=projects/cyoa-engine/layouts/cyoa.chtpm
+PARSER: resolve_dynamic_pdl_path(active_id=hero, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/hero/piece.pdl
+PARSER: Failed to resolve PDL for hero
+PARSER: fopen failed for path: NULL
+[00:48:38] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=-1
+[00:48:38] PARSER: forked module pid=1154500
+MANAGER: resolve_paths called
+MANAGER: Read data_xl from location.txt: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: final data_xl_root: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: resolve_books opendir(../^.TPMOS_DATA_XL_67.00/books) -> 0x600ccffa2480
+MANAGER: Found book: book_3
+MANAGER: Found book: book_1
+MANAGER: Found book: book_0
+MANAGER: Found book: book_2
+[00:48:38] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1154500
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[01:14:10] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
+[01:14:10] PARSER: forked module pid=1159900
+[01:14:10] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1159900
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[01:14:10] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1159900
+[01:14:10] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1159900
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+LOAD_PROJECT: name=cyoa-engine, found=1, current_layout=projects/cyoa-engine/layouts/cyoa.chtpm
+PARSER: resolve_dynamic_pdl_path(active_id=hero, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/hero/piece.pdl
+PARSER: Failed to resolve PDL for hero
+PARSER: fopen failed for path: NULL
+[01:14:12] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=-1
+[01:14:12] PARSER: forked module pid=1159902
+MANAGER: resolve_paths called
+MANAGER: Read data_xl from location.txt: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: final data_xl_root: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: resolve_books opendir(../^.TPMOS_DATA_XL_67.00/books) -> 0x590c21b5a480
+MANAGER: Found book: book_3
+MANAGER: Found book: book_1
+MANAGER: Found book: book_0
+MANAGER: Found book: book_2
+[01:14:12] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1159902
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[01:20:18] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
+[01:20:18] PARSER: forked module pid=1161780
+[01:20:18] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1161780
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[01:20:18] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1161780
+[01:20:18] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1161780
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+LOAD_PROJECT: name=cyoa-engine, found=1, current_layout=projects/cyoa-engine/layouts/cyoa.chtpm
+PARSER: resolve_dynamic_pdl_path(active_id=hero, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/hero/piece.pdl
+PARSER: Failed to resolve PDL for hero
+PARSER: fopen failed for path: NULL
+[01:20:20] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=-1
+[01:20:20] PARSER: forked module pid=1161792
+MANAGER: resolve_paths called
+MANAGER: Read data_xl from location.txt: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: final data_xl_root: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: resolve_books opendir(../^.TPMOS_DATA_XL_67.00/books) -> 0x562280927480
+MANAGER: Found book: book_3
+MANAGER: Found book: book_1
+MANAGER: Found book: book_0
+MANAGER: Found book: book_2
+[01:20:20] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1161792
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+[01:20:20] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1161792
+[01:20:20] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1161792
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+[01:20:22] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1161792
+[01:20:22] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1161792
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+[01:20:27] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1161792
+[01:20:27] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1161792
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[01:22:29] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
+[01:22:29] PARSER: forked module pid=1162314
+[01:22:29] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1162314
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[01:22:29] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1162314
+[01:22:29] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1162314
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+LOAD_PROJECT: name=cyoa-engine, found=1, current_layout=projects/cyoa-engine/layouts/cyoa.chtpm
+PARSER: resolve_dynamic_pdl_path(active_id=hero, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/hero/piece.pdl
+PARSER: Failed to resolve PDL for hero
+PARSER: fopen failed for path: NULL
+[01:22:31] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=-1
+[01:22:31] PARSER: forked module pid=1162317
+MANAGER: resolve_paths called
+MANAGER: Read data_xl from location.txt: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: final data_xl_root: ../^.TPMOS_DATA_XL_67.00/books
+MANAGER: resolve_books opendir(../^.TPMOS_DATA_XL_67.00/books) -> 0x5dfa74ca9480
+MANAGER: Found book: book_3
+MANAGER: Found book: book_1
+MANAGER: Found book: book_0
+MANAGER: Found book: book_2
+[01:22:31] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1162317
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+[01:22:31] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1162317
+[01:22:31] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1162317
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 6 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+[01:22:34] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1162317
+[01:22:34] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1162317
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 5 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 5 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+[01:22:38] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1162317
+[01:22:38] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1162317
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 5 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 5 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+[01:22:43] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1162317
+[01:22:43] PARSER: launch_module(projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x) pid=1162317
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=engine, project_id=cyoa-engine)
+PARSER: Resolved PDL: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: Finished reading PDL. Found 4 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/engine/piece.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=selector, project_id=)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects//pieces/selector/piece.pdl
+PARSER: Failed to resolve PDL for selector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[01:51:49] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=0
+[01:51:49] PARSER: forked module pid=1169223
+[01:51:49] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1169223
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+[01:51:49] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1169223
+[01:51:49] PARSER: launch_module(pieces/apps/playrm/loader/plugins/+x/loader_module.+x) pid=1169223
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+PARSER: resolve_dynamic_pdl_path(active_id=loader, project_id=cyoa-engine)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/cyoa-engine/pieces/loader/piece.pdl
+PARSER: Finished reading PDL. Found 16 methods. Path: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/pieces/apps/playrm/loader/loader.pdl
+LOAD_PROJECT: name=op-ed, found=1, current_layout=projects/op-ed/layouts/op-ed.chtpm
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL
+[01:51:52] PARSER: launch_module(projects/op-ed/manager/+x/op-ed_manager.+x) pid=-1
+[01:51:52] PARSER: forked module pid=1169236
+[01:51:52] PARSER: launch_module(projects/op-ed/manager/+x/op-ed_manager.+x) pid=1169236
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL
+[01:51:52] PARSER: launch_module(projects/op-ed/manager/+x/op-ed_manager.+x) pid=1169236
+[01:51:52] PARSER: launch_module(projects/op-ed/manager/+x/op-ed_manager.+x) pid=1169236
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL
+[01:51:54] PARSER: launch_module(projects/op-ed/manager/+x/pal_editor_module.+x) pid=1169236
+[01:51:54] PARSER: forked module pid=1169252
+[01:51:54] PARSER: launch_module(projects/op-ed/manager/+x/pal_editor_module.+x) pid=1169252
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL
+PARSER: resolve_dynamic_pdl_path(active_id=xlector, project_id=op-ed)
+PARSER: Checked path failed: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+18/SP.all-writeez28-b2/#.1-13.sp.redwhiteandU]c4/1.TPMOS_c_+rmmp_69.09/projects/op-ed/pieces/xlector/piece.pdl
+PARSER: Failed to resolve PDL for xlector
+PARSER: fopen failed for path: NULL

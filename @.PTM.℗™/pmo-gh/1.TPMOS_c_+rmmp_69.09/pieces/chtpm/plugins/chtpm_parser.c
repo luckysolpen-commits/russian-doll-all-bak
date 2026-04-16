@@ -79,6 +79,7 @@ typedef struct {
 
 char current_layout[MAX_PATH] = "pieces/chtpm/layouts/os.chtpm";
 char last_active_id[64] = "";
+char last_methods_raw[MAX_VAR_VALUE] = "";
 int focus_index = 0; int active_index = -1; 
 int element_count = 0; UIElement elements[MAX_ELEMENTS];
 char nav_buffer[512] = {0};
@@ -288,9 +289,16 @@ static char* resolve_dynamic_pdl_path(const char* active_id) {
     char *path = NULL;
     const char *project_id = get_var("project_id");
 
+    FILE *df = fopen("debug.txt", "a");
+    if (df) { fprintf(df, "PARSER: resolve_dynamic_pdl_path(active_id=%s, project_id=%s)\n", active_id, project_id); fclose(df); }
+
     /* 1) Project piece.pdl (canonical) */
     asprintf(&path, "%s/projects/%s/pieces/%s/piece.pdl", project_root_path, project_id, active_id);
-    if (path && access(path, F_OK) == 0) return path;
+    if (path && access(path, F_OK) == 0) {
+        if (df) { df = fopen("debug.txt", "a"); fprintf(df, "PARSER: Resolved PDL: %s\n", path); fclose(df); }
+        return path;
+    }
+    if (df) { df = fopen("debug.txt", "a"); fprintf(df, "PARSER: Checked path failed: %s\n", path); fclose(df); }
     free(path);
 
     /* 2) Project <piece_id>.pdl (legacy variant) */
@@ -320,6 +328,8 @@ static char* resolve_dynamic_pdl_path(const char* active_id) {
     asprintf(&path, "%s/pieces/%s/%s.pdl", project_root_path, active_id, active_id);
     if (path && access(path, F_OK) == 0) return path;
     free(path);
+    
+    if (df) { df = fopen("debug.txt", "a"); fprintf(df, "PARSER: Failed to resolve PDL for %s\n", active_id); fclose(df); }
     return NULL;
 }
 
@@ -355,13 +365,17 @@ void load_dynamic_methods(const char* active_id) {
     
     FILE *f = fopen(path, "r");
     if (!f) { 
+        FILE *df = fopen("debug.txt", "a");
+        if (df) { fprintf(df, "PARSER: fopen failed for path: %s\n", path ? path : "NULL"); fclose(df); }
         free(path); set_var("piece_methods", "[No Methods]"); free(methods_buf);
         return; 
     }
     char line[MAX_LINE]; 
+    int method_count = 0;
     int method_idx = (strcmp(active_id, "loader") == 0) ? 1 : 2;
     while (fgets(line, sizeof(line), f)) {
         if (strncmp(line, "METHOD", 6) == 0) {
+            method_count++;
             char *key_start = strchr(line, '|'); if (!key_start) continue;
             key_start++; char *val_start = strchr(key_start, '|'); if (!val_start) continue;
             
@@ -392,7 +406,10 @@ void load_dynamic_methods(const char* active_id) {
             }
         }
     }
-    fclose(f); free(path);
+    fclose(f); 
+    FILE *df = fopen("debug.txt", "a");
+    if (df) { fprintf(df, "PARSER: Finished reading PDL. Found %d methods. Path: %s\n", method_count, path); fclose(df); }
+    free(path);
     if (strlen(methods_buf) == 0) set_var("piece_methods", "[No Methods]");
     else set_var("piece_methods", methods_buf);
     free(methods_buf);
@@ -434,7 +451,8 @@ bool is_modern_layout(const char* layout) {
             strstr(layout, "fuzz-op") != NULL || strstr(layout, "op-ed") != NULL ||
             strstr(layout, "desktop") != NULL || strstr(layout, "user") != NULL ||
             strstr(layout, "ai-labs") != NULL || strstr(layout, "p2p-net") != NULL ||
-            strstr(layout, "lsr") != NULL || strstr(layout, "blank") != NULL);
+            strstr(layout, "lsr") != NULL || strstr(layout, "blank") != NULL ||
+            strstr(layout, "cyoa") != NULL);
 }
 
 void load_vars() {
@@ -572,6 +590,11 @@ void load_vars() {
                 }
             }
         }
+    }
+    else if (strcmp(proj_id, "cyoa-engine") == 0) {
+        set_var("module_path", "projects/cyoa-engine/manager/+x/cyoa-engine_manager.+x");
+        set_var("active_layout_id", "projects/cyoa-engine/layouts/cyoa.chtpm");
+        load_state_file("pieces/apps/player_app/state.txt", NULL);
     }
     // ── GENERIC PROJECT RESOLUTION: Read from project.pdl or construct from convention ──
     else if (strlen(proj_id) > 0 && strcmp(proj_id, "template") != 0) {
@@ -1244,7 +1267,18 @@ void render_element(int idx, char* frame, int* p_current_interactive) {
 void compose_frame() {
     load_vars();
     const char* active_id = get_var("active_target_id");
-    if (strcmp(active_id, last_active_id) != 0) { strncpy(last_active_id, active_id, 63); parse_chtm(); initialize_focus(); }
+    const char* methods_raw = get_var("piece_methods");
+
+    bool active_changed = (strcmp(active_id, last_active_id) != 0);
+    bool methods_changed = (strcmp(methods_raw, last_methods_raw) != 0);
+
+    if (active_changed || methods_changed) {
+        if (active_changed) strncpy(last_active_id, active_id, 63);
+        if (methods_changed) strncpy(last_methods_raw, methods_raw, MAX_VAR_VALUE - 1);
+
+        parse_chtm(); 
+        initialize_focus(); 
+    }
 
     export_active_index();
 
