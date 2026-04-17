@@ -1,0 +1,90 @@
+# Joystick Fix Investigation
+
+## Problem Description
+The joystick functionality is lost in the terminal, a recurring issue that appears after agent modifications. The system fails to open `/dev/input/js0` and the `input_focus.lock` file prevents input processing. The issue persists even after applying cleanup steps to `run_orchestrator.sh`.
+
+## Findings
+
+### 1. Missing Device: `/dev/input/js0`
+The system does not have `/dev/input/js0` or any other `/dev/input/js*` devices. The `joystick_input.c` module explicitly tries to open `/dev/input/js0`. This explains why the `[ERROR] Could not open joystick device: /dev/input/js0` is consistently logged. This is the fundamental reason for the joystick being unresponsive.
+
+### 2. Stale `input_focus.lock` File (Addressed)
+The `run_orchestrator.sh` script previously did not clear the `pieces/apps/gl_os/session/input_focus.lock` file. This file, if present, causes the `joystick_input.c` module to skip all input processing. This issue has been addressed by updating `run_orchestrator.sh` to remove this lock file on startup.
+
+### 3. Un-cleared `joystick/ledger.txt` (Addressed)
+The `run_orchestrator.sh` script also failed to clear `pieces/joystick/ledger.txt`. This has been addressed by updating `run_orchestrator.sh` to clear this log file.
+
+### 4. Missing `pal_watchdog.sh` Launch
+The old `run_chtpm.sh` script explicitly launched `pal_watchdog.sh`. The new `run_orchestrator.sh` does not. This is a change in the startup pipeline that might affect overall system stability or process management.
+
+## Detailed Code Comparison: `joystick_input.c`
+
+A detailed comparison of `TPPOS_c_+rmmp_52.00/pieces/joystick/plugins/joystick_input.c` (legacy) and `1.TPPOS_c_+rmmp_69.09/pieces/joystick/plugins/joystick_input.c` (current) reveals the following:
+
+*   **Core Logic Identical:** The fundamental logic for attempting to open `/dev/input/js0` and process joystick events is identical in both versions.
+*   **Minor Differences:** The primary differences are:
+    *   **`gl_os_has_focus` Implementation:** The current version uses `asprintf` for safer dynamic memory allocation for the lock file path, while the legacy version used a fixed-size buffer. This change is unlikely to impact device opening.
+    *   **Comments and Clarity:** The current version includes more extensive comments regarding platform compatibility (macOS/Windows vs. Linux), the TPM isolation protocol, and the date of notes (April 2, 2026).
+
+**Conclusion from `joystick_input.c` Comparison:**
+The `joystick_input.c` module itself does not appear to be the source of the discrepancy in joystick functionality between the legacy and current versions. The code responsible for attempting to open `/dev/input/js0` is the same, and neither version includes logic to handle the absence of this device gracefully or to use a fallback. This reinforces the theory that the difference must lie in the system's startup process, environment setup, or external factors managed by the scripts.
+
+## Detailed Script Comparison: Legacy vs. Current Startup
+
+A diff between `TPMOS_c_+rmmp_52.00/run_chtpm.sh` (legacy) and `1.TPPOS_c_+rmmp_69.09/pieces/buttons/shared/run_orchestrator.sh` (current) reveals key differences in their approach to system initialization and cleanup, which are highly relevant to the joystick issue.
+
+### Key Differences:
+
+1.  **Cleanup Routines:**
+    *   **Legacy (`run_chtpm.sh`):** Relies on `./kill_all.sh`, which performs comprehensive cleanup. This includes resetting entities, clearing numerous ledger/history files (specifically `pieces/joystick/ledger.txt`), and critically, removing input focus locks (`rm -f pieces/apps/gl_os/session/input_focus.lock`).
+    *   **Current (`run_orchestrator.sh`):** Performs targeted `pkill` commands and manually clears a limited set of state files. It **does not** call `./kill_all.sh` and **does not** explicitly remove `pieces/apps/gl_os/session/input_focus.lock` or clear `pieces/joystick/ledger.txt`. This omission is a direct cause of persistent input blocking and stale error logs.
+
+2.  **`project_root` Determination:**
+    *   **Legacy:** Sets `project_root=${SCRIPT_DIR}`, where `SCRIPT_DIR` is derived from `run_chtpm.sh`'s location (at the root).
+    *   **Current:** Sets `project_root=${POSIX_PATH}` where `POSIX_PATH="$(pwd)"` after `cd "$PROJECT_ROOT"`. `PROJECT_ROOT` is resolved relative to `run_orchestrator.sh`'s location. A new path `data_xl` is also included in `location_kvp`.
+
+3.  **Process Management & Watchdog:**
+    *   **Legacy:** Calls `./kill_all.sh`, then launches `pal_watchdog.sh` in the background, and finally `exec`s the orchestrator.
+    *   **Current:** Performs `pkill` operations for specific process patterns, kills `pal_watchdog.sh`, clears some state files, but **does not** relaunch `pal_watchdog.sh`.
+
+### Implications for Joystick Functionality:
+
+*   The absence of comprehensive cleanup in `run_orchestrator.sh` (specifically clearing `input_focus.lock` and `joystick/ledger.txt`) directly contributes to the joystick's unresponsiveness. Even if the device were present, the stale lock file would prevent input processing.
+*   The legacy system's extensive cleanup might have ensured a cleaner state that was more compatible with its joystick handling, potentially masking the issue of a missing `/dev/input/js0` or interacting differently with the system's device detection.
+
+### Analysis of `chtpm_parser.c` (Current Version)
+
+I have analyzed the current `chtpm_parser.c`. It defines joystick codes and is involved in processing/routing input events, writing to history/ledger. However, it does **not** appear to be the component that directly reads raw input from the joystick device (`/dev/input/js0`). That responsibility lies with `joystick_input.c`. The parser seems to process normalized key codes or injected events, rather than being the primary receiver of raw device input.
+
+### Theories for Discrepancy (Legacy `52.00` vs. Current `69.09`):
+
+The core contradiction remains: the joystick allegedly worked in the legacy version (`52.00`) despite `/dev/input/js0` being absent on the current system. This suggests the legacy version had a mechanism to function without a physical device or under different conditions.
+
+1.  **Different Device Handling in Legacy Version:** The legacy `TPMOS_c_+rmmp_52.00` might have had a different implementation of `joystick_input.c` or associated scripts that either:
+    *   Used a different device path (e.g., `/dev/input/js1`).
+    *   Implemented a fallback mechanism or virtual joystick simulation when `/dev/input/js0` was not found.
+    *   Was tested on a system where `/dev/input/js0` was available, or a virtual device was set up.
+2.  **Startup Script Differences:** The legacy startup scripts (`run_chtpm.sh`, `kill_all.sh`) might have performed system-level setup (e.g., initializing a joystick driver or virtual device) that is now missing in the new `run_orchestrator.sh`. The extensive cleanup in `kill_all.sh` might have also reset or prepared system states in a way that was conducive to joystick operation.
+3.  **Environmental Differences:** The legacy version might have been run in a different environment (e.g., a container, VM, or with specific user permissions) that affected device accessibility.
+
+## Proposed Solution
+
+### 1. Address Missing `/dev/input/js0` Device
+Since `/dev/input/js0` does not exist, the `joystick_input.c` module will always fail to open the device. To address this fundamental issue:
+    -   **Option A (Ideal but complex):** Implement a fallback or a virtual joystick simulation if no physical device is found. This would require significant code changes to `joystick_input.c`.
+    -   **Option B (Workaround):** For now, the focus remains on ensuring the system doesn't crash and other input methods work. The joystick will remain non-functional until a physical device is available or a virtual joystick is implemented. The critical fix was to prevent the `input_focus.lock` issue from blocking other inputs.
+
+### 2. Re-introduce `pal_watchdog.sh` Launch
+Consider re-adding the explicit launch of `pal_watchdog.sh` in `run_orchestrator.sh` for improved system stability, though this is secondary to restoring joystick input.
+
+## Action Plan
+
+1.  **Document Findings:** `joy-fix.txt` now contains the current status, theories, and proposed solutions. (Completed)
+2.  **Update `run_orchestrator.sh`:** Added commands to remove `input_focus.lock` and clear `joystick/ledger.txt`. (Completed)
+3.  **Detailed Code Comparison:** Performed a line-by-line comparison of `joystick_input.c` files. No significant differences found in device handling. (Completed)
+4.  **Analyze Legacy Startup Scripts:** Compared `run_chtpm.sh` and `run_orchestrator.sh`, identifying key differences in cleanup, environment setup, and watchdog launch. (Completed)
+5.  **Analyze `chtpm_parser.c`:** Analyzed current `chtpm_parser.c`. It defines joystick codes but doesn't read raw device input. Legacy parser content unavailable for direct comparison. (Completed analysis of current, noted lack of legacy comparison).
+6.  **Investigate Virtual Joystick Possibility:** This remains a key area for further investigation based on the discrepancy.
+7.  **Re-evaluate `pal_watchdog.sh` launch:** Decide if its re-introduction is necessary.
+
+This plan aims to systematically uncover why the joystick worked in the legacy version despite the missing device, and to implement a more robust solution for joystick handling in the current version.

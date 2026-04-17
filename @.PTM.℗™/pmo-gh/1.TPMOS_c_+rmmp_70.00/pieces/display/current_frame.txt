@@ -1,0 +1,20 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║           4 0 4   P R O J E C T   N O T   F O U N D      ║
+║                                                           ║
+║  The requested project could not be loaded.               ║
+║                                                           ║
+║  Project ID: aow                                ║
+║                                                           ║
+║  Possible reasons:                                        ║
+║  • Project does not exist                                 ║
+║  • project_routes.kvp entry is missing                    ║
+║  • Layout file path is incorrect                          ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  [>] 1. [Back to Project Loader]                  ║
+║  [ ] 2. [Back to Main Menu]                          ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _

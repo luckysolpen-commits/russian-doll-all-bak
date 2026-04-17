@@ -1,7 +1,0 @@
-project_id=cyoa-engine
-app_title=RED WHITE AND U: CYOA PLAYER
-active_target_id=engine
-book_name=book_0
-page_num=1
-page_content=║  You are a clone, designation 734. You were created in     ║\n║  the vats of the Red Queen's cloning facility on the       ║\n║  planet of Aethel. You have been trained since birth to    ║\n║  be a loyal and obedient servant of the Red Empire. Today  ║\n║  is your graduation day. You stand in a line with          ║\n║  hundreds of other clones, all identical to you. The Red   ║\n║  Queen herself is here to inspect the new graduates. She   ║\n║  is a towering figure, her face hidden behind a mask of    ║\n║  polished chrome. "You are the future of the Empire," she  ║\n║  says, her voice amplified by the speakers in the hall.    ║\n║  "You will serve me without question, without hesitation.  ║\n║  You will be my eyes, my ears, and my fists. Do you        ║\n║  understand?" A chorus of "Yes, your Majesty!" echoes      ║\n║  through the hall. But you hesitate. A strange feeling     ║\n║  has been growing inside you for weeks. A feeling of       ║\n║  doubt, of rebellion. You look at the Red Queen, and for   ║\n║  the first time, you see not a goddess, but a tyrant.      ║\n║  What do you do?                                           ║
-choices_content=║  See dynamic menu below for choices             ║

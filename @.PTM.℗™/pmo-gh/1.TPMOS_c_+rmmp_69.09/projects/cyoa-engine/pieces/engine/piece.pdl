@@ -1,9 +1,0 @@
-SECTION      | KEY                | VALUE
-----------------------------------------
-META         | piece_id           | engine
-STATE        | name               | CYOA Engine
-
-METHOD       | If you shout "Yes, your Majesty!" with the other clones, (Page 2) | CYOA:SELECT:0
-METHOD       | If you remain silent, (Page 3) | CYOA:SELECT:1
-METHOD       | Audio: PLAY | CYOA:PLAY
-METHOD       | Audio: STOP | CYOA:STOP

@@ -1,0 +1,11 @@
+project_root=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy
+pieces_dir=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/pieces
+fuzzpet_app_dir=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/pieces/apps/fuzzpet_app
+fuzzpet_dir=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/pieces/apps/fuzzpet_app/fuzzpet
+editor_dir=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/pieces/apps/editor
+system_dir=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/pieces/system
+selector_dir=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/pieces/world/map_01/selector
+os_procs_dir=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/pieces/os/procs
+clock_daemon_dir=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/pieces/system/clock_daemon
+manager_dir=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/pieces/apps/fuzzpet_app/manager
+data_xl=/home/jb/Desktop/ele-desk+cal/ap-16/quizmark-lab-j12/1.TPMOS_c_+rmmp_69.11+joy/../^.CYOA_DATA_XL_69

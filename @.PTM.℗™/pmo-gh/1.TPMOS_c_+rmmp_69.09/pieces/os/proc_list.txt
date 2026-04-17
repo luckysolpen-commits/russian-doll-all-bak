@@ -1,8 +1,0 @@
-1195041 orchestrator
-1195058 keyboard_input
-1195062 response_handler
-1195060 joystick_input
-1195063 chtpm_parser
-1195072 renderer
-1195075 clock_daemon
-1195074 gl_renderer
