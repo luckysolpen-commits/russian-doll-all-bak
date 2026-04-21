@@ -1,0 +1,25 @@
+/* +-demo.chtpm Layout */
+<panel>
+    <text label="╔═══════════════════════════════════════════════════════════╗" /><br/>
+    <text label="║                  +-DEMO PROJECT NAVIGATOR                   ║" /><br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    
+    <text label="║ Project Root: ${project_root}                    ║" /><br/>
+    <text label="║ Current Project: ${project_id}                   ║" /><br/>
+    <text label="║ Active Target: ${active_target_id}                 ║" /><br/>
+    <text label="║ Last Key: ${last_key}                              ║" /><br/>
+    <text label="║ Selected Item: ${selected_index}                   ║" /><br/>
+
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    
+    <!-- Directory listing will be substituted here -->
+    <text label="${directory_listing}" /><br/>
+    
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║ Controls:                                                 ║" /><br/>
+    <text label="║  Arrows: Navigate | ENTER: Expand/Collapse/Select  ║" /><br/>
+    <text label="║  ESC: Back/Cancel                                       ║" /><br/>
+    <text label="╚═══════════════════════════════════════════════════════════╝" /><br/>
+</panel>
+
+<text label="Nav > ${nav_buffer}" /><br/>

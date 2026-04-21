@@ -1,0 +1,21 @@
+<panel time_reactive="true">
+    <module>projects/mp3-store/manager/+x/mp3_store_manager.+x</module>
+    <interact src="pieces/apps/player_app/history.txt" />
+    
+    <text label="╔═══════════════════════════════════════════════════════════╗" /><br/>
+    <text label="║              MP3 STORE PLAYER                             ║" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="║ Current Directory: ${current_directory}               ║" /><br/>
+    <text label="║ Currently Playing: ${current_file}                   ║" /><br/>
+║ Last Key Pressed: ${last_key} ║<br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    
+    <!-- Directory listing will be substituted here -->
+    <text label="${directory_listing}" /><br/>
+    
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║ Controls:                                                 ║" /><br/>
+    <text label="║  Arrows: Navigate | ENTER: Open | ESC: Back/Menu         ║" /><br/>
+    <text label="║  (Later: Play/Pause keys)                                 ║" /><br/>
+    <text label="╚═══════════════════════════════════════════════════════════╝" /><br/>
+</panel>

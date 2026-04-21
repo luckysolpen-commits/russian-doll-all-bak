@@ -1,7 +1,0 @@
-project_id=cyoa-engine
-app_title=RED WHITE AND U: CYOA PLAYER
-active_target_id=engine
-book_name=1.fuzpet-lab-cyoa
-page_num=3
-page_content=║  You cautiously venture into the dense jungle, the thick   ║\n║  canopy immediately swallowing the sunlight. Strange       ║\n║  chirps and rustles echo around you, amplifying your       ║\n║  disorientation. The air grows humid and heavy. You push   ║\n║  aside large, unfamiliar leaves and step over gnarled      ║\n║  roots, a primal instinct urging you deeper. After a       ║\n║  short while, you hear a faint, rhythmic sound —         ║\n║  perhaps the distant crash of waves, or something else     ║\n║  entirely. It seems to be coming from deeper within the    ║\n║  verdant maze. What do you do?                             ║
-choices_content=║  See dynamic menu below for choices             ║

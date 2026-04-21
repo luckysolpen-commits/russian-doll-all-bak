@@ -1,0 +1,19 @@
+# Standup Report - April 20, 2026
+# Project: MP3 Store
+
+## 1. Status Review
+- **Current State:** Tree-view navigation implemented and standardized.
+- **Achievements:**
+    - Updated `CHTPM_TPM_DOX+1.md` with standardized Navigation & Tree View patterns (markers: `[>]`, `[ ]`, `[+]`, `[-]`).
+    - Refactored `mp3_store_manager.c` to support hierarchical directory expansion/collapsing.
+    - Standardized UI markers across the MP3 Store application to match Project Loader and ecosystem conventions.
+    - Verified compilation of the manager.
+
+## 2. Alignment with KPIs & Goals
+- **Goal 1 (Core ASCII Player & Navigation):** 100% complete for MVP navigation.
+- **Goal 2 (Playlist Management):** Next priority.
+
+## 3. Next Actions
+1. Implement basic playlist creation logic (saving selected files to a `.m3u` or similar piece).
+2. Explore search functionality integration.
+3. Validate "expand/collapse" feel with actual music directory structures.

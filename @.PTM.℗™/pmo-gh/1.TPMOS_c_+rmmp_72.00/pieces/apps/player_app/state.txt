@@ -1,0 +1,8 @@
+project_id=mp3-store
+app_title=MP3 Store Player
+active_target_id=engine
+book_name=castle-webbot
+page_num=1
+page_content=║  You are an ancient, unusually intelligent cellar spider   ║\n║  (Pholcus phalangioides) living in the molding of the      ║\n║  grand Castle Aethelgard. You awaken from a deep slumber,  ║\n║  your many eyes adjusting to the dim light filtering       ║\n║  through the ancient stonework. The last thing you         ║\n║  remember is the faint, rhythmic thrumming of activity     ║\n║  from the world outside your silken home. Now, a new       ║\n║  cacophony has begun – the heavy groaning of castle      ║\n║  gates, the thunder of hooves, and the distant murmur of   ║\n║  excited voices. The castle is alive with activity, a new  ║\n║  era of secrets and stories about to unfold. Your silken   ║\n║  threads quiver with anticipation. Hydration: 8/10         ║\n║  (Slightly parched) Silk Reserves: 9/10 (Abundant) Intel:  ║\n║  2/10 (Aware of general activity) What do you do?          ║
+choices_content=║  See dynamic menu below for choices             ║
+emoji_mode=OFF

@@ -1,0 +1,19 @@
+
+
+
+this works. even has visualizer in .c 
+
+
+now we want it in tpm (opens parent dirs . expands if pressed 2 more dirs &| files)@chara
+
+< make is with ops, make it as a project> 
+
+(later can add search and later visualizer in map area. )
+
+only ascii for now. we will do gl later in gl-os (soon) 
+
+
+
+this is even realer app than cyoa. literally deliverable. user friendly. pmf how? 
+retention = their songs/fs in the app tbh . (vc-coffee) 
+(monetize = ads like itunes) 

@@ -1,0 +1,29 @@
+## Findings on Directory Traversal Bugs (as of April 20, 2026)
+
+**Summary:**
+Directory traversal vulnerabilities have been identified within the 'chtpm' and 'tpmos' standards, with a strong indication that these issues are related to new UI features. The 'op-ed' project provides some context for path handling, though direct code analysis has been challenging due to tool timeouts.
+
+**Key Observations:**
+
+1.  **Project Structure and Path Handling:**
+    *   The `pieces/buttons/linux/run.sh` script sets the `PROJECT_ROOT` to the workspace root and then executes `run_orchestrator.sh`.
+    *   The `projects/op-ed/manager/pal_editor_module.c.bak` file demonstrates path construction using `asprintf`, `project_root`, `current_project`, `active_piece`, and `active_event`.
+    *   Paths are constructed for `.asm` files, `.pdl` files, response logs, state files, and layout files.
+    *   The `mkdir` function is used with permissive `0777` permissions.
+
+2.  **Potential Vulnerability Vectors:**
+    *   **Unsanitized Inputs:** The primary risk lies in how `current_project`, `active_piece`, `active_event`, and potentially `project_root` (if influenced by `location_kvp` or `state.txt` which may be externally modifiable) are populated. If these can contain malicious input (e.g., `../../etc/passwd`), path construction could lead to traversal.
+    *   **Permissive Permissions:** The use of `mkdir` with `0777` permissions could allow unauthorized access or modification if a traversal allows creation in unintended directories.
+    *   **New UI Features:** The connection to new UI features suggests that user interactions or data displayed/processed by the UI might be used in path constructions without adequate validation.
+
+**Current Status:**
+*   Direct code analysis of the full codebase has been hampered by tool timeouts.
+*   The `op-ed` project's path handling in `pal_editor_module.c.bak` provides a model for how paths are constructed, highlighting potential risks.
+
+**Next Steps Recommended (General Strategy):**
+1.  **Investigate Data Source Control:** Determine if `projects/op-ed/manager/state.txt` and `pieces/locations/location_kvp` are subject to external modification.
+2.  **Implement Robust Path Sanitization:**
+    *   Validate and sanitize all inputs (`current_project`, `active_piece`, `active_event`, etc.) before using them in path construction. Reject or normalize malicious characters (e.g., `..`, `/`, ``).
+    *   Ensure resolved paths stay within the intended base directory (`PROJECT_ROOT`).
+    *   Use more restrictive permissions for `mkdir` if paths are user-influenced.
+3.  **Enhance Testing:** Develop unit and integration tests specifically for directory traversal scenarios, using inputs like `../../etc/passwd` and checking if the system prevents access.

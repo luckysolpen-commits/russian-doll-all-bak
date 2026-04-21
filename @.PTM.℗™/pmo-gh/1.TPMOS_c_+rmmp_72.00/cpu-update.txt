@@ -1,0 +1,48 @@
+# Plan: CHTPM Process Management Investigation - Orchestrator Child Process Analysis
+
+This plan details the investigation into how CHTPM processes are managed, specifically focusing on the orchestrator's role in creating and attempting to terminate child processes. This analysis is based on the provided C source code for the orchestrator (`orchestrator.+x`) and previous command outputs.
+
+## Understanding Process Management & Termination:
+
+*   **Ctrl+C (SIGINT):** Standard interrupt signal for graceful shutdown. CHTPM aims to handle this.
+*   **`./button.sh kill`:** A user-facing wrapper that initiates a shutdown sequence, likely by calling or mimicking `./pieces/os/kill_all.sh`.
+*   **`./pieces/os/kill_all.sh`:** The primary script for surgical cleanup, utilizing `pkill -f` with specific patterns.
+*   **`pkill` Usage:** Used in termination scripts for targeting processes by path and name.
+*   **`kill` Command:** Used for process management and as a fallback in various scripts.
+
+## Orchestrator C Code Analysis (`orchestrator.+x`):
+
+*   **Process Creation:** The C code reveals that the orchestrator uses `fork()` (on Linux/macOS) and `_spawnl(_P_DETACH, ...)` (on Windows) to launch child processes for components like keyboard input, joystick input, response handler, renderer, GL renderer, clock daemon, and chtpm parser. This confirms the orchestrator actively creates child processes, unlike the `exec` calls seen in shell scripts which replace the parent.
+*   **Process Tracking (`log_pid`):** A `log_pid` function is implemented to record PIDs and names in `pieces/os/proc_list.txt`. This file is intended for cleanup purposes. The `log_pid` function appears to be correctly called for most forked processes, including `joystick_input` on non-Windows systems.
+*   **Termination (`handle_sigint`):** Upon receiving `SIGINT`, the orchestrator attempts:
+    1.  `SIGTERM` to its process group (`kill(0, SIGTERM)`).
+    2.  A brief `usleep`.
+    3.  Execution of `./pieces/os/kill_all.sh`.
+    4.  Self-termination (`_exit(0)`).
+*   **`kill_all_tracked_processes`:** This function reads `pieces/os/proc_list.txt` and attempts to send `SIGTERM` and then `SIGKILL` to tracked PIDs and their process groups. A significant detail is the use of `waitpid(pid, NULL, WNOHANG)`, meaning it does *not* wait for children to terminate, which could lead to orphaned processes if the parent exits before children are cleaned up.
+*   **Blocking `waitpid` in `launch_and_register`:** A critical observation in the `launch_and_register` function (on Linux/macOS) is the `waitpid(pid, &status, 0);` call *after* forking. This causes the parent process to block and wait for the child to complete, which is likely incorrect behavior for long-running background services. This blocking `waitpid` may explain why the orchestrator itself might hang or terminate unexpectedly.
+*   **Windows `_spawnl(_P_DETACH)`:** On Windows, `_spawnl(_P_DETACH, ...)` is used for launching processes. It detaches the process, and it's unclear if `log_pid` is correctly called with the PID in this scenario.
+
+## Findings from `pieces/os/proc_list.txt`:
+
+*   The file `pieces/os/proc_list.txt` contains entries for most launched components (orchestrator, keyboard\_input, response\_handler, joystick\_input, chtpm\_parser, renderer, gl\_renderer, clock\_daemon).
+*   However, one entry, `loader_module=21201`, does not follow the `PID NAME` format and appears malformed. This suggests potential issues with how this specific entry is logged, or it may originate from a different logging mechanism altogether, separate from the orchestrator's `log_pid` function.
+
+## Analysis of Process Persistence:
+
+The orchestrator has an intended mechanism for tracking and terminating child processes. However, the observed persistence indicates several potential issues:
+
+1.  **Blocking `waitpid` in `launch_and_register`:** The `waitpid(pid, &status, 0);` call in `launch_and_register` causes the parent to block, preventing proper concurrent management of background services and potentially leading to hangs or unexpected termination of the orchestrator.
+2.  **Windows `_spawnl(_P_DETACH)` Logging:** The detachment on Windows might lead to untracked processes if `log_pid` is not correctly implemented for detached processes.
+3.  **Incomplete PID Logging:** The malformed `loader_module=21201` entry suggests that `proc_list.txt` might not be reliably populated for all processes, leading to untracked PIDs that `kill_all_tracked_processes` cannot manage.
+4.  **`waitpid` with `WNOHANG`:** While `kill_all_tracked_processes` uses `WNOHANG`, the blocking `waitpid` in `launch_and_register` (if hit) would prevent the orchestrator from continuing to manage other tasks or respond to signals promptly.
+5.  **`kill_all.sh` Limitations:** As previously observed, `./pieces/os/kill_all.sh` may not be fully effective on its own, potentially due to insufficient `pkill` patterns or re-spawning of processes.
+
+## Next Steps and Proposed Focus:
+
+Based on these findings, the investigation should now focus on:
+
+1.  **Fixing `launch_and_register`'s `waitpid`:** Remove the blocking `waitpid(pid, &status, 0)` call in `launch_and_register` on Linux/macOS to allow the orchestrator to continue execution without waiting for child processes to complete, enabling proper background management.
+2.  **Investigating Windows `_spawnl` Logging:** Verify how PIDs are logged on Windows when using `_spawnl(_P_DETACH, ...)`. Ensure `log_pid` is correctly invoked or find an alternative way to log detached process PIDs.
+3.  **Resolving `loader_module` entry:** Determine the source of the malformed `loader_module=21201` entry in `proc_list.txt` and correct it if it originates from the orchestrator's logging.
+4.  **Re-evaluating Termination Logic:** After fixing the above, re-test the termination sequence to see if `SIGTERM`s and `kill_all.sh` become more effective. If processes still linger, focus on `kill_all.sh` patterns and potential re-spawning logic.

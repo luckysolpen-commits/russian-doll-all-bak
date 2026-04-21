@@ -1,0 +1,8 @@
+project_id=mp3-store
+active_target_id=selector
+last_key=None
+current_z=0
+current_directory=ROOT
+current_file=None
+directory_listing=║  Music Library:\n║ [>] 1. [+] [/home/no/Desktop/Piecemark-IT/中ϕ_00.00/]\n
+app_title=MP3 Store Player

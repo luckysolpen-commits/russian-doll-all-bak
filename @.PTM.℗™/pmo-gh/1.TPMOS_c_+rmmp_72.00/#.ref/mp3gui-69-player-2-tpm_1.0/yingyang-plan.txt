@@ -1,0 +1,52 @@
+# YingYang Player Plan
+
+Goal: Create a C/OpenGL version of the JukeBox music player, referencing the decoupled CLI/GUI architecture of the `0.mu.playr.APP` codebase.
+
+## 1. Architecture
+- **Backend (yingyang-cli)**: 
+    - Purpose: Audio decoding, playback, and state management.
+    - Libraries: libavcodec/libavformat (FFmpeg) for decoding, PulseAudio for output.
+    - Communication: `player_command.txt` (input) and `player_status.txt` (output/status).
+    - Features: Play, Pause, Stop, Seek, Next, Prev, Shuffle, Volume, and FFT data generation.
+- **Frontend (yingyang-gui)**:
+    - Purpose: Visual interface, user input handling, and audio visualization.
+    - Libraries: OpenGL, GLUT, FreeType (for text/emojis).
+    - Communication: Reads `player_status.txt`, writes to `player_command.txt`.
+    - Features: Playlist display, search/filter, playback controls, and visualizer modes (Bars, Waveform, Spectrum, Particles).
+
+## 2. Component Details
+
+### A. Audio Engine (C + FFmpeg + Pulse)
+- Port logic from `1.mp3_player_cli]+c2.c`.
+- Implement a background thread for decoding and feeding samples to PulseAudio.
+- **FFT Integration**: Integrate `fft.c` to provide frequency data for the GUI via a shared memory segment or a fast-write data file.
+
+### B. GUI Engine (C + OpenGL + GLUT)
+- Port logic from `2.mp3_player_gui]b1]srch]g9.c`.
+- Use FreeType for rendering song titles and UI text (reference `0.tomoji-gochio!🐣]c2.c`).
+- Implement the "YingYang" theme: A balanced, possibly monochromatic or high-contrast design.
+- **Visualizer Modes**:
+    - **Bars**: Standard frequency bars.
+    - **Waveform**: Time-domain sample plot.
+    - **Spectrum**: Rainbow-colored frequency peaks.
+    - **Particles**: Particle system reactive to bass/mid/high.
+
+### C. Playlist & Search
+- Use `nftw` for recursive MP3 discovery (reference `0.find_mp3s]ALL]fixed]b1.c`).
+- Implement a reactive search filter in the GUI.
+
+## 3. Implementation Steps
+1. **Infrastructure**: Set up a `Makefile` that links FFmpeg, PulseAudio, OpenGL, GLUT, and FreeType.
+2. **Audio Backend**: Stabilize the CLI player with FFmpeg and PulseAudio support.
+3. **FFT Support**: Ensure the backend can generate frequency data.
+4. **GUI Framework**: Basic GLUT window with text rendering and button click detection.
+5. **Integrated Testing**: Run backend and frontend together using a manager script (reference `!.play.sh`).
+6. **Visualizer Implementation**: Port the Python visualization algorithms to C/OpenGL.
+7. **Final Polish**: Refine the YingYang aesthetic and ensure smooth scrolling/searching.
+
+## 4. Required Libraries (gcc)
+- `libavcodec`, `libavformat`, `libavutil`, `libswresample`
+- `libpulse`, `libpulse-simple`
+- `libGL`, `libGLU`, `libglut`
+- `libfreetype`
+- `libpthread`, `libm`
