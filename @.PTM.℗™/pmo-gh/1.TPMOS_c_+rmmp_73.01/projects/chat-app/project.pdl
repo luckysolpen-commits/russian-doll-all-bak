@@ -1,0 +1,9 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | project_id         | chat-app
+META         | version            | 1.0
+META         | entry_layout       | projects/chat-app/layouts/chat-app.chtpm
+STATE        | starting_map       | map_01
+STATE        | player_piece       | selector
+STATE        | current_world      | world_01
+RESPONSE     | default            | Chat App project loaded.

@@ -1,0 +1,15 @@
+<panel>
+    <text label="╔═══════════════════════════════════════════════════════════╗" /><br/>
+    <text label="║                  +-DEMO PROJECT STATIC LAYOUT             ║" /><br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║ This is a basic static layout.                            ║" /><br/>
+    <text label="║ It demonstrates how a layout file opens without a         ║" /><br/>
+    <text label="║ dynamic manager.                                        ║" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="║ For future steps, we can add functionality.               ║" /><br/>
+    <text label="╚═══════════════════════════════════════════════════════════╝" /><br/>
+     <button label="[1][-] Dir" onClick="KEY:1" /><br/>
+     <button label="[2] file" onClick="KEY:2" /><br/>
+      <button label="[3] file" onClick="KEY:1" /><br/>
+     <button label="[4][+] subdir" onClick="KEY:2" /><br/>
+</panel>

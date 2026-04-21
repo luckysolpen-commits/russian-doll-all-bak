@@ -1,0 +1,16 @@
+╔═══════════════════════════════════════════════════════════╗
+║                  +-DEMO PROJECT STATIC LAYOUT             ║
+╠═══════════════════════════════════════════════════════════╣
+║ This is a basic static layout.                            ║
+║ It demonstrates how a layout file opens without a         ║
+║ dynamic manager.                                        ║
+║                                                           ║
+║ For future steps, we can add functionality.               ║
+╚═══════════════════════════════════════════════════════════╝
+[>] 1. [[1][-] Dir]
+[ ] 2. [[2] file]
+[ ] 3. [[3] file]
+[ ] 4. [[4][+] subdir]
+
++=========================================================+
+Nav > _
