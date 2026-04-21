@@ -1,7 +1,0 @@
- #.bugs/ has some bugs related to directory traversal within chtpm / tpmos
-  standard. op-ed project has working directory traversal to some extent. i was
-  wondering if u find these helpful in fixing the issues? you have the
-  authority to read / write code and documentation in respective directories,
-  and even test program using #.testing/_.aigent-testing-m26.txt
-
-

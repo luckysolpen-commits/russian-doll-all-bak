@@ -1,0 +1,20 @@
+# MP3 Player State and Plan - ap20
+
+## Current State
+The MP3 player for the 'mp3-store' project is functional in terms of basic playback execution via the `play_mp3` utility. The manager module correctly identifies MP3 files from configured paths and allows selection. However, the UI is still displaying elements that imply directory expansion and structure, which contradicts the requirement for a flat list of MP3s. Specifically, directory indicators like '[+]' and indentation are appearing, and the player is not showing a clean list of only MP3 files. The playback initiation via ENTER key and the exit via ESC key appear to be working as intended.
+
+## Next Steps
+1.  **Fix UI Rendering:** Modify the `list_mp3_files` function in `mp3_store_manager.c` to ensure it *only* renders the names of MP3 files in a flat list. Remove all code related to directory indicators (`[+]`, `[-]`), indentation (`indent`), and expansion state that are artifacts of the previous tree-based design.
+2.  **Verify `user-config.txt` Processing:** Ensure `user-config.txt` is correctly parsed to include both directories containing MP3s and individual MP3 file paths directly. The `load_config` function should handle both cases appropriately.
+3.  **Confirm Playback Trigger:** Double-check that pressing ENTER on a selected MP3 file correctly calls `play_mp3` with the absolute path to the file.
+4.  **Test on Disconnection:** Ensure all changes are robust enough for a new agent to understand and continue if the current session is interrupted.
+
+## Key Performance Indicators (KPIs)
+*   **UI Clarity:** The MP3 player interface displays *only* a flat, alphabetically sorted list of `.mp3` file names. No directory structure, expansion indicators, or indentation related to directories are visible.
+*   **File Discovery:** All `.mp3` files located in directories specified in `user-config.txt`, or individual `.mp3` files listed directly in `user-config.txt`, are discoverable and appear in the player list.
+*   **Navigation:** Arrow keys correctly navigate through the list of MP3 files.
+*   **Playback Initiation:** Pressing ENTER on a selected MP3 file successfully initiates playback via the `play_mp3` executable.
+*   **Exit Functionality:** The ESC key reliably exits the player.
+*   **Code Maintainability:** The code is clean, with obsolete tree-related logic removed.
+
+This plan ensures the MP3 player meets the simplified, functional requirements.

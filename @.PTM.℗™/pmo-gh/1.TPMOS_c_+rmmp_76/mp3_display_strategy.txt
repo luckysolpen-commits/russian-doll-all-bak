@@ -1,0 +1,46 @@
+# Strategy Plan: Implement Dynamic MP3 Display in MP3 Store Player
+
+## Objective
+To successfully display a dynamic list of MP3 files as indexed buttons within the MP3 Store Player's `chtpm` interface, based on the configuration and located MP3 files.
+
+## Current State
+- MP3 source directory is configured: `projects/mp3-store/pieces/user-config.txt` points to `mp3-library/`.
+- MP3 files (`rb&u.book0.page01-v1.0.mp3`, `rb&u.book0.page02-v1.0.mp3`) are present in `mp3-library/`.
+- A text file `projects/mp3-store/pieces/mp3_file_list.txt` contains the paths to these MP3s.
+- The `mp3-store.chtpm` layout file (`projects/mp3-store/layouts/mp3-store.chtpm`) is designed to display a list using the `${directory_listing}` placeholder.
+- The `mp3_store_manager.+x` executable (pointed to by the `.chtpm` module) is likely responsible for reading the configuration, finding MP3s, and formatting the list.
+
+## Strategy Steps
+
+### Step 1: Verify MP3 Source Directory and Content
+- **Action:** Ensure the `mp3-library/` directory is accessible and contains MP3 files.
+- **Verification:** Confirm that MP3 files (e.g., `rb&u.book0.page01-v1.0.mp3`, `rb&u.book0.page02-v1.0.mp3`) are present in `/home/no/Desktop/Piecemark-IT/SP_00.00/!.TPMOS-TRAINING/#.reference/quizmark-lab-m22/1.TPMOS_c_+rmmp_73.02/mp3-library/`.
+- **Tool:** `list_directory` or `glob`.
+
+### Step 2: Verify Configuration Loading
+- **Action:** Confirm that the `mp3_store_manager.+x` executable reads the configuration from `projects/mp3-store/pieces/user-config.txt`.
+- **Verification:** This step relies on the assumption that the manager executable correctly interprets `user-config.txt` to locate the `mp3-library/` directory. Since direct code analysis of the executable is not possible, we proceed with the assumption based on the `.chtpm` file's module reference and typical application design. If MP3s are not found, this assumption may need re-evaluation.
+- **Tool:** N/A (relies on runtime behavior).
+
+### Step 3: Confirm MP3 Discovery Logic (Inferred)
+- **Action:** The `mp3_store_manager.+x` executable is assumed to scan the directory specified in `user-config.txt` (i.e., `mp3-library/`) for `.mp3` files.
+- **Verification:** The output of the MP3 Store Player will indirectly verify this if it lists the MP3s. The creation of `mp3_file_list.txt` was an intermediate step; the manager might use this file or scan the directory directly. We assume it scans the directory directly for dynamic updates.
+- **Tool:** N/A (relies on runtime behavior).
+
+### Step 4: Verify Dynamic List Substitution
+- **Action:** The `mp3_store_manager.+x` module should format the discovered MP3 file paths into a string suitable for the `${directory_listing}` placeholder in `mp3-store.chtpm`.
+- **Verification:** Observe the MP3 Store Player's output frame. The placeholder `${directory_listing}` should be replaced by the actual MP3 list.
+- **Tool:** N/A (relies on runtime behavior).
+
+### Step 5: Test MP3 Store Player Functionality
+- **Action:** Launch the MP3 Store Player application and verify that the MP3 list is displayed correctly as buttons or selectable items.
+- **Verification:** The player's UI should show the MP3 files found in `mp3-library/`, with appropriate indexing and controls for selection and playback.
+- **Tool:** `run_shell_command` to launch the player (if a command is known), or observe manual interaction if the player is already running.
+
+## Next Steps for Agent
+- Execute the verification steps outlined above.
+- If the MP3 list is not displayed, investigate potential issues such as:
+    - Incorrect MP3 discovery logic in `mp3_store_manager.+x`.
+    - Incorrect formatting of the list for the `${directory_listing}` placeholder.
+    - Issues with `chtpm` rendering.
+- Document any findings and propose further actions.

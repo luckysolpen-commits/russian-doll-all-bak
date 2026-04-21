@@ -1,0 +1,19 @@
+<panel time_reactive="true">
+    <module>${module_path}</module>
+    <interact src="pieces/apps/player_app/history.txt" />
+
+    <text label="╔═══════════════════════════════════════════════════════════╗" /><br/>
+    <text label="║              MP3 Store Player                             ║" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="║  Now Playing: ${current_mp3}                             ║" /><br/>
+    <text label="║  Status: ${player_status}                                  ║" /><br/>
+    <text label="║                                                           ║" /><br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║ [RESP]: ${last_response}                                     ║" /><br/>
+    <text label="║ [ACTIVE]: ${active_target}   | [KEY]: ${last_key}                  ║" /><br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║  MP3 List:                                                ║" /><br/>
+    ${mp3_list}<br/>
+    <text label="║  [ ] 9. [Exit to Menu]                          ║" /><br/>
+    <text label="╚═══════════════════════════════════════════════════════════╝" /><br/>
+</panel>

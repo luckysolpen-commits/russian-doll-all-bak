@@ -1,0 +1,35 @@
+# Prompt for MP3 Display Debugging Agent
+
+## Objective
+Debug and fix the MP3 display issue in the MP3 Store Player. Specifically, ensure that the MP3 files found in `mp3-library/` are dynamically listed within the `mp3-store.chtpm` interface, replacing the placeholder `${directory_listing}`.
+
+## Current Situation
+- The MP3 Store Player is launched, and the `mp3-library/` path is correctly identified from `projects/mp3-store/pieces/user-config.txt`.
+- MP3 files (`rb&u.book0.page01-v1.0.mp3`, `rb&u.book0.page02-v1.0.mp3`) are confirmed to exist in `mp3-library/`.
+- The `mp3-store.chtpm` layout uses the `${directory_listing}` placeholder, but it is not being populated with the MP3 file list; only the directory path is shown.
+- The core MP3 discovery and list formatting logic is suspected to be within the `mp3_store_manager.+x` executable, which cannot be directly inspected by the current agent.
+
+## Tasks for New Agent
+
+### Task 1: Analyze MP3 Discovery and Formatting Logic
+- **Sub-task 1.1:** Investigate the `mp3_store_manager.+x` executable (or related source code if accessible) to understand how it:
+    - Reads the configuration from `projects/mp3-store/pieces/user-config.txt`.
+    - Scans the specified MP3 directory (`mp3-library/`) for `.mp3` files.
+    - Formats the list of discovered MP3 files.
+- **Sub-task 1.2:** Identify why the list of MP3 files is not being substituted into the `${directory_listing}` placeholder in the `mp3-store.chtpm` layout. Determine if the list is not being generated, is being generated incorrectly, or is not being passed to the rendering system.
+
+### Task 2: Debug and Implement Fix
+- **Sub-task 2.1:** Based on the analysis in Task 1, implement necessary code changes within `mp3_store_manager.+x` (or related components) to ensure the MP3 files are correctly discovered and formatted for display.
+- **Sub-task 2.2:** Ensure the formatted MP3 list is correctly passed to the `chtpm` rendering system to populate the `${directory_listing}` placeholder in `projects/mp3-store/layouts/mp3-store.chtpm`.
+
+### Task 3: Test the Fix
+- **Sub-task 3.1:** Relaunch the MP3 Store Player application (e.g., using `sh button.sh r`).
+- **Sub-task 3.2:** Verify that the "Music Library:" section now lists the MP3 files from `mp3-library/` dynamically, instead of just showing the directory path.
+- **Sub-task 3.3:** Test basic functionality such as navigating the list and attempting to play an MP3 (if applicable and the player is functional).
+
+## Expected Outcome
+The MP3 Store Player interface will dynamically display a list of available MP3 files from the `mp3-library/` directory, allowing users to interact with them.
+
+## Constraints and Notes
+- The agent may need access to source code or build tools for `mp3_store_manager.+x` if direct debugging of the executable is not feasible.
+- If the `chtpm` rendering mechanism itself is the issue, the agent should investigate `chtpm/plugins/` or related rendering components.

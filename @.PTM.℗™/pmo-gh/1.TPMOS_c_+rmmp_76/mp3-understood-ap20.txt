@@ -1,0 +1,19 @@
+This document outlines the revised scope for the mp3-store project, focusing on core functionality and removing ambitious features.
+
+**Project:** mp3-store
+
+**Previous Scope Issues:**
+The previous iteration was overly ambitious, incorporating features like expanding and collapsing elements which led to complexity and potential issues.
+
+**Revised Core Functionality:**
+The project will now focus on the fundamental requirements for an MP3 player:
+1.  **Display Available MP3s:** The application will present a list of available MP3 files to the user.
+2.  **Dynamic Navigation Buttons:** Navigation controls for selecting and playing MP3s will be dynamically generated.
+3.  **Basic Playback:** Users will be able to click a button associated with an MP3 to initiate playback.
+
+**Leveraging Existing Resources:**
+To ensure efficient development and adherence to best practices, we will consult:
+-   Existing project documentation and codebase examples.
+-   A working GL MP3 player located in the `#.ref/` directory for reference and potential component reuse.
+
+This revised scope aims for a simpler, more manageable, and functional MP3 player.

@@ -1,0 +1,206 @@
+=== NEW SESSION at 2026-04-20 23:32:53 ===
+
+--- FRAME UPDATE at 2026-04-20 23:32:53 ---
++===========================================================+
+|                                                           |
+|           C H T P M + O S   C L I   v2.0                 |
+|                                                           |
+|  CHTPM+OS Main Menu                                      |
+|                                                           |
+|  [>] 1. [Project Loader]                             |
+|  [ ] 2. [App Store (Fondu)]                          |
+|  [ ] 3. [Status]  [ ] 4. [GL-OS]                                          |
+|  [ ] 5. [Process Monitor]                            |
+|  [ ] 6. [Toggle Frame History (Current: )]                                         |
+|  [ ] 7. [Help]                                            |
+|                                                           |
++===========================================================+
+|  Running Applications: None                               |
+|  System Time: 08:00:00 | Turn: 0 | Key: None |
++===========================================================+
+|                                                           |
+|  $ | [ ] 8. [test]                                                 |                                                 |
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-20 23:32:54 ---
+╔══════════════ P I E C E M A R K   L O A D E R ════════════╗
+║ LAYOUT ID: playrm/loader.chtpm                            ║
+║                                                           ║
+║  Select a project to begin:                               ║
+║                                                           ║
+║  [>] 1. [+-demo]
+[ ] 2. [404-test]
+[ ] 3. [ai-labs]
+[ ] 4. [aow]
+[ ] 5. [bot-editor]
+[ ] 6. [bots-sov]
+[ ] 7. [chat-app]
+[ ] 8. [checkers]
+[ ] 9. [cyoa-engine]
+[ ] 10. [demo_1]
+[ ] 11. [fuzz-op]
+[ ] 12. [gitlet]
+[ ] 13. [hangman]
+[ ] 14. [lsr]
+[ ] 15. [man-add]
+[ ] 16. [man-ops]
+[ ] 17. [man-pal]
+[ ] 18. [mp3-store]
+[ ] 19. [op-ed]
+[ ] 20. [p2p-net]
+[ ] 21. [quiz-engine]
+[ ] 22. [template]
+[ ] 23. [test_fondu]
+[ ] 24. [user]
+ ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 25. [Back to Main Menu]                                  ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-20 23:32:54 ---
+╔══════════════ P I E C E M A R K   L O A D E R ════════════╗
+║ LAYOUT ID: playrm/loader.chtpm                            ║
+║                                                           ║
+║  Select a project to begin:                               ║
+║                                                           ║
+║  [>] 1. [+-demo]
+[ ] 2. [404-test]
+[ ] 3. [ai-labs]
+[ ] 4. [aow]
+[ ] 5. [bot-editor]
+[ ] 6. [bots-sov]
+[ ] 7. [chat-app]
+[ ] 8. [checkers]
+[ ] 9. [cyoa-engine]
+[ ] 10. [demo_1]
+[ ] 11. [fuzz-op]
+[ ] 12. [gitlet]
+[ ] 13. [hangman]
+[ ] 14. [lsr]
+[ ] 15. [man-add]
+[ ] 16. [man-ops]
+[ ] 17. [man-pal]
+[ ] 18. [mp3-store]
+[ ] 19. [op-ed]
+[ ] 20. [p2p-net]
+[ ] 21. [quiz-engine]
+[ ] 22. [template]
+[ ] 23. [test_fondu]
+[ ] 24. [user]
+ ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 25. [Back to Main Menu]                                  ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-20 23:32:56 ---
+╔══════════════ P I E C E M A R K   L O A D E R ════════════╗
+║ LAYOUT ID: playrm/loader.chtpm                            ║
+║                                                           ║
+║  Select a project to begin:                               ║
+║                                                           ║
+║  [>] 1. [+-demo]
+[ ] 2. [404-test]
+[ ] 3. [ai-labs]
+[ ] 4. [aow]
+[ ] 5. [bot-editor]
+[ ] 6. [bots-sov]
+[ ] 7. [chat-app]
+[ ] 8. [checkers]
+[ ] 9. [cyoa-engine]
+[ ] 10. [demo_1]
+[ ] 11. [fuzz-op]
+[ ] 12. [gitlet]
+[ ] 13. [hangman]
+[ ] 14. [lsr]
+[ ] 15. [man-add]
+[ ] 16. [man-ops]
+[ ] 17. [man-pal]
+[ ] 18. [mp3-store]
+[ ] 19. [op-ed]
+[ ] 20. [p2p-net]
+[ ] 21. [quiz-engine]
+[ ] 22. [template]
+[ ] 23. [test_fondu]
+[ ] 24. [user]
+ ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 25. [Back to Main Menu]                                  ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > 1_
+
+
+--- FRAME UPDATE at 2026-04-20 23:32:56 ---
+╔══════════════ P I E C E M A R K   L O A D E R ════════════╗
+║ LAYOUT ID: playrm/loader.chtpm                            ║
+║                                                           ║
+║  Select a project to begin:                               ║
+║                                                           ║
+║  [ ] 1. [+-demo]
+[ ] 2. [404-test]
+[ ] 3. [ai-labs]
+[ ] 4. [aow]
+[ ] 5. [bot-editor]
+[ ] 6. [bots-sov]
+[ ] 7. [chat-app]
+[ ] 8. [checkers]
+[ ] 9. [cyoa-engine]
+[ ] 10. [demo_1]
+[ ] 11. [fuzz-op]
+[ ] 12. [gitlet]
+[ ] 13. [hangman]
+[ ] 14. [lsr]
+[ ] 15. [man-add]
+[ ] 16. [man-ops]
+[ ] 17. [man-pal]
+[>] 18. [mp3-store]
+[ ] 19. [op-ed]
+[ ] 20. [p2p-net]
+[ ] 21. [quiz-engine]
+[ ] 22. [template]
+[ ] 23. [test_fondu]
+[ ] 24. [user]
+ ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 25. [Back to Main Menu]                                  ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > 18_
+
+
+--- FRAME UPDATE at 2026-04-20 23:32:57 ---
+╔═══════════════════════════════════════════════════════════╗
+║              MP3 Store Player                               ║
+║                                                           ║
+║ Currently Playing: None                   ║
+║ Last Key Pressed: None                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  Music Library:
+║ [>] 1. [+] [mp3-library/]
+
+╠═══════════════════════════════════════════════════════════╣
+║ Controls:                                                 ║
+║  Navigate selection | ENTER: Play Selected MP3             ║
+║  ESC: Exit                                                ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
