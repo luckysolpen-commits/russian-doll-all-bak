@@ -1,0 +1,100 @@
+# gemini-agent-tpmos-onboarding-document.txt
+## TPMOS: A Comprehensive Onboarding Guide for Future Agents
+
+Welcome, Agent! This document synthesizes essential knowledge about the TPMOS (True Piece Method Operating System) project. It covers the core architecture, development practices, key modules, and testing strategies to empower you in undertaking coding tasks, bug fixes, and plan implementations.
+
+---
+
+### 1. Project Overview & Core Philosophy
+
+TPMOS is not merely an operating system; it's a **coherent computing model** and a **causal computing system**. Its foundation lies in the **True Piece Method (TPM)**, which dictates that reality is decomposed into atomic, sovereign **Pieces**.
+
+*   **Sovereignty:** Each Piece owns its state exclusively.
+*   **Filesystem as Database:** The filesystem is the primary source of truth for all state and causality.
+*   **Auditability:** Every significant change is logged to `master_ledger.txt`.
+*   **Scale-Free:** The architecture handles entities from microscopic (cells) to cosmic (galaxies) uniformly.
+*   **World-First Philosophy:** Path resolution prioritizes project-specific locations before falling back to global ones.
+*   **CPU Safety:** Core principles like `stat()`-first polling and `fork()/exec()` ensure minimal CPU usage and clean process management.
+
+---
+
+### 2. Core Architecture: The PMO Hierarchy & Pipeline
+
+TPMOS operates on a strict **PMO (Piece-Module-OS)** hierarchy:
+
+*   **PIECE (The Atomic Unit / Soul) 🧱:** The fundamental building block, defined by `piece.pdl` (DNA) and mirrored by `state.txt` (Mirror).
+*   **MODULE (The Logic Agent / Brain) 🧠:** A background process (e.g., `_module.c`) that polls input, makes decisions, and delegates actions to Ops. It adheres to a "Thin Brain" philosophy, avoiding heavy logic.
+*   **OS / CHTPM (The Theater / View) 🎭:** The user interface layer (ASCII or GL-OS) that displays the state of Pieces and handles user interaction.
+
+The system's reality is updated via the **12-Step Pipeline** (Pulse) 🩸: Input → Routing → Relay → Module Tick → Trait/Op → Piece Sovereignty → Mirror Sync → Stage → Parser → Composition → Render → Display. This pipeline ensures deterministic state updates and rendering.
+
+---
+
+### 3. Key Components & Modules
+
+*   **PRISC (Execution Layer):** A minimal, deterministic virtual machine with an extensible instruction set, designed to execute PAL scripts and custom Ops. It serves as the "programmable syscall fabric."
+*   **PAL (Prisc Assembly Language):** The high-level scripting language used for complex workflows, AI, event scripting, and orchestrating Ops. It acts as the human-machine bridge.
+*   **Ops (Muscles) 💪:** Short-lived, single-purpose binaries (`.+x` or `.exe`) that perform specific actions (e.g., `move_entity.+x`, `create_profile.+x`). They are centralized in `ops/` directories and managed by **Fondu**.
+*   **Apps (Factory) 🏭:** Standalone directories with `.pdl` descriptors, containing managers, layouts, and specialized Pieces (e.g., `op-ed`, `fuzz-op`, `p2p-net`, `ai-labs`).
+*   **GL-OS:** The OpenGL-based visualizer providing 2D/3D rendering, acting as a high-fidelity theater for the ASCII-based CHTPM world.
+*   **P2P-NET:** The decentralized networking layer for sovereign storage, compute exchange, and smart contracts (e.g., escrow, Div-Points).
+*   **AI-Labs:** Integration layer for local LLMs (Gemma, Qwen) enabling AI-driven content generation, testing bots, and dynamic R&D.
+*   **LSR (Lunar Streetrace Raider):** A simulation project demonstrating AI agents, economies, and dynamic world generation.
+
+---
+
+### 4. Development Workflow
+
+*   **Piece Creation:** Define Piece DNA (`.pdl`) and state (`state.txt`).
+*   **Op Development:** Create single-purpose C binaries (`.+x` or `.exe`), compile them, and place them in `projects/<project_id>/ops/+x/`. Update `ops_manifest.txt`.
+*   **Module Development:** Implement the CPU-Safe Module Template, focusing on input routing, state polling (`stat`-first), and clean process management (`fork/exec/waitpid`).
+*   **App Development:** Follow the App Factory pattern: create `.pdl` descriptor, manager module, layouts (`.chtpm`), and relevant Pieces.
+*   **PAL Scripting:** Use PAL for automating tasks, AI behaviors, and complex workflows, calling Ops via the `OP` instruction.
+*   **Fondu:** Utilize `fondu` for installing/managing project ops and apps, ensuring discoverability and dependency management.
+*   **Build System:** Use `compile_all.sh` (Linux/macOS) or `compile_all.ps1` (Windows) for compiling all binaries. `button.sh` or `button.ps1` are the primary launchers.
+*   **Cross-Platform:** Adhere to platform-agnostic coding practices (`build_path_malloc()`, conditional compilation for input/process/font paths). Avoid hardcoded paths and platform-specific APIs where possible.
+
+---
+
+### 5. Testing & Validation
+
+Rigorous testing is paramount. The **M18 Testing Guide** outlines the strategy:
+
+*   **Testing Levels:**
+    *   Black-box runtime (key injection, frame review).
+    *   Module/Op level (direct state assertions).
+    *   End-to-end user flow (project playthrough, create/edit/save/load, script/replay).
+*   **Testing Bots:** Sovereign Pieces that act as users, executing PAL scripts for automated testing.
+*   **Key Injection:** Use `pieces/keyboard/history.txt` with the exact `[YYYY-MM-DD HH:MM:SS] KEY_PRESSED: <code>` format.
+*   **Evidence:** Record commands, observed outputs, frame artifacts (`current_frame.txt`), and state changes in text reports.
+*   **Regression Matrix:** Standardized tests for existing features (R1-R6) and nuanced full-project tests for new features (P1-P7).
+*   **Mandatory Post-Test Report:** All test cycles require a root report (`FRAME_REPORT_*.txt`) before code changes are merged.
+*   **Pitfalls:** Be aware of mode/context sensitivity, metadata traps, hardcoded path drift, cancellation confusion, and injection format errors.
+
+---
+
+### 6. Core Principles & Mandates
+
+*   **Data Sovereignty:** Pieces exclusively own their state files.
+*   **CPU Safety:** Minimize CPU usage via throttling, `stat`-first polling, and clean process management.
+*   **Auditability:** All state changes are logged.
+*   **Modularity:** Separate concerns into Pieces, Modules, and Ops.
+*   **Extensibility:** Design for recursive composition and dynamic loading (PAL, Fondu).
+*   **Portability:** Code should run on Windows, Linux, and macOS.
+
+---
+
+This document provides a foundational understanding. For deeper dives, consult specific chapters of the **TPMOS Textbook** (e.g., CH4 for Modules/Ops, CH6 for PAL, CH8 for GL-OS) and the **Testing Guide**.
+
+---
+
+## Relevant Directories & Files for Further Exploration:
+
+*   **`TPMOSTEXTBOOK_v04.00/`**: The primary source for understanding TPMOS concepts, architecture, and components.
+*   **`#.plans/`**: Contains strategic planning documents for AI, chat, and LSR.
+*   **`#.docs/`**: Houses user-facing guides, how-tos, reference materials, and investigation reports.
+*   **`#.testing/`**: Critical for understanding testing methodologies, including the M18 Testing Guide.
+*   **`projects/`**: Contains specific application and system projects.
+*   **`pieces/system/`**: Houses core utilities like Fondu and the PRISC PAL interpreter.
+
+---
