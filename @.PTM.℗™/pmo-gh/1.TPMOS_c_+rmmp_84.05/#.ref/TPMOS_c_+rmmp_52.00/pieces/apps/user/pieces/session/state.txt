@@ -1,5 +1,0 @@
-session_status=auth_required
-current_user=guest
-last_key=None
-auth_screen=0
-input_mode=0

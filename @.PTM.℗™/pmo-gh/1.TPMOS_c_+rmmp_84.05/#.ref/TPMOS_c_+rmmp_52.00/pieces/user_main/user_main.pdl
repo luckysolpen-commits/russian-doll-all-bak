@@ -1,6 +1,0 @@
-SECTION      | KEY                | VALUE
-----------------------------------------
-META         | piece_id           | user_main
-
-METHOD       | login             | void
-METHOD       | signup            | void

@@ -1,0 +1,16 @@
+we proceed with the next task?
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+43 ## 6. NEXT STEPS (POST-CLEANUP)
+      44 Once warnings are zeroed and the build is stable:
+      45 1. **Real Data Sync:** Update `gl_desktop.c` to read
+         `projects/fuzz-op/pieces/apps/fuzz-op/session/state.txt` instead of
+         using mock grid/entities.
+      46 2. **Menu Triggers:** Map menu options (`scan`, `collect`) to
+         actual Op execution via the project manager.
+      47
+      48 **Mantra:** "If it's not in a file, it's a lie. The marker is the
+         clock."
+      49 Good luck, Agent.
+
+< these should be read from fuzz-op-gl , not fuzz-op  (later we can pass fuzzpet maps/pieces around , and u can copy the data from there to here, but we shouldn't be reaching into that project or piece, if we ever wanted to do that , we would use intermediate / safe communication 'ops'>
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀

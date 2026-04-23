@@ -1,9 +1,0 @@
-name=Terminal
-type=terminal
-pos_x=10
-pos_y=10
-width=60
-height=20
-title=Terminal
-content_source=pieces/apps/gl_os/session/terminal_1.txt
-active=0

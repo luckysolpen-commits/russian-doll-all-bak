@@ -1,4 +1,0 @@
-project_id=user
-session_status=auth_required
-current_user=guest
-app_title=USER AUTHENTICATION

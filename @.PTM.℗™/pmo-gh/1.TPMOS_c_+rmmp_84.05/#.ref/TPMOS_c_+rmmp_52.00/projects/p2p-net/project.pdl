@@ -1,6 +1,0 @@
-SECTION      | KEY                | VALUE
-----------------------------------------
-META         | project_id         | p2p-net
-META         | version            | 1.0
-STATE        | port               | 8000
-STATE        | peers_connected    | 0

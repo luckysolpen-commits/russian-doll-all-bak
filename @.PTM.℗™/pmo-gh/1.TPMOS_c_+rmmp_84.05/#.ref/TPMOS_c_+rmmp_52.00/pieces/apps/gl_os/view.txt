@@ -1,4 +1,0 @@
-DESKTOP_VIEW
-BG: #000044
-WINDOW | 0 | 50 | 50 | 500 | 400 | Terminal | /home/no/Desktop/Piecemark-IT/🦚/📑/m-21-loc/PMO_c_+rmmp_41.02/pieces/display/current_frame.txt
-WINDOW | 1 | 841 | 796 | 150 | 100 | Context Menu | /home/no/Desktop/Piecemark-IT/🦚/📑/m-21-loc/PMO_c_+rmmp_41.02/pieces/apps/gl_os/menu_content.txt
