@@ -1,0 +1,38 @@
+**Plan: Refactor Chat Application to `chat-op` (Ops-Based)**
+
+**1. Project Renaming:**
+    *   Rename the project directory from `chat-app` to `chat-op`.
+    *   Update all internal references, including file paths, directory names, and string literals within the codebase (`.c`, `.chtpm` files, and any configuration files) from `chat-app` to `chat-op`.
+    *   Rename the primary manager source file from `chat-app_manager.c` to `chat-op_manager.c`.
+
+**2. Architectural Shift to Ops-Based Core:**
+    *   **Core Logic Extraction:** Isolate the core messaging functionalities (sending messages, managing history, possibly user presence) from the current UI-driven logic in `chat-op_manager.c`. This core logic should be callable independently.
+    *   **CLI Interface Development:** Introduce a command-line interface (CLI) for `chat-op`. This CLI will serve as the primary interaction method for operational tasks. Potential commands include:
+        *   `chat-op send <message>`: To send a message.
+        *   `chat-op list [--all | --conversation <id>]`: To retrieve message history.
+        *   `chat-op connect [server_address]`: To establish a connection or start a daemon.
+        *   `chat-op disconnect`: To terminate the service.
+    *   **Manager Module Refactoring:** Modify `chat-op_manager.c` to:
+        *   Expose the extracted core functionalities for CLI invocation.
+        *   Potentially run as a background service/daemon that the CLI can interact with.
+        *   Adapt its input handling to process CLI arguments and commands, in addition to (or instead of) polling `history.txt` for GUI input.
+
+**3. UI Integration (GUI Mode):**
+    *   Adapt the existing `.chtpm` layout (renamed to `chat-op.chtpm`) to interact with the refactored core logic.
+    *   The UI will likely invoke the CLI commands or directly call the extracted core functions to send messages and display history.
+    *   Ensure the `MESSAGE_LOG` display in the UI correctly reflects messages managed by the core logic.
+
+**4. Data Management and Persistence:**
+    *   **Message Logging:** Ensure messages are consistently logged to `chat_log.txt` (or a similarly renamed file, e.g., `chat-op_log.txt`).
+    *   **State Management:** Update mechanisms for managing UI state (e.g., `gui_state.txt`) and potentially core application state to align with the new ops-based architecture.
+
+**5. Testing Strategy:**
+    *   **Unit Tests:** Develop unit tests for the extracted core messaging logic functions.
+    *   **CLI Command Tests:** Implement tests for each CLI command to ensure correct functionality and argument parsing.
+    *   **Integration Tests:** Validate the interaction between the CLI, the core logic, and the `.chtpm` UI mode.
+    *   **Regression Tests:** Ensure existing functionalities are not broken during the refactoring process.
+
+**6. Documentation:**
+    *   Update project documentation (e.g., `README.md`) to reflect the new `chat-op` name, its ops-based nature, and usage instructions for both CLI and GUI modes.
+
+This plan provides a roadmap for transforming the chat application into a more versatile, ops-centric tool.

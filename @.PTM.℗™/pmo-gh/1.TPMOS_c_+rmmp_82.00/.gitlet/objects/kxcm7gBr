@@ -1,5 +1,0 @@
-tree 02P9zdAL
-parent k22HHHqs
-Date: Mon Apr 13 16:25:34 2026
-
-Fix mirror sync: move_entity now respects explicit project argument (argv[3]), state.txt updates correctly, frame_changed pulses, ledger records movements

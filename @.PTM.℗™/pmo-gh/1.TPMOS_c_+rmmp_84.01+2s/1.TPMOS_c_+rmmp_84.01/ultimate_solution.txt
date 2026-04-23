@@ -1,0 +1,85 @@
+
+# CHTPM Interactive Component (CLI_IO) Message Submission and Display Protocol
+
+## Objective
+To define a robust, idiomatic, and declarative pattern for handling user input from `<cli_io>` elements, ensuring seamless message submission, state updates, and UI rendering within the TPMOS CHTPM framework. This protocol aims to provide a definitive solution for future agent implementations, preventing common issues related to state synchronization, event routing, and focus management.
+
+## Core Components Involved
+
+1.  **`.chtpm` Layout:**
+    *   Defines UI elements: `<cli_io>`, `<scroller>`, `<text>`, `<button>`.
+    *   Attributes: `id`, `label`, `onClick`, `src` (for `<interact>`), `visibility_expr`.
+    *   Crucially, `<interact src="history_file_path" />` directs UI input to a specific history file monitored by the manager.
+
+2.  **CHTPM Parser (`chtpm_parser.c`):**
+    *   Responsible for UI event capture (keypresses, button clicks).
+    *   Handles input routing from UI elements to `history.txt` via `inject_raw_key` or `inject_command`.
+    *   Manages UI element state (e.g., `el->input_buffer`, `active_index`, `focus_index`).
+    *   Updates `gui_state.txt` for UI-bound variables like `input_text=`.
+    *   Signals UI re-renders via marker files (e.g., `pieces/display/frame_changed.txt`).
+
+3.  **Manager (e.g., `chat-op_manager.c`):**
+    *   Monitors `history.txt` for events injected by the parser.
+    *   Processes key events (`KEY:13` for Enter).
+    *   Reads the latest message content and existing log from `gui_state.txt`.
+    *   Performs application logic (e.g., appends message to log, updates state).
+    *   Updates `gui_state.txt` with the new message log (`messages=...`) and a cleared input field (`input_text=`).
+    *   Appends message to persistent history (`chat_log.txt`).
+    *   Clears its internal input buffer.
+    *   Calls `save_manager_state()`.
+    *   Signals UI re-renders via marker files (e.g., `pieces/display/frame_changed.txt`).
+
+4.  **State Files:**
+    *   **`gui_state.txt`:** Central hub for UI-relevant variables. Stores `messages=` (for the log display) and `input_text=` (for the current input field). Managed by both parser (for UI display updates) and manager (for submission state).
+    *   **`history.txt`:** Channel for raw key presses and commands from UI events (via parser) to the manager.
+    *   **`chat_log.txt` (or project-specific log):** Persistent message history, separate from UI state.
+
+## Ideal Interaction Flow for CLI_IO Message Submission
+
+This flow assumes a standard CHTPM application structure for chat-like interfaces.
+
+1.  **User Input (Typing):**
+    *   User types characters into the `<cli_io>` element.
+    *   The parser (`chtpm_parser.c`) captures these characters, updates its internal `el->input_buffer`, and writes the current input to `gui_state.txt` as `input_text=...`.
+    *   The parser triggers a render signal (e.g., via `pieces/display/frame_changed.txt`), causing the UI to update and display the typed text in the `<cli_io>`'s label.
+
+2.  **User Submits (Enter Key):**
+    *   The parser detects the Enter key (`10` or `13`) while the `cli_io` element is active and its buffer is non-empty.
+    *   **Parser Actions:**
+        *   The parser saves the content of `el->input_buffer` (the message text).
+        *   The parser injects the raw integer key code `13` into the designated `history.txt` file using `inject_raw_key(13)`.
+        *   **Crucially, the parser does NOT relinquish activation:** `active_index` remains associated with the `cli_io` element, keeping it focused for immediate follow-up input.
+        *   The parser clears its internal `el->input_buffer`.
+        *   The parser triggers a render signal.
+    *   **Manager Event Detection:** The manager process (`chat-op_manager.c`) monitors `history.txt` and detects the injected `KEY:13`.
+    *   **Manager Processes Key:** The manager's `process_key(13)` function is invoked.
+        *   **Read State:** The manager reads the latest message content (`input_text_from_gui`) and existing log (`temp_messages`) from `gui_state.txt`. This ensures it uses the most current text intended for submission.
+        *   **Construct Log Entry:** If `input_text_from_gui` is not empty, it constructs `new_messages` by appending this new message to `temp_messages`, ensuring proper formatting (e.g., with newlines).
+        *   **Update `gui_state.txt`:** Writes `messages=new_messages
+` (the updated log) and `input_text=
+` (clearing the input field for the next entry) to `gui_state.txt`.
+        *   **Log to Persistent History:** Appends the message to `chat_log.txt` for persistence.
+        *   **Clear Manager Buffer:** Clears its internal `current_input_buffer` for cleanliness.
+        *   **Save State:** Calls `save_manager_state()`.
+        *   **Signal Re-render:** Calls `trigger_render()` (which writes to `pieces/display/frame_changed.txt`).
+        *   **Deactivate Input:** Sets `active_index = -1;` to return focus to navigation mode (or as per application design).
+
+## Key Principles and Best Practices
+
+*   **Declarative State Management:** UI elements (`<scroller>`, `<text>`) should bind to variables in `gui_state.txt` (e.g., `${messages}`, `${input_text}`). State changes in `gui_state.txt` should drive UI updates.
+*   **Event Routing:** UI events (keypresses, clicks) are captured by the parser and reliably routed via `history.txt` to the manager.
+*   **Manager Orchestration:** The manager is responsible for processing events, orchestrating logic (potentially by calling external Ops), updating state files, and signaling UI re-renders.
+*   **Focus Management:** Interactive elements like `<cli_io>` should maintain focus appropriately after submission (e.g., remain active for continuous input) unless explicitly designed otherwise. Deactivation should be a deliberate action, not a default outcome of submission.
+*   **Atomic State Writes:** Writes to critical state files like `gui_state.txt` should be as atomic as possible to prevent race conditions.
+*   **Separation of Concerns:**
+    *   Parser: UI event handling, routing, low-level input capture.
+    *   Manager: Application logic, high-level state management, orchestration.
+    *   Ops (`.+x`): Complex task execution.
+    *   State Files: Data persistence and communication between components.
+
+## Conclusion
+
+This protocol ensures that user input is reliably captured, processed, and reflected in the UI, establishing a clear and maintainable pattern for interactive components in CHTPM applications. Adherence to these principles should prevent common issues related to state synchronization and event handling.
+
+---
+*Protocol documented by Gemini CLI for TPMOS Future Agents - 2026-04-22*

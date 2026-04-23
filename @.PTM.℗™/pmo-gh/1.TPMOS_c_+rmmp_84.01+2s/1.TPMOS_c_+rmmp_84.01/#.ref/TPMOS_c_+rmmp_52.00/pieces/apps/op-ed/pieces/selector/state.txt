@@ -1,0 +1,5 @@
+pos_x=5
+pos_y=5
+pos_z=0
+active=1
+icon=X

@@ -1,0 +1,34 @@
+# Succession Plan M15 - Project & Map Architecture
+
+# 0. there is still some cpu throttling in "editor" that isn't present in
+"legacy" (and maybe less prevalent in ops based, such as 'man-ops'
+
+## 1. Map Storage Audit
+Maps are stored as individual `.txt` files within the specific project directory:
+`projects/{project_id}/maps/`
+
+### Behavior:
+- **Dynamic Scanning:** The RMMP Editor scans this directory at startup and every time a new map is added.
+- **Auditable Format:** Each file is a simple ASCII grid (e.g., 20x10 characters).
+- **Deletion:** If you delete a `.txt` file from this directory, it will be automatically removed from the editor's Map Palette on the next run. This is the intended behavior for easy cleanup.
+
+## 2. Next Step: Integrated File Menu (Feature 3)
+The goal is to transition from a single "SAVE" button to a robust **FILE** management system.
+
+### UI Change:
+- Rename **"7. SAVE"** to **"7. FILE"**.
+- Selecting "FILE" will open a sub-menu: **[SAVE] [SAVE AS] [LOAD] [BACK]**.
+
+### Functionality:
+- **[SAVE]:** 
+  - Flushes all current in-memory editor states to the `project.pdl` and `state.txt` files.
+  - Ensures map metadata (if any) is synchronized.
+- **[LOAD]:** 
+  - Opens a Project Browser (scanning the `projects/` directory).
+  - Switching projects will reload all maps, pieces, and metadata into the editor.
+- **[SAVE AS]:** 
+  - Prompts for a new project name.
+  - Duplicates the entire directory structure of the current project into a new folder in `projects/`.
+
+## 3. Implementation Approach
+We will explore the **Sub-Menu Overlay** approach first. Instead of switching to a whole new screen, we will dynamically replace the bottom interaction panel with the File options. This keeps the user's eye on the map and current context, providing a superior UX.

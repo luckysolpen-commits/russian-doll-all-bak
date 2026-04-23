@@ -1,0 +1,6 @@
+SECTION      | KEY                | VALUE
+----------------------------------------
+META         | piece_id           | user_profile
+
+METHOD       | view_projects     | void
+METHOD       | logout            | void

@@ -1,0 +1,43 @@
+<panel>
+    <module>pieces/apps/editor/plugins/+x/editor_module.+x</module>
+    <interact src="pieces/apps/player_app/history.txt" />
+    
+    <text label="╔══════════════ P I E C E M A R K   E D I T O R ════════════╗" /><br/>
+    <row label="PROJECT: ${project_id} | LAYOUT: editor.chtpm" /><br/>
+    <row label=" " /><br/>
+    
+    <row label=" GAME MAP:" /><br/>
+    <button label="Control Map" onClick="INTERACT" /><br/>
+    <text label="${game_map}" /><br/>
+    
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    
+    <row label="${editor_response}" /><br/>
+    <row label="[POS]: ${selector_pos} | [ARMED]: [ ${armed_glyph} ] | [KEY]: ${last_key}" /><br/>
+    
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    
+    <scroller id="MAPS" label="${map_palette_view}" onClick="INTERACT" /><br/>
+    <scroller id="GLYPHS" label="${glyph_palette_view}" onClick="INTERACT" /><br/>
+    
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    
+    <text label="║ " />
+    <button label="TOGGLE EMOJI" onClick="KEY:4" /> 
+    <text label=" " />
+    <button label="DB" onClick="KEY:5" />
+    <text label=" " />
+    <button label="PROJECT" onClick="KEY:6" />
+    <text label="                             ║" /><br/>
+    
+    <text label="║ " />
+    <button label="SAVE" onClick="SAVE" />
+    <text label=" " />
+    <button label="PLAY" href="pieces/apps/playrm/layouts/game.chtpm" />
+    <text label=" " />
+    <button label="EXIT" href="pieces/chtpm/layouts/os.chtpm" />
+    <text label="                                 ║" /><br/>
+    
+    <text label="╚═══════════════════════════════════════════════════════════╝" /><br/>
+    <text label=" [1]: Grid | [2/3]: Palettes | [ESC]: Nav | [ENT]: Place | [SPC]: Menu" /><br/>
+</panel>

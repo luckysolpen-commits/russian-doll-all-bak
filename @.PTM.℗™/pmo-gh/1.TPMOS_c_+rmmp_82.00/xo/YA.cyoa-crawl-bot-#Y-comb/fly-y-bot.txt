@@ -1,9 +1,0 @@
-(im writing this as a test book to have my ai navigate
-the cyoa and read it outloud without my input , making its own choices
-as a way to get a foothold into making an op-bot and reverse
-engineering that for bot editor 
-
-we will actually mention this at the begining as a reminder
-the user can run the test bot as well . and tweak it etc
-even in story they can tweak it. the best path should lead 2 cyborg
-and build from there. 

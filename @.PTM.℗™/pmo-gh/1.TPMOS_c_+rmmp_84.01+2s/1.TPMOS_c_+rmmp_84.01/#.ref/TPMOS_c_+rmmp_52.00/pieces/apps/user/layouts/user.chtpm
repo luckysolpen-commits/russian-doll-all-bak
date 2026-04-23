@@ -1,0 +1,25 @@
+<panel time_reactive="true">
+    <module>${module_path}</module>
+    <interact src="pieces/apps/player_app/history.txt" />
+
+    <text label="╔═══════════════════════════════════════════════════════════╗" /><br/>
+    <text label="║           U S E R   A U T H E N T I C A T I O N           ║" /><br/>
+    <text label="║  ${app_title}                                  ║" /><br/>
+    <text label="║  Status: ${session_status}                                ║" /><br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    
+    <!-- Form fields - always visible, navigable -->
+    <text label="║  [1] Username: " /><cli_io id="username" label="${username_input}" /><text label=" ║" /><br/>
+    <text label="║  [2] Password: " /><cli_io id="password" label="${password_input}" /><text label=" ║" /><br/>
+    
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    
+    <!-- Action buttons -->
+    <text label="║  " /><button label="Login" onClick="login" /><button label="Signup" onClick="signup" /><button label="Clear" onClick="clear" /><text label=" ║" /><br/>
+    
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║  Response: ${response}                                    ║" /><br/>
+    <text label="╠═══════════════════════════════════════════════════════════╣" /><br/>
+    <text label="║  " /><button label="Back" href="pieces/chtpm/layouts/os.chtpm" /><text label="                                         ║" /><br/>
+    <text label="╚═══════════════════════════════════════════════════════════╝" /><br/>
+</panel>

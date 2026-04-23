@@ -1,5 +1,0 @@
-STATE: PAUSED
-SHUFFLE: OFF
-CURRENT_SONG_INDEX: 16
-CURRENT_SONG_PATH: /home/no/Desktop/Piecemark-IT/中ϕ_00.00/@.sp.iphone-MAC/0.SP.META_TRAILERS_01.01/04.moonshine_trailer/moonshine-trailer.mp3
-PLAYBACK_TIME: 92.66/230.64

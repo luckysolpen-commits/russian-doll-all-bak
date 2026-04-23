@@ -1,0 +1,4 @@
+[20:40:02] PARSER: launch_module(pieces/apps/user/plugins/+x/user_module.+x) pid=0
+[20:40:02] PARSER: forked module pid=56792
+[20:40:02] PARSER: launch_module(pieces/apps/user/plugins/+x/user_module.+x) pid=56792
+[20:40:02] PARSER: launch_module(pieces/apps/user/plugins/+x/user_module.+x) pid=56792

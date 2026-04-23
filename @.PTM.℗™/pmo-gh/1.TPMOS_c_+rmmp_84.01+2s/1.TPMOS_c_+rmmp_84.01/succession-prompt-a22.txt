@@ -1,0 +1,48 @@
+# Succession Prompt: User Application Refactoring
+
+## **Objective:**
+Refactor the User application (`user`) to integrate seamlessly with the CHTPM framework, implement robust authentication (including password hashing), and manage user state effectively.
+
+## **Current Status:**
+-   **Layout (`user.chtpm`):** Updated to use `KEY:` directives for button actions (e.g., `KEY:1` for Signup, `KEY:2` for Login, `KEY:5` for Clear).
+-   **Manager State:** `projects/user/manager/state.txt` has been created with basic fields (`active_target_id`, `input_mode`, `username_input`, `password_input`, `auth_response`, `session_status`, `current_user`, `last_key`).
+-   **User Manager Binary:** `projects/user/manager/+x/user_manager.+x` has been compiled.
+-   **Backend Ops:** Basic user operations (`create_profile`, `auth_user`, `get_session`) exist in `projects/user/ops/`.
+-   **Hashing Library:** OpenSSL (SHA256) is available for password hashing.
+-   **Known Issues:**
+    *   `user_manager.c` currently uses hardcoded key polling and direct stdout for output, not CHTPM event-driven or state-based communication.
+    *   Authentication state management (login, signup, profile screens) is not implemented.
+    *   `user.chtpm` `onClick` attributes were not mapped to manager logic.
+    *   Password hashing is not implemented.
+    *   State persistence and synchronization with `projects/user/manager/state.txt` needs to be robust.
+
+## **Refactoring Plan Summary:**
+The core task is to modernize `user_manager.c` and ensure correct interaction with the CHTPM layout and backend operations.
+
+**Phase 1: `user_manager.c` Refactoring**
+1.  **Input Handling:**
+    *   Remove hardcoded key polling in `user_manager.c`.
+    *   Implement logic to read username and password from `projects/user/manager/state.txt` (specifically from `username_input` and `password_input` fields).
+    *   Handle `KEY:1` (Signup), `KEY:2` (Login), and `KEY:5` (Clear) inputs.
+2.  **Authentication State Management:**
+    *   Introduce an `auth_screen` variable to manage states (e.g., 0 for main menu, 1 for login, 2 for signup, 3 for profile).
+    *   Transition between screens based on user actions and backend responses.
+3.  **Backend Operation Integration:**
+    *   Map `KEY:1` to call `create_profile` op with current username/password.
+    *   Map `KEY:2` to call `auth_user` op with current username/password.
+    *   Map `KEY:5` to clear username, password, and response fields in `state.txt`.
+    *   Ensure correct handling and feedback for successful/failed operations.
+4.  **Password Hashing:**
+    *   Integrate SHA256 hashing for passwords during signup and verification during login. Use OpenSSL functions.
+5.  **State Synchronization:**
+    *   Ensure `projects/user/manager/state.txt` is consistently updated with `session_status`, `current_user`, `auth_response`, `username_input`, `password_input`, and potentially other relevant fields.
+    *   Update `projects/user/layouts/user.chtpm` to correctly bind `cli_io` elements to these state variables for dynamic display.
+
+## **Instructions for Next Agent:**
+-   **Prioritize refactoring `user_manager.c`**: Focus on implementing event-driven input handling, state management for authentication screens, and correct invocation of backend operations.
+-   **Integrate Password Hashing**: Implement SHA256 hashing using OpenSSL.
+-   **Update State Management**: Ensure `projects/user/manager/state.txt` is the central source for input fields and session status, and that the manager correctly reads from and writes to it.
+-   **Verify `user.chtpm` Integration**: Confirm that the `cli_io` elements correctly reflect the state and that `KEY:` directives trigger the intended manager actions.
+-   **Test Scenarios**: Ensure successful user creation, login, and error handling (e.g., user exists, invalid password).
+
+This file serves as a handover document. The next agent should be able to pick up from here and complete the refactoring of the user authentication system.
