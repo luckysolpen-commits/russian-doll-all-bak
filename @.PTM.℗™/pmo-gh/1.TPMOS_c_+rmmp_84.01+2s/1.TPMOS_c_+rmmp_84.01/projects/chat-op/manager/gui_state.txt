@@ -1,2 +1,0 @@
-messages=test\nhi\ntest
-input_text=

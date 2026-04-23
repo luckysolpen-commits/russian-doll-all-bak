@@ -1,0 +1,70 @@
+# STEP 3 TODO: GL-OS Infrastructure & 3D ASCII POC
+**Task:** Enable GL project selection from ASCII-OS and prototype 3D visualization.
+**Collaborators:** User & Gemini CLI
+**Date:** 2026-04-22
+
+---
+
+## 1. INFRASTRUCTURE: Mirror Terminal Selection
+**Objective:** Allow the ASCII Project Loader to trigger GL-OS transitions.
+
+- [ ] **1.1 GL-Route Mapping:**
+    - Audit `pieces/os/project_routes.kvp`.
+    - Add entries for GL-specific projects (e.g., `gl-desktop`, `fuzz-op-gl`).
+    - Standardize the `.chtml` or `.gl` extension for GL-native layouts.
+- [ ] **1.2 Parser Switch Logic:**
+    - Update `chtpm_parser.c` to recognize when a requested layout requires a "Theater Swap" (killing ASCII renderer and launching GL renderer).
+- [ ] **1.3 GL-OS Menu Sub-navigation:**
+    - Implement `active_menu_context` in `gl_desktop.c` (e.g., `CTX_MAIN`, `CTX_DESKTOP_APPS`).
+    - Update `execute_option` to transition `menu_options` based on context.
+    - Specifically: Index 0 (Desktop Apps) -> Load app list (**Fuzz-Op-GL, Op-Ed-GL, 3D Cube, Back**) into `win->menu_options`.
+    - Ensure Enter (13) on "Back" returns to `CTX_MAIN`.
+
+---
+
+## 2. EXPLORATIVE POC: 3D ASCII Projection
+**Objective:** Use ASCII characters to simulate 3D depth in the terminal (precursor to GL tiles).
+
+- [ ] **2.1 Isometric Logic Op (`project_3d_ascii.+x`):**
+    - Create a standalone Op that reads a 2D map and Z-level data.
+    - Output a skewed ASCII representation where `Z` determines character "height" or vertical offset.
+- [ ] **2.2 Op-Ed Integration:**
+    - Add a toggle in `op-ed` (similar to emoji mode) to switch the viewport to "3D Mode" using this new projection.
+- [ ] **2.3 Fuzz-Op Integration:**
+    - Verify that the pet and entities render correctly in the skewed 3D ASCII view.
+
+---
+
+## 3. GL-OS: 3D Tile Engine Prototype
+**Objective:** A basic 3D environment in GL-OS that mirrors project data.
+
+- [ ] **3.1 Tile Extrusion Logic:**
+    - In `gl_desktop.c` or a new GL plugin, implement a renderer that draws 3D cubes.
+    - **Tile Height = Z-Level**: Map the `cursor_z` or piece `pos_z` to the cube's Y-scale.
+- [ ] **3.2 RGB Tile Format (8x8x8):**
+    - Define `.txt` format for storing 512 RGB values (8x8x8 grid).
+    - Create sample tiles in `pieces/display/tiles/` (e.g., `wall.txt`, `floor.txt`).
+- [ ] **3.3 Camera Controller (3 Modes):**
+    - Implement **Free Camera**: Independent movement and rotation.
+    - Implement **1st Person**: Camera attached to the `player_piece` eye-level.
+    - Implement **3rd Person**: Camera follows behind the `player_piece`.
+- [ ] **3.4 File-State Sync:**
+    - Ensure the GL renderer reads the project's `state.txt` and `view.txt` to position these 3D tiles.
+
+---
+
+## 4. KPIs (Success Criteria)
+
+| ID | KPI | Metric |
+| :--- | :--- | :--- |
+| **K1** | **Theater Swap** | Selecting a GL project in the Loader launches the OpenGL window successfully. |
+| **K2** | **3D ASCII Parity** | Toggling 3D Mode in Op-Ed shows an isometric grid with visible height differences. |
+| **K3** | **GL File Sync** | Moving a piece in the ASCII terminal reflects its 3D position in the GL window in real-time. |
+| **K4** | **Z-Level Impact** | Changing Z-level in Op-Ed changes the "physical" height of the tile in both 3D ASCII and GL. |
+
+---
+
+## 5. NEXT STEPS (Immediate Collaboration)
+1. Audit `project_routes.kvp` and current GL-OS entry points.
+2. Draft the isometric math for `project_3d_ascii.c`.
+3. Implement the "3D View" toggle in `op-ed_manager.c`.

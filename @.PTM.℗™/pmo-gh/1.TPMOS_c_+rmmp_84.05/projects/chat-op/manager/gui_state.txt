@@ -1,0 +1,3 @@
+connected_peers_list=
+peer_count=0
+network_status=ONLINE

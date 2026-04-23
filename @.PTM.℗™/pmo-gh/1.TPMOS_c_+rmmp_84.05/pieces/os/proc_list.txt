@@ -1,0 +1,9 @@
+65480 orchestrator
+65503 chtpm_parser
+65502 response_handler
+65498 keyboard_input
+65500 joystick_input
+65515 gl_renderer
+65516 renderer
+65517 clock_daemon
+gl_os_session=65540
