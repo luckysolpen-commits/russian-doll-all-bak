@@ -1,8 +1,0 @@
-6985 orchestrator
-7011 joystick_input
-7014 chtpm_parser
-7009 keyboard_input
-7013 response_handler
-7020 renderer
-7022 gl_renderer
-7023 clock_daemon
