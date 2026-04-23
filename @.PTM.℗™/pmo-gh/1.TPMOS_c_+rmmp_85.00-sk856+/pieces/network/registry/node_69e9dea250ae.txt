@@ -1,4 +1,0 @@
-hash=69e9dea250ae
-port=8001
-subnet=CHAT
-last_seen=1776934586
