@@ -482,6 +482,13 @@ void route_input(int key) {
                         }
                     }
                     save_manager_state();
+
+                    /* PULSE: Notify parser that active_target_id changed (Trait Menu Sync) */
+                    char* pulse_path = build_path_malloc("pieces/apps/player_app/state_changed.txt");
+                    FILE *pf = fopen(pulse_path, "a");
+                    if (pf) { fprintf(pf, "S\n"); fclose(pf); }
+                    free(pulse_path);
+
                     break;
                 }
             }
@@ -642,6 +649,8 @@ void route_input(int key) {
         pid_t p = fork();
         if (p == 0) {
             freopen("/dev/null", "w", stdout); freopen("/dev/null", "w", stderr);
+            char proj_env[128]; snprintf(proj_env, sizeof(proj_env), "PRISC_PROJECT_ID=%s", current_project);
+            putenv(proj_env);
             execl(trait, trait, active_target_id, dir_str, NULL); exit(1);
         } else waitpid(p, NULL, 0);
         free(trait);
@@ -679,6 +688,8 @@ void route_input(int key) {
         p = fork();
         if (p == 0) {
             freopen("/dev/null", "w", stdout); freopen("/dev/null", "w", stderr);
+            char proj_env[128]; snprintf(proj_env, sizeof(proj_env), "PRISC_PROJECT_ID=%s", current_project);
+            putenv(proj_env);
             execl(zombie_cmd, zombie_cmd, "zombie_01", active_target_id, NULL); exit(1);
         } else waitpid(p, NULL, 0);
         free(zombie_cmd);
@@ -773,32 +784,54 @@ void* gltpm_input_thread(void* arg __attribute__((unused))) {
                                     save_manager_state();
                                     trigger_render();
                                 } else if (is_map_control) {
-                                    // Handle Camera/Xelector movement
-                                   
+                                    /* Handle Camera/Xelector movement */
                                     if (key_code >= 32 && key_code <= 126) snprintf(last_key_str, sizeof(last_key_str), "%c", (char)key_code);
                                     else if (key_code == 1000) strcpy(last_key_str, "LEFT");
                                     else if (key_code == 1001) strcpy(last_key_str, "RIGHT");
                                     else if (key_code == 1002) strcpy(last_key_str, "UP");
                                     else if (key_code == 1003) strcpy(last_key_str, "DOWN");
-                                    else if (key_code == 27) strcpy(last_key_str, "ESC");
                                     else if (key_code == 10 || key_code == 13) strcpy(last_key_str, "ENTER");
-                                    else snprintf(last_key_str, sizeof(last_key_str), "%d", key_code);
-  
-                                    if (key_code == '1') camera_mode = 1;
-                                    else if (key_code == '2') camera_mode = 2;
-                                    else if (key_code == '3') camera_mode = 3;
-                                    else if (key_code == '4') camera_mode = 4;
-                                    else if (key_code == 'w') cam_pos[2] += speed; // Forward
-                                    else if (key_code == 's') cam_pos[2] -= speed; // Backward
-                                    else if (key_code == 'a') cam_pos[0] -= speed; // Left
-                                    else if (key_code == 'd') cam_pos[0] += speed; // Right
-                                    else if (key_code == 'z') cam_pos[1] += speed; // Fly Up
-                                    else if (key_code == 'x') cam_pos[1] -= speed; // Fly Down
-                                    else if (key_code == 'q') cam_rot[1] -= 5.0f;  // Rotate Left
-                                    else if (key_code == 'e') cam_rot[1] += 5.0f;  // Rotate Right
+
+                                    /* 1. Camera Fly Controls (WASD/ZX/QE) */
+                                    int moved = 0;
+                                    if (key_code == '1') { camera_mode = 1; moved = 1; }
+                                    else if (key_code == '2') { camera_mode = 2; moved = 1; }
+                                    else if (key_code == '3') { camera_mode = 3; moved = 1; }
+                                    else if (key_code == '4') { camera_mode = 4; moved = 1; }
+                                    else if (key_code == 'w') { cam_pos[2] += speed; moved = 1; }
+                                    else if (key_code == 's') { cam_pos[2] -= speed; moved = 1; }
+                                    else if (key_code == 'a') { cam_pos[0] -= speed; moved = 1; }
+                                    else if (key_code == 'd') { cam_pos[0] += speed; moved = 1; }
+                                    else if (key_code == 'z') { cam_pos[1] += speed; moved = 1; }
+                                    else if (key_code == 'x') { cam_pos[1] -= speed; moved = 1; }
+                                    else if (key_code == 'q') { cam_rot[1] -= 5.0f; moved = 1; }
+                                    else if (key_code == 'e') { cam_rot[1] += 5.0f; moved = 1; }
                                     
-                                    save_manager_state();
-                                    trigger_render();
+                                    /* 2. Xelector Piece Muscle (Arrows) - Direct Op Delegation */
+                                    if (key_code >= 1000 && key_code <= 1003) {
+                                        /* FORCE: In Map Control mode, arrows always move the Xlector */
+                                        char* trait = build_path_malloc("pieces/apps/playrm/ops/+x/move_entity.+x");
+                                        char dir_str[16];
+                                        if (key_code == 1002) strcpy(dir_str, "up");
+                                        else if (key_code == 1003) strcpy(dir_str, "down");
+                                        else if (key_code == 1000) strcpy(dir_str, "left");
+                                        else if (key_code == 1001) strcpy(dir_str, "right");
+                                        
+                                        pid_t p = fork();
+                                        if (p == 0) {
+                                            freopen("/dev/null", "w", stdout); freopen("/dev/null", "w", stderr);
+                                            char proj_env[128]; snprintf(proj_env, sizeof(proj_env), "PRISC_PROJECT_ID=%s", current_project);
+                                            putenv(proj_env);
+                                            execl(trait, trait, "xlector", dir_str, NULL); exit(1);
+                                        } else waitpid(p, NULL, 0);
+                                        free(trait);
+                                        moved = 1;
+                                    }
+
+                                    if (moved) {
+                                        save_manager_state();
+                                        trigger_render();
+                                    }
                                 } else { // Not map control, route to normal input
                                     route_input(key_code);
                                 }

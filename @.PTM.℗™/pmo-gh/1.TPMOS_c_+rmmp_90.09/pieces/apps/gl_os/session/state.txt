@@ -9,7 +9,7 @@ width=800
 height=600
 session_status=active
 selected_index=0
-debug_info=M(126,225) S=0
+debug_info=M(783,140) S=0
 window_list=  [ ] 1. Terminal 1          
   [>] 2. Fuzz-Op GLTPM (Sovereign A23)
 menu_options=║    [>] 1. [Control Map (ENTER) ]           ║

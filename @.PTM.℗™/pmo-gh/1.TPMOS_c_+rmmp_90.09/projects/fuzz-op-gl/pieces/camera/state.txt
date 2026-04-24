@@ -1,10 +1,10 @@
 name=Camera
 type=camera
-pos_x=0.50
+pos_x=1.50
 pos_y=0.00
-pos_z=2.00
+pos_z=-1.00
 pitch=30.00
-yaw=-10.00
+yaw=5.00
 roll=0.00
-mode=3
-is_map_control=0
+mode=1
+is_map_control=1

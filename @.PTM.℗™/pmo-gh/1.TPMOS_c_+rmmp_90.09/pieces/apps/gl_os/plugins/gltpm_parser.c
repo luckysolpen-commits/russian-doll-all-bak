@@ -3,7 +3,7 @@
  * Included directly by gl_desktop.c for the first vertical slice.
  */
 
-#define MAX_GLTPM_VARS 64
+#define MAX_GLTPM_VARS 256
 #define MAX_GLTPM_VALUE 65536
 #define MAX_GLTPM_LEGEND 128
 #define MAX_GLTPM_BUFFER 1048576
@@ -366,6 +366,10 @@ static int gltpm_process_canvas_block(GLTPMScene *scene, const char *project_roo
             /* Stop at trailing sidebar ' |' or end of map block */
             if (p[col] == '|' || p[col] == '\r') break;
             if (p[col] == ' ') continue;
+            
+            /* SKIP XELECTOR: The yellow wireframe is drawn by the Host, 
+               don't render a generic cube for the ASCII 'X' */
+            if (p[col] == 'X') continue;
 
             GLTPMLegend *l = gltpm_lookup_legend(legend, legend_count, p[col]);
             if (l) {
@@ -387,7 +391,7 @@ static int gltpm_process_canvas_block(GLTPMScene *scene, const char *project_roo
 
 static int gltpm_load_scene(GLTPMScene *scene, const char *project_root,
                             const char *project_id, const char *layout_path) {
-    GLTPMVar vars[MAX_GLTPM_VARS];
+    GLTPMVar *vars = NULL;
     int var_count = 0;
     char state_path[MAX_PATH];
     char gui_state_path[MAX_PATH];
@@ -399,8 +403,11 @@ static int gltpm_load_scene(GLTPMScene *scene, const char *project_root,
 
     if (!scene || !project_root || !project_id || !layout_path) return 0;
 
+    vars = malloc(sizeof(GLTPMVar) * MAX_GLTPM_VARS);
+    if (!vars) return 0;
+
     gltpm_scene_reset(scene);
-    memset(vars, 0, sizeof(vars));
+    memset(vars, 0, sizeof(GLTPMVar) * MAX_GLTPM_VARS);
 
     snprintf(state_path, sizeof(state_path), "%s/projects/%s/session/state.txt",
              project_root, project_id);
@@ -456,7 +463,7 @@ static int gltpm_load_scene(GLTPMScene *scene, const char *project_root,
 
     gltpm_build_abs_path(layout_abs, sizeof(layout_abs), project_root, layout_path);
     FILE *f = fopen(layout_abs, "r");
-    if (!f) return 0;
+    if (!f) { free(vars); return 0; }
     fseek(f, 0, SEEK_END); long sz = ftell(f); fseek(f, 0, SEEK_SET);
     layout_raw = malloc(sz + 1); fread(layout_raw, 1, sz, f); layout_raw[sz] = '\0';
     fclose(f);
@@ -520,6 +527,7 @@ static int gltpm_load_scene(GLTPMScene *scene, const char *project_root,
     }
 
     free(layout_sub);
+    free(vars);
     scene->loaded = 1;
     return 1;
 }

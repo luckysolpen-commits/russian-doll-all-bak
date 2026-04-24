@@ -1619,8 +1619,15 @@ void draw_window(DesktopWindow* win) {
 
         /* Draw Xelector (Grid Cursor) */
         glPushMatrix();
-        glTranslatef(win->xelector_pos[0] * 1.2f, 0, win->xelector_pos[2] * 1.2f);
-        draw_xelector(1.2f);
+        float sel_gl_x = win->xelector_pos[0] * 1.2f;
+        float sel_gl_y = win->xelector_pos[2] * 0.5f; /* Elevation */
+        float sel_gl_z = win->xelector_pos[1] * 1.2f; /* Depth */
+        glTranslatef(sel_gl_x, sel_gl_y, sel_gl_z);
+        
+        /* Add Blinking Logic (KISS) */
+        if ((time(NULL) % 2) == 0) {
+            draw_xelector(1.2f);
+        }
         glPopMatrix();
 
         glDisable(GL_SCISSOR_TEST);
@@ -1644,6 +1651,51 @@ void draw_window(DesktopWindow* win) {
         for (char *p = key_feedback; *p; p++) {
             glutBitmapCharacter(GLUT_BITMAP_8_BY_13, *p);
         }
+
+        /* 1. Coordinate HUD (Bottom) */
+        char coord_hud[256];
+        snprintf(coord_hud, sizeof(coord_hud), "CAM: (%.1f, %.1f, %.1f) | SEL: (%d, %d, %d)", 
+                 win->cam_pos[0], win->cam_pos[1], win->cam_pos[2],
+                 win->xelector_pos[0], win->xelector_pos[1], win->xelector_pos[2]);
+        glColor3f(0.0f, 1.0f, 1.0f); /* Cyan HUD */
+        glRasterPos2f(x + 15, y + 35);
+        for (char *p = coord_hud; *p; p++) glutBitmapCharacter(GLUT_BITMAP_8_BY_13, *p);
+
+        /* 2. 2D Minimap (Bottom-Right) */
+        int mm_size = 80;
+        int mm_x = x + w - mm_size - 15;
+        int mm_y = y + 55;
+        draw_rect(mm_x - 2, mm_y - 2, mm_size + 4, mm_size + 4, 0.2f, 0.2f, 0.2f); /* Border */
+        draw_rect(mm_x, mm_y, mm_size, mm_size, 0.05f, 0.05f, 0.1f); /* BG */
+        
+        /* Draw static tiles on minimap */
+        float cell_size = (float)mm_size / 20.0f; /* Assuming 20x20 grid center */
+        for (int i = 0; i < win->gltpm_scene.tile_count; i++) {
+            GLTPMTile *tile = &win->gltpm_scene.tiles[i];
+            int tx = mm_x + (mm_size/2) + (int)(tile->x * cell_size);
+            int ty = mm_y + (mm_size/2) + (int)(tile->y * cell_size);
+            if (tx >= mm_x && tx < mm_x + mm_size && ty >= mm_y && ty < mm_y + mm_size) {
+                draw_rect(tx, ty, (int)cell_size, (int)cell_size, tile->color[0], tile->color[1], tile->color[2]);
+            }
+        }
+
+        /* Draw Xelector on minimap */
+        int sel_mm_x = mm_x + (mm_size/2) + (int)(win->xelector_pos[0] * cell_size);
+        int sel_mm_y = mm_y + (mm_size/2) + (int)(win->xelector_pos[2] * cell_size);
+        draw_rect(sel_mm_x, sel_mm_y, (int)cell_size, (int)cell_size, 1.0f, 1.0f, 0.0f);
+
+        /* Draw View Cone (Camera) on minimap */
+        int cam_mm_x = mm_x + (mm_size/2) + (int)(win->cam_pos[0] / 1.2f * cell_size);
+        int cam_mm_y = mm_y + (mm_size/2) + (int)(win->cam_pos[2] / 1.2f * cell_size);
+        glColor3f(1.0f, 1.0f, 1.0f);
+        glBegin(GL_LINES);
+        /* Simple view cone lines based on Yaw */
+        float yaw_rad = (win->cam_rot[1] - 45.0f) * 3.14159f / 180.0f;
+        glVertex2f(cam_mm_x, cam_mm_y);
+        glVertex2f(cam_mm_x + cos(yaw_rad - 0.5f) * 10, cam_mm_y + sin(yaw_rad - 0.5f) * 10);
+        glVertex2f(cam_mm_x, cam_mm_y);
+        glVertex2f(cam_mm_x + cos(yaw_rad + 0.5f) * 10, cam_mm_y + sin(yaw_rad + 0.5f) * 10);
+        glEnd();
 
         for (int i = 0; i < win->gltpm_scene.text_count; i++) {
             int line_y = y + h - 62 - (i * 18);
