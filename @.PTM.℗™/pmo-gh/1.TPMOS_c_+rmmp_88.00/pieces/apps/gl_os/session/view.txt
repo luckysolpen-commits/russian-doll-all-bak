@@ -1,5 +1,0 @@
-DESKTOP_VIEW
-BG: #000044
-WINDOW_COUNT: 2
-WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0
-WINDOW | 2 | 120 | 120 | 400 | 400 | Fuzz-Op-GL | project_mirror | 0

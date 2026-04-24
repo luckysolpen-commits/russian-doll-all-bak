@@ -1,0 +1,10 @@
+ look at @\!.gem-flashlite--yolo/gl-os-r\&d/ ; this is where we left       
+   off. specifically , we were moving to step 6 : 1. **Real Data Sync:**     
+   Update `gl_desktop.c` to read `projects/fuzz-op-gl/session/state.txt`     
+   instead of using mock grid/entities.                                      
+   2. **Menu Triggers:** Map menu options (`scan`, `collect`) to actual      
+   Op execution via the project manager. ; i want u to read over the         
+   current exisiting code progress as it was described, find it in the       
+   code and lets write an extensive indexed walk thru of it , so i can       
+   know where the updates will need to fit in. lets do that in               
+   glos-update-prep.txt 

@@ -1,0 +1,169 @@
+void keyboard(unsigned char key, int x, int y) {
+    (void)x; (void)y;
+    last_interaction_time = time(NULL);
+
+    /* Check focused window type */
+    int active_idx = -1;
+    if (active_window_id != -1) {
+        for (int i = 0; i < window_count; i++) {
+            if (windows[i].id == active_window_id) {
+                active_idx = i;
+                break;
+            }
+        }
+    }
+
+    /* ESC behavior */
+    if (key == 27) {
+        if (context_menu_visible) {
+            context_menu_visible = 0;
+            glutPostRedisplay();
+            return;
+        } else if (active_idx != -1 && windows[active_idx].is_map_control) {
+            windows[active_idx].is_map_control = 0;
+            add_history(&windows[active_idx], "Returned to Menu Navigation.");
+            
+            /* Also inject ESC to project so manager knows */
+            DesktopWindow* win = &windows[active_idx];
+            const char* target_src = (win->gltpm_scene.interact_src[0] != '\0') ? win->gltpm_scene.interact_src : "pieces/apps/player_app/history.txt";
+            char *history_path = NULL;
+            if (asprintf(&history_path, "%s/%s", project_root, target_src) != -1) {
+                FILE *hf = fopen(history_path, "a");
+                if (hf) {
+                    time_t rawtime; struct tm *timeinfo; char timestamp[64];
+                    time(&rawtime); timeinfo = localtime(&rawtime);
+                    strftime(timestamp, sizeof(timestamp), "%Y-%m-%d %H:%M:%S", timeinfo);
+                    fprintf(hf, "[%s] KEY_PRESSED: 27\n", timestamp);
+                    fclose(hf);
+                }
+                free(history_path);
+            }
+            write_gl_os_frame();
+            glutPostRedisplay();
+            return;
+        }
+    }
+
+    /* Priority Routing for gltpm_app (A23) */
+    if (active_idx != -1 && strcmp(windows[active_idx].type, "gltpm_app") == 0) {
+        DesktopWindow* win = &windows[active_idx];
+        int in_map = win->is_map_control;
+
+        if (in_map) {
+            /* Specifically handle camera mode shortcuts locally for visual feedback */
+            if (key == '1') win->camera_mode = 1;
+            else if (key == '2') win->camera_mode = 2;
+            else if (key == '3') win->camera_mode = 3;
+            else if (key == '4') win->camera_mode = 4;
+
+            char *history_path = NULL;
+            const char* target_src = (win->gltpm_scene.interact_src[0] != '\0') ? win->gltpm_scene.interact_src : "pieces/apps/player_app/history.txt";
+            
+            if (asprintf(&history_path, "%s/%s", project_root, target_src) != -1) {
+                FILE *hf = fopen(history_path, "a");
+                if (hf) {
+                    time_t rawtime; struct tm *timeinfo; char timestamp[64];
+                    time(&rawtime); timeinfo = localtime(&rawtime);
+                    strftime(timestamp, sizeof(timestamp), "%Y-%m-%d %H:%M:%S", timeinfo);
+                    fprintf(hf, "[%s] KEY_PRESSED: %d\n", timestamp, (int)tolower(key));
+                    fclose(hf);
+                }
+                free(history_path);
+            }
+            glutPostRedisplay();
+            return; /* YIELD */
+        } else {
+            /* Menu Mode: Nav > behavior */
+            if (key >= '0' && key <= '9') {
+                int len = strlen(win->nav_buffer);
+                if (len < sizeof(win->nav_buffer) - 1) {
+                    win->nav_buffer[len] = key;
+                    win->nav_buffer[len+1] = '\0';
+                    int idx = atoi(win->nav_buffer) - 1;
+                    if (idx >= 0 && idx < win->gltpm_scene.button_count) win->selected_index = idx;
+                }
+            } else if (key == 8 || key == 127) {
+                int len = strlen(win->nav_buffer);
+                if (len > 0) win->nav_buffer[len-1] = '\0';
+            } else if (key == 13 || key == 10) {
+                if (strlen(win->nav_buffer) > 0) {
+                    int idx = atoi(win->nav_buffer) - 1;
+                    if (idx >= 0 && idx < win->gltpm_scene.button_count) {
+                        win->selected_index = idx;
+                        dispatch_gltpm_button(win, idx);
+                    }
+                    win->nav_buffer[0] = '\0';
+                } else {
+                    dispatch_gltpm_button(win, win->selected_index);
+                }
+            }
+            glutPostRedisplay();
+            return;
+        }
+    }
+
+    /* Project Mirror Controls (Hardcoded POC) */
+    if (active_idx != -1 && strcmp(windows[active_idx].type, "project_mirror") == 0) {
+        DesktopWindow* win = &windows[active_idx];
+        if (win->is_map_control) {
+            float speed = 0.2f;
+            if (key == '1') win->camera_mode = 1;
+            else if (key == '2') win->camera_mode = 2;
+            else if (key == '3') win->camera_mode = 3;
+            else if (key == '4') win->camera_mode = 4;
+            else if (key == 'w' || key == 'W') win->cam_pos[2] += speed;
+            else if (key == 's' || key == 'S') win->cam_pos[2] -= speed;
+            else if (key == 'a' || key == 'A') win->cam_pos[0] -= speed;
+            else if (key == 'd' || key == 'D') win->cam_pos[0] += speed;
+            else if (key == 'z' || key == 'Z') win->cam_pos[1] += speed;
+            else if (key == 'x' || key == 'X') win->cam_pos[1] -= speed;
+            else if (key == 'q' || key == 'Q') win->cam_rot[1] -= 5.0f;
+            else if (key == 'e' || key == 'E') win->cam_rot[1] += 5.0f;
+            glutPostRedisplay();
+            return;
+        } else {
+            if (key >= '1' && key <= '9') {
+                int idx = key - '1';
+                if (idx >= 0 && idx < win->option_count) win->selected_index = idx;
+            } else if (key == 13) execute_option(win, win->selected_index);
+            glutPostRedisplay();
+            return;
+        }
+    }
+
+    /* Terminal/Standard Controls */
+    int terminal_focused = (active_idx != -1 && strcmp(windows[active_idx].type, "terminal") == 0);
+    if (!terminal_focused) {
+        if (key == '1') { create_terminal_window(); context_menu_visible = 0; }
+        else if (key == '2') { create_cube_window(); context_menu_visible = 0; }
+        else if (key == 'c' || key == 'C') { if (active_window_id != -1) close_window(active_window_id); }
+    }
+
+    if (terminal_focused) {
+        DesktopWindow* win = &windows[active_idx];
+        int len = strlen(win->input_buffer);
+        if (win->show_menu && key >= '1' && key <= '9') {
+            int idx = key - '1';
+            if (idx >= 0 && idx < win->option_count) win->selected_index = idx;
+        }
+        if (key == 13) {
+            if (win->show_menu && win->option_count > 0) execute_option(win, win->selected_index);
+            else process_terminal_command(win);
+        } else if (key == 8 || key == 127) {
+            if (len > 0) win->input_buffer[len-1] = '\0';
+        } else if (len < 250 && key >= 32 && key <= 126) {
+            win->input_buffer[len] = key;
+            win->input_buffer[len+1] = '\0';
+        }
+    }
+
+    FILE *hf = fopen(session_history_path, "a");
+    if (hf) {
+        time_t rawtime; struct tm *timeinfo; char timestamp[100];
+        time(&rawtime); timeinfo = localtime(&rawtime);
+        strftime(timestamp, sizeof(timestamp), "%Y-%m-%d %H:%M:%S", timeinfo);
+        fprintf(hf, "[%s] KEY_PRESSED: %d\n", timestamp, key); fclose(hf);
+    }
+    write_session_state();
+    glutPostRedisplay();
+}

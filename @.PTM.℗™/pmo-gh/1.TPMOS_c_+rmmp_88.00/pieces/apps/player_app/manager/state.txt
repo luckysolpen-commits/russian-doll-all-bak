@@ -1,3 +1,0 @@
-project_id=chat-op
-active_target_id=selector
-last_key=KEY:13

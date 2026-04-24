@@ -1,7 +1,0 @@
-we proceed with the next task?
-▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
- > currently gl-os can only move between 2 options ("desktop apps 1 , and terminal app 2)  
-   do u see the history of this behavior in a gl-os subdir? do you know how we will read   
-   enter key on 1 desktop apps and move to the next view frame for a list of gl-os desktop 
-   apps? do you know how to update step3 document to communicate this ?                    
-▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
