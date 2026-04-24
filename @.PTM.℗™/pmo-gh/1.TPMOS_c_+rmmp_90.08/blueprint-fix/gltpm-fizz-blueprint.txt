@@ -1,0 +1,53 @@
+# GLTPM "Fizz" Blueprint (The Perfect GL-OS Pipeline)
+
+This document defines the authoritative pipeline for a GL-enabled TPMOS project, correcting the naive discrepancies found in earlier iterations.
+
+## 1. The "Only One Truth" Rule
+The most common false assumption is that the GL renderer needs a separate movement or state logic. In the perfect beautiful pipeline:
+- **The World State is ASCII:** The Manager and Ops update Piece `state.txt`.
+- **The View is ASCII:** `render_map.+x` generates `view.txt`.
+- **The GL-OS is a Theater:** The GL Renderer reads `view.txt` and uses a **Legend/Registry** to substitute characters with 3D models/tiles.
+
+## 2. Pipeline Discrepancies & Corrections
+
+| Component | ASCII Pipeline (CHTPM) | GL Pipeline (GLTPM) | Correction |
+| :--- | :--- | :--- | :--- |
+| **Input** | `history.txt` -> Manager | `session/history.txt` -> Manager | **Unify:** Manager should listen to BOTH or a single project-scoped history. |
+| **Parser** | `chtpm_parser.c` (Literal) | `gltpm_parser.c` (Translation) | **Translation:** GLTPM converts the `${game_map}` ASCII block into 3D entities. |
+| **State** | Reads `state.txt` for vars. | Reads `session/state.txt` for Camera. | **Camera as Piece:** Camera should be a Piece with its own `pos_x/y/z` in the world. |
+| **Marker** | `display/frame_changed.txt` | `session/frame_changed.txt` | **Pulse Equality:** One marker pulse should trigger BOTH renders if they are active. |
+
+---
+
+## 3. User Input & History Flow
+User input must go to a **Project-Specific History** to avoid polluting global system logs.
+
+1.  **UI/Renderer** -> Detects key/click.
+2.  **UI/Renderer** -> Appends `KEY_PRESSED: <code>` to `projects/<id>/session/history.txt`.
+3.  **Marker** -> UI pulses `session/history_changed.txt` (The "Input Pulse").
+4.  **Manager** -> Wakes up, reads the new line, and calls the appropriate Op.
+
+---
+
+## 4. The Marker File Discipline
+To avoid the "Triple Render" bug (where ASCII and GL renderers fight for CPU):
+- The Manager **MUST NOT** call renderers directly.
+- The Manager writes its state changes and then appends `G\n` (GL) or `M\n` (Map/ASCII) to `session/frame_changed.txt`.
+- The Renderers are independent daemons watching this file.
+
+---
+
+## 5. Structuring the GL Code
+For GL projects, we make an exception to the "Standalone Island" rule:
+- **Linked Binary:** The Manager and the CHTPM/GLTPM parser logic can be linked into a single sovereign binary (`fuzz-op-gl_manager.+x`) to ensure frame-perfect synchronization between state and view.
+- **Shared Utils:** A `gl_utils.c` should be linked to provide unified camera and matrix math.
+
+---
+
+## 6. Implementation Summary for New Agents
+1.  **State:** Keep Piece data in `state.txt`.
+2.  **Input:** Use `session/history.txt` for all project-local commands.
+3.  **Translation:** Use `registry.txt` to map ASCII chars (e.g., `T`) to GL Assets (e.g., `assets/tiles/tree.obj`).
+4.  **Pulse:** Always use the `frame_changed.txt` marker to signal "The stage is ready."
+
+"The GL window is not a new game; it is just a more beautiful lens for the same data."
