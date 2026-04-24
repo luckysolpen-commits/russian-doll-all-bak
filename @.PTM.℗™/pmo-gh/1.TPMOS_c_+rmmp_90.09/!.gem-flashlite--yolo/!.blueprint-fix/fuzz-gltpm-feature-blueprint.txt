@@ -1,0 +1,66 @@
+# Feature Blueprint: Fuzz-Op-GLTPM Hardcoded Demo
+
+This document describes the full feature set and functional behavior of the "Hardcoded Demo" (found in `gl_desktop.c`) to serve as a benchmark for modular TPMOS project implementations.
+
+## 1. The 3D Rendering Theater
+The demo provides a high-fidelity 3D view of the project state, acting as a "visual theater."
+
+### A. Environment & Grid
+- **Isometric Map:** A 10x10 mock grid of tiles.
+- **Z-Extrusion:** Tiles have varying heights based on their Z-level state, creating a 3D terrain effect.
+- **Dynamic Lighting:** A subtle pulse/glow effect applied to the active selection cursor.
+
+### B. Entity Visualization
+- **Tiles:** 3D blocks mapped from ASCII characters (e.g., 'T' for Tree).
+- **Sprites:** Simplified 3D models representing active entities (e.g., Player, Zombie).
+- **The Xelector:** A floating, pulsing yellow grid box that marks the active interaction point.
+
+---
+
+## 2. Interaction Modes (The "K3/K4" Pattern)
+The demo supports two distinct modes of operation, toggled via the UI or hotkeys.
+
+### Mode 1: Menu Navigation (Standard)
+- **Selection:** Arrow keys or Joystick UP/DOWN navigate a list of options.
+- **Visuals:** [>] indicator shows the focused option.
+- **Execution:** Enter or Joystick 'A' triggers the selected command.
+
+### Mode 2: Map Control (Activated)
+- **Camera Movement:** WASD moves the camera relative to the map.
+- **Verticality:** Z/X keys move the camera (or entity) up/down levels.
+- **Camera Rotation:** Q/E rotates the view (Yaw).
+- **Modes:** Support for 1st person, 3rd person (tracking), and Free Camera modes.
+- **Shadow Cursor:** The Xelector moves in sync with the camera to facilitate interaction.
+
+---
+
+## 3. UI Overlay & Feedback
+A 2D HUD is drawn over the 3D scene to provide system status.
+
+- **Title Bar:** Displays project name and status.
+- **Key Log:** Shows the last key pressed in the top-right corner.
+- **Project Menu:** A vertical list of commands (e.g., scan, collect, place) mapped to numeric keys 1-9.
+- **Nav Prompt:** A "Nav >" prompt at the bottom for quick numeric jumps (matching the ASCII CHTPM behavior).
+
+---
+
+## 4. Input & History Logic
+The hardcoded version mimics the TPM pipeline but uses internal memory for speed.
+
+- **Joystick-First UX:** Designed to be fully playable with a controller.
+- **Input Mirroring:** Key presses are logged to a history buffer and echoed in the HUD.
+- **Pulse Sync:** Rendering only happens when an input is detected or the state changes (throttled when idle).
+
+---
+
+## 5. Summary Functional Checklist
+| Feature | Behavior |
+| :--- | :--- |
+| **3D Terrian** | Grid tiles with height based on Z-data. |
+| **Entity Tracking** | Camera can follow a specific Piece (e.g., Hero). |
+| **Map Mode** | Toggle between "Click-to-Menu" and "Direct WASD Control." |
+| **Numeric Jumps** | Pressing '2' immediately triggers the 2nd menu option. |
+| **Depth Culling** | Uses Scissors/Depth testing to keep 3D content inside the window. |
+| **Asset Legend** | Maps ASCII characters to specific 3D colors/extrusions. |
+
+"The goal of GLTPM is to make this hardcoded beauty modular, so any project can own its theater."
