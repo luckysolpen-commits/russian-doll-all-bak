@@ -1,0 +1,29 @@
+# Post-Repair Analysis: Fuzz-Op-GL Demo vs. Modular Application Architecture
+
+**Date:** April 24, 2026
+
+**Task:** To resolve the conflict between the hardcoded "fuzz-op-gl" demo and the modular application, and to ensure correct modular functionality.
+
+## 1. Summary of Changes
+
+*   **Restoration:** `gl_desktop.c` was restored from a clean reference (`#.ref/gl_desktop.c`) to fix corruption.
+*   **Isolation:** All internal references to the hardcoded demo were renamed from `"fuzz-op-gl"` to `"fuzz-gl-demo"`. This ensures that hardcoded rendering logic in `gl_desktop.c` (associated with the `project_mirror` type) no longer interferes with the modular project.
+*   **Modular Integration:** The "fuzz-op-gl" menu option in the "Desktop Apps" category was updated to launch the **modular** version of the application using `create_gltpm_window`.
+*   **Menu Re-indexing:** The menu indices in `execute_option` for `CTX_DESKTOP_APPS` were corrected to support the new structure:
+    *   Index 0: Launch Modular Fuzz-Op-GL
+    *   Index 1: Launch Op-Ed-GL
+    *   Index 2: Switch to GLTPM Apps Menu
+    *   Index 3: Launch 3D Cube Demo
+    *   Index 4: Back to Main Menu
+
+## 2. Resolution of Erroneous Sharing
+
+The previous "broken" state of the modular project was due to both the hardcoded demo and the modular manager sharing the ID `"fuzz-op-gl"`. 
+- The hardcoded demo used this ID to trigger mock data rendering in `gl_desktop.c`.
+- The modular project uses this ID to locate its sovereign state and layout files.
+
+By renaming the hardcoded ID to `"fuzz-gl-demo"`, the modular version now has exclusive use of the `"fuzz-op-gl"` namespace. Furthermore, the modular version is now correctly launched as a `gltpm_app` type, which uses the decoupled `gltpm_parser.c` logic, adhering to the TPMOS architecture blueprint.
+
+## 3. Current Status
+
+The modular "fuzz-op-gl" is now the default application launched when selecting "fuzz-op-gl" from the Desktop menu. The hardcoded demo logic remains in the codebase (isolated as "fuzz-gl-demo") but is no longer accessible via the standard user interface, preventing any future confusion.

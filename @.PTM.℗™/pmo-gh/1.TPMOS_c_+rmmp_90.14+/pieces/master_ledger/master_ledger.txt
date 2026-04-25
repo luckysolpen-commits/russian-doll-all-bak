@@ -1,0 +1,298 @@
+[2026-04-24 20:26:00] FrameRendered: at 2026-04-24 20:26:00 | Source: renderer
+[2026-04-24 20:26:01] InputReceived: key_code=52 | Source: keyboard_linux
+[2026-04-24 20:26:01] FrameRendered: at 2026-04-24 20:26:01 | Source: renderer
+[2026-04-24 20:26:01] InputReceived: key_code=13 | Source: keyboard_linux
+[2026-04-24 20:26:01] FrameRendered: at 2026-04-24 20:26:01 | Source: renderer
+[2026-04-24 20:26:04] FrameRendered: at 2026-04-24 20:26:04 | Source: renderer
+[2026-04-24 20:26:08] FrameRendered: at 2026-04-24 20:26:08 | Source: renderer
+[2026-04-24 20:26:08] FrameRendered: at 2026-04-24 20:26:08 | Source: renderer
+[1777076769] EntityMoved: xlector | from (8,6) to (8,5)
+[2026-04-24 20:26:09] FrameRendered: at 2026-04-24 20:26:09 | Source: renderer
+[2026-04-24 20:26:09] FrameRendered: at 2026-04-24 20:26:09 | Source: renderer
+[1777076769] EntityMoved: xlector | from (8,5) to (8,6)
+[2026-04-24 20:26:09] FrameRendered: at 2026-04-24 20:26:09 | Source: renderer
+[1777076769] EntityMoved: xlector | from (8,6) to (8,7)
+[2026-04-24 20:26:09] FrameRendered: at 2026-04-24 20:26:09 | Source: renderer
+[1777076770] EntityMoved: xlector | from (8,7) to (8,6)
+[2026-04-24 20:26:10] FrameRendered: at 2026-04-24 20:26:10 | Source: renderer
+[1777076770] EntityMoved: xlector | from (8,6) to (7,6)
+[2026-04-24 20:26:10] FrameRendered: at 2026-04-24 20:26:10 | Source: renderer
+[1777076771] EntityMoved: xlector | from (7,6) to (6,6)
+[2026-04-24 20:26:11] FrameRendered: at 2026-04-24 20:26:11 | Source: renderer
+[1777076771] EntityMoved: xlector | from (6,6) to (7,6)
+[2026-04-24 20:26:11] FrameRendered: at 2026-04-24 20:26:11 | Source: renderer
+[1777076771] EntityMoved: xlector | from (7,6) to (8,6)
+[2026-04-24 20:26:11] FrameRendered: at 2026-04-24 20:26:11 | Source: renderer
+[1777076772] EntityMoved: xlector | from (8,6) to (9,6)
+[2026-04-24 20:26:12] FrameRendered: at 2026-04-24 20:26:12 | Source: renderer
+[2026-04-24 20:26:12] FrameRendered: at 2026-04-24 20:26:12 | Source: renderer
+[1777076772] EntityMoved: xlector | from (9,6) to (8,6)
+[2026-04-24 20:26:12] FrameRendered: at 2026-04-24 20:26:12 | Source: renderer
+[1777076773] EntityMoved: xlector | from (8,6) to (9,6)
+[2026-04-24 20:26:13] FrameRendered: at 2026-04-24 20:26:13 | Source: renderer
+[1777076775] EntityMoved: xlector | from (9,6) to (10,6)
+[2026-04-24 20:26:15] FrameRendered: at 2026-04-24 20:26:15 | Source: renderer
+[1777076775] EntityMoved: xlector | from (10,6) to (11,6)
+[2026-04-24 20:26:15] FrameRendered: at 2026-04-24 20:26:15 | Source: renderer
+[1777076776] EntityMoved: xlector | from (11,6) to (12,6)
+[2026-04-24 20:26:16] FrameRendered: at 2026-04-24 20:26:16 | Source: renderer
+[1777076776] EntityMoved: xlector | from (12,6) to (11,6)
+[2026-04-24 20:26:16] FrameRendered: at 2026-04-24 20:26:16 | Source: renderer
+[1777076777] EntityMoved: xlector | from (11,6) to (10,6)
+[2026-04-24 20:26:17] FrameRendered: at 2026-04-24 20:26:17 | Source: renderer
+[1777076777] EntityMoved: xlector | from (10,6) to (9,6)
+[2026-04-24 20:26:17] FrameRendered: at 2026-04-24 20:26:17 | Source: renderer
+[1777076777] EntityMoved: xlector | from (9,6) to (8,6)
+[2026-04-24 20:26:17] FrameRendered: at 2026-04-24 20:26:17 | Source: renderer
+[2026-04-24 20:26:17] FrameRendered: at 2026-04-24 20:26:17 | Source: renderer
+[1777076778] EntityMoved: xlector | from (8,6) to (7,6)
+[2026-04-24 20:26:18] FrameRendered: at 2026-04-24 20:26:18 | Source: renderer
+[1777076778] EntityMoved: xlector | from (7,6) to (8,6)
+[2026-04-24 20:26:18] FrameRendered: at 2026-04-24 20:26:18 | Source: renderer
+[1777076779] EntityMoved: xlector | from (8,6) to (7,6)
+[2026-04-24 20:26:19] FrameRendered: at 2026-04-24 20:26:19 | Source: renderer
+[1777076781] EntityMoved: xlector | from (7,6) to (6,6)
+[2026-04-24 20:26:21] FrameRendered: at 2026-04-24 20:26:21 | Source: renderer
+[1777076781] EntityMoved: xlector | from (6,6) to (5,6)
+[2026-04-24 20:26:21] FrameRendered: at 2026-04-24 20:26:21 | Source: renderer
+[1777076781] EntityMoved: xlector | from (5,6) to (4,6)
+[2026-04-24 20:26:21] FrameRendered: at 2026-04-24 20:26:21 | Source: renderer
+[1777076781] EntityMoved: xlector | from (4,6) to (3,6)
+[2026-04-24 20:26:21] FrameRendered: at 2026-04-24 20:26:21 | Source: renderer
+[1777076781] EntityMoved: xlector | from (3,6) to (2,6)
+[2026-04-24 20:26:21] FrameRendered: at 2026-04-24 20:26:21 | Source: renderer
+[2026-04-24 20:26:21] FrameRendered: at 2026-04-24 20:26:21 | Source: renderer
+[1777076781] EntityMoved: xlector | from (2,6) to (1,6)
+[2026-04-24 20:26:21] FrameRendered: at 2026-04-24 20:26:21 | Source: renderer
+[1777076781] EntityMoved: xlector | from (1,6) to (0,6)
+[2026-04-24 20:26:21] FrameRendered: at 2026-04-24 20:26:21 | Source: renderer
+[2026-04-24 20:26:21] FrameRendered: at 2026-04-24 20:26:21 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:22] FrameRendered: at 2026-04-24 20:26:22 | Source: renderer
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (0,6) to (1,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (1,6) to (2,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (2,6) to (3,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (3,6) to (4,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (4,6) to (5,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (5,6) to (6,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (6,6) to (7,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (7,6) to (8,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (8,6) to (9,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (9,6) to (10,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076783] EntityMoved: xlector | from (10,6) to (11,6)
+[2026-04-24 20:26:23] FrameRendered: at 2026-04-24 20:26:23 | Source: renderer
+[1777076784] EntityMoved: xlector | from (11,6) to (12,6)
+[2026-04-24 20:26:24] FrameRendered: at 2026-04-24 20:26:24 | Source: renderer
+[2026-04-24 20:26:24] FrameRendered: at 2026-04-24 20:26:24 | Source: renderer
+[1777076784] EntityMoved: xlector | from (12,6) to (13,6)
+[2026-04-24 20:26:24] FrameRendered: at 2026-04-24 20:26:24 | Source: renderer
+[2026-04-24 20:26:24] FrameRendered: at 2026-04-24 20:26:24 | Source: renderer
+[1777076784] EntityMoved: xlector | from (13,6) to (12,6)
+[2026-04-24 20:26:24] FrameRendered: at 2026-04-24 20:26:24 | Source: renderer
+[1777076784] EntityMoved: xlector | from (12,6) to (11,6)
+[2026-04-24 20:26:24] FrameRendered: at 2026-04-24 20:26:24 | Source: renderer
+[1777076784] EntityMoved: xlector | from (11,6) to (10,6)
+[2026-04-24 20:26:24] FrameRendered: at 2026-04-24 20:26:24 | Source: renderer
+[1777076785] EntityMoved: xlector | from (10,6) to (9,6)
+[2026-04-24 20:26:25] FrameRendered: at 2026-04-24 20:26:25 | Source: renderer
+[1777076785] EntityMoved: xlector | from (9,6) to (10,6)
+[2026-04-24 20:26:25] FrameRendered: at 2026-04-24 20:26:25 | Source: renderer
+[1777076799] EntityMoved: xlector | from (10,6) to (10,5)
+[2026-04-24 20:26:39] FrameRendered: at 2026-04-24 20:26:39 | Source: renderer
+[1777076800] EntityMoved: xlector | from (10,5) to (10,6)
+[2026-04-24 20:26:40] FrameRendered: at 2026-04-24 20:26:40 | Source: renderer
+[2026-04-24 20:26:45] FrameRendered: at 2026-04-24 20:26:45 | Source: renderer
+[2026-04-24 20:26:46] FrameRendered: at 2026-04-24 20:26:46 | Source: renderer
+[2026-04-24 20:26:46] FrameRendered: at 2026-04-24 20:26:46 | Source: renderer
+[2026-04-24 20:26:47] FrameRendered: at 2026-04-24 20:26:47 | Source: renderer
+[2026-04-24 20:26:47] FrameRendered: at 2026-04-24 20:26:47 | Source: renderer
+[1777076809] EntityMoved: xlector | from (10,6) to (10,5)
+[2026-04-24 20:26:49] FrameRendered: at 2026-04-24 20:26:49 | Source: renderer
+[2026-04-24 20:26:49] FrameRendered: at 2026-04-24 20:26:49 | Source: renderer
+[1777076809] EntityMoved: xlector | from (10,5) to (9,5)
+[2026-04-24 20:26:49] FrameRendered: at 2026-04-24 20:26:49 | Source: renderer
+[2026-04-24 20:26:49] FrameRendered: at 2026-04-24 20:26:49 | Source: renderer
+[1777076811] EntityMoved: xlector | from (9,5) to (10,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[1777076811] EntityMoved: xlector | from (10,5) to (11,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[1777076811] EntityMoved: xlector | from (11,5) to (12,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[1777076811] EntityMoved: xlector | from (12,5) to (13,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[1777076811] EntityMoved: xlector | from (13,5) to (14,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[1777076811] EntityMoved: xlector | from (14,5) to (15,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[1777076811] EntityMoved: xlector | from (15,5) to (16,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[1777076811] EntityMoved: xlector | from (16,5) to (17,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[1777076811] TreasureFound: xlector | 
+[1777076811] EntityMoved: xlector | from (17,5) to (18,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[1777076811] EntityMoved: xlector | from (18,5) to (19,5)
+[2026-04-24 20:26:51] FrameRendered: at 2026-04-24 20:26:51 | Source: renderer
+[2026-04-24 20:26:52] FrameRendered: at 2026-04-24 20:26:52 | Source: renderer
+[2026-04-24 20:26:52] FrameRendered: at 2026-04-24 20:26:52 | Source: renderer
+[1777076812] TreasureFound: xlector | 
+[1777076812] EntityMoved: xlector | from (19,5) to (18,5)
+[2026-04-24 20:26:52] FrameRendered: at 2026-04-24 20:26:52 | Source: renderer
+[2026-04-24 20:26:52] FrameRendered: at 2026-04-24 20:26:52 | Source: renderer
+[1777076812] EntityMoved: xlector | from (18,5) to (17,5)
+[2026-04-24 20:26:52] FrameRendered: at 2026-04-24 20:26:52 | Source: renderer
+[2026-04-24 20:26:52] FrameRendered: at 2026-04-24 20:26:52 | Source: renderer
+[1777076812] EntityMoved: xlector | from (17,5) to (16,5)
+[2026-04-24 20:26:52] FrameRendered: at 2026-04-24 20:26:52 | Source: renderer
+[1777076812] EntityMoved: xlector | from (16,5) to (15,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (15,5) to (14,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (14,5) to (13,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (13,5) to (12,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (12,5) to (11,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (11,5) to (10,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (10,5) to (9,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (9,5) to (8,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (8,5) to (7,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (7,5) to (6,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (6,5) to (5,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (5,5) to (4,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (4,5) to (3,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (3,5) to (2,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (2,5) to (1,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[1777076813] EntityMoved: xlector | from (1,5) to (0,5)
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[2026-04-24 20:26:53] FrameRendered: at 2026-04-24 20:26:53 | Source: renderer
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[1777076814] EntityMoved: xlector | from (0,5) to (1,5)
+[2026-04-24 20:26:54] FrameRendered: at 2026-04-24 20:26:54 | Source: renderer
+[1777076815] EntityMoved: xlector | from (1,5) to (2,5)
+[2026-04-24 20:26:55] FrameRendered: at 2026-04-24 20:26:55 | Source: renderer
+[1777076815] EntityMoved: xlector | from (2,5) to (3,5)
+[2026-04-24 20:26:55] FrameRendered: at 2026-04-24 20:26:55 | Source: renderer
+[1777076815] EntityMoved: xlector | from (3,5) to (4,5)
+[2026-04-24 20:26:55] FrameRendered: at 2026-04-24 20:26:55 | Source: renderer
+[1777076815] EntityMoved: xlector | from (4,5) to (5,5)
+[2026-04-24 20:26:55] FrameRendered: at 2026-04-24 20:26:55 | Source: renderer
+[2026-04-24 20:26:55] FrameRendered: at 2026-04-24 20:26:55 | Source: renderer
+[1777076826] EntityMoved: xlector | from (5,5) to (4,5)
+[2026-04-24 20:27:06] FrameRendered: at 2026-04-24 20:27:06 | Source: renderer
+[1777076827] EntityMoved: xlector | from (4,5) to (4,6)
+[2026-04-24 20:27:07] FrameRendered: at 2026-04-24 20:27:07 | Source: renderer
+[1777076828] EntityMoved: xlector | from (4,6) to (4,5)
+[2026-04-24 20:27:08] FrameRendered: at 2026-04-24 20:27:08 | Source: renderer
+[1777076828] EntityMoved: xlector | from (4,5) to (4,4)
+[2026-04-24 20:27:08] FrameRendered: at 2026-04-24 20:27:08 | Source: renderer
+[1777076828] EntityMoved: xlector | from (4,4) to (4,3)
+[2026-04-24 20:27:08] FrameRendered: at 2026-04-24 20:27:08 | Source: renderer
+[1777076828] EntityMoved: xlector | from (4,3) to (4,2)
+[2026-04-24 20:27:09] FrameRendered: at 2026-04-24 20:27:09 | Source: renderer
+[1777076829] EntityMoved: xlector | from (4,2) to (4,3)
+[2026-04-24 20:27:09] FrameRendered: at 2026-04-24 20:27:09 | Source: renderer
+[1777076830] EntityMoved: xlector | from (4,3) to (4,4)
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[1777076830] EntityMoved: xlector | from (4,4) to (4,5)
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[1777076830] EntityMoved: xlector | from (4,5) to (4,6)
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[1777076830] EntityMoved: xlector | from (4,6) to (4,7)
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[1777076830] EntityMoved: xlector | from (4,7) to (4,8)
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[1777076830] EntityMoved: xlector | from (4,8) to (4,9)
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[1777076830] EntityMoved: xlector | from (4,9) to (4,8)
+[2026-04-24 20:27:10] FrameRendered: at 2026-04-24 20:27:10 | Source: renderer
+[1777076831] EntityMoved: xlector | from (4,8) to (4,7)
+[2026-04-24 20:27:11] FrameRendered: at 2026-04-24 20:27:11 | Source: renderer
+[1777076831] EntityMoved: xlector | from (4,7) to (4,6)
+[2026-04-24 20:27:11] FrameRendered: at 2026-04-24 20:27:11 | Source: renderer
+[1777076831] EntityMoved: xlector | from (4,6) to (4,5)
+[2026-04-24 20:27:11] FrameRendered: at 2026-04-24 20:27:11 | Source: renderer
+[1777076831] EntityMoved: xlector | from (4,5) to (4,4)
+[2026-04-24 20:27:11] FrameRendered: at 2026-04-24 20:27:11 | Source: renderer
+[1777076832] EntityMoved: xlector | from (4,4) to (5,4)
+[2026-04-24 20:27:12] FrameRendered: at 2026-04-24 20:27:12 | Source: renderer
+[1777076832] EntityMoved: xlector | from (5,4) to (5,5)
+[2026-04-24 20:27:12] FrameRendered: at 2026-04-24 20:27:12 | Source: renderer
+[2026-04-24 20:27:12] FrameRendered: at 2026-04-24 20:27:12 | Source: renderer
+[1777076838] EntityMoved: xlector | from (5,5) to (5,4)
+[2026-04-24 20:27:18] FrameRendered: at 2026-04-24 20:27:18 | Source: renderer
+[2026-04-24 20:27:18] FrameRendered: at 2026-04-24 20:27:18 | Source: renderer
+[1777076838] EntityMoved: xlector | from (5,4) to (5,3)
+[2026-04-24 20:27:18] FrameRendered: at 2026-04-24 20:27:18 | Source: renderer
+[1777076839] EntityMoved: xlector | from (5,3) to (5,2)
+[2026-04-24 20:27:19] FrameRendered: at 2026-04-24 20:27:19 | Source: renderer
+[1777076839] EntityMoved: xlector | from (5,2) to (5,1)
+[2026-04-24 20:27:19] FrameRendered: at 2026-04-24 20:27:19 | Source: renderer
+[1777076840] EntityMoved: xlector | from (5,1) to (5,0)
+[2026-04-24 20:27:20] FrameRendered: at 2026-04-24 20:27:20 | Source: renderer

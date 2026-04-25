@@ -1,0 +1,3345 @@
+=== NEW SESSION at 2026-04-24 20:26:00 ===
+
+--- FRAME UPDATE at 2026-04-24 20:26:00 ---
++===========================================================+
+|                                                           |
+|           C H T P M + O S   C L I   v2.0                 |
+|                                                           |
+|  CHTPM+OS Main Menu                                      |
+|                                                           |
+|  [>] 1. [Project Loader]                             |
+|  [ ] 2. [App Store (Fondu)]                          |
+|  [ ] 3. [Status]  [ ] 4. [GL-OS]                                          |
+|  [ ] 5. [Process Monitor]                            |
+|  [ ] 6. [Toggle Frame History (Current: )]                                         |
+|  [ ] 7. [Help]                                            |
+|                                                           |
++===========================================================+
+|  Running Applications: None                               |
+|  System Time: 08:00:00 | Turn: 0 | Key: None |
++===========================================================+
+|                                                           |
+|  $ | [ ] 8. [test]                                                 |                                                 |
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:01 ---
++===========================================================+
+|                                                           |
+|           C H T P M + O S   C L I   v2.0                 |
+|                                                           |
+|  CHTPM+OS Main Menu                                      |
+|                                                           |
+|  [ ] 1. [Project Loader]                             |
+|  [ ] 2. [App Store (Fondu)]                          |
+|  [ ] 3. [Status]  [>] 4. [GL-OS]                                          |
+|  [ ] 5. [Process Monitor]                            |
+|  [ ] 6. [Toggle Frame History (Current: )]                                         |
+|  [ ] 7. [Help]                                            |
+|                                                           |
++===========================================================+
+|  Running Applications: None                               |
+|  System Time: 08:00:00 | Turn: 0 | Key: None |
++===========================================================+
+|                                                           |
+|  $ | [ ] 8. [test]                                                 |                                                 |
+
++=========================================================+
+Nav > 4_
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:01 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:04 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:08 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:08 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:09 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:09 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:09 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:09 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:11 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:11 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:11 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:12 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:12 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:12 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:13 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:15 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:15 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:16 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:16 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:17 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:17 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:17 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:17 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:18 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:18 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:19 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:21 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:21 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:21 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:21 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:21 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:21 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:21 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:21 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:21 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:22 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:23 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:24 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:24 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:24 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:24 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:24 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:24 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:24 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:25 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:25 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:39 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:40 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:45 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:46 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:46 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:47 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:47 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:49 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:49 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:49 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:49 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:51 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:52 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:52 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:52 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:52 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:52 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:52 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:52 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:53 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:54 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:55 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:55 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:55 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:55 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:26:55 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:06 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:07 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:08 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:08 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:08 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:09 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:09 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:10 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:11 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:11 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:11 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:11 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:12 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:12 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:12 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:18 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:18 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:18 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:19 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:19 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-24 20:27:20 ---
+╔═══════════════ G L - O S   D E S K T O P ═══════════════╗
+║  BG: #000044                                      ║
+║  Windows: 2                               ║
+╠═══════════════════════════════════════════════════════════╣
+DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 140 | 130 | 420 | 360 | Fuzz-Op GLTPM (Sovereign A23) | gltpm_app | 0|
+╠═══════════════════════════════════════════════════════════╣
+║  [t] New Terminal  [f] New Folder  [n] New File         ║
+║  [c] Close Window  [ESC] Deselect                       ║
+╠═══════════════════════════════════════════════════════════╣
+║  Response:                                ║
+╚═══════════════════════════════════════════════════════════╝
+ Right-click for context menu (future: mouse support)
+
++=========================================================+
+Nav > _
+
