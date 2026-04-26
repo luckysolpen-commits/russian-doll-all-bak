@@ -1,0 +1,28 @@
+[2026-04-26 04:09:33] FrameRendered: at 2026-04-26 04:09:33 | Source: renderer
+[2026-04-26 04:09:36] InputReceived: key_code=13 | Source: keyboard_linux
+[2026-04-26 04:09:36] FrameRendered: at 2026-04-26 04:09:36 | Source: renderer
+[2026-04-26 04:09:36] FrameRendered: at 2026-04-26 04:09:36 | Source: renderer
+[2026-04-26 04:09:38] InputReceived: key_code=50 | Source: keyboard_linux
+[2026-04-26 04:09:38] FrameRendered: at 2026-04-26 04:09:38 | Source: renderer
+[2026-04-26 04:09:38] InputReceived: key_code=48 | Source: keyboard_linux
+[2026-04-26 04:09:38] FrameRendered: at 2026-04-26 04:09:38 | Source: renderer
+[2026-04-26 04:09:38] InputReceived: key_code=52 | Source: keyboard_linux
+[2026-04-26 04:09:38] FrameRendered: at 2026-04-26 04:09:38 | Source: renderer
+[2026-04-26 04:09:40] InputReceived: key_code=50 | Source: keyboard_linux
+[2026-04-26 04:09:40] FrameRendered: at 2026-04-26 04:09:40 | Source: renderer
+[2026-04-26 04:09:40] InputReceived: key_code=48 | Source: keyboard_linux
+[2026-04-26 04:09:40] FrameRendered: at 2026-04-26 04:09:40 | Source: renderer
+[2026-04-26 04:09:40] InputReceived: key_code=13 | Source: keyboard_linux
+[2026-04-26 04:09:40] FrameRendered: at 2026-04-26 04:09:40 | Source: renderer
+[2026-04-26 04:09:44] InputReceived: key_code=13 | Source: keyboard_linux
+[2026-04-26 04:09:44] FrameRendered: at 2026-04-26 04:09:44 | Source: renderer
+[2026-04-26 04:09:45] InputReceived: key_code=101 | Source: keyboard_linux
+[2026-04-26 04:09:45] FrameRendered: at 2026-04-26 04:09:45 | Source: renderer
+[2026-04-26 04:09:45] FrameRendered: at 2026-04-26 04:09:45 | Source: renderer
+[2026-04-26 04:09:45] FrameRendered: at 2026-04-26 04:09:45 | Source: renderer
+[2026-04-26 04:09:46] InputReceived: key_code=1003 | Source: keyboard_linux
+[2026-04-26 04:09:46] FrameRendered: at 2026-04-26 04:09:46 | Source: renderer
+[2026-04-26 04:09:46] InputReceived: key_code=1003 | Source: keyboard_linux
+[2026-04-26 04:09:46] FrameRendered: at 2026-04-26 04:09:46 | Source: renderer
+[2026-04-26 04:09:47] InputReceived: key_code=1002 | Source: keyboard_linux
+[2026-04-26 04:09:47] FrameRendered: at 2026-04-26 04:09:47 | Source: renderer
