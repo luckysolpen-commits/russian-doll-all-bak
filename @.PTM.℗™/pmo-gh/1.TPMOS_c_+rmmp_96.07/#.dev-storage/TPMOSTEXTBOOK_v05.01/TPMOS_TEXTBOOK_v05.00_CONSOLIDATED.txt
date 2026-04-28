@@ -30,16 +30,18 @@
 11. [The Infinite Loop (Recursive Forge)](CH11_RECURSIVE_FORGE.md)
 12. [The Simulation Theater](CH12_SIMULATION_THEATER.md)
 13. [Exo-Sovereignty (External Operating Exo-Bots)](CH17_EXO_SOVEREIGNTY.md)
+14. [Dynamic Trait Menus (PDL-Driven UI)](CH18_DYNAMIC_TRAIT_MENUS.md)
 
 ### Part V: Vision & Future
-14. [Piecemark Labs & The Sovereign Venture](CH13_BUSINESS_STRATEGY.md)
-15. [The Soul Pen & The Multiverse](CH14_SOUL_PEN.md)
-16. [Cross-Platform TPMOS](CH15_CROSS_PLATFORM.md)
-17. [Common Pitfalls & Debugging Guide](CH16_PITFALLS_DEBUGGING.md)
+15. [Piecemark Labs & The Sovereign Venture](CH13_BUSINESS_STRATEGY.md)
+16. [The Soul Pen & The Multiverse](CH14_SOUL_PEN.md)
+17. [Cross-Platform TPMOS](CH15_CROSS_PLATFORM.md)
+18. [Common Pitfalls & Debugging Guide](CH16_PITFALLS_DEBUGGING.md)
 
 ---
 
 ## Appendices
+- [Known Bugs & Research Tasks](KNOWN_BUGS.md)
 - [Glossary](GLOSSARY.md)
 - [Quiz](QUIZ.md)
 - [Answer Key](ANSWER_KEY.md)
@@ -65,6 +67,7 @@ graph TD
     subgraph Applications
         CH7[CH7: fuzz-op & op-ed]
         CH8[CH8: GL-OS]
+        CH18[CH18: Trait Menus]
     end
 
     subgraph Advanced
@@ -99,12 +102,14 @@ graph TD
     CH11 --> CH12
     CH17 --> CH9
     CH15 --> CH16
+    CH7 --> CH18
 
     style CH1 fill:#e1f5fe
     style CH4 fill:#f3e5f5
     style CH7 fill:#e8f5e9
     style CH10 fill:#fff3e0
     style CH17 fill:#e1f5fe
+    style CH18 fill:#e8f5e9
     style CH16 fill:#ffebee
 ```
 
@@ -1688,6 +1693,26 @@ TPMOS now features a built-in **PAL Editor** within the `op-ed` suite. This allo
 *   **Live Binding:** Save a script and automatically bind it to a Piece method (e.g., `on_interact`).
 *   **State Visibility:** View register values (`r0`-`r7`) in real-time (planned).
 
+### 🗺️ Future Roadmap: High-Leverage Blocks
+To make PAL scripting accessible to all, we are planning to implement high-level "Blocks" inspired by **Scratch** and **RPGMaker MV**. These will be visual abstractions over raw PAL instructions.
+
+#### 🧩 Scratch-Inspired Control Blocks (Top 10):
+1.  **When Flag Clicked:** The global start button for autonomous script execution.
+2.  **Forever:** Continuous loop for persistent sensing and background logic.
+3.  **If [ ] Then:** The fundamental logic gate for branching behaviors.
+4.  **Move [10] Steps:** Direct motion abstraction (calls `move_entity`).
+5.  **Go to x:[ ] y:[ ]:** Absolute placement for resetting or teleporting Pieces.
+6.  **Touching [ ]?:** Collision detection for walls, sprites, or mouse.
+7.  **Change [Var] by [n]:** High-level variable manipulation (scores, health).
+8.  **Wait [1] Sec:** Timing control to ensure CPU-safe execution speeds.
+9.  **Switch Costume:** Dynamic icon/mirror state updates for animation.
+10. **Broadcast [Msg]:** IPC system allowing Pieces to communicate events.
+
+#### 🎭 RPGMaker-Inspired Event Commands (Game Progression):
+*   **Message:** `Show Text`, `Show Choices`, `Input Number`, `Select Item`, `Show Scrolling Text`.
+*   **Party:** `Change Gold`, `Change Items`, `Change Weapons`, `Change Armors`, `Change Party Member`.
+*   **Game Progression:** `Control Switches`, `Control Variables`, `Control Self Switch`, `Control Timer`.
+
 ### Code Example: PAL Editor Module
 The editor (`projects/op-ed/manager/pal_editor_module.c`) manages the script lines in memory before saving:
 
@@ -2297,262 +2322,72 @@ But the real revelation came next. The developer placed a `zombie_01` piece dire
 ### CHAPTER: CH8_GL_OS.md
 ##################################################
 
-# 🎨 Chapter 8: GL-OS: Beyond ASCII
-TPMOS was born in the world of text, but its future is in the world of light. Welcome to **GL-OS** - the OpenGL-based visualizer that turns ASCII maps into 2D and 3D realities. 🌟✨
+# 🎨 Chapter 8: GL-OS: Beyond ASCII (3D TPMOS)
+TPMOS was born in the world of text, but its future is in the world of light. Welcome to **GL-OS** - the GLUT-based visualizer that turns ASCII maps into 3D realities. 🌟✨
 
 ---
 
 ## 🎭 The Two Theaters
-TPMOS can render its reality in two ways simultaneously:
-
+TPMOS renders its reality in two theaters:
 1.  **📟 ASCII-OS (CHTPM):** The classic, terminal-based OS.
-2.  **🎮 GL-OS (OpenGL):** The desktop-based high-fidelity shell.
-
-### "Like Linux and Windows"
-Think of ASCII-OS and GL-OS as two separate operating systems running on the same machine:
-*   **Same Format:** They both use the identical frame history format (the same "language"). 🤝
-*   **Practical Isolation:** For speed and safety, they use separate session files (different "folders"). 📂
-*   **Theoretical Compatibility:** Because they use the same format, you can copy a frame from ASCII-OS and open it in GL-OS. This is the **Frame Bridge**. 🌉
+2.  **🎮 GL-OS (OpenGL):** The high-fidelity shell using **GLUT (OpenGL Utility Toolkit)**.
 
 ---
 
-## 🪞 How GL-OS Works
-GL-OS is **not** a separate game. It is a "Visualizer" for the ASCII world.
-
-1.  **The Watcher:** GL-OS watches `current_frame.txt`.
-2.  **The Parser:** It parses the ASCII characters and looks for specific patterns (e.g., `[P]` for Player, `#` for Wall).
-3.  **The Projection:** It maps these characters to 3D models or sprites in an OpenGL window.
-4.  **The Pulse:** It stays in sync with the 12-step pipeline. When the ASCII updates, the 3D world updates! 💓
-
----
-
-## 💻 Code Example: GL-OS Initialization
-The GL-OS renderer (`pieces/apps/gl_os/plugins/gl_os_renderer.c`) initializes the OpenGL context:
+## 💻 Code Example: GL-OS Initialization (GLUT)
+The GL-OS renderer (`pieces/apps/gl_os/plugins/gl_os_renderer.c`) initializes the context using bare metal C and GLUT:
 
 ```c
-// gl_os_renderer.c - OpenGL initialization
-#include <GLFW/glfw3.h>
+// gl_os_renderer.c - GLUT initialization
+#include <GL/glut.h>
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
-GLFWwindow* window;
 FT_Library ft;
 FT_Face font_face;
 
-void init_gl_os_renderer(int width, int height) {
-    // 1. Initialize GLFW
-    if (!glfwInit()) {
-        fprintf(stderr, "Failed to initialize GLFW\n");
-        exit(1);
-    }
+void init_gl_os_renderer(int argc, char** argv) {
+    // 1. Initialize GLUT
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
+    glutInitWindowSize(800, 600);
+    glutCreateWindow("GL-OS Desktop");
 
-    // 2. Create window
-    window = glfwCreateWindow(width, height, "GL-OS", NULL, NULL);
-    if (!window) {
-        glfwTerminate();
-        exit(1);
-    }
-    glfwMakeContextCurrent(window);
-
-    // 3. Set up OpenGL state
+    // 2. Set up OpenGL state
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glClearColor(0.1f, 0.1f, 0.15f, 1.0f);  // Dark background
+    glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
 
-    // 4. Load FreeType font for character rendering
-    if (FT_Init_FreeType(&ft)) {
-        fprintf(stderr, "Failed to initialize FreeType\n");
-        exit(1);
-    }
-    if (FT_New_Face(ft, "/usr/share/fonts/truetype/arphic/uming.ttc", 0, &font_face)) {
-        fprintf(stderr, "Failed to load font\n");
-        exit(1);
-    }
-    FT_Set_Pixel_Sizes(font_face, 0, 32);  // 32px characters
+    // 3. Load FreeType font
+    FT_Init_FreeType(&ft);
+    FT_New_Face(ft, "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf", 0, &font_face);
+    FT_Set_Pixel_Sizes(font_face, 0, 32);
 
-    // 5. Set up projection matrix for 2D/3D
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluPerspective(60.0, (double)width/height, 0.1, 100.0);
-    glMatrixMode(GL_MODELVIEW);
-}
-```
-
-**Key points:**
-- GLFW handles cross-platform window creation (works on Windows/Linux/macOS)
-- FreeType loads TrueType fonts for character rendering (supports Chinese characters)
-- OpenGL perspective setup for 3D viewing
-
----
-
-## 💻 Code Example: Frame Parser - ASCII to 3D Mapping
-The frame parser reads `current_frame.txt` and maps characters to 3D models:
-
-```c
-// Frame parser - ASCII character to 3D model mapping
-typedef struct {
-    char ascii_char;
-    GLuint model_vbo;     // Vertex buffer for 3D model
-    GLuint model_texture; // Texture ID
-    float scale;          // Model scale
-} CharModel;
-
-CharModel char_models[256];
-
-void load_char_models() {
-    // Map ASCII characters to 3D models
-    char_models['#'] = load_model("models/wall.obj", "textures/stone.png", 1.0f);
-    char_models['.'] = load_model("models/floor.obj", "textures/grass.png", 1.0f);
-    char_models['@'] = load_model("models/decor.obj", "textures/gem.png", 0.5f);
-    char_models['T'] = load_model("models/treasure.obj", "textures/gold.png", 0.7f);
-    char_models['R'] = load_model("models/resource.obj", "textures/ore.png", 0.6f);
-    char_models['X'] = load_model("models/player.obj", "textures/hero.png", 1.0f);
-    char_models['Z'] = load_model("models/zombie.obj", "textures/undead.png", 1.0f);
-    // ... more mappings
-}
-
-void render_frame(const char* frame_text) {
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glLoadIdentity();
-
-    // Camera transform (first-person or free-cam)
-    apply_camera_transform();
-
-    // Parse frame and render models
-    int x = 0, y = 0;
-    for (int i = 0; frame_text[i] != '\0'; i++) {
-        char c = frame_text[i];
-        if (c == '\n') { y++; x = 0; continue; }
-
-        CharModel* cm = &char_models[(unsigned char)c];
-        if (cm->model_vbo != 0) {
-            glPushMatrix();
-            glTranslatef(x * 2.0f, -y * 2.0f, 0.0f);  // Space models
-            glScalef(cm->scale, cm->scale, cm->scale);
-            draw_model(cm->model_vbo, cm->model_texture);
-            glPopMatrix();
-        }
-        x++;
-    }
-
-    glfwSwapBuffers(window);
-}
-```
-
-**How it works:** Each ASCII character maps to a 3D model with a texture. The parser iterates through the frame text, placing models at grid positions. The result is a 3D scene that mirrors the ASCII map exactly.
-
----
-
-## 💻 Code Example: First-Person Mode Camera
-First-person mode lets you walk through the ASCII world in 3D:
-
-```c
-// First-person camera controls
-float cam_x = 0.0f, cam_y = 1.7f, cam_z = 5.0f;  // Eye height = 1.7m
-float yaw = -90.0f, pitch = 0.0f;
-
-void update_camera() {
-    // WASD movement
-    float speed = 0.1f;
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-        cam_x += sin(yaw * 0.01745f) * speed;
-        cam_z += cos(yaw * 0.01745f) * speed;
-    }
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-        cam_x -= sin(yaw * 0.01745f) * speed;
-        cam_z -= cos(yaw * 0.01745f) * speed;
-    }
-    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-        cam_x += cos(yaw * 0.01745f) * speed;
-        cam_z -= sin(yaw * 0.01745f) * speed;
-    }
-    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-        cam_x -= cos(yaw * 0.01745f) * speed;
-        cam_z += sin(yaw * 0.01745f) * speed;
-    }
-
-    // Mouse look
-    double mouse_x, mouse_y;
-    glfwGetCursorPos(window, &mouse_x, &mouse_y);
-    yaw += (mouse_x - last_mouse_x) * 0.1f;
-    pitch -= (mouse_y - last_mouse_y) * 0.1f;
-    if (pitch > 89.0f) pitch = 89.0f;
-    if (pitch < -89.0f) pitch = -89.0f;
-    last_mouse_x = mouse_x;
-    last_mouse_y = mouse_y;
-
-    // Sync with ASCII player position
-    int player_x = get_state_int("player", "pos_x");
-    int player_y = get_state_int("player", "pos_y");
-    cam_x = player_x * 2.0f;  // Scale to match model spacing
-    cam_z = player_y * 2.0f + 5.0f;  // Offset behind player
-}
-
-void apply_camera_transform() {
-    gluLookAt(cam_x, cam_y, cam_z,                    // Eye position
-              cam_x + sin(yaw*0.01745f),              // Look target
-              cam_y + sin(pitch*0.01745f),
-              cam_z + cos(yaw*0.01745f),
-              0.0f, 1.0f, 0.0f);                      // Up vector
+    // 4. Register Callbacks
+    glutDisplayFunc(display_callback);
+    glutIdleFunc(idle_callback);
 }
 ```
 
 ---
 
-## 💻 Code Example: Free-Cam Implementation
-Free-cam lets you fly over the world from any angle:
+## 💻 Code Example: Character Rendering (Free Metal C)
+Instead of C++ maps, we use a simple array-based cache for font textures:
 
 ```c
-// Free-cam controls
-float free_cam_x = 10.0f, free_cam_y = 20.0f, free_cam_z = 10.0f;
-float free_cam_yaw = 0.0f, free_cam_pitch = -45.0f;
-
-void update_free_cam() {
-    float speed = 0.2f;
-
-    // WASD + Q/E for up/down
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-        free_cam_x += sin(free_cam_yaw * 0.01745f) * speed;
-        free_cam_z += cos(free_cam_yaw * 0.01745f) * speed;
-    }
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-        free_cam_x -= sin(free_cam_yaw * 0.01745f) * speed;
-        free_cam_z -= cos(free_cam_yaw * 0.01745f) * speed;
-    }
-    if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) free_cam_y += speed;
-    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS) free_cam_y -= speed;
-
-    // Camera bounds (don't go below ground or outside map)
-    if (free_cam_y < 1.0f) free_cam_y = 1.0f;
-    if (free_cam_y > 50.0f) free_cam_y = 50.0f;
-    if (free_cam_x < -20.0f) free_cam_x = -20.0f;
-    if (free_cam_x > 60.0f) free_cam_x = 60.0f;
-    if (free_cam_z < -20.0f) free_cam_z = -20.0f;
-    if (free_cam_z > 40.0f) free_cam_z = 40.0f;
-}
-```
-
----
-
-## 💻 Code Example: Character Rendering with FreeType
-For characters that don't have 3D models, FreeType renders them as textured quads:
-
-```c
-// FreeType character rendering
+// C Font Cache Structure
 struct Character {
     GLuint texture_id;
-    glm::ivec2 size;
-    glm::ivec2 bearing;
-    GLuint advance;
+    int size_x, size_y;
+    int bearing_x, bearing_y;
+    unsigned int advance;
 };
 
-std::map<GLchar, Character> characters;
+struct Character font_cache[128]; // Cache for standard ASCII
 
 void load_font_characters() {
-    FT_Set_Pixel_Sizes(font_face, 0, 32);
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-
-    for (GLubyte c = 0; c < 128; c++) {
+    for (unsigned char c = 0; c < 128; c++) {
         if (FT_Load_Char(font_face, c, FT_LOAD_RENDER)) continue;
 
         GLuint texture;
@@ -2564,109 +2399,25 @@ void load_font_characters() {
                      0, GL_RED, GL_UNSIGNED_BYTE,
                      font_face->glyph->bitmap.buffer);
 
-        characters[c] = {
-            texture,
-            glm::ivec2(font_face->glyph->bitmap.width, font_face->glyph->bitmap.rows),
-            glm::ivec2(font_face->glyph->bitmap_left, font_face->glyph->bitmap_top),
-            (GLuint)font_face->glyph->advance.x
-        };
-    }
-}
-
-void render_character(Character* ch, float x, float y, float scale) {
-    float xpos = x + ch->bearing.x * scale;
-    float ypos = y - (ch->size.y - ch->bearing.y) * scale;
-    float w = ch->size.x * scale;
-    float h = ch->size.y * scale;
-
-    // Render textured quad
-    glBindTexture(GL_TEXTURE_2D, ch->texture_id);
-    glBegin(GL_QUADS);
-        glTexCoord2f(0, 1); glVertex2f(xpos, ypos);
-        glTexCoord2f(1, 1); glVertex2f(xpos + w, ypos);
-        glTexCoord2f(1, 0); glVertex2f(xpos + w, ypos + h);
-        glTexCoord2f(0, 0); glVertex2f(xpos, ypos + h);
-    glEnd();
-}
-```
-
-This renders any ASCII character (including Chinese characters from `uming.ttc`) as a textured quad in 3D space.
-
----
-
-## 🖼️ 2D Rendering (Future)
-GL-OS will support a 2D sprite mode:
-- **Sprite-based rendering:** Characters rendered as 2D sprites instead of 3D models
-- **Tile maps as 2D graphics:** Full tile maps rendered as 2D graphics with smooth scrolling
-- **UI overlays:** Health bars, inventories, minimaps rendered as 2D overlays on the 3D scene
-
----
-
-## 🌐 3D Rendering (Future)
-Full 3D game support is on the roadmap:
-- **Model loading:** OBJ/GLTF model files for characters, items, environments
-- **Lighting and shadows:** Dynamic lights, shadow mapping, ambient occlusion
-- **Physics engine integration:** Rigid body physics, collision detection, ragdoll
-- **Particle effects:** Fire, smoke, magic spells, weather
-
-## 🧊 3D TPMOS (fuzz-op-gl)
-The `fuzz-op-gl` project represents a major milestone: **Full TPMOS Compliance in 3D**. It follows the **Sovereign Piece** pattern to decouple logic from rendering.
-
-### 1. Host vs. Manager Split
-*   **The Host (`gl_desktop.c`):** A "dumb" renderer. It reads `session/state.txt` to draw the world. It only owns the **Free Mode Camera**.
-*   **The Manager (`fuzz-op-gl_manager.c`):** The "State Master." It owns entity positions, map logic, and **Locked Camera Modes**.
-
-### 2. Command Injection Sync
-To keep the 3D view and the Manager in sync, the Host injects commands back into the Manager's history buffer:
-*   `COMMAND: CAMERA_SET:x,y,z,p,y,r` - Updates the Manager on camera movement.
-*   `COMMAND: INTERACT` - Signals the Manager to enter map control mode.
-
-### 3. Genetic Reconstruction
-Entities in 3D TPMOS are not hardcoded. They are reconstructed from **Artifacts**.
-*   **Artifacts (`artifact.txt`):** 8x8x8 voxel bitmasks defining the physical shape.
-*   **Styles (`state.txt`):** Color and metadata defining the appearance.
-
-### Code Example: 3D Sovereign Manager
-The Manager (`projects/fuzz-op-gl/manager/fuzz-op-gl_manager.c`) parses 3D-specific commands:
-
-```c
-// gltpm_input_thread - Listen for Host commands
-while (fgets(line, sizeof(line), history_file)) {
-    if (strstr(line, "COMMAND: CAMERA_SET:")) {
-        sscanf(line + 20, "%f,%f,%f", &cam_pos[0], &cam_pos[1], &cam_pos[2]);
-        save_manager_state(); // Persistent 3D state
-    }
-    if (strstr(line, "COMMAND: INTERACT")) {
-        is_map_control = 1;
-        log_resp("Map Control ACTIVE");
+        font_cache[c].texture_id = texture;
+        font_cache[c].size_x = font_face->glyph->bitmap.width;
+        font_cache[c].size_y = font_face->glyph->bitmap.rows;
+        font_cache[c].bearing_x = font_face->glyph->bitmap_left;
+        font_cache[c].bearing_y = font_face->glyph->bitmap_top;
+        font_cache[c].advance = font_face->glyph->advance.x;
     }
 }
 ```
-
----
-
-## 🧘‍♂️ TPM Principles in GL-OS
-Even in GL-OS, the **True Piece Method** holds true:
-- **Same Piece state files drive 3D world:** Player position in `state.txt` determines 3D model position
-- **Same 12-step pipeline:** Just the renderer (Step 12) is different
-- **Same ops and modules work unchanged:** `move_entity.+x` updates state, GL-OS reads it
-- **"Delete a character in text → 3D model disappears":** The file is the source of truth
-
-> "The pixels are the shadow; the files are the light." 🕯️
 
 ---
 
 ## 🪟 Windows Compatibility Note
-GL-OS is designed to be cross-platform:
-- **GLFW:** Works on Windows, Linux, and macOS without code changes
-- **OpenGL:** Drivers differ (Mesa on Linux, NVIDIA proprietary, Intel integrated). The GL-OS code uses standard OpenGL 2.1 which is widely supported.
-- **FreeType:** Cross-platform font rendering library
-- **Font paths:** Differ by OS:
-  - Linux: `/usr/share/fonts/truetype/arphic/uming.ttc`
-  - Windows: `C:\Windows\Fonts\arial.ttf`
-  - macOS: `/System/Library/Fonts/Supplemental/Arial.ttf`
+GL-OS is designed for cross-platform portability:
+- **GLUT:** Works on Windows (FreeGLUT), Linux (Mesa), and macOS.
+- **FreeType:** Cross-platform font rendering.
+- **Bare Metal C:** Ensures zero dependencies on C++ runtimes or complex frameworks.
 
-Reference: `pieces/display/windows_renderer.c` for Windows-specific rendering code.
+Reference: `pieces/display/windows_renderer.c` for specific Windows GDI/OpenGL patterns.
 
 ---
 
@@ -3947,6 +3698,98 @@ When the first XO bot successfully navigated a project it had never seen before 
 5.  **True or False:** Exo-Bots store their cognitive weights inside the `pieces/` directory of the project they are testing.
 
 ##################################################
+### CHAPTER: CH18_DYNAMIC_TRAIT_MENUS.md
+##################################################
+
+# 🍱 Chapter 18: Dynamic Trait Menus (PDL-Driven UI)
+TPMOS applications often need to adapt their UI based on the active Piece. We use the **Dynamic Trait Menu** system to turn Piece methods into interactive buttons automatically. 🧬🍱
+
+---
+
+## 1. Core Philosophy: The Thin Brain
+The Dynamic Menu system follows the **Thin Brain** philosophy. The UI (CHTPM) is a hollow shell that reflects the state and capabilities (Methods) of the active Piece. Capabilities are defined in the Piece's DNA (`piece.pdl`) and are dynamically rendered as interactive buttons.
+
+---
+
+## 2. Architecture Overview
+
+### A. The Layout (`.chtpm`)
+The layout simply provides a slot for the methods using the `${piece_methods}` variable.
+```xml
+<text label="║  " />${piece_methods}<text label=" ║" /><br/>
+```
+
+### B. The Parser (`chtpm_parser.c`)
+The parser is responsible for:
+1.  **Resolution**: Finding the PDL for the `active_target_id`.
+2.  **Extraction**: Parsing `METHOD` lines (skipping internal ones like `move`, `select`).
+3.  **Generation**: Creating `<button>` elements with `onClick="KEY:n"` (indexing usually starts at 2).
+4.  **Injection**: Mapping button clicks to ASCII key injections (e.g., `KEY:2` -> `50` in `history.txt`).
+
+### C. The PDL (`piece.pdl`)
+Methods are defined as `SECTION | KEY | VALUE` where `VALUE` is the command/Op to execute.
+```pdl
+METHOD | scan    | pieces/apps/playrm/ops/+x/scan_op.+x xlector
+METHOD | feed    | projects/fuzz-op/ops/+x/feed_op.+x xlector
+```
+
+### D. The Manager (`_manager.c`)
+The manager acts as the dispatcher. It reads the history file, identifies the method index, resolves the method name/handler via the PDL, and executes it.
+
+---
+
+## 3. The Lifecycle of an Action
+
+1.  **Render**: Parser reads `active_target_id` (e.g., `fuzzball`). It loads `fuzzball/piece.pdl`, finds methods `feed`, `play`, `sleep`. It renders them as buttons `[2] feed`, `[3] play`, `[4] sleep`.
+2.  **Input**: User presses `2` or clicks the `feed` button.
+3.  **Injection**: Parser calls `send_command("KEY:2")` which writes ASCII `50` to `pieces/apps/player_app/history.txt`.
+4.  **Dispatch**: Manager reads `50`, subtracts `'0'` to get index `2`. 
+5.  **Resolution**: Manager calls `pdl_reader.+x fuzzball list_methods`. It takes the 2nd item (e.g., `feed`).
+6.  **Execution**: Manager calls `pdl_reader.+x fuzzball get_method feed` to get the handler Op. It then calls `system()` or `fork()/exec()` on the handler.
+7.  **Sync**: Manager updates state, calls `trigger_render()`, and pulses `state_changed.txt`.
+
+---
+
+## 4. Implementation Guide for Agents
+
+### Step 1: Define PDL Methods
+Ensure your piece has a `piece.pdl` with `METHOD` entries.
+- Use `void` for internal methods.
+- Use full paths for Ops.
+
+### Step 2: Set Active Target
+In your manager, ensure `active_target_id` is set to the piece you want to control in the state file.
+
+### Step 3: Implement Dynamic Dispatcher
+Copy the dispatch pattern from `fuzz-op_manager.c`:
+1.  Detect keys in range (2-9).
+2.  Use `pdl_reader.+x` to find the method name at that index.
+3.  Execute the handler string returned by `pdl_reader.+x`.
+
+---
+
+## 5. Critical Pitfalls
+
+| Pitfall | Symptom | Fix |
+|:---|:---|:---|
+| **ASCII Injection** | Parser injecting raw `2` instead of `'2'`. | Use `inject_raw_key('0' + k)` in parser. |
+| **Stale Methods** | UI doesn't refresh on target change. | Manager MUST pulse `state_changed.txt` after update. |
+| **Button vs Text** | Focus navigator doesn't work. | Use `<button>` tags, never hardcode `[>]`. |
+
+---
+
+## 🏛️ Scholar's Corner: The "Ghost in the Menu"
+Before we standardized method indexing, some projects started at `1` and others at `2`. This caused a "Ghost in the Menu" bug where clicking `[1] Map` would actually trigger the `[2] scan` operation. We solved this by reserving Index 1 for the core navigation (Map/Grid) and starting all Dynamic Trait Menus at **Index 2**. 👻🍱
+
+---
+
+## 📝 Study Questions
+1.  What is the "Thin Brain" philosophy in the context of UI?
+2.  Why do we start dynamic method indexing at 2 instead of 1?
+3.  Explain the role of `pdl_reader.+x` in the action lifecycle.
+4.  **True or False:** The CHTPM parser executes the Op handler directly when a button is clicked.
+
+##################################################
 ### CHAPTER: CH13_BUSINESS_STRATEGY.md
 ##################################################
 
@@ -4739,6 +4582,63 @@ A developer once wrote a PAL script to automatically diagnose and fix common TPM
 
 ---
 [Return to Index](INDEX.md)
+
+##################################################
+### CHAPTER: KNOWN_BUGS.md
+##################################################
+
+# 🐛 Appendix: Known Bugs & Research Tasks
+TPMOS is a living system. This chapter tracks high-severity bugs that are currently being researched and provides guidance for future fix implementations. 🛠️🪲
+
+---
+
+## 1. The Windows Keyboard Bug (Arrow/Enter Keys)
+**Severity:** HIGH (Blocks navigation on Windows native consoles)
+**Status:** Researching Fix
+
+### Symptom:
+When running the TPMOS orchestrator on Windows (especially via MSYS2 or native CMD), physical arrow keys, the Enter key, and other special keys may fail to register. Users see raw escape sequences (like `^[[A`) or nothing at all, making menu navigation impossible.
+
+### Root Cause:
+Windows consoles handle input differently than Linux `termios`. The standard `getchar()` or `read()` calls often buffer input or fail to capture the 2-byte sequences sent by special keys.
+
+### Reference Fix (Research Tool):
+We have successfully captured these keys using the `_getch()` method in `#.tools/keylog-win+aro+c-1/keylog.c`.
+
+#### Implementation Guidance:
+To fix the orchestrator, the `readKey` function must be updated to use the Windows-specific `0xE0` prefix pattern:
+
+```c
+// Reference pattern from keylog.c
+#include <conio.h>
+
+int get_windows_key() {
+    int ch = _getch();
+    if (ch == 0xE0) { // Special key prefix
+        int ch2 = _getch();
+        if (ch2 == 0x48) return KEY_UP;
+        if (ch2 == 0x50) return KEY_DOWN;
+        if (ch2 == 0x4B) return KEY_LEFT;
+        if (ch2 == 0x4D) return KEY_RIGHT;
+    }
+    if (ch == 13) return KEY_ENTER; // Windows Enter is 13 (\r)
+    return ch;
+}
+```
+
+### Future Tasks:
+- [ ] Integrate `conio.h` logic into `pieces/chtpm/plugins/orchestrator.c`.
+- [ ] Ensure `ENABLE_PROCESSED_INPUT` is set via `SetConsoleMode` to allow Ctrl+C to function correctly alongside raw key capture.
+
+---
+
+## 2. Multi-Digit Jump Latency
+**Severity:** LOW
+**Symptom:** Jumping to items like "11" or "12" requires very fast typing or multiple attempts.
+**Task:** Research a more forgiving `digit_accum` timer in `chtpm_parser.c`.
+
+---
+*If you find a bug, document it. If you fix a bug, reforge the binary. 🕯️*
 
 ##################################################
 ### CHAPTER: GLOSSARY.md

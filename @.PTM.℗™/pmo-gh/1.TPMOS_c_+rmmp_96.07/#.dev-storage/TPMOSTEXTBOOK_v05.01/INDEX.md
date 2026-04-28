@@ -27,16 +27,18 @@
 11. [The Infinite Loop (Recursive Forge)](CH11_RECURSIVE_FORGE.md)
 12. [The Simulation Theater](CH12_SIMULATION_THEATER.md)
 13. [Exo-Sovereignty (External Operating Exo-Bots)](CH17_EXO_SOVEREIGNTY.md)
+14. [Dynamic Trait Menus (PDL-Driven UI)](CH18_DYNAMIC_TRAIT_MENUS.md)
 
 ### Part V: Vision & Future
-14. [Piecemark Labs & The Sovereign Venture](CH13_BUSINESS_STRATEGY.md)
-15. [The Soul Pen & The Multiverse](CH14_SOUL_PEN.md)
-16. [Cross-Platform TPMOS](CH15_CROSS_PLATFORM.md)
-17. [Common Pitfalls & Debugging Guide](CH16_PITFALLS_DEBUGGING.md)
+15. [Piecemark Labs & The Sovereign Venture](CH13_BUSINESS_STRATEGY.md)
+16. [The Soul Pen & The Multiverse](CH14_SOUL_PEN.md)
+17. [Cross-Platform TPMOS](CH15_CROSS_PLATFORM.md)
+18. [Common Pitfalls & Debugging Guide](CH16_PITFALLS_DEBUGGING.md)
 
 ---
 
 ## Appendices
+- [Known Bugs & Research Tasks](KNOWN_BUGS.md)
 - [Glossary](GLOSSARY.md)
 - [Quiz](QUIZ.md)
 - [Answer Key](ANSWER_KEY.md)
@@ -62,6 +64,7 @@ graph TD
     subgraph Applications
         CH7[CH7: fuzz-op & op-ed]
         CH8[CH8: GL-OS]
+        CH18[CH18: Trait Menus]
     end
 
     subgraph Advanced
@@ -96,12 +99,14 @@ graph TD
     CH11 --> CH12
     CH17 --> CH9
     CH15 --> CH16
+    CH7 --> CH18
 
     style CH1 fill:#e1f5fe
     style CH4 fill:#f3e5f5
     style CH7 fill:#e8f5e9
     style CH10 fill:#fff3e0
     style CH17 fill:#e1f5fe
+    style CH18 fill:#e8f5e9
     style CH16 fill:#ffebee
 ```
 
