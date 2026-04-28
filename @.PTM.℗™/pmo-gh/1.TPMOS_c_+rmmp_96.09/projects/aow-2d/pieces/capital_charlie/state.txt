@@ -1,0 +1,1 @@
+type=capital\nowner=charlie\ncredits=3\nunits=0\npos_x=2\npos_y=22\n
