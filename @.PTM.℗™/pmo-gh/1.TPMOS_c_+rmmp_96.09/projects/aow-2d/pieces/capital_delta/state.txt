@@ -1,1 +1,0 @@
-type=capital\nowner=delta\ncredits=3\nunits=0\npos_x=22\npos_y=22\n

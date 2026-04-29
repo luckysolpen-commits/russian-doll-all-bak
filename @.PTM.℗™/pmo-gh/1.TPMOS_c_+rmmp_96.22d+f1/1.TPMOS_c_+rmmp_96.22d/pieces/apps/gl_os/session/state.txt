@@ -1,0 +1,16 @@
+window_count=2
+active_window_id=2
+bg_color=#000044
+name=Desktop
+type=desktop
+pos_x=0
+pos_y=0
+width=800
+height=600
+session_status=active
+selected_index=-1
+debug_info=M(0,0) S=0
+window_list=  [ ] 1. Terminal 1          
+  [>] 2. AOW-2D              
+menu_options=║    No Active Terminal                      ║
+desktop_view=DESKTOP_VIEW|BG: #000044|WINDOW_COUNT: 2|WINDOW | 1 | 70 | 70 | 400 | 300 | Terminal 1 | terminal | 0|WINDOW | 2 | 120 | 120 | 400 | 400 | AOW-2D | project_mirror | 0|gl_response=

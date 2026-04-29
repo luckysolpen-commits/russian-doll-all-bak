@@ -1,1 +1,0 @@
-type=capital\nowner=bravo\ncredits=3\nunits=0\npos_x=22\npos_y=2\n
