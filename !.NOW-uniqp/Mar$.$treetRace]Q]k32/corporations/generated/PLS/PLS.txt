@@ -5,32 +5,32 @@ FINANCIAL BALANCE SHEET: PULSETECH INDUSTRIES (PLS)
 (Amounts in millions of U.S. Dollars, except per share amounts)
 
 ASSETS:
-  Free Cash and Equivalents:		996.48
-  Working Capital (A/R, Inven.):	339.52
-  Business Assets/Equipment:		1078.40
+  Free Cash and Equivalents:		239.11
+  Working Capital (A/R, Inven.):	478.91
+  Business Assets/Equipment:		928.53
   Stock in Subsidiary Cos.:		0.00
   Options Long/Short: Net Value:	0.00
   ---------------------------------------------
-  Total Assets:				2414.41
+  Total Assets:				1646.55
   ---------------------------------------------
 
 LIABILITIES AND EQUITY:
   Long-Term Bonds Issued:		0.00
-  Bank Loan:				155.53
+  Bank Loan:				324.42
   Accrued Income Tax Payable:		0.00
   ---------------------------------------------
-  Total Liabilities:			155.53
+  Total Liabilities:			324.42
   ---------------------------------------------
-  Equity (Net Worth):			2258.88
+  Equity (Net Worth):			1322.13
   =============================================
 
 STOCK AND EARNINGS DATA:
 ------------------------
-  Net Worth Per Share:			22.72
-  Current Stock Price:			21.08
-  52-Week High/Low Stock Price:		38.37 / 10.56
-  Shares of Stock Outstanding:		99.41 million
-  Total Stock Capitalization:		2095.02 million
+  Net Worth Per Share:			122.49
+  Current Stock Price:			146.08
+  52-Week High/Low Stock Price:		280.14 / 107.36
+  Shares of Stock Outstanding:		10.79 million
+  Total Stock Capitalization:		1576.77 million
   2021 Earnings Per Share:		0.00 (Operating Earnings)
   2022 Earnings Per Share:		0.00 (Operating Earnings)
   2023 Earnings Per Share:		0.00 (Operating Earnings)
@@ -42,16 +42,16 @@ VARIOUS FINANCIAL RATIOS:
 -------------------------
   Price/Earnings Ratio:			NMF (No Meaningful Figure)
   Dividend Yield:			0.00%
-  Debt to Equity Ratio:			0.07 to 1
+  Debt to Equity Ratio:			0.25 to 1
   Return on Equity (2024):		NMF (No Meaningful Figure)
   ---------------------------------------------
 
 *** CREDIT INFO: ***
 -------------------
   Credit Rating:			AA
-  Unused Bank Line of Credit:		1880.17 million
+  Unused Bank Line of Credit:		822.67 million
   Borrowing Rate (Interest):		10.50% (Prime is: 10.00%)
-  Lending Bank:				LUNAR FINANCE (LUN)
+  Lending Bank:				MARTIAN TRUST BANK (MTB)
   ---------------------------------------------
 
 VARIABLE SETTINGS (Changeable by controlling player):
@@ -64,11 +64,11 @@ VARIABLE SETTINGS (Changeable by controlling player):
 MISCELLANEOUS INFO:
 -------------------
   Industry Group:			SEMICONDUCTOR
-  Incorporated in:			Farland
+  Incorporated in:			Sinder Rouge Monarchy
   Controlled (and actively managed) by:	public
   Public Owns:			%
-  Accrued R&D and/or Investment Tax Credits:	$65.12 million
-  Annual CEO Salary (approx.):		$1.28 million (Plus possible bonuses)
+  Accrued R&D and/or Investment Tax Credits:	$130.68 million
+  Annual CEO Salary (approx.):		$1.67 million (Plus possible bonuses)
   Today's (Game) Date:			January 1, 2025
   Next Earnings Report:			January 27, 2025
   ---------------------------------------------

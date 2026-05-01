@@ -1,0 +1,5 @@
+name=Chile
+gov_id=CHI
+cash=1000000.00
+tax_rate=0.15
+status=active

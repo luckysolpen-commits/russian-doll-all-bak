@@ -1,0 +1,5 @@
+name=Brazil
+gov_id=BRA
+cash=1000000.00
+tax_rate=0.15
+status=active

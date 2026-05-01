@@ -5,7 +5,7 @@ FINANCIAL BALANCE SHEET: COLONYGUARD INSUR. (CLG)
 (Amounts in millions of U.S. Dollars, except per share amounts)
 
 ASSETS:
-  Free Cash and Equivalents:		2325.47
+  Free Cash and Equivalents:		2310.97
   Stock in Subsidiary Corps.:		0.00
   Options Long/Short: Net Value:	0.00
   Government Bonds (mkt. value):	0.00
@@ -14,27 +14,27 @@ ASSETS:
   Index Futures: Marked to Mkt.:	0.00
   Commodity A/C Margin Balance:	0.00
   ---------------------------------------------
-  Total Assets:				2325.47
+  Total Assets:				2310.97
   ---------------------------------------------
 
 LIABILITIES AND EQUITY:
   Long-Term Bonds Issued:		0.00
-  Bank Loan:				291.69
-  Insurance Policy Reserves:		797.79
+  Bank Loan:				469.67
+  Insurance Policy Reserves:		859.57
   Accrued Income Tax Payable:		0.00
   ---------------------------------------------
-  Total Liabilities:			1089.49
+  Total Liabilities:			1329.24
   ---------------------------------------------
-  Equity (Net Worth):			1235.99
+  Equity (Net Worth):			981.73
   =============================================
 
 STOCK AND EARNINGS DATA:
 ------------------------
-  Net Worth Per Share:			12.81
-  Current Stock Price:			14.91
-  52-Week High/Low Stock Price:		17.83 / 9.40
-  Shares of Stock Outstanding:		96.48 million
-  Total Stock Capitalization:		1438.06 million
+  Net Worth Per Share:			13.35
+  Current Stock Price:			18.22
+  52-Week High/Low Stock Price:		28.56 / 13.84
+  Shares of Stock Outstanding:		73.51 million
+  Total Stock Capitalization:		1339.20 million
   2021 Earnings Per Share:		0.00 (Operating Earnings)
   2022 Earnings Per Share:		0.00 (Operating Earnings)
   2023 Earnings Per Share:		0.00 (Operating Earnings)
@@ -46,16 +46,16 @@ VARIOUS FINANCIAL RATIOS:
 -------------------------
   Price/Earnings Ratio:			NMF (No Meaningful Figure)
   Dividend Yield:			0.00%
-  Debt to Equity Ratio:			0.24 to 1
+  Debt to Equity Ratio:			0.48 to 1
   Return on Equity (2024):		NMF (No Meaningful Figure)
   ---------------------------------------------
 
 *** CREDIT INFO: ***
 -------------------
   Credit Rating:			A
-  Unused Bank Line of Credit:		1829.45 million
+  Unused Bank Line of Credit:		1935.61 million
   Borrowing Rate (Interest):		11.00% (Prime is: 10.00%)
-  Lending Bank:				LUNAR FINANCE (LUN)
+  Lending Bank:				MARTIAN TRUST BANK (MTB)
   ---------------------------------------------
 
 VARIABLE SETTINGS (Changeable by controlling player):
@@ -68,10 +68,10 @@ VARIABLE SETTINGS (Changeable by controlling player):
 MISCELLANEOUS INFO:
 -------------------
   Industry Group:			INSURANCE
-  Incorporated in:			Sinder Rouge Monarchy
+  Incorporated in:			United Clones
   Controlled (and actively managed) by:	sol supreme
   Public Owns:			%
-  Annual CEO Salary (approx.):		$1.39 million (Plus possible bonuses)
+  Annual CEO Salary (approx.):		$0.96 million (Plus possible bonuses)
   Today's (Game) Date:			January 1, 2025
   Next Earnings Report:			January 8, 2025
   ---------------------------------------------

@@ -5,32 +5,32 @@ FINANCIAL BALANCE SHEET: MARTIAN MARKETS (MRT)
 (Amounts in millions of U.S. Dollars, except per share amounts)
 
 ASSETS:
-  Free Cash and Equivalents:		684.83
-  Working Capital (A/R, Inven.):	393.70
-  Business Assets/Equipment:		1748.18
+  Free Cash and Equivalents:		348.34
+  Working Capital (A/R, Inven.):	459.88
+  Business Assets/Equipment:		1028.26
   Stock in Subsidiary Cos.:		0.00
   Options Long/Short: Net Value:	0.00
   ---------------------------------------------
-  Total Assets:				2826.71
+  Total Assets:				1836.48
   ---------------------------------------------
 
 LIABILITIES AND EQUITY:
   Long-Term Bonds Issued:		0.00
-  Bank Loan:				315.30
+  Bank Loan:				94.25
   Accrued Income Tax Payable:		0.00
   ---------------------------------------------
-  Total Liabilities:			315.30
+  Total Liabilities:			94.25
   ---------------------------------------------
-  Equity (Net Worth):			2511.41
+  Equity (Net Worth):			1742.24
   =============================================
 
 STOCK AND EARNINGS DATA:
 ------------------------
-  Net Worth Per Share:			25.56
-  Current Stock Price:			34.79
-  52-Week High/Low Stock Price:		45.14 / 21.52
-  Shares of Stock Outstanding:		98.25 million
-  Total Stock Capitalization:		3418.02 million
+  Net Worth Per Share:			17.95
+  Current Stock Price:			22.89
+  52-Week High/Low Stock Price:		42.37 / 13.11
+  Shares of Stock Outstanding:		97.07 million
+  Total Stock Capitalization:		2221.96 million
   2021 Earnings Per Share:		0.00 (Operating Earnings)
   2022 Earnings Per Share:		0.00 (Operating Earnings)
   2023 Earnings Per Share:		0.00 (Operating Earnings)
@@ -42,14 +42,14 @@ VARIOUS FINANCIAL RATIOS:
 -------------------------
   Price/Earnings Ratio:			NMF (No Meaningful Figure)
   Dividend Yield:			0.00%
-  Debt to Equity Ratio:			0.13 to 1
+  Debt to Equity Ratio:			0.05 to 1
   Return on Equity (2024):		NMF (No Meaningful Figure)
   ---------------------------------------------
 
 *** CREDIT INFO: ***
 -------------------
   Credit Rating:			AA
-  Unused Bank Line of Credit:		1498.47 million
+  Unused Bank Line of Credit:		221.06 million
   Borrowing Rate (Interest):		10.50% (Prime is: 10.00%)
   Lending Bank:				MARTIAN TRUST BANK (MTB)
   ---------------------------------------------
@@ -64,11 +64,11 @@ VARIABLE SETTINGS (Changeable by controlling player):
 MISCELLANEOUS INFO:
 -------------------
   Industry Group:			RETAIL -- SUPERMARKETS
-  Incorporated in:			Robot State
+  Incorporated in:			Sinder Rouge Monarchy
   Controlled (and actively managed) by:	public
   Public Owns:			%
-  Accrued R&D and/or Investment Tax Credits:	$131.02 million
-  Annual CEO Salary (approx.):		$1.98 million (Plus possible bonuses)
+  Accrued R&D and/or Investment Tax Credits:	$120.16 million
+  Annual CEO Salary (approx.):		$0.58 million (Plus possible bonuses)
   Today's (Game) Date:			January 1, 2025
   Next Earnings Report:			January 27, 2025
   ---------------------------------------------

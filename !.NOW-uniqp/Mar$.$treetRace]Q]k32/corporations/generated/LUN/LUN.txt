@@ -5,38 +5,38 @@ FINANCIAL BALANCE SHEET: LUNAR FINANCE (LUN)
 (Amounts in millions of U.S. Dollars, except per share amounts)
 
 ASSETS:
-  Free Cash and Equivalents:		1604.47
+  Free Cash and Equivalents:		2721.47
   Stock in Subsidiary Corps.:		0.00
   Options Long/Short: Net Value:	0.00
   Government Bonds (mkt. value):	0.00
   Corporate Bonds (mkt. value):	0.00
-  Business Loan Portfolio:		549.60
-  Consumer Loan Portfolio:		252.63
-  Mortgage Loans/Securities:		899.48
-  Less: Bad Debt Reserves:		-198.01
+  Business Loan Portfolio:		775.48
+  Consumer Loan Portfolio:		219.62
+  Mortgage Loans/Securities:		315.04
+  Less: Bad Debt Reserves:		-121.49
   ---------------------------------------------
-  Total Assets:				3108.18
+  Total Assets:				3910.12
   ---------------------------------------------
 
 LIABILITIES AND EQUITY:
   Long-Term Bonds Issued:		0.00
-  Demand Deposits:			312.97
-  Certificates of Deposit:		710.50
+  Demand Deposits:			229.33
+  Certificates of Deposit:		851.07
   Interbank Debt -- Fed Funds:		0.00
   Accrued Income Tax Payable:		0.00
   ---------------------------------------------
-  Total Liabilities:			1023.47
+  Total Liabilities:			1080.40
   ---------------------------------------------
-  Equity (Net Worth):			2084.71
+  Equity (Net Worth):			2829.72
   =============================================
 
 STOCK AND EARNINGS DATA:
 ------------------------
-  Net Worth Per Share:			25.76
-  Current Stock Price:			36.88
-  52-Week High/Low Stock Price:		68.57 / 26.79
-  Shares of Stock Outstanding:		80.94 million
-  Total Stock Capitalization:		2985.35 million
+  Net Worth Per Share:			80.28
+  Current Stock Price:			74.47
+  52-Week High/Low Stock Price:		131.55 / 59.34
+  Shares of Stock Outstanding:		35.25 million
+  Total Stock Capitalization:		2624.83 million
   2022 Earnings Per Share:		0.00 (Operating Earnings)
   2023 Earnings Per Share:		0.00 (Operating Earnings)
   2024 Earnings Per Share:		0.00 (Operating Earnings)
@@ -49,8 +49,8 @@ VARIOUS FINANCIAL RATIOS:
   Price/Earnings Ratio:			NMF (No Meaningful Figure)
   Dividend Yield:			0.00%
   Debt to Equity Ratio:			0.00 to 1
-  Bad Debt Reserve Ratio:		11.64%
-  Reserves to Deposits %:		19.35%
+  Bad Debt Reserve Ratio:		9.27%
+  Reserves to Deposits %:		11.24%
   Return on Equity (2025):		NMF (No Meaningful Figure)
   ---------------------------------------------
 
@@ -72,8 +72,8 @@ MISCELLANEOUS INFO:
   Incorporated in:			UNITED STATES
   Controlled (and actively managed) by:	test_acc
   Wholly owned by:			test_acc
-  Tax Loss Carryover:			$425.39 million
-  Annual CEO Salary (approx.):		$0.99 million (Plus possible bonuses)
+  Tax Loss Carryover:			$303.58 million
+  Annual CEO Salary (approx.):		$0.83 million (Plus possible bonuses)
   Today's (Game) Date:			January 1, 2026
   Next Earnings Report:			April 1, 2026
   ---------------------------------------------

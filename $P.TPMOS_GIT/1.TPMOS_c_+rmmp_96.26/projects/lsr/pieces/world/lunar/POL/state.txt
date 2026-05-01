@@ -1,0 +1,5 @@
+name=Poland
+gov_id=POL
+cash=1000000.00
+tax_rate=0.15
+status=active

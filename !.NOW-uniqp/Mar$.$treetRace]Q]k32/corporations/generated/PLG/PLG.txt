@@ -5,7 +5,7 @@ FINANCIAL BALANCE SHEET: PLANETGUARD INSUR. (PLG)
 (Amounts in millions of U.S. Dollars, except per share amounts)
 
 ASSETS:
-  Free Cash and Equivalents:		1017.75
+  Free Cash and Equivalents:		2157.12
   Stock in Subsidiary Corps.:		0.00
   Options Long/Short: Net Value:	0.00
   Government Bonds (mkt. value):	0.00
@@ -14,27 +14,27 @@ ASSETS:
   Index Futures: Marked to Mkt.:	0.00
   Commodity A/C Margin Balance:	0.00
   ---------------------------------------------
-  Total Assets:				1017.75
+  Total Assets:				2157.12
   ---------------------------------------------
 
 LIABILITIES AND EQUITY:
   Long-Term Bonds Issued:		0.00
-  Bank Loan:				222.32
-  Insurance Policy Reserves:		800.22
+  Bank Loan:				356.69
+  Insurance Policy Reserves:		1129.22
   Accrued Income Tax Payable:		0.00
   ---------------------------------------------
-  Total Liabilities:			1022.54
+  Total Liabilities:			1485.91
   ---------------------------------------------
-  Equity (Net Worth):			-4.80
+  Equity (Net Worth):			671.21
   =============================================
 
 STOCK AND EARNINGS DATA:
 ------------------------
-  Net Worth Per Share:			-0.07
-  Current Stock Price:			-0.08
-  52-Week High/Low Stock Price:		-0.15 / -0.04
-  Shares of Stock Outstanding:		65.69 million
-  Total Stock Capitalization:		-5.46 million
+  Net Worth Per Share:			21.34
+  Current Stock Price:			26.14
+  52-Week High/Low Stock Price:		36.86 / 20.19
+  Shares of Stock Outstanding:		31.45 million
+  Total Stock Capitalization:		822.07 million
   2021 Earnings Per Share:		0.00 (Operating Earnings)
   2022 Earnings Per Share:		0.00 (Operating Earnings)
   2023 Earnings Per Share:		0.00 (Operating Earnings)
@@ -46,16 +46,16 @@ VARIOUS FINANCIAL RATIOS:
 -------------------------
   Price/Earnings Ratio:			NMF (No Meaningful Figure)
   Dividend Yield:			0.00%
-  Debt to Equity Ratio:			222.32 to 1
+  Debt to Equity Ratio:			0.53 to 1
   Return on Equity (2024):		NMF (No Meaningful Figure)
   ---------------------------------------------
 
 *** CREDIT INFO: ***
 -------------------
   Credit Rating:			A
-  Unused Bank Line of Credit:		704.91 million
+  Unused Bank Line of Credit:		851.84 million
   Borrowing Rate (Interest):		11.00% (Prime is: 10.00%)
-  Lending Bank:				MARTIAN TRUST BANK (MTB)
+  Lending Bank:				LUNAR FINANCE (LUN)
   ---------------------------------------------
 
 VARIABLE SETTINGS (Changeable by controlling player):
@@ -71,7 +71,7 @@ MISCELLANEOUS INFO:
   Incorporated in:			Solar Empire
   Controlled (and actively managed) by:	sol supreme
   Public Owns:			%
-  Annual CEO Salary (approx.):		$1.48 million (Plus possible bonuses)
+  Annual CEO Salary (approx.):		$0.46 million (Plus possible bonuses)
   Today's (Game) Date:			January 1, 2025
   Next Earnings Report:			January 8, 2025
   ---------------------------------------------

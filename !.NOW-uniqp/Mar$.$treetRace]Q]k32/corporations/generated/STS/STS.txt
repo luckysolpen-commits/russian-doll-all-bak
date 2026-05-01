@@ -5,7 +5,7 @@ FINANCIAL BALANCE SHEET: STELLARSHIELD INSUR. (STS)
 (Amounts in millions of U.S. Dollars, except per share amounts)
 
 ASSETS:
-  Free Cash and Equivalents:		1138.25
+  Free Cash and Equivalents:		2956.21
   Stock in Subsidiary Corps.:		0.00
   Options Long/Short: Net Value:	0.00
   Government Bonds (mkt. value):	0.00
@@ -14,27 +14,27 @@ ASSETS:
   Index Futures: Marked to Mkt.:	0.00
   Commodity A/C Margin Balance:	0.00
   ---------------------------------------------
-  Total Assets:				1138.25
+  Total Assets:				2956.21
   ---------------------------------------------
 
 LIABILITIES AND EQUITY:
   Long-Term Bonds Issued:		0.00
-  Bank Loan:				144.73
-  Insurance Policy Reserves:		640.71
+  Bank Loan:				350.13
+  Insurance Policy Reserves:		1197.10
   Accrued Income Tax Payable:		0.00
   ---------------------------------------------
-  Total Liabilities:			785.44
+  Total Liabilities:			1547.23
   ---------------------------------------------
-  Equity (Net Worth):			352.81
+  Equity (Net Worth):			1408.99
   =============================================
 
 STOCK AND EARNINGS DATA:
 ------------------------
-  Net Worth Per Share:			4.38
-  Current Stock Price:			5.81
-  52-Week High/Low Stock Price:		11.45 / 3.95
-  Shares of Stock Outstanding:		80.57 million
-  Total Stock Capitalization:		467.85 million
+  Net Worth Per Share:			26.66
+  Current Stock Price:			36.38
+  52-Week High/Low Stock Price:		67.08 / 21.25
+  Shares of Stock Outstanding:		52.85 million
+  Total Stock Capitalization:		1922.63 million
   2021 Earnings Per Share:		0.00 (Operating Earnings)
   2022 Earnings Per Share:		0.00 (Operating Earnings)
   2023 Earnings Per Share:		0.00 (Operating Earnings)
@@ -46,14 +46,14 @@ VARIOUS FINANCIAL RATIOS:
 -------------------------
   Price/Earnings Ratio:			NMF (No Meaningful Figure)
   Dividend Yield:			0.00%
-  Debt to Equity Ratio:			0.41 to 1
+  Debt to Equity Ratio:			0.25 to 1
   Return on Equity (2024):		NMF (No Meaningful Figure)
   ---------------------------------------------
 
 *** CREDIT INFO: ***
 -------------------
   Credit Rating:			A
-  Unused Bank Line of Credit:		1228.06 million
+  Unused Bank Line of Credit:		1760.87 million
   Borrowing Rate (Interest):		11.00% (Prime is: 10.00%)
   Lending Bank:				MARTIAN TRUST BANK (MTB)
   ---------------------------------------------
@@ -68,10 +68,10 @@ VARIABLE SETTINGS (Changeable by controlling player):
 MISCELLANEOUS INFO:
 -------------------
   Industry Group:			INSURANCE
-  Incorporated in:			Farland
+  Incorporated in:			Red African Union
   Controlled (and actively managed) by:	sol supreme
   Public Owns:			%
-  Annual CEO Salary (approx.):		$1.61 million (Plus possible bonuses)
+  Annual CEO Salary (approx.):		$0.88 million (Plus possible bonuses)
   Today's (Game) Date:			January 1, 2025
   Next Earnings Report:			January 8, 2025
   ---------------------------------------------
