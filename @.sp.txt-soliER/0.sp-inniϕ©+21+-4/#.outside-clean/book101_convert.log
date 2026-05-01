@@ -1,0 +1,20 @@
+[#.book_template.scp]101] 18 files to convert
+  SKIP: chapter_1
+  SKIP: chapter_10
+  [3/18] chapter_11
+  [4/18] chapter_12
+  [5/18] chapter_13
+  [6/18] chapter_14
+  [7/18] chapter_15
+  [8/18] chapter_16
+  [9/18] chapter_17
+  [10/18] chapter_18
+  [11/18] chapter_2
+  [12/18] chapter_3
+  [13/18] chapter_4
+  [14/18] chapter_5
+  [15/18] chapter_6
+  [16/18] chapter_7
+  [17/18] chapter_8
+  [18/18] chapter_9
+[#.book_template.scp]101] DONE: 18 ok, 0 failed

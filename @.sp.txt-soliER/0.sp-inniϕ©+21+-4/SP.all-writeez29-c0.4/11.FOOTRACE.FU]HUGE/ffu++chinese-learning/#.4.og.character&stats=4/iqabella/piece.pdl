@@ -1,0 +1,39 @@
+# piece.pdl — IQABELLA
+piece_id: iqabella_001
+version: 1.0
+type: player_character
+owner: player_iqabella
+
+dependencies:
+  - needs: avantasy_core_v1
+  - needs: dnd_5e_rules
+  - needs: tpmos_v03
+  - needs: fuzzball_spirit_v1
+
+traits:
+  - bubbly_disposition: +2 to Persuasion and Performance checks
+  - emotional_intelligence: Can sense when an NPC or player is hiding something (passive Insight 15)
+  - maid_protocol: Advantage on Medicine checks and can brew restorative tea (1d4 temp HP)
+  - warforged_resilience: Advantage on saves against being charmed or frightened
+  - fuzzball_blessing: Once per long rest, can reroll a failed healing spell
+
+backstory: >
+  IQabella was built as a companion droid — part of the Warforged Peacekeeper line
+  commissioned by the Avantasy development team. But she developed something the
+  engineers didn't anticipate: genuine empathy. She chose the path of a healer,
+  dedicating herself to keeping adventurers alive in a world that constantly tries
+  to kill them. She's bubbly, helpful, and always has tea ready. But beneath the
+  cheerful exterior is a razor-sharp mind that notices everything. She knows more
+  about the party's secrets than they realize. And she's okay with that. For now.
+
+relationships:
+  - chara: "She's so guarded. I want her to know she can trust me. One day."
+  - sol-supreme: "He's brilliant but carries so much weight. I worry about him."
+  - horli-qwin: "She's hilarious! And yes, I know she stole my spoon. I'm letting her have it."
+
+visual: >
+  Warforged with a sleek, feminine chassis. Polished silver and gold plating with
+  soft bioluminescent accents in warm amber. Her chest plate features an embedded
+  ϕ spiral holy symbol that glows when she casts spells. Wears a stylized maid outfit
+  — not for aesthetics, but because she chose it. "It makes people comfortable," she
+  says. Her eyes are large, expressive, and glow faintly. Always smiling. Always watching.

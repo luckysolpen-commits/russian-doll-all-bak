@@ -1,0 +1,73 @@
+DM (Mother Tmojizu)|zh-CN-XiaoxiaoNeural
+Mother Tmojizu|zh-CN-XiaoxiaoNeural
+Mother Tomokazu|zh-CN-XiaoxiaoNeural
+CHARA|fr-FR-VivienneMultilingualNeural
+Sol-Supreme|en-US-ChristopherNeural|+0%|-50Hz
+IQabella|en-US-AnaNeural
+Horli Qwin|fr-FR-DeniseNeural
+DM|zh-CN-XiaoxiaoNeural
+中文老师|zh-CN-YunxiaNeural
+Lucky|en-US-BrianNeural
+QOO|zh-CN-YunxiaNeural
+Chinese Narrator|zh-CN-YunxiaNeural
+Chinese Voice|zh-CN-YunxiaNeural
+CHR-047|fr-FR-VivienneMultilingualNeural
+SOL-001|en-US-ChristopherNeural
+IQA-112|en-US-AnaNeural
+HQW-006|fr-FR-DeniseNeural
+THE ORIGINAL CHARA|fr-FR-VivienneMultilingualNeural
+THE ORIGINAL SOL-SUPREME|en-US-ChristopherNeural
+THE ORIGINAL IQABELLA|en-US-AnaNeural
+THE ORIGINAL HORLI QWIN|fr-FR-DeniseNeural
+Luna|en-US-EmmaNeural
+Sora|en-US-EricNeural
+RaTheButcher|en-US-ChristopherNeural
+TRONALD_THE_MAGE|en-US-ChristopherNeural
+BORIN IRONMUG|en-US-ChristopherNeural
+HOODED FIGURE (LoonaTwilight)|zh-CN-XiaoxiaoNeural
+Player (The Creator)|en-US-AndrewNeural
+The Creator|en-US-AndrewNeural
+Crimson|en-US-ChristopherNeural
+Ember|fr-FR-VivienneMultilingualNeural
+Glimmer|en-US-AnaNeural
+Verdi|en-US-EricNeural
+Aqua|en-US-EmmaNeural
+Nebula|en-US-MichelleNeural
+Void|en-US-ChristopherNeural
+Lumen|en-KE-AsiliaNeural
+Leafsong|en-US-AvaNeural
+Everyone|zh-CN-XiaoxiaoNeural
+GOLD COINS|zh-CN-XiaoxiaoNeural
+EXPERIENCE POINTS|zh-CN-XiaoxiaoNeural
+RARE ITEMS ACQUIRED|zh-CN-XiaoxiaoNeural
+
+# African accents — main NPCs
+THE DIABOLUS|ar-AE-HamdanNeural
+THE HOUSE|ru-RU-DmitryNeural
+THE MOON SIGNAL|en-US-EmmaNeural
+BROKER VEX|en-NG-AbeoNeural
+BROKER|en-NG-AbeoNeural
+SCRATCH|en-KE-AsiliaNeural
+OFFICER KRELL|en-KE-ChilembaNeural
+MASTER FENG|ja-JP-KeitaNeural
+MNEMOSYNE|en-KE-AsiliaNeural
+VOSS|en-NG-EzinneNeural
+SCOUT|en-NG-AbeoNeural
+
+# British accents — clones/clowns (Mars inhabitants)
+CHR-033|fr-FR-VivienneMultilingualNeural
+CHR-022|fr-FR-VivienneMultilingualNeural
+BUILDER CLONE|en-GB-MaisieNeural
+CHEF CLONE|en-GB-RyanNeural
+HACKER CLONE|en-GB-SoniaNeural
+ENFORCER|en-GB-ThomasNeural
+UNREGISTERED CLONE|en-GB-LibbyNeural
+
+# Additional characters
+Mama Sour|en-US-MichelleNeural
+Rusty|en-US-EricNeural
+Old Man Feng|en-US-AndrewNeural
+Boss Nami|fr-FR-VivienneMultilingualNeural
+
+# rate and pitch empty = use global or default
+# Lines with only voice-id still work (backward compatible)

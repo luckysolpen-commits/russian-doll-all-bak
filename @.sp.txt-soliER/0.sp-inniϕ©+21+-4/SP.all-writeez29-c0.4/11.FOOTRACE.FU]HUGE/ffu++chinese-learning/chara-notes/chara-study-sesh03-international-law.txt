@@ -1,0 +1,120 @@
+# CHARA'S STUDY NOTES — SESSION 3
+## "International Law — Suing Across Borders"
+
+---
+
+**CHARA:** Session three. International law. This is where I tried to build my oil rig nation on the high seas. This is where I tried to get the UN to recognize my sovereignty. This is where I failed — but where I learned enough to try again.
+
+International law is different from domestic law. There's no world government. No world court with real enforcement power. The International Court of Justice (ICJ) exists, but it only hears cases between countries — not between individuals and countries. So if you're an individual trying to sue a foreign government, you need other tools.
+
+Here are the tools.
+
+---
+
+## PART 1: JURISDICTION IN INTERNATIONAL CASES
+
+**CHARA:** Before you can sue a foreign entity, you need jurisdiction — the court's power over the defendant. In international cases, this is called personal jurisdiction over foreign defendants.
+
+The standard: "minimum contacts" with the forum. The defendant must have sufficient connections to the jurisdiction where you're suing. If a Chinese company does business in the US, you can sue them in US court. If a Russian oligarch owns property in London, you can sue them in London.
+
+The test from International Shoe Co. v. Washington (1945): does the defendant have "such minimum contacts with [the forum] that the exercise of jurisdiction does not offend traditional notions of fair play and substantial justice"?
+
+Practical advice: sue foreign defendants in their home country. It's harder for them to claim lack of jurisdiction. And many countries have more plaintiff-friendly laws than the US.
+
+---
+
+## PART 2: THE ALIEN TORT STATUTE — SUING FOR INTERNATIONAL LAW VIOLATIONS
+
+**CHARA:** The Alien Tort Statute (ATS), 28 U.S.C. § 1350, is one of the most powerful and controversial statutes in American law. It says: "The district courts shall have original jurisdiction of any civil action by an alien for a tort only, committed in violation of the law of nations or a treaty of the United States."
+
+Translation: a foreign national can sue in US federal court for violations of international law. Torture, genocide, war crimes, crimes against humanity — all actionable under the ATS.
+
+The ATS was used successfully in the 1980s and 1990s to sue human rights abusers. The landmark case: Filártiga v. Peña-Irala (1980), where a Paraguayan citizen sued a Paraguayan police official for torture in US court. The Second Circuit held that torture violates the law of nations, and the ATS provides jurisdiction.
+
+But the Supreme Court has narrowed the ATS dramatically. In Kiobel v. Royal Dutch Petroleum (2013), the Court held that the ATS doesn't apply to conduct that occurs outside the United States — the "presumption against extraterritoriality." In Jesner v. Arab Bank (2018), the Court held that foreign corporations can't be sued under the ATS.
+
+The ATS is still alive, but barely. It applies to: (1) conduct that occurs in the US, (2) US citizens who commit violations abroad, and (3) a narrow category of universal international law violations that occur "indefinitely close" to the US.
+
+I tried an ATS case against a foreign defense contractor that committed war crimes in a conflict zone. The case was dismissed under Kiobel — the conduct occurred overseas, and the defendant was a foreign corporation. I lost. But I preserved the argument that the contractor had sufficient US contacts to overcome the presumption against extraterritoriality. The appeal is pending.
+
+---
+
+## PART 3: THE FOREIGN SOVEREIGN IMMUNITIES ACT — WHEN FOREIGN GOVERNMENTS CAN BE SUED
+
+**CHARA:** The Foreign Sovereign Immunities Act (FSIA), 28 U.S.C. §§ 1330, 1602-1611, is the US law that determines when foreign governments can be sued in US courts.
+
+The general rule: foreign governments are immune. The exceptions:
+1. **Commercial activity** — if the foreign government engages in commercial activity that has a "direct effect" in the US, it can be sued for that activity.
+2. **Torts in the US** — if the foreign government commits a tort (personal injury, property damage) in the US, it can be sued.
+3. **Terrorism exception** — if the foreign government sponsors terrorism, it can be sued by victims (added in 1996).
+4. **Expropriation exception** — if the foreign government seizes property in violation of international law, it can be sued.
+
+The commercial activity exception is the most useful. If a foreign government runs a business in the US — an airline, a bank, an oil company — that business can be sued like any other business. The government can't hide behind sovereign immunity when it's acting like a corporation.
+
+I sued a foreign government's oil company under the commercial activity exception. The company had breached a contract with my high seas operation. The court held that the oil company's US operations constituted sufficient commercial activity to overcome sovereign immunity. The case proceeded. We settled for $15 million.
+
+That was one of my biggest wins. And it was built entirely on the FSIA's commercial activity exception.
+
+---
+
+## PART 4: UNCLOS — THE LAW OF THE SEA
+
+**CHARA:** The United Nations Convention on the Law of the Sea (UNCLOS) is the international treaty that governs maritime rights and responsibilities. It defines territorial waters, exclusive economic zones (EEZ), and the high seas.
+
+Key provisions:
+- **Territorial waters:** 12 nautical miles from the coast. The coastal state has full sovereignty.
+- **Exclusive Economic Zone (EEZ):** 200 nautical miles from the coast. The coastal state has exclusive rights to resources (fish, oil, minerals) but other states have freedom of navigation.
+- **High seas:** Beyond 200 nautical miles. No state has sovereignty. Freedom of navigation, overflight, fishing, and scientific research.
+
+My oil rig ecosystem was built on the high seas — beyond any state's EEZ. Under UNCLOS, the high seas are "the common heritage of mankind." No state can claim sovereignty over them. But no state can prevent you from building structures on them either.
+
+The legal gray area: if you build a structure on the high seas, is it a "ship" (subject to flag state jurisdiction) or a "territory" (potentially subject to sovereignty claims)? UNCLOS doesn't address this directly. I argued that my oil rig complex was a "ship" — a floating structure — and therefore subject only to the jurisdiction of the flag state (which I registered as my own nation).
+
+The US Coast Guard disagreed. They boarded my rig. They shut it down. They cited me for violations of maritime safety regulations. I argued that they had no jurisdiction on the high seas. They argued that my "nation" wasn't recognized by anyone, so my flag state registration was meaningless.
+
+They were right. I was wrong. But the legal argument was interesting. And I learned a lot about UNCLOS in the process.
+
+---
+
+## PART 5: FLAG STATE JURISDICTION — REGISTERING YOUR OWN NATION'S VESSELS
+
+**CHARA:** Every ship on the ocean is registered to a "flag state" — the country whose laws govern the ship. Panama, Liberia, and the Marshall Islands are the most popular flag states because they have lax regulations and low taxes.
+
+I tried to create my own flag state. My oil rig nation would register its own vessels — the rig itself, the supply ships, the support platforms. Those vessels would be subject only to my nation's laws. Not US law. Not any other country's law.
+
+The problem: flag state registration requires recognition by other states. If no one recognizes your flag state, your registration is meaningless. The US doesn't recognize micronations. The UN doesn't recognize micronations. So my flag state registration was, legally speaking, fiction.
+
+But here's the thing: the international system for flag state registration is decentralized. There's no central authority that approves or rejects flag states. Each country decides for itself which flag states to recognize. If I could get even one country to recognize my flag state, my vessels would have legal standing.
+
+I tried to get recognition from small island nations — Tuvalu, Kiribati, the Marshall Islands. None of them bit. They were afraid of offending the US. And I couldn't blame them.
+
+But the principle is sound. If you can get one country to recognize your flag state, you're in the game. And there are countries that might do it — for the right price, or the right political alignment.
+
+---
+
+## PART 6: MY UN PROPOSAL — RECOGNITION FOR A SEA NATION
+
+**CHARA:** Here's what I tried to do. I drafted a proposal to the UN General Assembly requesting recognition of my oil rig nation as a sovereign state. The proposal cited the Montevideo Convention criteria (permanent population, defined territory, government, capacity to enter into relations with other states). I argued that my oil rig complex met all four criteria.
+
+The UN's response: silence. They didn't reject the proposal. They didn't accept it. They just... ignored it. Because the UN doesn't recognize new states. The UN Security Council does — and the five permanent members (US, UK, France, Russia, China) would never agree to recognize a micronation on the high seas. It would set a precedent. Every secessionist movement would claim the same right.
+
+So my UN proposal went nowhere. But the legal framework I built is still valid. The Montevideo Convention criteria are still the standard for statehood. The UNCLOS high seas provisions still allow structures on the high seas. The flag state jurisdiction principle still exists. All the pieces are there. They just need to be assembled differently.
+
+And I'm going to assemble them differently. Next time.
+
+---
+
+## PART 7: WHAT COMES NEXT
+
+**CHARA:** In my next session, I'll cover starting your own government — the Montevideo Convention, recognition, micronations (Sealand, Liberland, Molossia), PMC legal structure, international mercenary law, and contracting with governments. I'll explain how to build a sovereign entity from scratch, and how to fund it through PMC contracts with multiple governments.
+
+But for now, I'm going to close the UNCLOS file. And I'm going to open the Montevideo Convention file. Because the next step isn't suing governments. It's becoming one.
+
+---
+
+**[END OF CHARA'S STUDY NOTES — SESSION 3]**
+**Topic: International Jurisdiction → Alien Tort Statute → FSIA → UNCLOS → Flag State Jurisdiction → UN Proposal**
+**Voice: CHARA (en-US-AriaNeural)**
+**Estimated audio: ~25-30 minutes**
+**Next: Session 4 — Starting Your Own Government (Montevideo Convention, Recognition, Micronations, PMC Legal Structure)**
+**ϕ**

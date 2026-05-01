@@ -1,0 +1,49 @@
+# stats.txt — HORLI QWIN
+# Trap Rapper | Bard (College of Swords) | Tabaxi
+
+level: 2
+class: Bard / College of Swords
+race: Tabaxi
+
+STR: 10 (+0)
+DEX: 16 (+3)
+CON: 12 (+1)
+INT: 11 (+0)
+WIS: 13 (+1)
+CHA: 17 (+3)
+
+HP: 16/16
+AC: 15 (Studded Leather + DEX)
+Speed: 30ft (40ft with Feline Agility)
+
+Proficiency Bonus: +2
+Initiative: +3
+
+Saving Throws: DEX +5, CHA +5
+Skills:
+  - Performance: +7
+  - Persuasion: +5
+  - Deception: +5
+  - Sleight of Hand: +5
+  - Stealth: +5
+  - Acrobatics: +5
+  - Perception: +3
+
+Abilities/Spells:
+  - Bardic Inspiration (d6, 2/day)
+  - Fighting Style: Dueling (+2 damage with one-handed melee weapon)
+  - Blade Flourish (Bonus Action after attack: Mobile, Defensive, or Slashing flourish)
+  - Feline Agility (double speed for one turn, recharges on short rest)
+  - Cantrips: Vicious Mockery, Minor Illusion, Mage Hand
+  - 1st Level Spells: Dissonant Whispers, Healing Word, Charm Person, Tasha's Hideous Laughter, Thunderwave
+
+Inventory:
+  - Rapier (custom — "The Mic")
+  - Shortsword (off-hand — "The Backup")
+  - Studded Leather Armor (bedazzled)
+  - Musical Instrument: Portable Beat Pad (arcane focus)
+  - Disguise Kit
+  - Lockpicks (stolen, she won't say from whom)
+  - 30 Gold Pieces
+  - Bag of Holding (stolen... definitely stolen)
+  - "For the Bit" Journal (records every con she's pulled)

@@ -1,0 +1,9 @@
+**Page 36: The Red Room's Trap**
+
+By webbing the doorframe, you alerted the security operative to an anomaly. Your intervention may have protected the Red Room's occupants or alerted them to an outside threat. You've caused a disturbance, and the castle's security is now more aware of potential intrusions.
+
+Hydration: 8/10 (Alerted security)
+Silk Reserves: 8/10 (Used silk for webbing)
+Intel: 5/10 (Caused a security alert in the Red Room)
+
+**--- END OF PATH ---**

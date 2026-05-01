@@ -1,0 +1,42 @@
+# Instructions for AI Agents: Finding Narrative and Session Files
+
+## Objective
+Your primary goal is to identify and list "scripted stories," "game session files," "narrative content," or "structured lore documents" from specified directories. These files are intended as input for a Text-to-Speech (TTS) conversion process.
+
+## Search Scope
+You will search within the following directories:
+- `SP.all-writeez28-c0.3/` (recursively)
+
+
+## Inclusion Criteria
+1.  **File Extension**: Primarily focus on files with the `.txt` extension.
+2.  **Content Relevance**: The content of the file must be narrative, dialogue-heavy, contain structured lore, or be a transcript of a game session. Think of content that tells a story or describes a scenario.
+
+## Exclusion Criteria
+You **must exclude** the following types of files, even if they are `.txt` files and reside within the search scope:
+
+*   **Planning Documents**: Files clearly marked as plans, overviews, or business models (e.g., containing "plan", "overview", "financial-model", "phased-rollout", "ip-strategy", "bootstrap-vs-investor", "community-programming" in their name or content).
+*   **Tool Documentation**: Files related to how tools or systems work, not narrative content (e.g., `RPG-CANVAS-SP-BIBLE.txt`).
+*   **Raw Character Data / Stats**: Files containing raw character sheets, statistics, or stat blocks (e.g., containing "character&stats", "stats", "character-data").
+*   **Code Files**: Files with extensions like `.c`, `.sh`, `.js`, `.py`, etc.
+*   **Fragmented Notes / To-Do Lists**: Files that are clearly not narrative or structured lore, such as to-do lists, random notes, or temporary files (e.g., `2do.txt`, `wussup?cc.txt`, `REVISION_LOG.txt`).
+*   **Specific Exclusions**:
+    *   `d&d-aiguys-murderhobos10k.txt`
+    *   Any file whose name or content indicates it's a revision log.
+
+## Output Format
+For each file that meets the inclusion criteria and does not meet any exclusion criteria:
+1.  Prepend the absolute path of the file with the prefix `../`.
+2.  List each processed file path on a new line.
+
+## Example of Expected Output for a File
+If a file `spai.d-d-murderhobozos_c.0/avantasy-sesh-#1-10/some_story.txt` is selected, the output line should be:
+`../spai.d-d-murderhobozos_c.0/avantasy-sesh-#1-10/some_story.txt`
+
+## Action Summary
+1.  Traverse specified directories recursively.
+2.  Analyze the content and name of each file.
+3.  Include `.txt` files that are narrative or session-based.
+4.  Strictly exclude planning docs, tool docs, stats, code, fragmented notes, and specific named files.
+5.  Format the output by prepending `../` to the path and listing each on a new line.
+6.  Write the final list to a file named `fixed.txt`.

@@ -1,0 +1,6 @@
+You decide to investigate the small, primitive campsite. You find a fire pit with recent embers, some gnawed animal bones, and a roughly constructed shelter. Tucked beneath a pile of leaves, you discover a tattered journal. Its pages are water-damaged, but you can make out entries detailing the island's strange phenomena, failed escape attempts, and mentions of "the island's guardians" and "reset cycles."
+
+What do you do?
+
+*   If you decide to take the journal and look for a more secure place to shelter and study it, turn to page 20.
+*   If you feel it's too risky to linger or disturb the campsite, and decide to leave it as is, continuing your search for water and better shelter, turn to page 5.

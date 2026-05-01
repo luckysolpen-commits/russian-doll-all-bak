@@ -1,0 +1,35 @@
+# piece.pdl — CHARA
+piece_id: chara_001
+version: 1.0
+type: player_character
+owner: player_chara
+
+dependencies:
+  - needs: avantasy_core_v1
+  - needs: dnd_5e_rules
+  - needs: tpmos_v03
+
+traits:
+  - ex_cia_training: +2 to Investigation and Insight checks
+  - paranoid_instincts: Advantage on Initiative rolls
+  - quick_witted: +2 to Deception when lying or bluffing
+  - classified_knowledge: Can attempt Intelligence checks to recognize government/corporate coverups in Avantasy lore
+
+backstory: >
+  Former CIA field operative who was pulled off a surveillance detail when the target
+  — a billionaire known only as "Anon" — vanished into a VR MMORPG called Avantasy.
+  Chara followed him in, only to discover that Avantasy wasn't just a game. The code
+  was too clean, the NPCs too aware, the economy too real. Someone built this world
+  with purpose. She's here to find out what. And she doesn't trust anyone — not the
+  DM, not the other players, and definitely not the guy in the mask who claims he
+  invented the place.
+
+relationships:
+  - sol-supreme: "Suspicious. Claims he invented this world? Prove it."
+  - iqabella: "Sweet kid. Maybe too sweet. But she heals, so she stays close."
+  - horli-qwin: "Chaotic. Unpredictable. Probably stealing from me. Respect."
+
+visual: >
+  Half-elf woman, mixed-race (Black/White), sharp features, dark hair pulled into
+  a tight bun. Wears fitted leather armor in matte black and grey. Eyes constantly
+  scanning. A faded CIA badge hangs from her belt — sentimental, not functional.

@@ -1,0 +1,51 @@
+# stats.txt — SOL-001 "Sol-Null"
+# Clone of Sol-Supreme | Artificer (Battle Smith) / Clone | Red-Headed
+
+level: 1
+class: Artificer / Battle Smith
+race: Clone (Custom Lineage DNA)
+
+STR: 13 (+1)
+DEX: 10 (+0)
+CON: 13 (+1)
+INT: 17 (+3)
+WIS: 11 (+0)
+CHA: 9 (-1)
+
+HP: 15/15
+AC: 15 (Chain Mail)
+Speed: 25ft
+
+Proficiency Bonus: +2
+Initiative: +0
+
+loyalty: 50
+time_debt: 500 BSR
+serial_number: SOL-001 (glowing on right wrist)
+hair: Red (same DNA batch)
+
+Saving Throws: CON +3, INT +5
+Skills:
+  - Arcana: +5
+  - Investigation: +5
+  - History: +2
+  - Perception: +2
+  - Medicine: +2
+  - Tinker's Tools: +5
+
+Abilities/Spells:
+  - Magical Tinkering
+  - Spellcasting (INT-based)
+  - Cantrips: Fire Bolt, Mending, Booming Blade
+  - 1st Level Spells: Shield, Cure Wounds, Heroism
+
+Special:
+  - Encrypted Architect Codes: Can access restricted areas but doesn't know why
+  - Clone Bond: Can share memories with other clones (risky but powerful)
+
+Inventory:
+  - Warhammer (doubles as arcane focus)
+  - Chain Mail
+  - Clone ID Card (SOL-001)
+  - 0 BSR
+  - Cramped room key

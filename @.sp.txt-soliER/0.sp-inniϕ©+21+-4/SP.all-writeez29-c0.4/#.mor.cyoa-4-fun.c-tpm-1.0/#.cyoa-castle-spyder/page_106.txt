@@ -1,0 +1,12 @@
+**Page 106: Interacting with the Clockwork**
+
+You tentatively touch the ticking device. The modern metal components seem to respond to your presence, and the ticking speeds up. The small compartment opens, revealing a slot that looks suspiciously like it's designed to hold a data drive.
+
+Hydration: 9/10 (Near water source)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 3/10 (The ticking device opened, revealing a slot)
+
+What do you do?
+
+*   If you have a data drive and try to insert it, turn to page 124.
+*   If you decide to leave the device and explore the rest of the chamber, turn to page 82.

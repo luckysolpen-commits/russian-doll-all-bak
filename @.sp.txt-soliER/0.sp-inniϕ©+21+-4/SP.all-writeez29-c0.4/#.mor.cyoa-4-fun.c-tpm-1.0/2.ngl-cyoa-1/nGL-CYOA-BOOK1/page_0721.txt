@@ -1,0 +1,4 @@
+You look for control panels near the FLEXTANK. You find a console, ostensibly for managing the exhibit's lighting and environmental simulations. However, a closer inspection reveals it has access to basic FLEXTANK status reports and diagnostics. You see a flickering section of the barrier highlighted, marked as "Maintenance Cycle - Unstable."
+
+*   Interact with the console to try and stabilize or open the flickering section. Turn to page 724.
+*   Study the status reports, looking for information on exits or other realities. Turn to page 725.

@@ -1,0 +1,320 @@
+# FFUTURE-REDO — MASTER PLAN (REVISED v3)
+## "Time Academy of the Time Dimension" — A Comfy Chinese Time-Fu Boarding School Experience
+
+---
+
+## THE VISION
+
+**Mother Tmojizu is a master storyteller.** She's not just a teacher — she's a **storyteller, world-builder, and den mother** to four chaotic ducklings. Her classroom isn't a room. It's an **entire imperial Chinese boarding school** floating in the Time Dimension.
+
+Think **a magical boarding school** but:
+- Instead of a normal school → **时间学院 (Shí Jiān Xué Yuàn) — The Time Academy**
+- Instead of Dumbledore → Mother Tmojizu (warm, witty, slightly terrifying when needed)
+- Instead of Quidditch → Time-Fu PE on temporal asteroid fields
+- Instead of Potions class → Pharma-Chem lab with real formulas
+- Instead of Care of Magical Creatures → Fuzzpet Training & Bonding
+- Instead of the Great Hall → Imperial dining hall with floating lanterns
+- Instead of dormitories → Imperial Chinese dorm rooms with silk screens and temporal heaters
+- Instead of Hogsmeade visits → Tours of the Land of Time (Lake of Echoes, Jade Pagoda, etc.)
+
+The students are **getting ready to play**. They're learning about the "board" — the world, the rules, the pieces. This is **pre-game training** but it's so fun and immersive that it's an adventure in itself.
+
+---
+
+## FORMAT: 3 SESSIONS, EACH ~30-45 MINUTES AUDIO (~500-600 LINES)
+
+| Session | Title | Approx Lines | Approx Audio | Focus |
+|---------|-------|--------------|--------------|-------|
+| **Session 1** | "Welcome to the Time Academy" | ~500-600 | ~30-45 min | Arrival, tour, Chinese fundamentals, snack time, first lab |
+| **Session 2** | "Elements, Fuzzpets & Stardustball" | ~500-600 | ~35-50 min | Temporal Elements, Fuzzpet bonding, Stardustball PE, pharma chemistry, lunch |
+| **Session 3** | "The Final Exam & Graduation" | ~500-600 | ~30-45 min | Integrated crisis, Chronoment building, final exam, dorm party, graduation |
+
+Each session moves through **multiple locations** — never stuck in one room.
+
+---
+
+## THE SETTING: 时间学院 — THE TIME ACADEMY
+
+### Campus Locations (each becomes a "scene"):
+
+| Location | Chinese | Description | Used In |
+|----------|---------|-------------|---------|
+| **Main Gate** | 大门, dà mén | Jade archway with temporal wards. Cherry blossoms fall upward. | Session 1 — Arrival |
+| **Headmistress's Office** | 校长室, xiào zhǎng shì | Mother Tmojizu's office. Floating scrolls, tea service, temporal globe. | Session 1 — Welcome |
+| **Time Dojo Classroom** | 时间道场教室, shí jiān dào chǎng jiào shì | Polished dark wood, brass hourglasses, temporal chalkboard. | Sessions 1-3 — Lessons |
+| **Pharma-Chem Lab** | 药学实验室, yào xué shí yàn shì | Glass beakers, temporal burners, poison cabinet (locked, obviously). | Session 2 — Lab |
+| **Fuzzpet Sanctuary** | 毛球宠物园, máo qiú chǒng wù yuán | Warm room with nesting cushions, temporal heating lamps, purring everywhere. | Session 2 — Bonding |
+| **Chronoment Workshop** | 时计工坊, shí jì gōng fāng | Workbenches, quartz crystals, jade casings, tools. Smells like ozone. | Session 3 — Building |
+| **Imperial Dining Hall** | 皇家餐厅, huáng jiā cān tīng | Floating lanterns, lazy susan tables, endless tea. Food appears via temporal summon. | Sessions 1-3 — Meals |
+| **Snack Pavilion** | 零食亭, líng shí tíng | Open-air pavilion on a temporal balcony. Steamed buns, bubble tea, temporal candy. | Session 1 — Snack time |
+| **Temporal Garden** | 时间花园, shí jiān huā yuán | Rose quartz paths, butterflies with light-wings, flowers that bloom and wilt in seconds. | Session 1 — Recess |
+| **PE Arena** | 体育场, tǐ yù chǎng | Colossal arena on a temporal asteroid. Conveyor belts, mirror rooms, trapdoor floors. | Session 2 — PE class |
+| **Celestial Library** | 天空图书馆, tiān kōng tú shū guǎn | Carved into a mountain. Stone dragons guard the entrance. Endless scrolls. | Session 2 — Research |
+| **Imperial Dormitories** | 帝国宿舍, dì guó sù shè | Silk-screened beds, temporal heaters, shared rooms. Students have late-night chats. | Session 3 — Evening |
+| **Lake of Echoes (field trip)** | 回声湖, huí shēng hú | Field trip destination. Shimmering water, Statue Samurai guardians. | Session 3 — Tour |
+
+---
+
+## THE CHARACTERS (FULL PERSONAS)
+
+### Mother Tmojizu (en-US-JennyNeural)
+**Role:** Headmistress, teacher, DM, den mother, Asian JK Rowling
+**Vibe:** Warm but terrifying. Makes the best tea. Knows everything. Calls students "ducklings." Gently but firmly herds them back on track when they derail. Drops lore bombs casually. Has a "teacher voice" that freezes time itself.
+**Catchphrases:** "Roll for it, ducklings." "That's not how temporal chemistry works, but I love the creativity." "Horli, put the temporal candy down." "CHARA, you can't investigate the headmistress."
+
+### CHARA (en-US-AriaNeural)
+**Stats:** INT 16, Investigation +7, Insight +6, Ex-CIA
+**Vibe:** The overprepared student. Takes meticulous notes. Tries to investigate everything. Paranoid but brilliant. References SBA loans and CIA ops in casual conversation. Sits in the front row. Corrects the teacher (politely). Secretly loves the school.
+**Arc:** Learns to relax and enjoy the experience. Stops treating everything like a threat assessment.
+
+### Sol-Supreme (en-US-GuyNeural)
+**Stats:** INT 18, Arcana +6, Bio-tech genius
+**Vibe:** The genius who explains everything in excruciating detail. Deep voice. Builds things during class. Answers questions nobody asked. Helps other students with chemistry. Has opinions on the temporal architecture of the ceiling.
+**Arc:** Learns to communicate complex ideas simply. Becomes the class tutor.
+
+### IQabella (en-US-AnaNeural)
+**Stats:** WIS 17, Medicine +5, Bubbly cyborg fem-maid
+**Vibe:** The heart of the class. Makes tea for everyone. Remembers everyone's allergies. First to notice a Fuzzball's purr is off. Gentle but firm. The one who says "actually, the mechanism is..." and saves the day.
+**Arc:** Becomes the class medic. Realizes her empathy is a superpower, not a weakness.
+
+### Horli Qwin (en-US-RogerNeural)
+**Stats:** CHA 17, Performance +7, Trap rapper / class clown
+**Vibe:** THE CLASS CLOWN. Raps vocabulary. Turns chemistry into bars. Asks ridiculous questions that accidentally lead to profound insights. Tries to bedazzle her Chronoment. Gets detention but everyone loves her. Secretly the most creative problem-solver.
+**Arc:** Channels her chaos into genuine mastery. Becomes the best Fuzzpet trainer because Fuzzballs love her energy.
+
+### 中文老师 (zh-CN-XiaoxiaoNeural)
+**Role:** Chinese language instructor. Appears when called by Mother Tmojizu. Speaks only Chinese (with pinyin). Patient but has zero tolerance for tone-deafness.
+**Vibe:** The strict but beloved language teacher. Makes students repeat until they get it right. Secretly proud of every student.
+
+---
+
+## SESSION 1: "WELCOME TO THE TIME ACADEMY"
+### ~60-80 minutes of audio
+
+**Scene 1: The Main Gate — Arrival**
+Mother Tmojizu greets the ducklings at the jade archway. Cherry blossoms fall upward. The temporal wards hum. She explains where they are and why they're here. Meta-temporal framing: "This school exists outside normal time. You can be here before your adventures, during them, or after. Time is flexible here."
+
+**Chinese taught:** 欢迎, 学校, 老师, 学生, 时间, 功夫, 大门, 樱花
+
+**Scene 2: Headmistress's Office — Welcome Tea**
+Mother Tmojizu's office. Floating scrolls. Temporal globe showing the Land of Time. She serves tea (IQabella approves the temperature). She explains the curriculum: Chinese, Chemistry, Time-Fu, Fuzzpets, Chronoments, Mental-Fu. The six disciplines.
+
+**Banter:** Horli tries to rap the curriculum. CHARA asks if the school is CIA-approved. Sol-Supreme analyzes the temporal globe's mechanics. IQabella compliments the tea.
+
+**Chinese taught:** 课堂, 学习, 练习, 茶, 好喝, 老师办公室
+
+**Scene 3: Campus Tour — The Grounds**
+Mother Tmojizu leads them through the campus. Each location gets a brief introduction:
+- Time Dojo Classroom (where lessons happen)
+- Pharma-Chem Lab (where things explode, safely)
+- Fuzzpet Sanctuary (where the purring is)
+- Chronoment Workshop (where things get built)
+- Imperial Dining Hall (where the food is)
+- Temporal Garden (where you chill)
+
+**Banter:** Horli tries to steal temporal candy from the Snack Pavilion. CHARA investigates the poison cabinet. Sol-Supreme is fascinated by the temporal heating system. IQabella pets every Fuzzball in the sanctuary.
+
+**Chinese taught:** 教室, 实验室, 花园, 餐厅, 宿舍, 图书馆, 体育场
+
+**Scene 4: Time Dojo Classroom — Chinese Fundamentals + Lingua-Fu**
+First real lesson. Mother Tmojizu teaches the four tones. Each tone linked to a temporal concept. 中文老师 drills pronunciation. Memory Palace technique introduced.
+
+**Banter:** Horli turns tones into a beat. CHARA maps tones to CIA phonetic alphabet. Sol-Supreme analyzes tone frequencies mathematically. IQabella links tones to tea steeping temperatures.
+
+**Chinese taught:** 40+ words — numbers, greetings, directions, elements, body parts, emotions, colors
+
+**Assignment:** Each student builds a 5-word memory palace room and teaches it to the class.
+
+**Scene 5: Snack Pavilion — Snack Time**
+Break time. Steamed buns, bubble tea, temporal candy. Casual conversation. Students practice Chinese while eating. Mother Tmojizu drops lore about the Land of Time.
+
+**Lore drops:** The Time Emperor. The Red Wax Time Police. The three artifacts. The Fuzzball prophecy. The Time Factory.
+
+**Chinese taught:** 好吃, 包子, 饺子, 茶, 甜, 饿, 吃, 喝
+
+**Scene 6: Pharma-Chem Lab — First Lab Session**
+Mother Tmojizu introduces basic chemistry through Fuzzball care. Periodic table as temporal signatures. Elements, compounds, reactions. Fuzzball biology.
+
+**Banter:** Sol-Supreme goes off on a tangent about quark composition. CHARA cross-references with CIA chemical weapons database. Horli names her Fuzzball "Sparky" and teaches it to high-five. IQabella diagnoses a Fuzzball's mild toxin by ear.
+
+**Chinese taught:** 元素, 化合物, 反应, 能量, 原子, 分子, 氢, 氧, 碳, 水
+
+**Assignment:** Mix the right compound to feed Fuzzballs. Wrong mixture = temporal hiccups.
+
+---
+
+## SESSION 2: "ELEMENTS, FUZZPETS & THE PHARMA LAB"
+### ~70-90 minutes of audio
+
+**Scene 1: Time Dojo Classroom — Temporal Elements + Chrono-Fu**
+Mother Tmojizu teaches the six element colors. Field Effect mechanics. Element levels 1-8. Students practice casting Elements with Chinese commands.
+
+**Banter:** Horli assigns each element a rap genre. CHARA creates a tactical Element chart. Sol-Supreme explains the physics of Field Effects. IQabella notes the healing applications.
+
+**Chinese taught:** 黄色, 红色, 绿色, 蓝色, 黑色, 白色, 火球, 水束, 地震, 龙卷风, 黑洞, 圣光
+
+**Quiz competition:** "Element Counter" — optimal Element choice for given Field Effects.
+
+**Scene 2: Imperial Dining Hall — Lunch Time**
+Lazy susan tables. Floating lanterns. Food appears via temporal summon. Students eat and practice Chinese. Mother Tmojizu tells stories about famous Time Academy alumni.
+
+**Lore drops:** The Keeper who built the school. The first Fuzzball bond. The Time Factory's origin. The Red Wax Time Police's true purpose.
+
+**Chinese taught:** 米饭, 面条, 菜, 肉, 蔬菜, 水果, 好吃, 饱, 谢谢
+
+**Scene 3: Fuzzpet Sanctuary — Fuzzpet Bonding + Fuzz-Fu**
+Every student gets a Fuzzball. Bonding ceremony. Seven core commands. Combat applications.
+
+**Banter:** Horli's Fuzzball immediately loves her and does tricks. CHARA's Fuzzball is suspicious of her (she's too CIA). Sol-Supreme's Fuzzball helps him calibrate instruments. IQabella's Fuzzball purrs at exactly 432 Hz on command.
+
+**Chinese taught:** 过来, 等着, 攻击, 保护, 治疗, 侦察, 连接, 毛球, 宠物, 呼噜
+
+**Assignment:** Bonding ceremony with Chinese incantation. Practice all 7 commands.
+
+**Scene 4: PE Arena — Stardustball (星尘球, xīng chén qiú)**
+The Time Academy's signature sport. Think Quidditch meets Fuzzball wrangling on hover-vacuum Dyson spheres.
+
+**The Game:** Each player rides a 1.2m hover-vacuum Dyson sphere (悬浮吸尘器球, xuán fú xī chén qì qiú) — a giant floating marble that hums at 432 Hz, steered by weight shift + Chronoment assist. Wild Fuzzballs (12-18) are released into the arena. Players must CATCH them using the right method for each temperament:
+
+| Temperament | Chinese | Catching Method | Skill |
+|-------------|---------|-----------------|-------|
+| Playful | 活泼的, huó pō de | CHARM — sweet talk, offer treats | CHA Persuasion |
+| Skittish | 胆小的, dǎn xiǎo de | STEALTH — sneak up from behind | DEX Stealth |
+| Aggressive | 好斗的, hào dòu de | THREATS — assert dominance, don't flinch | INT Intimidation |
+| Wise | 聪明的, cōng míng de | WISDOM — solve its riddle | WIS Insight |
+| Curious | 好奇的, hào qí de | DISTRACTION — drop something shiny | WIS Animal Handling |
+| Sleepy | 困倦的, kùn juàn de | PATIENCE — wait for it to wake up | WIS Medicine |
+
+Once caught, you THROW the Fuzzball through floating Temporal Rings (时间环, shí jiān huán) that drift around the arena. Matching color ring = 2pts. Opposite color ring = 3pts (but the ring repels). Any ring = 1pt.
+
+**Arena obstacles:** Mirror walls (镜子墙), temporal geysers (时间喷泉), conveyor belts (传送带), gravity wells (重力井), Fuzzball nests (毛球窝), candy dispensers (糖果机).
+
+**Banter:** Horli immediately does a barrel roll and gets a -2 foul before the match starts. She raps to a Playful Fuzzball — NAT 20, it jumps in her arms, but -1 for the rap penalty. "WORTH IT." CHARA calculates gravity well slingshot trajectories mid-ride. Sol-Supreme solves a Wise Fuzzball's chemistry riddle (C8H9NO2 — acetaminophen). IQabella gets a NAT 20 on a Sleepy Fuzzball by preparing a warm treat at exactly 432 Hz.
+
+**Chinese taught:** 时涡球/星尘球, 抓住, 扔, 得分, 队, 比赛, 裁判, 犯规, 惩罚, 胜利, 失败, 活泼的, 胆小的, 好斗的, 聪明的, 好奇的, 困倦的, 镜子墙, 时间喷泉, 传送带, 重力井, 毛球窝, 糖果机, 热身, 释放, 上半场, 下半场, 中场休息, 终场哨
+
+**Scene 5: Pharma-Chem Lab — Pharma Chemistry + Pharma-Fu**
+IQabella takes the lead. Medicines, toxins, antidotes. Real chemical formulas. Fuzzball purr frequency diagnosis.
+
+**Banter:** CHARA recognizes cyanide from CIA training. Sol-Supreme explains molecular mechanisms. Horli turns the periodic table into a diss track. IQabella calmly synthesizes the correct antidote while everyone panics.
+
+**Chinese taught:** 止痛药, 抗生素, 疫苗, 解药, 毒素, 兴奋剂, 药, 医生, 健康, 生病
+
+**Assignment:** Diagnose poisoned Fuzzballs by purr frequency. Synthesize antidotes. Administer with Chronoment assist.
+
+**Scene 6: Celestial Library — Research Time**
+Quiet study period. Students research topics of interest. Mother Tmojizu circulates and helps. 中文老师 holds office hours.
+
+**Banter:** CHARA investigates the school's founding documents. Sol-Supreme reads advanced temporal mechanics. Horli finds the "forbidden section" (it's just the romance novels). IQabella researches Fuzzball veterinary medicine.
+
+**Chinese taught:** 书, 读, 知识, 研究, 历史, 找到, 明白
+
+---
+
+## SESSION 3: "THE FINAL EXAM & GRADUATION"
+### ~60-80 minutes of audio
+
+**Scene 1: Chronoment Workshop — Chronoment Building + Chrono-Fu**
+Each student builds a Chronoment from scratch. Quartz core, jade housing, temporal dial, Fuzzball fur strap. Activation phrases.
+
+**Banter:** Horli bedazzles hers (still works perfectly). CHARA calibrates hers to CIA precision standards. Sol-Supreme builds a prototype with extra features. IQabella adds a healing function.
+
+**Chinese taught:** 时间启动, 时间停止, 时间加速, 时间减速, 时间逆转, 时间测量, 时间盾, 时间共振
+
+**Assignment:** Build, calibrate, and activate a Chronoment.
+
+**Scene 2: Time Dojo Classroom — Integrated Mental-Fu Lab**
+Simulated crisis. Everything combined. The Mental-Fu Combat Flow: Assess → Plan → Equip → Command → Execute → Resolve.
+
+**Scenario:** Temporal storm + poisoned Fuzzballs + malfunctioning Chronoments + simulated Imperial Guards breaching.
+
+**Banter:** Pure chaos. Horli raps commands. CHARA runs a tactical ops center. Sol-Supreme jury-rigs a Chronoment amplifier. IQabella triages Fuzzballs while explaining the pharmacology.
+
+**Chinese taught:** All vocabulary from Sessions 1-2, used in context.
+
+**Scene 3: Time Dojo Classroom — The Final Exam**
+Four sections: Lingua-Fu (25), Chem-Fu + Pharma-Fu (25), Chrono-Fu (25), Fuzz-Fu (25).
+
+**Scoring:**
+- IQabella: 90/100 (aces pharma diagnosis, strong everywhere)
+- Sol-Supreme: 88/100 (aces Chronoments, strong in chem)
+- CHARA: 85/100 (aces chem/pharma, loses points for overthinking)
+- Horli Qwin: 82/100 (aces Fuzzpets, creative solutions everywhere, loses points for bedazzling the exam paper)
+
+**Scene 4: Imperial Dormitories — Evening Party**
+Post-exam celebration. Silk-screened rooms. Temporal heaters. Students share what they learned. Late-night conversations. Mother Tmojizu visits with tea and final words.
+
+**Banter:** Horli performs a rap summarizing everything they learned. CHARA admits she actually had fun. Sol-Supreme says the school's temporal architecture is "adequate" (his version of glowing praise). IQabella says she'll miss the Fuzzballs.
+
+**Lore drops:** Mother Tmojizu reveals the school will always be here for them — in meta-time, accessible at any point. When they need to review Chinese before a mission. When they need to remember an antidote formula mid-battle. When they need to remember who they are.
+
+**Chinese taught:** 加油, 再见, 我们是一家人, 精神连接, 永远, 感谢, 毕业
+
+**Scene 5: Graduation Ceremony — The Main Gate**
+Mother Tmojizu presents each student with their diploma and Mental-Fu discipline ranking. The cherry blossoms fall upward one more time. The ducklings step through the gate — ready for whatever comes next.
+
+**Final words:** "You're not just students. You're Time-Fu practitioners. Chinese speakers. Chemists. Fuzzpet trainers. Mental-Fu masters. And you're my ducklings. Always. 加油."
+
+---
+
+## VOICE MAP
+
+| Speaker | Voice | Role |
+|---------|-------|------|
+| Mother Tmojizu | en-US-JennyNeural | Headmistress / Teacher / DM / Den Mother |
+| 中文老师 | zh-CN-XiaoxiaoNeural | Chinese language instructor |
+| CHARA | en-US-AriaNeural | Ex-CIA student (INT 16, Investigation +7) |
+| Sol-Supreme | en-US-GuyNeural | Bio-tech genius (INT 18, Arcana +6) |
+| IQabella | en-US-AnaNeural | Cyborg medic (WIS 17, Medicine +5) |
+| Horli Qwin | en-US-RogerNeural | Trap rapper / class clown (CHA 17, Performance +7) |
+
+---
+
+## TTS FORMAT
+
+`, eng, word, ... tx, 中文, pinyin, ... xt,`
+
+---
+
+## DELIVERABLES
+
+| File | Description | Est. Lines | Est. Audio |
+|------|-------------|------------|------------|
+| `ff-sesh01-welcome-time-academy.txt` | Session 1 script | ~500-600 | ~30-45 min |
+| `ff-sesh02-elements-fuzzpets-stardustball.txt` | Session 2 script | ~500-600 | ~35-50 min |
+| `ff-sesh03-exam-graduation.txt` | Session 3 script | ~500-600 | ~30-45 min |
+| **Total** | **3 sessions** | **~1,500-1,800 lines** | **~95-140 min** |
+
+Estimated total audio: **~120-200 MB**
+
+---
+
+## WORKFLOW
+
+1. Read `mental-fu.txt` for system reference
+2. Write Session 1 script (multiple locations, banter, snack time, first lab)
+3. Write Session 2 script (Elements, Fuzzpets, Pharma Lab, lunch, PE, library)
+4. Write Session 3 script (Chronoment building, integrated crisis, exam, dorm party, graduation)
+5. Verify all Chinese vocabulary uses `, eng, ... tx, ... xt,` format
+6. Verify all chemical formulas match mental-fu.txt
+7. Verify all Temporal Elements match mental-fu.txt
+8. Verify all Fuzzball purr frequencies match mental-fu.txt
+9. Verify character dialogue matches personas
+10. Run batch TTS conversion
+11. Verify MP3 output
+
+---
+
+## THE VIBE
+
+This is **comfy**. It's **fun**. It's **immersive**. It's **lore-rich**. It's Mother Tmojizu being the best teacher in the multiverse while four chaotic ducklings learn Chinese, chemistry, and Time-Fu between snack breaks and dorm parties.
+
+This is a magical academy meets Bill Nye meets a Chinese language school meets a D&D character creation session — all wrapped in a warm blanket with tea and Fuzzballs purring in the background.
+
+**Mother Tmojizu is a master storyteller if she was a Chinese Time-Fu grandmaster who ran a boarding school for adorable disasters.**
+
+---
+
+## AWAITING APPROVAL
+
+Reply "approved" and I'll start writing Session 1: "Welcome to the Time Academy."

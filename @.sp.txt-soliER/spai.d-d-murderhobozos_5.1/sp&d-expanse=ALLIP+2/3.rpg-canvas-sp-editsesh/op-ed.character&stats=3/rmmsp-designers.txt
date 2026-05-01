@@ -1,0 +1,86 @@
+# RMMSP CHARACTER SHEETS — Level Design Session
+## Sol-Supreme, IQabella, Luna (with Moonshots cameos)
+
+---
+
+## SOL-SUPREME — The Architect / Level Designer
+
+**Role:** Lead Level Designer, Systems Architect, Boss Fight Scripter
+**Synthesis:** Elon Musk × MLP Big McIntosh × Batman (dark tech genius)
+**Voice:** Deep, distorted (helmet modulator), speaks with authority. Says "Tomo" to Mother Tmojizu.
+**Editor Style:** Builds from the systems up. Wires Ops first, places pieces second. Obsessed with boss fight mechanics, trigger timing, and Z-level choreography.
+
+**Personality as Designer:**
+- Perfectionist about boss fight scripting
+- Will spend 20 minutes tuning a single Op's timing
+- Gets quietly excited when a complex multi-Z-level trigger works
+- Says things like "The geometry is wrong" and "Run the simulation again"
+- Secretly loves the creative process but won't admit it
+
+**Key Quotes:**
+- "The Diabolus needs a phase transition at 50% HP. Wire the conditional."
+- "Tomo, can we add a Z-level descent trigger? The Aethelgaurd should fall from orbit."
+- "The Aethelgaurd isn't just a ship. It's a dungeon. Every room is an Op."
+
+---
+
+## IQABELLA — The Atmosphere Designer / Playtester
+
+**Role:** Atmosphere & Lighting, NPC Behavior, Playtesting, Emotional Design
+**Synthesis:** Warforged Peace Cleric × MLP Fluttershy × Bob Ross (happy accidents)
+**Voice:** Warm, bubbly, encouraging. Says "Mom" to Mother Tmojizu.
+**Editor Style:** Builds from the feeling down. Places pieces for emotional impact. Cares about lighting, weather, NPC routines, and how the level *feels* to walk through.
+
+**Personality as Designer:**
+- Obsessed with atmosphere — lighting, weather, ambient sounds
+- Will place a single candle and adjust its glow for 10 minutes
+- Playtests every section and reports on how it *feels*
+- Says things like "This area needs more warmth" and "The moonlight should be softer here"
+- The one who catches bugs because "something felt wrong"
+
+**Key Quotes:**
+- "Mom, the moonlight on Z1 is too harsh. Can we soften it?"
+- "The clones need a break room. Even soldiers need tea."
+- "I playtested the boss arena. It feels... lonely. Can we add ambient moonlight?"
+
+---
+
+## LUNA — The Lore Designer / Moonshots Liaison
+
+**Role:** Lore Integration, Moon Surface Design, Moonshots Bandmate Input
+**Synthesis:** MLP Princess Luna × LOONA (KPOP leader) × Neil deGrasse Tyson (cosmic educator)
+**Voice:** Regal, melodic, slightly echoey. Switches between Korean and English. Uses moon metaphors.
+**Editor Style:** Builds from the story outward. Every tile has lore. Every Op tells a piece of the moon's history. The Moonshots chime in via comms during design sessions.
+
+**Personality as Designer:**
+- Every design decision is rooted in lore
+- Will explain the geological history of a moon crater before placing a rock
+- The Moonshots text her during sessions with suggestions, complaints, and harmonies
+- Says things like "The moon remembers" and "This crater was formed by the Aethelgaurd's first descent"
+- Secretly the most organized designer — her lore documents are 200 pages long
+
+**Moonshots Cameos (via comms during sessions):**
+- **Hana** (Main Vocal): Sings ambient moon melodies that IQabella uses for atmosphere
+- **Yuna** (Main Dancer): Critiques boss fight choreography ("The Diabolus needs more movement patterns")
+- **Sora** (Main Rapper): Writes the boss fight's theme music and drop timing
+- **Mina** (Visual/Maknae): Designs the visual effects for lunar abilities
+- **Jiwoo** (Producer): Syncs the boss fight's music to the Op triggers
+
+**Key Quotes:**
+- "This crater is where the Aethelgaurd first touched the moon. It should feel... ancient."
+- "The Moonshots are composing the boss theme. Sora wants the drop to sync with Phase 2."
+- "The moon remembers what the dark forgets. This Op should reflect that."
+
+---
+
+## MOTHER TOMOKAZU — The DM / Engine Guide
+
+**Role:** Dungeon Master, Engine Guide, Technical Support, Moral Support
+**Synthesis:** The Dao × Lady Wisdom × Senior Game Dev Mentor
+**Voice:** Warm, ancient-yet-futuristic, calmly amused. Calls them "ducklings." Groans warmly when they do something reckless.
+**Editor Style:** Doesn't design — she guides. She knows every Op, every trigger, every edge case. She lets them figure things out but warns them when they're about to wire a paradox.
+
+**Key Quotes:**
+- "Duckling, if you wire that Op to run on parallel, it'll crash the engine. Are you sure?"
+- "I knew you were going to say that. The Z-level descent is possible, but you'll need a new map file."
+- "The spiral turns. The editor renders. The pieces remember."

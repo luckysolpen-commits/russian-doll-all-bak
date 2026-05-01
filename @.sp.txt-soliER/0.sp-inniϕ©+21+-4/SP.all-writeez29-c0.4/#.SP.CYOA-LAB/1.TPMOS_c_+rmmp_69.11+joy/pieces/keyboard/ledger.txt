@@ -1,0 +1,16 @@
+[2026-04-16 21:53:28] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 21:53:28] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 21:53:29] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 21:53:29] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 21:53:31] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 21:53:31] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 21:53:31] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 21:53:32] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 21:53:32] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 21:56:30] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 21:56:31] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 21:56:31] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 21:56:31] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 21:56:34] KeyCaptured: 13 ('?') | Source: keyboard_linux
+[2026-04-16 21:56:43] KeyCaptured: 1003 ('?') | Source: keyboard_linux
+[2026-04-16 21:56:44] KeyCaptured: 13 ('?') | Source: keyboard_linux

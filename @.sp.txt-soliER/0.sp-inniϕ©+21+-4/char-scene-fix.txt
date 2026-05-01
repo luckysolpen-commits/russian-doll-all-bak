@@ -1,0 +1,49 @@
+# Instruction for Screenplay Formatting Fix (CHAR.A.NON)
+
+## Objective
+The goal is to batch-fix the formatting of screenplay scene files in the `CHAR.A.NON` project to ensure they are compatible with the TTS (Text-to-Speech) converter. Currently, many files (like `scene_10_journey_to_langley.txt`) are failing because they lack valid "segments" (properly tagged speaker and dialogue blocks).
+
+## Target Directory
+- `SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON/` (Search recursively for all `.txt` files starting with `scene_`)
+
+## Reference Working Format
+A working file (e.g., `SP.all-writeez28-c0.3/1.ii.geminii]2part]a0/1.GEMINI_PART_1-scenes.tarantino/scene_1_...txt`) follows this structure:
+
+1.  **Bold Headers**: Scene titles and sluglines should be wrapped in `**`.
+    Example: `**Scene 1**`, `**INT. NEXUS CONTROL ROOM - DAY**`
+2.  **Speaker Tags**: Character names must be wrapped in `<center>` tags on their own line.
+    Example: `<center>LUCKY</center>`
+3.  **Dialogue Prefix**: All dialogue must be prefixed with `> `.
+    Example: `> It's not enough. We cut the head off the snake.`
+4.  **Narrator Tags**: Narrative or action blocks that should be read aloud must also be assigned a speaker, typically `<center>Narrator</center>` or `<center>Chinese Narrator</center>` (check `voice_map.txt` for valid names). If a block has no speaker, it is currently ignored by the converter.
+
+## Tasks for the Agent
+1.  **Identify Narrative-Only Files**: Files like `scene_10_journey_to_langley.txt` that have no `<center>` tags currently result in "0 valid segments". These must be updated so that the action text is prefixed with a Narrator tag.
+2.  **Standardize Sluglines**: Ensure all sluglines (starting with `INT.` or `EXT.`) are bolded with `**`.
+3.  **Fix Dialogue Blocks**: If a file has dialogue that is not using the `<center>NAME</center>\n> Text` format, convert it.
+4.  **Maintain Consistency**: Ensure the character names used in `<center>` tags match those in the `voice_map.txt` (e.g., `CHARA`, `GIANA`, `ANON`, `Lucky`, etc.).
+
+## Example Transformation
+
+**Before (`scene_10_journey_to_langley.txt`):**
+```
+EXT. HELICOPTER / INT. PLANE - DAY
+
+The helicopter slices through the morning sky, leaving Mothra Base a distant speck on the horizon.
+```
+
+**After (Standardized):**
+```
+**EXT. HELICOPTER / INT. PLANE - DAY**
+
+<center>Narrator</center>
+> The helicopter slices through the morning sky, leaving Mothra Base a distant speck on the horizon.
+```
+
+## Action Summary
+- Recursively process `CHAR.A.NON` scene files.
+- Apply bolding to headers.
+- Wrap speakers in `<center>`.
+- Prefix spoken text with `> `.
+- Ensure narrative blocks are tagged so they aren't skipped.
+- Do not modify non-scene files or files that are already correctly formatted (some `CHAR.A.NON` files may already have partial formatting).

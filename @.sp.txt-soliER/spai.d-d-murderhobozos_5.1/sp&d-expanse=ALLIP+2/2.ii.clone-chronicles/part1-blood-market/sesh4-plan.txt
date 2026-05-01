@@ -1,0 +1,50 @@
+# PART 1 — SESSION 4: "THE SERIAL SHOP"
+## Clone Chronicles — Session 4 of 10
+### BSR: 500 → 1,000 | Status: Illegal dealings, police risk, moral choices
+
+---
+
+## SESSION OVERVIEW
+
+Scratch's Serial Shop is open. He removes serial numbers — the mark of clone ownership. It's illegal. The police are watching. The clones must decide: pay the premium and risk arrest, or keep their numbers and remain property.
+
+## KEY BEATS
+
+1. **Discover Scratch's Shop** — Hidden alley, paranoid gnome, premium prices. "I don't ask questions. I don't answer them either."
+2. **The Decision** — Each clone decides: remove the serial number or keep it?
+3. **The Procedure** — DEX (Sleight of Hand) to avoid police detection during the removal.
+4. **Police Risk** — Officer Krell patrols the area. Clones must hide or bluff their way through.
+5. **End of Day 4** — Earnings: 500-1,000 BSR each. Hook for Session 5.
+
+## SERIAL REMOVAL MECHANICS
+
+- **Cost:** 300 BSR per removal
+- **Risk:** Police detection (DEX save or arrested)
+- **Reward:** No serial number = no tracking, no ownership, but also no clone network access
+- **Moral Choice:** Some clones may choose to keep their numbers — a statement of identity
+
+**Officer Krell's Patrol:** If caught, clones can:
+- **Bluff** (CHA Deception): "We're just shopping."
+- **Bribe** (pay 100 BSR): Krell looks the other way.
+- **Run** (DEX Acrobatics): Escape through the market.
+- **Fight** (combat): Dangerous. Krell has backup.
+
+## COMPLICATION (d6)
+| Roll | Complication |
+|------|-------------|
+| 1 | Police raid — Scratch's shop is busted. Clones must flee. |
+| 2 | A clone's removal goes wrong — partial number, visible scar |
+| 3 | Officer Krell recognizes one of the clones from a previous encounter |
+| 4 | Scratch offers a group discount — remove all four for 1,000 BSR total |
+| 5 | The House offers to pay for the removals — but wants a favor in return |
+| 6 | A clone chooses to keep their number — "It's mine. I earned it." |
+
+## END STATE
+- Each clone has 500-1,000 BSR
+- Some may have removed their serial numbers
+- Police are aware of the clones
+- Hook: "The Underground Xirqus is hosting a social event tonight. Reputation is currency."
+
+---
+
+**ϕ**

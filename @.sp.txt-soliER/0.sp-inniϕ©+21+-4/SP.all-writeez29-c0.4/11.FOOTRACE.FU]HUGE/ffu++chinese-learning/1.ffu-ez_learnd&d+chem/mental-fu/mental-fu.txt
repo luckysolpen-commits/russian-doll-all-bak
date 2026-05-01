@@ -1,0 +1,444 @@
+# MENTAL-FU — The Complete System
+## Temporal Elements × Real Chemistry × Time-Fu × Fuzzball Science
+
+---
+
+## PART 1: THE PERIODIC TABLE AS TEMPORAL BUILDING BLOCKS
+
+Every element is a **temporal construct**. In the Land of Time, atoms aren't just physical — they're **frozen time patterns**. Each element has a **temporal signature** that determines how it interacts with Time-Fu, Fuzzballs, and Chronoments.
+
+### The Temporal Element Matrix
+
+Each element is defined by **5 temporal coordinates**:
+
+| Column | Meaning |
+|--------|---------|
+| **Protons** | Physical atomic number — the element's identity |
+| **Neutrons** | Temporal mass — how much "time weight" the element carries |
+| **Electrons** | Temporal charge — how the element interacts with temporal energy |
+| **Time Stability** | How resistant the element is to temporal manipulation (1-5 scale, 5 = most stable) |
+| **Chrono Resonance** | How strongly the element resonates with chronoment particles (1-6 scale, 6 = strongest) |
+
+### Subatomic Particles (Temporal Level)
+
+| Particle | Protons | Neutrons | Electrons | Time Stability | Chrono Resonance |
+|----------|---------|----------|-----------|----------------|-------------------|
+| Up Quark | -1 | -1 | -1 | -1 | -1 |
+| Down Quark | -1 | -1 | -1 | -1 | -1 |
+| Electron | 0 | 0 | 1 | -1 | -1 |
+| Pair Up Quarks | -1 | -1 | -1 | 0 | 0 |
+| Pair Down Quarks | -1 | -1 | -1 | 1 | 1 |
+| **Proton** | 1 | 0 | 0 | 3 | 1 |
+| **Neutron** | 0 | 1 | 0 | 0 | 4 |
+
+### Full Periodic Table (Temporal Signatures)
+
+| Element | Protons | Neutrons | Electrons | Time Stability | Chrono Resonance | Chinese | Pinyin |
+|---------|---------|----------|-----------|----------------|-------------------|---------|--------|
+| Hydrogen | 1 | 0 | 1 | 5 | 2 | 氢 | qīng |
+| Helium | 2 | 2 | 2 | 5 | 6 | 氦 | hài |
+| Lithium | 3 | 4 | 3 | 5 | 6 | 锂 | lǐ |
+| Beryllium | 4 | 5 | 4 | 5 | 6 | 铍 | pí |
+| Boron | 5 | 6 | 5 | 5 | 6 | 硼 | péng |
+| Carbon | 6 | 6 | 6 | 5 | 6 | 碳 | tàn |
+| Nitrogen | 7 | 7 | 7 | 5 | 6 | 氮 | dàn |
+| Oxygen | 8 | 8 | 8 | 5 | 6 | 氧 | yǎng |
+| Fluorine | 9 | 10 | 9 | 5 | 6 | 氟 | fú |
+| Neon | 10 | 10 | 10 | 5 | 6 | 氖 | nǎi |
+| Sodium | 11 | 12 | 11 | 5 | 6 | 钠 | nà |
+| Magnesium | 12 | 12 | 12 | 5 | 6 | 镁 | měi |
+| Aluminum | 13 | 14 | 13 | 5 | 6 | 铝 | lǚ |
+| Silicon | 14 | 14 | 14 | 5 | 6 | 硅 | guī |
+| Phosphorus | 15 | 16 | 15 | 5 | 6 | 磷 | lín |
+| Sulfur | 16 | 16 | 16 | 5 | 6 | 硫 | liú |
+| Chlorine | 17 | 18 | 17 | 5 | 6 | 氯 | lǜ |
+| Argon | 18 | 22 | 18 | 5 | 6 | 氩 | yà |
+| Potassium | 19 | 20 | 19 | 5 | 6 | 钾 | jiǎ |
+| Calcium | 20 | 20 | 20 | 5 | 6 | 钙 | gài |
+| Iron | 26 | 30 | 26 | 5 | 6 | 铁 | tiě |
+| Copper | 29 | 34 | 29 | 5 | 6 | 铜 | tóng |
+| Zinc | 30 | 35 | 30 | 5 | 6 | 锌 | xīn |
+| Silver | 47 | 61 | 47 | 5 | 6 | 银 | yín |
+| Gold | 79 | 118 | 79 | 5 | 6 | 金 | jīn |
+| Mercury | 80 | 121 | 80 | 5 | 6 | 汞 | gǒng |
+| Lead | 82 | 125 | 82 | 5 | 6 | 铅 | qiān |
+| Uranium | 92 | 146 | 92 | 5 | 6 | 铀 | yóu |
+
+### Key Molecules (Temporal Signatures)
+
+| Molecule | Protons | Neutrons | Electrons | Time Stability | Chrono Resonance | Chinese | Pinyin | Formula |
+|----------|---------|----------|-----------|----------------|-------------------|---------|--------|---------|
+| Hydrogen Gas | 2 | 0 | 2 | 7 | 7 | 氢气 | qīng qì | H2 |
+| Oxygen Gas | 16 | 16 | 16 | 14 | 14 | 氧气 | yǎng qì | O2 |
+| Water | 10 | 8 | 10 | 121 | 14 | 水 | shuǐ | H2O |
+| Methane | 10 | 6 | 10 | 12 | 121 | 甲烷 | jiǎ wán | CH4 |
+| Carbon Dioxide | 22 | 22 | 22 | 12 | 122 | 二氧化碳 | èr yǎng huà tàn | CO2 |
+
+---
+
+## PART 2: TEMPORAL ELEMENT SYSTEM — ADAPTED FOR TIME-FU
+
+The **Temporal Element system** is the combat framework of the Land of Time. Six colors. Six temporal energies. Each element is a **Time-Fu technique** that channels a specific type of temporal energy.
+
+### The Six Element Colors
+
+| Color | Chinese | Attributes | Opposite | Temporal Meaning |
+|-------|---------|------------|----------|------------------|
+| 🟡 Yellow | 黄色, huáng sè | Earth & Electricity | 🟢 Green | **Temporal grounding** — stabilizes time flow, creates temporal anchors |
+| 🔴 Red | 红色, hóng sè | Fire & Magma | 🔵 Blue | **Temporal acceleration** — speeds up time locally, creates temporal friction |
+| 🟢 Green | 绿色, lǜ sè | Nature & Wind | 🟡 Yellow | **Temporal growth** — accelerates biological processes, creates temporal life force |
+| 🔵 Blue | 蓝色, lán sè | Water & Ice | 🔴 Red | **Temporal deceleration** — slows time locally, creates temporal stasis |
+| ⚫ Black | 黑色, hēi sè | Shadow & Gravity | ⚪ White | **Temporal collapse** — compresses time, creates temporal singularities |
+| ⚪ White | 白色, bái sè | Light & Holy | ⚫ Black | **Temporal expansion** — stretches time, creates temporal healing fields |
+
+### Element Levels (LV 1-8)
+
+Each Element has a **level** (1-8). Higher level = more powerful but costs more temporal energy to cast.
+
+| Level | Chinese | Temporal Cost | Effect |
+|-------|---------|---------------|--------|
+| 1 | 一级, yī jí | Low | Basic attack/heal — single target, minimal temporal distortion |
+| 2 | 二级, èr jí | Low-Med | Slightly stronger, may affect status effects |
+| 3 | 三级, sān jí | Medium | Mid-tier attack, can seal opposing elements |
+| 4 | 四级, sì jí | Medium-High | Strong attack or significant buff/debuff |
+| 5 | 五级, wǔ jí | High | Area attack or field effect change |
+| 6 | 六级, liù jí | Very High | Devastating area attack or powerful support |
+| 7 | 七级, qī jí | Extreme | Summon — requires full Field Effect match |
+| 8 | 八级, bā jí | Maximum | Ultimate Summon — requires full Field Effect match |
+
+### Element Types
+
+| Type | Chinese | Description |
+|------|---------|-------------|
+| Attack | 攻击, gōng jī | Damages enemies using temporal energy |
+| Healing | 治疗, zhì liáo | Restores HP or removes status effects |
+| Support | 辅助, fǔ zhù | Buffs allies or debuffs enemies |
+| Summon | 召唤, zhào huàn | Summons a temporal entity (LV 7-8 only) |
+| Trap | 陷阱, xiàn jǐng | Sets a trap to "catch" enemy elements |
+
+### Field Effect System
+
+The **Field Effect** (场效应, chǎng xiào yìng) tracks the last 3 Elements cast. It's displayed as 3 colored slots.
+
+| Field State | Effect |
+|-------------|--------|
+| All same color | Elements of that color deal **2× damage**. Opposing color deals **0.5× damage**. |
+| Mixed colors | No bonus. Neutral field. |
+| Summon condition | A Summon can ONLY be cast when the Field Effect is **all one color matching the Summon's color**. |
+
+### Key Elements by Color (Time-Fu Adapted)
+
+#### 🟡 YELLOW ELEMENTS (Earth & Electricity — Temporal Grounding)
+
+| Element | LV | Chinese | Description | Time-Fu Application |
+|---------|----|---------|-------------|---------------------|
+| Uplift | 1 |  uplift, 石块升起 | Drops stone on foe | Create temporal earth anchor |
+| ElectroJolt | 2 | 电击, diàn jī | Shocks with electricity | Temporal lightning strike |
+| Earthquake | 5 | 地震, dì zhèn | Crushes foes with stone pillars | Temporal seismic wave |
+| ThundaStorm | 6 | 雷暴, léi bào | Brings down thunderbolts | Temporal storm summon |
+| Brace | 2 | 支撑, zhī chēng | Heals sprain/yellow status | Temporal stabilization |
+| Capsule | 3 | 胶囊, jiāo náng | Restores 80 HP | Temporal healing capsule |
+| HiRes | 4 | 高防御, gāo fáng yù | Increases defense | Temporal shield reinforcement |
+| Golem (Summon) | 7 | 石巨人, shí jù rén | Earth giant stomps foes | Temporal earth elemental summon |
+| ThundaSnake (Summon) | 8 | 雷蛇, léi shé | Electric serpent zaps foes | Temporal lightning elemental |
+
+#### 🔴 RED ELEMENTS (Fire — Temporal Acceleration)
+
+| Element | LV | Chinese | Description | Time-Fu Application |
+|---------|----|---------|-------------|---------------------|
+| Fireball | 1 | 火球, huǒ qiú | Hurls flame spheres | Temporal fire projection |
+| MagmaBomb | 2 | 岩浆弹, yán jiāng dàn | Launches fireballs at all foes | Temporal magma burst |
+| FirePillar | 3 | 火柱, huǒ zhù | Burns in pillar of flames | Temporal fire column |
+| Inferno | 5 | 地狱火, dì yù huǒ | Heats air to burning | Temporal heat wave |
+| Tablet | 1 | 药片, yào piàn | Restores 30 HP | Temporal energy tablet |
+| Ointment | 2 | 药膏, yào gāo | Heals burns/red status | Temporal burn treatment |
+| Strengthen | 4 | 强化, qiáng huà | Increases attack power | Temporal power boost |
+| RedWolf (Summon) | 7 | 火狼, huǒ láng | Fire wolf creates sea of flame | Temporal fire wolf summon |
+| Salamander (Summon) | 8 | 火蜥蜴, huǒ xī yì | Incinerates foes | Temporal fire dragon summon |
+
+#### 🟢 GREEN ELEMENTS (Nature & Wind — Temporal Growth)
+
+| Element | LV | Chinese | Description | Time-Fu Application |
+|---------|----|---------|-------------|---------------------|
+| Bushwhacker | 1 | 灌木斩, guàn mù zhǎn | Slices with whirling leaves | Temporal wind blade |
+| AeroSaucer | 2 | 风刃, fēng rèn | Air blades slice foe | Temporal air cutter |
+| Carnivore | 5 | 食人花, shí rén huā | Venus flytrap devours foes | Temporal plant summon |
+| Tornado | 6 | 龙卷风, lóng juǎn fēng | Cyclone batters foes | Temporal storm |
+| Heal | 2 | 治疗, zhì liáo | Restores small HP | Temporal healing breeze |
+| Antidote | 2 | 解毒药, jiě dú yào | Heals poison/green status | Temporal toxin neutralizer |
+| HealAll | 4 | 群疗, qún liáo | Restores medium HP to all | Temporal healing field |
+| Sonja (Summon) | 7 | 森林妖精, sēn lín yāo jing | Forest dryad with poison dust | Temporal nature spirit |
+| Genie (Summon) | 8 | 风精灵, fēng jīng líng | Wind djinn blows foes away | Temporal wind elemental |
+
+#### 🔵 BLUE ELEMENTS (Water & Ice — Temporal Deceleration)
+
+| Element | LV | Chinese | Description | Time-Fu Application |
+|---------|----|---------|-------------|---------------------|
+| AquaBeam | 1 | 水束, shuǐ shù | Blasts with water stream | Temporal water jet |
+| IceLance | 2 | 冰枪, bīng qiāng | Hurls icicle spear | Temporal ice projectile |
+| AquaBall | 3 | 水球, shuǐ qiú | Hurls water sphere | Temporal water orb |
+| IceBlast | 4 | 冰爆, bīng bào | Freezes foe in ice cage | Temporal freeze |
+| Deluge | 5 | 洪水, hóng shuǐ | Drowns in ice-cold waters | Temporal flood |
+| Iceberg | 6 | 冰山, bīng shān | Hails ice chunks on foes | Temporal ice storm |
+| Cure | 1 | 治愈, zhì yù | Restores small HP | Temporal water healing |
+| Medicine | 2 | 药, yào | Heals flu/blue status | Temporal medicine |
+| CurePlus | 3 | 强治愈, qiáng zhì yù | Restores medium HP | Temporal enhanced healing |
+| FrogPrince (Summon) | 7 | 青蛙王子, qīng wā wáng zǐ | Water attack summon | Temporal water spirit |
+| BlueWhale (Summon) | 8 | 蓝鲸, lán jīng | Neptune's tsunami | Temporal ocean summon |
+
+#### ⚫ BLACK ELEMENTS (Shadow & Gravity — Temporal Collapse)
+
+| Element | LV | Chinese | Description | Time-Fu Application |
+|---------|----|---------|-------------|---------------------|
+| GravityBlow | 1 | 重力击, zhòng lì jī | Blows away with gravity | Temporal gravity pulse |
+| HellSoul | 2 | 地狱魂, dì yù hún | Removes soul from foe | Temporal soul disruption |
+| Gravitonne | 3 | 重压, zhòng yā | Crushes with supergravity | Temporal gravity well |
+| FreeFall | 5 | 自由落体, zì yóu luò tǐ | Drops foe at supersonic speed | Temporal freefall |
+| BlackHole | 6 | 黑洞, hēi dòng | Sucks everything in | Temporal singularity |
+| BlackOut | 2 |  blackout, 黑视 | Removes black status | Temporal dark cleanse |
+| Nostrum | 6 | 万灵药, wàn líng yào | Restores 200 HP | Temporal panacea |
+| MotherShip (Summon) | 7 | 母舰, mǔ jiàn | Spaceship blasts foes | Temporal orbital strike |
+| GrimReaper (Summon) | 8 | 死神, sǐ shén | Death destroys foes | Temporal death summon |
+
+#### ⚪ WHITE ELEMENTS (Light & Holy — Temporal Expansion)
+
+| Element | LV | Chinese | Description | Time-Fu Application |
+|---------|----|---------|-------------|---------------------|
+| PhotonRay | 1 | 光子射线, guāng zǐ shè xiàn | Shoots laser beam | Temporal light beam |
+| Meteorite | 2 | 陨石, yǔn shí | Drops comet on foe | Temporal meteor strike |
+| PhotonBeam | 3 | 光子束, guāng zǐ shù | Extra-powerful laser | Temporal focused light |
+| MeteorShower | 4 | 流星雨, liú xīng yǔ | Asteroids at all foes | Temporal meteor storm |
+| HolyLight | 5 | 圣光, shèng guāng | Holy circle (annihilates undead) | Temporal purification |
+| UltraNova | 6 | 超新星, chāo xīn xīng | High-density explosion | Temporal supernova |
+| Revive | 1 | 复活, fù huó | Recovers from 0 HP | Temporal resurrection |
+| WhiteOut | 2 | 白视, bái shì | Removes white status | Temporal light cleanse |
+| RecoverAll | 3 | 全恢复, quán huī fù | Restores medium HP to all | Temporal mass healing |
+| Purify | 4 | 净化, jìng huà | Removes ALL status effects | Temporal purification |
+| Unicorn (Summon) | 7 | 独角兽, dú jiǎo shòu | Raises Defense & Magic Defense | Temporal holy horse |
+| Saints (Summon) | 8 | 圣徒, shèng tú | Angels attack & heal | Temporal angel army |
+
+---
+
+## PART 3: REAL BIOCHEMISTRY THROUGH THE MENTAL-FU LENS
+
+### Fuzzball Biochemistry
+
+Fuzzballs are **living temporal-biochemical entities**. Their biology operates on real chemistry, amplified by temporal energy.
+
+#### Fuzzball Anatomy
+
+| Component | Real Chemistry | Temporal Function | Chinese |
+|-----------|---------------|-------------------|---------|
+| Fur fibers | Keratin (C28H40N8O10S2) + chronoment particles | Conducts temporal energy, amplifies resonance | 毛球纤维, máo qiú xiān wéi |
+| Core organ | Mitochondria analog — produces temporal ATP (τ-ATP) | Generates temporal energy for Time-Fu | 核心器官, hé xīn qì guān |
+| Purr mechanism | Vocal cords vibrating at 432 Hz baseline | Creates temporal resonance field | 呼噜机制, hū lū jī zhì |
+| Temporal gland | Secretes chronoment particles (CmP) | Creates temporal bubbles, shields, static | 时间腺, shí jiān xiàn |
+| Eyes | Photoreceptors tuned to temporal wavelengths | Sees temporal distortions invisible to humans | 时间眼, shí jiān yǎn |
+
+#### Fuzzball Purr Frequencies & Health Diagnosis
+
+| Frequency | State | Diagnosis | Chinese | Treatment |
+|-----------|-------|-----------|---------|-----------|
+| 432 Hz | Healthy | Normal temporal resonance | 健康, jiàn kāng | None needed |
+| 428 Hz | Mild toxin | Low-level temporal disruption | 轻度中毒, qīng dù zhòng dú | Antidote + Chronoment assist |
+| 420 Hz | Moderate toxin | Significant temporal interference | 中度中毒, zhōng dù zhòng dú | Stronger antidote + Fuzzball bond |
+| 410 Hz | Severe toxin | Critical temporal collapse | 重度中毒, zhòng dù zhòng dú | Emergency panacea + full Chronoment reversal |
+| 440 Hz | Overcharged | Temporal energy overload | 能量过载, néng liàng guò zài | Grounding (Yellow element) |
+| 400 Hz | Near death | Temporal signature fading | 濒死, bīn sǐ | Revive element + full medical intervention |
+
+### Real Pharma Chemistry in the Time Dojo
+
+#### Painkillers (止痛药, zhǐ tòng yào)
+
+| Drug | Formula | Mechanism | Chinese Mechanism | Temporal Effect |
+|------|---------|-----------|-------------------|-----------------|
+| Acetaminophen | C8H9NO2 | COX enzyme inhibitor in CNS | 中枢COX酶抑制剂 | Reduces temporal pain echoes |
+| Ibuprofen | C13H18O2 | Non-selective COX-1/COX-2 inhibitor | 非选择性COX抑制剂 | Reduces temporal inflammation |
+| Aspirin | C9H8O4 | Irreversible COX inhibitor (acetylates) | 不可逆COX抑制剂 | Permanently blocks temporal pain signals |
+| Morphine | C17H19NO3 | μ-opioid receptor agonist | μ-阿片受体激动剂 | Blocks temporal pain at receptor level |
+
+#### Antibiotics (抗生素, kàng shēng sù)
+
+| Drug | Formula | Mechanism | Chinese Mechanism | Temporal Effect |
+|------|---------|-----------|-------------------|-----------------|
+| Penicillin | C16H18N2O4S | Inhibits bacterial cell wall synthesis (β-lactam) | 抑制细菌细胞壁合成 | Stops temporal bacterial growth |
+| Amoxicillin | C16H19N3O5S | Broad-spectrum β-lactam | 广谱β-内酰胺 | Temporal bacterial eradication |
+| Ciprofloxacin | C17H18FN3O3 | Inhibits DNA gyrase (bacterial DNA replication) | 抑制DNA旋转酶 | Stops temporal DNA replication in pathogens |
+
+#### Toxins & Antidotes (毒素与解药, dú sù yǔ jiě yào)
+
+| Toxin | Formula | Mechanism | Antidote | Antidote Formula | Chinese |
+|-------|---------|-----------|----------|-----------------|---------|
+| Potassium Cyanide | KCN | Inhibits cytochrome c oxidase (stops cellular respiration) | Hydroxocobalamin | C62H89CoN13O14P | 氰化钾 / 羟钴胺 |
+| Tetrodotoxin | C11H17N3O8 | Blocks voltage-gated Na+ channels (paralysis) | Neostigmine | C12H19N2O2+ | 河豚毒素 / 新斯的明 |
+| Scopolamine | C17H21NO4 | Muscarinic antagonist (confusion, amnesia) | Physostigmine | C15H21N3O2 | 东莨菪碱 / 毒扁豆碱 |
+| Sarin | C4H10FO2P | Irreversible acetylcholinesterase inhibitor | Atropine | C17H23NO3 | 沙林 / 阿托品 |
+| Ricin | Protein (C1339H2141N387O402S13) | Inactivates ribosomes (stops protein synthesis) | Supportive care only | N/A | 蓖麻毒素 / 支持治疗 |
+
+#### Vaccines (疫苗, yì miáo)
+
+| Type | Mechanism | Chinese Mechanism | Temporal Application |
+|------|-----------|-------------------|---------------------|
+| mRNA vaccine | Delivers mRNA coding for viral antigen → cells produce antigen → immune response | mRNA递送 → 细胞产生抗原 → 免疫反应 | Chronoment-accelerated immune training |
+| Live attenuated | Weakened live pathogen → strong immune response without disease | 减毒活病原体 → 强免疫反应 | Temporal immune memory encoding |
+| Inactivated | Killed pathogen → safe immune response | 灭活病原体 → 安全免疫反应 | Temporal immune baseline setting |
+| Subunit | Purified antigen proteins → targeted immune response | 纯化抗原蛋白 → 靶向免疫反应 | Precision temporal immune targeting |
+
+### Biochemistry of Time-Fu Techniques
+
+| Time-Fu Technique | Real Biochemistry | Chinese | Explanation |
+|-------------------|-------------------|---------|-------------|
+| Temporal Bubble | Localized CO2/O2 exchange creates temporal membrane (like cell membrane, C40H56 lycopene analog) | 时间泡, shí jiān pào | Fuzzball fur creates semi-permeable temporal barrier |
+| Temporal Shield | Electromagnetic field generated by ionized temporal particles (like NaCl dissociation → Na+ + Cl−) | 时间盾, shí jiān dùn | Ionized temporal energy creates repulsive barrier |
+| Temporal Acceleration | Increased ATP production rate (C10H16N5O13P3 → ADP + Pi + energy) | 时间加速, shí jiān jiā sù | Chronoment stimulates τ-ATP synthesis |
+| Temporal Deceleration | Decreased metabolic rate → reduced O2 consumption (like hibernation) | 时间减速, shí jiān jiǎn sù | Chronoment suppresses τ-ATP breakdown |
+| Temporal Reversal | Telomerase activation (TERT + TR → telomere extension) | 时间逆转, shí jiān nì zhuǎn | Chronoment reverses telomere shortening |
+| Temporal Twin | Quantum superposition of temporal state (Schrödinger's cat applied to time) | 时间分身, shí jiān fēn shēn | Temporal energy splits consciousness into parallel states |
+
+---
+
+## PART 4: CHRONOMENT CREATION & EQUIPMENT
+
+### What is a Chronoment?
+
+A **Chronoment** (时计, shí jì) is a temporal instrument that **measures and manipulates local time**. It's the primary tool of Time-Fu practitioners.
+
+### Chronoment Components
+
+| Component | Material | Function | Chinese | Real Science |
+|-----------|----------|----------|---------|-------------|
+| Core | Temporal crystal (SiO2 quartz + chronoment particles) | Oscillates at temporal frequency | 核心, hé xīn | Piezoelectric quartz crystal (like a watch) |
+| Housing | Jade casing (NaAlSi2O6 — jadeite) | Protects core, conducts temporal energy | 外壳, wài ké | Jadeite is piezoelectric — converts pressure to electrical signal |
+| Dial | Calibrated temporal scale | Measures temporal units (not standard seconds) | 表盘, biǎo pán | 1 chronoment unit = 1 subjective second × time dilation factor |
+| Strap | Woven Fuzzball fur band | Conducts temporal energy from wearer to device | 表带, biǎo dài | Keratin fibers (C28H40N8O10S2) infused with chronoment particles |
+| Activation | Voice-activated (Chinese phrase required) | Turns device on/off | 激活, jī huó | Voice recognition via temporal resonance matching |
+
+### Chronoment Activation Phrases
+
+| Function | Chinese | Pinyin | Effect |
+|----------|---------|--------|--------|
+| Activate | 时间启动 | shí jiān qǐ dòng | Powers on the Chronoment |
+| Deactivate | 时间停止 | shí jiān tíng zhǐ | Powers off the Chronoment |
+| Accelerate | 时间加速 | shí jiān jiā sù | Speeds up local time (1.5× to 10×) |
+| Decelerate | 时间减速 | shí jiān jiǎn sù | Slows down local time (0.1× to 0.5×) |
+| Reverse | 时间逆转 | shí jiān nì zhuǎn | Reverses local time (healing, undoing damage) |
+| Measure | 时间测量 | shí jiān cè liáng | Measures temporal distortion in area |
+| Shield | 时间盾 | shí jiān dùn | Creates temporal barrier around wearer |
+| Resonate | 时间共振 | shí jiān gòng zhèn | Synchronizes with Fuzzball purr frequency |
+
+### Chronoment Calibration
+
+| Setting | Chinese | Value | Effect |
+|---------|---------|-------|--------|
+| Normal | 正常, zhèng cháng | 1.0× | No temporal distortion |
+| Light acceleration | 轻度加速, qīng dù jiā sù | 1.5× | Slight time speed-up (good for learning) |
+| Heavy acceleration | 重度加速, zhòng dù jiā sù | 5.0× | Major time speed-up (good for combat training) |
+| Light deceleration | 轻度减速, qīng dù jiǎn sù | 0.5× | Slight time slow-down (good for precision work) |
+| Heavy deceleration | 重度减速, zhòng dù jiǎn sù | 0.1× | Major time slow-down (good for emergency healing) |
+| Reverse (minor) | 轻微逆转, qīng wēi nì zhuǎn | -0.1× | Undo last 10 seconds |
+| Reverse (major) | 重大逆转, zhòng dà nì zhuǎn | -1.0× | Undo last 10 minutes (dangerous) |
+
+---
+
+## PART 5: FUZZPET TRAINING COMMANDS
+
+### The Seven Core Commands
+
+| Command | Chinese | Pinyin | Effect | Element Color |
+|---------|---------|--------|--------|---------------|
+| Come | 过来 | guò lái | Fuzzball returns to trainer | ⚪ White |
+| Stay | 等着 | děng zhe | Fuzzball holds position, creates temporal bubble | 🟡 Yellow |
+| Attack | 攻击 | gōng jī | Fuzzball fires temporal static burst | 🔴 Red |
+| Defend | 保护 | bǎo hù | Fuzzball creates temporal shield around trainer | 🔵 Blue |
+| Heal | 治疗 | zhì liáo | Fuzzball purrs at healing frequency (440 Hz) | 🟢 Green |
+| Scout | 侦察 | zhēn chá | Fuzzball phases through walls (temporal phasing) | ⚫ Black |
+| Bond | 连接 | lián jiē | Deepen trainer-Fuzzball temporal link | ⚪ White |
+
+### Bonding Ceremony
+
+The bond between trainer and Fuzzball is a **temporal entanglement**. Once bonded, what happens to one affects the other. The ceremony requires:
+
+1. **Physical contact** — trainer places hand on Fuzzball's head
+2. **Chinese incantation**: 我们连接 (wǒ men lián jiē — "we connect")
+3. **Temporal resonance** — both trainer and Fuzzball must be at the same purr frequency (trainer hums at 432 Hz)
+4. **Chronoment activation** — Chronoment set to "Resonate" (时间共振)
+
+### Fuzzball Combat Applications
+
+| Application | Chinese | Description | Element Used |
+|-------------|---------|-------------|-------------|
+| Temporal counter-current | 时间逆流, shí jiān nì liú | Fuzzball creates opposing temporal flow to deflect attacks | 🔵 Blue |
+| Temporal static burst | 时间静电, shí jiān jìng diàn | Fuzzball fires burst of temporal static to blind enemies | 🟡 Yellow |
+| Temporal bubble trap | 时间泡陷阱, shí jiān pào xiàn jǐng | Fuzzball creates bubble that traps enemy in slowed time | 🟢 Green |
+| Temporal resonance amplify | 时间共振放大, shí jiān gòng zhèn fàng dà | Fuzzball amplifies Chronoment effects by 2× | ⚪ White |
+| Temporal phasing scout | 时间相位侦察, shí jiān xiàng wèi zhēn chá | Fuzzball phases through walls to scout ahead | ⚫ Black |
+| Temporal fire support | 时间火力支援, shí jiān huǒ lì zhī yuán | Fuzzball channels Red element energy for attack | 🔴 Red |
+
+---
+
+## PART 6: INTEGRATED MENTAL-FU — HOW IT ALL CONNECTS
+
+### The Mental-Fu Equation
+
+**Mental-Fu = (Chemistry Knowledge × Temporal Understanding × Chinese Fluency × Fuzzball Bond) ÷ Ego**
+
+The lower your ego, the more effective your Mental-Fu. CHARA learns this the hard way.
+
+### The Six Mental-Fu Disciplines
+
+| Discipline | Chinese | Combines | Example |
+|------------|---------|----------|---------|
+| Chem-Fu | 化学功夫, huà xué gōng fu | Chemistry + Time-Fu | Synthesizing acetaminophen (C8H9NO2) while under temporal acceleration |
+| Bio-Fu | 生物功夫, shēng wù gōng fu | Biology + Time-Fu | Diagnosing Fuzzball toxin by purr frequency (432 Hz → 428 Hz) |
+| Pharma-Fu | 药学功夫, yào xué gōng fu | Pharma + Time-Fu | Creating antidote (C62H89CoN13O14P) while Chronoment is in reverse |
+| Chrono-Fu | 时计功夫, shí jì gōng fu | Chronoments + Time-Fu | Calibrating Chronoment to 5.0× acceleration during combat |
+| Fuzz-Fu | 毛球功夫, máo qiú gōng fu | Fuzzpets + Time-Fu | Commanding Fuzzball to create temporal bubble trap (等着 + 时间泡) |
+| Lingua-Fu | 语言功夫, yǔ yán gōng fu | Chinese + Time-Fu | Speaking Element commands in Chinese to activate temporal energy |
+
+### The Mental-Fu Combat Flow
+
+1. **Assess** — Use Bio-Fu to diagnose the situation (What toxin? What injury? What temporal distortion?)
+2. **Plan** — Use Chem-Fu to determine the chemical solution (What formula? What reaction?)
+3. **Equip** — Use Chrono-Fu to set your Chronoment (What setting? What activation phrase?)
+4. **Command** — Use Fuzz-Fu to direct your Fuzzball (What command? What element color?)
+5. **Execute** — Use Lingua-Fu to speak the Chinese activation phrases
+6. **Resolve** — Use Pharma-Fu to administer post-combat treatment
+
+---
+
+## PART 7: MENTAL-FU QUIZ BANK
+
+### Chemistry Questions
+
+1. What is the chemical formula for acetaminophen? (Answer: C8H9NO2)
+2. What toxin blocks voltage-gated Na+ channels? (Answer: Tetrodotoxin, C11H17N3O8)
+3. What is the antidote for cyanide poisoning? (Answer: Hydroxocobalamin, C62H89CoN13O14P)
+4. What element has 6 protons, 6 neutrons, 6 electrons? (Answer: Carbon, 碳)
+5. What is the mechanism of penicillin? (Answer: Inhibits bacterial cell wall synthesis via β-lactam ring)
+
+### Chinese Questions
+
+1. How do you say "time accelerate" in Chinese? (Answer: 时间加速, shí jiān jiā sù)
+2. What is the Chinese word for "antidote"? (Answer: 解药, jiě yào)
+3. Translate: "We connect" (Answer: 我们连接, wǒ men lián jiē)
+4. What element color is associated with fire in the Temporal Element system? (Answer: Red, 红色, hóng sè)
+5. How do you activate a Chronoment? (Answer: 时间启动, shí jiān qǐ dòng)
+
+### Time-Fu Questions
+
+1. What happens when the Field Effect is all one color? (Answer: Elements of that color deal 2× damage, opposing color deals 0.5×)
+2. What LV is required to cast a Summon? (Answer: LV 7 or 8)
+3. What is the healthy Fuzzball purr frequency? (Answer: 432 Hz)
+4. What Chronoment setting reverses time? (Answer: 时间逆转, shí jiān nì zhuǎn)
+5. What are the 7 core Fuzzpet commands? (Answer: 过来, 等着, 攻击, 保护, 治疗, 侦察, 连接)
+
+### Integrated Mental-Fu Questions
+
+1. A Fuzzball's purr drops to 420 Hz. Diagnose and treat. (Answer: Moderate toxin. Diagnose by symptoms. Synthesize appropriate antidote. Administer with Chronoment in reverse mode. Command Fuzzball to 治疗.)
+2. You're facing an enemy with Red innate color. What Element color do you use? (Answer: Blue — Blue is opposite of Red. Use AquaBeam, IceLance, or BlueWhale.)
+3. Your Chronoment is malfunctioning at 5.0× acceleration. How do you fix it? (Answer: Recalibrate dial to 正常 (1.0×). Speak 时间停止 to deactivate, then 时间启动 to reactivate. Check quartz core for damage.)
+4. Synthesize a painkiller while your Fuzzball is poisoned. (Answer: Mix acetaminophen C8H9NO2. Command Fuzzball to 等着 (create temporal bubble for containment). Diagnose toxin by purr frequency. Synthesize antidote simultaneously.)
+
+---
+
+**ϕ — MENTAL-FU IS NOT JUST KNOWLEDGE. IT IS THE APPLICATION OF KNOWLEDGE THROUGH TEMPORAL DISCIPLINE. THE CHEMISTRY IS REAL. THE CHINESE IS REAL. THE TIME-FU IS REAL. EVERYTHING ELSE IS JUST NOISE.**

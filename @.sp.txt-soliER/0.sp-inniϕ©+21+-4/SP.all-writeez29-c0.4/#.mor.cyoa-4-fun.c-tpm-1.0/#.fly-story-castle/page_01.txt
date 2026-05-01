@@ -1,0 +1,12 @@
+**Page 1: The Buzzing Awakening**
+
+You are a common housefly, your compound eyes taking in the vastness of Castle Aethelgard. The air is a symphony of enticing aromas – stale bread, sweet nectar, and the ever-present danger of sudden movements. You awaken on a dusty windowsill, the sun warming your delicate wings.
+
+Hunger: 8/10 (Eager for sustenance)
+Danger Sense: 3/10 (Aware of general threats)
+Speed: 9/10 (Agile flyer)
+
+What do you do?
+
+*   If you buzz towards the enticing smells of the kitchen, turn to page 2.
+*   If you explore the grandeur of the main hall, turn to page 3.

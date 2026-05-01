@@ -1,0 +1,630 @@
+# AVA-SESSION-001: "THE RUSTY ANCHOR"
+## Avantasy Expanse — Session 1
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+
+---
+
+**DM (Mother Tmojizu):** Hey folks, welcome to Avantasy Expanse. I'm your dungeon master for this campaign, and I am SO excited about this one. We've got a full party, a loaded server, and a world that's been running for three years without you lot. So let's get things rolling, shall we? How about we do a quick intro round — who are you, what are you playing, and what brings you to the table?
+
+**CHARA:** Hey. I'm playing Chara. She's a level 2 Arcane Trickster Rogue, Half-Elf. Ex-CIA. Very paranoid. She's here because she was following a target into this game and... never came back. So now she's stuck. And she doesn't trust anyone. Including you, ma'am.
+
+**Mother Tmojizu:** Including me? I'm just the DM, Chara. I'm neutral.
+
+**CHARA:** That's exactly what someone who isn't neutral would say.
+
+**Sol-Supreme:** [deep, distorted voice] I'm Sol-Supreme. Level 2 Battle Smith Artificer. Dark Iron lineage. I'm the architect of this world. Or I was. Something went wrong. I'm here to fix it.
+
+**Mother Tmojizu:** Wait, you're the architect? In character or out of character?
+
+**Sol-Supreme:** Both.
+
+**IQabella:** Hi everyone! I'm IQabella. Level 2 Peace Domain Cleric, Warforged. I'm a healing droid — well, a cyborg fem-maid, technically — and I'm here to keep everyone alive and make sure we're all having a good time. I brought tea!
+
+**Mother Tmojizu:** You brought tea to a D&D session?
+
+**IQabella:** It's enchanted tea. It gives temporary hit points.
+
+**Mother Tmojizu:** That's... actually really useful.
+
+**Horli Qwin:** [beat drops in the background] Yooo, what's good, what's good. Horli Qwin in the building. Level 2 College of Swords Bard, Tabaxi. I'm a trap rapper, I rap my spells, and I'm here to cause problems. Affectionately. For the bit.
+
+**Mother Tmojizu:** You rap your spells?
+
+**Horli Qwin:** Bro, if I'm gonna cast Thunderwave, I'm not just saying the words like a nerd. I'm dropping a bar. You'll see.
+
+**Mother Tmojizu:** Okay. I'm terrified, but let's begin.
+
+---
+
+**DM (Mother Tmojizu):** You find yourselves in the bustling city of Troll City, the largest starter hub in the Avantasy Expanse. It's a busy evening, and you've each arrived at the Rusty Anchor Tavern — the most well-known rest spot in the zone. The tavern is built inside the ribcage of a dead titan. Curved white bone pillars rise two hundred feet above you, and the ceiling is a patchwork of timber and enchanted glass. The smell of roasted meat and dwarven ale fills your nostrils. The place is packed — players in every kind of avatar, NPCs going about their business, and the sound of laughter, argument, and someone attempting to play a lute very badly fills the air.
+
+Behind the bar, a gruff dwarf with a magnificent beard and a permanent scowl nods to you as you enter. That's Borin Ironmug, the tavern keeper. He motions for you to find a seat at one of the empty tables in the corner.
+
+As you settle in, you notice a few things. At a nearby table, a massive half-orc in a chef's apron is yelling at Borin about the stew. In the corner, a hooded figure sits alone, scanning the room. And at the bar, a tiefling merchant in an elaborate hat is counting gold coins with unsettling precision.
+
+What do you do?
+
+**Horli Qwin:** Okay, first of all, I'm looking at the hooded figure. What's their vibe?
+
+**Mother Tmojizu:** You get a general sense of... someone who doesn't want to be seen. The hood is pulled low, the cloak is dark, and they're nursing a drink they haven't touched. Their hand rests on what looks like a sword hilt.
+
+**Horli Qwin:** Cool. I'm walking over.
+
+**CHARA:** Wait. Before anyone walks anywhere, I'm scanning the room. Ex-CIA training. I want to check exits, assess threats, and see if anyone's watching us.
+
+**Mother Tmojizu:** Good call. Roll Perception.
+
+**CHARA:** [rolls] That's a 16.
+
+**Mother Tmojizu:** With your modifier that's 20. You clock three exits — the front door, a back door behind the bar, and what looks like a cellar door that's slightly ajar. You notice two players near the entrance who seem to be watching the room more than enjoying their drinks. And you catch the hooded figure glancing in your direction for a fraction of a second before looking away. Professional. Trained, maybe.
+
+**CHARA:** Trained. Interesting. I'm noting that. I'm also watching the tiefling at the bar. Counting gold coins with "unsettling precision"? That's Madame Zixi, right?
+
+**Mother Tmojizu:** You don't know her name yet, but your CIA instincts tell you this person is important. She's too calm, too precise. Every movement is deliberate.
+
+**Sol-Supreme:** I'm observing the structural integrity of the titan ribcage. I built this — well, the architect built this — and I'm checking for degradation. Roll... what do I roll for that, Tomo?
+
+**Mother Tmojizu:** Uh, Intelligence check, maybe? Or Investigation?
+
+**Sol-Supreme:** Investigation. [rolls] 14.
+
+**Mother Tmojizu:** Plus your... what's your INT modifier?
+
+**Sol-Supreme:** Plus four. So 18.
+
+**Mother Tmojizu:** 18. Okay. You notice minor stress fractures in the eastern rib — nothing structural, but the server's rendering engine is showing wear. The ASCII-GL shaders are flickering slightly in that quadrant. If this were a real building, you'd recommend a patch within the next few cycles.
+
+**Sol-Supreme:** As expected. The TPMOS framework is stable but the rendering layer needs attention. I'll make a note.
+
+**IQabella:** I'm checking on everyone's comfort levels! I pull out my enchanted tea set and start brewing. Does anyone want tea? It gives temporary hit points.
+
+**Mother Tmojizu:** You're brewing tea in a tavern. Borin is looking at you.
+
+**IQabella:** I smile at Borin and offer him a cup.
+
+**Mother Tmojizu:** Borin grunts. "I don't need yer fancy robot tea, lass. I've got ale." But he looks slightly hurt that you didn't ask him to try it first.
+
+**IQabella:** Oh no. I'll bring him a cup anyway. With a little honey. Mom always says honey fixes everything.
+
+**Mother Tmojizu:** He takes it. Sips it. His eyes widen slightly. "Huh. That's... that's not bad." He's trying not to show how much he likes it.
+
+**Horli Qwin:** Okay, while IQabella is winning over the bartender, I'm walking over to the hooded figure. I slide into the seat across from them. I lean in. And I say — in character, with full catty energy — "Hey stranger. You're either the most mysterious person in this room or the most bored. Which is it?"
+
+**Mother Tmojizu:** The figure doesn't move for a long moment. Then, slowly, they raise their head. You catch a glimpse of translucent skin, glowing white eyes, and armor that seems to phase in and out of reality. A ghost. An aasimar ghost. And she's looking at you with an expression that's part amusement, part warning.
+
+**HOODED FIGURE (LoonaTwilight):** "I'm both, little cat. And neither. You're new here."
+
+**Horli Qwin:** "New-ish. I'm Horli Qwin. And you're... dead. Which is a bold fashion choice."
+
+**Mother Tmojizu:** She almost smiles. Almost.
+
+**LOONATWILIGHT:** "LoonaTwilight. And yes, I'm dead. It has its perks. I don't have to pay for drinks, for one."
+
+**Horli Qwin:** [OOC] T-Mo, I'm trying to get information out of her. Can I roll Persuasion?
+
+**Mother Tmojizu:** Sure. But she's a ghost paladin who's been watching this server for a year. She's not easy to read.
+
+**Horli Qwin:** I know, I know. But I'm charming. [rolls] Natural 20, BABY!
+
+**Mother Tmojizu:** [groans] Of course. Of course you roll a natural 20 on your first social encounter.
+
+**Horli Qwin:** LET'S GOOO!
+
+**IQabella:** Yesss, Horli!
+
+**Mother Tmojizu:** Okay. LoonaTwilight looks at you, and something in her ghostly demeanor shifts. The warning in her eyes softens. She leans forward.
+
+**LOONATWILIGHT:** "You're funny. I haven't laughed in... well, since I died. So I'll tell you something. There's a breach building. Out in the Wastes. The Carcazods are gathering. And this time, there's no one strong enough to stop it."
+
+**Horli Qwin:** [OOC] Wait, a breach? Like, a server breach?
+
+**Mother Tmojizu:** She nods.
+
+**LOONATWILIGHT:** "The code is fraying at the edges. Worm Hole X is unstable. I sealed the last one with my life. The next one..." She trails off. "The next one will need more than a ghost."
+
+**Horli Qwin:** [OOC] T-Mo, I'm relaying all of this to the party. They need to hear this.
+
+**Mother Tmojizu:** You head back to the table. As you're walking, you notice the half-orc chef has stopped yelling and is now staring at your group. Specifically at Sol-Supreme.
+
+**RaTheButcher:** [OOC, in a Gordon Ramsay voice] "OI. You. Metal man. You're Sol-Supreme, aren't ya? I've heard about you. You're the one who built this dump."
+
+**Sol-Supreme:** [in character, deep distorted voice] "I am."
+
+**RaTheButcher:** "Well, let me tell you something, mate. The rendering engine in the kitchen is SHOCKING. The food textures are all wrong. The stew tastes like PIXELS. What kind of architect lets that happen?"
+
+**Sol-Supreme:** [OOC] Can I roll Arcana to diagnose the kitchen rendering issue?
+
+**Mother Tmojizu:** You know what? Yes. Yes you can.
+
+**Sol-Supreme:** [rolls] 17. Plus 4 is 21.
+
+**Mother Tmojizu:** You stride over to the kitchen — RaTheButcher parts to let you through — and you examine the cooking station. The issue is clear: the TPMOS rendering layer for organic matter is desyncing from the physics engine. The stew is being rendered at a lower resolution than the ingredients. It's a known bug from the Year 1 breach. Never got patched.
+
+**Sol-Supreme:** [in character] "The organic matter renderer is desynced from the physics layer. It's a legacy bug. I can fix it, but I'll need components."
+
+**RaTheButcher:** "Can you fix it NOW? Because I've been trying to make a decent beef Wellington in this server for THREE MONTHS and it comes out looking like a [ __ ] Minecraft potato!"
+
+**Mother Tmojizu:** Everyone at the table is looking at you now. Borin has stopped pouring drinks. The tiefling merchant has paused her coin counting. Even LoonaTwilight is watching from the corner.
+
+**CHARA:** [OOC] I'm watching Sol-Supreme handle this. I'm also watching everyone ELSE watching him. I want to see how people react to someone claiming they can fix the server.
+
+**Mother Tmojizu:** Roll Insight.
+
+**CHARA:** [rolls] 15. Plus... let me check... plus 6 with my Ex-CIA bonus. So 21.
+
+**Mother Tmojizu:** 21. Okay. You notice that most of the room reacts with a mix of awe and skepticism — this is a common claim, and most people who make it can't deliver. But Borin's expression shifts to something like hope. And Madame Zixi — the tiefling — she's watching Sol-Supreme with an expression you can only describe as... recognition. Like she knows exactly who he is.
+
+**CHARA:** [OOC] Recognition? I'm filing that away.
+
+**IQabella:** I'm just happy everyone's getting along! I bring my tea over to RaTheButcher. "Would you like a cup while we work on this? It might help with the... frustration."
+
+**Mother Tmojizu:** RaTheButcher looks at the tea. Looks at IQabella. His massive half-orc face softens.
+
+**RaTheButcher:** "You know what, love? Yeah. I could use a cuppa. Thank you." He takes it. Sips. "Oh. Oh, that's lovely. That's actually lovely. What's in this?"
+
+**IQabella:** "Chamomile, honey, and a minor healing enchantment. It's my own blend."
+
+**RaTheButcher:** "I could get used to this."
+
+**Mother Tmojizu:** Okay, so the party is settling in. You've got: Horli has intel from LoonaTwilight about a breach building in the Wastes. Sol-Supreme has identified a rendering bug that he can potentially fix. Chara has noticed that Madame Zixi recognizes Sol-Supreme. And IQabella has made friends with everyone in the tavern, including a grumpy dwarf and a rage-filled chef.
+
+At this point, the tavern door bursts open.
+
+A player stumbles in — he's wearing oversized wizard robes that are clearly too big for him, carrying a staff he keeps tripping over. His avatar is a variant human with a face that screams "I rolled randomly and accepted the results."
+
+**TRONALD_THE_MAGE:** [OOC, in a terrible accent] "Greetings, fellow adventurers! It is I, Tronald, the most powerful wizard in this server! Totally not a joke character! I am here to... uh..." [looks at his character sheet] "...to quest!"
+
+**Mother Tmojizu:** Tronald_The_Mage. Level 9 Wizard. He has a -3 Strength modifier and an ego that could fill the titan's ribcage. He's a regular here.
+
+**Tronald_The_Mage:** "I'm looking for a party! I need people who are worthy of my INCREDIBLE magical abilities! Who wants to join Tronald on an epic adventure?"
+
+**Horli Qwin:** [OOC] Is he serious right now, T-Mo?
+
+**Mother Tmojizu:** He's Tronald. He's never serious. But he always thinks he is.
+
+**CHARA:** [in character, deadpan] "What's your Strength modifier?"
+
+**Tronald_The_Mage:** "Strength? Who needs strength when you have MAGIC? I have a Intelligence of... uh..." [checks sheet] "...seventeen! That's, like, a plus four or something!"
+
+**Sol-Supreme:** [in character, flat] "It's three."
+
+**Tronald_The_Mage:** "What?"
+
+**Sol-Supreme:** "Seventeen Intelligence is a plus three modifier. Not four."
+
+**Tronald_The_Mage:** "Well, I— that's— the math in this game is rigged, okay? It's rigged!"
+
+**Mother Tmojizu:** Tronald storms over to the bar and orders an ale. He can't afford it. Borin gives it to him anyway because he's pathetic.
+
+**Mother Tmojizu:** Okay, so the party is together. You've had your introductions, you've gathered some intel, and the tavern is buzzing. At this point, Borin slams a mug down on your table — ale for everyone, on the house, because IQabella charmed him with tea.
+
+**BORIN IRONMUG:** "Right. You lot look like adventurers. New faces, mostly. There's a posting on the Quest Board that might interest you. Giant spiders in the Lost Temple. Five hundred gold plus whatever loot you find. The last group that took it... well, they didn't come back. But they also didn't pay their tab, so."
+
+**CHARA:** [OOC] Giant spiders in a temple? Classic starter dungeon. I'm into it. But I want to check the Quest Board myself first. Are there other options?
+
+**Mother Tmojizu:** You head out to the central plaza. The Quest Board is a massive wooden slab covered in parchment, holographic postings, and one sticky note that just says "pls help - Kevin." The Healing Spring glows cyan beside it, tiny colored lights — the Fuzzball spirits — dancing above the water.
+
+Current postings:
+- "Giant spiders in the Lost Temple. 500gp + loot." (Medium, Levels 3-5)
+- "My cat is stuck in a tree. The tree is on fire." (Easy, Levels 1-2, 25gp)
+- "Carcazod scouts spotted near the east gate. Handle it." (Hard, Levels 5-7, 200gp + faction reputation)
+- "Seeking brave adventurers for a totally legitimate business venture." — Signed, "Definitely Not a Scam"
+
+**Horli Qwin:** "My cat is stuck in a tree. The tree is on fire." I need to know more about this.
+
+**Mother Tmojizu:** The posting is signed by "Concerned Citizen." There's no contact information.
+
+**Horli Qwin:** I'm taking it. Not because I'm going to do it. Because I want to frame it.
+
+**Mother Tmojizu:** You peel it off the board. It's yours now.
+
+**Sol-Supreme:** I'm looking at the Carcazod scout posting. If there's a breach building, like LoonaTwilight said, then the scouts are the early warning. We should deal with them.
+
+**CHARA:** I agree. But we're level 2. The posting says Levels 5-7. That's a death sentence.
+
+**IQabella:** The spider quest is Medium difficulty. That's more our speed. And 500 gold would be a great starting fund for supplies!
+
+**Horli Qwin:** I say we do the spiders. Classic dungeon crawl, loot chest, come back heroes. Plus, I've always wanted to rap a spell at a giant spider.
+
+**Mother Tmojizu:** So the party agrees on the Lost Temple quest?
+
+**Everyone:** Yes.
+
+**Mother Tmojizu:** Great. Before you head out, Borin calls you back.
+
+**BORIN IRONMUG:** "One more thing. The temple's been there since Year Zero. It's got three floors. First floor's spiders and traps. Second floor's got undead — don't ask me how undead got in a jungle temple, this server's weird. Third floor... there's something big down there. Something that wasn't there before. Be careful."
+
+**Sol-Supreme:** [OOC] "Something that wasn't there before." Tomo, is that the breach manifesting?
+
+**Mother Tmojizu:** [smiles] Roll Investigation.
+
+**Sol-Supreme:** [rolls] 13. Plus 6 is 19.
+
+**Mother Tmojizu:** Your architect's intuition kicks in. The "something big" on the third floor — it's not part of the original dungeon design. The code signature is wrong. It's Carcazod mutagen. Something is corrupting the temple from the inside. This isn't just a spider nest anymore. It's a forward operating base.
+
+**Sol-Supreme:** [in character] "The temple's been compromised. Carcazod mutagen on the third floor. They're using it as a staging ground."
+
+**CHARA:** Then we clear the spiders, clear the undead, and deal with whatever's on floor three. Methodically. With a plan.
+
+**Horli Qwin:** Or we go in loud, I drop a beat, and we see what happens.
+
+**CHARA:** I hate that I'm even considering this.
+
+**Mother Tmojizu:** Okay, so the party heads out from Troll City toward the Lost Temple. The journey takes you through the jungle outskirts — dense canopy, bioluminescent flora, and the occasional ASCII-rendered butterfly that glitches as it passes through your field of vision. After about an hour of travel, you arrive at the temple entrance.
+
+It's massive. Crumbling stone pillars covered in vines. A faint, eerie glow emanates from within. The air is heavy with the scent of damp earth and decay. And from somewhere deep inside, you hear the skittering of many legs on stone.
+
+**IQabella:** [OOC] I'm casting Detect Magic before we go in. Just to see what we're dealing with.
+
+**Mother Tmojizu:** You close your eyes and extend your senses. The temple is saturated with magic — abjuration wards on the walls (traps), necromancy residue on the lower levels (the undead), and... something else. Something on the third floor that reads as a mix of transmutation and... corruption. The Carcazod mutagen.
+
+**IQabella:** I let everyone know what I found. "Wards on the walls — traps. Necromancy below — undead. And the third floor has... something wrong. It feels corrupted."
+
+**Sol-Supreme:** Good intel. I'm activating my Steel Defender. IKARUS-7, online.
+
+**Mother Tmojizu:** A small construct materializes beside Sol-Supreme — a mechanical hound-like creature with glowing cyan circuits and a ϕ spiral etched into its chest plate. It whirs to life, sensors scanning the entrance.
+
+**Horli Qwin:** Okay, that's actually really cool. What's its deal?
+
+**Sol-Supreme:** CR 1/4 construct. It attacks what I tell it to, and it can take a hit for me. Also, it's named after my ship.
+
+**Horli Qwin:** Your ship?
+
+**Sol-Supreme:** You'll see. Eventually.
+
+**Mother Tmojizu:** Okay, you're at the entrance. The temple doors are partially open — one has fallen off its hinges, the other is covered in thick spider webs. You can squeeze through. Who's going first?
+
+**CHARA:** Not me. I'm taking point position but I'm sending IKARUS-7 in first.
+
+**Sol-Supreme:** Fair. IKARUS-7, advance.
+
+**Mother Tmojizu:** The Steel Defender pads through the doorway, sensors sweeping. The interior is dimly lit — dust motes dance in the few shafts of light that penetrate the canopy. The floor is covered in a thin layer of webbing. And about thirty feet in, you see them.
+
+Two giant spiders. Each the size of a dinner table, eight red eyes glowing in the darkness. They're feeding on something that used to be an adventurer.
+
+**COMBAT INITIATED!**
+
+**Mother Tmojizu:** Everyone roll initiative.
+
+**CHARA:** [rolls] 17. Plus 3 is 20. Advantage from Paranoid Instincts — [rolls again] 14. So 20.
+
+**Sol-Supreme:** [rolls] 11. Plus 0 is 11.
+
+**IQabella:** [rolls] 8. Plus 0 is 8.
+
+**Horli Qwin:** [rolls] Natural 20! Plus 3 is 23! LET'S GO AGAIN!
+
+**Mother Tmojizu:** Okay, so the order is: Horli Qwin (23), Chara (20), Spider 1, Spider 2, Sol-Supreme (11), IQabella (8).
+
+Horli, you're up first. What do you do?
+
+**Horli Qwin:** Okay, I'm pulling out my beat pad. I'm dropping a beat. And I'm rapping my way into Vicious Mockery at the closest spider.
+
+**Mother Tmojizu:** Of course you are.
+
+**Horli Qwin:** [rapping] "Yo, eight legs, zero brain, I'm about to cause you pain / You're a spider, I'm a bard, this fight is gonna get HARD / Vicious Mockery, bestie, your existence is a mess-y!"
+
+**Mother Tmojizu:** I... okay. Roll Performance for the rap, then your spell attack.
+
+**Horli Qwin:** Performance: [rolls] 16. Plus 5 is 21.
+
+**Mother Tmojizu:** The tavern-quality rap is solid. The spider is confused and insulted. Spell attack?
+
+**Horli Qwin:** [rolls] 14. Plus 5 is 19.
+
+**Mother Tmojizu:** That hits. What's the damage?
+
+**Horli Qwin:** 1d4 psychic damage. [rolls] 3. Plus my CHA mod... that's 6 psychic damage.
+
+**Mother Tmojizu:** The spider recoils, its legs twitching. Your words literally hurt it — the psychic damage manifests as visible cracks in its chitinous armor. It's pissed.
+
+Next, Chara. You're up.
+
+**CHARA:** I'm using my bonus action to cast Mage Hand — the invisible version — and I'm sending it to the far wall to create a distraction. Then I'm moving to the side and taking a shot with my hand crossbow at Spider 2.
+
+**Mother Tmojizu:** Roll attack.
+
+**CHARA:** [rolls] 18. Plus 5 is 23.
+
+**Mother Tmojizu:** Hits. Damage?
+
+**CHARA:** 1d6 piercing. [rolls] 4. Plus 3 DEX is 7. And Sneak Attack — 1d6. [rolls] 5. Total 12 piercing damage.
+
+**Mother Tmojizu:** Your bolt strikes true, punching through the spider's eye cluster. It screeches and thrashes, webbing flying everywhere. The distraction from your Mage Hand meant it never saw you coming. Clean, professional work.
+
+**CHARA:** [OOC] Thank you. I've been doing this a while.
+
+**Mother Tmojizu:** Spider 1's turn. It scuttles toward Horli Qwin — the one who insulted it — and bites. [rolls] 12. Plus 4 is 16. What's your AC, Horli?
+
+**Horli Qwin:** 15. So that hits.
+
+**Mother Tmojizu:** Bite damage: [rolls] 8 piercing damage, and you need to make a DEX save or be poisoned.
+
+**Horli Qwin:** DEX save: [rolls] 15. Plus 3 is 18.
+
+**Mother Tmojizu:** You dodge the venom. The fangs graze your armor but don't penetrate. You're fine.
+
+**Horli Qwin:** [OOC] The spider tried to bite me and failed. That's gonna go in the journal. "For the Bit: Got bit at, didn't care."
+
+**Mother Tmojizu:** Spider 2's turn. It's injured and angry. It lunges at Chara — [rolls] 9. Plus 4 is 13.
+
+**CHARA:** AC 15. Miss.
+
+**Mother Tmojizu:** It overshoots, tangling itself in its own webbing. It's prone.
+
+**Sol-Supreme:** My turn. I'm commanding IKARUS-7 to attack the prone spider. And I'm casting Fire Bolt at Spider 1.
+
+**Mother Tmojizu:** IKARUS-7 attacks first. Roll.
+
+**Sol-Supreme:** [rolls] 16. Plus 4 is 20.
+
+**Mother Tmojizu:** Hits. The Steel Defender's enhanced jaws clamp down on the prone spider.
+
+**Sol-Supreme:** Damage: 1d8 + 2. [rolls] 6 + 2 is 8.
+
+**Mother Tmojizu:** The spider shrieks as IKARUS-7's bite cracks its carapace. It's badly hurt. Now your Fire Bolt?
+
+**Sol-Supreme:** [rolls] 11. Plus 6 is 17.
+
+**Mother Tmojizu:** Hits. Damage?
+
+**Sol-Supreme:** 1d10 fire. [rolls] 7.
+
+**Mother Tmojizu:** The firebolt streaks across the chamber, impacting Spider 1 with a satisfying explosion. Its legs curl and it collapses, smoking. One spider down.
+
+IQabella, you're last.
+
+**IQabella:** I'm going to use my Implements of Peace. I'm giving an Emboldening Bond to Chara as a bonus action — she gets a d4 to her next attack roll, save, or check. And then I'm moving to a position where I can see everyone.
+
+**Mother Tmojizu:** You place a warm hand on Chara's shoulder. A golden ϕ spiral glows briefly on her armor. She feels... steadier. More focused.
+
+**IQabella:** "You've got this, sweetheart."
+
+**CHARA:** [OOC] Thanks, IQabella. That's actually really good.
+
+**Mother Tmojizu:** End of round one. Round two!
+
+Horli, you're up. The remaining spider is prone and badly hurt.
+
+**Horli Qwin:** I'm drawing my rapier — "The Mic" — and I'm using Blade Flourish. Slashing flourish. I want to finish this spider with style.
+
+**Mother Tmojizu:** Roll attack.
+
+**Horli Qwin:** [rolls] Natural 20! OH MY GOD! NATURAL 20!
+
+**Mother Tmojizu:** [sighs] This table is broken.
+
+**Horli Qwin:** I TOLD YOU! I TOLD YOU I WAS GONNA DROP A BAR!
+
+**IQabella:** YESSS, HORLI!
+
+**Mother Tmojizu:** Critical hit. Roll double damage dice.
+
+**Horli Qwin:** Okay, so rapier is 1d8. Double that's 2d8. [rolls] 7 and 5, that's 12. Plus my DEX mod is 15. Plus the flourish damage — 1d6. [rolls] 4. Total 19 slashing damage!
+
+**Mother Tmojizu:** With a flourish that would make a dance troupe jealous, Horli Qwin drives her rapier through the spider's head. The blade glows with slashing energy, and the impact sends the spider's body skidding across the webbed floor. It twitches once and goes still.
+
+The chamber falls silent, save for the drip of water and everyone's heavy breathing.
+
+**Horli Qwin:** [rapping softly] "Spider's dead, I'm the best, put it to the test / Eight legs down, Horli Qwin runs this town."
+
+**CHARA:** [OOC] I'm not gonna lie. That was cool.
+
+**Mother Tmojizu:** Combat over! Everyone gains 50 XP. The temple is quiet again. You notice a corridor leading deeper into the temple — the webbing gets thicker in that direction. And there's a faint sound of... clanking? Like metal on stone.
+
+**Sol-Supreme:** The undead. On floor two.
+
+**CHARA:** We should take a short rest. Use up any resources we need to recover.
+
+**IQabella:** I can use my Channel Divinity — Balm of Peace. It heals everyone in a 30-foot radius for 1d6 + my level.
+
+**Mother Tmojizu:** Roll it.
+
+**IQabella:** [rolls] 4 + 2 is 6. Everyone regains 6 HP.
+
+**Mother Tmojizu:** A warm, golden light emanates from IQabella's chest plate. The ϕ spiral glows brightly, and you all feel the spider bites and scrapes knit together. Even IKARUS-7's dented armor plating repairs itself slightly.
+
+**Horli Qwin:** IQabella, you're literally the best.
+
+**IQabella:** "I know, sweetheart."
+
+**Mother Tmojizu:** After a short rest, you proceed deeper into the temple. The corridor slopes downward, and the webbing gives way to cracked stone and ancient carvings. The air gets colder. And the clanking sound gets louder.
+
+You emerge into a larger chamber. Three skeletal warriors stand guard around a stone altar. Their armor is rusted, their swords notched, and their eye sockets glow with faint blue light. Between them, on the altar, sits a small chest.
+
+**CHARA:** Three undead. We can handle this. But I want a plan. Sol, can IKARUS-7 tank one?
+
+**Sol-Supreme:** It can. It has 17 HP and AC 15. It'll hold.
+
+**CHARA:** Good. Horli, can you take one with your rapier?
+
+**Horli Qwin:** Baby, I can take two.
+
+**CHARA:** Don't get greedy. IQabella, stay back, keep us healed. Sol, you and IKARUS-7 focus fire one. I'll Sneak Attack another. Horli takes the third.
+
+**Mother Tmojizu:** That's a solid plan. Everyone ready?
+
+**Everyone:** Ready.
+
+**Mother Tmojizu:** Roll initiative again.
+
+**Horli Qwin:** [rolls] 19. Plus 3 is 22.
+
+**CHARA:** [rolls] 15. Plus 3 is 18. Advantage — [rolls] 12. So 18.
+
+**Sol-Supreme:** [rolls] 14. Plus 0 is 14.
+
+**IQabella:** [rolls] 6. Plus 0 is 6.
+
+**Mother Tmojizu:** And the undead roll... [rolls] 11, 8, and 5. So the order is: Horli (22), Chara (18), Undead 1 (11), Sol-Supreme (14) — wait, Sol is 14, so Sol goes before Undead 1. Then Undead 2 (8), IQabella (6), Undead 3 (5).
+
+Horli, you're up.
+
+**Horli Qwin:** I'm casting Dissonant Whispers at Undead 3. But I'm rapping it.
+
+**Mother Tmojizu:** You're rapping Dissonant Whispers.
+
+**Horli Qwin:** "Yo, skeleton man, you're dead and you're done / Your bones are gonna rattle when I drop this bomb / Dissonant Whispers, hear the sound / When you hit the floor, you're staying down!"
+
+**Mother Tmojizu:** I need a spell save DC check. What's your DC, Horli?
+
+**Horli Qwin:** 13.
+
+**Mother Tmojizu:** The undead rolls a Wisdom save... [rolls] 7. It fails.
+
+**Horli Qwin:** Damage: 3d6 psychic. [rolls] 4, 2, 6. That's 12 psychic damage.
+
+**Mother Tmojizu:** The skeletal warrior clutches its skull as your rap echoes through its empty mind. Bones crack and it stumbles backward, dropping its sword. It's badly hurt but still standing.
+
+Chara, your turn.
+
+**CHARA:** I'm Sneak Attacking Undead 1. I have advantage because Sol-Supreme is next to it. Hand crossbow. [rolls] 17. Plus 5 is 22.
+
+**Mother Tmojizu:** Hits.
+
+**CHARA:** Damage: 1d6 + 3. [rolls] 5 + 3 is 8. Plus Sneak Attack 1d6. [rolls] 3. Total 11.
+
+**Mother Tmojizu:** Your bolt punches through the undead warrior's ribcage. Blue light flickers in its eyes and it staggers.
+
+Undead 1's turn. It swings at Chara. [rolls] 13. Plus 3 is 16.
+
+**CHARA:** AC 15. Hits.
+
+**Mother Tmojizu:** Damage: 1d8 + 1. [rolls] 5.
+
+**CHARA:** I'm down 5 HP. I'm good.
+
+**Sol-Supreme:** My turn. IKARUS-7 attacks Undead 2. [rolls] 15. Plus 4 is 19.
+
+**Mother Tmojizu:** Hits.
+
+**Sol-Supreme:** 1d8 + 2. [rolls] 3 + 2 is 5.
+
+**Mother Tmojizu:** The Steel Defender bites into the undead's armor. It holds.
+
+And you're casting...?
+
+**Sol-Supreme:** I'm using Booming Blade on Undead 1. I walk up and swing my warhammer. [rolls] 12. Plus 6 is 18.
+
+**Mother Tmojizu:** Hits.
+
+**Sol-Supreme:** 1d8 thunder + 1d8 thunder on the boom. [rolls] 6 + 4. That's 10 thunder damage.
+
+**Mother Tmojizu:** You swing your warhammer — the Soul Pen Prototype — into the undead's chest. The impact triggers a thunderous boom that echoes through the chamber. The undead warrior is blasted backward, its bones scattering across the floor. One down.
+
+Undead 2's turn. It attacks IKARUS-7. [rolls] 16. Plus 3 is 19.
+
+**Sol-Supreme:** AC 15. Hits.
+
+**Mother Tmojizu:** Damage: 6 slashing. IKARUS-7 is at 11 HP.
+
+IQabella, you're up.
+
+**IQabella:** I'm casting Sacred Flame on Undead 3 — the one Horli hurt. It needs a DEX save.
+
+**Mother Tmojizu:** The undead rolls... [rolls] 9. It fails.
+
+**IQabella:** Damage: 1d8 radiant. [rolls] 7.
+
+**Mother Tmojizu:** Radiant fire erupts from above, engulfing the skeletal warrior. Its bones glow white-hot and it crumbles to dust. Two down.
+
+Undead 3 is already down, so we skip to... actually, everyone's target is down. The last undead — Undead 2 — is standing alone, facing IKARUS-7.
+
+**Sol-Supreme:** I'll finish it. IKARUS-7, attack.
+
+**Mother Tmojizu:** [rolls for IKARUS-7] 14. Plus 4 is 18. Hits.
+
+**Sol-Supreme:** 1d8 + 2. [rolls] 8 + 2 is 10.
+
+**Mother Tmojizu:** The Steel Defender tears through the last undead warrior. Its bones scatter across the chamber, blue light fading. The room falls silent.
+
+**Horli Qwin:** That was actually pretty efficient. Good plan, Chara.
+
+**CHARA:** [OOC] Thanks. I like plans.
+
+**Mother Tmojizu:** The chamber is clear. The stone altar sits in the center, and on it, the treasure chest. It's ornate — carved with ϕ spiral patterns and glowing faintly.
+
+**Horli Qwin:** I'm opening it.
+
+**CHARA:** Wait. Check for traps first.
+
+**Horli Qwin:** Fine. I check for traps.
+
+**Mother Tmojizu:** Roll Investigation.
+
+**Horli Qwin:** I'm not good at that. Can IQabella do it?
+
+**IQabella:** I'll try! [rolls] 9. Plus 1 is 10.
+
+**Mother Tmojizu:** You don't see any obvious traps. But you also don't see any obvious mechanisms. It's just a chest.
+
+**Sol-Supreme:** I'm scanning it with my architect knowledge. [rolls Investigation] 16. Plus 6 is 22.
+
+**Mother Tmojizu:** You recognize the chest's code signature. It's a legitimate loot drop — no traps, no curses. The server generated it as a reward for clearing the undead. It's safe.
+
+**Horli Qwin:** GREAT. I'm opening it.
+
+**Mother Tmojizu:** You lift the lid. A shower of golden light erupts — the server's loot notification.
+
+**QUEST COMPLETE!**
+
+Your screens are flooded with notifications:
+
+**GOLD COINS:** +500
+**EXPERIENCE POINTS:** +1,000 (each)
+
+**RARE ITEMS ACQUIRED:**
+- DRAGON SLAYER ARMOR (Chestpiece): +10 Strength, +15 Defense. Equippable by Warrior-class avatars.
+- MANA CRYSTAL: Restores 20 MP. Quantity: 3.
+- SOUL PEN INK VIAL: Crafting currency. Quantity: 1.
+- MYSTERIOUS KEY: Glowing with cyan light. Unknown purpose.
+
+**Horli Qwin:** Soul Pen Ink! That's the good stuff!
+
+**Sol-Supreme:** [in character, quietly] "A Soul Pen Ink vial. This is what I need to start crafting."
+
+**CHARA:** The mysterious key. What does it open?
+
+**Mother Tmojizu:** You don't know yet. But the key pulses faintly, and when you hold it, you get a sense of... direction. It's pointing somewhere. Down, maybe. Deeper into the temple.
+
+**IQabella:** There's a third floor. The key might be for that.
+
+**Sol-Supreme:** The third floor has Carcazod mutagen. We're level 2. We should go back to Troll City, sell the loot, buy supplies, and come back when we're stronger.
+
+**CHARA:** I agree. Tactical retreat. We've cleared two floors, got the loot, and we have intel on floor three. We come back prepared.
+
+**Horli Qwin:** I'm down. But I'm taking the key. It's mine now. I found it. Well, Sol found it. But I opened the chest. So it's mine.
+
+**Mother Tmojizu:** As you're leaving the chamber, the temple shakes. A low, guttural sound echoes from below — from the third floor. It's not a spider. It's not undead. It's something bigger. Something with Carcazod mutagen running through its veins.
+
+And then, a server-wide notification flashes across everyone's vision:
+
+**⚠️ SERVER ALERT: BREACH DETECTED IN SECTOR 7 — WORM HOLE X — STATUS: ESCALATING ⚠️**
+
+**Mother Tmojizu:** The party exchanges looks. LoonaTwilight's warning echoes in your minds. The breach is building. And whatever is on the third floor of this temple... it's connected.
+
+**CHARA:** [OOC] Okay, ma'am. That's a hell of a cliffhanger.
+
+**Mother Tmojizu:** I try.
+
+**Horli Qwin:** [rapping softly] "Breach detected, sector seven / We'll be back, we'll be ready, and we're gonna send them straight to heaven."
+
+**IQabella:** "That doesn't rhyme, Horli."
+
+**Horli Qwin:** "It's a work in progress, bestie."
+
+**Mother Tmojizu:** And that's where we'll end Session 1! Great first session, everyone. You've met, you've fought spiders and undead, you've got loot, and you've got a cliffhanger. Next session: the third floor of the Lost Temple, the truth about the Carcazod mutagen, and maybe — just maybe — a visit from someone who knows more about this server than they're letting on.
+
+**Everyone:** Nice! / Let's go! / Can't wait!
+
+**Mother Tmojizu:** Also, Tronald tried to follow you to the temple but got lost in the jungle. He's currently arguing with a tree.
+
+**CHARA:** Accurate.
+
+**Mother Tmojizu:** Good session, everyone. See you next time.
+
+---
+
+**[END OF AVA-SESSION-001]**
+**Session XP: 1,050 each | Party Gold: ~700gp total | Next: The Third Floor**
+**The spiral turns. ϕ**

@@ -1,0 +1,12 @@
+**Page 115: Closer Look at the Microchip**
+
+You manage to get a closer look at the microchip Nova hands over. It's not just glowing; it's emitting faint data streams you can almost perceive. The intricate etchings suggest it holds critical information or control functions, possibly for the cyborg spider project.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 8/10 (Observed the microchip emitting faint data streams)
+
+What do you do?
+
+*   If you attempt to identify the purpose of the microchip, turn to page 133.
+*   If you try to identify the authoritative man Nova is speaking with, turn to page 92.

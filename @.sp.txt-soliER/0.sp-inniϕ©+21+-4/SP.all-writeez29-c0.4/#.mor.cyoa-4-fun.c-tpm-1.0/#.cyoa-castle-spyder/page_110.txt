@@ -1,0 +1,12 @@
+**Page 110: Sabotaging the Humming Device**
+
+You move towards the humming device and begin spinning silk, aiming to clog its energy conduits or disrupt its core function. As your silk makes contact, the humming intensifies, and the device sparks violently. Alarms begin to blare throughout the West Wing.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Actively using silk reserves)
+Intel: 7/10 (Sabotaged the humming energy device, triggering alarms)
+
+What do you do?
+
+*   If you attempt to escape the West Wing before security arrives, turn to page 129.
+*   If you try to follow Thorne into the vault before it's too late, turn to page 109.

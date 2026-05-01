@@ -1,0 +1,11 @@
+You emerge from the conduit into a serene, alien forest. Towering crystalline trees shimmer, and the ground is carpeted with soft, glowing moss. The air is thick with the scent of exotic blossoms and carries the gentle tinkling of leaves. Small, winged creatures flit through the air, their chirps like tiny bells.
+
+You are clearly not in the industrial heart of Angland. This place feels peaceful, perhaps even sacred. You see a winding path leading deeper into the forest.
+
+*   Follow the winding path into the forest. Turn to page 29.
+ This is it. You're Angleri now, or whatever you are. Best learn to live with it."
+
+It gestures dismissively with a clawed hand. "Look, if you ain't recruits, you're just a drain on resources. Try the outer sectors. Maybe some smugglers or traders passing through know somethin'. Or try the Grand Lumina Mall. That's where the fancy folks with the answers hang out. Now get lost."
+
+*   Head towards the outer sectors, looking for smugglers or traders. Turn to page 55.
+*   Attempt to find your way back to the Grand Lumina Mall. Turn to page 56.

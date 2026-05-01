@@ -1,0 +1,186 @@
+# AVA-SESSION-003: "LEVEL UP"
+## Avantasy Expanse — Session 3
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+
+---
+
+**Mother Tmojizu:** Welcome back, ducklings. Session 3. You cleared the Lost Temple, freed the guardian, discovered ARCHITECT_02, and learned the breach is at 47%. You're level 2. But the XP from the temple, the guardian, and the terminal was enough. You're leveling up.
+
+**Horli Qwin:** [OOC] Mom T, I've been waiting for this. What do I get?
+
+**Mother Tmojizu:** [chuckles] Let's go one at a time. Chara first.
+
+**CHARA:** [OOC] Ma'am, I'm an Arcane Trickster. Level 3 means Mage Hand Legerdemain. I can use Mage Hand to steal, plant items, pick locks at range. And I get my Ability Score Improvement. I'm taking +2 DEX. DEX goes from 17 to 19.
+
+**Mother Tmojizu:** Noted. Your Mage Hand is now invisible AND sneaky. You can plant a listening device on someone without them noticing. You can pickpocket from across the room. You can unlock a door without touching it.
+
+**CHARA:** [OOC] Perfect. I've been wanting to plant intel on people since session one.
+
+**Mother Tmojizu:** [groans warmly] I know.
+
+**Sol-Supreme:** [OOC] Tomo, Battle Smith level 3. I get Extra Attack. And IKARUS-7 gets an upgrade — Repulsor Blast is now 2d8 force damage. And I'm taking +2 INT. INT goes from 18 to 20.
+
+**Mother Tmojizu:** Extra Attack. Two swings per action. IKARUS-7's Repulsor Blast is now a cannon. And your INT is 20. You're not just smart anymore. You're brilliant.
+
+**Sol-Supreme:** [in character, deep distorted voice] "The numbers are clearer now."
+
+**IQabella:** [OOC] Mom, Peace Domain Cleric level 3. I get Embonding Bond upgrade — I can now bond with 3 creatures at once instead of 2. And I'm taking +2 WIS. WIS goes from 17 to 19.
+
+**Mother Tmojizu:** Three creatures. You can buff three allies at once. The whole party, plus one. Your WIS is 19. You're not just wise anymore. You're perceptive.
+
+**IQabella:** [OOC] I can buff everyone at the same time now. That's beautiful.
+
+**Mother Tmojizu:** [smiles] It is.
+
+**Horli Qwin:** [OOC] Mom T, College of Swords Bard level 3. I get an additional Blade Flourish option — Slashing Flourish now hits adjacent enemies too. And I'm taking +2 CHA. CHA goes from 17 to 19.
+
+**Mother Tmojizu:** Your Slashing Flourish is now an AoE. You swing your rapier and everyone nearby gets cut. Your CHA is 19. You're not just charming anymore. You're magnetic.
+
+**Horli Qwin:** [OOC] I'm gonna slash-flourish-rap so hard.
+
+**Mother Tmojizu:** [chuckles] I don't doubt it.
+
+**Mother Tmojizu:** You're all level 3. New abilities. New stats. New responsibilities. But the breach is getting stronger too.
+
+**Mother Tmojizu rolls behind the screen.**
+
+**Mother Tmojizu:** "BREACH STATUS — 50% COMPLETE — ESTIMATED TIME TO FULL BREACH: 12 DAYS."
+
+**CHARA:** [OOC] It accelerated. Three percent in one day.
+
+**Mother Tmojizu:** It did. The breach is feeding on something. You'll find out what. Eventually.
+
+**Mother Tmojizu:** You're back in Troll City. The titan ribcage glows amber in the afternoon light. The streets are busy. You've got gold from the temple, a Temple Access Key, and a Tear-It card that lets you reroll any die once per session.
+
+What do you do?
+
+**Sol-Supreme:** [OOC] Tomo, I want to visit Gimble's Gear & Steel. I have gold. I want to upgrade my armor.
+
+**Mother Tmojizu:** You head to the market. Gimble Copperfist is at his forge, hammering something that looks suspiciously like a toaster.
+
+**GIMBLE COPPERFIST:** "Oh! Customers! Welcome, welcome! I've got a fine selection of barely-used, slightly-dented, possibly-cursed equipment! Take a look! No, don't touch that — it's still hot! Actually, do touch it, I need to know if it explodes!"
+
+**Sol-Supreme:** [OOC] I'm looking for Chain Mail +1. Or a Shield +1. What does he have?
+
+**Mother Tmojizu:** Roll Investigation.
+
+**Sol-Supreme:** [rolls] 16. Plus 5 is 21.
+
+**Mother Tmojizu:** 21. You see through Gimble's junk. Behind the rusty helmets and the "legendary" swords (all +1 at best), there's a Shield +1 on the back shelf. It's covered in dust. Gimble doesn't know what he has.
+
+**Sol-Supreme:** [in character] "That shield. The dusty one. How much?"
+
+**GIMBLE COPPERFIST:** "That old thing? It's... uh... 500 gold! A steal! Well, not a steal, because I'm selling it, but you know what I mean!"
+
+**Sol-Supreme:** [OOC] I'm buying it.
+
+**Mother Tmojizu:** You pay 500 gold. The Shield +1 is yours. Your AC goes from 16 to 18. You're a tank now.
+
+**Sol-Supreme:** [in character] "The numbers are clearer now."
+
+**IQabella:** [OOC] Mom, I want to visit the Healing Spring. I want to bless it. Make it even more healing.
+
+**Mother Tmojizu:** Roll Religion.
+
+**IQabella:** [rolls] 18. Plus 5 is 23.
+
+**Mother Tmojizu:** 23. You kneel at the Healing Spring. You place your hands on the water. You channel your Peace Domain. The cyan water glows brighter. The Fuzzball spirits dance above it. And the spring becomes... more. It now heals 2d4 HP instead of 1d4. And it removes one condition (poisoned, frightened, etc.) per long rest.
+
+**IQabella:** [OOC] Mom, I made the Healing Spring better.
+
+**Mother Tmojizu:** [warmly] You did. The board notices. The spring notices. The Fuzzballs notice.
+
+**Horli Qwin:** [OOC] Mom T, I want to visit Madame Zixi. I have the Architect's Gambit card. I want to know what it does.
+
+**Mother Tmojizu:** You head to the Soul Pen Emporium. Madame Zixi is behind the counter, counting gold coins with unsettling precision. She looks up. She sees the card. Her eyes widen.
+
+**MADAME ZIXI:** "The Architect's Gambit. I haven't seen one of those in... a long time. It lets you reroll any die roll. Once per session. But when you do, the DM gets to trigger a random encounter."
+
+**Horli Qwin:** [OOC] So it's a reroll with consequences.
+
+**Mother Tmojizu:** It is. The spiral favors the bold, little cat. But the bold must pay.
+
+**Horli Qwin:** [OOC] I'm keeping it. For when I really need it.
+
+**Mother Tmojizu:** [chuckles] Of course you are.
+
+**CHARA:** [OOC] Ma'am, I want to visit the Quest Board. I want to see if anything has changed since the temple.
+
+**Mother Tmojizu:** You head to the central plaza. The Quest Board has been updated. The Carcazod scout posting is still there. The cat-in-a-fire-tree posting has been taken down (someone handled it). And there's a new posting:
+
+"SEEKING BRAVE ADVENTURERS FOR A TOTALLY LEGITIMATE BUSINESS VENTURE." — Signed, "Definitely Not a Scam"
+
+**CHARA:** [OOC] That's suspicious. I'm investigating. INT Investigation.
+
+**Mother Tmojizu:** Roll it.
+
+**CHARA:** [rolls] 17. Plus 5 is 22.
+
+**Mother Tmojizu:** 22. You trace the posting. It was put up by a shell company — "Chimochio Holdings LLC." The address leads to an empty warehouse on the edge of Troll City. Inside: crates of Nothing Ink. Illegal. Unregistered. And a map — a map of the Fairy City underground. With a route marked in red ink. Leading to... the Arcane Academy.
+
+**CHARA:** [OOC] Ma'am, someone is smuggling Nothing Ink into Fairy City. And they're mapping a route to the Arcane Academy.
+
+**Mother Tmojizu:** [quietly] They are.
+
+**CHARA:** [OOC] I'm taking this to GoldQueen_Astra. She needs to know.
+
+**Mother Tmojizu:** You can. But the posting says "Definitely Not a Scam." And you know what that means.
+
+**Horli Qwin:** [OOC] It means it's definitely a scam.
+
+**Mother Tmojizu:** [chuckles] It is.
+
+**Mother Tmojizu:** But there's a complication.
+
+**Mother Tmojizu rolls d6 behind the screen.**
+
+**Mother Tmojizu:** [rolls] 5.
+
+**Mother Tmojizu:** Tronald_The_Mage finally catches up to you.
+
+He emerges from behind a barrel. His robes are torn. His staff is broken. He's covered in leaves. And he's holding a tree branch like a sword.
+
+**TRONALD_THE_MAGE:** "I FOUND YOU! I've been following you for THREE DAYS! I fought a tree! The tree won! But I learned something! I learned... uh..." [checks his character sheet] "...I learned that wizards are good at magic!"
+
+**Sol-Supreme:** [OOC] Tomo, can I use my INT 20 to teach him something useful?
+
+**Mother Tmojizu:** Roll Persuasion.
+
+**Sol-Supreme:** [rolls] 12. Plus 2 is 14.
+
+**Mother Tmojizu:** 14. You try to teach Tronald about spell slots. He falls asleep. You wake him up. He asks if spell slots are like inventory slots. You give up.
+
+**TRONALD_THE_MAGE:** "Can I join your party? I'm very powerful. I have a seventeen Intelligence."
+
+**Sol-Supreme:** [in character] "It's three."
+
+**TRONALD_THE_MAGE:** "STOP SAYING THAT."
+
+**Mother Tmojizu:** [chuckles] He's persistent. He's useless. And he's following you. Whether you like it or not.
+
+**Mother Tmojizu:** End of Session 3. You're level 3. You've upgraded your gear. You've blessed the Healing Spring. You've discovered a Nothing Ink smuggling operation. And Tronald is following you.
+
+**CHARA:** [OOC] Ma'am, next session I want to go to Fairy City. I need to warn GoldQueen_Astra about the smuggling.
+
+**Mother Tmojizu:** [smiles] You will. And the breach will be waiting.
+
+**Sol-Supreme:** [OOC] Tomo, I'm a tank now. AC 18. Extra Attack. INT 20. I'm ready.
+
+**Mother Tmojizu:** [warmly] You are.
+
+**IQabella:** [OOC] Mom, I can buff three people at once now. The whole party, plus one. I'm ready.
+
+**Mother Tmojizu:** [smiles] You are.
+
+**Horli Qwin:** [OOC] Mom T, my Slashing Flourish hits adjacent enemies now. I'm gonna slash-flourish-rap so hard. I'm ready.
+
+**Mother Tmojizu:** [chuckles] You are.
+
+**Mother Tmojizu:** Sleep well, ducklings. The spiral turns. The pieces remember. And the breach... the breach is at 50%.
+
+---
+
+**[END OF AVA-SESSION-003]**
+**Session Status: Party Level 3 | Breach: 50% (12 days) | New: Shield +1 (Sol), Blessed Healing Spring (IQA), Nothing Ink smuggling discovered (Chara), Tronald following**
+**Next: Session 4 — "Fairy City." GoldQueen_Astra has more to reveal. The smuggling operation deepens. And the breach accelerates.**
+**ϕ**

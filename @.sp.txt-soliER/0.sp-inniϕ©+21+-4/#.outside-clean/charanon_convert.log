@@ -1,0 +1,65 @@
+=== CHAR.A.NON Books Converter ===
+Voice: fr-FR-VivienneMultilingualNeural (CHARA)
+Method: page_*.txt → single space join (no pauses)
+
+Wave 1: Books 1010% and 1100...
+Traceback (most recent call last):
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 208, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 166, in main
+    files = sorted([f for f in os.listdir(src_dir) if pattern.match(f)])
+FileNotFoundError: [Errno 2] No such file or directory: '/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/SP.all-writeez28-b2/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011/BOOK]1010%'
+Traceback (most recent call last):
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 208, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 166, in main
+    files = sorted([f for f in os.listdir(src_dir) if pattern.match(f)])
+FileNotFoundError: [Errno 2] No such file or directory: '/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/SP.all-writeez28-b2/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100/book_template.scp]1100'
+Wave 2: Books 101, 110, 111...
+[#.book_template.scp]110]fix] 8 files to convert
+  SKIP: chapter_1
+  SKIP: chapter_2
+  SKIP: chapter_3
+  SKIP: chapter_4
+  SKIP: chapter_5
+  SKIP: chapter_6
+  SKIP: chapter_7
+  SKIP: chapter_8
+[#.book_template.scp]110]fix] DONE: 8 ok, 0 failed
+Traceback (most recent call last):
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 208, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 166, in main
+    files = sorted([f for f in os.listdir(src_dir) if pattern.match(f)])
+FileNotFoundError: [Errno 2] No such file or directory: '/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/SP.all-writeez28-b2/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101/#.book_template.scp]101'
+[#.book_template.scp]111] 13 files to convert
+  SKIP: chapter_1
+  SKIP: chapter_10
+  SKIP: chapter_11
+  SKIP: chapter_12
+  [5/13] chapter_13
+  SKIP: chapter_2
+  SKIP: chapter_3
+  SKIP: chapter_4
+  SKIP: chapter_5
+  SKIP: chapter_6
+  SKIP: chapter_7
+  SKIP: chapter_8
+  SKIP: chapter_9
+[#.book_template.scp]111] DONE: 12 ok, 1 failed
+
+=== CHAR.A.NON DONE ===
+Total converted:
+20

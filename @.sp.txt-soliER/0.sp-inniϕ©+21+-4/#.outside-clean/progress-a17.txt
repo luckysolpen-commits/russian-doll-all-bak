@@ -1,0 +1,22 @@
+# PROGRESS - April 17, 2026 - Book TTS Redo (Pause Fix + Ava Voice + Book Name)
+
+Voice: en-US-AvaNeural
+Logic: Strip all internal pauses (newlines), delete old MP3s, name with book title.
+
+- [x] 0. Sol Pen - COMPLETED
+- [x] 1. Geminii Part 1 - COMPLETED
+- [x] 1. Gemandii Part 2 - COMPLETED
+- [x] 2. RedRock AndROLL - COMPLETED
+- [x] 3. Death-Kryo - COMPLETED
+- [x] 4. Moonshine - COMPLETED
+- [/] 5. Superwar - IN PROGRESS
+- [/] 6. Hellride - IN PROGRESS
+- [ ] 7. Avanta C - PENDING
+- [ ] 8. Digi Sol Suicider - PENDING
+- [ ] 9. Metal Sun - PENDING
+- [ ] 10. XO Files - PENDING
+- [ ] 11. Footrace FU - PENDING
+- [ ] 12. Centroid - PENDING
+- [ ] 13. Chatoe BnB - PENDING
+- [ ] 100. Angler Empire (NGL MPYRE) - PENDING
+- [ ] 111. Tear-it - PENDING

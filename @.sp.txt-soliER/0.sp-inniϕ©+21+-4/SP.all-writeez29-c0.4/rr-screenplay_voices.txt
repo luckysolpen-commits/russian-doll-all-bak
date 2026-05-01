@@ -1,0 +1,22 @@
+# Voice mappings for: 2.RedRock.AndROLL]ING]mid]a1/rr-screenplay
+# Generated on: 2026-04-19 17:16:55
+# Copy and paste these lines directly into your EXISTING_VOICE_MAP dictionary
+
+    "ZARA": "en-US-ElviraNeural",
+    "QUEEN": "en-US-EmmaMultilingualNeural",
+    "VANCE": "en-US-ConnorNeural",
+    "CHAIRMAN": "en-US-GiuseppeMultilingualNeural",
+    "RATCHET": "en-US-AndrewNeural",
+    "DR. ARIS": "en-US-AndrewNeural",
+    "COMMANDER 1": "en-US-AndrewNeural",
+    "SCIENTIST 1": "en-US-AndrewNeural",
+    "PILOT 1": "en-US-AndrewNeural",
+    "PILOT 2": "en-US-AndrewNeural",
+    "ARCHITECT (V.O.)": "en-US-AndrewNeural",
+    "MERC 2": "en-US-AndrewNeural",
+    "UN OFFICER": "en-US-AndrewNeural",
+    "GEM (V.O.)": "en-US-AndrewNeural",
+    "SCIENTIST 2": "en-US-AndrewNeural",
+    "PILOT": "en-US-AndrewNeural",
+    "COMMANDER 2": "en-US-AndrewNeural",
+    "QUEEN'S CAPTAIN": "en-US-AndrewNeural",

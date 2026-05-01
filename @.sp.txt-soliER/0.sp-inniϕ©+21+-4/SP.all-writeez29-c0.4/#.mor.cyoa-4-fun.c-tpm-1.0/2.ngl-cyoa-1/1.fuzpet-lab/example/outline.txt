@@ -1,0 +1,74 @@
+
+# CYOA Book Outline: The Bermuda Triangle Castaway
+
+## Objective:
+To create a 69-page choose-your-own-adventure book where the player is a castaway on an island within the Bermuda Triangle, suffering from amnesia, with multiple branching paths leading to various endings, many of which loop back to page 1, reinforcing the cyclical nature of their predicament.
+
+## Themes:
+- Plane Crash & Amnesia
+- Survival (hunting, shelter, resource management)
+- Exploration of a mysterious island
+- Romantic Affairs
+- Survivor Politics & Factions
+- Smuggling Operations
+- Secret Cults
+- Escape Attempts
+- The Bermuda Triangle Paradox (memory loss, cyclical reality)
+
+## Structure & Page Allocation (Total 69 Pages):
+
+**Part 1: The Awakening & Initial Choices (Pages 1-10)**
+-   **Page 1:** The Crash & Amnesia. Waking on the beach, total confusion. First choice: immediate exploration vs. seeking help/shelter inland.
+    *   Choice A: Explore immediate surroundings (-> Page 2)
+    *   Choice B: Head inland towards strange sounds/sightings (-> Page 3)
+    *   *Potential Loop:* If a critical early mistake is made, character wakes up back on Page 1.
+
+-   **Pages 2-3:** Initial exploration of beach and immediate inland areas. Discovery of debris, strange flora/fauna, or early signs of habitation.
+-   **Pages 4-10:** First significant choices leading to distinct paths:
+    *   Discovering a peculiar artifact (-> Path to Smuggling/Mystery)
+    *   Finding a freshwater source (-> Path to Survival/Exploration)
+    *   Following sounds that lead to a hidden cave or a strange structure (-> Path to Cult/Mystery)
+    *   Seeing smoke in the distance (-> Path to Politics/Faction encounter)
+
+**Part 2: Branching Paths & Core Themes (Pages 11-40)**
+This section develops distinct storylines based on early choices.
+
+-   **Path A: The Survivor (Pages 11-25)**
+    *   Focus: Hunting, crafting tools, building shelter, understanding island dangers.
+    *   Sub-choices: Long-term survival vs. immediate escape attempts.
+    *   Encounters: Dangerous wildlife, harsh weather, resource scarcity.
+    *   *Endings within this path:* Death by nature (loop to Page 1), finding a temporary safe haven (leads to other paths), failed escape attempt (loop to Page 1).
+
+-   **Path B: The Seeker & The Cult (Pages 26-40)**
+    *   Focus: Exploring the island's secrets, investigating strange phenomena, discovering the cult.
+    *   Sub-choices: Infiltrating the cult, observing from a distance, attempting to rescue others, or joining.
+    *   Encounters: Cult members, ancient ruins, mystical artifacts.
+    *   *Endings within this path:* Joining the cult (leads to deeper cult narrative or an ending), escaping the cult's influence (leads to other paths), being captured or sacrificed (loop to Page 1).
+
+-   **Path C: Island Society & Politics (Pages 41-50)**
+    *   Focus: Encountering other survivors or established factions. Navigating alliances, rivalries, and power dynamics.
+    *   Sub-choices: Aligning with a faction, starting a new group, playing factions against each other, or remaining neutral.
+    *   Encounters: Charismatic leaders, desperate outcasts, hidden communities.
+    *   *Endings within this path:* Becoming a leader (potential ending or loop), being exiled/killed (loop to Page 1), betraying allies (leads to conflict or loop).
+
+**Part 3: Deeper Adventures & Converging Conflicts (Pages 51-65)**
+-   **Romance & Personal Connections (Pages 51-55):** Developing relationships amidst the chaos. Choices affect loyalty and potential aid or betrayal.
+-   **Smuggling & Intrigue (Pages 56-60):** Opportunities to profit from illicit goods or information on the island. Choices involve risk and reward.
+-   **Major Escape Attempts & Climax (Pages 61-65):** Several paths may converge, leading to a critical decision point for escape, confronting a major threat, or resolving a key conflict. The Bermuda Triangle effect becomes more prominent, with more frequent "dead ends" sending the player back to Page 1.
+
+**Part 4: Endings (Pages 66-69)**
+-   A mix of definitive endings:
+    *   Successful Escape (rare)
+    *   Death on the Island (permanent)
+    *   Becoming a permanent, integrated part of the island society/cult
+    *   Uncovering the island's ultimate secret
+-   **Numerous Loop Endings:** The majority of endings will lead back to Page 1, with the character waking up on the beach, memory wiped, to repeat their experience, emphasizing the Bermuda Triangle's influence. Each loop should feel like a fresh start with the knowledge of the player gained from previous playthroughs.
+
+## Writing Style:
+-   Narrative prose, similar to `example-format/page_01.txt`.
+-   Choices clearly marked with asterisks and the phrase "turn to page X."
+-   Ensure consistent formatting for choices and page references.
+
+## File Naming Convention:
+-   `outline.txt`
+-   `page_XX.txt` (where XX is the page number, e.g., `page_01.txt`, `page_02.txt`, etc.)

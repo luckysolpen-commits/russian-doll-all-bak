@@ -1,0 +1,4 @@
+Ember chirps happily and nudges your hand. "Let's begin!" Ember guides you to a console in the Fuzzball Collective's nexus. "First, research. We need to understand the reaction." Ember helps you access the database, and together you identify the components for Hydrogen: 2H₂ + O₂ → 2H₂O. Ember guides you through the simulation, and with a flash of energy, you successfully synthesize a stable Water Droplet (💧) and gain reaction energy. "You have a knack for this!" Ember chirps.
+
+*   If you want to try synthesizing another Fuzzball element, turn to page 46.
+*   If you ask Ember about its own creation, turn to page 47.

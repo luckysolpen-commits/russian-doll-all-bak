@@ -1,0 +1,12 @@
+**Page 82: Exploring the Damp Chamber**
+
+You explore the rest of the damp chamber. It seems to have been an old, forgotten laboratory or workshop. Among the debris, you find scattered tools, fragments of glass, and what looks like a discarded scientist's journal, its pages brittle with age and dampness.
+
+Hydration: 9/10 (Near water source)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 3/10 (Found a discarded journal in the old chamber)
+
+What do you do?
+
+*   If you try to read the ancient journal, turn to page 107.
+*   If you decide to investigate the ticking device, turn to page 81.

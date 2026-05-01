@@ -1,0 +1,9 @@
+**Page 39: Drone Swarm Overwhelmed**
+
+Your relentless defense of the vents was effective, but the drones were too numerous. Your silk reserves are depleted, and more drones are breaching your defenses. You are overwhelmed by the sheer metallic tide, your territory lost.
+
+Hydration: 8/10 (Exhausted)
+Silk Reserves: 1/10 (Critically low)
+Intel: 5/10 (Overwhelmed by drone swarm)
+
+**--- END OF PATH ---**

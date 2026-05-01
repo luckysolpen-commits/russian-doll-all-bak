@@ -1,0 +1,90 @@
+# PROMPT: Complete CHAR.A.NON Book 111 — "The Final Chapter"
+
+## CONTEXT
+
+You are completing **Book 111** of the CHAR.A.NON series — a CIA cyber-thriller with UFO/alien conspiracy elements. This is the **final book** in the series.
+
+**Base directory:** `SP.all-writeez28-a1/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/#.book_template.scp]111/`
+
+## WHAT EXISTS
+
+- **21 complete screenplay scenes** (`scene_01` through `scene_21`) — full dialogue, action, descriptions
+- **12 chapter directories** with skeletal 1-2 page summaries (not full prose)
+- **Chapter 13** is COMPLETE — `chapter_13/chapter-13-final-charanonbook.txt` — this is the final chapter, DO NOT TOUCH IT
+- **Screenplay outline:** `../screenplay_outline+.txt` — full 21-scene structure
+- **Character sheet:** `../character_sheet.txt`
+- **Worldbuilding:** `../worldbuilding.txt`
+- **Diffusion file:** `diffusion.txt` — 21 image prompts (one per scene)
+
+## WHAT NEEDS TO BE DONE
+
+Convert the **21 screenplay scenes** into **12 full prose chapters** (10 pages each, ~500 words per page).
+
+### Chapter-to-Scene Mapping
+
+| Chapter | Scenes | Content |
+|---------|--------|---------|
+| **Ch 1** | Scenes 1-2 | Cara's new CIA office, encrypted message from ANON; Cyber Lab chaos |
+| **Ch 2** | Scenes 3-4 | Cara alone at night, calls Anon; Lab reveals UFO connection |
+| **Ch 3** | Scenes 5-6 | Cara sifts through Project Nightingale files; Victor LaGraine's call |
+| **Ch 4** | Scenes 7-8 | Cara drives to warehouse; enters, meets Victor |
+| **Ch 5** | Scenes 9-10 | Victor's hidden lab reveal; his backstory and conspiracy claims |
+| **Ch 6** | Scenes 11-12 | Victor shows evidence; dawn breaks, they commit to exposing truth |
+| **Ch 7** | Scenes 13-14 | Distorted call summons Cara to windmill; meets Ariana |
+| **Ch 8** | Scenes 15-16 | Ariana's subterranean lab; alien metal fragment on altar; Cara blacks out |
+| **Ch 9** | Scene 17 | Cara's mind reels from alien knowledge; vision tunnels, fades |
+| **Ch 10** | Scene 18 | Cara wakes in Langley office with no memory; finds Ariana's note |
+| **Ch 11** | Scene 19 | Cara meets Ariana at town square; golden eyes, trance |
+| **Ch 12** | Scenes 20-21 | Superiors threaten Cara, she drops the case; tearful goodbye to Anon |
+| **Ch 13** | (DONE) | **DO NOT TOUCH** — already complete |
+
+## FORMATTING RULES
+
+1. **10 pages per chapter** (page_1.txt through page_10.txt)
+2. **~500 words per page** (minimum 400, maximum 600)
+3. **Insert a newline every ~10 words** for readability (short line breaks, like poetry/prose hybrid)
+4. **Third-person limited** POV, focused on Cara
+5. **Prose style:** Descriptive, tense, cinematic — match the tone of the existing chapter_13
+6. **Screenplay dialogue** should be converted to prose dialogue with tags and action beats
+7. **Each page should end mid-thought or at a natural pause** to create flow into the next page
+
+## STYLE REFERENCE
+
+Read `chapter_13/chapter-13-final-charanonbook.txt` — this is the tone, pacing, and prose quality to match. It's atmospheric, tense, with short punchy sentences mixed with longer descriptive passages. The ending is deliberately ambiguous (Cara's disappearance, Roswell parallels).
+
+## KEY CONSTRAINTS
+
+- **DO NOT change the ending** — it's intentionally ambiguous
+- **DO NOT mention SS.SOL explicitly** — keep it subtle
+- **Maintain Roswell parallels** — the cover-up theme should feel familiar but not on-the-nose
+- **Cara's character:** Loyal soldier turned reluctant truth-seeker, torn between duty and conscience
+- **Anon:** Digital ghost, mysterious ally, the only man Cara truly loved — never fully revealed
+- **Victor LaGraine:** Rogue operative, brilliant, charismatic, morally ambiguous
+- **Ariana:** Mysterious, possibly alien or alien-touched, unnerving, compelling
+- **Thompson & Patel:** Cara's reliable team at the Cyber Lab
+
+## OUTPUT
+
+For each chapter (1 through 12), create 10 page files:
+```
+chapter_1/page_1.txt  (through page_10.txt)
+chapter_2/page_1.txt  (through page_10.txt)
+...
+chapter_12/page_1.txt (through page_10.txt)
+```
+
+**DO NOT overwrite chapter_13** — it is complete and final.
+
+## PROCESS
+
+1. Read the screenplay scenes for each chapter's scene range
+2. Read the existing skeletal pages (they have the right story beats, just need expansion)
+3. Expand each chapter into 10 full pages of prose, matching the style of chapter_13
+4. Save each page as `page_N.txt` in the appropriate chapter directory
+5. Update `wc.txt` with word counts per chapter
+
+## TOTAL OUTPUT
+
+- 12 chapters × 10 pages = **120 page files**
+- ~500 words/page = **~60,000 words total**
+- This is a full novel-length work

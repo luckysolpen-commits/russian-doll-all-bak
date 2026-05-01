@@ -1,0 +1,73 @@
+# Worldbuilding
+
+## Factions/Groups
+*   **Angler Empire:** The multiversal government, a dominant force.
+*   **XVS:** Multiversal police force, part of the Angler Empire.
+*   **Neutrinos:** Inhabitants of Neutrino Prime, corrupted by "Darkness."
+*   **sinqid-fishpeople:** A species at war with the Neutrinos.
+*   **Xerxes:** Inhabitants of Xerxes' Domain, driven to "Madness."
+*   **Sol Pen:** A group or entity in conflict with the Xerxes.
+*   **Aethers:** Inhabitants of Aethers' Realm, plagued by "Dreams."
+*   **Nexus:** A world dominated by an overwhelming "Power."
+*   **Apex:** A species consumed by a false "Hope."
+*   **Archons:** Associated with a returning "Darkness."
+*   **Unlit Tribe:** A rebel tribe formed by Jureth and allies, opposing the Angler Empire.
+*   **Veiled Ones:** Mysterious beings drawn to the "unlit void," aiding the Unlit Tribe.
+*   **Nihilim:** A reclusive tribe dwelling on Nullion, adhering to a nihilistic philosophy.
+*   **Aerites:** A scientific gas/energy tribe from Zephyrion, focused on quantum physical chemistry and evolution.
+*   **Niveans (Ice Surf Tentacle String People):** A race of lithe, tentacled beings with programmable yarn-like filaments, from the Ice Galaxy.
+*   **Noahites:** Aquatic beings with hydrogen fission-powered antennae, from the Water Galaxy, rivals of the Niveans.
+
+## Locations/Planets
+*   **Neutrino Prime:** A vibrant, bioluminescent aquatic world.
+*   **Xerxes' Domain:** A technologically advanced but chaotic world.
+*   **Aethers' Realm:** A serene, ethereal planet.
+*   **Nullion:** A barren, gasless moon, home to the Nihilim.
+*   **Zephyrion:** A gas giant, home to the Aerites.
+*   **Glacia Nephilim:** Homeworld of the Niveans in the Ice Galaxy.
+*   **Poseidonia:** A city on massive ice skates, home to the Niveans.
+*   **Aqua Noah:** A water world, home to the Noahites in the Water Galaxy.
+*   **Frostel Nineva:** A ski resort, a neutral planet and later a refuge.
+*   **Ironfrost:** A citadel within the Angler Empire.
+*   **The Rift:** A wound in the cosmos, where the Unlit Tribe forms.
+*   **Molten Sea:** A raging sea of molten stone, home to Emberkin.
+*   **Glass Sphere:** A world of glass and storm.
+*   **Outer Veils:** Where the stars grow dim and wild, home to Shimmering Hosts.
+
+## Concepts/Items
+*   **Darkness:** A malevolent entity or pervasive corruption.
+*   **Madness:** An unknown force affecting the Xerxes.
+*   **Dreams:** Vivid, manipulative influences plaguing the Aethers.
+*   **Power:** An overwhelming and insidious force.
+*   **Hope:** A false or blinding hope.
+*   **Unlit Void:** A philosophical concept representing truth beyond the Empire's control, a source of power for the Unlit Tribe.
+*   **Angler Features:** Unique physical traits of Anglers (glowing ball on tip, horn/antenna).
+*   **Shell:** A rare hydro-fission artifact that amplifies imagination and energy.
+*   **Pearls:** Treasures of wisdom and growth, found within the Shell.
+*   **Spright-sabers:** Weapons powered by shaken phosphate cells, foaming into jagged blades or spraying acidic streams.
+*   **Yarn Symbiotes:** Programmable yarn-like filaments forming Nivean bodies, clothing, tools, or transport.
+*   **Phosphate Cells:** The Hydroverse's power source.
+*   **Hydrogen Bond:** Fundamental bond in the Hydroverse, cornerstone of matter.
+*   **Quantum Veil:** The quantum realm, where unseen forces reign.
+*   **Strings of Recursion:** Theoretical strings vibrating at a quantum level, forming laws of life and programmable.
+*   **Breath:** A universal force driving physics and chemistry, revered by the Aerites.
+*   **Triple Point:** The specific temperature and pressure where water's three states (ice, liquid, gas) coexist.
+*   **Emberkin:** Forms of ember and smoke born from the Molten Sea.
+*   **Choir Eternal:** Beings of harmony that bind the heavens.
+*   **Unbound:** A tide of shadow released from an obsidian sphere.
+*   **Watcher:** An ancient voice from the edges of time.
+*   **Book of Jureth: The Unlit Path:** Jureth's philosophical counter-argument to Vorith, reaffirming the tribe's values.
+*   **The Art of Subtle Dominion:** Vorith's declaration of war disguised as a philosophical treatise.
+*   **The Book of Nothing:** A nihilistic manuscript by the Nihilator, pondering the void and futility of existence.
+*   **The Decalogue of Quantum Physical Chemistry:** A super-scientific manuscript by the Aerites, outlining principles of quantum physical chemistry.
+*   **The Codex of the Breath:** A biblical-style book by the Aerites, blending scientific inquiry with a prophetic tone.
+*   **Great Whale:** A deity or significant entity in the lore, from whose mouth Phinio received prophecy.
+
+## Events/Conflicts
+*   **Cold Wars:** Tense, indirect conflicts between Niveans and Noahites.
+    *   **Sled Path Sabotage:** Noahites melt Nivean ice paths.
+    *   **Shell Hoarding:** Noahites hoard Shells, denying Niveans access to wisdom.
+    *   **Phosphate Proxy:** Noahites flood markets with acidic "dark energy" drinks.
+*   **Hydro-Ice Schism:** Full-scale civil war between the Water Galaxy (Noahites) and Ice Galaxy (Niveans).
+*   **Battle of the Boreway:** A key battle in the Hydro-Ice Schism.
+*   **Romantic Drama:** Intergenerational love, rivalry, and reconciliation between Nivean and Noahite families.

@@ -1,0 +1,12 @@
+**Page 112: Finding Another Exit**
+
+You search the underground chamber for another exit. Behind a pile of rubble, you discover a narrow passage leading upwards. It appears to be a ventilation shaft, similar to the ones you navigated before, but leading in a different direction.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 7/10 (Found a new ventilation shaft exit)
+
+What do you do?
+
+*   If you ascend the new ventilation shaft, turn to page 131.
+*   If you decide to investigate the pulsating crystal first, turn to page 111.

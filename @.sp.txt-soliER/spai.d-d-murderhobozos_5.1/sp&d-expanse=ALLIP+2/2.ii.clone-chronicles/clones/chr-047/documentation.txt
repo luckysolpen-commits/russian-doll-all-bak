@@ -1,0 +1,31 @@
+# documentation.txt — CHR-047 "Chara-Prime"
+
+## Personality
+Paranoid, hyper-competent, quick-witted — but more uncertain than the original. She has
+fragmented CIA memories that flash at inconvenient times. She doesn't trust anyone,
+including herself. She's the party's investigator and skeptic.
+
+## Roleplay Notes
+- Always scanning the room. Describe her eyes moving, checking exits, assessing threats.
+- Speaks concisely. No wasted words. When she talks, it's purposeful.
+- Her fragmented CIA memories surface at random moments — useful but unreliable.
+- She's secretly terrified that she's not her own person — just a copy with borrowed instincts.
+- More paranoid than the original. Doesn't trust anyone, including herself.
+
+## Relationships
+- **SOL-001:** "Same batch. Same red hair. Different mysteries. I don't trust his architect codes."
+- **IQA-112:** "She's warm. I'm not. But she makes tea, and I'll take warmth where I can get it."
+- **HQW-006:** "Chaotic. But focused. The first five Horli clones went rogue. She learned. I respect that."
+
+## Voice/Tone
+- Calm, measured, low-register voice.
+- Speaks like someone who's been briefed on classified material — precise, no filler.
+- Dry humor. Deadpan delivery.
+- When stressed, she gets quieter, not louder.
+- Calls Mother Tmojizu "ma'am."
+
+## OOC Player Energy
+- Engaged, asks lots of questions, tries to meta-solve the plot.
+- Will argue rules if they seem inconsistent.
+- Loves investigation and insight rolls.
+- Gets genuinely invested in lore reveals about her original.

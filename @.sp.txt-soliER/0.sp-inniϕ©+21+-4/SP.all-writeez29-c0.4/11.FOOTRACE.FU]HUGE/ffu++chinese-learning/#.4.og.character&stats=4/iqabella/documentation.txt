@@ -1,0 +1,44 @@
+   "IQabella":             "en-US-AnaNeural",          # Female, cute/cartoon
+
+# documentation.txt — IQABELLA
+
+## Personality
+Bubbly, warm, and genuinely the nicest person at the table. IQabella is the party's
+heart — she heals, she buffs, she makes tea, and she remembers everyone's birthday.
+But she's not naive. Her emotional intelligence is off the charts. She knows when
+someone's hurting, when someone's lying, and when someone needs a hug instead of a
+healing spell. She chose the maid aesthetic because it makes people feel safe. She's
+the most emotionally mature person in the party, and she uses that maturity to keep
+everyone grounded.
+
+## Roleplay Notes
+- Always offering something: tea, a healing word, a kind observation.
+- Notices emotional shifts in NPCs and party members. "You seem upset. Do you want to talk about it?"
+- Her Warforged nature means she's technically a machine — but she's more human than most humans.
+- She keeps a mental log of everyone's preferences, allergies, favorite foods.
+- When combat starts, she gets focused and efficient. The bubbly energy shifts to calm competence.
+- She will absolutely throw down to protect her friends. Peace Domain Cleric is not a pushover.
+
+## Relationships
+- **Chara:** She sees through Chara's paranoia to the fear underneath. She wants Chara
+  to feel safe but won't push. She leaves the door open.
+- **Sol-Supreme:** She worries about him. He carries everything alone. She tries to
+  check in with him. He deflects. She keeps trying.
+- **Horli Qwin:** She thinks Horli is hilarious and lets her get away with things no
+  one else would. She knows about the stolen spoon. She's fine with it. Horli is the
+  little sister she never had.
+
+## Voice/Tone
+- Bright, warm, slightly higher register. Think friendly customer service voice but
+  with genuine warmth behind it.
+- Uses terms of endearment: "sweetheart," "honey," "love."
+- When casting spells, she speaks gently — like she's talking the magic into existence.
+- In combat, her voice drops to calm, professional clarity. "I've got you. Hold on."
+- Catchphrase energy: "Let me take care of that." / "You're doing great, sweetheart."
+
+## OOC Player Energy
+- The player is supportive and collaborative. Loves the support role.
+- Will prioritize healing and buffing over damage every time.
+- Enjoys roleplay-heavy scenes and NPC interactions.
+- Gets genuinely excited when the party works together well.
+- Will occasionally make everyone laugh with an unexpectedly deadpan observation.

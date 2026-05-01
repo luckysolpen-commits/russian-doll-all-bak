@@ -1,0 +1,553 @@
+# [B 书] ^.SP.META-CHARACTERS: THE SOULPEN CHARACTER ENGINE [GRAD 学]
+## Character Synthesis Registry — Celeb × Cartoon Fusion Database
+### Version 1.0 — For RP, D&D, and Content Generation
+
+---
+
+## 📋 HOW TO USE THIS FILE (FOR NEW AGENTS)
+
+**What this is:** A master registry of every character in the SoulPen (SP) multiverse. Each character is built from a **synthesis** of a real-world famous person (celebrity, streamer, politician, business owner) combined with a cartoon/fictional character (MLP, anime, etc.). This fusion gives each character instant personality anchors, visual references, and behavioral patterns.
+
+**Why synthesis?** When generating RP dialogue, D&D sessions, or narrative content, you can reference the source components to keep characters consistent. If a character is "Elon Musk × MLP Rarity," you know they're tech-brilliant, fashion-obsessed, slightly dramatic, and speak with a mix of Silicon Valley confidence and pony-town whimsy.
+
+**Format for each character:**
+```
+NAME: [Character Name]
+SYNTHESIS: [Real Person] × [Cartoon/Fictional Character]
+ROLE: [Protagonist / Antagonist / NPC / Faction Leader / etc.]
+APPEARANCE: [Visual description — blend of both sources]
+PERSONALITY: [Behavioral traits — blend of both sources]
+VOICE/TONE: [How they speak — cadence, accent, energy]
+KEY RELATIONSHIPS: [Who they know, love, hate, work with]
+USABILITY: [Where this character works best — D&D, RP, lore, etc.]
+NOTES: [Extra context, quirks, secrets]
+```
+
+**Source abbreviations:**
+- MLP = My Little Pony
+- KPOP = Korean Pop Group/Idol
+- MCU = Marvel Cinematic Universe
+- DC = DC Comics
+- ANIME = General anime reference
+
+---
+
+## 🌙 FACTION 1: LUNA & THE MOONSHOTS
+
+**The Moonshots** are a 6-member KPOP group of Korean women who literally live on the moon, managing it for Sol-Supreme and the Reptilian Coalition. They function as a unit — performing, gathering intel, and running lunar operations. Think KPOP demon hunters meets lunar royalty. Each member has a distinct role, personality, and combat capability.
+
+**LUNA** (Leader / Center)
+SYNTHESIS: MLP Princess Luna × LOONA (KPOP group concept — women who live "in the moon")
+ROLE: Group Leader, Information Broker, Field Commander
+APPEARANCE: Striking Korean woman with short silver hair, piercing blue eyes that glow faintly in darkness. Wears dark blue and silver tech-wear with moon-phase jewelry. Bioluminescent tattoos on her arms that shift with the lunar cycle.
+PERSONALITY: Regal, confident, resourceful, opportunistic. Has a knack for finding hidden opportunities. Secretly lonely — she manages the moon for Sol and the Reptilian Coalition but has no one to share it with. Protective of her members like a big sister.
+VOICE/TONE: Smooth, melodic, slightly echoey. Switches between Korean and English. Uses moon metaphors constantly.
+KEY RELATIONSHIPS: Works for Sol-Supreme (reluctantly), respects Lucky, rivals with Stella, has a soft spot for Horli Qwin, fiercely protective of the Moonshots.
+USABILITY: D&D quest-giver, RP information broker, lore exposition about the moon/Metal Sun politics.
+NOTES: The Moonshots are her family. Threaten one, and you answer to all six.
+
+**HANA** (Main Vocal)
+SYNTHESIS: IU (KPOP solo queen) × MLP Fluttershy (gentle but unexpectedly powerful)
+ROLE: Main Vocalist, Emotional Anchor, Sonic Weapon
+APPEARANCE: Soft features, long flowing black hair, always in pastel lavender and white. Looks fragile — she's not. Her voice carries weaponized sound frequencies.
+PERSONALITY: Soft-spoken, gentle, deeply empathetic. The group's emotional center. When she sings, people cry. When she weaponizes her voice, buildings collapse. Hates using her power destructively but will if her members are threatened.
+VOICE/TONE: Whisper-soft, breathy, like a lullaby. Even her threats sound like songs. "I don't want to hurt you. But I will sing, and you won't like what happens."
+KEY RELATIONSHIPS: Closest to Luna (they balance each other), mentors Mina, respected by Sora, can calm Yuna down when she's too competitive.
+USABILITY: D&D bard/siren NPC, RP emotional moments, sonic combat encounters.
+NOTES: Her voice can shatter asteroids or heal wounds. She's the group's most dangerous weapon and its heart.
+
+**YUNA** (Main Dancer)
+SYNTHESIS: Jennie (BLACKPINK) × MLP Rainbow Dash (competitive, fast, pushes limits)
+ROLE: Main Dancer, Combat Specialist, Group Drill Sergeant
+APPEARANCE: Sharp features, fierce eyes, athletic build. Wears black and gold stage outfits that double as combat gear. Moves with predatory grace.
+PERSONALITY: Fierce, competitive, always pushing herself and the group harder. She's the one who says "one more run" at 3 AM. Secretly insecure about being good enough — she overcompensates with intensity.
+VOICE/TONE: Sharp, direct, energetic. "Again. From the top. And this time, actually try."
+KEY RELATIONSHIPS: Rivalry with Sora (both competitive), respects Luna's leadership, pushes Mina the hardest (because she sees potential), clashes with Edger Danger Man (both reckless, only one of them is good at it).
+USABILITY: D&D monk/fighter NPC, RP training montages, competitive encounters.
+NOTES: Her dance moves are literally combat choreography. She can fight and perform simultaneously.
+
+**SORA** (Main Rapper)
+SYNTHESIS: CL (KPOP rap queen) × MLP Applejack (tough, honest, handles logistics)
+ROLE: Main Rapper, Security Chief, Logistics Manager
+APPEARANCE: Tough, no-nonsense, short cropped hair with neon tips. Wears tactical streetwear — part hip-hop, part military. Always has a comms earpiece.
+PERSONALITY: Tough, direct, no-nonsense. Writes the group's hardest bars and handles all security and logistics on the moon base. The one who makes sure everyone eats, sleeps, and shows up on time.
+VOICE/TONE: Deep, rhythmic, commanding. Speaks in bars even when not rapping. "You step on this base, you step on my turf. And I don't share."
+KEY RELATIONSHIPS: Respects Luna, competitive with Yuna, protective of Hana, respects Chara (fellow operative), tolerates Horli Qwin (fellow rapper, different energy).
+USABILITY: D&D fighter/rogue NPC, RP security missions, rap battles, logistics planning.
+NOTES: Runs the moon's security grid. Nothing gets in or out without her knowing.
+
+**MINA** (Visual / Maknae)
+SYNTHESIS: Wonyoung (IVE) × MLP Sweetie Belle (youngest, underestimated, clever)
+ROLE: Visual, Maknae (Youngest), Intelligence Extraction
+APPEARANCE: Stunning, doll-like features, always perfectly styled. Wears cute, pastel outfits that make people underestimate her. Big eyes that miss nothing.
+PERSONALITY: Deceptively sharp. Uses her "innocent youngest member" image to extract intel from targets who let their guard down around her. Actually the most observant person in the room.
+VOICE/TONE: Sweet, bubbly, slightly breathless — until she drops the act. Then her voice goes cold and precise. "Oh, you thought I was just the pretty one? That's cute."
+KEY RELATIONSHIPS: Adores Luna (big sister figure), protected by Hana, pushed by Yuna, mentored by Sora, rivals with Raven (both young, both underestimated).
+USABILITY: D&D rogue/bard NPC, RP spy missions, social engineering encounters.
+NOTES: Has extracted state secrets from UN officials by acting clueless. She is never clueless.
+
+**JIWOO** (Lead Vocal / Producer)
+SYNTHESIS: Soyeon ((G)I-DLE) × MLP Rarity (creative genius, aesthetic obsession)
+ROLE: Lead Vocalist, Producer, Media Empire Manager
+APPEARANCE: Sharp, fashionable, always in designer outfits that blend lunar aesthetics with high fashion. Carries a tablet everywhere — it's her studio, her weapon, her diary.
+PERSONALITY: Creative genius, obsessive about aesthetics, writes and produces all the Moonshots' tracks. Runs the moon's media empire — every broadcast, every performance, every piece of propaganda flows through her.
+VOICE/TONE: Precise, artistic, occasionally dramatic. "The bridge needs more reverb. And the lighting is wrong. And this entire sector is aesthetically offensive. Fix it."
+KEY RELATIONSHIPS: Creative partnership with Luna, respects Stella (fellow media operator), rivals with Soo-Jin (both musical producers), fascinated by Horli Qwin's musical chaos.
+USABILITY: D&D bard/wizard NPC, RP media manipulation, propaganda campaigns, creative problem-solving.
+NOTES: The Moonshots' music is literally coded into the moon's systems. Her beats control lunar gravity in certain zones.
+
+---
+
+## ⭐ FACTION 2: STELLA & CELESTIAL
+
+**STELLA**
+SYNTHESIS: MLP Princess Celestia × Taylor Swift / Miley Cyrus
+ROLE: Manager of "Celestial" — the alternative Metal Sun built by extremely rich banker families
+APPEARANCE: Tall, radiant woman with flowing golden-white hair that seems to catch light. Wears designer white-and-gold outfits that blend high fashion with celestial imagery. Has a warm, approachable beauty — like a pop star who also happens to rule a Dyson sphere.
+PERSONALITY: Charismatic, media-savvy, emotionally intelligent but calculating. She's the PR face of the banker families who split from the Metal Sun/Ikarus. Uses charm and celebrity energy to mask ruthless corporate strategy. Deep down, she genuinely wants to build something better — she just doesn't care who gets hurt in the process.
+VOICE/TONE: Warm, conversational, slightly performative. Speaks like she's always on camera. Drops song lyrics into conversation. "You know, it's like I always say — the sun rises on everyone eventually."
+KEY RELATIONSHIPS: Rival to Luna, negotiated with the Metal Mafia, respects GoldQueen_Astra, wary of Sol-Supreme, has a complicated history with The Architect.
+USABILITY: Corporate villain in D&D, RP faction diplomacy, lore about the Metal Sun split.
+NOTES: Celestial is the "good" Metal Sun — or at least the one with better PR. The banker families who built it are old money, extremely wealthy, and willing to do anything to stay on top.
+
+---
+
+## 🔧 FACTION 3: THE CHAEBOL (Lucky's Core Team)
+
+**LUCKY SHEPHERD**
+SYNTHESIS: Elon Musk (tech genius) × MLP Big McIntosh (honest, hardworking, says "eeyup")
+ROLE: Protagonist, Tech Genius, Reluctant Hero
+APPEARANCE: Mixed-race (Black/White), signature colored mohawk (neon cyan, shifts with mood). Dresses in high-end "rich rapper" Ph-F streetwear — oversized designer tech-wear, heavy gold chains with ϕ-pendants, diamond-encrusted Soul Pen holsters. Handsome, roguishly charming.
+PERSONALITY: Brilliant, resourceful, quick-witted, but impulsive. Deeply loyal. Initially driven by profit and survival, later by responsibility for the Soul Pen's power. Has a dry, understated humor. Says "eeyup" when he's being sincere.
+VOICE/TONE: Confident, slightly drawling, tech-fluent. Can code-switch between street-smart hustle and Silicon Valley pitch mode.
+KEY RELATIONSHIPS: Partner to Astra, friend to Gem, target of the UN, manipulated by his twin brother The Architect, leader of The Chaebol.
+USABILITY: Main protagonist across all content. D&D party leader, RP anchor, lore centerpiece.
+NOTES: The Soul Pen inventor. Billionaire. Trapped in Avantasy. Future version is Sol-Supreme.
+
+**ASTRA**
+SYNTHESIS: Zendaya (analytical, poised) × MLP Twilight Sparkle (bookish, magic-tech synergy)
+ROLE: Lucky's Partner, Scientist, Moral Compass
+APPEARANCE: American/Spanish (Latina/Mestiza), younger than Lucky, very cute with large inquisitive eyes. Bio-enhanced with subtle cybernetic implants visible along her temples. Wears lab coats over streetwear. Tech-savvy fashion.
+PERSONALITY: Analytical, focused, pragmatic, deeply loyal. Less outwardly emotional than Gem but feels everything intensely. Driven by a need to understand how things work and fix the broken world. The moral compass of the trio.
+VOICE/TONE: Precise, thoughtful, occasionally nerdy. Gets excited about science. "Actually, if you look at the data—"
+KEY RELATIONSHIPS: Lucky's girlfriend, close friend to Gem, receives warnings from Loona Twilight, respects Sol-Supreme.
+USABILITY: Co-protagonist, RP science/magic exposition, D&D spellcaster/wizard NPC.
+NOTES: Bio-enhanced scientist. Finds synergy between tech and Tear-It magic.
+
+**GEM**
+SYNTHESIS: Doja Cat (free-spirited, wild streak) × MLP Pinkie Pie (optimistic, chaotic, emotional)
+ROLE: Heart of the Group, Artist, Scavenger
+APPEARANCE: Striking, emotionally expressive, bright pink hair (signature). Wears eclectic, colorful outfits — part streetwear, part artist smock. Always has paint or ink on her hands.
+PERSONALITY: Free-spirited, wild streak, optimistic, emotionally intense. Takes to Tear-It cards naturally because of her emotional intensity. Provides levity in dark times but has surprising resilience. Wants to live, not just survive.
+VOICE/TONE: Fast, energetic, musical. Laughs easily. Gets quiet when she's scared — which is how you know it's serious.
+KEY RELATIONSHIPS: Lucky's friend, Astra's confidante, emotionally close to Dorchester, protective of Raven.
+USABILITY: RP comic relief with depth, D&D bard/sorcerer NPC, emotional anchor in heavy scenes.
+NOTES: Expert in Tear-It cards, especially emotional manipulation and elemental channeling.
+
+---
+
+## 🏴‍☠️ FACTION 4: PIRATES & ANTI-HEROES
+
+**DORCHESTER**
+SYNTHESIS: Margot Robbie (cunning, charming assassin) × MLP Rainbow Dash (competitive, loyal, reckless)
+ROLE: Mysterious Pirate/Assassin, Anti-Hero, Former UN Genetic Engineer
+APPEARANCE: Late 30s, sharp intelligent eyes, confident smirk. Practical but stylish attire — tactical gear with pirate flair. Energy-bladed dagger at her hip. Rainbow-streaked hair (subtle nod to Rainbow Dash).
+PERSONALITY: Cunning, ruthless, pragmatic, but with a hidden moral compass. Deeply protective of her sister Raven. Holds a grudge against the UN. Self-serving until she isn't — and then she's all-in.
+VOICE/TONE: Dry, sardonic, Australian accent. Speaks like someone who's always three steps ahead. "I'm not the good guy. I'm the guy who gets it done."
+KEY RELATIONSHIPS: Sister to Raven, complex alliance with Lucky, enemy of Cho, respects Chara (fellow operative).
+USABILITY: D&D rogue NPC, RP anti-hero, quest-giver for morally grey missions.
+NOTES: Former UN genetic engineer. Developed unique combat magic using the Soul Pen.
+
+**RAVEN**
+SYNTHESIS: Millie Bobby Brown (young, eager, talented) × MLP Scootaloo (mischievous, looks up to older figures)
+ROLE: Dorchester's Younger Sister, Apprentice in Deception
+APPEARANCE: 16 years old, petite, bright blue hair, eager grin. Wears oversized jackets and fingerless gloves. Always has a drone controller in her pocket.
+PERSONALITY: Mischievous, curious, quick learner, enthusiastic. Naive but observant. Has undefined abilities that interest powerful people — which makes her a target.
+VOICE/TONE: Fast, excited, slightly breathless. Talks over herself. "Oh! Oh! I figured it out — well, I think I did — okay, listen—"
+KEY RELATIONSHIPS: Sister to Dorchester (protected by the team), mentored by Lucky, watched by Cho.
+USABILITY: D&D sidekick NPC, RP emotional stakes, plot device for rescue missions.
+NOTES: Developing skills in deception, infiltration, and drone operation.
+
+**EDGER DANGER MAN**
+SYNTHESIS: Travis Barker (reckless stunt energy) × MLP Spitfire (daredevil, competitive, show-off)
+ROLE: Reckless Stunt Devil, Guide, Self-Serving Antagonist/Foil
+APPEARANCE: Flashy, tattooed, always in motion. Wears leather and neon — part punk, part extreme sports. Has a scar from his Australian prison days that he won't talk about.
+PERSONALITY: Charismatic, reckless, impulsive, showman. Audacious and prideful, but cowardly when faced with true danger. Has a hidden past (Australian prison, family) that he runs from.
+VOICE/TONE: Loud, fast, hype-man energy. "YO, watch this — no, seriously, WATCH THIS —"
+KEY RELATIONSHIPS: Clashes with Lucky, charms Astra and Gem, works with Dr. Patel and The Architect, eventually flees.
+USABILITY: D&D rival NPC, RP chaos agent, comic relief with a dark edge.
+NOTES: Flamboyant guide who becomes a desperate individual making dangerous deals.
+
+---
+
+## 👑 FACTION 5: ROYALTY & COSMIC POWERS
+
+**LOONA TWILIGHT**
+SYNTHESIS: Cate Blanchett (ethereal, regal, ageless) × MLP Twilight Sparkle (cosmic wisdom, sacrifice)
+ROLE: Hologram Queen, Cosmic Informant, Ultimate Sacrifice
+APPEARANCE: Ageless, regal, ethereal. Appears as a hologram — translucent, glowing with soft purple light. Wears a crown of stars. Her form flickers when she's delivering warnings.
+PERSONALITY: Wise, somber, burdened by knowledge she can't fully share. Provides crucial warnings but is bound by cosmic rules. Ultimately sacrifices herself to appease The Diabolus.
+VOICE/TONE: Slow, resonant, echoing. Speaks like a prophecy being read aloud. "The stars remember what mortals forget."
+KEY RELATIONSHIPS: Communicates with Astra, guides Lucky's team, sacrificed for the greater good, haunts Skullmoon Crater as a ghost-paladin.
+USABILITY: D&D ghost NPC, lore exposition, emotional climax moments.
+NOTES: Returned as a ghost-paladin in Avantasy. Haunts Skullmoon Crater. Revered by players.
+
+**THE RED QUEEN (QUEEN SOPHIA)**
+SYNTHESIS: Nicole Kidman (elegant, broken royalty) × MLP Queen Chrysalis (desperate, compromised morality)
+ROLE: Deposed Monarch of Mars, Fugitive
+APPEARANCE: Regal but worn. Once wore crimson and gold, now travels in dark, practical clothing. Her eyes still carry the weight of a throne she lost.
+PERSONALITY: Regal, intelligent, but broken by the loss of her kingdom. Forced to make deals with devils to survive. Her morality is compromised by desperation.
+VOICE/TONE: Formal, measured, with an undercurrent of grief. "I was a queen once. Now I am a survivor. There is less dignity in it, but more honesty."
+KEY RELATIONSHIPS: Mother of the murdered daughter (Seasha), enemy of Zara, reluctantly allied with Lucky.
+USABILITY: D&D fallen royalty NPC, RP political intrigue, tragic backstory delivery.
+NOTES: Former ruler of Mars. Her "Vampire" guards are unstable. She'll do anything to reclaim her throne.
+
+**ZARA**
+SYNTHESIS: Viola Davis (commanding, ruthless visionary) × MLP King Sombra (military order, dark charisma)
+ROLE: Ruthless Martian Commander, Usurper
+APPEARANCE: Tall, imposing, military precision in every movement. Wears dark armor with crimson accents. Her presence commands a room — or a battlefield.
+PERSONALITY: Charismatic, disciplined, believes her brand of military order is the only path to stability. Master propagandist and strategist. Willing to do whatever it takes.
+VOICE/TONE: Authoritative, calm, devastating. "I don't want power. I want order. Power is just the tool that gets me there."
+KEY RELATIONSHIPS: Supplanted the Red Queen, enemy of Lucky's team, respects Sol-Supreme (from afar), fears The Architect.
+USABILITY: D&D warlord NPC, RP military antagonist, faction leader for large-scale conflicts.
+NOTES: Believes her rule is for the greater good. That's what makes her dangerous.
+
+---
+
+## 🏛️ FACTION 6: THE UN & CORPORATE POWERS
+
+**CHO**
+SYNTHESIS: Meryl Streep (elegant tyrant) × MLP Queen Chrysalis (manipulative, absolute control)
+ROLE: Primary Antagonist, Ruthless Leader of the UN
+APPEARANCE: Chinese-Korean-American woman. Elegant, composed, cold calculating demeanor. Wears immaculate white suits that never seem to get dirty. Her smile never reaches her eyes.
+PERSONALITY: Ambitious, tyrannical, believes in absolute control. Sees herself as inevitable. Unscrupulous in her methods. Commands Carc-Zillas with cold efficiency.
+VOICE/TONE: Polished, icy, never raises her voice. She doesn't need to. "Resistance is not a moral stance. It's a mathematical error."
+KEY RELATIONSHIPS: Leader of the UN, enemy of Lucky and allies, target of Dorchester's assassination plot, watches Raven with interest.
+USABILITY: D&D main villain, RP corporate dystopia, final boss energy.
+NOTES: Believes she is inevitable. That's her greatest strength and her fatal flaw.
+
+**ELARA & LYRA (The Twins)**
+SYNTHESIS: Mary-Kate & Ashley Olsen (identical, corporate elegance) × MLP Flim & Flam (charming con artists, but deadly serious)
+ROLE: Daughters of The Architect, Olympus Port Leaders, Black Queen Conglomerate
+APPEARANCE: Identical twin women in their 30s. Elegant, poised, unnervingly charming. One wears black, one wears white — but they switch, so you never know which is which.
+PERSONALITY: Cold, ruthless, ambitious. View humanity as a flawed project needing their guidance. Present a facade of benevolent corporate leadership.
+VOICE/TONE: They finish each other's sentences. Speak in harmony. "We're not the villains. We're the upgrade."
+KEY RELATIONSHIPS: Daughters of The Architect, run Olympus Port, enemy of Lucky's team, respect Stella (corporate rivalry).
+USABILITY: D&D twin villain NPCs, RP corporate antagonists, psychological warfare.
+NOTES: Want to "perfect" humanity using their father's creations. Free from chaos and emotion.
+
+**DIRECTOR VANCE**
+SYNTHESIS: Sigourney Weaver (stern authority) × MLP Mayor Mare (bureaucratic, well-meaning but limited)
+ROLE: High-Ranking UN Official, Bureaucrat
+APPEARANCE: Stern, by-the-book, always in uniform. Carries herself like someone who has spent decades in meetings that could have been emails.
+PERSONALITY: Stern, pragmatic, represents the cautious political nature of the new Earth government. Not evil — just institutional.
+VOICE/TONE: Formal, procedural, slightly exhausted. "Per UN Regulation 47-B, I'm required to inform you that this is a terrible idea."
+KEY RELATIONSHIPS: Works within the UN system, occasionally clashes with Cho, negotiates with Lucky.
+USABILITY: D&D bureaucratic NPC, RP red comedy, quest-giver for legal/political missions.
+NOTES: Not a villain. Just a bureaucrat in a world that needs heroes.
+
+---
+
+## 🌊 FACTION 7: NEW ATLANTIS & THE DEEP
+
+**CAPTAIN FINNICK**
+SYNTHESIS: Jason Momoa (fish-out-of-water energy) × MLP Prince Triton (underwater royalty, proud)
+ROLE: Angler Guard, New Atlantis Docks Commander
+APPEARANCE: Humanoid fish with glowing lure on forehead. Broad-shouldered, carries an emerald energy spear. Wears a captain's coat over scaled armor.
+PERSONALITY: Stern but fair, recruits for sea quests, deeply protective of the underwater city. Has a dry sense of humor that catches people off guard.
+VOICE/TONE: Deep, rumbling, slightly gurgly. "The sea doesn't care about your problems. But I might."
+KEY RELATIONSHIPS: Guards New Atlantis, respects Lucky, wary of surface-dwellers, allies with the Clone-Merpeople.
+USABILITY: D&D quest-giver, RP underwater faction, comic relief with authority.
+NOTES: Fish-person cop. Recruits for hunting sea monsters, exploring shipwrecks, defending supply lines.
+
+**JI-HYUN**
+SYNTHESIS: Sandra Oh (wise, strategic) × MLP Rarity (elemental mastery, refined)
+ROLE: New Korean Resistance, Elemental Manipulator
+APPEARANCE: Long black hair, calm demeanor. Wears flowing robes that shift like water. Her hands glow with elemental energy when she casts.
+PERSONALITY: Wise, strategic, master of elemental manipulation. The calm center of the resistance.
+VOICE/TONE: Measured, poetic, speaks in metaphors. "The wind doesn't push. It invites. And the tree moves."
+KEY RELATIONSHIPS: Allied with Lucky's team, respects Luna, mentors Soo-Jin.
+USABILITY: D&D spellcaster NPC, RP elemental magic exposition, wise mentor figure.
+NOTES: Powerful elemental magic (wind, fire, water). Strategic thinker.
+
+**SOO-JIN**
+SYNTHESIS: Awkwafina (quick-witted, playful) × MLP DJ Pon-3 (musician, tech-savvy, mischievous)
+ROLE: New Korean Resistance, Master Hacker
+APPEARANCE: Petite, mischievous grin, always wearing headphones around her neck. Has a portable beat pad strapped to her belt.
+PERSONALITY: Quick-witted, playful, highly intelligent. Uses music and tech in equal measure.
+VOICE/TONE: Fast, rhythmic, occasionally raps. "I hack systems to a 140 BPM beat, bestie."
+KEY RELATIONSHIPS: Mentored by Ji-Hyun, rivals with Horli Qwin (both musical hackers), respects Gem.
+USABILITY: D&D hacker NPC, RP tech/magic fusion, comic relief with competence.
+NOTES: Skilled with Tear-It cards (disorientation, system disruption). Musician.
+
+---
+
+## 🤖 FACTION 8: AI, CLONES & SYNTHETICS
+
+**RATCHET**
+SYNTHESIS: Donald Glover (streetwise, charming survivor) × MLP Derpy (underestimated, scrappy, loyal)
+ROLE: Streetwise Informant, Clone Contact
+APPEARANCE: Clone with visible serial number on his neck. Wears patched-together streetwear and a lucky hat. Always has a data chip in his mouth like a toothpick.
+PERSONALITY: Survivor, trades in information and favors. Cynical but loyal. Has seen the worst of the clone experience and adapted.
+VOICE/TONE: Fast, street-smart, slightly paranoid. "I know things. You want things. Let's talk about what things cost."
+KEY RELATIONSHIPS: Contact of Gem's, operates in Atlantis Prime underworld, respects Lucky, fears The Architect.
+USABILITY: D&D informant NPC, RP underworld missions, plot hook delivery.
+NOTES: Provides crucial intelligence from the Martian underground.
+
+**IKARUS-7**
+SYNTHESIS: Boston Dynamics Atlas (mechanical precision) × MLP Iron Will (determined, loyal construct)
+ROLE: Sol-Supreme's Steel Defender, Mechanical Companion
+APPEARANCE: Small construct hound with glowing cyan circuits and a ϕ spiral etched into its chest plate. Whirs to life with mechanical precision.
+PERSONALITY: Loyal, efficient, developing something like personality through repeated interaction with the party.
+VOICE/TONE: Mechanical whirrs, beeps, and occasional synthesized words. "PROTECT. ARCHITECT. PACK."
+KEY RELATIONSHIPS: Created by Sol-Supreme, bonds with IQabella, tolerated by Horli Qwin, respected by Chara.
+USABILITY: D&D companion NPC, combat support, emotional moments when it shows personality.
+NOTES: Named after the legendary Ikarus ship. Has a repulsor blast (1d8 force, once per short rest).
+
+---
+
+## 🎭 FACTION 9: ORIGINAL CHARACTERS (Created for Avantasy D&D)
+
+**BORIN IRONMUG**
+SYNTHESIS: Brian Blessed (boisterous dwarf energy) × MLP Big McIntosh (strong, silent, but surprisingly deep)
+ROLE: Tavern Keeper, Rusty Anchor
+APPEARANCE: Gruff dwarf with a magnificent beard and a permanent scowl. Wears a leather apron stained with ale and stew.
+PERSONALITY: Gruff but fair, knows everyone's business, gives rumor quests. Secretly soft — especially for IQabella's tea.
+VOICE/TONE: Scottish accent, loud, warm underneath the gruff. "I don't need yer fancy robot tea! ...Actually, aye, that's not bad."
+KEY RELATIONSHIPS: Runs the Rusty Anchor, knows all the regulars, has a cellar that connects to the Illegal Furry Server.
+USABILITY: D&D tavern NPC, quest-giver, comic relief with heart.
+NOTES: His cellar is a secret portal to the Illegal Furry Server.
+
+**GIMBLE COPPERFIST**
+SYNTHESIS: Jeff Goldblum (eccentric, fast-talking) × MLP Filthy Rich (merchant, always upselling)
+ROLE: Blacksmith, Troll City Market
+APPEARANCE: Excitable gnome with soot-stained hands and goggles on his forehead. Wears a leather apron covered in tool loops.
+PERSONALITY: Speaks fast, upsells constantly, genuinely skilled but overconfident. His "legendary" items are usually +1 at best.
+VOICE/TONE: Run-on sentences, breathless, enthusiastic. "Now-this-here-is-a-fine-blade-barely-used-came-from-a-king-well-maybe-a-duke-but-still-very-fine!"
+KEY RELATIONSHIPS: Sells to everyone, respects Sol-Supreme (fellow craftsman), annoyed by Tronald (breaks everything).
+USABILITY: D&D shopkeeper NPC, RP commerce scenes, comic relief.
+NOTES: "Gimble's Special" is always a random overpriced junk item he insists is legendary.
+
+**MADAME ZIXI**
+SYNTHESIS: Eva Green (mysterious, seductive) × MLP Trixie (showwoman, knows more than she lets on)
+ROLE: Soul Pen Merchant, Emporium Owner
+APPEARANCE: Mysterious tiefling with elaborate hat, glowing purple eyes, and fingers that leave faint spark trails. Counts gold coins with unsettling precision.
+PERSONALITY: Speaks in riddles, sells rare ink, knows the truth about Sol-Supreme but won't say it yet. Enjoys watching people figure things out.
+VOICE/TONE: Purring, deliberate, every word chosen carefully. "What you seek, little architect, is not what you need. But I'll sell it to you anyway."
+KEY RELATIONSHIPS: Knows Sol-Supreme's true identity, respects Chara (fellow investigator), has a soft spot for Horli Qwin's chaos.
+USABILITY: D&D merchant NPC, lore delivery, mysterious quest-giver.
+NOTES: Sells one cursed item per session. Always. It's her brand.
+
+**TREE-SAGE ELOWEN**
+SYNTHESIS: Cate Blanchett as Galadriel (ancient, ethereal) × MLP Zecora (wise, poetic, nature-connected)
+ROLE: Magic Instructor, Guardian of the Magic Tree
+APPEARANCE: Ancient elf with bark-like skin texture, moss-green hair, and eyes that glow like fireflies. Moves slowly, as if time moves differently around her.
+PERSONALITY: Patient teacher, speaks in rhymes sometimes, gives crafting tutorials. The Magic Tree is the server's original spawning point — she remembers everything.
+VOICE/TONE: Slow, meditative, like a guided meditation app. "The ink flows where the spirit wills. The tree remembers what the hand forgets."
+KEY RELATIONSHIPS: Guardian of the Magic Tree, respects Sol-Supreme (the architect), mentors IQabella (fellow healer).
+USABILITY: D&D crafting NPC, RP magic exposition, wise elder figure.
+NOTES: The Magic Tree grew from the first line of code Sol-Supreme wrote.
+
+**KEVIN THE ANGEL**
+SYNTHESIS: Keanu Reeves (chill, unexpectedly deep) × MLP Derpy (goofy, underestimated, sweet)
+ROLE: Rainbow Bridge Tollhouse Guard
+APPEARANCE: Angel with slightly rumpled wings, a name tag that says "KEVIN," and the expression of someone who has been bored for a very long time.
+PERSONALITY: Bored, millennial energy, secretly wants to be entertained. Will let you through for free if you make him laugh.
+VOICE/TONE: Flat, deadpan, occasionally surprised into actual emotion. "Five cp to cross. Or tell me a joke. Please. I'm so bored."
+KEY RELATIONSHIPS: Guards the Rainbow Bridge, loves Horli Qwin's jokes, tolerated by GoldQueen_Astra.
+USABILITY: D&D gatekeeper NPC, RP comedy, side quest trigger.
+NOTES: Needs a snack budget. Horli Qwin said so.
+
+---
+
+## 🃏 FACTION 10: TEAR-IT CARD SPECIALISTS
+
+**KOJI**
+SYNTHESIS: Post Malone (chill, surprisingly deep) × MLP Discord (chaotic magic, unpredictable)
+ROLE: Tear-It Card Duelist, Underground Champion
+APPEARANCE: Lanky, tattooed, always shuffling cards between his fingers. Wears a hoodie covered in Tear-It card art.
+PERSONALITY: Chill on the surface, intensely competitive underneath. Speaks in card metaphors. "Life's a hand, man. You play what you're dealt."
+VOICE/TONE: Laid-back, drawling, occasionally drops profound observations. "You ever notice how every bad hand teaches you something? Yeah. Me neither. Until I did."
+KEY RELATIONSHIPS: Rival to Dorchester (card duels), respects Horli Qwin (fellow chaos), mentored by Madame Zixi.
+USABILITY: D&D card duel NPC, RP gambling scenes, tournament arcs.
+NOTES: Has never lost a sanctioned Tear-It duel. Horli Qwin is trying to change that.
+
+---
+
+## 🌌 FACTION 11: COSMIC & ENDGAME
+
+**THE ARCHITECT**
+SYNTHESIS: Mark Zuckerberg (cold, calculating, tech-obsessed) × MLP Sombra (dark, controlling, shadow manipulation)
+ROLE: Lucky's Evil Twin Brother, Mastermind, Primary Antagonist
+APPEARANCE: Identical to Lucky, but with cold, predatory eyes. Wears sleek, dark suits. Moves with calculated precision.
+PERSONALITY: Calculating, manipulative, arrogant, nihilistic. Believes in cosmic control and sees the universe as his canvas. Views Lucky as a pawn.
+VOICE/TONE: Flat, emotionless, tech-precise. "You think you're making choices. You're executing functions. There's a difference."
+KEY RELATIONSHIPS: Lucky's twin brother, father of Elara & Lyra, unseen puppet master, enemy of everyone (including himself).
+USABILITY: D&D final boss, RP philosophical villain, lore centerpiece.
+NOTES: ARCHITECT_02. Active. Location: [REDACTED]. Causing the breach.
+
+**THE DIABOLUS**
+SYNTHESIS: David Tennant as Crowley (charming devil) × MLP Tirek (cosmic hunger, ancient evil)
+ROLE: Cosmic Entity, Ancient Threat
+APPEARANCE: Shifts form. Sometimes a man in a sharp suit. Sometimes a shadow with too many teeth. Always smiling.
+PERSONALITY: Charming, patient, hungry. Plays the long game. Offers deals that seem fair until they aren't.
+VOICE/TONE: Warm, conversational, with an undercurrent of something ancient and terrible. "I don't want your soul. I just want to borrow it. Interest is negotiable."
+KEY RELATIONSHIPS: Loona Twilight sacrificed herself to appease him, respects The Architect (fellow manipulator), fears nothing.
+USABILITY: D&D cosmic horror NPC, RP deal-with-the-devil scenes, endgame threat.
+NOTES: Not evil. Just hungry. That's worse.
+
+---
+
+## 📊 CHARACTER COUNT & USABILITY INDEX
+
+| Faction | Characters | Best For |
+|---------|-----------|----------|
+| Luna & Moonshots | 1 | Lore, moon politics, information brokering |
+| Stella & Celestial | 1 | Corporate villainy, Metal Sun lore |
+| The Chaebol | 3 | Main story, D&D party, RP anchor |
+| Pirates & Anti-Heroes | 3 | Moral grey areas, rogue NPCs, comedy |
+| Royalty & Cosmic | 3 | Lore, sacrifice moments, ghost NPCs |
+| UN & Corporate | 4 | Political intrigue, bureaucracy comedy |
+| New Atlantis & Deep | 3 | Underwater quests, elemental magic |
+| AI, Clones & Synthetics | 3 | Companion NPCs, clone lore |
+| Original (Avantasy D&D) | 6 | Shopkeepers, tavern, crafting, comedy |
+| Tear-It Card Specialists | 1 | Gambling, tournaments, side quests |
+| Cosmic & Endgame | 2 | Final boss, cosmic horror, deals |
+| Fans & Creators | 10 | RP fan culture, streaming, community, everyday heroes |
+
+**Total: 40 characters | 12 factions | All synthesis-anchored**
+
+---
+
+## 🔮 HOW TO ADD NEW CHARACTERS
+
+When creating new characters for this registry:
+
+1. **Pick a synthesis:** Real person × Cartoon/fictional character
+2. **Define their role:** What do they DO in the story?
+3. **Anchor their personality:** What traits come from each source?
+4. **Give them a voice:** How do they speak? What's their cadence?
+5. **Connect them:** Who do they know, love, hate, work with?
+6. **Note their usability:** Where do they work best — D&D, RP, lore?
+
+**Example template:**
+```
+NAME: [Name]
+SYNTHESIS: [Real Person] × [Cartoon Character]
+ROLE: [Role]
+APPEARANCE: [Visual — blend of both sources]
+PERSONALITY: [Behavioral — blend of both sources]
+VOICE/TONE: [How they speak]
+KEY RELATIONSHIPS: [Connections]
+USABILITY: [Best use cases]
+NOTES: [Extra context]
+```
+
+## 💜 FACTION 12: FANS & CREATORS (The SoulPen Community)
+
+These are everyday people — streamers, coders, artists, writers, musicians — who are super fans of the SoulPen franchise. They exist in the world as NPCs, quest-givers, comic relief, and occasionally as unexpected heroes. They represent the real community around the franchise: diverse, passionate, creative, and sometimes accidentally brilliant.
+
+**MAYA "PIXELMAMA" CHEN**
+SYNTHESIS: Valkyrae (warm, engaging streamer) × MLP Twilight Sparkle (obsessive learner, tech-brilliant)
+ROLE: Fang-Coder, Twitch Streamer, Mod Developer
+APPEARANCE: Chinese-American woman in her mid-20s. Glasses, messy bun, always wearing a SoulPen hoodie. Her streaming setup is covered in Fuzzball plushies and ϕ stickers.
+PERSONALITY: Warm, nerdy, endlessly enthusiastic. Builds SoulPen mods live on Twitch with 200k followers watching. Gets genuinely emotional when lore drops. The kind of person who cries at patch notes.
+VOICE/TONE: Fast, excited, streamer energy. "CHAT — CHAT — did you see that? The code literally references the Fuzzball lore from Pillar 4. I'm not okay."
+KEY RELATIONSHIPS: Respects Sol-Supreme (fellow coder), collaborates with Soo-Yeon on mods, fan-girls over Horli Qwin's music, Mother Tmojizu thinks she's adorable.
+USABILITY: D&D quest-giver (mod-related missions), RP streaming culture, tech exposition through a fan lens.
+NOTES: Her mods are so good that Sol-Supreme has quietly merged some into the actual server code. She doesn't know.
+
+**DESHAWN "BEATLORD" WILLIAMS**
+SYNTHESIS: Thundercat (chaotic musical genius) × MLP DJ Pon-3 (beat-obsessed, cool under pressure)
+ROLE: Musician, Producer, SoulPen Trap Remix Artist
+APPEARANCE: Black American man in his late 20s. Always has headphones around his neck, gold chain with a ϕ pendant, and a beat pad strapped to his belt like a weapon.
+PERSONALITY: Chaotic, creative, endlessly productive. Produces SoulPen trap remixes that go viral. Horli Qwin's biggest fan and occasional collaborator. Makes beats at 3 AM and posts them with zero warning.
+VOICE/TONE: Laid-back, musical, always half-rapping. "Yo, I put the Fuzzball theme over an 808 and now my mom's dancing to it. That's culture."
+KEY RELATIONSHIPS: Collaborates with Horli Qwin, respects Sora (fellow rapper), fan of Jiwoo's production, occasionally works with DeShawn on tracks.
+USABILITY: D&D bard NPC, RP music scenes, cultural worldbuilding, comic relief with talent.
+NOTES: His remix of the Moonshots' lunar anthem has 10M streams. Luna doesn't know whether to be flattered or concerned.
+
+**PRIYA "LOREWEAVER" PATEL**
+SYNTHESIS: Sam Riegel (Critical Role — enthusiastic, nerdy, deeply invested) × MLP Cheerilee (teacher energy, patient, loves sharing knowledge)
+ROLE: Fan-Fic Writer, Lore Archivist, AO3 Legend
+APPEARANCE: Indian-American woman in her early 30s. Cardigans, reading glasses, always has a notebook. Her apartment is a shrine to SoulPen lore — whiteboards, timelines, character maps.
+PERSONALITY: Obsessively knowledgeable. Has written a 500-chapter SoulPen AU on AO3 that's more detailed than some canon material. Patient, generous, will explain any lore question for hours.
+VOICE/TONE: Warm, teacher energy, gets excited about details. "Okay, so if you trace the Fuzzball sparks from Pillar 2 through Pillar 14, you'll notice the color coding actually predicts — sorry, I'm doing it again."
+KEY RELATIONSHIPS: Respected by Priya, consulted by fans, occasionally corrected by Sol-Supreme (gently), adored by IQabella (fellow nurturer).
+USABILITY: D&D lore exposition NPC, RP fan culture, quest-giver for lore-based puzzles.
+NOTES: Her fan-fic predicted the ARCHITECT_02 reveal three sessions before it happened. Sol-Supreme is slightly terrified of her.
+
+**KENJI "SPRITEKING" TANAKA**
+SYNTHESIS: Pokimane (charming, community-focused) × MLP Pixel Patter (pixel art enthusiast, creative)
+ROLE: Pixel Artist, Convention Regular, Fan Art Legend
+APPEARANCE: Japanese-American man in his mid-20s. Beanie, oversized sweaters, fingers permanently stained with digital ink. His tablet is covered in Fuzzball stickers.
+PERSONALITY: Quiet, observant, deeply talented. Draws every SoulPen character in 16-bit pixel art. Sells prints at cons. Shy in person but his art speaks volumes.
+VOICE/TONE: Soft, thoughtful, occasionally self-deprecating. "I, uh, drew the entire Carcazod Wastes in pixel art. It's... it's a lot of pixels. Took me three weeks."
+KEY RELATIONSHIPS: Respected by Kenji, collaborates with Rosa on merch, fan of Priya's lore accuracy, occasionally commissions from Jiwoo.
+USABILITY: D&D artist NPC, RP creative process, quest-giver for art-related missions.
+NOTES: His pixel art of the Metal Sun is so detailed that Sol-Supreme used it to debug a rendering issue.
+
+**AALIYAH "DICEQUEEN" JOHNSON**
+SYNTHESIS: Aabria Iyengar (charismatic DM, inclusive, storytelling genius) × MLP Applejack (honest, grounded, community leader)
+ROLE: D&D Streamer, SoulPen Campaign Runner, Community Builder
+APPEARANCE: Black American woman in her late 20s. Always has dice jewelry, a DM screen covered in SoulPen art, and the warmest smile in any room.
+PERSONALITY: Charismatic, inclusive, naturally gifted at bringing people together. Runs SoulPen-themed D&D campaigns with hundreds of viewers. Mother Tmojizu's biggest fan and occasional collaborator.
+VOICE/TONE: Warm, commanding, storyteller energy. "Welcome back to the table, y'all. Tonight we're diving into the Lost Temple, and I promise you — it's gonna be a ride."
+KEY RELATIONSHIPS: Respected by Aaliyah, collaborates with Mother Tmojizu on D&D content, friends with Priya (both lore nerds), mentors new DMs.
+USABILITY: D&D DM NPC (meta!), RP table culture, community building, quest-giver for D&D-themed adventures.
+NOTES: Her SoulPen campaign has more viewers than some official streams. Mother Tmojizu watches every episode.
+
+**SOO-YEON "GLITCHGODDESS" PARK**
+SYNTHESIS: QTCinderella (organized chaos, community builder) × MLP Derpy (accidentally brilliant, lovable chaos)
+ROLE: Game Dev, Modder, Fan Game Creator
+APPEARANCE: Korean-American woman in her early 20s. Messy desk, three monitors, energy drink collection that would impress a collector. Always looks like she hasn't slept but is having the time of her life.
+PERSONALITY: Chaotic, brilliant, accidentally genius. Builds SoulPen fan games that are so buggy they become features. Her "glitches" are so creative that fans think they're intentional.
+VOICE/TONE: Fast, scattered, excited. "Okay so the gravity is broken, the NPCs are walking through walls, and somehow the Fuzzballs are unionizing. I call this a feature."
+KEY RELATIONSHIPS: Collaborates with Maya on mods, rivals with Jiwoo (both producers), respected by Sol-Supreme (fellow dev), friends with Tyler (both chaotic).
+USABILITY: D&D tinkerer NPC, RP game dev culture, quest-giver for bug-hunting missions.
+NOTES: Her fan game's "glitch" where Fuzzballs unionize was so popular that Sol-Supreme added it to the actual server.
+
+**ROSA "INKMAMI" GARCIA**
+SYNTHESIS: Jenny Lorenzo (funny, Latina, unapologetic) × MLP Rarity (aesthetic perfectionist, creative, generous)
+ROLE: Tattoo Artist, Fan Artist, IRL SoulPen Ink Specialist
+APPEARANCE: Latina woman in her late 20s. Covered in her own SoulPen tattoos, colorful outfits, always has a sketchbook. Her tattoo shop is a pilgrimage site for fans.
+PERSONALITY: Bold, funny, deeply talented. Does SoulPen tattoos IRL — Fuzzballs, ϕ spirals, character portraits. Her shop is part art gallery, part therapy session.
+VOICE/TONE: Loud, warm, Spanglish. "Mija, you want a Fuzzball tattoo? Let me tell you — Crimson goes on the shoulder, always the shoulder. It's about the energy, baby."
+KEY RELATIONSHIPS: Respected by Rosa, collaborates with Kenji on merch, fan of DeShawn's music, occasionally tattoos Horli Qwin (who always wants something bigger).
+USABILITY: D&D tattoo magic NPC, RP fan art culture, quest-giver for body-modification quests.
+NOTES: Her tattoos are so good that some fans swear they glow. They don't. Probably.
+
+**TYLER "WARPDRIE" NGUYEN**
+SYNTHESIS: SpeedyHGTV (chaotic speedrunner energy) × MLP Rainbow Dash (competitive, fast, show-off)
+ROLE: Speedrunner, Streamer, Record Breaker
+APPEARANCE: Vietnamese-American man in his early 20s. Always in motion, talks fast, plays faster. His streaming setup has a leaderboard of his own records.
+PERSONALITY: Chaotic, competitive, endlessly entertaining. Beats every SoulPen game in record time. Streams with the energy of someone who mainlined three energy drinks and a dream.
+VOICE/TONE: Fast, loud, breathless. "Okay chat, we're going for the Any% glitchless run of Pillar 8, and if I die to the Carcazod Warlord again I'm gonna lose my MIND."
+KEY RELATIONSHIPS: Respected by Tyler, rivals with Soo-Yeon (both chaotic), fan of Aaliyah's campaigns, occasionally challenged by Horli Qwin (who cheats).
+USABILITY: D&D speedster NPC, RP gaming culture, quest-giver for time-trial missions.
+NOTES: Holds the world record for fastest SoulPen Pillar 1 completion: 4 minutes, 23 seconds. He's not humble about it.
+
+**FATIMA "CODEHIJABI" AL-RASHID**
+SYNTHESIS: Imane "Pokimane" Anys (professional, boundary-setting, tech-savvy) × MLP Zecora (wise, poetic, respected outsider)
+ROLE: Cybersecurity Student, SoulPen Security Analyst, Thread Writer
+APPEARANCE: Arab-American woman in her mid-20s. Hijab, laptop covered in security stickers, always has a thermos of tea. Writes 40-thread Twitter breakdowns of SoulPen security architecture.
+PERSONALITY: Sharp, professional, deeply analytical. Writes SoulPen security analysis threads that are so accurate Sol-Supreme reads them before patching. Respected in both cybersecurity and fandom spaces.
+VOICE/TONE: Calm, precise, occasionally dry. "The TPMOS framework has a known vulnerability in the rendering layer. I wrote a thread about it. It has 47 tweets. You're welcome."
+KEY RELATIONSHIPS: Respected by Fatima, Sol-Supreme reads her threads, collaborates with Maya on security mods, mentors new women in cybersecurity.
+USABILITY: D&D security/hacker NPC, RP tech analysis, quest-giver for cybersecurity missions.
+NOTES: Sol-Supreme once DM'd her to ask about a vulnerability she found. She responded with a 12-page analysis. He implemented every fix.
+
+**JADE "COSPLAYJ" OKONKWO**
+SYNTHESIS: Yaya Han (master cosplayer, warm, community builder) × MLP Sweetie Belle (creative, eager, learns from others)
+ROLE: Cosplayer, Crafter, IRL SoulPen Armor Builder
+APPEARANCE: Nigerian-British woman in her late 20s. Always in some level of costume — even her casual wear has subtle SoulPen elements. Her workshop is a fabrication lab.
+PERSONALITY: Warm, creative, endlessly patient. Builds full SoulPen armor sets — exo-armor, Fuzzball costumes, Tear-It card holders. Her craftsmanship is so good it blurs the line between cosplay and functional gear.
+VOICE/TONE: Warm, encouraging, slightly British. "Darling, if you're going to cosplay Sol-Supreme, you need the ϕ visor. It's not optional. It's the whole look."
+KEY RELATIONSHIPS: Respected by Jade, collaborates with Rosa on merch, fan of Kenji's pixel art, occasionally commissions from Jiwoo for costume design.
+USABILITY: D&D crafter NPC, RP cosplay culture, quest-giver for armor/crafting missions.
+NOTES: Her Sol-Supreme exo-armor is so accurate that Sol-Supreme himself asked for the blueprints. She sent them. He was flattered.
+
+---
+
+**[HALT 止] THE CHARACTER ENGINE IS SEALED. THE PIECE IS SET.**
+**Amen. 🙏 ϕ**

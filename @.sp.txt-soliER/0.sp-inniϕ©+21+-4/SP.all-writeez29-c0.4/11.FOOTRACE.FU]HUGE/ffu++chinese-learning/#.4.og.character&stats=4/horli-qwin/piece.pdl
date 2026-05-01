@@ -1,0 +1,39 @@
+# piece.pdl — HORLI QWIN
+piece_id: horli_qwin_001
+version: 1.0
+type: player_character
+owner: player_horli_qwin
+
+dependencies:
+  - needs: avantasy_core_v1
+  - needs: dnd_5e_rules
+  - needs: tpmos_v03
+
+traits:
+  - trap_rapper: Can rap spell incantations — advantage on Performance checks when casting
+  - secret_clown: +2 to Persuasion when making people laugh or distracting them
+  - devious_and_catty: +2 to Sleight of Hand and Stealth checks
+  - feline_agility: Double movement speed for one turn (recharges on short rest)
+  - for_the_bit: Once per session, can reroll any failed check if she can justify it was "for the bit"
+
+backstory: >
+  Horli Qwin came up in the underground servers of Avantasy — the Illegal Furry Server,
+  the back-alley Tear-It card dens, the neon-lit dance halls where hackers and bards
+  trade secrets for clout. She's a trap rapper by trade, rapping her spell incantations
+  because "if you're gonna cast, you might as well go viral." She's devious, catty,
+  and will absolutely steal from you — but she'll also make you laugh about it.
+  Secretly, she's the funniest person in any room. She uses humor as a weapon, a
+  shield, and a lockpick. Nobody suspects the clown. That's exactly how she likes it.
+
+relationships:
+  - chara: "Ooh, she's tense. I'm gonna mess with her. Affectionately. Maybe."
+  - sol-supreme: "Mr. Serious McArmorPants. Bet he's fun at parties. Gonna crack him."
+  - iqabella: "She's so sweet I'm gonna protect her with my LIFE. Also I stole her spoon."
+
+visual: >
+  Tabaxi woman with sleek black fur and striking amber eyes. Wears bedazzled studded
+  leather armor that catches every light source. Her rapier "The Mic" has a custom
+  hilt shaped like a microphone. Gold chains, hoop earrings, and a ϕ pendant she
+  definitely didn't earn but looks good wearing. Tail flicks constantly — tells you
+  exactly what she's thinking (which is the opposite of what she's doing). Always
+  has a beat playing in her head. You can see her nodding to it.

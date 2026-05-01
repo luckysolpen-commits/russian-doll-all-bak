@@ -1,0 +1,100 @@
+# FU D&D — SESSION 11: "THE PHARMA LAB"
+## Footrace.FU Chinese Learning — Episode 11
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** [out of character] Session 11. Pharma lab. Mad scientist twins. Horrifying ferrets. Chemical warfare. Multi-story escape. Red belt test. Let's go. [in character] A rolling labpet arrives at your door. It's small, round, furless, with wheels instead of feet. It carries a sealed envelope. Inside: an invitation. , eng, pharmaceutical factory, ... tx, 制药厂, zhì yào chǎng, ... xt, , eng, invitation, ... tx, 邀请, yāo qǐng, ... xt, From the twin gym leaders: , eng, Dr. Venom, ... tx, 毒博士, dú bó shì, ... xt, and , eng, Dr. Panacea, ... tx, 万灵博士, wàn líng bó shì, ... xt, ", eng, come, ... tx, 来, lái, ... xt, , eng, learn, ... tx, 学习, xué xí, ... xt, , eng, battle, ... tx, 战斗, zhàn dòu, ... xt, , eng, red belt, ... tx, 红带, hóng dài, ... xt, , eng, test, ... tx, 测试, cè shì, ... xt," 中文老师, arrival vocabulary.
+
+**中文老师:** , eng, pharmaceutical factory, ... tx, 制药厂, zhì yào chǎng, ... xt, , eng, invitation, ... tx, 邀请, yāo qǐng, ... xt, , eng, laboratory, ... tx, 实验室, shí yàn shì, ... xt, , eng, lab mouse, ... tx, 实验鼠, shí yàn shǔ, ... xt, , eng, poison, ... tx, 毒药, dú yào, ... xt, , eng, antidote, ... tx, 解药, jiě yào, ... xt, , eng, vaccine, ... tx, 疫苗, yì miáo, ... xt, , eng, resurrection, ... tx, 复活, fù huó, ... xt,
+
+**Horli Qwin:** [out of character] A rolling mouse just delivered me a lab invitation. This is the best timeline. [in character] , eng, lab mouse, ... tx, 实验鼠, shí yàn shǔ, ... xt, , eng, cute, ... tx, 可爱, kě ài, ... xt, , eng, pharmaceutical factory, ... tx, 制药厂, zhì yào chǎng, ... xt, , eng, red belt, ... tx, 红带, hóng dài, ... xt, Let's go!
+
+**Mother Tmojizu:** Roll WIS First Impression. You arrive at the 12-story glass tower. Sterile white walls. Humming centrifuges. Holographic molecular models floating in the air. Smells like , eng, alcohol, ... tx, 酒精, jiǔ jīng, ... xt, and , eng, disinfectant, ... tx, 消毒水, xiāo dú shuǐ, ... xt,
+
+**IQabella:** [rolls] 17. Plus 2 is 19. [out of character] It's clean. Too clean. Like a hospital but with more beakers. [in character] , eng, clean, ... tx, 干净, gān jìng, ... xt, , eng, too, ... tx, 太, tài, ... xt, , eng, clean, ... tx, 干净, gān jìng, ... xt, , eng, disinfectant, ... tx, 消毒水, xiāo dú shuǐ, ... xt, , eng, smell, ... tx, 味道, wèi dào, ... xt, But underneath... , eng, sweet, ... tx, 甜, tián, ... xt, Something , eng, sweet, ... tx, 甜, tián, ... xt,
+
+**Mother Tmojizu:** 19. You detect the sweet smell underneath the disinfectant. It's coming from Floor 6. The Resurrection Lab. Two figures descend the central staircase. The male twin: tall, thin, lab coat stained with chemical burns, six-lensed goggles, hair standing up from static electricity. His left hand is a mechanical prosthetic with built-in syringes. The female twin: same height, muscular, pristine white coat, hair in a tight bun, eyes glowing faintly green. She carries a clipboard that's actually a temporal tablet. 中文老师, voice the twins.
+
+**中文老师:** [as Dr. Venom , eng, Dr. Venom, ... tx, 毒博士, dú bó shì, ... xt, rapid-fire Chinese] , eng, you, ... tx, 你们, nǐ men, ... xt, , eng, finally, ... tx, 终于, zhōng yú, ... xt, , eng, came, ... tx, 来了, lái le, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, am, ... tx, 是, shì, ... xt, , eng, Dr. Venom, ... tx, 毒博士, dú bó shì, ... xt, , eng, poison, ... tx, 毒药, dú yào, ... xt, , eng, expert, ... tx, 专家, zhuān jiā, ... xt, , eng, she, ... tx, 她, tā, ... xt, , eng, is, ... tx, 是, shì, ... xt, , eng, Dr. Panacea, ... tx, 万灵博士, wàn líng bó shì, ... xt, , eng, healing, ... tx, 治疗, zhì liáo, ... xt, , eng, expert, ... tx, 专家, zhuān jiā, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, will, ... tx, 要, yào, ... xt, , eng, test, ... tx, 测试, cè shì, ... xt, , eng, you, ... tx, 你们, nǐ men, ... xt,
+
+**CHARA:** [out of character] He said he's Dr. Venom, poison expert. She's Dr. Panacea, healing expert. They're going to test us. [in character] , eng, understand, ... tx, 明白, míng bai, ... xt, , eng, Dr. Venom, ... tx, 毒博士, dú bó shì, ... xt, , eng, Dr. Panacea, ... tx, 万灵博士, wàn líng bó shì, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, ready, ... tx, 准备, zhǔn bèi, ... xt,
+
+**Mother Tmojizu:** Roll INT Translation.
+
+**CHARA:** [rolls] 19. Plus 4 is 23. [out of character] Got it all. [in character] , eng, Dr. Venom, ... tx, 毒博士, dú bó shì, ... xt, , eng, says, ... tx, 说, shuō, ... xt, ", eng, first, ... tx, 先, xiān, ... xt, , eng, learn, ... tx, 学习, xué xí, ... xt," , eng, learn, ... tx, 学习, xué xí, ... xt, , eng, make medicine, ... tx, 制药, zhì yào, ... xt, , eng, then, ... tx, 然后, rán hòu, ... xt, , eng, battle, ... tx, 战斗, zhàn dòu, ... xt,
+
+**Mother Tmojizu:** 23. Perfect. Dr. Panacea speaks. Slowly. Each word measured. 中文老师.
+
+**中文老师:** [as Dr. Panacea , eng, Dr. Panacea, ... tx, 万灵博士, wàn líng bó shì, ... xt, slow deliberate Chinese] , eng, twelve, ... tx, 十二, shí èr, ... xt, , eng, floors, ... tx, 层, céng, ... xt, , eng, each, ... tx, 每, měi, ... xt, , eng, floor, ... tx, 层, céng, ... xt, , eng, one, ... tx, 一个, yī ge, ... xt, , eng, lesson, ... tx, 课程, kè chéng, ... xt, , eng, from, ... tx, 从, cóng, ... xt, , eng, basic, ... tx, 基础, jī chǔ, ... xt, , eng, to, ... tx, 到, dào, ... xt, , eng, advanced, ... tx, 高级, gāo jí, ... xt, , eng, pass, ... tx, 通过, tōng guò, ... xt, , eng, all, ... tx, 所有, suǒ yǒu, ... xt, , eng, red belt, ... tx, 红带, hóng dài, ... xt, , eng, is, ... tx, 是, shì, ... xt, , eng, your, ... tx, 你们的, nǐ men de, ... xt,
+
+**Mother Tmojizu:** She said: twelve floors. Each floor one lesson. From basic to advanced. Pass all, red belt is yours. You put on the lab coats. You enter Floor 2: the Basic Lab. 中文老师, basic lab vocabulary.
+
+**中文老师:** , eng, painkiller, ... tx, 止痛药, zhǐ tòng yào, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt, , eng, caffeine, ... tx, 咖啡因, kā fēi yīn, ... xt, , eng, experiment, ... tx, 实验, shí yàn, ... xt, , eng, test, ... tx, 测试, cè shì, ... xt,
+
+---
+
+## FLOOR 2: BASIC COMPOUNDS
+
+**Mother Tmojizu:** Floor 2: rows of workstations. Beakers, burners, molecular scales. On each station: ingredients for , eng, painkiller, ... tx, 止痛药, zhǐ tòng yào, ... xt, and , eng, energy booster, ... tx, 能量增强剂, néng liàng zēng qiáng jì, ... xt, Dr. Venom demonstrates. His mechanical hand injects reagents with impossible precision. 中文老师.
+
+**中文老师:** , eng, acetaminophen, ... tx, 对乙酰氨基酚, duì yǐ xiān ān jī fēn, ... xt, C8H9NO2, , eng, caffeine, ... tx, 咖啡因, kā fēi yīn, ... xt, C8H10N4O2, , eng, mix, ... tx, 混合, hùn hé, ... xt, , eng, heat, ... tx, 加热, jiā rè, ... xt, , eng, stir, ... tx, 搅拌, jiǎo bàn, ... xt,
+
+**Mother Tmojizu:** Roll INT Chemistry. Make a painkiller. C8H9NO2 — acetaminophen.
+
+**CHARA:** [rolls] 18. Plus 4 is 22. [out of character] Acetaminophen synthesis. Para-aminophenol plus acetic anhydride. C8H9NO2. [in character] , eng, acetaminophen, ... tx, 对乙酰氨基酚, duì yǐ xiān ān jī fēn, ... xt, C8H9NO2, , eng, mix, ... tx, 混合, hùn hé, ... xt, , eng, heat, ... tx, 加热, jiā rè, ... xt, , eng, stir, ... tx, 搅拌, jiǎo bàn, ... xt, Done.
+
+**Mother Tmojizu:** 22. Perfect synthesis. You hand the pill to a rolling labpet. It had a limp. Now it rolls smoothly. , eng, comfortable, ... tx, 舒服, shū fu, ... xt, Next: energy booster. C8H10N4O2 — caffeine. Roll INT Chemistry.
+
+**Sol-Supreme:** [rolls] 17. Plus 1 is 18. Caffeine synthesis. , eng, caffeine, ... tx, 咖啡因, kā fēi yīn, ... xt, C8H10N4O2, , eng, mix, ... tx, 混合, hùn hé, ... xt, with ATP. , eng, energy, ... tx, 能量, néng liàng, ... xt, , eng, boost, ... tx, 增强, zēng qiáng, ... xt, The labpet drinks it. It rolls in circles at triple speed. , eng, fast, ... tx, 快, kuài, ... xt,
+
+**Mother Tmojizu:** 18. Floor 2 passed. Floor 3: the Healing Lab. 中文老师.
+
+**中文老师:** , eng, burn cream, ... tx, 烧伤膏, shāo shāng gāo, ... xt, , eng, paralysis cure, ... tx, 麻痹解药, má bì jiě yào, ... xt, , eng, vaccine, ... tx, 疫苗, yì miáo, ... xt, , eng, wound, ... tx, 伤口, shāng kǒu, ... xt, , eng, heal, ... tx, 愈合, yù hé, ... xt,
+
+---
+
+## FLOOR 3: HEALING COMPOUNDS
+
+**Mother Tmojizu:** Floor 3: medical bays. Burn victims (simulated). Paralyzed labpets. Wounded test subjects. Dr. Panacea demonstrates. Her glowing green eyes scan each patient. She makes , eng, burn cream, ... tx, 烧伤膏, shāo shāng gāo, ... xt, — silver sulfadiazine. 中文老师.
+
+**中文老师:** , eng, silver, ... tx, 银, yín, ... xt, , eng, sulfonamide, ... tx, 磺胺, huáng àn, ... xt, Ag sulfadiazine, , eng, apply, ... tx, 涂, tú, ... xt, , eng, heal, ... tx, 愈合, yù hé, ... xt,
+
+**Mother Tmojizu:** Roll INT Medicine. Make burn cream.
+
+**IQabella:** [rolls] 19. Plus 2 is 21. [out of character] Silver sulfadiazine. I know this one. It's what we used in the field. [in character] , eng, silver, ... tx, 银, yín, ... xt, + , eng, sulfonamide, ... tx, 磺胺, huáng àn, ... xt, = Ag sulfadiazine. , eng, burn cream, ... tx, 烧伤膏, shāo shāng gāo, ... xt, , eng, apply, ... tx, 涂, tú, ... xt, on the burn. , eng, heal, ... tx, 愈合, yù hé, ... xt, The labpet's burns close. , eng, comfortable, ... tx, 舒服, shū fu, ... xt,
+
+**Mother Tmojizu:** 21. Next: paralysis cure. Neostigmine. Roll INT Medicine.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. [out of character] Neostigmine reverses acetylcholinesterase inhibition. Restores nerve signal to muscle. [in character] , eng, neostigmine, ... tx, 新斯的明, xīn sī dì míng, ... xt, , eng, paralysis cure, ... tx, 麻痹解药, má bì jiě yào, ... xt, The paralyzed labpet twitches. Then rolls. , eng, recover, ... tx, 恢复, huī fù, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. Floor 3 passed. Floor 4: the Enhancement Lab. 中文老师.
+
+**中文老师:** , eng, perception booster, ... tx, 感知增强剂, gǎn zhī zēng qiáng jì, ... xt, , eng, life extension, ... tx, 延寿药, yán shòu yào, ... xt, , eng, telomerase, ... tx, 端粒酶, duān lì méi, ... xt, , eng, hallucination, ... tx, 幻觉, huàn jué, ... xt, , eng, consciousness, ... tx, 意识, yì shí, ... xt,
+
+---
+
+## FLOOR 4: ENHANCEMENT COMPOUNDS
+
+**Mother Tmojizu:** Floor 4: darker lighting. Holographic brain scans. The compounds here are... different. , eng, perception booster, ... tx, 感知增强剂, gǎn zhī zēng qiáng jì, ... xt, — psilocybin, C12H17N2O4. , eng, life extension, ... tx, 延寿药, yán shòu yào, ... xt, — telomerase activator. Dr. Panacea warns: ", eng, careful, ... tx, 小心, xiǎo xīn, ... xt, , eng, these, ... tx, 这些, zhè xiē, ... xt, , eng, drugs, ... tx, 药, yào, ... xt, , eng, dangerous, ... tx, 危险, wēi xiǎn, ... xt," 中文老师.
+
+**中文老师:** , eng, psilocybin, ... tx, 裸盖菇素, luǒ gài gū sù, ... xt, C12H17N2O4, , eng, telomerase, ... tx, 端粒酶, duān lì méi, ... xt, , eng, extend, ... tx, 延长, yán cháng, ... xt, , eng, lifespan, ... tx, 寿命, shòu mìng, ... xt, , eng, consciousness, ... tx, 意识, yì shí, ... xt, , eng, expand, ... tx, 扩展, kuò zhǎn, ... xt,
+
+**Mother Tmojizu:** Roll INT Biochemistry. Make a perception booster.
+
+**Sol-Supreme:** [rolls] 16. Plus 1 is 17. , eng, psilocybin, ... tx, 裸盖菇素, luǒ gài gū sù, ... xt, C12H17N2O4, , eng, consciousness, ... tx, 意识, yì shí, ... xt, , eng, expand, ... tx, 扩展, kuò zhǎn, ... xt, The labpet's eyes widen. It sees things it couldn't see before. , eng, perception, ... tx, 感知, gǎn zhī, ... xt, , eng, boosted, ... tx, 增强, zēng qiáng, ... xt,
+
+**Mother Tmojizu:** 17. Next: life extension. Telomerase activator. Roll INT Biochemistry.
+
+**IQabella:** [rolls] 18. Plus 2 is 20. , eng, telomerase, ... tx, 端粒酶, duān lì méi, ... xt, activator. , eng, extend, ... tx, 延长, yán cháng, ... xt, , eng, lifespan, ... tx, 寿命, shòu mìng, ... xt, The labpet's cells regenerate faster. Its wheel spins smoother. , eng, young, ... tx, 年轻, nián qīng, ... xt, again.
+
+**Mother Tmojizu:** 20. Floor 4 passed. Floor 5: the Toxin Lab. 中文老师.
+
+**中文老师:** , eng, poison, ... tx, 毒药, dú yào, ... xt, , eng, potassium cyanide, ... tx, 氰化钾, qíng huà jiǎ, ... xt, KCN, , eng, tear gas, ... tx, 催泪瓦斯, cuī lèi wǎ sī, ... xt, , eng, confusion agent, ... tx, 混乱剂, hùn luàn jì, ... xt, , eng, scopolamine, ... tx, 东莨菪碱, dōng làng dàng jiǎn, ... xt, , eng, paralysis toxin, ... tx, 麻痹毒素, má bì dú sù, ... xt, , eng, tetrodotoxin, ... tx, 河豚毒素, hé tún dú sù, ... xt,
+
+---
+
+## FLOOR 5: TOXIN COMPOUNDS
+
+**Mother Tmojizu:** Floor 5: sealed containment. Negative pressure. Gas masks on every wall. Dr. Venom is in his element here. His mechanical hand whirs as he mixes compounds. ", eng, poison, ... tx, 毒药, dú yào, ... xt, , eng, is, ... tx, 是, shì, ... xt, , eng, art, ... tx, 艺术, yì shù, ... xt," he says. He makes , eng, potassium cyanide, ... tx, 氰化钾, qíng huà jiǎ, ... xt, — KCN. ", eng, give, ... tx, 给, gěi, ... xt, , eng, enemy, ... tx, 敌人, dí rén, ... xt," 中文老师.

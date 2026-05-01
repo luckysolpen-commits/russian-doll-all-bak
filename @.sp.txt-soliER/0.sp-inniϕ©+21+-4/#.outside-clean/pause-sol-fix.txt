@@ -1,0 +1,28 @@
+# PLAN: Book TTS Pause Fix & Voice Correction
+
+## Problem Statement
+1. **Awkward Pauses in Books**: The current MP3 conversions of the novels (books) have irregular pauses, likely caused by newlines in the source text or between combined page files.
+2. **Sol Supreme Voice**: While not for the books (confirmed by user), Sol Supreme should use "en-US-ChristopherNeural" in script/scene conversions.
+3. **Redo Requirement**: All books need to be re-converted to remove the awkward pauses.
+
+## Solution Strategy
+1. **Text Cleaning**:
+    - For each chapter, read all `page_*.txt` files or the main `chapter_*.txt` file.
+    - Remove all internal newlines within paragraphs.
+    - Join all segments with a single space to ensure a continuous flow without irregular pauses.
+    - Strip any lingering `**` markers or metadata.
+2. **TTS Conversion**:
+    - Use `en-US-JennyNeural` (Female, friendly) for the books as established in previous successful conversions.
+    - Convert one book at a time to manage processing and avoid timeouts.
+3. **Progress Tracking**:
+    - Maintain `progress-a17.txt` to log completed chapters and books.
+    - Prefix final MP3s with `中` (as per convention) but ensure they are distinguishable as the "fix" version if necessary (e.g., by overwriting or checking).
+
+## Implementation Plan
+1. **Script Creation**: Develop `fix_book_pauses.py` that specifically targets the book directories and performs the text joining/cleaning logic.
+2. **Batch Execution**: Run the script one book at a time.
+3. **Verification**: Listen to a sample to ensure pauses are gone.
+
+## Footnote: Voice Mapping
+- **Books**: `en-US-JennyNeural` (Single narrator)
+- **Scenes/Scripts**: Sol Supreme -> `en-US-ChristopherNeural`

@@ -1,0 +1,12 @@
+**Page 56: Relaying Information to Spies**
+
+You scuttle back to the spies, who are still in the library. You attempt to convey the information about the schematics and energy signatures by tugging on their clothing and leaving trails of silk pointing in certain directions. They notice your unusual behavior and pause, looking around with newfound suspicion.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 7/10 (Attempted to relay information about castle schematics to spies)
+
+What do you do?
+
+*   If you try to point them towards the East Wing lab, turn to page 84.
+*   If you try to point them towards the West Wing vault, turn to page 85.

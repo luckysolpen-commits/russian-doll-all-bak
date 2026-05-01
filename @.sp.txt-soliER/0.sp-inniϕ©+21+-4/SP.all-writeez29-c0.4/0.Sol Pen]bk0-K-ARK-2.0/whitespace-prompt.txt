@@ -1,0 +1,24 @@
+Task: Enhance text cleaning and whitespace normalization in `convert_all_solpen_scenes.py` to improve TTS output and address potential formatting issues.
+
+Context:
+The script `convert_all_solpen_scenes.py` converts screenplay scenes to audio using the `edge_tts` library. Previous debugging revealed persistent TTS errors, and analysis suggests potential issues with text cleaning and pause handling, particularly affecting certain voices or leading to errors like "No audio was received". A reference script (`fix_book_pauses_rah.py`) uses a function `clean_text_for_pauses` to normalize whitespace, and a more thorough text cleaning approach for markdown characters was also considered.
+
+Problem:
+The current text processing in `convert_all_solpen_scenes.py` has areas for improvement:
+1.  **Incomplete/Ineffective Cleaning:** The existing `clean_text` function and the cleaning logic within `parse_scene` are either incomplete or not applied correctly, potentially leaving characters or formatting that the TTS service struggles with. The cleaning for markdown characters (`**`, `*`, `_`, `` ` ``) needs to be robust.
+2.  **Lack of Pause Normalization:** The script lacks a mechanism to normalize whitespace (newlines, multiple spaces), which can lead to unnatural pauses or issues in the generated speech. This is addressed by the `clean_text_for_pauses` function in the reference script.
+
+Objective:
+Modify the `convert_all_solpen_scenes.py` script to:
+1.  **Add a new global function `clean_text_for_pauses(text: str) -> str`**: This function should normalize whitespace by replacing newlines (`
+`, ``) and multiple spaces with single spaces, and trim leading/trailing whitespace.
+2.  **Enhance the existing `clean_text(text)` function:** Ensure it correctly removes `**`, `*`, `_`, and `` ` `` characters.
+3.  **Update the `parse_scene(text)` function:**
+    *   For dialogue lines starting with `> `, extract the dialogue.
+    *   Apply the `clean_text` function (for markdown characters) to the extracted dialogue.
+    *   Then, apply the `clean_text_for_pauses` function to the result to normalize whitespace.
+    *   Only append the cleaned and normalized dialogue if it's not empty after processing.
+    *   Remove or comment out any old, incomplete, or misleading cleaning logic within `parse_scene` that is now superseded by the new functions.
+
+Deliverable:
+A modified `convert_all_solpen_scenes.py` script with the updated `clean_text`, `clean_text_for_pauses` functions, and the `parse_scene` function incorporating these changes. The goal is to improve the robustness of text processing for TTS conversion.

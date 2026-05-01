@@ -1,0 +1,196 @@
+# TPMOJIO CAFE — AI Integration Strategy
+## "The Smartest Cafe in the Room"
+
+---
+
+## The Vision
+
+TPMOJIO Cafe isn't just a physical space with wifi. It's an **AI-native community hub** where artificial intelligence enhances every experience without replacing the human connection.
+
+---
+
+## AI Use Cases (By Priority)
+
+### Tier 1: Immediate (Phase 0-1)
+
+#### 1. AI Quest Matching
+- **What:** Quest board app uses AI to match quest posters with quest takers.
+- **How:** NLP analyzes quest descriptions. Matches based on skills, interests, availability.
+- **Value:** Increases quest completion rate. Makes the quest board actually useful.
+- **Build:** Fine-tune open-source LLM (Llama, Mistral) on quest data.
+- **Cost:** $500-2,000/mo (cloud compute, API calls).
+
+#### 2. AI Session Assistant (DM Tool)
+- **What:** AI helps DMs run TPMOJIO, D&D, and other sessions.
+- **How:** Real-time rules lookup, NPC voice suggestions, plot hook generation, session summarization.
+- **Value:** Lowers barrier to entry for new DMs. Makes sessions better for everyone.
+- **Build:** RAG system over TPMOJIO rules, session transcripts, lore documents.
+- **Cost:** $1,000-3,000/mo (compute, storage).
+
+#### 3. AI Content Generation
+- **What:** AI generates session transcripts, character art, lore content, social media posts.
+- **How:** Fine-tuned models on existing TPMOJIO content. Human review before publishing.
+- **Value:** 10x content output. Consistent brand voice.
+- **Build:** Fine-tune LLM on session transcripts. Use Stable Diffusion/Flux for art.
+- **Cost:** $500-1,500/mo (compute, API calls).
+
+#### 4. AI Customer Service
+- **What:** AI chatbot handles FAQs: hours, menu, membership, events, quest board.
+- **How:** RAG over cafe knowledge base. Escalates to human for complex questions.
+- **Value:** 24/7 support. Reduces staff burden.
+- **Build:** Open-source chatbot (Rasa, Botpress) + LLM API.
+- **Cost:** $200-500/mo.
+
+---
+
+### Tier 2: Medium-Term (Phase 1-2)
+
+#### 5. AI Personalization
+- **What:** App recommends quests, events, games, and products based on user behavior.
+- **How:** Collaborative filtering + content-based recommendations.
+- **Value:** Increases engagement, membership retention, retail sales.
+- **Build:** Standard recommendation engine. Start simple, iterate.
+- **Cost:** $500-1,500/mo.
+
+#### 6. AI Inventory Management
+- **What:** AI predicts food/beverage demand, retail stock needs, merch trends.
+- **How:** Time series forecasting on sales data. Seasonal adjustments. Event-based predictions.
+- **Value:** Reduces waste. Prevents stockouts. Optimizes ordering.
+- **Build:** Standard forecasting models (Prophet, ARIMA) + custom adjustments.
+- **Cost:** $300-800/mo.
+
+#### 7. AI Event Planning
+- **What:** AI suggests optimal event types, times, and pricing based on historical data.
+- **How:** Analyzes attendance, revenue, engagement data. Suggests improvements.
+- **Value:** Maximizes event revenue. Reduces planning time.
+- **Build:** Analytics dashboard + recommendation engine.
+- **Cost:** $500-1,000/mo.
+
+#### 8. AI Streaming Assistant
+- **What:** AI helps streamers at the cafe: auto-captions, scene switching, chat moderation, highlight detection.
+- **How:** Computer vision + NLP + audio processing.
+- **Value:** Makes streaming accessible to beginners. Improves quality for pros.
+- **Build:** Integrate existing tools (OBS plugins, Whisper, moderation bots).
+- **Cost:** $500-1,500/mo.
+
+---
+
+### Tier 3: Long-Term (Phase 3-4)
+
+#### 9. AI NPC (In-Store Experience)
+- **What:** Physical AI character in the cafe that interacts with customers.
+- **How:** Robot/avatar + LLM + voice synthesis. Knows TPMOJIO lore, cafe menu, quest board.
+- **Value:** Unique experience. Draws visitors. Generates social media content.
+- **Build:** Robot hardware + LLM + voice cloning. Start simple (screen-based), evolve to physical.
+- **Cost:** $5,000-20,000 (hardware) + $1,000-3,000/mo (compute).
+
+#### 10. AI Lore Engine
+- **What:** AI generates new TPMOJIO sessions, Clone Chronicles episodes, HARD_VVAR battles — consistent with existing lore.
+- **How:** Fine-tuned LLM on all session transcripts, lore documents, character profiles.
+- **Value:** Infinite content. Fans can generate their own sessions. New revenue stream.
+- **Build:** Fine-tune large model. Human curation layer. Community voting on best outputs.
+- **Cost:** $2,000-5,000/mo (compute, storage).
+
+#### 11. AI Community Moderator
+- **What:** AI moderates Discord, quest board, social media. Detects toxicity, spam, harassment.
+- **How:** NLP classification + human review queue.
+- **Value:** Safe community. Reduced moderation burden.
+- **Build:** Open-source moderation tools + custom fine-tuning.
+- **Cost:** $300-800/mo.
+
+#### 12. AI Business Intelligence
+- **What:** AI analyzes all business data and provides actionable insights.
+- **How:** Natural language queries over business data. Automated anomaly detection. Predictive analytics.
+- **Value:** Better decisions. Faster responses. Competitive advantage.
+- **Build:** Data warehouse + BI tool + LLM interface.
+- **Cost:** $1,000-3,000/mo.
+
+---
+
+## AI Ethics & Guardrails
+
+### Principles:
+1. **AI enhances, never replaces, human connection.** The cafe is about people. AI is the tool, not the product.
+2. **Transparency.** Customers know when they're interacting with AI. No deception.
+3. **Human review.** AI-generated content is reviewed before publishing. AI recommendations are suggestions, not decisions.
+4. **Data privacy.** Customer data is never sold. AI models are trained on anonymized, aggregated data.
+5. **Open source.** AI tools we build are open source. Community can audit, improve, fork.
+
+### Red Lines:
+- **No AI replacing staff.** AI augments staff. It doesn't replace them.
+- **No AI-generated food.** AI can predict demand. It doesn't make the coffee.
+- **No AI surveillance.** Cameras are for security, not behavior tracking.
+- **No AI manipulation.** AI doesn't manipulate pricing, recommendations, or quest matching for profit maximization. It optimizes for community value.
+
+---
+
+## AI Build vs. Buy Decision
+
+| Tool | Build | Buy | Recommendation |
+|------|-------|-----|---------------|
+| Quest Matching | Build | — | Build (core differentiator) |
+| DM Assistant | Build | — | Build (core differentiator) |
+| Content Generation | Buy API | — | Buy API (OpenAI, Anthropic) |
+| Customer Service Chatbot | Build | — | Build (custom knowledge base) |
+| Personalization | Build | — | Build (start simple) |
+| Inventory Forecasting | Buy | — | Buy (existing tools work well) |
+| Event Planning | Build | — | Build (custom data) |
+| Streaming Assistant | Buy | — | Buy (integrate existing tools) |
+| AI NPC | Build | — | Build (long-term project) |
+| Lore Engine | Build | — | Build (core IP asset) |
+| Community Moderation | Buy | — | Buy (Perspective API, etc.) |
+| Business Intelligence | Buy | — | Buy (Tableau, Looker, etc.) |
+
+**Rule of thumb:** Build what's core to your differentiator. Buy everything else.
+
+---
+
+## AI Team (Who You Need)
+
+| Role | When | Cost | Notes |
+|------|------|------|-------|
+| **ML Engineer** | Phase 1 | $120-180K/yr | Builds quest matching, DM assistant, personalization. |
+| **Data Engineer** | Phase 2 | $100-150K/yr | Builds data pipeline, BI infrastructure. |
+| **AI Product Manager** | Phase 2 | $120-160K/yr | Prioritizes AI features. Bridges tech and business. |
+| **Community AI Trainer** | Phase 1 | $60-80K/yr | Fine-tunes models on community data. Manages human review. |
+| **AI Ethics Advisor** | Phase 0 | $5-10K/yr (contract) | Part-time. Ensures ethical AI use. |
+
+**Total AI team cost (Phase 1):** $180-260K/yr (1 ML engineer + 1 community trainer + ethics advisor).
+
+**Alternative:** Use AI contractors/freelancers for Phase 0-1. Hire full team at Phase 2.
+
+---
+
+## AI Revenue Impact
+
+| AI Feature | Revenue Impact | Cost | ROI Timeline |
+|-----------|---------------|------|-------------|
+| Quest Matching | +10% quest completion → +5% membership retention | $1,000/mo | 6 months |
+| DM Assistant | +20% session quality → +15% event attendance | $2,000/mo | 4 months |
+| Content Generation | 10x content → +30% social media growth → +10% foot traffic | $1,000/mo | 8 months |
+| Customer Service | -50% support burden → -$2,000/mo in staff costs | $300/mo | 2 months |
+| Personalization | +15% retail sales, +10% membership upgrades | $1,000/mo | 6 months |
+| Inventory Management | -20% waste, -15% stockouts → +$3,000/mo | $500/mo | 3 months |
+| **TOTAL** | **+$15,000-25,000/mo** | **$5,800/mo** | **4-8 months** |
+
+**AI is a force multiplier.** It makes everything else work better.
+
+---
+
+## The AI Moat
+
+Most cafes don't have AI. Most game stores don't have AI. Most community centers don't have AI.
+
+**TPMOJIO Cafe has:**
+- Proprietary quest matching algorithm
+- DM assistant trained on 40+ sessions of real gameplay
+- Lore engine trained on the entire TPMOJIO universe
+- Personalization based on community behavior
+- AI-generated content that's actually good (because it's trained on real sessions)
+
+**This is defensible.** No one else has our data. No one else has our lore. No one else has our community.
+
+---
+
+*The board remembers. The AI learns.*
+*ϕ*

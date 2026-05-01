@@ -1,0 +1,39 @@
+# piece.pdl — SOL-SUPREME
+piece_id: sol_supreme_001
+version: 1.0
+type: player_character
+owner: player_sol_supreme
+
+dependencies:
+  - needs: avantasy_core_v1
+  - needs: dnd_5e_rules
+  - needs: tpmos_v03
+  - needs: soul_pen_tech_v1
+
+traits:
+  - bio_tech_genius: +2 to Arcana and Tinker's Tools checks
+  - business_mastermind: +2 to Persuasion when negotiating deals or contracts
+  - inventor_of_soul_pen: Can attempt to craft custom magic items at half cost (DM approval)
+  - ikarus_blueprint: Access to endgame lore about the Metal Sun and Dyson Sphere
+  - deep_voice: Advantage on Intimidation checks when speaking in character
+
+backstory: >
+  The future version of Lucky Shepherd — the billionaire "Anon" who built Avantasy
+  from the ground up. Sol-Supreme exists in a paradox: he is both a player and the
+  architect. He invented the Soul Pen, the Ikarus, and the TPMOS framework that runs
+  this world. But something went wrong. A server breach, a corruption in the code,
+  and now he's trapped inside his own creation — wearing dark iron armor, voice
+  distorted, fighting to reclaim what he built. He doesn't explain himself. He doesn't
+  need to. The world is his blueprint.
+
+relationships:
+  - chara: "She was sent to investigate me. I respect that. She'll learn the truth."
+  - iqabella: "Loyal. Efficient. I designed her chassis myself — though she doesn't know that yet."
+  - horli-qwin: "Chaos variable. Unpredictable. Potentially useful. Monitoring."
+
+visual: >
+  Full-body matte black and gold exo-armor. Helmet completely encases the head with
+  a bioluminescent LED visor displaying a glowing ϕ spiral. Voice is heavily distorted
+  through a metallic modulation unit. Moves with deliberate, calculated precision.
+  The armor bears subtle Ph-F aesthetic — bronze circuitry patterns glowing cyan
+  beneath the black plating.

@@ -1,0 +1,249 @@
+# TPMOJIO CAFE — Phased Rollout Plan
+## "Crawl, Walk, Run, Fly"
+
+---
+
+## Phase 0: Pre-Launch (Months 1-6)
+### "Build the Community Before the Building"
+
+**Goal:** Validate demand. Build audience. Create software. Zero physical risk.
+
+### Actions:
+
+#### Software (Priority #1)
+- [ ] Build **TPMOJIO Digital** — web-based session player with multi-voice audio
+- [ ] Build **Quest Board App** — digital quest board for communities
+- [ ] Build **Session Recording Tools** — for DMs to record and share sessions
+- [ ] Open source everything. MIT license.
+- [ ] Price: Free tier + $5-15/mo premium features
+
+#### Community Building
+- [ ] Release all TPMOJIO audio sessions publicly (YouTube, podcast platforms)
+- [ ] Start Discord server for TPMOJIO fans
+- [ ] Run **pop-up events** at libraries, colleges, game stores
+- [ ] Host virtual TPMOJIO sessions (free, open to anyone)
+- [ ] Build email list. Target: 1,000 subscribers by Month 6.
+
+#### Content
+- [ ] Continue producing audio sessions (Clone Chronicles, HARD_VVAR, etc.)
+- [ ] Start YouTube channel with session highlights, character art, lore videos
+- [ ] Write TPMOJIO Cafe lore (the in-universe origin story)
+- [ ] Create social media presence (TikTok, X, Instagram)
+
+#### Validation Metrics
+- [ ] 500+ Discord members
+- [ ] 1,000+ email subscribers
+- [ ] 100+ active software users (free or paid)
+- [ ] 3+ successful pop-up events (20+ attendees each)
+- [ ] 50+ people who say "I'd pay for a membership"
+
+#### Budget: $5,000-15,000
+- Domain, hosting, software tools: $2,000
+- Pop-up event costs: $3,000
+- Marketing (social ads, merch for events): $3,000
+- Contingency: $2,000-7,000
+
+**Revenue target:** $500-2,000/mo from software by Month 6.
+
+---
+
+## Phase 1: MVP Location (Months 6-18)
+### "Prove the Unit Economics"
+
+**Goal:** One profitable location. 300+ members. $60K+/mo revenue.
+
+### Location Requirements:
+- 1,500-2,500 sqft
+- Strip mall or near college/library
+- Rent: $3,000-5,000/mo
+- Lease: 3 years with 2-year option
+- Build-out budget: $80,000
+
+### Space Layout:
+```
+┌─────────────────────────────────────────────┐
+│  ENTRANCE                                   │
+│  ┌─────────────┐  ┌─────────────────────┐   │
+│  │  CAFE COUNTER│  │  TECH DISPLAY       │   │
+│  │  (espresso,  │  │  (curated: laptops, │   │
+│  │  pastries,   │  │   phones, periph.)  │   │
+│  │   tea bar)   │  │                     │   │
+│  └─────────────┘  └─────────────────────┘   │
+│                                             │
+│  ┌─────────────────────────────────────┐    │
+│  │  GAMING LOUNGE (6-8 tables)         │    │
+│  │  Board games available to play      │    │
+│  │  TTRPG corner (DM screen, minis)    │    │
+│  └─────────────────────────────────────┘    │
+│                                             │
+│  ┌──────────────┐  ┌──────────────────┐    │
+│  │  QUEST BOARD │  │  EVENT CORNER    │    │
+│  │  (digital +  │  │  (stage area,    │    │
+│  │   physical)  │  │   streaming,     │    │
+│  │              │  │   open mics)     │    │
+│  └──────────────┘  └──────────────────┘    │
+│                                             │
+│  ┌─────────────────────────────────────┐    │
+│  │  MERCH WALL (plushies, figures,     │    │
+│  │   apparel, prints, locked display)  │    │
+│  └─────────────────────────────────────┘    │
+│                                             │
+│  ┌──────────────┐  ┌──────────────────┐    │
+│  │  PRIVATE ROOM│  │  STORAGE /       │    │
+│  │  (members    │  │  KITCHEN /       │    │
+│  │   only)      │  │  OFFICE          │    │
+│  └──────────────┘  └──────────────────┘    │
+└─────────────────────────────────────────────┘
+```
+
+### Pre-Opening (Months 6-9):
+- [ ] Sign lease. Begin build-out.
+- [ ] **Pre-sell memberships.** Target: 100 members before opening.
+- [ ] Hire manager (experienced in food service or community management).
+- [ ] Build relationships with local colleges, libraries, game stores.
+- [ ] Plan grand opening event (TPMOJIO session live, local streamers, comedy).
+
+### Opening (Month 10):
+- [ ] Grand opening event. Free day. Everyone welcome.
+- [ ] Launch quest board (physical + digital).
+- [ ] Start weekly events: TPMOJIO night, D&D night, open mic, comedy.
+- [ ] Begin classes: "Intro to TPMOJIO," "Build Your First Bot," "Cosplay 101."
+
+### Growth (Months 10-18):
+- [ ] Grow to 300+ members.
+- [ ] Hit $60K+/mo revenue.
+- [ ] Refine food menu based on what sells.
+- [ ] Expand tech retail based on what customers ask for.
+- [ ] Host 2+ ticketed events per month.
+- [ ] Partner with local schools, churches, community groups.
+
+### Budget: $280,000
+- From Phase 0 software revenue: $20,000-50,000
+- Pre-sold memberships: $30,000-60,000
+- Remaining: $170,000-230,000 (personal savings, friends/family, small business loan)
+
+**Revenue target:** $60,000+/mo by Month 18.
+**Profit target:** Break even by Month 15. Profitable by Month 18.
+
+---
+
+## Phase 2: Second Location (Months 18-30)
+### "Prove It's Replicable"
+
+**Goal:** Two profitable locations. Shared software platform. 600+ total members.
+
+### Actions:
+- [ ] Document everything from Location 1 (SOPs, playbooks, lessons learned).
+- [ ] Find Location 2 (different market — different city or different neighborhood).
+- [ ] Hire manager from Location 1's best employee (promote from within).
+- [ ] Reuse build-out plan. Negotiate better with contractors.
+- [ ] Launch shared quest board across both locations.
+- [ ] Cross-promote: members at Location 1 get guest passes at Location 2.
+
+### Budget: $200,000-250,000
+- Lower than Location 1 (learned lessons, better negotiations).
+- Funded from Location 1 profits + small business loan.
+
+**Revenue target:** $120,000+/mo combined by Month 30.
+**Profit target:** $10,000+/mo combined by Month 30.
+
+---
+
+## Phase 3: Regional Expansion (Months 30-48)
+### "Build the Brand"
+
+**Goal:** 5-7 locations. Regional brand recognition. Software SaaS at 500+ customers.
+
+### Actions:
+- [ ] Open 3-5 more locations in the same region.
+- [ ] Build regional marketing team.
+- [ ] Launch TPMOJIO Cafe app (quest board, membership, events, ordering).
+- [ ] Start selling Quest Board App as SaaS to other stores.
+- [ ] Host regional TPMOJIO tournament.
+- [ ] Partner with regional colleges, libraries, community organizations.
+- [ ] Consider Series A funding ($2-5M) if growth is strong.
+
+### Budget: $1-2M
+- Funded from profits + small business loans + potential Series A.
+
+**Revenue target:** $400,000+/mo combined by Month 48.
+**Profit target:** $50,000+/mo combined by Month 48.
+
+---
+
+## Phase 4: Flagship + National (Months 48-72)
+### "Become the Destination"
+
+**Goal:** Multi-story flagship location. 20+ total locations. National brand.
+
+### Flagship Concept:
+- 10,000-20,000 sqft
+- Multiple floors: cafe, gaming, tech, events, exhibits, streaming studios, private rooms
+- Hotel partnership (5-10 rooms for out-of-town visitors)
+- Gym/yoga space (YMCA model)
+- Full event venue (comedy, music, TTRPG tournaments)
+- Exhibit space (rotating TPMOJIO/Sol Pen universe exhibits)
+- Streaming studio (record sessions live, broadcast to YouTube/Twitch)
+
+### Actions:
+- [ ] Build flagship in major city (downtown, high foot traffic).
+- [ ] Expand to 20+ standard locations.
+- [ ] Launch national marketing campaign.
+- [ ] Consider Series B funding ($10-20M) for rapid expansion.
+- [ ] Explore franchise model for distant markets.
+- [ ] Build national quest board network (quests span multiple locations).
+
+### Budget: $10-20M
+- Funded from Series B or profits + debt.
+
+**Revenue target:** $2,000,000+/mo combined by Month 72.
+**Profit target:** $300,000+/mo combined by Month 72.
+
+---
+
+## The "What If It Fails" Plan
+
+### If Phase 0 fails (no community, no software users):
+- **Loss:** $5,000-15,000
+- **Lesson:** The concept isn't resonating. Pivot to something else.
+- **Silver lining:** You still have the IP, the audio content, the open source software.
+
+### If Phase 1 fails (store doesn't hit $60K/mo):
+- **Loss:** $150,000-280,000
+- **Lesson:** The physical model doesn't work in this market.
+- **Pivot:** Focus on software. Sell Quest Board App to other stores. License TPMOJIO IP.
+
+### If Phase 2 fails (second location underperforms):
+- **Loss:** $200,000-250,000
+- **Lesson:** The model isn't replicable.
+- **Pivot:** Keep Location 1. Focus on making it the best it can be. Grow software.
+
+### If Phase 3 fails (regional expansion stalls):
+- **Loss:** $1-2M
+- **Lesson:** You scaled too fast.
+- **Pivot:** Close underperforming locations. Focus on profitable ones. Grow software.
+
+### If Phase 4 fails (national expansion fails):
+- **Loss:** $10-20M
+- **Lesson:** You're not a national brand.
+- **Pivot:** Regional brand is still valuable. Sell to larger company or stay regional.
+
+---
+
+## The Honest Timeline
+
+| Phase | Realistic Timeline | Optimistic Timeline | Pessimistic Timeline |
+|-------|-------------------|-------------------|---------------------|
+| Phase 0 | 6-9 months | 3-6 months | 12-18 months |
+| Phase 1 | 12-18 months | 9-12 months | 18-24 months |
+| Phase 2 | 12-18 months | 9-12 months | 18-24 months |
+| Phase 3 | 18-24 months | 12-18 months | 24-36 months |
+| Phase 4 | 24-36 months | 18-24 months | 36-60 months |
+| **Total** | **5-7 years** | **3-4 years** | **7-10 years** |
+
+**My recommendation:** Plan for the realistic timeline. Hope for optimistic. Prepare for pessimistic.
+
+---
+
+*The spiral turns. One phase at a time.*
+*ϕ*

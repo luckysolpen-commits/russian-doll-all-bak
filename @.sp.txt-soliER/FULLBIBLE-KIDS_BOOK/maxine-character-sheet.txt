@@ -1,0 +1,40 @@
+# MAXINE "MAXI" — CHARACTER SHEET
+# =================================
+# Role: Player 5 (Joins in Session 2)
+# Voice: en-GB-MaisieNeural (young, bright, inquisitive British)
+# Archetype: Genius Princess / Math Wiz / Romantic Grounding Force
+
+## 🌌 BACKGROUND & LORE
+- **Home World:** Howlanqizia (The Heaven-World) — a terraformed super-Earth orbiting a binary star system. Sky is perpetually twilight (gold/violet). Gravity 0.8G. Cities are grown, not built: crystalline spires, light-vine bridges, star-dancing plazas.
+- **Species:** Half-Lumari (mother's line), half-human (father's line). Lumari are humanoid fuzzpet citizens with bioluminescent fur that shifts color with emotion, telepathic empathy bonds, and a culture built around harmonic mathematics.
+- **Royal Lineage:** Parents are Intergalactic King Orionis & Queen Lyraea of the Celestial Sovereignty. Rules 47 star systems through the Accords of Harmonic Rule (mathematical diplomacy, not war).
+- **Court Intrigue:** Fled at 16 during the Summit of Twin Suns to escape an arranged marriage to House Vortex's heir. Faked her death in a shuttle explosion. Enrolled at Centroid University under a false name.
+- **Note on Aethelgard:** Aethelgard is NOT her home. Aethelgard is the name of the Diabolus space demon reptilians living on the moon. Maxine's people view them as a cosmic imbalance (sin) to be contained.
+
+## 📐 SKILLS & ABILITIES
+- **Temporal Mathematics:** Masters flexbox topology, time-warp equations, Lorentz transformations.
+- **Greek Math Obsession:** Explains everything through real formulas translated into kid-friendly metaphors:
+  - `a² + b² = c²` (Pythagorean) → spatial shortcuts, dimension hopping
+  - `e^(iπ) + 1 = 0` (Euler's Identity) → chaos/order balance in the mirror universe
+  - `ΔS ≥ 0` (Entropy) → why the Nihililator consumes reality, why sin must be reversed
+  - `φ = (1 + √5) / 2` (Golden Ratio) → flexbox spacing, time loops, harmony vs decay
+- **Empathy Bond (Lumari Trait):** Can feel temporal distortions and emotional resonance before they happen. This is how she sensed Rahweh's desperation.
+- **Combat/Utility:** Low stealth (too curious to hide), high intelligence/arcana/insight. Uses a glowing stylus that traces equations in mid-air to stabilize flexbox drift.
+
+## 💕 PERSONALITY & DYNAMIC
+- **Inquisitive & Precise:** Asks the questions the audience is thinking. Explains science naturally. Never just says "it's magic."
+- **Romantic Grounding Force:** Flirty but intellectual. Teases Rahweh's "Pharaoh" act, grounds his panic with logic, traces equations on his palm, whispers "φ = 1.618... you're my constant."
+- **Relationship with IQA:** Warm, collaborative. IQA handles tea/empathy/heart; Maxine handles math/weave/science. They complement each other perfectly.
+- **Relationship with Horli:** Amused by her chaos, occasionally joins her beat-drops with harmonic math rhythms.
+- **Relationship with Rahweh:** Classroom history → reluctant allies → romantic tension → devoted partners. She believes in his mission because the math proves it's possible.
+
+## 🎲 GAMEPLAY ROLE
+- **Dice Rolls:** High on Intelligence, Arcana, Insight, History. Low on Stealth.
+- **Function:** Explains the science, grounds the emotion, keeps Rahweh from burning out, sets up the "sin vs harmony" theme, advances the romance arc, hints at royal court stakes.
+- **Signature Line:** "The equation always resolves. You always resolve. Now hold still. I'm tracing the solution on your palm."
+
+## 📝 CONVERSION NOTES
+- **Voice:** `en-GB-MaisieNeural`
+- **Pacing:** Speaks quickly when excited about math, slows down when explaining emotional/cosmic truths.
+- **Metaphors:** Always ties complex concepts to Howlanqizia culture (fuzzpet citizens, light-vines, star-dancing, courtly harmony).
+- **Sin Theme:** Her family's lifelong mission. She teaches Rahweh to read harmonic decay (Δφ < 0) as "sin" — not religious, but cosmic imbalance against the Dao/Golden Ratio.

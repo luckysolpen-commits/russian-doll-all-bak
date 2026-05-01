@@ -1,0 +1,6 @@
+You explain your predicament: a castaway, amnesiac, seeking any aid. The leader studies you intently, her expression unreadable. "We are the Guardians," she says finally. "We protect this island's secrets. Outsiders are a risk. But you are lost, and perhaps you can be of use. We offer sanctuary, but you must prove your loyalty."
+
+What do you do?
+
+*   If you accept their offer of sanctuary and pledge loyalty, turn to page 64.
+*   If you ask about the island's secrets and the "cycle," turn to page 65.

@@ -1,0 +1,12 @@
+**Page 105: Investigating the Metallic Object**
+
+You approach the discarded metallic object. It's a small, damaged drone component, perhaps fallen from one of the silver surveillance units. When it touches the glowing substance, it emits a soft hum and a faint blue light, reacting to its presence. It seems the substance is a catalyst or power source.
+
+Hydration: 8/10 (Adequate)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 4/10 (Interacted with a drone component, found it reacts to the glowing substance)
+
+What do you do?
+
+*   If you attempt to interact with the glowing substance, turn to page 79.
+*   If you try to collect the drone component, turn to page 123.

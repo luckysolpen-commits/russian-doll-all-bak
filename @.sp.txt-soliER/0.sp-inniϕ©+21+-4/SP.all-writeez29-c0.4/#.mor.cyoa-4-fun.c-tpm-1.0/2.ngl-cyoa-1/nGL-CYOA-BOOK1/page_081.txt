@@ -1,0 +1,6 @@
+"Initiate Level 1 inquiry," you say to the kiosk. The holographic globe spins faster, and a new window appears: "Inquiry initiated. Please provide biographical data and origin universe coordinates. Expected response time: 3-5 standard cycles. While you await inquiry results, would you like to browse available integration programs?"
+
+You've entered a system designed to capture and categorize you. The wait time is extensive, and there's no guarantee of a positive outcome.
+
+*   Wait for the inquiry results and browse integration programs. Turn to page 83.
+*   Abandon the kiosk and look for smugglers. Turn to page 67.

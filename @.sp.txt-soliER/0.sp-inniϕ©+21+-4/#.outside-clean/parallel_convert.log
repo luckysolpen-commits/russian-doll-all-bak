@@ -1,0 +1,189 @@
+Step 1: Renaming Mother Tomokazu → Mother Tmojizu in all source files...
+Done renaming.
+Step 2: Launching WAVE 1 (8 batches)...
+[x20.fuzz-sesh#1-3.5] 2 files to convert
+  SKIP: fuzz-sesh-grok-2-note#2.txt
+  SKIP: fuzz-sesh-grok-2-note#3.txt
+[x20.fuzz-sesh#1-3.5] DONE: 2 ok, 0 failed
+[3.rpg-canvas-sp-editsesh] 1 files to convert
+  [1/1] RMMSP_sesh#1.txt
+[3.rpg-canvas-sp-editsesh] DONE: 1 ok, 0 failed
+[part2-empire-game] 10 files to convert
+  SKIP: clone-chronicles-p2-sesh1.txt
+  SKIP: clone-chronicles-p2-sesh10.txt
+  [3/10] clone-chronicles-p2-sesh2.txt
+  [4/10] clone-chronicles-p2-sesh3.txt
+  [5/10] clone-chronicles-p2-sesh4.txt
+  [6/10] clone-chronicles-p2-sesh5.txt
+  [7/10] clone-chronicles-p2-sesh6.txt
+  [8/10] clone-chronicles-p2-sesh7.txt
+  [9/10] clone-chronicles-p2-sesh8.txt
+  [10/10] clone-chronicles-p2-sesh9.txt
+[part2-empire-game] DONE: 10 ok, 0 failed
+[avan-sesh-3-10] 8 files to convert
+  SKIP: ava-session-003.txt
+  [2/8] ava-session-004.txt
+  [3/8] ava-session-005.txt
+  [4/8] ava-session-006.txt
+  [5/8] ava-session-007.txt
+  [6/8] ava-session-008.txt
+  [7/8] ava-session-009.txt
+  [8/8] ava-session-010.txt
+[avan-sesh-3-10] DONE: 8 ok, 0 failed
+[1.tmojio-seshs-3-10] 8 files to convert
+  SKIP: tpmojio-sesh#10.txt
+  [2/8] tpmojio-sesh#3.txt
+  [3/8] tpmojio-sesh#4.txt
+  [4/8] tpmojio-sesh#5.txt
+  [5/8] tpmojio-sesh#6.txt
+  [6/8] tpmojio-sesh#7.txt
+  [7/8] tpmojio-sesh#8.txt
+  [8/8] tpmojio-sesh#9.txt
+[1.tmojio-seshs-3-10] DONE: 8 ok, 0 failed
+[ffuture-redo] 3 files to convert
+  [1/3] ff-sesh01-welcome-time-academy.txt
+  [2/3] ff-sesh02-elements-fuzzpets-stardustball.txt
+  [3/3] ff-sesh03-simulations-lawsuits-market.txt
+[ffuture-redo] DONE: 3 ok, 0 failed
+[part1-blood-market] 10 files to convert
+  [1/10] clone-chronicles-sesh1.txt
+  [2/10] clone-chronicles-sesh10.txt
+  [3/10] clone-chronicles-sesh2.txt
+  [4/10] clone-chronicles-sesh3.txt
+  [5/10] clone-chronicles-sesh4.txt
+  [6/10] clone-chronicles-sesh5.txt
+  [7/10] clone-chronicles-sesh6.txt
+  [8/10] clone-chronicles-sesh7.txt
+  [9/10] clone-chronicles-sesh8.txt
+  [10/10] clone-chronicles-sesh9.txt
+[part1-blood-market] DONE: 10 ok, 0 failed
+[1.ffu-ez_learnd&d+chem] 16 files to convert
+  [1/16] fud&d-sesh1-memory-palace-race.txt
+  [2/16] fud&d-sesh10-belt-gym.txt
+  [3/16] fud&d-sesh11-pharma-lab.txt
+  [4/16] fud&d-sesh12-review-pharma.txt
+  [5/16] fud&d-sesh13-labpet-empire.txt
+  [6/16] fud&d-sesh2-polo.txt
+  [7/16] fud&d-sesh3-horse-race.txt
+  [8/16] fud&d-sesh4-martial-arts.txt
+  [9/16] fud&d-sesh5-banquet.txt
+  [10/16] fud&d-sesh6-fuzzpet-chronicles.txt
+  [11/16] fud&d-sesh7-temple-heist.txt
+  [12/16] fud&d-sesh8p1-stadium-heist.txt
+  [13/16] fud&d-sesh8p2-chase.txt
+  [14/16] fud&d-sesh8p3-pirate-alliance.txt
+  [15/16] fud&d-sesh8p4-grand-finale.txt
+  [16/16] fud&d-sesh9-review-advanced.txt
+[1.ffu-ez_learnd&d+chem] DONE: 16 ok, 0 failed
+WAVE 1 DONE. Launching WAVE 2 (8 batches)...
+[iqa-notes] 7 files to convert
+  SKIP: iqa-study-sesh01-nothing-to-everything.txt
+  SKIP: iqa-study-sesh02-atoms-hold-hands.txt
+  SKIP: iqa-study-sesh03-carbon-decides-life.txt
+  SKIP: iqa-study-sesh04-pill-that-fixes-you.txt
+  SKIP: iqa-study-sesh05-rewriting-blueprint.txt
+  SKIP: iqa-study-sesh06-immortality-protocol.txt
+  SKIP: iqa-study-sesh07-simulating-reality.txt
+[iqa-notes] DONE: 7 ok, 0 failed
+[sol-notes] 7 files to convert
+  SKIP: sol-study-sesh01-material-science.txt
+  SKIP: sol-study-sesh02-matter-generation.txt
+  SKIP: sol-study-sesh03-c-type-blood.txt
+  SKIP: sol-study-sesh04-wormholes.txt
+  SKIP: sol-study-sesh05-zero-g-suit.txt
+  SKIP: sol-study-sesh06-ftl-travel.txt
+  SKIP: sol-study-sesh07-flex-box.txt
+[sol-notes] DONE: 7 ok, 0 failed
+Traceback (most recent call last):
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 208, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 166, in main
+    files = sorted([f for f in os.listdir(src_dir) if pattern.match(f)])
+FileNotFoundError: [Errno 2] No such file or directory: '/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/SP.all-writeez28-b2/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100/book_template.scp]1100'
+Traceback (most recent call last):
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 208, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 166, in main
+    files = sorted([f for f in os.listdir(src_dir) if pattern.match(f)])
+FileNotFoundError: [Errno 2] No such file or directory: '/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/SP.all-writeez28-b2/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011/BOOK]1010%'
+[chara-notes] 7 files to convert
+  SKIP: chara-study-sesh01-suing-people-101.txt
+  [2/7] chara-study-sesh02-suing-governments.txt
+  [3/7] chara-study-sesh03-international-law.txt
+  [4/7] chara-study-sesh04-starting-government.txt
+  [5/7] chara-study-sesh05-campaign-finance.txt
+  [6/7] chara-study-sesh06-business-law.txt
+  [7/7] chara-study-sesh07-ultimate-play.txt
+[chara-notes] DONE: 7 ok, 0 failed
+[horli-tutalage] 7 files to convert
+  SKIP: horli-tutalage-sesh01-street-chinese.txt
+  [2/7] horli-tutalage-sesh02-restaurant-chinese.txt
+  [3/7] horli-tutalage-sesh03-martial-arts-chinese.txt
+  [4/7] horli-tutalage-sesh04-underworld-chinese.txt
+  [5/7] horli-tutalage-sesh05-club-chinese.txt
+  [6/7] horli-tutalage-sesh06-full-sentences.txt
+  [7/7] horli-tutalage-sesh07-chinese-gangster-rap.txt
+[horli-tutalage] DONE: 7 ok, 0 failed
+[cafe-rp-sim] 10 files to convert
+  SKIP: cafe-sesh1-first-quest.txt
+  [2/10] cafe-sesh10-the-moon-remembers.txt
+  [3/10] cafe-sesh2-first-meeting.txt
+  [4/10] cafe-sesh3-the-gauntlet.txt
+  [5/10] cafe-sesh4-the-maker-turn.txt
+  [6/10] cafe-sesh5-virtual-economy.txt
+  [7/10] cafe-sesh6-sovereign-lab.txt
+  [8/10] cafe-sesh7-sovereign-market.txt
+  [9/10] cafe-sesh8-doors-open.txt
+  [10/10] cafe-sesh9-the-expansion.txt
+[cafe-rp-sim] DONE: 10 ok, 0 failed
+[HARD_VVAR] 4 files to convert
+  [1/4] hard_vvar-sesh1.txt
+  [2/4] hard_vvar-sesh2.txt
+  [3/4] hard_vvar-sesh3.txt
+  [4/4] hard_vvar-sesh4.txt
+[HARD_VVAR] DONE: 4 ok, 0 failed
+WAVE 2 DONE. Launching WAVE 3 (remaining CHAR.A.NON books)...
+Traceback (most recent call last):
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 208, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/batch_convert.py", line 166, in main
+    files = sorted([f for f in os.listdir(src_dir) if pattern.match(f)])
+FileNotFoundError: [Errno 2] No such file or directory: '/home/no/Desktop/Piecemark-IT/中ϕ_00.00/0.sp-inniϕ©+12/SP.all-writeez28-b2/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101/#.book_template.scp]101'
+[#.book_template.scp]111] 13 files to convert
+  [1/13] chapter_1
+  [2/13] chapter_10
+  [3/13] chapter_11
+  [4/13] chapter_12
+  [5/13] chapter_13
+  [6/13] chapter_2
+  [7/13] chapter_3
+  [8/13] chapter_4
+  [9/13] chapter_5
+  [10/13] chapter_6
+  [11/13] chapter_7
+  [12/13] chapter_8
+  [13/13] chapter_9
+[#.book_template.scp]111] DONE: 12 ok, 1 failed
+[#.book_template.scp]110]fix] 8 files to convert
+  [1/8] chapter_1
+  [2/8] chapter_2
+  [3/8] chapter_3
+  [4/8] chapter_4
+  [5/8] chapter_5
+  [6/8] chapter_6
+  [7/8] chapter_7
+  [8/8] chapter_8
+[#.book_template.scp]110]fix] DONE: 8 ok, 0 failed
+ALL WAVES DONE!

@@ -1,0 +1,309 @@
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_10_journey_to_langley.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_11_base_camp_bust.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_12_tactical_retreat.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_13_anons_intel.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_14_enemy_lines.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_15_intel_cache.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_16_exfiltration.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_17_debriefing.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_18_return_to_mothras_lair.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_1_arrival_at_mothra_base.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_2_infiltration_gone_wrong.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_3_solo_reconnaissance_and_approach.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_4_facility_infiltration.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_5_data_acquisition.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_6_escape_from_the_facility.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_7_return_to_mothra_base_and_debrief.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_8_downtime_on_the_oil_strut.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/scene_9_emotional_goodbye.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_01_Briefing_Room.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_02_Mothra_Base_Helipad.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_03_Village_Outskirts.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_04_Mercenary_Ambush.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_05_Isolated_Village.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_06_Village_Battle.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_07_Retreat_Extraction.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_09_Chara_Office.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_10_CIA_Archives.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_11_Clandestine_Meeting.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_12_Rebel_Base.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_13_Chase_Confrontation.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_14_Conspiracy_Headquarters.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/scene_15_Mothra_Base_Helipad.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_01_cia_briefing.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_02_anonymous_discovery.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_03_chara_video_message.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_04_shadow_net.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_05_clock_tower_invite.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_06_clock_tower_encounter.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_07_order_of_providence.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_08_windmill_arianna.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_09_monastery_arrival.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_10_monastery_trials.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_11_test_of_courage.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_12_test_of_wisdom.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_13_test_of_passion.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_14_test_of_strength_and_revelation.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_15_chara_returns_with_reinforcements.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_16_trail_of_terror.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_17_crime_scenes_hospital.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_18_omicorp_research_and_text.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_19_midnight_meeting_and_chase.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/scene_20_uninvited_guest.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_01_the_hunt_begins.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_02_tracing_the_digital_trail.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_03_evasive_tactics.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_04_a_glimpse_of_truth.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_05_infiltrating_the_corporations.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_06_a_virtual_meeting.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_07_trading_information.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_08_paranormal_research.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_09_awakening_a_powerful_entity.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_10_joining_forces.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_12_stealthy_infiltration.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_13_gathering_evidence.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_14_sabotaging_operations.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_15_confronting_demons.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_16_the_battle_begins.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_17_technological_magic.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_18_the_climax.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_19_aftermath.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_20_a_new_path.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/scene_21_char_a_non_tears.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_02_INT_CIA_CYBER_INTELLIGENCE_LAB_DAY.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_03_INT_CARAS_OFFICE_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_04_INT_CIA_CYBER_INTELLIGENCE_LAB_DAY.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_05_INT_CARAS_OFFICE_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_06_INT_CARAS_OFFICE_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_07_EXT_OLD_WAREHOUSE_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_08_INT_OLD_WAREHOUSE_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_09_INT_OLD_WAREHOUSE_LAB_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_10_INT_OLD_WAREHOUSE_LAB_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_11_INT_OLD_WAREHOUSE_LAB_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_12_INT_OLD_WAREHOUSE_LAB_DAWN.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_13_EXT_OLD_WINDMILL_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_14_INT_OLD_WINDMILL_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_15_INT_OLD_WINDMILL_LAB_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_16_INT_OLD_WINDMILL_LAB_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_17_INT_OLD_WINDMILL_LAB_NIGHT.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_18_INT_CARAS_OFFICE_DAY.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_19_EXT_TOWN_SQUARE_DAY.txt
+../SP.all-writeez28-c0.3/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/scene_20_INT_LANGLEY_HEADQUARTERS_CARAS_OFFICE_DAY.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_01_casino_flashback.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_02_ranch_peace.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_03_mysterious_package.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_04_luna_warning.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_05_cia_blackmail.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_06_shadow_syndicate.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_07_deal_with_kaito.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_08_afghanistan_battle.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_09_ufo_abduction.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_10_ssol_abduction.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_11_moon_base_arrival.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_12_solpen_training.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_13_the_threat_revealed.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_14_ssol_bridge.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_15_ssol_quarters.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_16_ssol_training.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_17_ssol_research.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_18_ssol_strategy.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_19_preparations_and_doubts.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_20_the_genesis_chamber.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_21_the_genesis_chamber_reveal.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_22_rebel_hideout.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_23_martian_canyons.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_24_power_core.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_25_experimentation_lab.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_26_inner_sanctum.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_27_escape_route.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_28_mars_mission_briefing.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_29_martian_colony_infiltration.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_30_showdown_with_the_black_queen.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_31_new_beginnings.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_32_martian_courier.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_33_gem_infected.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_34_existential_conversation.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_35_nyc_arrival.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_36_clown_world.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_37_clean_zone_doppelganger.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_38_infiltrate_clean_zone.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_39_diamond_mine_confrontation.txt
+../SP.all-writeez28-c0.3/0.Sol Pen]bk0-K-ARK-2.0/0.scenes-K-ARK-2.0/scene_40_earths_future.txt
+../SP.all-writeez28-c0.3/1.ii.geminii]2part]a0/1.GEMINI_PART_1-scenes.tarantino/scene_11_GEM_I_Martian_Gambit_INT_LAUNCH_CONTROL_DAY.txt
+../SP.all-writeez28-c0.3/1.ii.geminii]2part]a0/1.GEMINI_PART_1-scenes.tarantino/scene_12_GEM_I_Martian_Gambit_INT_SERAPH_S_FOLLY_COCKPIT_CONTINUOUS.txt
+../SP.all-writeez28-c0.3/1.ii.geminii]2part]a0/1.GEMINI_PART_1-scenes.tarantino/scene_13_GEM_I_Martian_Gambit_EXT_SPACE.txt
+../SP.all-writeez28-c0.3/1.ii.geminii]2part]a0/1.GEMINI_PART_1-scenes.tarantino/scene_15_GEM_I_Martian_Gambit_EXT_MARS_ORBIT.txt
+../SP.all-writeez28-c0.3/1.ii.geminii]2part]a0/1.GEMINI_PART_1-scenes.tarantino/scene_2_GEM_I_Martian_Gambit_INT_NEXUS_CONTROL_ROOM_DAY.txt
+../SP.all-writeez28-c0.3/1.ii.geminii]2part]a0/1.GEMINI_PART_1-scenes.tarantino/scene_5_GEM_I_Martian_Gambit_EXT_BROKEN_HIGHWAY_DAY.txt
+../SP.all-writeez28-c0.3/1.ii.geminii]2part]a0/1.GEMINI_PART_1-scenes.tarantino/scene_6_GEM_I_Martian_Gambit_EXT_HIGHWAY_NIGHT.txt
+../SP.all-writeez28-c0.3/10.xo.files]wc.smol]a0/scene_2_arrival_at_afink_village.txt
+../SP.all-writeez28-c0.3/10.xo.files]wc.smol]a0/scene_3_strange_lore_of_afinkers.txt
+../SP.all-writeez28-c0.3/10.xo.files]wc.smol]a0/scene_4_whispering_walls.txt
+../SP.all-writeez28-c0.3/10.xo.files]wc.smol]a0/scene_5_the_awakening.txt
+../SP.all-writeez28-c0.3/10.xo.files]wc.smol]a0/scene_6_the_hunt_and_the_trade.txt
+../SP.all-writeez28-c0.3/10.xo.files]wc.smol]a0/scene_7_the_trade_and_consequences.txt
+../SP.all-writeez28-c0.3/10.xo.files]wc.smol]a0/scene_8_undercover_operatives.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_10_Navigating_the_Dreams.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_11_Seeds_of_Doubt.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_13_The_Cost_of_Control.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_14_The_Apex_of_Hope.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_15_The_Illusion_Shatters.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_16_The_Archons_Darkness_Returns.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_17_Jureths_Growing_Influence.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_18_The_Empires_Watch.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_19_A_Divided_Loyalty.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_1_The_Gathering_of_the_Seven.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_20_The_Call_to_the_Celestials.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_21_The_Birth_of_the_Unlit_Tribe.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_22_Voriths_Declaration.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_23_The_Empires_First_Strike.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_24_Jureths_Rebuttal.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_25_The_Battle_of_Philosophies.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_26_The_Betrayal_and_the_Wound.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_27_The_Healing_and_the_Veiled_Ones_Aid.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_28_The_Choice_of_Heirs.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_29_The_Unlit_Tribes_Enduring_Stand.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_2_The_XVS_Briefing.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_30_A_New_Dawn_in_the_Hydroverse.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_3_Arrival_on_Neutrino_Prime.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_4_Confronting_the_Darkness.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_5_The_Aftermath_and_New_Orders.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_6_The_Xerxes_Domain.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_7_Unraveling_the_Madness.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_8_Whispers_of_the_Sol_Pen.txt
+../SP.all-writeez28-c0.3/100.%.NGL.MPYRE]bk1/#+Scene_9_The_Aethers_Realm.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_02_MEETING_THE_HAREM.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_03_SETTLING_IN_AND_INITIAL_TRAINING.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_05_DEEPENING_BONDS_AND_A_KISS.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_06_AFTERMATH_OF_THE_KISS_PREMONITION.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_07_IMPERIAL_INTERVENTION.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_08_DEFIANCE_AND_CLASH.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_09_ARIANNAS_ARRIVAL_AND_MEI_LINGS_CAPTURE.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_10_THE_KEEPERS_TASK.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_11_THE_LAKE_OF_ECHOES.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_12_REUNION_AND_WARNING.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_13_THE_GREAT_LIBRARY_AND_TIME_TWIN_MASTERY.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_14_VICTORY_AT_THE_LAKE.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_15_THE_RIVER_GODDESS_AND_TOURNAMENT_INVITATION.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_16_FIRST_GLIMPSE_OF_THE_ARENA_RIVER_GODDESS_FAREWELL.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_17_TOURNAMENT_REGISTRATION_AND_COMPETITOR_SHOWCASE.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_18_UNCOVERING_LYSANDERS_SECRETS.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_19_RED_WAX_TIME_POLICE_INTERVENTION.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_20_TOURNAMENT_ESCALATION_AND_OMINOUS_WARNINGS.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_21_THE_SEEDS_OF_REBELLION.txt
+../SP.all-writeez28-c0.3/11.FOOTRACE.FU]HUGE/scene_22_THE_WAR_BEGINS_AND_OVERTHROW.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_10_The_Deployment.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_11_Calm_Before_the_Storm.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_12_The_Assassination_Plot.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_13_The_Battle_for_the_Command_Center.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_14_The_Chase.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_15_The_War_for_the_Deep.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_16_The_Unexpected_Truce.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_17_A_New_Venture.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_18_The_Architect_s_Shadow.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_1_The_Party.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_2_The_Escape.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_3_The_Cryptic_Clue.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_4_Dorchester_s_Lair.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_5_New_Atlantis.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_6_Carc-Zilla.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_7_Sub-Korea.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_8_The_Alliance.txt
+../SP.all-writeez28-c0.3/3.DEATH-KRYO!]big]b2/scene_9_The_Deal.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_01_galactic_truce.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_02_luna_presents_opportunity.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_03_the_chaebol_travels.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_04_edge_danger_man.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_05_moon_base_life.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_06_first_asteroid_exploration.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_07_asteroid_analysis.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_08_celebration_party.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_09_loona_twilight_warning.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_10_edge_information_control.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_11_earth_panic.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_12_edge_un_deal.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_15_diabolus_demon_revelation.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_17_architect_forces_enter.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_18_demon_confrontation.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_19_lucky_team_enters.txt
+../SP.all-writeez28-c0.3/4.moonshine]big]b1/scene_20_maze_of_illusions.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_01_cryptic_summons.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_02_arrival_mine_camp.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_03_architects_double_game.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_04_uns_response.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_05_equestrian_games_announced.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_06_machines_of_war.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_07_olympics_of_destruction.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_08_unexpected_challengers.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_09_01_agility_strength.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_09_02_equestrian_skills.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_09_03_sumo_battle.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_09_04_aerial_acrobatics.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_10_vote_of_citizens.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_11_icarus_departure.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_12_metal_sun_rises.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_13_un_seeks_luckys_help.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_14_world_police_bots_take_control.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_15_astras_choice.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_16_supreme_emperor_sol.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_17_astras_resolve.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_18_luckys_struggle.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_19_edge_dangermans_dilemma.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_20_gems_lab.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_001_METAL_SUN_RISES.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_002_WORLD_POLICE_BOTS_LAUNCH.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_003_WORLD_POLICE_BOTS_TAKE_CONTROL.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_004_SUPREME_EMPEROR_SOL.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_005_EDGES_BETRAYAL.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_006_CORE_OF_DESPAIR.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_008_TUNNEL_VISION.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_010_SURFACE_COMES_INTO_VIEW.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_011_NEW_CHALLENGE.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_012_CARAMELLE_NEST.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_013_MUTAGEN_HEIST.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_014_BATTLE_FOR_MUTAGEN.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_015_BLUE_BIRD_RESCUE.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_016_JOURNEY_TO_IKARUS.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_017_AVANTA_C_AVATAR_SELECTION.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_018_AVANTA_C_ENTRY.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_019_AVANTA_C_EXPLORATION.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_020_AVANTA_C_ENCOUNTER.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_10_INT_GLITCH_WORLD_OLD_DATA_CENTER_INTERIOR_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_11_INT_GLITCH_WORLD_CITY_PARK_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_12_INT_GLITCH_WORLD_CITY_PARK_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_13_INT_GLITCH_WORLD_CITY_PARK_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_14_INT_GLITCH_WORLD_CITY_PARK_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_15_INT_GLITCH_WORLD_MAINTENANCE_TUNNEL_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_16_INT_GLITCH_WORLD_THE_CORE_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_17_INT_GLITCH_WORLD_THE_CORE_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_18_INT_GLITCH_WORLD_THE_CORE_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_19_INT_GLITCH_WORLD_THE_CORE_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_1_INT_GLITCH_WORLD_BUSTLING_CITY_STREET_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_20_INT_GLITCH_WORLD_EDGE_OF_SIMULATION_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_2_INT_GLITCH_WORLD_BUSTLING_CITY_STREET_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_3_INT_GLITCH_WORLD_ABANDONED_APARTMENT_NIGHT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_4_INT_GLITCH_WORLD_DOWNTOWN_STREETS_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_5_INT_GLITCH_WORLD_OLD_LIBRARY_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_6_INT_GLITCH_WORLD_OLD_LIBRARY_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_7_INT_GLITCH_WORLD_INDUSTRIAL_ZONE_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_8_INT_GLITCH_WORLD_OLD_DATA_CENTER_INTERIOR_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_9_INT_GLITCH_WORLD_OLD_DATA_CENTER_INTERIOR_DAY_CONT.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_10_sol_powersuit_vs_mafia.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_12_soulpen_broken_halo_comms.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_13_mafia_blocks_wormhole.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_14_the_architect_revealed.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_15_unobtainium_suit_confrontation.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_16_quantum_quarter_exploration.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_17_temporal_resonance_key.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_18_quantum_pizza_party.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_19_gigishixmix_map_discovery.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_1_lucky_returns.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_20_journey_to_unknown.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_2_sol_obsession.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_3_gem_escapes_with_riley.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_4_lucky_unease.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_5_sol_kills_sons.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_6_gigishixmix_clingy.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_7_wormhole_x_discovery.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_8_metal_mafia_unobtainium.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_9_lucky_escapes_wormhole.txt

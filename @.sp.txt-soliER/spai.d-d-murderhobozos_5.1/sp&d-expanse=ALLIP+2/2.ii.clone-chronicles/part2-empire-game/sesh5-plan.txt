@@ -1,0 +1,43 @@
+# PART 2 — SESSION 5: "THE BARBARIAN INVASION"
+## Clone Chronicles — Part 2, Session 5 of 10
+### Power: Planetary | Status: United defense, survival
+
+---
+
+## SESSION OVERVIEW
+
+The barbarian invasion hits. Wild zone factions attack all clones simultaneously. United or divided, the clones must defend their territories. This session is about survival — and whether the clones can work together when it matters most.
+
+## KEY BEATS
+
+1. **The Invasion Begins** — Barbarian forces attack from multiple directions.
+2. **Defense Planning** — Clones coordinate (or don't) their defenses.
+3. **Battle Rounds** — 2-3 rounds of defensive warfare.
+4. **Aftermath** — Territories damaged but held (or lost).
+5. **End of Turn 5** — Hook for Session 6.
+
+## INVASION MECHANICS
+
+- **Barbarian Strength:** Scales with clone power level
+- **Defense Roll:** d20 + faction modifier + territory bonus
+- **Alliance Bonus:** Allied clones get +2 to defense
+- **Victory:** Hold all territories. **Defeat:** Lose territory, pay reparations.
+
+## COMPLICATION (d6)
+| Roll | Complication |
+|------|-------------|
+| 1 | A clone's territory falls — they must retreat to an ally's land |
+| 2 | The barbarians have a leader — a rogue clone from Part 1 |
+| 3 | The House offers military aid — for a price |
+| 4 | The Original's forces join the defense — unexpected ally |
+| 5 | A clone betrays the others during the invasion |
+| 6 | The Moon Signal intensifies — the Aethelgaurd is waking up |
+
+## END STATE
+- Barbarian invasion repelled (or partially successful)
+- Clone relationships tested
+- Hook: "The Moon Signal is clear now. The Aethelgaurd wreckage is active. Something is calling."
+
+---
+
+**ϕ**

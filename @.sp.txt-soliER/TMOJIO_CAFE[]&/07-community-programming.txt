@@ -1,0 +1,227 @@
+# TPMOJIO CAFE — Community Programming & Events
+## "The Store Is the Stage. The Community Is the Show."
+
+---
+
+## The Philosophy
+
+TPMOJIO Cafe isn't a store that hosts events. **It's an event that happens to have a store.**
+
+Every day is programming. Every visit is an experience. Every member is a participant, not a customer.
+
+---
+
+## Weekly Programming (Every Location)
+
+### Monday: Quiet Day
+- **Morning:** Open cafe. Board games available. Quest board active.
+- **Afternoon:** "Study Hall" — quiet space for students, remote workers, writers.
+- **Evening:** "Lore Night" — read TPMOJIO transcripts, listen to sessions, discuss lore.
+- **Vibe:** Relaxed. Low energy. Good for introverts.
+
+### Tuesday: Learning Day
+- **Morning:** Open cafe. Tech help desk (free, drop-in).
+- **Afternoon:** "Code & Coffee" — coding workshop (Python, web dev, AI).
+- **Evening:** "DM School" — learn to run TPMOJIO, D&D, or other TTRPGs.
+- **Vibe:** Educational. Supportive. Beginners welcome.
+
+### Wednesday: Game Night
+- **Morning:** Open cafe. Board game library open.
+- **Afternoon:** "Open Play" — bring your own games or play ours.
+- **Evening:** "TPMOJIO Night" — live TPMOJIO session (recorded for podcast).
+- **Vibe:** Energetic. Competitive. Fun.
+
+### Thursday: Creative Day
+- **Morning:** Open cafe. Streaming setup available for members.
+- **Afternoon:** "Cosplay Workshop" — build, paint, sew, photograph.
+- **Evening:** "Open Mic" — comedy, music, poetry, storytelling, rap battles.
+- **Vibe:** Expressive. Supportive. Creative.
+
+### Friday: Social Night
+- **Morning:** Open cafe. Quest board matching session.
+- **Afternoon:** "Community Hour" — meet other members, form groups, plan events.
+- **Evening:** "Tournament Night" — board game tournaments, TTRPG one-shots, esports.
+- **Vibe:** Social. Competitive. Loud.
+
+### Saturday: Family Day
+- **Morning:** Open cafe. Family-friendly board games.
+- **Afternoon:** "Kids' Quest" — age-appropriate quests for kids (parents get a break).
+- **Evening:** "Featured Event" — guest DM, special session, live recording, guest comedian.
+- **Vibe:** Family-friendly. Welcoming. Diverse.
+
+### Sunday: Community Day
+- **Morning:** Open cafe. "Brunch & Board Games."
+- **Afternoon:** "Community Meeting" — members vote on cafe decisions, suggest events, share ideas.
+- **Evening:** "Chill Night" — low-key gaming, tea, conversation.
+- **Vibe:** Community. Democratic. Relaxed.
+
+---
+
+## Monthly Programming
+
+### First Weekend: TPMOJIO Campaign Session
+- **What:** Live TPMOJIO session (recorded for podcast/YouTube).
+- **Who:** Regular cast + guest players from the community.
+- **Where:** Event corner (streamed to main screen).
+- **Revenue:** Ticketed ($10-20). Members get free entry.
+
+### Second Weekend: Tournament
+- **What:** Board game tournament, TTRPG one-shot competition, or esports tournament.
+- **Who:** Open to all. Prizes for winners.
+- **Where:** Gaming lounge + event corner.
+- **Revenue:** Entry fee ($5-15). Members get discounted entry.
+
+### Third Weekend: Guest Event
+- **What:** Guest comedian, musician, author, DM, or creator.
+- **Who:** Open to all. Meet & greet after.
+- **Where:** Event corner (or rented venue if bigger).
+- **Revenue:** Ticketed ($15-40). Members get discounted tickets.
+
+### Fourth Weekend: Community Showcase
+- **What:** Members showcase their creations: fan fiction readings, cosplay fashion show, fan art gallery, homebrew TPMOJIO sessions.
+- **Who:** Members only (but guests can attend).
+- **Where:** Entire store.
+- **Revenue:** Free for members. $5 for guests.
+
+---
+
+## Seasonal Programming
+
+### Spring: "The Awakening"
+- **Theme:** New beginnings. New players. New quests.
+- **Events:** "Intro to TPMOJIO" workshop, spring cosplay contest, new member orientation.
+- **Exhibit:** Rotating exhibit — "The History of TPMOJIO" (session artifacts, character art, lore timeline).
+
+### Summer: "The Gauntlet"
+- **Theme:** Competition. Heat. Intensity.
+- **Events:** Summer tournament series, HARD_VVAR battle bot competition, outdoor gaming (patio).
+- **Exhibit:** "Battle Bot Gallery" — HARD_VVAR bot designs, fan creations, live build demonstrations.
+
+### Fall: "The Harvest"
+- **Theme:** Community. Gratitude. Reflection.
+- **Events:** Fall festival, community potluck, "Year in Review" session, member appreciation night.
+- **Exhibit:** "Community Art Show" — fan art from the past year, member creations, collaborative mural.
+
+### Winter: "The Remembering"
+- **Theme:** Memory. Legacy. The board remembers.
+- **Events:** Holiday TPMOJIO session, gift exchange, "Best Of" session highlights screening, New Year's quest planning.
+- **Exhibit:** "The Board Remembers" — interactive exhibit showing the evolution of the TPMOJIO universe.
+
+---
+
+## Special Events (Quarterly)
+
+### TPMOJIO Live Recording
+- **What:** Full TPMOJIO session recorded live at the cafe.
+- **Who:** Regular cast + special guests.
+- **Where:** Event corner (streamed to YouTube/Twitch).
+- **Revenue:** Ticketed ($20-50). Members get free entry. Merch sales.
+
+### Cosplay Contest
+- **What:** TPMOJIO/Sol Pen/HARD_VVAR cosplay competition.
+- **Who:** Open to all. Judges from the community.
+- **Where:** Event corner + main floor.
+- **Revenue:** Entry fee ($10). Spectator tickets ($5). Merch sales.
+
+### Game Design Jam
+- **What:** 48-hour game design competition. Build a TPMOJIO-inspired game.
+- **Who:** Teams of 2-4. Open to all skill levels.
+- **Where:** Entire store (sleeping bags welcome).
+- **Revenue:** Entry fee ($20/person). Prizes sponsored by local businesses.
+
+### Community Convention
+- **What:** Mini-con. Panels, workshops, tournaments, vendor booths, guest speakers.
+- **Who:** Open to all. Expected attendance: 200-500.
+- **Where:** Entire store + rented adjacent space if needed.
+- **Revenue:** Tickets ($30-60). Vendor booth fees ($100-300). Merch sales.
+
+---
+
+## Partnership Programming
+
+### Libraries
+- **What:** Co-hosted reading events, literacy programs, TPMOJIO story time for kids.
+- **Why:** Libraries have audiences. We have space. Together we have programming.
+- **Revenue:** Shared. Library brings funding. We bring venue and content.
+
+### Colleges
+- **What:** Coding workshops, TTRPG clubs, game design courses, internship programs.
+- **Why:** Colleges have students. We have community. Together we have engagement.
+- **Revenue:** College pays for space rental. We provide programming.
+
+### Churches / Community Groups
+- **What:** Community meetings, support groups, youth programs, family events.
+- **Why:** Community groups need space. We have space. Together we have impact.
+- **Revenue:** Discounted or free for community groups. Goodwill is the return.
+
+### Local Businesses
+- **What:** Sponsor events, host workshops, cross-promote, share audiences.
+- **Why:** Local businesses need foot traffic. We have foot traffic. Together we have growth.
+- **Revenue:** Sponsorship fees ($500-2,000/event). Cross-promotion.
+
+### Streamers / Content Creators
+- **What:** Stream from the cafe, host watch parties, collaborate on content, build audiences together.
+- **Why:** Streamers need space and community. We have both. Together we have content.
+- **Revenue:** Revenue share on streams. Increased foot traffic from streamer audiences.
+
+---
+
+## The Quest Board (Core Programming)
+
+### What It Is:
+A physical + digital board where community members post and take quests.
+
+### Quest Types:
+| Type | Example | Value |
+|------|---------|-------|
+| **Game Quest** | "Need 2 players for TPMOJIO Thursday" | Fills sessions. Builds community. |
+| **Learning Quest** | "Teach me to code Python" | Skill sharing. Mentorship. |
+| **Community Quest** | "Help me move Saturday" | Mutual aid. Trust building. |
+| **Creative Quest** | "Looking for a D&D writer" | Collaboration. Content creation. |
+| **Business Quest** | "Need feedback on my app" | Networking. Entrepreneurship. |
+
+### How It Works:
+1. **Post a quest.** Physical board + digital app.
+2. **AI matches.** Quest posters are matched with quest takers based on skills, interests, availability.
+3. **Complete the quest.** Quest takers report completion. Quest posters rate the experience.
+4. **Earn reputation.** Completed quests build reputation. High-reputation members get perks (priority seating, event discounts, membership upgrades).
+
+### Why It Matters:
+The quest board is the **community engine**. It turns a store into a network. It's the reason people come back. It's the thing competitors can't copy.
+
+---
+
+## Event Revenue Projections
+
+| Event Type | Frequency | Attendance | Ticket Price | Monthly Revenue |
+|-----------|-----------|-----------|-------------|-----------------|
+| TPMOJIO Live | 1/mo | 30 | $20 | $600 |
+| Tournament | 1/mo | 40 | $10 | $400 |
+| Guest Event | 1/mo | 50 | $25 | $1,250 |
+| Community Showcase | 1/mo | 30 | $5 (guests) | $150 |
+| Cosplay Contest | 1/quarter | 100 | $10 | $333/mo |
+| Game Design Jam | 1/quarter | 30 | $20 | $200/mo |
+| Community Convention | 1/year | 300 | $40 | $1,000/mo |
+| **TOTAL** | | | | **$3,933/mo** |
+
+**Conservative estimate:** $2,000-4,000/mo from events.
+**Optimistic estimate:** $5,000-10,000/mo from events (with strong community).
+
+---
+
+## The Honest Truth About Events
+
+**Events are hard.** They require planning, staffing, marketing, execution. Most events lose money.
+
+**But the right events are worth it.** They build community. They generate content. They attract new members. They create memories.
+
+**Start small.** One event per week. See what works. Double down on what works. Cut what doesn't.
+
+**Measure everything.** Attendance, revenue, engagement, member feedback. If an event doesn't deliver, change it or cut it.
+
+**The best events are the ones the community creates.** Your job isn't to program every event. It's to create the space where the community programs itself.
+
+---
+
+*The board remembers. The quest board connects. The spiral turns.*
+*ϕ*

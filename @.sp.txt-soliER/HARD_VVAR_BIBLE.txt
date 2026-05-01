@@ -1,0 +1,1286 @@
+[B 书] HARD_VVAR BIBLE v01.0 [VVAR 战]
+============================================================
+
+# [B 书] HARD_VVAR BIBLE v01.0: Multi-Power Battle Bot Arena [VVAR 战]
+**Welcome, Wrench-Monkey.** You are about to enter the **HARD_VVAR** — a gritty, violent, metal-grinding arena where players build battle bots from scrap, wire them with AI brains, trap their corners of the board, and then unleash hell in a free-for-all. Bots run on diesel, steam, electricity, solar, or atomic power. The bots talk. They taunt. They learn. They bleed oil, vent steam, spark, glow, or radiate. [LAUNCH 发]
+
+**Version 01.0 (First Edition)** — Covers build phase, battle phase, piece roster, AI brains, taunt system, power sources, and 4-session campaign.
+
+============================================================
+
+
+##################################################
+### INDEX: Table of Contents
+##################################################
+
+# [B 书] HARD_VVAR BIBLE [VVAR 战]
+## Diesel-Punk Battle Bot Arena
+
+### Version 01.0 (First Edition)
+
+---
+
+## Table of Contents
+
+### Part I: The Arena
+1. [The Philosophy of HARD_VVAR](#ch1)
+2. [The Board: Scrapyard Colosseum](#ch2)
+3. [The Session Pulse (Build → Battle → Taunt)](#ch3)
+
+### Part II: Pieces
+4. [Chassis Pieces (The Body)](#ch4)
+5. [Mobility Pieces (The Legs)](#ch5)
+6. [Weapon Pieces (The Teeth)](#ch6)
+7. [Sensor Pieces (The Eyes)](#ch7)
+8. [AI Brain Pieces (The Mind)](#ch8)
+9. [Trap & Obstacle Pieces (The Board)](#ch9)
+10. [Power-Up Pieces (The Juice)](#ch10)
+
+### Part III: Mechanics
+11. [Build Phase Rules](#ch11)
+12. [Battle Phase Rules](#ch12)
+13. [The Taunt System](#ch13)
+14. [AI Defense Programming](#ch14)
+15. [Scoring & Victory Points](#ch15)
+
+### Part IV: Campaign
+16. [Session 1: First Blood](#ch16)
+17. [Session 2: The Learning](#ch17)
+18. [Session 3: The Gauntlet](#ch18)
+19. [Session 4: The Grinder](#ch19)
+
+### Part V: Reference
+20. [Full Piece Roster](#ch20)
+21. [Common Pitfalls & Debugging](#ch21)
+
+---
+
+[Return to Main Index](../README.md)
+
+
+
+
+##################################################
+### CHAPTER 1: THE PHILOSOPHY OF HARD_VVAR [VVAR 哲]
+##################################################
+
+# [VVAR 哲] Chapter 1: The Philosophy of HARD_VVAR
+**HARD_VVAR** is not a gentle game. It is grinding metal and sparking wires. It is steam venting, diesel smoking, solar panels cracking, atomic cores glowing. It is a bot screaming insults while its own tread falls off. It is TPMOJIO's emotional core wrapped in armor plate and set on fire — or electrified, or irradiated, or pressurized. [PIECE 砖]
+
+---
+
+## [BLD 建] The Core Loop
+
+Every HARD_VVAR session has three phases:
+
+```
+┌─────────────────────────────────────────────┐
+│  1. BUILD PHASE [建 战]                     │
+│     Players draft pieces.                   │
+│     They assemble their battle bot.         │
+│     They place traps/obstacles on their     │
+│     side of the board.                      │
+│     They program AI defense routines.       │
+└──────────────┬──────────────────────────────┘
+               ▼
+┌─────────────────────────────────────────────┐
+│  2. BATTLE PHASE [斗 场]                    │
+│     Free-for-all arena combat.              │
+│     Players request moves from DM.          │
+│     Failed moves cost points.               │
+│     Bots taunt each other between turns.    │
+│     AI defenses auto-trigger.               │
+└──────────────┬──────────────────────────────┘
+               ▼
+┌─────────────────────────────────────────────┐
+│  3. TAUNT & SCORE [嘲 分]                   │
+│     Bots exchange verbal abuse.             │
+│     Victory Points counted.                 │
+│     Surviving bots gain XP.                 │
+│     "The arena remembers."                  │
+└─────────────────────────────────────────────┘
+```
+
+---
+
+## [ZEN 禅] The Zen of HARD_VVAR
+
+* **The arena remembers.** Every dent, every oil slick, every severed wire, every scorch mark, every radiation hotspot stays on the board.
+* **Failure costs.** You ask the DM for permission to attempt a move. If you fail, you lose points. No free retries.
+* **The bots talk.** They are not silent machines. They taunt, boast, complain, and occasionally show respect.
+* **Power sources matter.** Diesel bots smoke. Steam bots vent. Electric bots spark. Solar bots glow. Atomic bots radiate. Each has strengths and vulnerabilities.
+* **AI is real.** Players can program actual defense routines (simple rules) that auto-execute. Or they can remote-control manually. Or both.
+* **Scrap is sacred.** Destroyed pieces become scrap on the board. Scrap can be salvaged. Nothing is truly wasted.
+
+---
+
+## [DOC 记] What You Need
+
+| Item | Purpose | Notes |
+|------|---------|-------|
+| **Battle bot chassis** | Physical or digital. Lego Mindstorms, 3D print, or paper. | Must have slots for pieces. |
+| **Piece roster** | Draft pool of chassis, mobility, weapons, sensors, brains, traps, power-ups. | See Chapter 20. |
+| **Arena board** | 6x6 grid with terrain features. Obstacles. Scrap zones. | See Chapter 2. |
+| **DM (Mother Tmojizu)** | Arbitrates moves, rolls, taunts, complications. | Same DM as TPMOJIO. |
+| **Players** | 4. Always 4. | Each builds one bot. |
+| **Taunt cards (optional)** | Pre-written taunts for players who freeze up. | Or improvise. Always improvise. |
+| **Atmosphere (optional)** | Oil, steam, sparks, glow, radiation. ☕ → 🛢️ → ⚡ → ☢️ |
+
+---
+
+## [DOC 记] Study Questions
+1. What are the three phases of a HARD_VVAR session?
+2. What happens when a player fails a move attempt?
+3. Why do the bots talk?
+4. **Imagine:** Your bot just lost its weapon arm. What does it say?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 2: THE BOARD — SCRAPYARD COLOSSEUM [场 废]
+##################################################
+
+# [场 废] Chapter 2: The Board — Scrapyard Colosseum
+The arena is a 6x6 grid of scarred metal, oil slicks, steam vents, scorch marks, and the bones of bots that came before. [MAP 图]
+
+---
+
+## [MAP 图] Arena Layout
+
+```
+┌─────┬─────┬─────┬─────┬─────┬─────┐
+│ P1  │ P1  │  O  │  O  │ P2  │ P2  │  ← Player corners
+│CORNER│CORNER│     │     │CORNER│CORNER│
+├─────┼─────┼─────┼─────┼─────┼─────┤
+│ P1  │  O  │  O  │  O  │  O  │ P2  │
+│TRAPS │     │CENTER│     │     │TRAPS │
+├─────┼─────┼─────┼─────┼─────┼─────┤
+│  O  │  O  │  C  │  C  │  O  │  O  │  ← Center zone
+│     │     │ENTER │ENTER │     │     │     (high risk, high reward)
+├─────┼─────┼─────┼─────┼─────┼─────┤
+│  O  │  O  │  C  │  C  │  O  │  O  │
+│     │     │ENTER │ENTER │     │     │
+├─────┼─────┼─────┼─────┼─────┼─────┤
+│ P3  │  O  │  O  │  O  │  O  │ P4  │
+│TRAPS │     │     │     │     │TRAPS │
+├─────┼─────┼─────┼─────┼─────┼─────┤
+│ P3  │ P3  │  O  │  O  │ P4  │ P4  │  ← Player corners
+│CORNER│CORNER│     │     │CORNER│CORNER│
+└─────┴─────┴─────┴─────┴─────┴─────┘
+```
+
+### Zone Types:
+
+| Zone | Description | Effect |
+|------|-------------|--------|
+| **Player Corner (P1-P4)** | Your build zone. You place traps here during build phase. | Safe zone. +1 defense while in your corner. |
+| **Obstacle Zone (O)** | Neutral terrain. Oil slicks, scrap piles, wrecked bots. | Movement penalty. Possible salvage. |
+| **Center Zone (C)** | The kill zone. High-value power-ups spawn here. | +2 attack, -1 defense. Everyone wants it. No one survives long. |
+
+### Board Properties:
+- **It remembers.** Every battle leaves scrap. Scrap piles grow over sessions. Oil slicks, steam vents, scorch marks, and radiation hotspots persist.
+- **It shifts.** Oil slicks spread. Steam vents erupt. Scorch marks glow. Radiation pulses. New obstacles appear.
+- **It taunts.** The arena itself has a voice. It announces kills. It laughs at failures. It comments on power source mismatches.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the three zone types? What are their effects?
+2. Why is the Center Zone dangerous?
+3. How does the board change between sessions?
+4. **Imagine:** Your bot is cornered in P2 with no escape. What do you do?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 3: THE SESSION PULSE [PULSE 心]
+##################################################
+
+# [PULSE 心] Chapter 3: The Session Pulse — Build → Battle → Taunt
+The heartbeat of HARD_VVAR. Three phases. No mercy. [SPRINT 跑]
+
+---
+
+## [BUILD 建] Phase 1: Build Phase (1 Round)
+
+### Draft Order:
+- **Snake draft.** P1 picks first, then P4, P4, P1, P1, P4, etc.
+- **Each player gets:** 1 chassis, 2 mobility, 2 weapons, 1 sensor, 1 AI brain, 3 traps.
+- **Budget:** 100 Scrap Credits (SC). Each piece costs SC.
+
+### Build Steps:
+1. **Draft pieces** from the roster (see Chapter 20).
+2. **Assemble bot** — assign pieces to slots.
+3. **Place traps** on your corner of the board.
+4. **Program AI defense** — write 3-5 if/then rules (see Chapter 14).
+5. **Name your bot.** It must be aggressive. "RUST_MAMMOTH." "SCREAM_TREAD." "OIL_PROPHET."
+
+### DM Mandate: [MANDATE 令]
+> **Announce each piece as it's drafted.** "P1 takes THRUSTER x2. P4 takes LSTM BRAIN. P2 is hoarding lasers again." Build tension during the draft.
+
+---
+
+## [BATTLE 斗] Phase 2: Battle Phase (3-5 Rounds)
+
+### Turn Structure:
+1. **Initiative:** All players roll d20 + AI brain modifier. Highest goes first.
+2. **Declare move:** Player tells DM what they want to attempt.
+3. **DM approves/denies:** DM checks if the move is legal given the bot's pieces.
+4. **Roll:** Player rolls d20 + relevant stat.
+5. **Outcome:**
+   - **Success (13+):** Move executes. Damage dealt. Position changed.
+   - **Partial (8-12):** Move executes with cost. Lose 5 VP.
+   - **Failure (2-7):** Move fails. Lose 10 VP. Bot is stunned for next turn.
+   - **NAT 20:** Critical hit. Double damage. Bot taunts for free.
+   - **NAT 1:** Catastrophic failure. Piece breaks off. Lose 15 VP.
+
+### DM Mandate: [MANDATE 令]
+> **Never let a move happen without asking.** "You want to what? With what piece? Roll it." The DM is the gatekeeper of physics.
+
+---
+
+## [TAUNT 嘲] Phase 3: Taunt & Score
+
+### Taunt Rules:
+- After each battle round, **every bot taunts.**
+- Taunts are **in character.** The bot speaks.
+- Taunts can be **improvised** or drawn from taunt cards.
+- **Good taunts earn +1 VP.** The DM awards this for creativity, humor, or brutality.
+
+### Scoring:
+| Action | VP |
+|--------|----|
+| Destroy an enemy weapon | +10 VP |
+| Destroy an enemy mobility piece | +15 VP |
+| Destroy an enemy AI brain | +25 VP |
+| Survive a round | +5 VP |
+| Hold Center Zone at end of round | +8 VP |
+| Successful taunt | +1 VP |
+| Failed move attempt | -10 VP |
+| Lose a piece | -5 VP |
+| NAT 1 catastrophe | -15 VP |
+
+### Closing:
+```
+**Mother Tmojizu:** The arena remembers. [Describe the wreckage.]
+Victory Points:
+- P1: XX VP
+- P2: XX VP
+- P3: XX VP
+- P4: XX VP
+
+[quietly] The grinder turns. The scrap piles grows.
+And the arena... the arena is ready.
+```
+
+---
+
+## [DOC 记] Study Questions
+1. What is the build phase budget? How many pieces does each player get?
+2. What happens on a NAT 1 during battle?
+3. How do taunts earn VP?
+4. **Imagine:** Your bot just destroyed an enemy's AI brain. What does it say?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 4: CHASSIS PIECES [壳 机]
+##################################################
+
+# [壳 机] Chapter 4: Chassis Pieces — The Body
+The chassis is your bot's skeleton. Everything else attaches to it. [PIECE 砖]
+
+---
+
+## [CHASSIS 壳] Chassis Roster
+
+| Piece | Cost (SC) | HP | Slots | Power Source | Special |
+|-------|-----------|----|----|-------------|---------|
+| **LIGHT_FRAME** | 15 | 30 | 4 | Electric | +1 mobility. Fragile. Sparks when hit. |
+| **MID_FRAME** | 25 | 50 | 6 | Diesel | Balanced. The workhorse. Smoke aura. |
+| **HEAVY_FRAME** | 40 | 80 | 8 | Steam | Slow. Tanky. Vents steam when damaged (+1 evasion). |
+| **SCRAP_CRAWLER** | 10 | 20 | 3 | Solar | Cheap. Salvages +1 SC per round. Recharges in Center Zone. |
+| **DIESEL_HULK** | 35 | 70 | 7 | Diesel | Emits smoke. -1 enemy accuracy in adjacent tiles. |
+| **RUST_COLOSSUS** | 50 | 100 | 10 | Atomic | Massive. Can carry 2 AI brains. -2 mobility. Radiates (+1 damage to adjacent enemies, +1 damage to self per round). |
+| **STEAM_JUGGERNAUT** | 45 | 90 | 9 | Steam | Pressurized. +2 defense. Vents steam on NAT 20 (stuns adjacent enemies). |
+| **SOLAR_STRIKER** | 30 | 40 | 5 | Solar | Fast. +2 accuracy in Center Zone (sunlight). -1 accuracy in smoke/steam. |
+| **ELECTRO_WRAITH** | 35 | 55 | 6 | Electric | Arcing. +1 accuracy. Chains lightning to adjacent enemy on NAT 20. Vulnerable to EMP. |
+
+### Chassis Rules:
+- **You must have exactly 1 chassis.**
+- **Slots determine how many pieces you can attach.**
+- **When chassis HP hits 0, the bot is destroyed.**
+- **Power Source matters.** Each source has strengths and vulnerabilities (see Power Source Table below).
+
+### Power Source Reference:
+
+| Power Source | Strength | Vulnerability | Visual |
+|-------------|----------|---------------|--------|
+| **Diesel** [柴油] | Reliable. Smoke obscures enemies. | Fire spreads to diesel bots. Oil slicks fuel them but also spread. | Black smoke, rumbling, oil leaks. |
+| **Steam** [蒸汽] | Pressure builds. Vents for evasion/defense. | Cold zones reduce pressure. -1 mobility. Water hazards short-circuit. | White steam, hissing, pressure gauges. |
+| **Electric** [电力] | Fast. Lightning chains. High accuracy. | EMP disables. Water hazards electrocute (self-damage). | Blue sparks, humming, arc flashes. |
+| **Solar** [太阳能] | Free energy. Recharges in Center Zone. No fuel cost. | Smoke/steam blocks sunlight. -1 accuracy in obscured zones. Night rounds -1 accuracy. | Golden glow, panels, silent operation. |
+| **Atomic** [原子] | Raw power. Radiation damages neighbors. No fuel cost. | Radiation damages self over time. EMP causes meltdown (2d6 self-damage). | Green glow, clicking geiger counter, heat shimmer. |
+
+---
+
+## [DOC 记] Study Questions
+1. What's the difference between LIGHT_FRAME and HEAVY_FRAME?
+2. Why would you choose SCRAP_CRAWLER?
+3. How many slots does DIESEL_HULK have?
+4. **Imagine:** You have 60 SC left after buying chassis. What's your build strategy?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 5: MOBILITY PIECES [腿 动]
+##################################################
+
+# [腿 动] Chapter 5: Mobility Pieces — The Legs
+How your bot moves. Each type has tradeoffs. [PIECE 砖]
+
+---
+
+## [MOBILITY 腿] Mobility Roster
+
+| Piece | Cost (SC) | Speed | Special |
+|-------|-----------|-------|---------|
+| **TIRE_x2** | 8 each | 3 tiles | Standard. Reliable. |
+| **TREAD_x2** | 12 each | 2 tiles | +1 defense. Ignores oil slicks. |
+| **THRUSTER** | 20 | 4 tiles | Can jump 1 obstacle. Fuel: 3 uses/round. |
+| **MAGNETIC_LEGS** | 15 | 2 tiles | Can climb walls. +1 accuracy on elevated tiles. |
+| **HOVER_PAD** | 25 | 3 tiles | Ignores all terrain. Vulnerable to EMP. |
+| **SPIDER_LEGS** | 18 | 2 tiles | Can move diagonally. +1 evasion. |
+| **TRACKS_HEAVY** | 15 | 1 tile | +2 defense. Cannot be pushed. Slow but unstoppable. |
+
+### Mobility Rules:
+- **You must have at least 1 mobility piece.**
+- **Multiple mobility pieces add their speeds.**
+- **If all mobility pieces are destroyed, the bot is immobilized.**
+
+---
+
+## [DOC 记] Study Questions
+1. Which mobility piece ignores oil slicks?
+2. Why would you choose THRUSTER over TIRE?
+3. What happens if all your mobility pieces are destroyed?
+4. **Imagine:** You're immobilized in the Center Zone. An enemy approaches. What do you do?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 6: WEAPON PIECES [牙 武]
+##################################################
+
+# [牙 武] Chapter 6: Weapon Pieces — The Teeth
+How your bot hurts things. [PIECE 砖]
+
+---
+
+## [WEAPON 牙] Weapon Roster
+
+| Piece | Cost (SC) | Damage | Range | Special |
+|-------|-----------|--------|-------|---------|
+| **LASER_CUTTER** | 20 | 1d8 | 3 tiles | Ignores 1 armor. |
+| **FLAME_THROWER** | 18 | 1d6 | 1 tile (cone) | Sets oil slicks on fire. +1d4 damage to burning targets. |
+| **PILE_BUNKER** | 25 | 2d6 | 0 tiles (melee) | +1d6 vs. immobilized targets. |
+| **CHAINSAW_ARM** | 15 | 1d6 | 0 tiles (melee) | Destroys mobility pieces on NAT 20. |
+| **MISSILE_RACK** | 30 | 2d8 | 5 tiles | 2 uses/round. Can target any tile. |
+| **SONIC_PULSE** | 22 | 1d4 | 2 tiles (AoE) | Stuns all enemies in range for 1 turn. |
+| **ARC_WELDER** | 12 | 1d4 | 1 tile | +1d4 vs. metal chassis. Chains to adjacent enemy on NAT 20. |
+| **NET_LAUNCHER** | 16 | 0 | 3 tiles | Immobilizes target for 1 turn. No damage. |
+| **DRILL_NOSE** | 20 | 1d10 | 0 tiles (melee) | Ignores armor. -1 accuracy. |
+
+### Weapon Rules:
+- **You can have up to 2 weapons.**
+- **Each weapon has its own ammo/fuel limit.**
+- **When a weapon is destroyed, it's gone for the rest of the session.**
+
+---
+
+## [DOC 记] Study Questions
+1. Which weapon ignores armor?
+2. What does SONIC_PULSE do?
+3. Why would you take NET_LAUNCHER (0 damage)?
+4. **Imagine:** You have CHAINSAW_ARM and an enemy has TREADS. What happens on a NAT 20?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 7: SENSOR PIECES [眼 感]
+##################################################
+
+# [眼 感] Chapter 7: Sensor Pieces — The Eyes
+How your bot perceives the arena. [PIECE 砖]
+
+---
+
+## [SENSOR 眼] Sensor Roster
+
+| Piece | Cost (SC) | Special |
+|-------|-----------|---------|
+| **CAMERA_BASIC** | 5 | See adjacent tiles. |
+| **SONAR_PING** | 12 | Detect all enemies within 3 tiles, even through obstacles. |
+| **THERMAL_SCOPE** | 15 | +2 accuracy against targets with active engines. |
+| **LIDAR_ARRAY** | 20 | Map all traps and obstacles on the board. +1 evasion. |
+| **RADAR_DISH** | 18 | Detect enemy AI defense programs. See their if/then rules. |
+| **PRESSURE_PLATES** | 10 | Detect enemies entering your corner. Auto-trigger traps. |
+
+### Sensor Rules:
+- **You can have 1 sensor.**
+- **Without a sensor, you have -2 accuracy on all attacks.**
+- **Sensors can be destroyed. Blind bots are vulnerable.**
+
+---
+
+## [DOC 记] Study Questions
+1. Which sensor detects enemy AI programs?
+2. What penalty does a bot without a sensor suffer?
+3. Why would you choose PRESSURE_PLATES over SONAR_PING?
+4. **Imagine:** Your sensor is destroyed. How do you compensate?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 8: AI BRAIN PIECES [脑 智]
+##################################################
+
+# [脑 智] Chapter 8: AI Brain Pieces — The Mind
+The brain is what makes your bot more than a remote-controlled toy. Every brain has a **computation type** that determines how it thinks. [PIECE 砖]
+
+---
+
+## [COMPUTE 算] Computation Types
+
+Every AI brain has one of three computation types. This affects how the brain behaves:
+
+| Type | Symbol | Behavior | Cost |
+|------|--------|----------|------|
+| **Classic** [经典] | 🖥️ | Standard AI. Predictable. Balanced. Does exactly what it says. | Free (default) |
+| **Quantum** [量子] | ⚛️ | Unpredictable. High variance. Can be brilliant or catastrophic. | +5 SC |
+| **Mechanical** [机械] | ⚙️ | Gear-driven. Clockwork. Reliable but limited. Lower ceiling, higher floor. | +3 SC |
+
+### Quantum Behavior:
+On every activation (auto-dodge roll, prediction, learning tick), roll d6:
+- **1-2: Glitch** — The brain misfires. -2 accuracy this round. The bot sparks, stutters, or says something nonsensical.
+- **3-4: Normal** — Works as intended.
+- **5-6: Breakthrough** — The brain achieves quantum coherence. +2 accuracy this round. The bot does something unexpectedly brilliant.
+
+### Mechanical Behavior:
+- **-1 max capability** on all brains. (e.g., LSTM_BRAIN maxes at +2 instead of +3. RL_LEARNER auto-dodges on 5+ instead of 4+.)
+- **Never glitches.** No d6 roll needed. Consistent every round.
+- **Reliable.** Boring but safe.
+
+### DM Mandate: [MANDATE 令]
+> **Announce the computation type when a brain is drafted.** "P1 takes LSTM_BRAIN — Quantum variant. This will either be brilliant or catastrophic. Probably both."
+
+---
+
+## [BRAIN 脑] AI Brain Roster
+
+| Piece | Cost (SC) | Special |
+|-------|-----------|---------|
+| **RULE_BASED** | 10 | 5 if/then defense rules. No learning. Reliable. Classic: works every time. Quantum: rules may randomly invert. Mechanical: only 3 rules but never fail. |
+| **LSTM_BRAIN** | 25 | Learns enemy patterns over 3 rounds. +1 accuracy per round. Classic: max +3. Quantum: max +4 but may glitch to -1. Mechanical: max +2, never glitches. |
+| **ATTENTION_BRAIN** | 30 | Focuses on one enemy. Classic: +3 accuracy vs focused, -1 vs others. Quantum: +4/-2 or +1/0 (d6 roll). Mechanical: +2/-1, consistent. |
+| **RL_LEARNER** | 35 | Reinforcement learning. Adapts defense every round. Classic: auto-dodge on d6 4+. Quantum: d6 3+ but glitch on 1. Mechanical: auto-dodge on d6 5+, never glitches. |
+| **TRANSFORMER_CORE** | 45 | Processes all enemy taunts. +1 VP per taunt heard. Predicts enemy moves. Classic: reveals next target. Quantum: reveals target or false target (50/50). Mechanical: reveals next target but only 1 round ahead (not 2). |
+| **FERAL_CORE** | 15 | No AI. Pure aggression. +2 damage on all attacks. -2 defense. Computation type doesn't apply — it's feral. |
+
+### AI Brain Rules:
+- **You must have exactly 1 AI brain.**
+- **The brain determines your auto-defense behavior.**
+- **If the brain is destroyed, the bot goes feral (attacks randomly, -2 accuracy).**
+
+### Programming AI Defense (see Chapter 14):
+During build phase, write 3-5 if/then rules:
+```
+IF enemy within 2 tiles THEN activate FLAME_THROWER
+IF HP < 30 THEN retreat to corner
+IF enemy uses MISSILE_RACK THEN deploy NET_LAUNCHER
+IF center zone is empty THEN advance
+IF taunted THEN respond with taunt
+```
+
+---
+
+## [DOC 记] Study Questions
+1. What does LSTM_BRAIN learn?
+2. How does RL_LEARNER's auto-dodge work?
+3. What happens when an AI brain is destroyed?
+4. **Imagine:** You have TRANSFORMER_CORE. An enemy taunts your bot. What happens?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 9: TRAP & OBSTACLE PIECES [陷 障]
+##################################################
+
+# [陷 障] Chapter 9: Trap & Obstacle Pieces — The Board
+Your corner. Your rules. Make it hurt to enter. [PIECE 砖]
+
+---
+
+## [TRAP 陷] Trap Roster
+
+| Piece | Cost (SC) | Effect |
+|-------|-----------|--------|
+| **OIL_SLICK** | 5 | Enemies entering tile: roll DEX or slip. -1 mobility next turn. |
+| **SPIKE_STRIP** | 8 | Enemies entering tile: take 1d4 damage. Destroys TIRE mobility. |
+| **EMP_BURST** | 15 | Enemies entering tile: AI brain disabled for 1 round. |
+| **FIRE_PIT** | 12 | Enemies entering tile: take 1d6 fire damage. Spreads to adjacent oil. |
+| **MAGNETIC_SNARE** | 10 | Enemies entering tile: immobilized for 1 turn. |
+| **DECOY_BEACON** | 8 | Enemies targeting your corner: 50% chance to hit decoy instead. |
+| **SCRAMBLER_FIELD** | 18 | Enemies entering tile: lose next taunt. -1 VP. |
+
+### Trap Rules:
+- **You can place up to 3 traps in your corner during build phase.**
+- **Traps trigger automatically when an enemy enters the tile.**
+- **Traps can be destroyed by weapons (2 hits to destroy).**
+- **Traps persist between rounds but not between sessions.**
+
+---
+
+## [DOC 记] Study Questions
+1. How many traps can you place?
+2. Which trap disables AI brains?
+3. What happens when FIRE_PIT meets OIL_SLICK?
+4. **Imagine:** An enemy is approaching your corner. Which trap do you hope they step on?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 10: POWER-UP PIECES [力 充]
+##################################################
+
+# [力 充] Chapter 10: Power-Up Pieces — The Juice
+Temporary boosts. High risk, high reward. [PIECE 砖]
+
+---
+
+## [POWERUP 力] Power-Up Roster
+
+| Piece | Cost (SC) | Effect | Duration |
+|-------|-----------|--------|----------|
+| **OVERCLOCK** | 10 | +2 accuracy, +2 damage. | 2 rounds. Then -1 accuracy (cooldown). |
+| **ARMOR_PLATE** | 8 | +3 defense. | 3 rounds. |
+| **FUEL_INJECT** | 12 | +2 mobility speed. | 2 rounds. |
+| **REPAIR_KIT** | 15 | Restore 20 HP. | Instant. |
+| **AMMO_DUMP** | 10 | Refill all weapon ammo. | Instant. |
+| **ADRENALINE_CORE** | 20 | +3 damage, +3 accuracy, -2 defense. | 1 round. Then bot is stunned. |
+| **SCAVENGE_HOOK** | 8 | Salvage 1 destroyed piece from the board. Add to your bot (if slots available). | Instant. |
+
+### Power-Up Rules:
+- **Power-ups spawn in the Center Zone at the start of each battle round.**
+- **Players must move to the Center Zone to claim them.**
+- **Only 1 power-up per bot per round.**
+- **Power-ups are contested — if two bots reach the same one, roll initiative.**
+
+---
+
+## [DOC 记] Study Questions
+1. Where do power-ups spawn?
+2. What is the downside of ADRENALINE_CORE?
+3. How does SCAVENGE_HOOK work?
+4. **Imagine:** You're at 10 HP. There's a REPAIR_KIT in the Center Zone. An enemy is between you and it. What do you do?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 11: BUILD PHASE RULES [建 规]
+##################################################
+
+# [建 规] Chapter 11: Build Phase Rules
+One round. 100 Scrap Credits. Build your killer. [SPRINT 跑]
+
+---
+
+## [BUILD 建] The Build Process
+
+### Step 1: Draft (Snake Order)
+- P1 picks first. Then P4, P4, P1, P1, P4, etc.
+- Each piece costs SC. Announce the cost.
+- Draft continues until all players have their required pieces.
+
+### Step 2: Assemble
+- Assign pieces to chassis slots.
+- Must have: 1 chassis, 1+ mobility, 1-2 weapons, 1 sensor, 1 AI brain.
+- Remaining slots can hold extra mobility, weapons, or power-ups.
+
+### Step 3: Place Traps
+- Place up to 3 traps in your corner.
+- Announce trap locations (hidden from other players until triggered).
+
+### Step 4: Program AI Defense
+- Write 3-5 if/then rules based on your AI brain type.
+- Submit to DM. Other players don't see them.
+
+### Step 5: Name Your Bot
+- Must be aggressive. "RUST_MAMMOTH." "SCREAM_TREAD." "OIL_PROPHET."
+- Announce it. The arena remembers.
+
+---
+
+## [DOC 记] Study Questions
+1. What is the draft order?
+2. What are the mandatory pieces?
+3. How many traps can you place?
+4. **Imagine:** You have 15 SC left after drafting. What do you buy?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 12: BATTLE PHASE RULES [斗 规]
+##################################################
+
+# [斗 规] Chapter 12: Battle Phase Rules
+Ask permission. Roll dice. Bleed oil. [SPRINT 跑]
+
+---
+
+## [BATTLE 斗] The Battle Process
+
+### Turn Order:
+1. **Roll initiative:** d20 + AI brain modifier.
+2. **Highest goes first.** Then descending.
+
+### Declaring a Move:
+```
+**Player:** I want to [action] using [piece].
+**Mother Tmojizu:** [Approves/denies based on bot's pieces and position.]
+**Player:** [Rolls d20 + modifier.]
+**Mother Tmojizu:** [Describes outcome in 3 layers: mechanical, emotional, thematic.]
+```
+
+### Move Types:
+| Move | Stat | Description |
+|------|------|-------------|
+| **Attack** | DEX + weapon mod | Deal damage to enemy. |
+| **Move** | DEX + mobility mod | Change position. |
+| **Defend** | CON + chassis mod | +2 defense this turn. |
+| **Use Power-Up** | INT | Activate a power-up. |
+| **Salvage** | INT + sensor mod | Recover scrap from the board. |
+| **Taunt** | CHA | Verbal abuse. Earn VP for creativity. |
+
+### Failed Moves:
+- **Partial (8-12):** Move executes with cost. Lose 5 VP.
+- **Failure (2-7):** Move fails. Lose 10 VP. Bot stunned next turn.
+- **NAT 1:** Catastrophe. Piece breaks. Lose 15 VP.
+
+---
+
+## [DOC 记] Study Questions
+1. How is initiative determined?
+2. What happens on a failed move?
+3. Can you taunt and attack in the same turn?
+4. **Imagine:** You declare a move the DM says is impossible. What happens?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 13: THE TAUNT SYSTEM [嘲 系]
+##################################################
+
+# [嘲 系] Chapter 13: The Taunt System
+Words are weapons. The best ones earn VP. [TRICKSTER 诡]
+
+---
+
+## [TAUNT 嘲] Taunt Rules
+
+### When to Taunt:
+- **After each battle round.** Every bot taunts.
+- **On NAT 20.** Free taunt + VP.
+- **When destroying an enemy piece.** Mandatory taunt.
+
+### How to Taunt:
+- **In character.** The bot speaks.
+- **Creative.** Humor, brutality, poetry, threats.
+- **Relevant.** Reference the battle, the enemy, the arena.
+
+### VP Awards:
+| Taunt Quality | VP |
+|---------------|----|
+| Basic insult | 0 VP |
+| Clever reference to battle | +1 VP |
+| Hilarious or brutal | +2 VP |
+| Poetic or thematic | +3 VP |
+| NAT 20 taunt | +1 VP (automatic) |
+
+### Example Taunts:
+```
+"Your LSTM couldn't learn this, scrap-heap."
+"I've seen better armor on a trash can. And it was rusted shut."
+"You programmed defense? I programmed vengeance."
+"The arena remembers your name. It's 'loser.'"
+"Your AI brain just got a firmware update: DEAD."
+```
+
+---
+
+## [DOC 记] Study Questions
+1. When do bots taunt?
+2. What earns +3 VP for a taunt?
+3. Give an example of a taunt that references the battle.
+4. **Imagine:** You just destroyed an enemy's AI brain with a CHAINSAW_ARM. What do you say?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 14: AI DEFENSE PROGRAMMING [脑 编]
+##################################################
+
+# [脑 编] Chapter 14: AI Defense Programming
+Write your rules. Let the bot think. [MIND 脑]
+
+---
+
+## [PROGRAM 编] Writing AI Defense Rules
+
+### Format:
+```
+IF [condition] THEN [action]
+```
+
+### Conditions:
+- `enemy within X tiles`
+- `HP < X`
+- `enemy uses [weapon]`
+- `center zone is empty`
+- `taunted`
+- `trapped in corner`
+- `ally destroyed` (for team modes)
+
+### Actions:
+- `activate [weapon]`
+- `retreat to [location]`
+- `deploy [trap]`
+- `advance to [location]`
+- `respond with taunt`
+- `use [power-up]`
+- `dodge` (RL_LEARNER only)
+
+### Example AI Programs:
+
+**RULE_BASED Bot:**
+```
+IF enemy within 2 tiles THEN activate FLAME_THROWER
+IF HP < 30 THEN retreat to corner
+IF enemy uses MISSILE_RACK THEN deploy NET_LAUNCHER
+IF center zone is empty THEN advance
+IF taunted THEN respond with taunt
+```
+
+**RL_LEARNER Bot:**
+```
+IF enemy attacks THEN dodge (roll d6: 4+ = auto-dodge)
+IF HP < 50 THEN use REPAIR_KIT
+IF enemy in corner THEN activate SONIC_PULSE
+IF taunted THEN analyze and adapt (+1 VP)
+```
+
+### AI Rules:
+- **3-5 rules per bot.**
+- **Submitted to DM during build phase.**
+- **Auto-execute during battle. Player doesn't need to declare.**
+- **Can be overridden by manual remote control (player's choice).**
+
+---
+
+## [DOC 记] Study Questions
+1. How many AI defense rules can you write?
+2. What can RL_LEARNER do that RULE_BASED can't?
+3. Can you override AI defense with manual control?
+4. **Imagine:** Write a 4-rule AI defense program for a bot with FLAME_THROWER and TREADS.
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 15: SCORING & VICTORY POINTS [分 胜]
+##################################################
+
+# [分 胜] Chapter 15: Scoring & Victory Points
+Count the scrap. Name the winner. [JUDGE 判]
+
+---
+
+## [SCORING 分] VP Table
+
+| Action | VP |
+|--------|----|
+| Destroy enemy weapon | +10 VP |
+| Destroy enemy mobility | +15 VP |
+| Destroy enemy AI brain | +25 VP |
+| Destroy enemy sensor | +12 VP |
+| Destroy enemy chassis | +50 VP (bot eliminated) |
+| Survive a round | +5 VP |
+| Hold Center Zone at end of round | +8 VP |
+| Successful taunt | +1 VP |
+| Creative taunt | +2 VP |
+| Poetic/thematic taunt | +3 VP |
+| Failed move attempt | -10 VP |
+| Lose a piece | -5 VP |
+| NAT 1 catastrophe | -15 VP |
+| Salvage a piece | +3 VP |
+| Claim power-up | +5 VP |
+
+---
+
+## [VICTORY 胜] Winning
+
+### Session Winner:
+- **Highest VP at end of battle phase wins.**
+- **Ties broken by:** most enemy pieces destroyed, then most taunts landed.
+
+### Campaign Winner:
+- **Accumulate VP across sessions.**
+- **Surviving bots gain XP.** XP unlocks bonus pieces in future sessions.
+
+### Closing:
+```
+**Mother Tmojizu:** The arena remembers. [Describe the wreckage.]
+Victory Points:
+- P1: XX VP
+- P2: XX VP
+- P3: XX VP
+- P4: XX VP
+
+[quietly] The grinder turns. The scrap pile grows.
+And the arena... the arena is ready.
+```
+
+---
+
+## [DOC 记] Study Questions
+1. How many VP for destroying an AI brain?
+2. How are ties broken?
+3. What happens to surviving bots between sessions?
+4. **Imagine:** Two bots are tied at 45 VP. P1 destroyed 3 weapons. P2 destroyed 2 weapons and 1 mobility. Who wins?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 16: SESSION 1 — FIRST BLOOD [血 初]
+##################################################
+
+# [血 初] Chapter 16: Campaign Session 1 — First Blood
+The arena is clean. Not for long. [SPRINT 跑]
+
+---
+
+## [SESSION 1] First Blood
+
+### Theme:
+**Discovery.** Players learn their pieces. The bots learn their voices. The arena tastes blood for the first time.
+
+### Setup:
+- **Standard draft.** 100 SC each.
+- **No XP bonuses.** Fresh bots.
+- **3 battle rounds.**
+
+### Key Beats:
+- **Build phase:** Players draft cautiously. No one knows the meta yet.
+- **Round 1:** Chaos. Everyone overcommits. Pieces fly. Oil spills.
+- **Round 2:** Players adapt. AI defenses trigger. Taunts begin.
+- **Round 3:** The Center Zone becomes a graveyard. Someone holds it. Someone doesn't.
+
+### DM Notes:
+> **Let them fail spectacularly.** Session 1 is about learning. The NAT 1s should be legendary. The taunts should be terrible. The arena should be covered in scrap.
+
+### Closing Beat:
+```
+**Mother Tmojizu:** The arena remembers. [Describe the first blood.]
+This is only the beginning. The grinder turns.
+And the arena... the arena is ready.
+```
+
+---
+
+## [DOC 记] Study Questions
+1. What is the theme of Session 1?
+2. How many battle rounds?
+3. Why should you let players fail spectacularly?
+4. **Imagine:** A player's bot loses its weapon on turn 1. What does it say?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 17: SESSION 2 — THE LEARNING [学 机]
+##################################################
+
+# [学 机] Chapter 17: Campaign Session 2 — The Learning
+The bots remember. They adapt. They get meaner. [SPRINT 跑]
+
+---
+
+## [SESSION 2] The Learning
+
+### Theme:
+**Adaptation.** Players learned the pieces. Now they optimize. AI brains level up. Taunts get sharper.
+
+### Setup:
+- **100 SC + XP bonus.** Surviving bots from Session 1 get +10 SC.
+- **New piece unlocks:** LSTM_BRAIN and ATTENTION_BRAIN become available.
+- **4 battle rounds.**
+
+### Key Beats:
+- **Build phase:** Players draft smarter. Counter-picks emerge.
+- **Round 1:** LSTM_BRAIN starts learning. +1 accuracy.
+- **Round 2:** ATTENTION_BRAIN focuses on the Session 1 winner. Revenge arc.
+- **Round 3:** AI defenses clash. RL_LEARNER auto-dodges. RULE_BASED holds firm.
+- **Round 4:** The Center Zone is a warzone. Power-ups spawn and die instantly.
+
+### DM Notes:
+> **Highlight the learning.** "Your LSTM has been watching. It knows you always retreat to the corner when HP drops below 30." Make the AI feel alive.
+
+### Closing Beat:
+```
+**Mother Tmojizu:** The arena remembers. [Describe the adaptations.]
+The bots are learning. The scrap pile grows.
+And the arena... the arena is ready.
+```
+
+---
+
+## [DOC 记] Study Questions
+1. What is the theme of Session 2?
+2. What new pieces unlock?
+3. How does the LSTM_BRAIN show it's learning?
+4. **Imagine:** An LSTM_BRAIN bot has been tracking an enemy for 3 rounds. What does it say?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 18: SESSION 3 — THE GAUNTLET [试 炼]
+##################################################
+
+# [试 炼] Chapter 18: Campaign Session 3 — The Gauntlet
+The arena adds obstacles. The bots must survive the board itself. [SPRINT 跑]
+
+---
+
+## [SESSION 3] The Gauntlet
+
+### Theme:
+**Endurance.** The arena fights back. New obstacles spawn. The board is no longer neutral.
+
+### Setup:
+- **100 SC + XP bonus.** Surviving bots get +15 SC.
+- **Arena hazards:** Oil slicks spread. Fire pits ignite. EMP zones activate.
+- **5 battle rounds.**
+
+### Key Beats:
+- **Build phase:** Players prioritize defense. TREADS over TIRES. ARMOR_PLATE power-ups.
+- **Round 1:** The arena shifts. Oil slicks connect. A fire chain starts.
+- **Round 2:** Bots caught in the fire take damage. AI brains overheat.
+- **Round 3:** The Gauntlet intensifies. EMP bursts disable AI brains. Bots go feral.
+- **Round 4:** Survivors adapt. SCRAP_CRAWLER salvages from the fire. RUST_COLOSSUS tanks through.
+- **Round 5:** Final push. The Center Zone is a crater. Someone stands in it.
+
+### DM Notes:
+> **The arena is the enemy this session.** Not the other players. The board itself is trying to kill them. Make it personal.
+
+### Closing Beat:
+```
+**Mother Tmojizu:** The arena remembers. [Describe the scars.]
+The board fought back. And some of you survived.
+And the arena... the arena is ready.
+```
+
+---
+
+## [DOC 记] Study Questions
+1. What is the theme of Session 3?
+2. What makes the arena hostile?
+3. Why would players prioritize TREADS this session?
+4. **Imagine:** Your bot's AI brain is disabled by EMP. It goes feral. What does it do?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 19: SESSION 4 — THE GRINDER [磨 终]
+##################################################
+
+# [磨 终] Chapter 19: Campaign Session 4 — The Grinder
+The final session. Everything they've learned. Everything they've built. The arena remembers all. [SPRINT 跑]
+
+---
+
+## [SESSION 4] The Grinder
+
+### Theme:
+**Culmination.** Every lesson. Every adaptation. Every scar. The final battle.
+
+### Setup:
+- **100 SC + XP bonus.** Surviving bots get +20 SC.
+- **All pieces unlocked.** TRANSFORMER_CORE available.
+- **The arena is scarred.** Scrap piles from Sessions 1-3 are permanent obstacles.
+- **6 battle rounds.**
+
+### Key Beats:
+- **Build phase:** Players go all-in. No holding back. The best bots they can build.
+- **Round 1:** The grinder starts. Immediate chaos. Old rivals face off.
+- **Round 2:** LSTM_BRAIN has learned everything. +3 accuracy. ATTENTION_BRAIN locks on.
+- **Round 3:** TRANSFORMER_CORE processes all taunts. Predicts enemy moves. The arena holds its breath.
+- **Round 4:** The Center Zone is a mountain of scrap. Power-ups are buried. Someone digs.
+- **Round 5:** Bots are breaking. Chassis cracking. AI brains flickering. Taunts get desperate.
+- **Round 6:** Final round. Last bots standing. The arena remembers everything.
+
+### Closing Beat:
+```
+**Mother Tmojizu:** The arena remembers. [Describe the final wreckage.]
+Four sessions. Four battles. One grinder.
+Victory Points:
+- P1: XX VP
+- P2: XX VP
+- P3: XX VP
+- P4: XX VP
+
+[quietly] The grinder turns. The scrap pile is a mountain.
+And the arena... the arena is ready.
+
+**Mother Tmojizu:** Did you learn anything, ducklings?
+
+**Player 1:** [in bot voice] "I learned that rust never sleeps."
+**Player 2:** [in bot voice] "I learned that fire spreads."
+**Player 3:** [in bot voice] "I learned that the arena always wins."
+**Player 4:** [in bot voice] "I learned that I'm still standing."
+
+**Mother Tmojizu:** [warmly] You did. All of you. The grinder turns.
+The scrap pile grows. And the arena... the arena remembers.
+
+Sleep well, ducklings. The metal cools. The oil settles.
+And the arena... the arena is ready.
+```
+
+---
+
+## [DOC 记] Study Questions
+1. What is the theme of Session 4?
+2. How many battle rounds?
+3. What makes the arena different from Session 1?
+4. **Imagine:** It's the final round. Two bots remain. Both at 5 HP. What happens?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 20: FULL PIECE ROSTER [全 件]
+##################################################
+
+# [全 件] Chapter 20: Full Piece Roster — Quick Reference
+Everything in one table. Print this. Laminate it. Stain it with oil. [PIECE 砖]
+
+---
+
+## [ROSTER 全] Complete Piece List
+
+| Category | Piece | Cost | Key Stat |
+|----------|-------|------|----------|
+| **Chassis** | LIGHT_FRAME | 15 | 30 HP, 4 slots |
+| **Chassis** | MID_FRAME | 25 | 50 HP, 6 slots |
+| **Chassis** | HEAVY_FRAME | 40 | 80 HP, 8 slots |
+| **Chassis** | SCRAP_CRAWLER | 10 | 20 HP, 3 slots, +1 SC/round |
+| **Chassis** | DIESEL_HULK | 35 | 70 HP, 7 slots, smoke aura |
+| **Chassis** | RUST_COLOSSUS | 50 | 100 HP, 10 slots, -2 mobility |
+| **Mobility** | TIRE_x2 | 8 | Speed 3 |
+| **Mobility** | TREAD_x2 | 12 | Speed 2, +1 defense, ignores oil |
+| **Mobility** | THRUSTER | 20 | Speed 4, jump, 3 fuel/round |
+| **Mobility** | MAGNETIC_LEGS | 15 | Speed 2, climb walls |
+| **Mobility** | HOVER_PAD | 25 | Speed 3, ignores terrain, EMP weak |
+| **Mobility** | SPIDER_LEGS | 18 | Speed 2, diagonal, +1 evasion |
+| **Mobility** | TRACKS_HEAVY | 15 | Speed 1, +2 defense, unpushable |
+| **Weapon** | LASER_CUTTER | 20 | 1d8, range 3, ignores 1 armor |
+| **Weapon** | FLAME_THROWER | 18 | 1d6 cone, ignites oil |
+| **Weapon** | PILE_BUNKER | 25 | 2d6 melee, +1d6 vs immobilized |
+| **Weapon** | CHAINSAW_ARM | 15 | 1d6 melee, destroys mobility on NAT 20 |
+| **Weapon** | MISSILE_RACK | 30 | 2d8, range 5, 2 uses/round |
+| **Weapon** | SONIC_PULSE | 22 | 1d4 AoE, stun 1 turn |
+| **Weapon** | ARC_WELDER | 12 | 1d4, +1d4 vs metal, chain on NAT 20 |
+| **Weapon** | NET_LAUNCHER | 16 | 0 dmg, immobilize 1 turn, range 3 |
+| **Weapon** | DRILL_NOSE | 20 | 1d10 melee, ignores armor, -1 accuracy |
+| **Sensor** | CAMERA_BASIC | 5 | See adjacent tiles |
+| **Sensor** | SONAR_PING | 12 | Detect enemies 3 tiles, through obstacles |
+| **Sensor** | THERMAL_SCOPE | 15 | +2 accuracy vs active engines |
+| **Sensor** | LIDAR_ARRAY | 20 | Map all traps, +1 evasion |
+| **Sensor** | RADAR_DISH | 18 | Detect enemy AI programs |
+| **Sensor** | PRESSURE_PLATES | 10 | Detect corner entry, auto-trigger traps |
+| **AI Brain** | RULE_BASED | 10 | 5 if/then rules |
+| **AI Brain** | LSTM_BRAIN | 25 | Learns patterns, +1 accuracy/round (max +3) |
+| **AI Brain** | ATTENTION_BRAIN | 30 | +3 accuracy vs focused, -1 vs others |
+| **AI Brain** | RL_LEARNER | 35 | Auto-dodge on d6 4+ |
+| **AI Brain** | TRANSFORMER_CORE | 45 | +1 VP per taunt heard, predict moves |
+| **AI Brain** | FERAL_CORE | 15 | +2 damage, -2 defense, no AI |
+| **Trap** | OIL_SLICK | 5 | Slip, -1 mobility |
+| **Trap** | SPIKE_STRIP | 8 | 1d4 damage, destroys TIRE |
+| **Trap** | EMP_BURST | 15 | Disable AI brain 1 round |
+| **Trap** | FIRE_PIT | 12 | 1d6 fire, spreads to oil |
+| **Trap** | MAGNETIC_SNARE | 10 | Immobilize 1 turn |
+| **Trap** | DECOY_BEACON | 8 | 50% miss chance |
+| **Trap** | SCRAMBLER_FIELD | 18 | Lose next taunt, -1 VP |
+| **Power-Up** | OVERCLOCK | 10 | +2 accuracy/damage 2 rounds, then -1 |
+| **Power-Up** | ARMOR_PLATE | 8 | +3 defense 3 rounds |
+| **Power-Up** | FUEL_INJECT | 12 | +2 speed 2 rounds |
+| **Power-Up** | REPAIR_KIT | 15 | Restore 20 HP |
+| **Power-Up** | AMMO_DUMP | 10 | Refill all ammo |
+| **Power-Up** | ADRENALINE_CORE | 20 | +3 damage/accuracy, -2 defense, 1 round, then stunned |
+| **Power-Up** | SCAVENGE_HOOK | 8 | Salvage 1 destroyed piece |
+
+---
+
+## [DOC 记] Study Questions
+1. Which piece is the most expensive? Is it worth it?
+2. What's the cheapest way to get +2 defense?
+3. Which weapon has the highest single-hit damage potential?
+4. **Imagine:** You have 100 SC. Build a complete bot (chassis + mobility + weapon + sensor + brain + 3 traps).
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 21: COMMON PITFALLS & DEBUGGING [警 调]
+##################################################
+
+# [警 调] Chapter 21: Common Pitfalls & Debugging
+What goes wrong. How to fix it. How to prevent it. [WARN 警]
+
+---
+
+## [PITFALL 警] Top 10 HARD_VVAR Pitfalls
+
+| # | Pitfall | Symptom | Fix |
+|---|---------|---------|-----|
+| 1 | **One bot dominates** | Same player wins every session. | Introduce arena hazards that target their build. |
+| 2 | **No taunts** | Bots are silent. Sessions feel flat. | Require taunts. Award VP generously. |
+| 3 | **AI brains are ignored** | Players remote-control everything. | Make AI defense auto-trigger. Reward good programming. |
+| 4 | **Build phase takes too long** | Players overthink drafts. | Set a 5-minute timer. Announce: "The grinder waits for no one." |
+| 5 | **Center Zone is ignored** | No one contests power-ups. | Spawn better power-ups there. Make it worth the risk. |
+| 6 | **Traps are never triggered** | Players avoid corners. | Place traps in obstacle zones too. Make the board dangerous everywhere. |
+| 7 | **NAT 1s feel punitive** | Players get frustrated. | Make NAT 1s dramatic, not just punishing. "Your CHAINSAW_ARM flies off and decapitates a lamppost." |
+| 8 | **Scrap piles grow too fast** | Board becomes unplayable. | Clear scrap every 2 sessions. Or make it a feature (cover zones). |
+| 9 | **Players don't track VP** | No one knows who's winning. | Announce VP every round. Keep a visible scoreboard. |
+| 10 | **Sessions feel samey** | Every session is build → battle → taunt. | Add twists: team modes, boss bots, arena shifts, sabotage rounds. |
+
+---
+
+## [DEBUG 调] Debugging a Session That's Not Working
+
+### Signs:
+- Players are disengaged.
+- No one is taunting.
+- The battle feels mechanical.
+- The arena feels dead.
+
+### Fixes:
+1. **Introduce an arena hazard.** "The floor trembles. A new fire pit opens."
+2. **Force a taunt.** "Your bot's speaker crackles. It has something to say. Say it."
+3. **Spawn a power-up in someone's corner.** Make them move.
+4. **Call out a quiet player.** "RUST_MAMMOTH, what are you doing?"
+5. **Take a break.** Oil. Breathe. Come back.
+
+---
+
+## [WARN 警] The Golden Rule
+
+> **If the bots aren't talking, you're not playing HARD_VVAR.**
+
+The bots must speak. They must taunt. They must boast, complain, threaten, and occasionally show respect. The metal grinds. The diesel smokes. The arena remembers.
+
+Be the DM. Be the arena. Be the grinder.
+
+And always, always, always: **the arena remembers.**
+
+---
+
+## [DOC 记] Study Questions
+1. What are the top 3 pitfalls you've personally experienced?
+2. A session has no taunts. What's your first fix?
+3. What is the Golden Rule of HARD_VVAR?
+4. **Imagine:** A player's bot has been silent for 3 rounds. What do you do?
+
+---
+
+============================================================
+[B 书] END OF HARD_VVAR BIBLE v01.0 [VVAR 战]
+============================================================
+
+*The grinder turns. The scrap pile grows. And the arena... the arena remembers.*
+*ϕ*

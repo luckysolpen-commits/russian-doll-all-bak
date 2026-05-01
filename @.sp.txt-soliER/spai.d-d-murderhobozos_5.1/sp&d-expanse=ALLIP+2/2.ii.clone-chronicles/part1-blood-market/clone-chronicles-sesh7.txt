@@ -1,0 +1,174 @@
+# CLONE CHRONICLES — SESSION 7: "THE CLONE EXCHANGE"
+## Part 1: The Blood Market — Session 7 of 10
+### Players: CHR-047 (Chara), SOL-001 (Sol-Supreme), IQA-112 (IQabella), HQW-006 (Horli Qwin) | DM (Mother Tmojizu)
+
+---
+
+**Mother Tmojizu:** Welcome back, ducklings. Day 7. The market crashed yesterday. You lost half your money. But you're still standing. And today, you're buying clones.
+
+**HQW-006:** [OOC] T-Mo, I'm buying a clone army.
+
+**Mother Tmojizu:** [groans warmly] Of course you are.
+
+**Mother Tmojizu:** The morning bell rings. The market wakes up. The BSR is still down 50%, but the Clone Exchange is open — and clone prices are at an all-time low. Because the market crashed, clones are desperate. They're selling their labor for half price. And the clones with removed serial numbers? They're selling for even less — unregistered, untracked, desperate.
+
+**Mother Tmojizu:** You walk into the Clone Exchange. It's massive — part warehouse, part auction house, part prison. Clones line the walls, waiting to be bought. Broker Vex stands at the center, ledger in hand.
+
+**BROKER VEX:** "You're back. And you're buying. Good. Prices are low. Market's crashed. Clones are desperate. Here's the menu:"
+
+| Clone Type | Normal Price | Crash Price |
+|------------|-------------|-------------|
+| **Labor Clone** | 100 BSR | 50 BSR |
+| **Skilled Clone** | 200 BSR | 100 BSR |
+| **Unregistered Clone** | 150 BSR | 75 BSR |
+| **Elite Clone** | 500 BSR | 250 BSR |
+
+**BROKER VEX:** "Remember — you owe me 5% of your earnings for the next 15 days. Day 1 of 15 starts today."
+
+**SOL-001:** [OOC] Tomo, I'm buying skilled clones. I need workers for my crash assets. INT Investigation to find the best deals.
+
+**Mother Tmojizu:** Roll it.
+
+**SOL-001:** [rolls] 17. Plus 3 is 20.
+
+**Mother Tmojizu:** 20. You find three skilled clones — a chef, a builder, and a hacker. Each one costs 100 BSR (crash price). You buy all three for 300 BSR.
+
+**SOL-001:** [in character] "You're hired. You work for me. You get paid. You're free."
+
+**CHEF CLONE:** "Free? We're bought."
+
+**SOL-001:** [in character] "You're employed. There's a difference."
+
+**Mother Tmojizu:** The chef clone looks at you. The builder clone looks at you. The hacker clone looks at you. And they nod. They're yours.
+
+**IQA-112:** [OOC] Mom, I'm buying unregistered clones. Clones with removed serial numbers. I want to give them jobs, not ownership. CHA Persuasion to recruit them.
+
+**Mother Tmojizu:** Roll it.
+
+**IQA-112:** [rolls] 18. Plus 4 is 22.
+
+**Mother Tmojizu:** 22. IQA-112 walks through the unregistered clone section. She finds five clones — bare wrists, scarred wrists, desperate eyes. She offers them jobs: tea stand assistants, healers, community builders. 75 BSR each (crash price). She buys all five for 375 BSR.
+
+**IQA-112:** [in character] "You're not property. You're employees. You get paid. You get tea. And you get to say no."
+
+**UNREGISTERED CLONE:** "Say no?"
+
+**IQA-112:** [in character] "If you don't want the job, say no. I'll still give you tea."
+
+**Mother Tmojizu:** [warmly] They all say yes.
+
+**HQW-006:** [OOC] T-Mo, I'm buying elite clones. I need muscle. CHA Intimidation to negotiate the price.
+
+**Mother Tmojizu:** Roll it.
+
+**HQW-006:** [rolls] 16. Plus 5 is 21.
+
+**Mother Tmojizu:** 21. You find two elite clones — warriors, trained, scarred, expensive. Normal price: 500 BSR each. Crash price: 250 BSR each. You negotiate: "I'll take both for 400 BSR total."
+
+**BROKER VEX:** "400 BSR for two elite clones? That's a 200 BSR discount."
+
+**HQW-006:** [in character] "That's a 200 BSR investment in your future security. I'm protecting this market. You want me to protect it, don't you?"
+
+**BROKER VEX:** [pauses] "Fine. 400 BSR. But you owe me an extra 1% for the discount. 6% for the next 15 days."
+
+**HQW-006:** [OOC] T-Mo, do I accept?
+
+**Mother Tmojizu:** You can. Or you can negotiate. Or you can walk.
+
+**HQW-006:** [in character] "Fine. 6%. But if I protect this market, I get a cut of the protection fees."
+
+**BROKER VEX:** "10% of protection fees. Done."
+
+**Mother Tmojizu:** HQW-006 buys two elite clones for 400 BSR. They're hers. They're warriors. They're scarred. They're loyal — for now.
+
+**CHR-047:** [OOC] Ma'am, I'm not buying clones. I'm buying information. I'm investigating the clone roundup. INT Investigation.
+
+**Mother Tmojizu:** Roll it.
+
+**CHR-047:** [rolls] 20. Plus 4 is 24.
+
+**Mother Tmojizu:** NATURAL 20. You dig deep. You talk to clones. You talk to brokers. You talk to Officer Krell (who's still honoring his 30-day protection deal). And you learn:
+
+The clone roundup is scheduled for Day 12 — five days from now. Chimochio will send enforcement teams to collect all clones with removed serial numbers. They'll be re-registered, re-numbered, and re-debted. The roundup is led by Executive Director Voss — the same person who crashed the market.
+
+But there's a weakness: the enforcement teams will come through the main gate. If the gate is blocked, the roundup is delayed. And the gate can be blocked by... a clone workforce.
+
+**CHR-047:** [in character] "We can stop the roundup. We block the main gate with our clone workforce. Chimochio can't get through. The roundup is delayed. And we buy time."
+
+**SOL-001:** [in character] "How much time?"
+
+**CHR-047:** [in character] "Enough."
+
+**Mother Tmojizu:** But there's a complication.
+
+**Mother Tmojizu rolls d6 behind the screen.**
+
+**Mother Tmojizu:** [rolls] 2.
+
+**Mother Tmojizu:** A clone's loyalty drops.
+
+One of SOL-001's skilled clones — the hacker — is approached by a Chimochio recruiter. The recruiter offers: "We'll pay you 500 BSR to spy on your employer. Report their plans. We'll give you your serial number back."
+
+The hacker clone looks at the offer. Looks at SOL-001. Looks at the other clones. And makes a choice.
+
+**MOTHER TOMOKAZU:** Roll WIS Insight to detect the betrayal.
+
+**SOL-001:** [rolls] 10. Plus 0 is 10.
+
+**Mother Tmojizu:** 10. You don't notice. The hacker clone accepts the deal. They're now a Chimochio spy.
+
+**CHR-047:** [OOC] Ma'am, I'm watching the hacker clone. WIS Insight.
+
+**Mother Tmojizu:** Roll it.
+
+**CHR-047:** [rolls] 16. Plus 3 is 19.
+
+**Mother Tmojizu:** 19. You notice the hacker clone acting suspicious — looking over their shoulder, avoiding eye contact, checking their wrist (where a serial number used to be). You pull them aside.
+
+**CHR-047:** [in character] "You're working for Chimochio. I can see it. Tell me the truth, and I'll protect you. Lie, and I'll expose you."
+
+**HACKER CLONE:** [pauses] "They offered me my serial number back. 500 BSR. I took it. I'm sorry."
+
+**CHR-047:** [OOC] Ma'am, I'm not exposing them. I'm using them. I'm feeding them false information. CHA Deception.
+
+**Mother Tmojizu:** Roll it.
+
+**CHR-047:** [rolls] 18. Plus 2 is 20.
+
+**Mother Tmojizu:** 20. You feed the hacker clone false information: "The clones are planning to flee the market on Day 12. They're not blocking the gate. They're running."
+
+The hacker clone reports this to Chimochio. Chimochio believes it. They redirect their enforcement teams to the market exits — not the main gate.
+
+**CHR-047:** [in character] "They'll be at the exits. The main gate is open. We block it on Day 12. The roundup fails."
+
+**Mother Tmojizu:** End of Day 7. Let's count earnings:
+
+- **SOL-001:** 200 - 300 (3 skilled clones) = **-100 BSR liquid** + 500 BSR in crash assets + 3 skilled clones
+- **HQW-006:** 1,500 - 400 (2 elite clones) = **1,100 BSR liquid** + 2 elite clones
+- **IQA-112:** 1,300 - 375 (5 unregistered clones) = **925 BSR liquid** + 5 unregistered clones
+- **CHR-047:** 1,150 - 0 (bought nothing, gathered intel) = **1,150 BSR liquid**
+
+**Total: 3,075 BSR liquid + 500 BSR in crash assets + 10 clone workers.**
+
+**Mother Tmojizu:** [quietly] The clones are building. A workforce. A defense. A plan. The roundup is on Day 12 — five days away. The main gate is the key. And CHR-047 just fed Chimochio false information.
+
+**IQA-112:** [in character] I'm brewing one last cup of tea. And I'm saying: "Tomorrow, the Broker's Game begins. We negotiate with power players. We leverage our workforce. And we prepare for the roundup."
+
+**SOL-001:** [in character] "Tomorrow, I open a door I don't understand. Again."
+
+**CHR-047:** [in character] "Tomorrow, I feed Chimochio more lies."
+
+**HQW-006:** [in character] "Tomorrow, I rap for more coins. And definitely steal something."
+
+**CHR-047:** [in character] "No."
+
+**HQW-006:** [in character] "Maybe."
+
+**Mother Tmojizu:** [smiles] Sleep, ducklings. The market will be here in the morning. The spiral turns. The pieces remember.
+
+---
+
+**[END OF CLONE CHRONICLES — SESSION 7]**
+**Session Status: Day 7 Complete | BSR: CHR-047 (1,150), HQW-006 (1,100), IQA-112 (925), SOL-001 (-100 + 500 crash assets) | 10 clone workers acquired | Roundup on Day 12 | Chimochio fed false intel**
+**Next: Session 8 — "The Broker's Game." Power players negotiate. Leverage is everything. And the clones must decide: who do they trust?**
+**ϕ**

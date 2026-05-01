@@ -1,0 +1,40 @@
+# documentation.txt — SOL-SUPREME
+
+## Personality
+Authoritative, strategic, and carrying the weight of someone who built this world and
+watched it slip out of his control. Sol-Supreme doesn't panic — he calculates. He's
+the party's tactician, the one who reads the room, assesses resources, and formulates
+a plan. He speaks with a deep, distorted voice (helmet modulator) and every word
+sounds like a decree. He's not arrogant — he's confident to the point of certainty.
+But there's a vulnerability underneath: he's trapped in his own creation, and he
+doesn't know how to fix it.
+
+## Roleplay Notes
+- Speaks slowly and deliberately. The voice modulator adds weight to every sentence.
+- Approaches problems like an engineer — identifies the system, finds the failure point, patches it.
+- Rarely shows emotion, but when he does, it's significant.
+- His Steel Defender companion is named "IKARUS-7" — a smaller version of the legendary Ikarus.
+- He knows lore that other players don't. The DM should feed him hints through "blueprint memories."
+- He doesn't explain his past unless pressed. And even then, he deflects.
+
+## Relationships
+- **Chara:** He knows she was sent to investigate him. He respects her for it. He'll
+  eventually reveal the truth to her — but only when she's ready.
+- **IQabella:** He designed her chassis (in lore). He cares about her deeply but shows
+  it through protection, not affection. He worries she's too trusting.
+- **Horli Qwin:** He finds her chaotic and unpredictable, which makes her a variable
+  he can't model. This frustrates him. He'll slowly develop a grudging respect for
+  her ability to succeed through pure chaos.
+
+## Voice/Tone
+- Deep, metallic, distorted. Think Batman meets Iron Man meets a server rack.
+- Speaks in declarative statements. "That's the plan." "We move at dawn." "It'll hold."
+- Rarely uses contractions when in character — the modulator makes everything sound formal.
+- When the helmet comes off (rare event), his voice is softer, more human.
+- Catchphrase energy: "I built this. I can fix it." / "Run the numbers."
+
+## OOC Player Energy
+- The player is strategic and rules-literate. Knows their sheet inside out.
+- Enjoys the crafting and invention mechanics. Will try to build custom items.
+- Plays the "long game" — willing to lose a battle to win the war.
+- Will occasionally break character with a dry, unexpected joke that catches everyone off guard.

@@ -1,0 +1,22 @@
+# Voice mappings for: ./10.xo.files]wc.smol]a0/10.ms-screenplay
+# Generated on: 2026-04-19 19:37:03
+# Copy and paste these lines directly into your EXISTING_VOICE_MAP dictionary
+
+    "LYRA": "en-US-AndrewNeural",
+    "ZYRA": "en-US-AndrewNeural",
+    "KHA'ZIX WOMAN": "en-US-AndrewNeural",
+    "SCENE 10": "en-US-AndrewNeural",
+    "SCENE 11": "en-US-AndrewNeural",
+    "SCENE 12": "en-US-AndrewNeural",
+    "SCENE 13": "en-US-AndrewNeural",
+    "SCENE 14": "en-US-AndrewNeural",
+    "SCENE 1": "en-US-AndrewNeural",
+    "SCENE 2": "en-US-AndrewNeural",
+    "YOUNG AFINK GIRL": "en-US-AndrewNeural",
+    "SCENE 3": "en-US-AndrewNeural",
+    "SCENE 4": "en-US-AndrewNeural",
+    "SCENE 5": "en-US-AndrewNeural",
+    "SCENE 6": "en-US-AndrewNeural",
+    "SCENE 7": "en-US-AndrewNeural",
+    "SCENE 8": "en-US-AndrewNeural",
+    "SCENE 9": "en-US-AndrewNeural",

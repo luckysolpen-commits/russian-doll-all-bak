@@ -1,0 +1,12 @@
+**Page 49: Entering the Laboratories**
+
+You follow the staff into a brightly lit, sterile laboratory. The air hums with the sound of advanced machinery. On a central table, the covered trays are opened, revealing several complex devices and vials containing glowing liquids. The staff begins setting up what looks like a sophisticated experimental apparatus.
+
+Hydration: 8/10 (Adequate)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 5/10 (Entered a high-tech laboratory with experimental equipment)
+
+What do you do?
+
+*   If you attempt to get closer to the experimental apparatus, turn to page 75.
+*   If you try to observe the staff's interactions and discussions, turn to page 76.

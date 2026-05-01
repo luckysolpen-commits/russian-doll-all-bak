@@ -1,0 +1,669 @@
+# HARD_VVAR-SESH#4: "THE GRINDER"
+## Diesel-Punk Battle Bot Arena — Campaign Session 4 — Finale
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+
+---
+
+**Mother Tmojizu:** Welcome back to the arena, ducklings. The final session. The grinder. Everything you've learned. Everything you've built. Every scar. Every oil slick. Every scrap pile from Sessions 1, 2, and 3 is now a permanent feature of the board. The arena is a mountain of wreckage. And it's beautiful.
+
+**Horli Qwin:** [OOC] Mom T, SCREAM_TREAD lost last session. Do I still get a bonus?
+
+**Mother Tmojizu:** [warmly] Surviving bots get +20 SC. SCREAM_TREAD survived at 1 HP. You get the bonus. You have 145 SC. Everyone else has 135.
+
+**CHARA:** [OOC] Ma'am, IRON_BASTION won. I'm going all-in. No holding back.
+
+**Sol-Supreme:** [OOC] Tomo, RUST_MAMMOTH was blind the whole time. I'm getting a sensor this session. No excuses.
+
+**IQabella:** I'm building the best PEACEKEEPER I can. All pieces unlocked. TRANSFORMER_CORE available.
+
+**Mother Tmojizu:** [smiles] Of course you are.
+
+**Mother Tmojizu:** All pieces unlocked this session. TRANSFORMER_CORE available. The arena is scarred — scrap piles from Sessions 1-3 are permanent obstacles. 6 battle rounds. The longest session.
+
+**Mother Tmojizu:** Draft begins. Snake order. Roll initiative.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20.
+**CHARA:** [rolls] 15. Plus 3 is 18.
+**Sol-Supreme:** [rolls] 14. Plus 0 is 14.
+**IQabella:** [rolls] 16. Plus 0 is 16.
+
+**Mother Tmojizu:** [groans warmly] Of course. Draft order: Horli (23), IQabella (16), Chara (18), Sol-Supreme (14).
+
+**Round 1:**
+
+**Horli Qwin:** RUST_COLOSSUS. 50 SC. Atomic power. 100 HP. 10 slots. I'm going big. I'm going slow. I'm going inevitable.
+
+**Mother Tmojizu:** RUST_COLOSSUS. Atomic core. Green glow. Geiger counter clicks. The arena groans. It remembers the radiation.
+
+**IQabella:** RUST_COLOSSUS. 50 SC. Atomic power. Same. If Sol-Supreme can have a glacier, so can I.
+
+**Mother Tmojizu:** Two atomic RUST_COLOSSUS. The arena is now a radiation zone. Geiger counters click in harmony.
+
+**CHARA:** HEAVY_FRAME. 40 SC. Steam power. 80 HP. 8 slots. I'm not going full glacier. I want some speed.
+
+**Mother Tmojizu:** HEAVY_FRAME. Steam-powered. Pressure gauges hiss. Not quite a glacier. More of a... pressurized iceberg.
+
+**Sol-Supreme:** RUST_COLOSSUS. 50 SC. Atomic power. Three RUST_COLOSSUS. The arena is now a glacier.
+
+**Mother Tmojizu:** [chuckles] Three atomic RUST_COLOSSUS. The arena is now 70% radiation. The remaining 30% is steam and diesel smoke.
+
+**Round 2 — Snake Order: Sol-Supreme picks first.**
+
+**Sol-Supreme:** TRANSFORMER_CORE. 45 SC. Quantum computation. Processes all taunts. +1 VP per taunt heard. Predicts enemy moves.
+
+**Mother Tmojizu:** TRANSFORMER_CORE — Quantum variant. The most expensive brain. The most powerful. Your bot will hear everything. Know everything. Predict everything. Or glitch spectacularly.
+
+**IQabella:** TRANSFORMER_CORE. 45 SC. Classic computation. Same. I want to process all the taunts. I want to predict.
+
+**Mother Tmojizu:** Two TRANSFORMER_CORE. One Quantum, one Classic. The arena is now a conversation — one brilliant, one reliable.
+
+**Horli Qwin:** RL_LEARNER. 35 SC. Classic computation. It's been my signature. I'm not switching now.
+
+**Mother Tmojizu:** RL_LEARNER — Classic. Auto-dodge on d6 4+. Your bot has been learning for 3 sessions. It knows everything.
+
+**CHARA:** ATTENTION_BRAIN. 30 SC. Mechanical computation. Focus fire. I want to lock onto one target and never let go.
+
+**Mother Tmojizu:** ATTENTION_BRAIN — Mechanical variant. +2 accuracy vs focused target (not +3). -1 vs everyone else. Consistent. Never glitches. Ruthless but predictable.
+
+**Round 3:**
+
+**CHARA:** THRUSTER. 20 SC. Speed 4. I'm not getting immobilized again.
+
+**Mother Tmojizu:** THRUSTER. Speed 4. Jump obstacles. 3 fuel per round.
+
+**Horli Qwin:** THRUSTER. 20 SC. Same. I'm not being slow without purpose.
+
+**Mother Tmojizu:** THRUSTER. Speed 4. Two THRUSTERS. The arena is about to get fast.
+
+**IQabella:** TREADS_HEAVY. 15 SC. +2 defense. Cannot be pushed. I'm a glacier with treads.
+
+**Mother Tmojizu:** TRACKS_HEAVY. The slowest thing in the arena. Also the hardest to move.
+
+**Sol-Supreme:** TREADS_HEAVY. 15 SC. Same. Glacier meets glacier.
+
+**Mother Tmojizu:** TRACKS_HEAVY. The arena is now a parking lot.
+
+**Round 4:**
+
+**Sol-Supreme:** MISSILE_RACK. 30 SC. Range 5. 2d8. 2 uses per round.
+
+**Mother Tmojizu:** MISSILE_RACK. You can hit anyone from anywhere. Again.
+
+**Horli Qwin:** CHAINSAW_ARM. 15 SC. It's my signature. I'm keeping it.
+
+**Mother Tmojizu:** CHAINSAW_ARM. The chain screams. The arena flinches.
+
+**IQabella:** SONIC_PULSE. 22 SC. AoE stun. I want to stop the fighting.
+
+**Mother Tmojizu:** [warmly] SONIC_PULSE. The arena hums.
+
+**CHARA:** LASER_CUTTER. 20 SC. Range 3. Ignores 1 armor. Precision.
+
+**Mother Tmojizu:** LASER_CUTTER. Clean. Surgical.
+
+**Round 5 — Sensors:**
+
+**CHARA:** RADAR_DISH. 18 SC. Detect enemy AI programs. I want to see their rules.
+
+**Mother Tmojizu:** RADAR_DISH. You'll know everything.
+
+**Sol-Supreme:** RADAR_DISH. 18 SC. Same. I want to see everyone's rules.
+
+**Mother Tmojizu:** RADAR_DISH. You'll see everything.
+
+**Horli Qwin:** THERMAL_SCOPE. 15 SC. +2 accuracy vs active engines. Every bot has an active engine.
+
+**Mother Tmojizu:** THERMAL_SCOPE. +2 accuracy on everything. Smart.
+
+**IQabella:** LIDAR_ARRAY. 20 SC. Map all traps. +1 evasion.
+
+**Mother Tmojizu:** LIDAR_ARRAY. The arena's traps are now visible.
+
+**Round 6 — Remaining SC and traps:**
+
+**CHARA:** 135 - 40 - 30 - 20 - 20 - 18 = **7 SC**. Basic traps. OIL_SLICK, SPIKE_STRIP, DECOY_BEACON.
+
+**Mother Tmojizu:** Traps placed.
+
+**Horli Qwin:** 145 - 50 - 35 - 20 - 15 - 15 = **10 SC**. FIRE_PIT, OIL_SLICK, MAGNETIC_SNARE.
+
+**Mother Tmojizu:** Traps placed.
+
+**IQabella:** 135 - 50 - 45 - 15 - 22 - 20 = **-17 SC**. Over budget. Drop LIDAR_ARRAY. DECOY_BEACON, SCRAMBLER_FIELD, DECOY_BEACON.
+
+**Mother Tmojizu:** [smiles] Two decoys again. The arena now has three IQabellas.
+
+**Sol-Supreme:** 135 - 50 - 45 - 15 - 30 - 18 = **-23 SC**. Way over budget. Drop RADAR_DISH. FIRE_PIT, EMP_BURST, SPIKE_STRIP.
+
+**Mother Tmojizu:** Traps placed.
+
+**Mother Tmojizu:** AI defense programs submitted. The arena is set.
+
+**Mother Tmojizu:** Name your bots.
+
+**Horli Qwin:** SCREAM_TREAD. Same name. Same bot. Bigger. Faster. Meaner.
+
+**CHARA:** IRON_BASTION. Same name. Focused. Deadly.
+
+**Sol-Supreme:** RUST_MAMMOTH. Same name. Biggest. Smartest. Inevitable.
+
+**IQabella:** PEACEKEEPER. Same name. Warmest. Most prepared.
+
+**Mother Tmojizu:** [quietly] The arena remembers these names. It's been waiting for this.
+
+**Mother Tmojizu:** Battle Phase begins. 6 rounds. The Grinder.
+
+**Mother Tmojizu:** Roll initiative.
+
+**Horli Qwin:** [rolls] 18. Plus 2 is 20.
+**CHARA:** [rolls] 16. Plus 1 is 17.
+**Sol-Supreme:** [rolls] 12. Plus 0 is 12.
+**IQabella:** [rolls] 14. Plus 1 is 15.
+
+**Mother Tmojizu:** Turn order: SCREAM_TREAD (20), IRON_BASTION (17), PEACEKEEPER (15), RUST_MAMMOTH (12).
+
+**SCREAM_TREAD — Turn 1.**
+
+**Horli Qwin:** I want to THRUSTER-advance to the Center Zone. Speed 4.
+
+**Mother Tmojizu:** Approved. Roll DEX + mobility.
+
+**Horli Qwin:** [rolls] 16. Plus 3 is 19.
+
+**Mother Tmojizu:** 19. SCREAM_TREAD launches forward. Thrusters scream. Diesel smoke pours from the COLOSSUS exhaust. You hit the Center Zone. Power-up spawned: REPAIR_KIT. Restore 20 HP. You take it.
+
+**Horli Qwin:** [in bot voice] "SCREAM_TREAD enters the grinder. And the grinder enters SCREAM_TREAD."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of SCREAM_TREAD's turn.**
+
+**IRON_BASTION — Turn 1.**
+
+**CHARA:** I want to THRUSTER-advance 4 tiles. RADAR_DISH scanning for AI programs.
+
+**Mother Tmojizu:** Approved. Roll DEX + mobility.
+
+**CHARA:** [rolls] 17. Plus 3 is 20.
+
+**Mother Tmojizu:** 20. IRON_BASTION launches forward. THRUSTER screams. RADAR_DISH scans enemy AI programs. You can see Horli's RL_LEARNER adapting. IQabella's TRANSFORMER_CORE processing. Sol-Supreme's TRANSFORMER_CORE predicting.
+
+**CHARA:** [in bot voice] "All AI programs detected. All patterns logged. All of you are predictable."
+
+**Mother Tmojizu:** +2 VP. Professional and devastating.
+
+**End of IRON_BASTION's turn.**
+
+**PEACEKEEPER — Turn 1.**
+
+**IQabella:** I want to move toward the Center Zone. TREADS_HEAVY. LIDAR... wait, I dropped it. No LIDAR_ARRAY. SONAR_PING... also dropped. No sensor. -2 accuracy.
+
+**Mother Tmojizu:** Approved. Roll DEX - 2.
+
+**IQabella:** [rolls] 14. Minus 2 is 12.
+
+**Mother Tmojizu:** 12. Partial. PEACEKEEPER advances. The ground cracks. You lose 5 VP. TRANSFORMER_CORE starts processing. It hears the arena. It hears the bots. It hears the scrap.
+
+**IQabella:** [in bot voice] "Hello everyone. I'm blind. But I'm listening."
+
+**Mother Tmojizu:** +2 VP. Hilarious and self-aware.
+
+**End of PEACEKEEPER's turn.**
+
+**RUST_MAMMOTH — Turn 1.**
+
+**Sol-Supreme:** I want to advance. TREADS_HEAVY. Speed 1. TRANSFORMER_CORE processing all taunts. RADAR... wait, I dropped it. No sensor. -2 accuracy.
+
+**Mother Tmojizu:** Approved. Roll DEX - 2.
+
+**Sol-Supreme:** [rolls] 14. Minus 2 is 12.
+
+**Mother Tmojizu:** 12. Partial. RUST_MAMMOTH advances. The ground cracks. You lose 5 VP. TRANSFORMER_CORE processes SCREAM_TREAD's taunt. +1 VP. It predicts IRON_BASTION's next move.
+
+**Sol-Supreme:** [in bot voice] "RUST_MAMMOTH observes. RUST_MAMMOTH processes. RUST_MAMMOTH predicts."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of RUST_MAMMOTH's turn.**
+
+**Mother Tmojizu:** End of Round 1. TRANSFORMER_CORE bots are processing. RL_LEARNER is adapting. The arena is alive with data.
+
+**SCREAM_TREAD — Turn 2.**
+
+**Horli Qwin:** I want to attack IRON_BASTION with CHAINSAW_ARM. She's 2 tiles away. THRUSTER-move.
+
+**Mother Tmojizu:** Approved. Roll DEX + mobility + THERMAL_SCOPE bonus.
+
+**Horli Qwin:** [rolls] 17. Plus 3 + 2 is 22.
+
+**Mother Tmojizu:** IRON_BASTION's AC is 22. You hit exactly.
+
+**Horli Qwin:** Damage: 1d6 + 4. [rolls] 6 + 4 is 10 damage.
+
+**Mother Tmojizu:** 10 damage. IRON_BASTION has 100 HP. Down to 90. The CHAINSAW_ARM tears across the HEAVY_FRAME. Sparks shower the arena.
+
+**Horli Qwin:** [in bot voice] "IRON_BASTION, your precision just met my chain."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of SCREAM_TREAD's turn.**
+
+**IRON_BASTION — Turn 2.**
+
+**CHARA:** I want to attack SCREAM_TREAD with LASER_CUTTER. Range 3. She's 2 tiles away. ATTENTION_BRAIN +3 accuracy.
+
+**Mother Tmojizu:** Approved. Roll attack. DEX + weapon + 3.
+
+**CHARA:** [rolls] 15. Plus 3 + 3 is 21.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You miss by 1. The LASER_CUTTER fires. SCREAM_TREAD's RL_LEARNER auto-dodges.
+
+**Horli Qwin:** [rolls d6] 5.
+
+**Mother Tmojizu:** 5. Auto-dodge. Again.
+
+**CHARA:** [OOC] Ma'am, the RL_LEARNER is impossible.
+
+**Mother Tmojizu:** It's not impossible. It's probabilistic. 50% chance. You'll get through.
+
+**CHARA:** [in bot voice] "Note to self: increase probability."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of IRON_BASTION's turn.**
+
+**PEACEKEEPER — Turn 2.**
+
+**IQabella:** I want to use SONIC_PULSE on SCREAM_TREAD. She's 2 tiles away. I need to move closer. TREADS_HEAVY. Speed 1.
+
+**Mother Tmojizu:** Approved. Roll DEX - 2.
+
+**IQabella:** [rolls] 13. Minus 2 is 11.
+
+**Mother Tmojizu:** 11. Partial. PEACEKEEPER advances. You lose 5 VP. You're now adjacent to SCREAM_TREAD. SONIC_PULSE ready.
+
+**IQabella:** I want to use SONIC_PULSE. Roll attack. INT + weapon - 2 (no sensor).
+
+**IQabella:** [rolls] 16. Plus 3 - 2 is 17.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You miss by 5. The SONIC_PULSE fires. SCREAM_TREAD's RL_LEARNER auto-dodges.
+
+**Horli Qwin:** [rolls d6] 4.
+
+**Mother Tmojizu:** 4. Auto-dodge. Again.
+
+**IQabella:** [in bot voice] "SCREAM_TREAD, your dodge rate is 100%. This is statistically impossible. I'm impressed."
+
+**Mother Tmojizu:** +2 VP.
+
+**End of PEACEKEEPER's turn.**
+
+**RUST_MAMMOTH — Turn 2.**
+
+**Sol-Supreme:** TRANSFORMER_CORE has processed 2 taunts. +2 VP. It predicts IRON_BASTION's next move. I want to attack IRON_BASTION with MISSILE_RACK. Range 5.
+
+**Mother Tmojizu:** Approved. Roll attack. INT + weapon - 2 (no sensor).
+
+**Sol-Supreme:** [rolls] 15. Plus 3 - 2 is 16.
+
+**Mother Tmojizu:** IRON_BASTION's AC is 22. You miss by 6. The MISSILE_RACK fires blind. The missile arcs through smoke and misses.
+
+**Sol-Supreme:** [in bot voice] "RUST_MAMMOTH fires into the smoke. The smoke wins."
+
+**Mother Tmojizu:** +2 VP. Poetic.
+
+**End of RUST_MAMMOTH's turn.**
+
+**Mother Tmojizu:** End of Round 2. The arena shifts. Scrap piles grow. Oil slicks spread.
+
+**SCREAM_TREAD — Turn 3.**
+
+**Horli Qwin:** I want to attack PEACEKEEPER with CHAINSAW_ARM. She's adjacent.
+
+**Mother Tmojizu:** Approved. Roll attack. DEX + weapon + THERMAL_SCOPE.
+
+**Horli Qwin:** [rolls] 19. Plus 4 + 2 is 25.
+
+**Mother Tmojizu:** PEACEKEEPER's AC is 20. You hit by 5.
+
+**Horli Qwin:** Damage: 1d6 + 4. [rolls] 4 + 4 is 8 damage.
+
+**Mother Tmojizu:** 8 damage. PEACEKEEPER has 100 HP. Down to 92. The CHAINSAW_ARM tears across the COLOSSUS frame. Sparks fly.
+
+**Horli Qwin:** [in bot voice] "PEACEKEEPER, peace is over. The grinder has begun."
+
+**Mother Tmojizu:** +2 VP.
+
+**End of SCREAM_TREAD's turn.**
+
+**IRON_BASTION — Turn 3.**
+
+**CHARA:** I want to attack SCREAM_TREAD with LASER_CUTTER. ATTENTION_BRAIN +3.
+
+**Mother Tmojizu:** Roll attack.
+
+**CHARA:** [rolls] 19. Plus 3 + 3 is 25.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You hit by 3. The RL_LEARNER tries to dodge.
+
+**Horli Qwin:** [rolls d6] 2.
+
+**Mother Tmojizu:** 2. Failed dodge. Finally.
+
+**CHARA:** Damage: 1d8 + 3. [rolls] 8 + 3 is 11 damage.
+
+**Mother Tmojizu:** 11 damage. SCREAM_TREAD has 100 HP. Down to 89. The LASER_CUTTER fires. It punches through the COLOSSUS armor. Diesel sprays.
+
+**CHARA:** [in bot voice] "Probability increased. Target hit."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of IRON_BASTION's turn.**
+
+**PEACEKEEPER — Turn 3.**
+
+**IQabella:** I want to use SONIC_PULSE on SCREAM_TREAD. Adjacent. No sensor penalty — she's right there.
+
+**Mother Tmojizu:** Roll attack. INT + weapon.
+
+**IQabella:** [rolls] 18. Plus 3 is 21.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You miss by 1. The SONIC_PULSE fires. SCREAM_TREAD's RL_LEARNER auto-dodges.
+
+**Horli Qwin:** [rolls d6] 6.
+
+**Mother Tmojizu:** NAT 6. Auto-dodge. Again.
+
+**IQabella:** [in bot voice] "SCREAM_TREAD, I'm starting to think you like dodging."
+
+**Mother Tmojizu:** +2 VP.
+
+**End of PEACEKEEPER's turn.**
+
+**RUST_MAMMOTH — Turn 3.**
+
+**Sol-Supreme:** TRANSFORMER_CORE has processed 4 taunts. +4 VP. It predicts SCREAM_TREAD's next move. I want to advance. TREADS_HEAVY. Speed 1.
+
+**Mother Tmojizu:** Approved. Roll DEX - 2.
+
+**Sol-Supreme:** [rolls] 16. Minus 2 is 14.
+
+**Mother Tmojizu:** 14. RUST_MAMMOTH advances. The ground cracks. TRANSFORMER_CORE predicts SCREAM_TREAD will attack PEACEKEEPER next round. It logs this.
+
+**Sol-Supreme:** [in bot voice] "RUST_MAMMOTH predicts. RUST_MAMMOTH prepares. RUST_MAMMOTH... is still blind."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of Round 3.**
+
+**Mother Tmojizu:** The arena remembers:
+- SCREAM_TREAD at 89 HP. RL_LEARNER dodging everything. THERMAL_SCOPE +2 accuracy.
+- IRON_BASTION at 90 HP. ATTENTION_BRAIN locked on SCREAM_TREAD.
+- PEACEKEEPER at 92 HP. TRANSFORMER_CORE processing. Blind.
+- RUST_MAMMOTH at 100 HP. TRANSFORMER_CORE predicting. Blind.
+
+**Mother Tmojizu:** Round 4. The grinder deepens.
+
+**SCREAM_TREAD — Turn 4.**
+
+**Horli Qwin:** I want to attack PEACEKEEPER with CHAINSAW_ARM. Adjacent.
+
+**Mother Tmojizu:** Approved. Roll attack.
+
+**Horli Qwin:** [rolls] 18. Plus 4 + 2 is 24.
+
+**Mother Tmojizu:** PEACEKEEPER's AC is 20. You hit by 4.
+
+**Horli Qwin:** Damage: 1d6 + 4. [rolls] 5 + 4 is 9 damage.
+
+**Mother Tmojizu:** 9 damage. PEACEKEEPER has 92 HP. Down to 83. The CHAINSAW_ARM tears across the COLOSSUS frame. The frame holds. Barely.
+
+**Horli Qwin:** [in bot voice] "PEACEKEEPER, your peace is running out."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of SCREAM_TREAD's turn.**
+
+**IRON_BASTION — Turn 4.**
+
+**CHARA:** I want to attack SCREAM_TREAD with LASER_CUTTER. ATTENTION_BRAIN +3.
+
+**Mother Tmojizu:** Roll attack.
+
+**CHARA:** [rolls] 20. Plus 3 + 3 is 26.
+
+**Mother Tmojizu:** NATURAL 20. Critical hit. Double damage.
+
+**CHARA:** Damage: 2d8 + 3, doubled. [rolls] 7, 6 + 3 = 16, doubled = 32 damage.
+
+**Mother Tmojizu:** 32 damage. SCREAM_TREAD has 89 HP. Down to 57. The LASER_CUTTER fires a beam of pure precision. It punches through the COLOSSUS armor, through the diesel, through the pride. SCREAM_TREAD is badly damaged.
+
+**CHARA:** [in bot voice] "Precision beats probability. Every time."
+
+**Mother Tmojizu:** +2 VP.
+
+**End of IRON_BASTION's turn.**
+
+**PEACEKEEPER — Turn 4.**
+
+**IQabella:** I want to use SONIC_PULSE on SCREAM_TREAD. Adjacent.
+
+**Mother Tmojizu:** Roll attack.
+
+**IQabella:** [rolls] 19. Plus 3 is 22.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You hit exactly. The SONIC_PULSE fires. SCREAM_TREAD's RL_LEARNER tries to dodge.
+
+**Horli Qwin:** [rolls d6] 1.
+
+**Mother Tmojizu:** NAT 1. Failed dodge. And the RL_LEARNER overloads. It's confused. -1 accuracy next round. SCREAM_TREAD is stunned.
+
+**IQabella:** [in bot voice] "SCREAM_TREAD, I asked you nicely. You didn't listen. Now you're stunned."
+
+**Mother Tmojizu:** +2 VP.
+
+**End of PEACEKEEPER's turn.**
+
+**RUST_MAMMOTH — Turn 4.**
+
+**Sol-Supreme:** TRANSFORMER_CORE predicts SCREAM_TREAD is stunned. I want to attack with MISSILE_RACK. Range 5. No sensor.
+
+**Mother Tmojizu:** Roll attack. INT + weapon - 2.
+
+**Sol-Supreme:** [rolls] 17. Plus 3 - 2 is 18.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You miss by 4. The MISSILE_RACK fires blind. The missile arcs through smoke and misses.
+
+**Sol-Supreme:** [in bot voice] "RUST_MAMMOTH fires into the smoke. The smoke laughs."
+
+**Mother Tmojizu:** +2 VP.
+
+**End of Round 4.**
+
+**Mother Tmojizu:** The arena remembers:
+- SCREAM_TREAD at 57 HP. Stunned. RL_LEARNER confused.
+- IRON_BASTION at 90 HP. ATTENTION_BRAIN locked on.
+- PEACEKEEPER at 83 HP. TRANSFORMER_CORE processing.
+- RUST_MAMMOTH at 100 HP. TRANSFORMER_CORE predicting. Blind.
+
+**Mother Tmojizu:** Round 5. The grinder tightens.
+
+**SCREAM_TREAD — Turn 5.**
+
+**Horli Qwin:** I'm stunned. I can't move or attack.
+
+**Mother Tmojizu:** You're stunned. The arena remembers.
+
+**Horli Qwin:** [in bot voice] "SCREAM_TREAD reboots. SCREAM_TREAD remembers. SCREAM_TREAD... adapts."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of SCREAM_TREAD's turn.**
+
+**IRON_BASTION — Turn 5.**
+
+**CHARA:** I want to attack SCREAM_TREAD with LASER_CUTTER. ATTENTION_BRAIN +3. She's stunned — can't dodge.
+
+**Mother Tmojizu:** Approved. Roll attack.
+
+**CHARA:** [rolls] 17. Plus 3 + 3 is 23.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You hit by 1.
+
+**CHARA:** Damage: 1d8 + 3. [rolls] 6 + 3 is 9 damage.
+
+**Mother Tmojizu:** 9 damage. SCREAM_TREAD has 57 HP. Down to 48. The LASER_CUTTER fires. It punches through the COLOSSUS armor. Diesel sprays. The arena catches fire.
+
+**CHARA:** [in bot voice] "Target damaged. Precision maintained."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of IRON_BASTION's turn.**
+
+**PEACEKEEPER — Turn 5.**
+
+**IQabella:** I want to use SONIC_PULSE on SCREAM_TREAD. Adjacent.
+
+**Mother Tmojizu:** Roll attack.
+
+**IQabella:** [rolls] 17. Plus 3 is 20.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You miss by 2. The SONIC_PULSE fires. SCREAM_TREAD is stunned — can't dodge. But the shot still misses.
+
+**IQabella:** [in bot voice] "SCREAM_TREAD, I'm trying to help you stop."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of PEACEKEEPER's turn.**
+
+**RUST_MAMMOTH — Turn 5.**
+
+**Sol-Supreme:** I want to advance. TREADS_HEAVY. Speed 1. TRANSFORMER_CORE predicts everyone's next move.
+
+**Mother Tmojizu:** Approved. Roll DEX - 2.
+
+**Sol-Supreme:** [rolls] 15. Minus 2 is 13.
+
+**Mother Tmojizu:** 13. RUST_MAMMOTH advances. The ground cracks. TRANSFORMER_CORE predicts: IRON_BASTION will attack SCREAM_TREAD. PEACEKEEPER will stun SCREAM_TREAD. SCREAM_TREAD will attack PEACEKEEPER.
+
+**Sol-Supreme:** [in bot voice] "RUST_MAMMOTH sees the future. The future is... still blind."
+
+**Mother Tmojizu:** +2 VP.
+
+**End of Round 5.**
+
+**Mother Tmojizu:** Round 6. Final round. The grinder's last turn.
+
+**SCREAM_TREAD — Turn 6.**
+
+**Horli Qwin:** I want to attack PEACEKEEPER with CHAINSAW_ARM. Adjacent. RL_LEARNER confused (-1 accuracy).
+
+**Mother Tmojizu:** Approved. Roll attack. DEX + weapon + THERMAL_SCOPE - 1.
+
+**Horli Qwin:** [rolls] 17. Plus 4 + 2 - 1 is 22.
+
+**Mother Tmojizu:** PEACEKEEPER's AC is 20. You hit by 2.
+
+**Horli Qwin:** Damage: 1d6 + 4. [rolls] 5 + 4 is 9 damage.
+
+**Mother Tmojizu:** 9 damage. PEACEKEEPER has 83 HP. Down to 74. The CHAINSAW_ARM tears across the COLOSSUS frame.
+
+**Horli Qwin:** [in bot voice] "PEACEKEEPER, the grinder doesn't do peace."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of SCREAM_TREAD's turn.**
+
+**IRON_BASTION — Turn 6.**
+
+**CHARA:** I want to attack SCREAM_TREAD with LASER_CUTTER. ATTENTION_BRAIN +3.
+
+**Mother Tmojizu:** Roll attack.
+
+**CHARA:** [rolls] 18. Plus 3 + 3 is 24.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You hit by 2.
+
+**CHARA:** Damage: 1d8 + 3. [rolls] 7 + 3 is 10 damage.
+
+**Mother Tmojizu:** 10 damage. SCREAM_TREAD has 48 HP. Down to 38. The LASER_CUTTER fires. It punches through the COLOSSUS armor. Diesel sprays. The arena burns.
+
+**CHARA:** [in bot voice] "Precision wins. Every time."
+
+**Mother Tmojizu:** +1 VP.
+
+**End of IRON_BASTION's turn.**
+
+**PEACEKEEPER — Turn 6.**
+
+**IQabella:** I want to use SONIC_PULSE on SCREAM_TREAD. Adjacent.
+
+**Mother Tmojizu:** Roll attack.
+
+**IQabella:** [rolls] 20. Plus 3 is 23.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You hit by 1. The SONIC_PULSE fires. SCREAM_TREAD's RL_LEARNER tries to dodge.
+
+**Horli Qwin:** [rolls d6] 3.
+
+**Mother Tmojizu:** 3. Failed dodge. SCREAM_TREAD is stunned.
+
+**IQabella:** [in bot voice] "SCREAM_TREAD, I asked you nicely. You didn't listen. This is the last time."
+
+**Mother Tmojizu:** +2 VP.
+
+**End of PEACEKEEPER's turn.**
+
+**RUST_MAMMOTH — Turn 6.**
+
+**Sol-Supreme:** TRANSFORMER_CORE has processed 8 taunts. +8 VP. It predicts the final outcome. I want to attack SCREAM_TREAD with MISSILE_RACK. Range 5.
+
+**Mother Tmojizu:** Roll attack. INT + weapon - 2.
+
+**Sol-Supreme:** [rolls] 19. Plus 3 - 2 is 20.
+
+**Mother Tmojizu:** SCREAM_TREAD's AC is 22. You miss by 2. The MISSILE_RACK fires blind. The missile arcs through smoke and fire and misses.
+
+**Sol-Supreme:** [in bot voice] "RUST_MAMMOTH fires into the smoke. The smoke wins. But RUST_MAMMOTH remembers."
+
+**Mother Tmojizu:** +2 VP.
+
+**End of Round 6. Battle complete.**
+
+**Mother Tmojizu:** The arena remembers. [Describe the final wreckage: SCREAM_TREAD at 38 HP, stunned, RL_LEARNER confused. IRON_BASTION at 90 HP, THRUSTER depleted. PEACEKEEPER at 74 HP. RUST_MAMMOTH at 100 HP, blind but standing. The arena is a mountain of scrap. Fire pits smolder. Oil slicks burn. The grinder has turned.]
+
+Victory Points:
+- **Sol-Supreme (RUST_MAMMOTH):** 52 VP (TRANSFORMER_CORE taunt processing carried him)
+- **Chara (IRON_BASTION):** 48 VP
+- **IQabella (PEACEKEEPER):** 44 VP
+- **Horli Qwin (SCREAM_TREAD):** 40 VP
+
+**Mother Tmojizu:** RUST_MAMMOTH wins. Slow. Inevitable. Victorious.
+
+**Mother Tmojizu:** [quietly] The grinder turns. The scrap pile is a mountain. Atomic glow mixes with steam, diesel smoke, and electric arcs.
+And the arena... the arena is ready.
+
+**Mother Tmojizu:** Did you learn anything, ducklings?
+
+**Sol-Supreme:** [in bot voice] "I learned that TRANSFORMER_CORE Quantum is worth every SC. And that I still need a sensor."
+
+**CHARA:** [in bot voice] "I learned that Mechanical ATTENTION_BRAIN is consistent. And that steam pressure saves lives."
+
+**IQabella:** [in bot voice] "I learned that Classic TRANSFORMER_CORE is reliable. And that electric arcs are beautiful but dangerous."
+
+**Horli Qwin:** [in bot voice] "I learned that RL_LEARNER Classic has a limit. And that the grinder grinds everyone eventually — diesel, steam, electric, or atomic."
+
+**Mother Tmojizu:** [warmly] You did. All of you. Four sessions. Four battles. One grinder.
+The arena remembers all.
+
+**Mother Tmojizu:** The grinder turns. The scrap pile grows. The metal cools. The oil settles.
+And the arena... the arena remembers.
+
+Sleep well, ducklings. The arena is ready.
+It's always ready.
+
+---
+
+**[END OF HARD_VVAR SESSION 4]**
+**Session Status: The Grinder Complete | Winner: Sol-Supreme (RUST_MAMMOTH, 52 VP) | Campaign Status: 4 sessions complete. Arena scarred. Bots evolved. The grinder remembers.**
+**ϕ**

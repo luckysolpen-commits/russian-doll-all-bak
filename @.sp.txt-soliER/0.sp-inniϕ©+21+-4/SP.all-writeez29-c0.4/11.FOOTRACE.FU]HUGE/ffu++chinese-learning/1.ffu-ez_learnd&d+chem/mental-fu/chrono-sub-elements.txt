@@ -1,0 +1,208 @@
+🧪️🪄️
+🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️
+
+	
+Temporal Element Guide
+
+
+How to use this Chart:
+
+Name: element's name
+LV: element's base level
++/-: allocation range of the element
+Description: description of the element
+Type: magic category the element belongs to
+Range: who the element affects
+$: cost of the element (T-element must be trapped, E-element is attained by defeating an enemy)
+Location: where the element can be found or purchased (A-Arni, T-Termina, Gh-Guldove Home, Ga-Guldove Another, Mh-Marbule Home, Ma-Marbule Another), or the enemy which must be defeated/trapped
+*Note that these are just examples: some elements can be found in multiple or many locations*
+Notes: other details (C-Consumable, I-May only be used by a character of the same innate)
+
+Y R G B K W
+🟡️🔴️🟢️🔵️⚫️⚪️
+🟡️🟡️🟡️🟡️
+Yellow Elements
+Energy of Earth and Electricity. Opposite of Green.
+Name	Lv	+/-	Description	Type	Range	$	Location	Notes
+Uplift	1	7	Drops block of stone on foe	Attack	One Foe	50	T, Ga	 
+ElectroJolt	2	6	Shocks foe with electricity	Attack	One Foe	80	T, Ga	 
+Upheaval	3	5	Spears foe with shattered earth	Attack	One Foe	100	T	 
+ElectroBolt	4	4	Hurls lightning down on opponent	Attack	One Foe	240	T	 
+Earthquake	5	3	Crushes foes beneath stone pillars	Attack	All Foes	-	Isle of the Damned(H)	 
+ThundaStorm	6	2	Brings down a series of thunderbolts	Attack	All Foes	-	Fort Dragonia(H)	I
+Golem	7	2	Summons earth giant to stomp foes	Summon	All Foes	T	Centaurpede	I
+ThundaSnake	8	0	Electric serpent zaps foes	Summon	All Foes	E	Earth Dragon	I
+Brace	2	0	Heals sprain and yellow status effects	Healing	One Ally	15	T, Ga, Ma	C
+Capsule	3	0	Restores 80 HP	Healing	One Ally	25	T, G, Ma	C
+TurnYellow	1	7	Turn foe's attribute or ally's attack attribute to Yellow	Support	One Foe/Ally	75	Ma	 
+AntiGreen	3	5	Seals Green Elements	Support	One Foe	-	Dead Sea(H)	I
+HiRes	4	4	Increases defense	Support	One Ally	430	Ga, Ma	 
+LoRes	4	4	Decreases defense	Support	One Foe	430	Ga, Ma	 
+YellowField	5	3	Colors entire Field Effect graph Yellow	Support	Everyone	-	Terra Tower	 
+PhysNegate	6	2	Nullifies foe's physical attacks	Support	One Ally	2880	Gh	I
+EarthQuake	5	0	Set Trap to catch EarthQuake Element	Trap	All Foes	300	Mh	C
+ThundaStorm	6	0	Set Trap to catch ThundaStorm Element	Trap	All Foes	400	Mh	C
+Golem	7	0	Set Trap to catch Golem Summon	Trap	All Foes	300	Mh	C
+🟡️🟡️🟡️🟡️
+🔴️🔴️🔴️🔴️
+Red Elements
+Energy of Fire. Opposite of Blue.
+Name	Lv	+/-	Description	Type	Range	$	Location	Notes
+Fireball	1	7	Hurls flame spheres at enemy	Attack	One Foe	50	A, T	 
+MagmaBomb	2	6	Launches fireballs at foes	Attack	All Foes	80	T, Ga	 
+FirePillar	3	5	Burns enemy in pillar of flames	Attack	One Foe	100	T	 
+MagmaBurst	4	4	Lava gushes out from beneath foes	Attack	One Foe	240	T	 
+Inferno	5	3	Heats air to burning-hot temperature	Attack	All Foes	E	Combot, Mt. Pyre(H), Isle of the Damned(H)	 
+Volcano	6	2	Induces a volcanic eruption	Attack	All Foes	-	Fort Dragonia(H)	I
+RedWolf	7	2	Summons a fire wolf to create a sea of flame	Summon	All Foes	T	Hotdiggity	I
+Salamander	8	0	Salamander's breath incinerates foes	Summon	All Foes	E	Fire Dragon	I
+Tablet	1	0	Restores 30 HP	Healing	One Ally	10	A, T, G	C
+Ointment	2	0	Heals burns and red status effects	Healing	One Ally	15	T, Ga, Ma	C
+Recharge	6	0	Recharges a used Element for a second use	Healing	One Ally	-	Chronopolis	C
+TurnRed	1	7	Turn foe's attribute or ally's attack attribute to Red	Support	One Foe/Ally	75	Ma	 
+AntiBlue	3	5	Seals Blue Elements	Support	One Foe	-	Dead Sea(H)	I
+Strengthen	4	4	Increases attack power	Support	One Ally	430	Ga, Ma	 
+Weaken	4	4	Decreases attack power	Support	One Foe	430	Ga, Ma	 
+RedField	5	3	Colors entire Field Effect graph Red	Support	Everyone	-	Terra Tower	 
+Ninety-Nine	6	2	Keeps Hit% at 99%	Support	One Ally	2880	Gh	I
+Inferno	5	0	Set Trap to catch Inferno Element	Trap	All Foes	300	Mh	C
+Volcano	6	0	Set Trap to catch Volcano Element	Trap	All Foes	400	Mh	C
+RedWolf	7	0	Set Trap to catch RedWolf Summon	Trap	All Foes	500	Mh	C
+
+🔴️🔴️🔴️🔴️
+🟢️🟢️🟢️🟢️
+Green Elements
+Energy of Plants and Wind. Opposite of Yellow.
+Name	Lv	+/-	Description	Type	Range	$	Location	Notes
+Bushwhacker	1	7	Slices foe with whirling leaves	Attack	One Foe	50	T, Ga	 
+AeroSaucer	2	6	Blades of air slice foe	Attack	One Foe	80	T, Ga	 
+Bushbasher	3	5	Encases foe in thorny brambles	Attack	One Foe	100	T	 
+AeroBlaster	4	4	Hits foe with a sonic blast	Attack	One Foe	240	T	 
+Carnivore	5	3	A huge Venus Flytrap devours foes	Attack	All Foes	T	Green Dragon	 
+Tornado	6	2	A cyclone batters foes to bits	Attack	All Foes	-	Fort Dragonia(H), Isle of the Damned(H)	I
+Sonja	7	2	A Forest Dryad appears, sprinkling poison dust	Summon	All Foes	T	PreyMantis	I
+Genie	8	0	A Wind Djinn blows away your foes	Summon	All Foes	E	Green Dragon	I
+Heal	2	6	Restores small amount of HP	Healing	One Ally	100	T	 
+Antidote	2	0	Heals poison and green status effects	Healing	One Ally	15	A, T, Ga, Ma	C
+HealAll	4	4	Restores medium amount of HP	Healing	All Allies	300	T	 
+HealPlus	6	2	Restores large amount of HP	Healing	One Ally	-	Terra Tower	I
+TurnGreen	1	7	Turn foe's attribute or ally's attack attribute to Green	Support	One Foe/Ally	75	Ma	 
+AntiYellow	3	5	Seals Yellow Elements	Support	One Foe	-	Dead Sea(H)	I
+EagleEye	4	4	Increases attack Hit%	Support	One Ally	430	Ga, Ma	 
+BatEye	4	4	Decreases attack Hit%	Support	One Foe	430	Ga, Ma	 
+GreenField	5	3	Colors entire Field Effect graph Green	Support	Everyone	-	Terra Tower	 
+InfoScope	6	2	Detects opponent's HP data	Support	One Foe	880	Gh	I
+Carnivore	5	0	Set Trap to catch Carnivore Element	Trap	All Foes	300	Mh	C
+Tornado	6	0	Set Trap to catch Tornado Element	Trap	All Foes	400	Mh	C
+Sonja	7	0	Set Trap to catch Sonja Summon	Trap	All Foes	500	Mh	C
+
+🟢️🟢️🟢️🟢️
+🔵️🔵️🔵️🔵️
+Blue Elements
+Energy of Water and Ice. Opposite of Red.
+Name	Lv	+/-	Description	Type	Range	$	Location	Notes
+AquaBeam	1	7	Blasts foe with water stream	Attack	One Foe	50	A, T, Ga	 
+IceLance	2	6	Hurls an icicle spear at foe	Attack	One Foe	80	T, Ga	 
+AquaBall	3	5	Hurls water sphere at foe	Attack	One Foe	100	T	 
+IceBlast	4	4	Freezes foe in a cage of ice	Attack	One Foe	240	T	 
+Deluge	5	3	Drowns enemies in ice-cold waters	Attack	All Foes	-	Shadow Forest(A)	 
+Iceberg	6	2	Hails large chunks of ice down on foes	Attack	All Foes	-	Fort Dragonia(H)	I
+FrogPrince	7	2	Frog Prince performs a water attack	Summon	All Foes	-	Water Dragon	I
+BlueWhale	8	0	Neptune's anger creates a tsunami	Summon	All Foes	E	Water Dragon	I
+Cure	1	7	Restores small amount of HP	Healing	One Ally	100	A, T, Ga	 
+Medicine	2	0	Heals flu and blue status effects	Healing	One Ally	15	A, T, Ga, Ma	C
+CurePlus	3	5	Restores medium amount of HP	Healing	One Ally	220	T, Ga	 
+CureAll	5	3	Restores large amount of HP	Healing	All Allies	-	Chronopolis	I
+TurnBlue	1	7	Turn foe's attribute or ally's attack attribute to Blue	Support	One Foe/Ally	75	Ma	 
+AntiRed	3	5	Seals Red Elements	Support	One Foe	-	Dead Sea(H)	I
+Nimble	4	4	Increases physical Evade%	Support	One Ally	430	Ga, Ma	 
+Numble	4	4	Decreases physical Evade%	Support	One Foe	430	Ga, Ma	 
+BlueField	5	3	Colors entire Field Effect graph Blue	Support	Everyone	-	Terra Tower	 
+Vigora	6	2	Stops stamina from decreasing	Support	One Ally	E	VitaUnus	I
+Deluge	5	0	Set Trap to catch Deluge Element	Trap	All Foes	300	Mh	C
+Iceberg	6	0	Set Trap to catch Iceberg Element	Trap	All Foes	400	Mh	C
+FrogPrince	7	0	Set Trap to catch FrogPrince Summon	Trap	All Foes	500	Mh	C
+
+🔵️🔵️🔵️🔵️
+⚫️⚫️⚫️⚫️
+Black Elements
+Energy of the Dark. Opposite of White.
+Name	Lv	+/-	Description	Type	Range	$	Location	Notes
+GravityBlow	1	7	Blow away foe with pure gravity	Attack	One Foe	60	Ga	 
+HellSoul	2	0	Attempts to remove soul from foe's body	Attack	One Foe	100	Ga	 
+Gravitonne	3	5	Crushes foes with supergravity field	Attack	All Foes	120	Ga	 
+HellBound	4	0	Sends enemy on a trip to Hell	Attack	One Foe	300	Ga	 
+FreeFall	5	3	Drops foe from sky at supersonic speed	Attack	One Foe	-	Dead Sea(H)	 
+Revenge	5	3	Shifts your status effects onto enemy	Attack	One Foe	600	Gh	I
+BlackHole	6	2	Sucks everything into a black hole	Attack	All Foes	E	Gravitor	I
+MotherShip	7	2	Contacts a spaceship to blast foes	Summon	All Foes	T	Shadow Cats	I
+GrimReaper	8	0	Summons Death to destroy foes	Summon	All Foes	E	Black Dragon	I
+BlackOut	2	0	Removes Black status effects	Healing	One Ally	15	T	C
+Nostrum	6	0	Restores 200 HP	Healing	One Ally	60	T, Gh	C
+TurnBlack	1	7	Turn foe's attribute or ally's attack attribute to Black	Support	One Foe/Ally	75	Ma	 
+AntiWhite	3	5	Seals White Elements	Support	One Foe	-	Fort Dragonia(H)	I
+Genius	4	4	Increases magical power	Support	One Ally	430	Gh, Ma	 
+Imbecile	4	4	Decreases magical power	Support	One Foe	430	Gh, Ma	 
+SealAll	6	2	Stops everyone's Elements	Support	Everyone	2880	Gh	I
+Diminish	6	2	Halves Element damage	Support	Everyone	1670	Gh, Mh	 
+FreeFall	5	0	Set Trap to catch FreeFall Element	Trap	All Foes	300	Mh	C
+BlackHole	6	0	Set Trap to catch BlackHole Element	Trap	All Foes	400	Mh	C
+MotherShip	7	0	Set Trap to catch MotherShip Summon	Trap	All Foes	500	Mh	C
+
+⚫️⚫️⚫️⚫️
+⚪️⚪️⚪️⚪️
+White Elements
+Energy of the Light. Opposite of Black.
+Name	Lv	+/-	Description	Type	Range	$	Location	Notes
+PhotonRay	1	7	Shoots a laser beam at opponent	Attack	One Foe	60	Ga	 
+Meteorite	2	6	Drops a comet on foe	Attack	One Foe	100	Ga	 
+PhotonBeam	3	5	Hits enemy with extra-powerful laser	Attack	One Foe	120	Ga	 
+MeteorShower	4	4	Hurls large asteroids at foes	Attack	All Foes	300	Ga	 
+HolyLight	5	3	Casts a holy circle (Annihilates Undead)	Attack	All Foes	-	Chronopolis	 
+UltraNova	6	2	Causes a high-density explosion	Attack	All Foes	E	Luxator	I
+Unicorn	7	1	Holy horse's prayers raise Defense and Magic Defense	Summon	All Allies	T	Dodo	I
+Saints	8	0	Army of angels attack foes and heal party	Summon	Everyone	E	Sky Dragon	I
+Revive	1	7	Recovers ally from 0 HP	Healing	One Ally	-	Viper Manor(H,A), Dimensional Vortex	 
+WhiteOut	2	0	Removes White status effects	Healing	One Ally	40	T	C
+RecoverAll	3	5	Restores medium amount of HP	Healing	All Allies	380	T, G	 
+Purify	4	4	Removes all status effects	Healing	One Ally	500	Gh	I
+Panacea	4	0	Removes all status effects	Healing	One Ally	500	Gh	C
+FullRevival	5	3	Revives and completely heals entire party	Healing	All Allies	-	Mh	I
+HolyHealing	6	2	Restores all HP, removes all status effects	Healing	All Allies	-	Terra Tower	I
+TurnWhite	1	7	Turn foe's attribute or ally's attack attribute to White	Support	One Foe/Ally	75	Ma	 
+AntiBlack	3	5	Seals Black Elements	Support	One Foe	-	Fort Dragonia(H)	I
+StrongMinded	4	4	Increases magical defense	Support	One Ally	430	Gh, Ma	 
+WeakMinded	4	4	Decreases magical defense	Support	One Foe	430	Gh, Ma	 
+Magnify	6	2	Increases Element damage by 1.5	Support	Everyone	1670	Gh, Mh	 
+MagNegate	6	2	Nullifies foe's magical attacks	Support	One Ally	2880	Gh	I
+HolyLight	5	0	Set Trap to catch HolyLight Element	Trap	All Foes	300	Mh	C
+UltraNova	6	0	Set Trap to catch UltraNova Element	Trap	All Foes	400	Mh	C
+Unicorn	7	0	Set Trap to catch Unicorn Summon	Trap	All Foes	500	Mh	C
+
+⚪️⚪️⚪️⚪️
+🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️🏴‍☠️️
+In the Temporal Element system, Elements are the core of combat in the Land of Time, replacing standard magic, items, and specialized techniques. They are categorized by six colors, each with specific attributes and opposing counterparts. 
+## The Six Element Colors
+Every character and enemy has an Innate Color, which determines their elemental strengths and weaknesses.
+
+| Color | Associated Attributes | Weakness |
+|---|---|---|
+| Red | Fire and Magma | Blue |
+| Blue | Water and Ice | Red |
+| Green | Nature and Air | Yellow |
+| Yellow | Earth and Electricity | Green |
+| White | Light, Holy, and Life | Black |
+| Black | Shadow, Space, and Gravity | White |
+
+## Key Mechanics
+
+* Element Grid: Before battle, you "allocate" Elements into a grid. Each slot has a level (1–8); placing an Element in a higher level makes it stronger, while a lower level weakens it.
+* Charging in Battle: You cannot use Elements immediately. You must land physical attacks to build up "Element Levels" (1, 2, or 3 points depending on the attack's strength).
+* Field Effect: Located in the top-left corner, this tracks the last three Elements cast. If the field is one solid color, Elements of that color deal massive damage, while opposing colors are weakened.
+* Summons: These are the most powerful Elements and can only be cast when the entire Field Effect matches the Summon's color.
+* Consumables & Techs: Some Elements are consumable items (like Tablets), while others are Character Techs—unique skills that only a specific character can use and are automatically assigned to their grid.
+* Traps: Special Elements that can "catch" powerful spells from enemies. To use them, you must cast the trap before the enemy uses the specific spell.
+
+Would you like to know which specific characters are the best users for each element color?
+
+

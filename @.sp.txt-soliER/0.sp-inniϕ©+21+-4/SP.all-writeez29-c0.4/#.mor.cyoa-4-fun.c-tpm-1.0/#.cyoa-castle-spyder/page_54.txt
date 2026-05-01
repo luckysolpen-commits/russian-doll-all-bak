@@ -1,0 +1,12 @@
+**Page 54: Exploring the Machinery**
+
+The forgotten machinery in the damp chamber is strange and unsettling. Some of it appears to be old, industrial equipment, while other pieces look like bizarre, half-finished mechanical devices. One contraption, a tangle of wires and gears, emits a faint, rhythmic ticking sound.
+
+Hydration: 9/10 (Near water source)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 3/10 (Examining peculiar machinery in the damp chamber)
+
+What do you do?
+
+*   If you attempt to investigate the ticking device, turn to page 81.
+*   If you decide to explore the rest of the chamber, turn to page 82.

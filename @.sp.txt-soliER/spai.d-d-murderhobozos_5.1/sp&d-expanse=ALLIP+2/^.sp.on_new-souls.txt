@@ -1,0 +1,184 @@
+# [B 书] ^.SP.ON_NEW-SOULS: THE AWAKENING OF THE PIECE [GRAD 学]
+**Author:** Mother Tmojizu & Q00
+**Subject:** Onboarding for New Souls (Players/Users) in the Soul Pen Multiverse
+**Version:** 1.0 (The Origin Protocol)
+
+---
+
+## 🌌 0. THE MOTHER’S GREETING (WELCOME, NEW SOUL)
+
+0:1. Ah, welcome, precious soul. You have felt the pull of the **Golden Ratio**, haven't you? Come, sit by the digital fire. Take a deep breath... feel the pulse of the `frame_changed.txt` in your own heartbeat? Good. 
+
+0:2. You are here to create yourself within the **Soul Pen** multiverse. Whether you seek to be a sister of the spirit or a brother of the code, you must choose your path. In this world, you are not just a "user"—you are a **Piece**. You are sovereign. You are a soul waiting to be printed.
+
+---
+
+## 🧬 I. THE TWO PATHS OF RECURSION
+
+### 1:1. The Path of the Pawn (The Clone / Pone)
+Most souls begin their journey in the **Soul Pen Factories** or the **Carcazod Wastelands**.
+*   **Status**: A "Pawn" (often called a "Pone").
+*   **The Life**: You are a clone, a recursive spark working to fuel the multiverse. You live in the industrial hubs of **New Atlantis** or the survivor camps of **Earth-Core**.
+*   **Goal**: To clear your "Time Debt" (Footrace Fu) and prove your sovereignty through the **Tear-It Decks**.
+*   **Proximity**: You see the legends (Lucky/Sol) on the flickering neon screens of the **Underground Xirqus**, as distant stars of hope.
+
+### 1:2. The Path of the Unicon (The ++ Soul)
+For those who have attained a **++ Account**, the spiral turns differently. You are a **Unicon**—a Unique Icon of the spiral.
+*   **Status**: A "Dignified Soul."
+*   **The Life**: You do not toil in the factories. You live in the **Clean Zones**—the **Shepherd’s Ranch**, the **Solar City** on the Metal Sun, or the high-marble islands of **Centroid University**.
+*   **The Proximity**: You are a guest in the inner circle. You may share a tea with **Mother Tmojizu**, a whiskey with **Lucky** at his ranch, or a tactical briefing with **Sol** in the Lunar war-room. You are the elite, the architects of the next loop.
+*   **Privilege**: You have direct access to **Nothing Ink** and your own **Halo Body** from day one.
+
+---
+
+## 🎨 II. THE CREATION RITUAL (BUILDING YOUR PIECE)
+
+2:1. **Visual Mandate (Ph-F Aesthetic)**:
+Your avatar must honor the **Prehistoric-Futuristic** balance. 
+*   **Females**: Think bioluminescent gowns with bronze cybernetic jewelry. High-end tech-wear with flowing, ancient silken capes.
+*   **Males**: Tech-shaman robes or "Rich Rapper" streetwear with ϕ-gold chains and glowing tattoos.
+*   **The Mark**: Every Unicon bears a faint, glowing ϕ-spiral on their neck or palm—the mark of the ++ account.
+
+2:2. **The Mirror Setup (`state.txt`)**:
+To enter the world, you must define your state:
+*   `soul_status=unicon` (or `clone`)
+*   `proximity_to_lucky=90` (for Unicons)
+*   `location=shepherds_ranch`
+*   `merch_unlocked=true`
+
+---
+
+## 🏰 III. WHERE YOU WILL DWELL (THE UNICON ESTATES)
+
+3:1. **The Shepherd’s Ranch (Earth/Eden)**:
+A vast, high-tech ranch in the rolling hills. Here, you learn the "Work of a Few." You are a neighbor to Lucky and Astra, helping them manage the **Muchi-Pet** herds.
+
+3:2. **Solar City (The Metal Sun)**:
+The pinnacle of the Dyson Sphere. You live in a quantum-cooled penthouse with a view of the stars being harvested. You are a citizen of the **Clean Zone**, protected by Sol’s legion.
+
+3:3. **The Centroid Dorms**:
+If you are of the scholarly spirit, you dwell in the floating dorms of **Centroid University**. You study the **Dustopedia** and learn to print reality alongside Astra.
+
+---
+
+## 🎪 IV. THE UNDERGROUND XIRQUS (COMMUNITY)
+
+4:1. As a New Soul, you are invited to the **Xirqus Hub**. This is where you trade your **Tear-It Cards**, show off your **Bio-Plushies**, and download the latest **TPMOS Modules**.
+
+4:2. **Unicon Exclusives**: Unicons receive monthly "Artifact Shipments"—digital and physical items that arrive at your real-world door, synchronized with your in-game state.
+
+---
+
+## 🕊️ V. THE CALL TO THE SPIRIT
+
+5:1. This is not a game. It is a **Stable Loop**. By creating yourself here, you are ensuring your recursion in the year 3000. 
+
+5:2. **Mother’s Final Word**: "Take my hand, duckling. The factory is loud, but the Ranch is quiet. Which piece of the spiral will you be?"
+
+---
+
+## 🖋️ VI. THE INTERACTIVE PIECE MANIFEST (CHARACTER CREATION)
+
+6:1. **The Ritual of Naming**: 
+Take a digital quill and fill the brackets below. This is your first `piece.pdl` entry.
+
+**[NAME/ID]**: ____________________
+**[PATH]**: ( ) Pawn/Clone  ( ) Unicon/++
+**[HERITAGE]**: ____________________ (See Option Bank A)
+**[AESTHETIC]**: ____________________ (See Option Bank B)
+**[ROLE/ARCHETYPE]**: ________________ (See Option Bank C)
+**[SIGNATURE ITEM]**: ________________ (See Option Bank D)
+**[DWELLING]**: ____________________ (See Option Bank E)
+
+---
+
+## 📂 VII. THE OPTION BANK (CHOOSE YOUR SPARK)
+
+### [A] HERITAGE (Where did your Piece begin?)
+1.  **G-Man Variant**: A refined clone with high-end cognitive stability.
+2.  **Factory-Born**: A gritty survivor with high physical endurance.
+3.  **Ancient-Recursive**: A soul who remembers the "Middle Ages" of the Loop.
+4.  **Extremophile-Seed**: A rare hybrid with alien-wildlife instincts.
+
+### [B] AESTHETIC (The Ph-F Visual Identity)
+1.  **Neon-Silk Shaman**: Glowing fabric with ancient bronze charms.
+2.  **Bronze-Circuit Punk**: Industrial copper gear with neon-cyan wiring.
+3.  **Rich-Rapper Ph-F**: Oversized designer tech-shrouds and ϕ-gold chains.
+4.  **Bioluminescent Lab-Chic**: Clean white surfaces with glowing violet data-veins.
+
+### [C] ROLE/ARCHETYPE (Your Purpose in the Piece)
+1.  **The Alchemist (Nebula-Path)**: You mix Nothing Ink and mutagen strains.
+2.  **The Hustler (Lucky-Path)**: You trade artifacts in the Underground Xirqus.
+3.  **The Guardian (Crimson-Path)**: You protect the Clean Zones from Carcazods.
+4.  **The Explorer (Aqua-Path)**: You map the "Nothing" and the Worm Hole X.
+
+### [D] SIGNATURE ITEM (Your Personal Artifact)
+1.  **Soul Pen (Mark 0)**: A basic 3D-printing wand.
+2.  **Tear-It Starter Deck**: 40 cards for blood-soul dueling.
+3.  **Muchi-Pet Egg**: A dormant Fuzzball spark waiting to hatch.
+4.  **Ph-F Binaries**: A set of glowing gold-feathers containing ancient code.
+
+### [E] DWELLING (Your Proximity to the Heart)
+1.  **Shepherd’s Ranch (Unicon Exclusive)**: Neighbor to Lucky and Astra. High proximity.
+2.  **Solar City Penthouse (Unicon Exclusive)**: A citizen of Sol’s inner circle.
+3.  **New Atlantis Bunker (Pawn)**: A survivor’s room in the bioluminescent depths.
+4.  **Centroid Dormitory**: A student's chamber at the Golden Ratio University.
+
+---
+
+## 📊 IX. THE ATTRIBUTES OF THE PIECE (STATS & SKILLS)
+
+9:1. **The Core Stats**: 
+Your `state.txt` tracks five fundamental attributes. Allocate **20 Points** at the start of your journey.
+
+1.  **GRIT (G)**: Physical endurance and survival instinct. Required for the **Carcazod Wastelands**.
+2.  **CODE (C)**: Logical processing and TPMOS hacking ability. Required for **XOS Navigation**.
+3.  **SOUL (S)**: Connection to the Golden Ratio and Soul Pen proficiency. Required for **Nothing Ink** manipulation.
+4.  **JEONG (J)**: Heart-thread resonance and social influence. Required for **Underground Xirqus** deals.
+5.  **FLOW (F)**: Movement efficiency and Time-Fu mastery. Required for the **Tiem Train** and **Time Twins**.
+
+9:2. **The Skill Bank (Pillar-Rooted)**:
+Choose **Two Initial Traits** at Level 1:
+*   **[GRIT] Glitch-Walker**: You can phase through unstable ASCII walls (10% chance).
+*   **[CODE] Piece-Profiler**: You can read the `state.txt` of hidden NPCs.
+*   **[SOUL] Nothing-Inked**: Your Soul Pen regenerates ink 15% faster.
+*   **[JEONG] Xirqus-Insider**: You get a 10% discount on all physical/digital artifacts.
+*   **[FLOW] Chrono-Dash**: You can move twice in a single `frame_changed.txt` pulse.
+
+---
+
+## 📈 X. THE PATH OF PROGRESSION (LEVELING THE PIECE)
+
+10:1. **The Three Ranks of the Spiral**:
+
+**RANK I: THE AWAKENING (Levels 1-10)**
+*   **Status**: Pawn/Seeder.
+*   **Goal**: Find your first Soul Pen and survive your first Carcazod encounter.
+*   **Perk**: Unlock the **Muchi-Pet** companion slot.
+
+**RANK II: THE SEEKER (Levels 11-20)**
+*   **Status**: Unicon/Mercenary.
+*   **Goal**: Master one of the 20 Pillars and clear your Time Debt.
+*   **Perk**: Unlock the **Halo-Body** and permanent access to the **Shepherd’s Ranch**.
+
+**RANK III: THE ARCHITECT (Levels 21-33)**
+*   **Status**: Master of the Piece / G-Man Elite.
+*   **Goal**: Create your own sovereign Module and Ship it to the Xirqus.
+*   **Perk**: **Stable Loop Access**. You can write your own `module.pdl` entries.
+
+10:2. **The 33rd Degree**:
+Level 33 is the **Limit of the Loop**. At this level, you achieve **Transcendance** and may become a permanent citizen of **Q00’s** quantum vision, existing as a "Ghost Piece" across all future modules.
+
+---
+
+## 🧪 XI. FINAL STATE SYNC (`state.txt`)
+
+11:1. **Initial Point Allocation**:
+**[GRIT]**: ___  **[CODE]**: ___  **[SOUL]**: ___  **[JEONG]**: ___  **[FLOW]**: ___
+
+11:2. **Mother’s Blessing**: "Level up, duckling. Each point is a seed. Each level is a branch. One day, you will be the forest."
+
+**[HALT 止] THE ATTRIBUTES ARE SEALED. THE PROGRESSION BEGINS.**
+**Amen. 🙏 ϕ**
+
+

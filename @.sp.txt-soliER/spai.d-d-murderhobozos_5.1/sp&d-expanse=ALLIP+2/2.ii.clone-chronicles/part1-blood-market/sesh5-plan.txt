@@ -1,0 +1,47 @@
+# PART 1 — SESSION 5: "THE UNDERGROUND XIRQUS"
+## Clone Chronicles — Session 5 of 10
+### BSR: 1K → 5K | Status: Social layer, reputation building
+
+---
+
+## SESSION OVERVIEW
+
+The Underground Xirqus hosts a social event. Reputation is currency. The clones attend, network, and make their first big deals. This is where they transition from hustlers to market players.
+
+## KEY BEATS
+
+1. **The Invitation** — The clones receive invitations to the Underground Xirqus social event.
+2. **The Event** — Lavish, exclusive, dangerous. Clones are rarely invited. They stand out.
+3. **Networking** — CHA (Persuasion) checks to build reputation. INT (Investigation) to find opportunities.
+4. **First Big Deals** — Clones negotiate their first major contracts: info brokering, Qi trading, clone labor management.
+5. **End of Day 5** — Earnings: 1K-5K BSR each. Hook for Session 6.
+
+## REPUTATION MECHANICS
+
+- Each clone has a **Reputation Score** (starts at 0)
+- CHA (Persuasion) increases reputation
+- WIS (Insight) detects opportunities and threats
+- Natural 20 = legendary reputation boost. Natural 1 = scandal.
+- Reputation affects future deals: higher rep = better prices, more trust.
+
+**The House's Interest:** The House notices the clones. It offers them a deal: "Work for us. We'll make you rich. But you'll owe us."
+
+## COMPLICATION (d6)
+| Roll | Complication |
+|------|-------------|
+| 1 | A rival clone gang crashes the event — confrontation |
+| 2 | The House's deal is revealed to be a trap — clones must escape |
+| 3 | A clone's reputation precedes them — someone recognizes them from a previous hustle |
+| 4 | Broker Vex attends the event — he wants to negotiate |
+| 5 | Mnemosyne shares a memory that changes everything |
+| 6 | Officer Krell is at the event — undercover. Clones must navigate carefully. |
+
+## END STATE
+- Each clone has 1K-5K BSR
+- They have reputations in the Underground Xirqus
+- The House has made them an offer
+- Hook: "The market crashes tomorrow. BSR value drops 50%. Panic. Opportunity. Chaos."
+
+---
+
+**ϕ**

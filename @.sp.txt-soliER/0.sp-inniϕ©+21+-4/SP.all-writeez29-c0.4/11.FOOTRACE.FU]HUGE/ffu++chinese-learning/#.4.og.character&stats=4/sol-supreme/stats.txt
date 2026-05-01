@@ -1,0 +1,51 @@
+# stats.txt — SOL-SUPREME
+# Bio-Tech Genius | Artificer (Battle Smith) | Custom Lineage (Dark Iron)
+
+level: 2
+class: Artificer / Battle Smith
+race: Custom Lineage (Dark Iron)
+
+STR: 14 (+2)
+DEX: 10 (+0)
+CON: 14 (+2)
+INT: 18 (+4)
+WIS: 12 (+1)
+CHA: 10 (+0)
+
+HP: 18/18
+AC: 16 (Chain Mail)
+Speed: 25ft
+
+Proficiency Bonus: +2
+Initiative: +0
+
+Saving Throws: CON +4, INT +6
+Skills:
+  - Arcana: +6
+  - Investigation: +6
+  - History: +4
+  - Perception: +3
+  - Medicine: +3
+  - Tinker's Tools: +6
+
+Abilities/Spells:
+  - Magical Tinkering
+  - Spellcasting (INT-based)
+  - Infuse Item (2 infusions active)
+  - Steel Defender (CR 1/4 construct companion)
+  - Cantrips: Fire Bolt, Mending, Booming Blade
+  - 1st Level Spells: Shield, Cure Wounds, Heroism, Identify
+
+Infusions Active:
+  - Enhanced Weapon (Steel Defender's attack +1)
+  - Repulsor Shield (Steel Defender temporary HP +5)
+
+Inventory:
+  - Warhammer (Soul Pen Prototype — doubles as arcane focus)
+  - Chain Mail
+  - Shield
+  - Tinker's Tools
+  - Soul Pen Mark III (invented, legendary lore item)
+  - Ikarus Blueprint Fragment (quest item)
+  - 75 Gold Pieces
+  - Component Pouch

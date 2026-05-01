@@ -1,0 +1,19 @@
+CYOA ENGINE FIX - April 15, 2026
+
+INVESTIGATION:
+1. The books are not loading because the 'cyoa-engine_manager' cannot resolve the 'data_xl' path correctly.
+2. Currently, 'location_kvp' contains absolute paths pointing to a previous version directory ('c3' instead of 'c4').
+3. 'cyoa-engine_manager.c' attempts to read 'data_xl' from 'pieces/locations/location_kvp' but defaults to a path within the project if not found.
+4. The books are actually stored in '^.TPMOS_DATA_XL_67.00/books' relative to the workspace root.
+5. 'projects/cyoa-engine/books' is a relative symlink pointing to the external books directory.
+
+PROPOSED FIX:
+1. Update 'run_chtpm.sh' to dynamically write the correct paths to 'pieces/locations/location_kvp', including a dynamic 'data_xl' entry.
+2. Create a 'location.txt' file in 'projects/cyoa-engine/' to store the relative path to the books, allowing for easy relocation.
+3. Modify 'cyoa-engine_manager.c' to:
+   a. Check for 'projects/cyoa-engine/location.txt' first for the 'data_xl' path.
+   b. Use the relative path provided there to locate books.
+   c. Ensure 'project_root' is correctly used to resolve other paths.
+4. Recompile the 'cyoa-engine_manager' using the 'compile_all.sh' script.
+
+This should resolve the path issues and allow the books to load regardless of the absolute path of the workspace.

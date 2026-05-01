@@ -1,0 +1,51 @@
+# stats.txt — CHR-047 "Chara-Prime"
+# Clone of Chara | Rogue (Arcane Trickster) / Clone | Red-Headed
+
+level: 1
+class: Rogue / Arcane Trickster
+race: Clone (Half-Elf DNA)
+
+STR: 8 (-1)
+DEX: 16 (+3)
+CON: 12 (+1)
+INT: 15 (+2)
+WIS: 13 (+1)
+CHA: 11 (+0)
+
+HP: 14/14
+AC: 14 (Leather Armor + DEX)
+Speed: 30ft
+
+Proficiency Bonus: +2
+Initiative: +3
+
+loyalty: 50
+time_debt: 500 BSR
+serial_number: CHR-047 (glowing on left wrist)
+hair: Red (same DNA batch)
+
+Saving Throws: DEX +5, INT +4
+Skills:
+  - Acrobatics: +5
+  - Investigation: +6 (+2 from fragmented CIA memories)
+  - Insight: +5
+  - Stealth: +5
+  - Perception: +3
+  - Deception: +2
+
+Abilities/Spells:
+  - Sneak Attack (1d6)
+  - Cunning Action (Bonus Action: Dash, Disengage, Hide)
+  - Mage Hand (Cantrip)
+  - Minor Illusion (Cantrip)
+
+Special:
+  - Fragmented CIA Memories: +2 to Investigation when recalling original's intel
+  - Clone Bond: Can share memories with other clones (risky but powerful)
+
+Inventory:
+  - Shortsword
+  - Thieves' Tools
+  - Clone ID Card (CHR-047)
+  - 0 BSR
+  - Cramped room key

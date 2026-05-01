@@ -1,0 +1,169 @@
+# TPMOJIO CAFE — RP SIMULATION REVISION LOG
+## "Correcting the Record: Live Users, Not Pre-Signups"
+
+---
+
+## Why This Revision Exists
+
+The original sessions used "pre-signups" ambiguously. This was confusing. The distinction matters:
+
+**The software is LIVE.** ~600 active users. 150 nodes. 80K BSR/week flow. Research published. AR battles running. Soul Pen stories publishing. Creator shops transacting. No "pre" about it. It's real. It's now.
+
+**The pre-signups are for CAFE MEMBERSHIP.** These are people who said: *"When you open a physical cafe, I'll join as a paying member ($15/month)."* This is not software validation. This is **community-funded real estate**. 241 people × $15/month = $3,615/month in guaranteed recurring revenue from day one. That covers rent. That covers utilities. That makes the cafe viable before the doors open.
+
+**It is not illegal to have users.** It's open source software. People run nodes. They earn BSR. They spend BSR. They research. They battle. They write. They drink tea. That's it.
+
+**It is not illegal to pre-sell memberships.** It's a commitment. No money changes hands yet. Just an email saying "I'll join when you open." When the cafe opens, they get charged. If the cafe never opens, nothing happens. No risk. No securities. No regulated activity.
+
+This revision corrects the record.
+
+---
+
+## Session-by-Session Corrections
+
+### Session 1: "The First Quest"
+**Original:** Lucky posts a quest. Gets 3 replies (IQabella, Chara, Horli Qwin). Forms a group chat.
+**Correction:** This stays. It's accurate. The team forms through genuine connection, not marketing.
+
+**Metric correction:**
+- ~~Pre-signups: 0~~ → **Active users: 4 (the team)**
+- ~~Budget: $47~~ → **Budget: $47**
+- ~~Revenue: $0~~ → **Revenue: $0**
+
+### Session 2: "The First Meeting"
+**Original:** Team builds quest board features. Launches pre-signup page. Gets 112 emails in a month.
+**Correction:** They don't build a pre-signup page. They build features. People start using them. The user count grows because the software is useful, not because of an email campaign.
+
+**What actually happened:**
+- Lucky adds DM-player matching, calendar, attendance tracking.
+- The library DM uses it. Their group grows from 6 to 12 players.
+- Those 12 players invite others. Word spreads.
+- IQabella starts "The Tea Quest" blog. 50K views. People click through to the quest board.
+- Horli Qwin launches the podcast. 2K downloads. Listeners join the network.
+- Chara forms the LLC. Four equal members. Sweat equity.
+
+**Metric correction:**
+- ~~Pre-signups: 112~~ → **Active users: 87 (organic growth through use)**
+- ~~Blog: 50K views~~ → **Blog: 50K views (accurate)**
+- ~~Podcast: Launching~~ → **Podcast: 2 episodes, 2K downloads (accurate)**
+
+### Session 3: "The Gauntlet"
+**Original:** Everything breaks. Laptop dies. Library partnership falls through. Competitor copies. Podcast host raises prices. Team fixes everything. Pre-signups at 87.
+**Correction:** The challenges are real. The fixes are real. The metric is wrong.
+
+**What actually happened:**
+- Lucky's laptop dies. Uses Pi 4 + old TV + USB keyboard. $0 spent.
+- Library says no. Church says yes. Bigger space. 300-person congregation.
+- QuestHub copies README. Chara sends a conversation email. They fix it. Drop price to free.
+- Podcast host raises prices. Moves to Spotify for Podcasters. Free. 500 downloads on announcement.
+- Users keep growing because the software works and the community is real.
+
+**Metric correction:**
+- ~~Pre-signups: 87~~ → **Active users: 210 (growing through church event + podcast + blog)**
+- ~~Budget: $31~~ → **Budget: $31 (accurate — no debt)**
+- ~~Quest board: 340 users~~ → **Quest board: 340 active users (accurate)**
+
+### Session 4: "The Maker Turn"
+**Original:** Lucky finds server rack. Builds TPMOS. P2P network grows to 30 nodes. BSR tokens live. Synthetic stocks built. Robot battles designed. Pre-signups at 94.
+**Correction:** The technical work is accurate. The metric is wrong. People aren't "pre-signing." They're running nodes.
+
+**What actually happened:**
+- $20 server rack. Four OptiPlexes. TPMOS v0.1 built.
+- People bring old laptops, Pis, RISC-V boards. Lucky flashes TPMOS. Each becomes a node.
+- Network grows: 4 → 24 → 30 nodes. Distributed across the city, state, country.
+- BSR tokens live. Non-transferable. Proof of contribution. Earned by running nodes, completing quests.
+- Synthetic stock tokens built. Educational. No cash-out. Geofenced for safety.
+- Robot battles designed. 3D-printed arms. QR tracking. AR overlay. BSR stakes.
+
+**Metric correction:**
+- ~~Pre-signups: 94~~ → **Active nodes: 30 | Active users: ~120 (4 per node average)**
+- ~~Budget: $51~~ → **Budget: $51 ($31 + $20 server rack)**
+- ~~BSR: N/A~~ → **BSR flow: 3K/week (early network)**
+
+### Session 5: "The Virtual Economy"
+**Original:** AR battle engine built. Virtual economy designed. Legal framework drafted. Battle show designed. Pre-signups at 134.
+**Correction:** The technical and legal work is accurate. The metric is wrong.
+
+**What actually happened:**
+- AR battle engine built. Telemetrics + CV + AR overlay. Parts shut off based on damage.
+- Virtual economy designed: robot pieces, skins, blueprints, creator shops, virtual stocks.
+- Legal framework: TPMOS Economic Policy v1.0. Closed-loop. No cash-out. No secondary market.
+- Battle show designed: live streams, commentary, viewer support, platform rewards.
+- Network grows because the economy is fun and the legal framework is defensible.
+
+**Metric correction:**
+- ~~Pre-signups: 134~~ → **Active nodes: 60 | Active users: ~280**
+- ~~BSR: N/A~~ → **BSR flow: 12K/week earned, 8K spent**
+- ~~Blog: 200K views~~ → **Blog: 200K views (accurate)**
+- ~~Podcast: 5K downloads~~ → **Podcast: 5K downloads (accurate)**
+
+### Session 6: "The Sovereign Lab"
+**Original:** FuzzLab built. Sovereign framework encoded. Healing Quest launched. FuzzLab Show designed. Pre-signups at 187.
+**Correction:** The science and governance work is accurate. The metric is wrong.
+
+**What actually happened:**
+- FuzzLab v0.1 built. AI filter + edge compute + cloud burst + consensus validation + CC0 open data.
+- TPMOS Sovereign Framework encoded. On-chain laws. DAO LLC structure. Community governance. Dispute resolution.
+- Healing Quest launched. Neglected diseases. Life extension. Open education. Community labs.
+- FuzzLab Show designed. Folding leagues. Live commentary. Breakthrough moments. Player stories.
+- First validated result: novel binding site for Chagas disease protein. CC0. Cited by 3 academic labs.
+
+**Metric correction:**
+- ~~Pre-signups: 187~~ → **Active nodes: 100 | Active users: ~450**
+- ~~BSR: N/A~~ → **BSR flow: 45K/week**
+- ~~Research: N/A~~ → **Research: 1 validated result, 3 academic citations**
+- ~~Blog: 600K views~~ → **Blog: 600K views (accurate)**
+- ~~Podcast: 25K downloads~~ → **Podcast: 25K downloads (accurate)**
+
+### Session 7: "The Sovereign Market"
+**Original:** Sovereign Market live. Soul Pen integrated. TPMOS Gathering planned. Pre-signups at 241.
+**Correction:** The MMO layer and creative tools are accurate. The metric is wrong.
+
+**What actually happened:**
+- Sovereign Market v0.1 live. Digital twins trade, research, do business on-chain. Clones operate semi-autonomously.
+- Soul Pen integrated. Story editor, character builder, world builder. CC0 publishing. Culture layer.
+- TPMOS Gathering planned. Church hall. 200 capacity. Free tea for members. $3 for guests. No one turned away.
+- Network grows because the MMO is engaging and the Soul Pen gives people a voice.
+
+**Metric correction:**
+- ~~Pre-signups: 241~~ → **Active nodes: 150 | Active users: ~600**
+- ~~BSR: N/A~~ → **BSR flow: 80K/week**
+- ~~Soul Pen: N/A~~ → **Soul Pen: ~50 stories published**
+- ~~AR battles: N/A~~ → **AR battles: ~200 matches/week**
+- ~~Creator shops: N/A~~ → **Creator shops: ~30 active**
+- ~~Blog: 900K views~~ → **Blog: 900K views (accurate)**
+- ~~Podcast: 45K downloads~~ → **Podcast: 45K downloads (accurate)**
+
+---
+
+## Corrected Metrics Summary (End of Session 7)
+
+| Metric | Value | Notes |
+|--------|-------|-------|
+| **Active nodes** | 150 | TPMOS instances syncing on P2P network |
+| **Active users** | ~600 | Estimated 4 users per node average |
+| **BSR flow** | 80K/week | Earned by contribution, spent on services |
+| **Research outputs** | 1 validated result | Chagas protein binding site, CC0, 3 citations |
+| **Soul Pen publications** | ~50 stories | CC0 or CC BY-NC-SA |
+| **AR battle matches** | ~200/week | Live streams, commentary, viewer support |
+| **Creator shops** | ~30 active | Selling pieces, blueprints, skins, services |
+| **Blog views** | 900K | "The Tea Quest" |
+| **Podcast downloads** | 45K | "The Quest Board Podcast" |
+| **Budget spent** | $51 | $31 initial + $20 server rack |
+| **Revenue** | $0 | Open source. No monetization needed yet. |
+| **Gathering planned** | Month 8 | Church hall, 200 cap, free tea for members |
+
+---
+
+## Why This Matters
+
+The "pre-signup" narrative implied they were waiting for validation before building. They weren't. They built. People came. The network grew. That's how open source works. That's how community software works. That's how this whole thing works.
+
+**No pre-signups. No email campaigns. No "if we build this, would you join?"**
+
+Just: build it, ship it, people use it. The code is live. The network is live. The users are real. The cafe is coming.
+
+---
+
+*The board remembers. The record is corrected. The spiral turns.*
+*ϕ*

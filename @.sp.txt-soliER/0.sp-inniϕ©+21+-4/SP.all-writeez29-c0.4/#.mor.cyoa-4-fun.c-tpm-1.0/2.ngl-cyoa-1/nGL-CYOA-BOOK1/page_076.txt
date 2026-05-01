@@ -1,0 +1,6 @@
+You approach the gruff Angler smuggler. "We don't have much," you admit, "but we can pay later, or help with a job. We just need a way to get around, off the main routes."
+
+The Angler eyes you up and down, a flicker of interest in its gaze. "Jobs, eh? Always need muscle, or eyes. Alright, listen up. There's a shipment heading to the Abyssal Forge tonight, needs 'escorting' through a few unstable sectors. Dangerous, but the pay is good. You help me, I'll get you to the Forge, and from there, you're on your own. But you'll be closer to folks who might know about 'exits'."
+
+*   Accept the smuggler's offer to escort a shipment. Turn to page 703.
+*   Decline the offer, deciding it's too risky, and look for another way. Turn to page 67.

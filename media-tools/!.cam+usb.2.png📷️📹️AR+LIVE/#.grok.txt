@@ -1,0 +1,18 @@
+Failed to set format 842093913 at 320x240 on /dev/video1
+No supported format/resolution found for /dev/video1
+Webcam Name:	USB2.0 PC CAMERA does this help ? also not getting terminal back after kill(ctrl+c)
+
+lsusb
+Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub 
+Bus 003 Device 002: ID 045e:0990 Microsoft Corp. Surface Camera Front
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 002: ID 0cf3:e303 Qualcomm Atheros Communications 
+Bus 001 Device 003: ID 18ec:3399 Arkmicro Technologies Inc. USB2.0 PC CAMERA
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+v4l2-ctl --list-devicesUSB2.0 PC CAMERA (usb-0000:03:00.3-2):
+	/dev/video4
+	/dev/video5
+

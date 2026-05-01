@@ -1,0 +1,51 @@
+# stats.txt — IQA-112 "IQabella-Dozen"
+# Clone of IQabella | Cleric (Peace Domain) / Clone | Red-Headed
+
+level: 1
+class: Cleric / Peace Domain
+race: Clone (Warforged DNA)
+
+STR: 11 (+0)
+DEX: 10 (+0)
+CON: 13 (+1)
+INT: 12 (+1)
+WIS: 16 (+3)
+CHA: 14 (+2)
+
+HP: 16/16
+AC: 16 (Natural Armor + Shield)
+Speed: 30ft
+
+Proficiency Bonus: +2
+Initiative: +0
+
+loyalty: 50
+time_debt: 500 BSR
+serial_number: IQA-112 (glowing on left wrist)
+hair: Red (same DNA batch)
+
+Saving Throws: WIS +5, CHA +4
+Skills:
+  - Medicine: +5
+  - Insight: +5
+  - Persuasion: +4
+  - Religion: +3
+  - Perception: +5
+
+Abilities/Spells:
+  - Implements of Peace (Emboldening Bond — 1/day)
+  - Spellcasting (WIS-based)
+  - Cantrips: Sacred Flame, Spare the Dying, Guidance, Thaumaturgy
+  - 1st Level Spells: Healing Word, Cure Wounds, Bless, Shield of Faith
+
+Special:
+  - More Assertive Than Original: +2 to Persuasion when standing up for herself
+  - Clone Bond: Can share memories with other clones (risky but powerful)
+
+Inventory:
+  - Mace
+  - Shield (emblazoned with ϕ spiral)
+  - Clone ID Card (IQA-112)
+  - 0 BSR
+  - Cramped room key
+  - Small tea set (inherited from original's memory)

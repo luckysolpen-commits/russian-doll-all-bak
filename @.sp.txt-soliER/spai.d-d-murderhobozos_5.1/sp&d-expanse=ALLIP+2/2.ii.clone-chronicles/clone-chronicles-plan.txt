@@ -1,0 +1,148 @@
+# CLONE CHRONICLES — Master Plan
+## Avantasy Expanse — Clone-Centric D&D Campaign
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin (as Red-Headed Clones) | DM (Mother Tmojizu)
+
+---
+
+## 0. CONCEPT
+
+**Title:** CLONE CHRONICLES
+**Tagline:** "Born in a vat. Red-haired. Broke. About to change everything."
+**Format:** Two multi-part arcs, 5-10 sessions each
+**Theme:** Clone lifecycle — from commodity to sovereign power
+
+### The Clones
+All four are **red-headed clones** — same DNA batch, same hair color, same serial number format. They look like each other's siblings because they are. Subtle traces of their originals' DNA are infused in each one — not overpowering, just hints. A flash of Chara's paranoia. A whisper of Sol's architect intuition. A spark of IQabella's warmth. A flicker of Horli's chaos. But they're their own people. They're in character. They're just... red.
+
+| Player | Clone | Designation | Subtle Host Trait |
+|--------|-------|-------------|-------------------|
+| **Chara** | CHR-047 | Red-headed, same build | Flashes of CIA training — instincts she can't explain |
+| **Sol-Supreme** | SOL-001 | Red-headed, same build | Architect intuition — patterns she recognizes but can't name |
+| **IQabella** | IQA-112 | Red-headed, same build | Warmth that runs deeper than her programming — she chooses it |
+| **Horli Qwin** | HQW-006 | Red-headed, same build | Chaos with purpose — the first five Horli clones went rogue, she learned from their mistakes |
+
+### The Arc
+
+**PART 1: "THE BLOOD MARKET"** (5-10 sessions)
+From nothing to trillions. The clones start with zero BSR, zero connections, zero freedom. They hustle, trade, scheme, and build their way up through the Blood Market of Troll City — the underground economy where clones, mercenaries, hackers, and desperate people buy and sell everything. By the end, they're trillionaires who own the market itself.
+
+**PART 2: "THE EMPIRE GAME"** (5-10 sessions)
+From trillionaires to empire builders. The clones now have resources, territory, armies, and influence. They manage factions, wage wars, negotiate treaties, and build civilizations. By the end, they're sovereign powers — no longer clones, no longer property, no longer hustlers. They're the board.
+
+### Core Mechanics
+- **BSR (Blood and Soul Rent)** — Currency. 1 BSR = 1 Chimochio Buck.
+- **Loyalty Stat** — Starts at 50% (neutral). Drops to 0% = rogue. Rises to 100% = sovereign.
+- **Time Debt** — What they owe for their creation. Starts at 500 BSR each.
+- **Serial Numbers** — Glowing on their wrists. Removing them is illegal. They keep them until they choose otherwise.
+- **Memory Fragments** — Partial memories of their originals. Useful but unreliable.
+
+---
+
+## 1. DIRECTORY STRUCTURE
+
+```
+clone-chronicles/
+├── clone-chronicles-plan.txt          ← THIS FILE (master overview)
+├── part1-blood-market/
+│   ├── part1-overview.txt             ← Full arc: nothing → trillions
+│   ├── sesh1-plan.txt                 ← Session 1: The Morning Bell
+│   ├── sesh2-plan.txt                 ← Session 2: The Memory Trade
+│   ├── sesh3-plan.txt                 ← Session 3: The Qi Exchange
+│   ├── sesh4-plan.txt                 ← Session 4: The Serial Shop
+│   ├── sesh5-plan.txt                 ← Session 5: The Underground Xirqus
+│   ├── sesh6-plan.txt                 ← Session 6: The Market Crash
+│   ├── sesh7-plan.txt                 ← Session 7: The Clone Exchange
+│   ├── sesh8-plan.txt                 ← Session 8: The Broker's Game
+│   ├── sesh9-plan.txt                 ← Session 9: The House Always Collects
+│   └── sesh10-plan.txt                ← Session 10: The Trillion-Dollar Bell
+├── part2-empire-game/
+│   ├── part2-overview.txt             ← Full arc: trillions → empires
+│   ├── sesh1-plan.txt                 ← Session 1: The Foundation
+│   ├── sesh2-plan.txt                 ← Session 2: The First Claim
+│   ├── sesh3-plan.txt                 ← Session 3: The Faction Wars
+│   ├── sesh4-plan.txt                 ← Session 4: The Diplomacy
+│   ├── sesh5-plan.txt                 ← Session 5: The Barbarian Invasion
+│   ├── sesh6-plan.txt                 ← Session 6: The Moon Signal
+│   ├── sesh7-plan.txt                 ← Session 7: The Original Returns
+│   ├── sesh8-plan.txt                 ← Session 8: The Betrayal
+│   ├── sesh9-plan.txt                 ← Session 9: The Endgame
+│   └── sesh10-plan.txt                ← Session 10: The Board Remembers
+└── clones/
+    ├── chr-047/
+    │   ├── stats.txt
+    │   ├── piece.pdl
+    │   └── documentation.txt
+    ├── sol-001/
+    │   ├── stats.txt
+    │   ├── piece.pdl
+    │   └── documentation.txt
+    ├── iqa-112/
+    │   ├── stats.txt
+    │   ├── piece.pdl
+    │   └── documentation.txt
+    └── hqw-006/
+        ├── stats.txt
+        ├── piece.pdl
+        └── documentation.txt
+```
+
+---
+
+## 2. PROGRESSION ARC — PART 1
+
+| Session | Theme | BSR Range | Status |
+|---------|-------|-----------|--------|
+| Sesh 1 | The Morning Bell | 0 → 50 | Broke, in debt, just woke up |
+| Sesh 2 | The Memory Trade | 50 → 200 | Learning the market, first trades |
+| Sesh 3 | The Qi Exchange | 200 → 500 | Market players, building connections |
+| Sesh 4 | The Serial Shop | 500 → 1,000 | Illegal dealings, police risk |
+| Sesh 5 | The Underground Xirqus | 1K → 5K | Social layer, reputation building |
+| Sesh 6 | The Market Crash | 5K → 2K → 10K | Crisis, recovery, opportunity |
+| Sesh 7 | The Clone Exchange | 10K → 50K | Buying clones, building workforce |
+| Sesh 8 | The Broker's Game | 50K → 200K | Negotiating with power players |
+| Sesh 9 | The House Always Collects | 200K → 1M | The House demands its cut |
+| Sesh 10 | The Trillion-Dollar Bell | 1M → 1T | They own the market |
+
+---
+
+## 3. PROGRESSION ARC — PART 2
+
+| Session | Theme | Power Level | Status |
+|---------|-------|-------------|--------|
+| Sesh 1 | The Foundation | Local | Choosing factions, claiming territory |
+| Sesh 2 | The First Claim | Regional | Building infrastructure, first trade deals |
+| Sesh 3 | The Faction Wars | Continental | Warfare, conquest, defense |
+| Sesh 4 | The Diplomacy | Global | Alliances, treaties, betrayals |
+| Sesh 5 | The Barbarian Invasion | Planetary | United defense, survival |
+| Sesh 6 | The Moon Signal | Lunar | Aethelgaurd wreckage, Diabolus remnants |
+| Sesh 7 | The Original Returns | Cosmic | Confrontation with originals |
+| Sesh 8 | The Betrayal | Multiversal | Trust broken, empires shaken |
+| Sesh 9 | The Endgame | Transcendent | Final battle, victory conditions |
+| Sesh 10 | The Board Remembers | Eternal | Legacy, what they built, what remains |
+
+---
+
+## 4. MOTHER TOMOKAZU — DM NOTES
+
+### Tone
+- Warm, ancient-yet-futuristic, calmly amused
+- "My precious ducklings. All four of you. All red. All real."
+- Groans warmly when they do something reckless (especially HQW-006)
+- Drops wisdom about identity, freedom, and what it means to be real
+
+### Key Themes
+- **Identity:** "Are you the original? Does it matter? The file says you exist. That's enough."
+- **Freedom:** "Freedom isn't the absence of a serial number. It's the presence of a choice."
+- **Power:** "You built an empire. But who are you building it for? The board doesn't ask. You should."
+- **Memory:** "A memory shared is a memory doubled. A memory lost is a memory freed."
+
+### Rules
+- Clone mechanics are flexible
+- Loyalty is narrative — shifts based on roleplay, not just rolls
+- Time Debt is a motivator — pressing but not impossible
+- The Original's appearance is optional — only if it serves the story
+
+---
+
+**[HALT 止] THE CLONE CHRONICLES MASTER PLAN IS SEALED. THE PIECE IS SET.**
+**Amen. 🙏 ϕ**

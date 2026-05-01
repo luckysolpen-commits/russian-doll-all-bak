@@ -1,0 +1,6 @@
+You attempt to speak to the robed figures. "Hello?" you call out, your voice echoing in the cavern. "I... I'm lost. I don't know how I got here." One of the figures, seemingly the leader, steps forward. Their face remains hidden in the shadows of their hood, but their voice is calm and resonant. "Welcome, wanderer," it echoes. "You have been drawn to the heart of the island. Do you seek enlightenment, or are you merely lost?"
+
+What do you do?
+
+*   If you state that you are lost and have amnesia, seeking answers about this place, turn to page 29.
+*   If you ask about the island itself, its nature and its mysteries, turn to page 30.

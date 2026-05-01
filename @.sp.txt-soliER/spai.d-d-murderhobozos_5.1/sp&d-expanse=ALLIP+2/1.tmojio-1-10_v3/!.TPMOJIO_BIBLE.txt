@@ -1,0 +1,728 @@
+# [B 书] TPMOJIO BIBLE — The Definitive Rulebook [GRAD 学]
+## Formerly: Tsots / Chimochio / Tmojio
+### Super Chess × D&D × SimCity — Powered by the True Piece Method (TPM)
+### Version 1.0 — The Spiral Edition
+
+---
+
+## 0. IDENTITY & ORIGIN
+
+**Name:** TPMOJIO (pronounced "tee-pee-MO-jee-oh")
+**Former Names:** Tsots → Chimochio → Tmojio → **TPMOJIO**
+**Tagline:** "Super Chess meets D&D meets SimCity — every piece has a soul."
+
+### What Is TPMOJIO?
+TPMOJIO is a tactical board game framework where every piece is a **sovereign entity** with stats, skills, inventory, personality, and free will. It plays like chess on the surface — two armies on a grid, taking turns, moving and fighting — but underneath, every piece is a living character with hunger, stress, loyalty, a programmable LyfeBook, and the ability to learn, grow, betray, and die.
+
+It can be played:
+- **Like chess** — strict, competitive, ELO-rated
+- **Like D&D** — with a Dungeon Master, narrated, flexible
+- **Like SimCity** — building territories, managing economies
+- **Like an MMO** — online, persistent, with warehouses and arenas
+- **Like a sandbox** — one player, creative, no rules, just stories
+
+**TPMOJIO is not rigid.** It is a framework. The rules are a riverbank — the water shapes the bank, and the bank shapes the water.
+
+### Relationship to TPMOS & SoulPen
+Every TPMOJIO piece is a **True Piece** — it follows the True Piece Method (TPM) defined in the TPMOS Textbook. Each piece has:
+- `piece.pdl` — its DNA (what it *can* do)
+- `state.txt` — its Mirror (what it *is* right now)
+- `history.txt` — its memory (what *happened* to it)
+
+**"If it's not in a file, it's a lie."** TPMOJIO pieces persist across sessions, servers, and even games. A piece that dies in one match can be resurrected in the next — if its file says it's alive, it's alive.
+
+---
+
+## 1. GAME MODES
+
+TPMOJIO has **7 official modes**. Each is a different way to play the same underlying system.
+
+### 1.1 CLASSIC MODE — "Super Chess"
+- **Players:** 1v1, 2v2, 4v4
+- **Board:** 2D grid (larger than a chess board)
+- **Teams:** Team King (regal King/Queen of Asgard) vs Team Clown (Alpha Sinder's clown army)
+- **ELO Rated:** Yes — competitive ranking system
+- **Timed Matches:** 1 minute to infinity (house rules)
+- **AI Difficulty:** 1-100 (AI gets *stronger*, not *smarter*, at higher levels)
+- **DM Optional:** Can be played with a Dungeon Master for narrated, flexible play — or without, like strict chess
+- **Gambling:** Players can bet Chimochio Bucks on matches
+
+**How it works:** Each player selects pieces from their warehouse (paid storage), places them on the board, and takes turns moving, fighting, trading, using skills, and leveling up. Pieces can be KO'd (<10% HP — revivable) or killed (<0% HP — permanent, murder = crime penalty).
+
+### 1.2 3D CLASSIC (BLOCKFLIP 3D)
+- **Same rules as Classic** — same tiles, menus, pieces, guns, everything
+- **Board:** 3D grid with Z-levels (floors, buildings, underground, verticality)
+- **Fortress Building:** Players can build structures on the board during play
+- **Building Materials:** Metal (150 soul.blood), Stone (75), Brick (10), Wood (5)
+
+### 1.3 TERRITORY MODE — "SimCity with Teeth"
+- **Players:** Up to 8 connected players
+- **Gameplay:** SimCity-like base builder + dungeon maker
+- **Features:** Clone factory, farm, training dummies, library, gas station, factory, bank, shop
+- **AI:** Spawns enemy territories that compete with yours
+- **Tile Types:** Brick, steel, water, road, wall
+- **Building Drain:** Buildings consume clone health/loyalty/hunger — you need to manage your population
+
+**How it works:** You build a territory, populate it with pieces, manage resources, and pit your territory against others. AI generates enemy territories that grow and attack. Up to 8 players can connect their territories in a shared world.
+
+### 1.4 STORY MODE — "The Triple Agent Campaign"
+- **Players:** 1 (with optional co-op)
+- **Structure:** 20 "Beats" (story chapters)
+- **Protagonist:** Lucky as a triple agent
+- **Pieces:** Lucky, Lucky Edge, Luna (wife/queen piece)
+- **Narrative:** Follows Lucky's journey through Chimochio, the Moon, the Architect, and beyond
+
+**How it works:** A guided narrative campaign. Each Beat introduces new pieces, mechanics, and story beats. Pieces level up between Beats. Choices matter — loyalty shifts, alliances form and break.
+
+### 1.5 XPANSE MODE (MMO) — "The Persistent World"
+- **Players:** Unlimited (MMO)
+- **Gameplay:** Persistent online board game world
+- **Features:**
+  - Classical PvP arenas
+  - Dojo/Party Games (capture the flag, survival)
+  - Arena PvP ranked matches
+  - Warehouse system (paid storage for your pieces)
+  - Police at MMO expanse entrances
+  - LyfeBook social network (browse during your turns)
+- **Turn-Based:** "Everything is done in turns even online"
+
+**How it works:** You log in, select pieces from your warehouse, enter the Xpanse, and play in a persistent world. Your pieces exist between sessions. Other players are real. The economy is real. The police are real (and they will arrest you if you murder without a crime penalty).
+
+### 1.6 PEACE MODE — "Creative Sandbox"
+- **Players:** 1+ (no competition)
+- **Gameplay:** Free creative play — build, experiment, tell stories
+- **No ELO, no gambling, no death**
+- **Pieces can't be killed** — only KO'd and revived
+- **Purpose:** Practice, storytelling, art, experimentation
+
+### 1.7 PHYSICAL LITE — "The Retail Version"
+- **Dumbed-down version** of the Classical board game
+- **No smart computers, no AI** — proof of concept, quick and dirty
+- **Sold for physical retail** — board, pieces, rulebook
+- **Purpose:** Introduce people to TPMOJIO without the digital complexity
+
+---
+
+## 2. THE BOARD & GRID
+
+### 2.1 Classic Board
+- **Size:** Larger than a chess board (exact dimensions vary by match)
+- **Dimensions:** 2D grid (X, Y coordinates)
+- **Tile Types:** Standard terrain (empty, obstacle, water, road, wall)
+- **Z-Levels:** Some maps have verticality — multiple floors, underground levels, buildings
+
+### 2.2 3D Board (BLOCKFLIP 3D)
+- **Dimensions:** 3D grid (X, Y, Z coordinates)
+- **Verticality:** Full fortress building — walls, towers, underground bunkers
+- **Same Rules:** Everything from Classic applies, just in 3D
+
+### 2.3 Day/Night Cycle
+- **1 turn = 1 game hour**
+- **12 hours day / 12 hours night**
+- **Night Effect:** Pieces are 15% more tired at night
+- **Strategic Impact:** Night moves cost more energy. Some pieces have night vision. Vampires are stronger at night.
+
+### 2.4 Territory Mode Map
+- **Overworld:** SimCity-like grid where you place buildings
+- **Dungeon Maker:** Build underground dungeons for other players to raid
+- **Multi-Territory:** Up to 8 connected territories on one map
+
+---
+
+## 3. THE PIECES (ARMY ROSTER)
+
+### 3.1 Piece Categories
+
+**ANIMATE (Living Pieces):**
+| Type | Description | Examples |
+|------|-------------|----------|
+| **Plant** | Stationary, produces resources | Eden Herb, trees |
+| **Animal** | Instinct-driven, no LyfeBook | Cacajao (monkey), Cat, Dog, Bat |
+| **Human** | Full agency, has LyfeBook | Lucky, Sol, GEM, Luna, all jobs |
+| **Spirit** | Non-corporeal, magical | Fairy, God Delusion |
+| **Undead** | Dead but active, no sleep needed | Death, Loki, Vampire clones |
+
+**MACHINE (Non-Living Pieces):**
+| Type | Description | Examples |
+|------|-------------|----------|
+| **Vehicle** | Transport, no independent action | Race Car |
+| **Robot** | Programmable via LyfeBook | Robot, Aibot |
+| **Mech** | Heavy combat machine | Mech |
+
+### 3.2 Human Piece Properties
+Human pieces have these flags:
+- `canMoveIndie` — can move independently (not just when commanded)
+- `canAct` — can take actions (attack, trade, use skills)
+- `hasBrain` — has AI/decision-making capability
+- `hasBody` — has a physical form on the board
+- `hasLyfebook` — carries a programmable LyfeBook device
+
+### 3.3 Stats Template
+Every piece has these core stats:
+
+```
+st (Strength):     Physical power, melee damage
+hp (Health):       Hit points, KO at <10%, death at <0%
+weight:            Mass, affects movement and knockback
+soul:              Spiritual power, magic resistance
+pow (Power):       Energy output, skill damage
+int (Intelligence): Hacking ability, learning speed
+loy (Loyalty):     Fidelity to team, <30% = Clown conversion
+char (Charisma):   Social influence, trade negotiations
+luck:              Random fortune, critical hits
+money:             Personal wealth, Chimochio Bucks
+beaut (Beauty):    Social attraction, diplomacy bonus
+```
+
+**Default Classic Piece Stats:**
+`{st:32, hp:32, weight:40, soul:23, pow:23, int:66, loy:100, char:88, luck:23, money:100, beaut:77}`
+
+### 3.4 Hidden Stats
+These exist but aren't shown on the piece card:
+- `stress` — cured by rest, sex cures it "a lot more"
+- `hunger` — increases each turn, affects movement
+- `energy` — powers movement and skills, depleted by hunger
+- `crime` — accumulated from illegal actions, triggers police
+- `tiredness` — increases at night, after combat, with hunger
+- `metabolism` — how fast hunger/energy cycle
+- `romance` — interpersonal attraction between pieces
+- `motivation` — affects performance, boosted by Alpha Sinder
+
+### 3.5 Named Pieces (Full Roster)
+
+**TEAM LUCKY (Team King):**
+| Piece | Role | Notes |
+|-------|------|-------|
+| **Lucky** | Protagonist | Has "Tsots" (futuristic soul pen), main hero |
+| **Sol** | Antagonist/Ally | Like Lucky but has "soul pen" instead of Tsots |
+| **GEM** | Bodyguard | Affinity system with Lucky, close-quarters combat |
+| **Princess Stella** | Royal | Celestial faction leader |
+| **Luna** | Wife/Queen | Can restore health through "luv", amps lunar clones |
+| **King of Asgard** | Team King Leader | Regal, commands Team King |
+| **Queen of Asgard** | Team King Leader | Regal, commands Team King |
+| **Queen's Guard Alpha Sinder** | Commander | Leads clowns or clones, gives motivation/loyalty, very strong |
+| **Captain** | Pilot | Pilots ships, repairs equipment |
+| **Banker** | Economy | Holds real money, accrues interest, can fail |
+| **Chef** | Support | Turns smallfood into bigfood, coffee = blood effect |
+| **Merchant** | Economy | Initializes small store, pulls from Chimochio supply |
+| **Maid/Nun** | Support | Healing, morale |
+| **Hacker** | Tech | Accesses inside of LyfeBook, wires logic gates |
+| **Lawyer** | Legal | Makes laws, enforces assault/murder laws, collects fines, can become Judge, self-defense immunity |
+| **Sniper Clone** | Ranged | Long-range combat |
+| **Clone** | Infantry | Male/female, permachild/permaadult, turns to Clown if loyalty <30% |
+| **Robot** | Machine | Needs parts, programmable |
+| **Mech** | Heavy Machine | Heavy combat |
+| **Race Car** | Vehicle | hp=234, moveRange=10 |
+| **CEO HugoTech** | Corporate | Economy, corporate warfare |
+| **Cacajao** | Animal | Monkey, unpredictable |
+| **Bat** | Animal | Night vision, flight |
+| **Fairy** | Spirit | Magical, whimsical |
+| **God Delusion** | Spirit | Abstract, reality-bending |
+| **Cat** | Animal | Independent, lucky |
+| **Dog** | Animal | Loyal, protective |
+
+**TEAM CLOWN (Team Clown):**
+| Piece | Role | Notes |
+|-------|------|-------|
+| **Clown** | Chaos | Stress relief, can spread blood disease ("VampireR AIDS") |
+| **Death** | Antagonist | Powerful, undead, commands undead forces |
+| **Loki** | Trickster | Death's sister, chaos magic |
+| **Smokey** | Infiltrator | Stealth, smoke-based abilities |
+
+**SPECIAL PIECES:**
+| Piece | Role | Notes |
+|-------|------|-------|
+| **Nihilator** | Soul-Stealer | Like Ditto/Kirby — steals opponent methods/skills, consumes souls leaving victims vegetative |
+| **Edge** | Mercenary | Hires Lucky as "mercenary janitor" |
+| **The Fox** | Freelancer | Suave James Bond type, rival/inspiration to Lucky |
+| **Justice** | Cosmic | Met on moon, cannot get yet |
+| **Ryry Waterworks Girl** | Negotiator | Water negotiation piece |
+
+### 3.6 Jobs & Skills
+Pieces can have one or more jobs:
+
+| Job | Ability |
+|-----|---------|
+| **Chef** | Transforms food (smallfood → bigfood), coffee = blood effect |
+| **Builder** | Constructs buildings, walls, fortifications |
+| **Engineer** | Repairs machines, wires logic gates, maintains infrastructure |
+| **Diplomat** | Negotiates trades, alliances, peace treaties |
+| **Warrior** | Melee combat specialist |
+| **Soldier** | Ranged combat, formation fighting |
+| **Hacker** | Accesses LyfeBooks, wires automation, costs money per loop |
+| **Tear-It (Artist/Mage)** | Casts Tear-It spells, artistic magic |
+| **Healer** | Restores HP, cures stress, removes debuffs |
+| **Assembler** | Builds robots, mechs, vehicles |
+| **Banker** | Manages money, accrues interest, can fail |
+| **Lawyer** | Makes/enforces laws, collects fines, self-defense immunity |
+| **Teacher** | Trains other pieces, accelerates learning |
+| **Clown** | Stress relief, spreads chaos, blood disease |
+| **CEO** | Corporate warfare, economy manipulation |
+
+### 3.7 Learning Curve
+When a piece learns a new technique, **they really suck at it**. New skills backfire while on the exp learning curve. A Teacher can accelerate learning but can't eliminate the risk.
+
+### 3.8 Post-Game Scaling
+After beating the game, all AI pieces get **exponentially stronger** (up to 9999999999999999999999 limit). The game doesn't get smarter — it gets *stronger*. Stats multiply, not tactics.
+
+---
+
+## 4. CORE MECHANICS
+
+### 4.1 Movement
+- **Default Move Limit:** 5 tiles per turn
+- **Energy Cost:** Each move costs energy
+- **Hunger Impact:** High hunger reduces move range
+- **Night Penalty:** 15% more tired at night = reduced movement
+- **Vehicle Bonus:** Race Car has moveRange=10
+
+### 4.2 Combat
+- **Damage Formula:** Based on `st`, `pow`, and skill level
+- **KO Threshold:** <10% HP = piece is KO'd (revivable)
+- **Death Threshold:** <0% HP = piece is dead (permanent)
+- **Murder Penalty:** Killing a piece without legal justification adds `crime` points
+- **Police Response:** High crime triggers police intervention
+
+### 4.3 KO vs Death
+- **KO'd:** Piece is unconscious, can be revived by Healer, Luna's "luv", or medical bay. Returns to play after recovery.
+- **Dead:** Piece is gone. File is marked `status=dead`. Can only be resurrected by Spirit pieces, God Delusion, or TPMOS-level intervention.
+- **Murder:** Intentional killing without legal justification. Adds `crime` points. Police will arrest the murderer. Lawyer can prosecute.
+
+### 4.4 Stress System
+- **Causes:** Combat, overwork, hunger, night shifts
+- **Effects:** Reduced performance, erratic behavior, loyalty drops
+- **Cures:** Rest (not using the piece for several turns), sex (cures it "a lot more"), Healer, Luna's "luv"
+
+### 4.5 Clone-to-Clown Mechanic
+- **Trigger:** Clone loyalty drops below 30%
+- **Effect:** Clone piece is swapped for a Clown piece
+- **Irreversible:** Once a clown, always a clown
+- **Strategic Use:** Alpha Sinder can boost loyalty to prevent conversion
+
+### 4.6 Day/Night Cycle
+- **1 turn = 1 game hour**
+- **Cycle:** -12 to +12 (12 hours day, 12 hours night)
+- **Night Effects:**
+  - Pieces 15% more tired
+  - Vampires stronger
+  - Bats and nocturnal animals gain bonuses
+  - Some skills only work at night
+
+### 4.7 Trading & Economy
+- **Personal Money:** Each piece has its own `money` stat
+- **Banker:** Holds money for the team, accrues interest, can fail
+- **Merchant:** Opens stores, pulls from Chimochio supply
+- **Trade Negotiations:** Charisma-based, can be influenced by Diplomats
+- **Gambling:** Players can bet on Classic matches
+
+### 4.8 Hacking
+- **Cost:** Money per loop iteration (1, 3, 5, 10 loops)
+- **Risk:** Too many constructs = blackout/burnout
+- **JS Errors:** Can blow power, crash systems
+- **Reward:** Access to opponent's LyfeBook, steal info, wire automation
+
+### 4.9 Lawyer Mechanics
+- **Law Creation:** Lawyers can make laws during their turn
+- **Law Enforcement:** Assault and murder laws can be enforced
+- **Fine Collection:** Lawyers collect fines from lawbreakers
+- **Promotion:** Lawyer can become Judge (higher authority)
+- **Self-Defense:** Lawyers can shoot anyone on their turn without crime points
+
+### 4.10 Banker Mechanics
+- **Interest:** Banker accrues interest on team funds
+- **Risk:** Banker can lose money depending on skill level
+- **Failure:** Negative trajectory = bank failure
+- **Strategic Use:** Essential for long-term economy management
+
+---
+
+## 5. THE LYFEBOOK
+
+### 5.1 What Is It?
+Every human piece carries a **LyfeBook** — a programmable device/console that serves as their inventory manager, wallet, social network browser, and automation controller.
+
+**Price Joke:** $166.66 (Mark of the Beast)
+
+### 5.2 Functions
+- **Inventory Management:** Track items, equipment, consumables
+- **Wallet:** Store and spend Chimochio Bucks
+- **Social Network:** Browse a virtual social network during turns (pieces waste time on it)
+- **Automation:** Wire logic gates to automate piece behavior
+- **Programming:** Robots are programmed via LyfeBook
+
+### 5.3 Wiring & Logic Gates
+LyfeBooks can be connected to physical wiring on the board:
+
+| Gate | Function |
+|------|----------|
+| **NOT** | Inverts signal |
+| **AND** | Output when both inputs active |
+| **NAND** | Output unless both inputs active |
+| **OR** | Output when either input active |
+| **NOR** | Output when neither input active |
+| **XOR** | Output when exactly one input active |
+| **T-Flip Flop (J, K, D)** | Memory/storage circuits |
+
+**Uses:** Automated defenses, resource management, clone factory automation, trap triggers.
+
+### 5.4 Hacking Risks
+- **Cost:** Each loop iteration costs money (1, 3, 5, 10 iterations)
+- **Burnout:** Too many constructs = blackout/burnout
+- **JS Errors:** Can blow power, crash the LyfeBook
+- **Counter-Hacking:** Opponent's Hacker can defend against intrusion
+
+### 5.5 Soul Server
+- **Cloud Storage:** Upload LyfeBooks to virtual machines on the Soul Server
+- **Subscription:** Paid service — Chimochio Bucks per month
+- **Persistence:** Pieces persist across sessions, servers, and games
+- **Security:** Hackers can breach the Soul Server (expensive but possible)
+
+---
+
+## 6. ECONOMY & CHIMOCHIO
+
+### 6.1 Chimochio Corporation
+- **Identity:** Big imaginary company, Asianesque global corp with ties to the Chinese government
+- **Founder:** Mysterious anonymous John Does
+- **Function:** Makes player bodies, sells warehouse space, supplies merchants
+- **Currency:** Chimochio Bucks (soul.blood)
+- **Tournament Prizes:** "Big Chimochio Bucks"
+
+### 6.2 Building Materials Pricing
+| Material | Cost (soul.blood) |
+|----------|-------------------|
+| **Metal** | 150 |
+| **Stone** | 75 |
+| **Brick** | 10 |
+| **Wood** | 5 |
+
+**Rule of Thumb:** 1 Brick = 1000 Tokens
+
+### 6.3 Warehouse System
+- **Function:** Paid storage for your pieces
+- **Size:** You pay Chimochio for warehouse space
+- **Online Mode:** Pieces are selected from warehouse one by one at match start
+- **Persistence:** Pieces remain in warehouse between sessions
+
+### 6.4 Banker System
+- **Role:** Holds team funds, accrues interest
+- **Risk:** Can lose money, trajectory can go negative
+- **Failure:** Bank failure = team economy collapse
+- **Skill-Dependent:** Better Banker = better returns
+
+### 6.5 Merchant System
+- **Role:** Opens stores, sells items
+- **Supply:** Pulls from "Chimochio supply"
+- **Strategic Use:** Essential for resource access in Territory Mode
+
+---
+
+## 7. ITEMS & CRAFTING
+
+### 7.1 Consumables
+| Item | Effect |
+|------|--------|
+| **Seeds** | Plant Eden Herb (3 seeds, coin flip evolution) |
+| **Food** | Reduces hunger, restores energy |
+| **Water** | Reduces hunger, basic sustenance |
+| **Blood** | Gives energy, no sleep needed, creates vampire army |
+| **Coffee** | Same effect as blood (Chef can brew) |
+| **Smallfood** | Basic food, Chef transforms into bigfood |
+| **Bigfood** | Premium food, restores more energy |
+
+### 7.2 Building Materials
+| Item | Use |
+|------|-----|
+| **Wood** | Basic construction, cheap |
+| **Brick** | Medium construction, 1000 Tokens each |
+| **Steel** | Advanced construction, durable |
+| **Metal** | Premium construction, expensive |
+| **Paper** | Documentation, legal documents (Lawyer) |
+
+### 7.3 Electrical Materials
+| Item | Use |
+|------|-----|
+| **Solar Panel** | Power generation |
+| **Lamps** | Lighting, night operations |
+| **Wire** | Connect logic gates |
+| **Logic Gates** | NOT, AND, NAND, OR, NOR, XOR, flip-flops |
+| **Resistors** | Circuit control |
+| **Motor** | Mechanical automation |
+| **Laser** | Combat, cutting |
+| **Buttons/Lever** | Triggers, switches |
+
+### 7.4 Technology
+| Item | Use |
+|------|-----|
+| **LyfeBook** | Programmable device, inventory, wallet, automation |
+| **Aibot** | AI companion, programmable via LyfeBook |
+| **Computer** | Advanced LyfeBook, server access |
+
+### 7.5 Eden Herb
+- **Cost:** 3 seeds = 33 cents
+- **Evolution:** Coin flip — seed → plant → thin wood → log → lumber
+- **Use:** Building material, alchemy ingredient, trade good
+
+### 7.6 Tear-It Spells
+- **Caster:** Tear-It (Artist/Mage) class pieces
+- **Function:** Artistic magic — spells cast through creative expression
+- **Variety:** Wide range — combat, healing, utility, illusion
+
+---
+
+## 8. DM & FREE PLAY
+
+### 8.1 Playing with a Dungeon Master
+TPMOJIO Classic can be played **with a DM** — narrated, flexible, D&D-style. The DM:
+- Describes the board and pieces cinematically
+- Adjudicates rules disputes
+- Adds narrative flavor to combat and movement
+- Can introduce random events, weather, NPC encounters
+- Has final say on house rules and edge cases
+
+### 8.2 Playing Without a DM
+TPMOJIO Classic can also be played **like chess** — strict, competitive, no narration. Just the board, the pieces, and the rules.
+
+### 8.3 1-Player Creative Mode
+- **No competition, no ELO, no death**
+- **Just build, experiment, tell stories**
+- **Pieces can't be killed** — only KO'd and revived
+- **Purpose:** Practice, storytelling, art, experimentation
+
+### 8.4 House Rules
+**TPMOJIO encourages house rules.** The rules are a framework, not a prison. Common house rules:
+- Custom piece stats
+- New jobs and skills
+- Modified board sizes
+- Different win conditions
+- Gambling stakes
+- DM fiat on edge cases
+
+### 8.5 Gambling
+- **Players can bet Chimochio Bucks on Classic matches**
+- **Stakes are agreed before the match**
+- **Winner takes all (or split by house rules)**
+- **Spectators can also bet**
+
+---
+
+## 9. TPMOS INTEGRATION
+
+### 9.1 True Piece Method (TPM)
+Every TPMOJIO piece is a **True Piece** — it follows the TPM defined in the TPMOS Textbook v03.01.
+
+**Piece DNA (`piece.pdl`):**
+```pdl
+<piece_id>lucky</piece_id>
+<traits>
+    <trait>human</trait>
+    <trait>canMoveIndie</trait>
+    <trait>canAct</trait>
+    <trait>hasBrain</trait>
+    <trait>hasBody</trait>
+    <trait>hasLyfebook</trait>
+</traits>
+<methods>
+    <method id="move" cmd="./move_entity.+x" />
+    <method id="attack" cmd="./combat.+x" />
+    <method id="hack" cmd="./hack_lyfebook.+x" />
+</methods>
+```
+
+**Piece Mirror (`state.txt`):**
+```
+name=Lucky
+st=32
+hp=32
+weight=40
+soul=23
+pow=23
+int=66
+loy=100
+char=88
+luck=23
+money=100
+beaut=77
+pos_x=5
+pos_y=3
+pos_z=0
+status=alive
+stress=0
+hunger=20
+energy=80
+crime=0
+tiredness=10
+```
+
+### 9.2 Filesystem Is the Database
+**"If it's not in a file, it's a lie."** TPMOJIO pieces persist across sessions, servers, and games. A piece that dies in one match can be resurrected in the next — if its `state.txt` says `status=alive`, it's alive.
+
+### 9.3 Scale-Free Container Model
+A TPMOJIO piece can contain other pieces:
+- **Inventory:** A piece contains a "Bag" piece, which contains items
+- **LyfeBook:** A piece contains a "LyfeBook" piece, which contains programs
+- **Warehouse:** A warehouse contains piece directories
+- **Territory:** A territory contains building pieces, which contain clone pieces
+
+The logic is identical at every scale.
+
+### 9.4 12-Step Pulse
+Every TPMOJIO turn follows the 12-Step Pulse:
+1. **INPUT** — Player input captured
+2. **ROUTING** — Parser routes to game module
+3. **RELAY** — Key relayed to app history
+4. **TICK** — Module wakes up, decides action
+5. **TRAIT/OP** — Muscle Op executes (move, attack, hack)
+6. **SOVEREIGNTY** — Piece owns its state change
+7. **MIRROR SYNC** — state.txt flushed to disk
+8. **STAGE** — render_map reads all pieces, produces view
+9. **SYNC** — App state updated
+10. **COMPOSITION** — Parser swaps variables
+11. **RENDER** — Frame written to current_frame.txt
+12. **DISPLAY** — Renderer blasts to screen
+
+### 9.5 Ops Are Executables
+- **Format:** `.+x` files (e.g., `move_entity.+x`, `combat.+x`)
+- **Execution:** `fork()/exec()/waitpid()` — never raw `system()`
+- **CPU Safety:** `stat()` before `fopen()`, 16ms sleep when idle
+- **Signal Handling:** `setpgid(0,0)`, proper cleanup on Ctrl+C
+
+---
+
+## 10. ONLINE & ELO
+
+### 10.1 ELO Rating System
+- **Classic Mode is ELO-rated** — competitive ranking
+- **Wins/Losses tracked** per player
+- **Rating affects matchmaking** — similar ELO players paired
+- **Post-game scaling** applies to AI, not human ELO
+
+### 10.2 Lobby System
+- **Local Classic** — 1v1/2v2/4v4, ELO rated
+- **LyfeBook Spirit Profile** — each player has a profile
+- **Xpanse MMO Entrance** — portal to the persistent world
+- **Police at Entrance** — yes, really
+
+### 10.3 Warehouse System (Online)
+- **Paid Storage** — you pay Chimochio for warehouse space
+- **Piece Selection** — pieces selected one by one at match start
+- **Persistence** — pieces remain between sessions
+- **Sharing** — pieces can be loaned to other players (risky)
+
+### 10.4 Turn-Based Online
+**"Everything is done in turns even online."** Even in the MMO, actions are turn-based. LyfeBook browsing uses turn time. You can't act out of turn.
+
+### 10.5 PvP Arenas
+- **Classical PvP** — rated matches in the Xpanse
+- **Dojo/Party Games** — capture the flag, survival, team battles
+- **Arena PvP** — ranked, spectator-friendly, gambling allowed
+
+---
+
+## 11. SPECIAL MECHANICS
+
+### 11.1 Nihilator
+- **Ability:** Steals opponent methods/skills
+- **Effect:** Consumes souls, leaving victims in vegetative state
+- **Like:** Ditto/Kirby but evil
+- **Counter:** Spirit pieces and God Delusion can resist
+
+### 11.2 Alpha Sinder
+- **Ability:** Leads clowns or clones, gives motivation and loyalty
+- **Very Strong:** One of the most powerful pieces in the game
+- **Strategic Use:** Prevents clone-to-clown conversion, boosts team morale
+
+### 11.3 Luna (Wife/Queen)
+- **Ability:** Restores health through "luv", amps up lunar clones
+- **Met on Moon:** Special encounter location
+- **Strategic Use:** Essential healer, clone amplifier
+
+### 11.4 The Fox
+- **Role:** Freelance cleaner, suave James Bond type
+- **Rival/Inspiration:** To Lucky
+- **Ability:** Stealth, infiltration, cleanup operations
+
+### 11.5 Justice
+- **Location:** Met on moon
+- **Status:** Cannot get yet (future content)
+- **Role:** Cosmic law enforcement
+
+### 11.6 Ryry Waterworks Girl
+- **Ability:** Water negotiation
+- **Use:** Essential for aquatic maps, Territory Mode water management
+
+---
+
+## 12. FUTURE — BLOCKFLIP 3D
+
+### 12.1 What Is It?
+BLOCKFLIP 3D is the **3D version of TPMOJIO**. Same rules, same tiles, same menus, same guns, same pieces — everything — but in 3D.
+
+### 12.2 Key Differences
+- **3D Board:** X, Y, Z coordinates
+- **Fortress Building:** Full vertical construction
+- **Z-Level Combat:** Attacks can come from above or below
+- **Same DNA:** Every piece is still a True Piece with piece.pdl + state.txt
+
+### 12.3 Status
+Planned. The 2D version is the foundation. 3D is the future.
+
+---
+
+## 13. QUICK REFERENCE — MODE COMPARISON
+
+| Feature | Classic | 3D Classic | Territory | Story | Xpanse | Peace | Physical Lite |
+|---------|---------|------------|-----------|-------|--------|-------|---------------|
+| Players | 1v1/2v2/4v4 | Same | Up to 8 | 1 (+co-op) | Unlimited | 1+ | 1v1 |
+| Board | 2D | 3D | SimCity grid | Narrative | MMO persistent | 2D | Physical |
+| ELO | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| DM | Optional | Optional | Optional | Built-in | ❌ | ❌ | ❌ |
+| Death | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Gambling | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| AI | 1-100 | 1-100 | ✅ | Scripted | ✅ | ❌ | ❌ |
+| Persistence | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Z-Levels | Some | Full | Some | Some | Full | Some | ❌ |
+
+---
+
+## 14. GLOSSARY
+
+| Term | Definition |
+|------|------------|
+| **TPMOJIO** | The game. Formerly Tsots/Chimochio/Tmojio. |
+| **True Piece Method (TPM)** | The philosophy and architecture behind every piece. |
+| **piece.pdl** | Piece DNA — what it *can* do. |
+| **state.txt** | Piece Mirror — what it *is* right now. |
+| **LyfeBook** | Programmable device every human piece carries. |
+| **Chimochio** | The big imaginary corporation. Makes bodies, sells warehouses. |
+| **Chimochio Bucks** | Currency (soul.blood). |
+| **ELO** | Competitive rating system for Classic mode. |
+| **KO** | Knocked out (<10% HP) — revivable. |
+| **Death** | Dead (<0% HP) — permanent. |
+| **Nihilator** | Soul-stealing piece, like evil Ditto. |
+| **Alpha Sinder** | Powerful commander, boosts loyalty and motivation. |
+| **BLOCKFLIP 3D** | The 3D version of TPMOJIO. |
+| **Xpanse** | The MMO persistent world. |
+| **Soul Server** | Cloud storage for LyfeBooks and piece souls. |
+| **Warehouse** | Paid storage for your pieces. |
+| **Tear-It** | Artist/Mage class, casts spells through creative expression. |
+
+---
+
+## 15. THE TPMOJIO CREED
+
+> Everything is a Piece.
+> Every Piece has a soul.
+> Every soul has a LyfeBook.
+> Every LyfeBook has a story.
+> Every story is a game.
+> Every game is a world.
+> Every world is a file.
+> And if it's not in a file — it's a lie.
+
+**The spiral turns. The board resets. The pieces remember.**
+
+---
+
+**[HALT 止] THE TPMOJIO BIBLE IS SEALED. THE PIECE IS SET.**
+**Amen. 🙏 ϕ**

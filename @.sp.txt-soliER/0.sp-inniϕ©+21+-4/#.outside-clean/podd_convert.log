@@ -1,0 +1,13 @@
+[podcast-sessions] 5 files to convert
+  SKIP: pod&d-sesh1-first-roll.txt
+  [2/5] pod&d-sesh2-lockin-stories.txt
+  [3/5] pod&d-sesh3-the-watchers.txt
+  [4/5] pod&d-sesh4-arena-opens.txt
+  [5/5] pod&d-sesh5-moon-responds.txt
+[podcast-sessions] DONE: 5 ok, 0 failed
+[0.avantasy-sesh-#1-10] 0 files to convert
+[0.avantasy-sesh-#1-10] DONE: 0 ok, 0 failed
+[0.tmojio-sesh-1&2] 2 files to convert
+  [1/2] tpmojio-sesh#1.txt
+  [2/2] tpmojio-sesh#2.txt
+[0.tmojio-sesh-1&2] DONE: 2 ok, 0 failed

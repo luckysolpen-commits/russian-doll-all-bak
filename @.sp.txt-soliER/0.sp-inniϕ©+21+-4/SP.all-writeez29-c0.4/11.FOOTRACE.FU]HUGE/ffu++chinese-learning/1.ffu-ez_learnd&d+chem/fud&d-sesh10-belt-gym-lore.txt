@@ -1,0 +1,211 @@
+# FU D&D — SESSION 10: "THE BELT GYM"
+## World Building / Plot / Character Document
+
+---
+
+## 🌙 SETTING: THE MIDNIGHT BELT GYM
+
+**Name:** , eng, night dojo, ... tx, 夜道场, yè dào chǎng, ... xt,
+**Location:** Floating on a temporal asteroid in the outer rim of the time verse. The ground is black glass. Above: infinite , eng, stars, ... tx, 星星, xīng xing, ... xt, distant , eng, spaceship, ... tx, 飞船, fēi chuán, ... xt, trails, nebulae glowing in six element colors.
+**Time:** Always midnight. The sun never rises here. The only light comes from:
+- **Time crystals** , eng, time crystal, ... tx, 时间水晶, shí jiān shuǐ jīng, ... xt, — embedded in the walls, pulsing with temporal energy
+- **String lights** , eng, light string, ... tx, 灯串, dēng chuàn, ... xt, — strung between crystal pillars, flickering in six element colors
+- **Stars** , eng, stars, ... tx, 星星, xīng xing, ... xt, — impossibly bright, no atmosphere to dim them
+- **Spaceships** , eng, spaceship, ... tx, 飞船, fēi chuán, ... xt, — distant trails of light, coming and going, crewed by ninja cultures from across the multiverse
+
+**Culture:** Everyone here is a ninja. Not the cartoon kind. The real kind. Silent movement. Temporal awareness. Time Fu mastery. They wear dark robes with element-colored sashes. They speak in whispers. They fight in shadows. They learn in silence.
+
+**The Gym's Purpose:** A testing ground. You come here to earn belts. Each belt unlocks:
+- **Bigger Fuzzpets** — higher level, more powerful, rarer elements
+- **More chemical combo slots** — combine more elements into new compounds
+- **More Chronoment slots** — learn more magic skills simultaneously
+
+---
+
+## 🥋 THE BELT SYSTEM
+
+| Belt | Chinese | Pinyin | Unlocks |
+|------|---------|--------|---------|
+| **White** | 白带 | bai dai | Base level. 1 Fuzzpet, 1 combo slot, 1 Chronoment |
+| **Yellow** | 黄带 | huang dai | 2 Fuzzpets, 2 combo slots, 2 Chronoments |
+| **Green** | 绿带 | lv dai | 3 Fuzzpets, 3 combo slots, 3 Chronoments |
+| **Blue** | 蓝带 | lan dai | 4 Fuzzpets, 4 combo slots, 4 Chronoments |
+| **Red** | 红带 | hong dai | 5 Fuzzpets, 5 combo slots, 5 Chronoments |
+| **Black** | 黑带 | hei dai | 6 Fuzzpets, 6 combo slots, 6 Chronoments |
+| **Crystal** | 晶带 | jing dai | ALL Fuzzpets, unlimited combos, unlimited Chronoments |
+
+The party arrives at **Green belt** level. They're testing for **Blue belt**.
+
+---
+
+## 🏛️ THE GYM LAYOUT
+
+### Zone 1: The Mirror Room , eng, mirror room, ... tx, 镜子房, jìng zi fáng, ... xt,
+- Walls, floor, ceiling — all mirrors. Infinite reflections.
+- **Challenge:** Fight your own reflection. Your mirror-self knows all your Time Fu moves.
+- **Time Fu element:** , eng, slow down, ... tx, 减速, jiǎn sù, ... xt, — slow your reflection to create an opening
+- **Chemistry test:** , eng, reflection, ... tx, 反射, fǎn shè, ... xt, — light bouncing off silvered glass. Ag + NO3 = silver nitrate coating.
+
+### Zone 2: The Trapdoor Floor , eng, trapdoor, ... tx, 活板门, huó bǎn mén, ... xt,
+- The floor is a grid of 100 panels. 80 are solid. 20 are trapdoors.
+- **Challenge:** Cross without falling. The trapdoors shift positions every 10 seconds.
+- **Time Fu element:** , eng, predict, ... tx, 预判, yù pàn, ... xt, — see 3 seconds into the future to know which panels are safe
+- **Chemistry test:** , eng, pressure, ... tx, 压力, yā lì, ... xt, — weight distribution. F = ma. Calculate which panels can hold you.
+
+### Zone 3: The Conveyor Belt Arena , eng, conveyor belt, ... tx, 传送带, chuán sòng dài, ... xt,
+- Three conveyor belts moving in different directions at different speeds.
+- **Challenge:** Fight an opponent while staying on the belts. Fall off = fail.
+- **Time Fu element:** , eng, speed up, ... tx, 加速, jiā sù, ... xt, — match the belt's speed with your own temporal acceleration
+- **Chemistry test:** , eng, friction, ... tx, 摩擦, mó cā, ... xt, — coefficient of friction between your boots and the belt. μ = F/N.
+
+### Zone 4: The Chaos Gauntlet , eng, chaos, ... tx, 混乱, hùn luàn, ... xt,
+- Everything at once. Mirrors + trapdoors + conveyor belts + onlookers throwing food.
+- **Challenge:** Survive for 5 minutes while performing a Time Fu kata.
+- **Onlookers:** Ninja students from other cultures. They speak Chinese. They taunt. They throw , eng, steamed buns, ... tx, 包子, bāo zi, ... xt, and , eng, dumplings, ... tx, 饺子, jiǎo zi, ... xt,
+
+---
+
+## 👥 THE ONLOOKERS
+
+**Who they are:** Ninja students from across the time verse. Different cultures, different element affinities. They sit on crystal balconies above the gym, watching, judging, throwing food.
+
+**What they say (all in Chinese):**
+- 哈哈哈 hā hā hā — , eng, ha ha ha, ... tx, laughing
+- 太弱了 tài ruò le — , eng, too weak, ... tx, — "too weak!"
+- 回家吧 huí jiā ba — , eng, go home, ... tx, — "go home!"
+- 看那个 kàn nà ge — , eng, look at that one, ... tx, — pointing and mocking
+- 扔包子 rēng bāo zi — , eng, throw steamed buns, ... tx, — they throw food
+
+**Persuasion/Intimidation:** If the party rolls high enough on CHA, the onlookers stop mocking and start cheering. If they roll low, the onlookers get worse — throwing , eng, chili peppers, ... tx, 辣椒, là jiāo, ... xt, instead of buns.
+
+---
+
+## 🥷 THE GYM MASTER
+
+**Name:** , eng, master, ... tx, 师父, shī fu, ... xt,
+**Appearance:** Ancient ninja. Face hidden behind a mask made of polished time crystal. Six arms (like Kurogane, but thinner, faster). Each hand holds a different element crystal.
+**Voice:** Speaks ONLY Chinese. Slow. Deliberate. Each word carries temporal weight.
+**Personality:** , eng, strict, ... tx, 严格, yán gé, ... xt, but , eng, fair, ... tx, 公平, gōng píng, ... xt, Respects effort. Despises laziness.
+**Test:** He fights each party member one-on-one in the Chaos Gauntlet. He uses all six elements. He speaks Chinese during the fight — the party must understand his attack calls to dodge.
+
+---
+
+## ⚔️ TIME FU MARTIAL ARTS
+
+Time Fu is the core combat system. Every fighter manipulates time during combat:
+
+| Move | Chinese | Pinyin | Effect |
+|------|---------|--------|--------|
+| **Slow Strike** | 慢打 | man da | Slow the enemy's perception of time. Your hits land before they can react. |
+| **Fast Step** | 快步 | kuai bu | Accelerate your own movement. Dodge attacks by existing 0.5 seconds ahead. |
+| **Time Clone** | 时间分身 | shi jian fen shen | Create a temporal duplicate of yourself. Both attack simultaneously. |
+| **Rewind** | 倒带 | dao dai | Reverse 3 seconds of time. Undo a mistake. Heal wounds. |
+| **Freeze** | 冻结 | dong jie | Stop time in a 2-meter radius. Enemy can't move. You can. |
+| **Accelerate** | 加速 | jia su | Speed up your Fuzzpet's attack cycle. Double damage for 6 seconds. |
+| **Decelerate** | 减速 | jian su | Slow down incoming attacks. Arrows, fireballs, fists — all move through syrup. |
+| **Temporal Palm** | 时间掌 | shi jian zhang | Strike with concentrated temporal energy. Ages the target's armor to rust. |
+
+Each party member has their own Time Fu style:
+- **CHARA:** Tactical Time Fu. Calculates temporal vectors. Uses , eng, predict, ... tx, 预判, yù pàn, ... xt, to plan 10 moves ahead.
+- **Horli Qwin:** Chaotic Time Fu. Random temporal bursts. Unpredictable. Uses , eng, speed up, ... tx, 加速, jiā sù, ... xt, for acrobatic flips.
+- **IQabella:** Healing Time Fu. Uses , eng, rewind, ... tx, 倒带, dào dài, ... xt, to undo damage. Uses , eng, freeze, ... tx, 冻结, dòng jié, ... xt, to protect allies.
+- **Sol-Supreme:** Engineering Time Fu. Builds temporal constructs. Uses , eng, time clone, ... tx, 时间分身, shí jiān fēn shēn, ... xt, to create multiple Circuit duplicates.
+
+---
+
+## 🧪 ADVANCED CHEMISTRY FOR THIS SESSION
+
+### Organic Chemistry
+| English | Chinese | Pinyin | Formula |
+|---------|---------|--------|---------|
+| Acetic acid | 乙酸 | yi suan | CH3COOH |
+| Formaldehyde | 甲醛 | jia quan | HCHO |
+| Ethanol | 乙醇 | yi chun | C2H5OH |
+| Methanol | 甲醇 | jia chun | CH3OH |
+| Acetone | 丙酮 | bing tong | C3H6O |
+
+### Biochemistry
+| English | Chinese | Pinyin | Description |
+|---------|---------|--------|-------------|
+| Enzyme | 酶 | mei | Biological catalyst |
+| Hormone | 激素 | ji su | Chemical messenger |
+| Vitamin | 维生素 | wei sheng su | Essential nutrient |
+| Amino acid | 氨基酸 | an ji suan | Protein building block |
+| Glucose | 葡萄糖 | pu tao tang | C6H12O6 |
+
+### Physical Chemistry
+| English | Chinese | Pinyin | Description |
+|---------|---------|--------|-------------|
+| Entropy | 熵 | shang | Disorder measure |
+| Enthalpy | 焓 | han | Heat content |
+| Catalyst | 催化剂 | cui hua ji | Speeds up reaction |
+| Equilibrium | 平衡 | ping heng | Balanced state |
+| Activation energy | 活化能 | huo hua neng | Energy to start reaction |
+
+### New Compounds
+| English | Chinese | Pinyin | Formula |
+|---------|---------|--------|---------|
+| Silver nitrate | 硝酸银 | xiao suan yin | AgNO3 |
+| Sodium hydroxide | 氢氧化钠 | qing yang hua na | NaOH |
+| Hydrochloric acid | 盐酸 | yan suan | HCl |
+| Ammonia | 氨 | an | NH3 |
+| Hydrogen peroxide | 过氧化氢 | guo yang hua qing | H2O2 |
+
+---
+
+## 📖 PLOT OUTLINE
+
+### Phase 1: Arrival at the Night Gym
+- Party arrives on the temporal asteroid. Stars above. Time crystals glowing. String lights flickering.
+- Meet the onlookers. They throw , eng, steamed buns, ... tx, 包子, bāo zi, ... xt, and mock in Chinese.
+- Meet , eng, master, ... tx, 师父, shī fu, ... xt, He explains the belt test. All in Chinese. Party must translate.
+
+### Phase 2: The Mirror Room Trial
+- Each party member fights their reflection.
+- Time Fu focus: , eng, slow down, ... tx, 减速, jiǎn sù, ... xt, your reflection.
+- Chemistry: silver nitrate reaction to break the mirrors.
+
+### Phase 3: The Trapdoor Floor Trial
+- Cross the shifting floor. 100 panels. 20 trapdoors.
+- Time Fu focus: , eng, predict, ... tx, 预判, yù pàn, ... xt, which panels are safe.
+- Chemistry: pressure calculations. F = ma. Weight distribution.
+
+### Phase 4: The Conveyor Belt Arena Trial
+- Fight an opponent on three moving belts.
+- Time Fu focus: , eng, speed up, ... tx, 加速, jiā sù, ... xt, to match belt speed.
+- Chemistry: friction coefficients. μ = F/N.
+
+### Phase 5: The Chaos Gauntlet
+- Everything at once. Mirrors + trapdoors + belts + onlookers throwing food.
+- Perform a Time Fu kata while surviving.
+- Persuasion rolls to turn onlookers from enemies to allies.
+
+### Phase 6: Boss Fight — , eng, master, ... tx, 师父, shī fu, ... xt,
+- Six-armed ninja master. All six elements. Speaks only Chinese during combat.
+- Party must understand his attack calls to dodge.
+- Time Fu mastery required. Chemical combos required. Fuzzpet teamwork required.
+
+### Phase 7: Graduation
+- Earn Blue Belt , eng, blue belt, ... tx, 蓝带, lán dài, ... xt,
+- Unlock: 4 Fuzzpets, 4 combo slots, 4 Chronoments each.
+- , eng, master, ... tx, 师父, shī fu, ... xt, gives a final speech in Chinese. Party translates together.
+
+---
+
+## 🎲 NEW FORMAT
+
+All Chinese vocabulary uses this format:
+```
+, eng, English, ... tx, 汉字, pinyin, ... xt,
+```
+
+Example:
+```
+**Mother Tmojizu:** First word: , eng, entropy, ... tx, 熵, shāng, ... xt, , eng, hint, ... tx, 提示, tí shì, ... xt, Disorder in a system.
+```
+
+The `, eng,` at the start and `, ... xt,` at the end mark the Chinese learning segment. English voices read the pinyin. 中文老师 reads everything including the character.
+
+---
+
+**ϕ**

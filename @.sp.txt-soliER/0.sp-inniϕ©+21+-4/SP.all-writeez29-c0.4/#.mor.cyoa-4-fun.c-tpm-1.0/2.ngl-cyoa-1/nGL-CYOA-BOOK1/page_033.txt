@@ -1,0 +1,7 @@
+You proceed into the service area, a maze of humming conduits, pulsing energy nodes, and whirring machinery. The air is thick with the smell of ozone and lubricant. It's a stark contrast to the pristine exhibit hall, but it feels more real, more functional.
+
+You see several large conduits labeled with cryptic symbols. One seems to lead to what looks like a high-speed transit system. Another goes deeper into the technological heart of the FLEXTANK. There's also a smaller hatch that seems to lead to a maintenance crawlspace.
+
+*   Enter the high-speed transport conduit. Turn to page 46.
+*   Venture down the conduit marked with the fractured planet. Turn to page 47.
+*   Investigate the maintenance crawlspace hatch. Turn to page 48.

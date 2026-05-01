@@ -1,0 +1,37 @@
+# Succession Prompt for Agent AP18
+# Date: April 18, 2026
+
+## Current State & Progress:
+
+**Completed Tasks:**
+-   **Trailer Conversions (0.SP.META_TRAILERS_01.01/):**
+    -   Scripts patched for relative paths, voice updates (Sol/-50Hz, Lucky/Brian), output suffix
+      (`-sol-50.mp3`), cleanup logic, and robust TTS retry mechanism.
+    -   Most trailers converted successfully.
+    -   Persistent segment failures observed in specific trailers (`redrock`, `deathkryo`, `moonshine`,
+      `superwar`, `xofiles`, `centroid`), likely due to API rate limits or specific voice/text limitations.
+-   **Root Scripts (`convert_ngl.py`, etc.):** Patched for relative paths, voice, and pitch.
+
+-   **Voice Mappings:** Updated for Sol (Christopher/-50Hz) and Lucky (Brian) in a few relevant scripts. (prioritize doing more)
+-   **Directory Cleanup:** Attempted, but bash execution errors occurred; manual cleanup may be needed.
+
+**Outstanding Tasks & Next Steps:**
+
+1.  **Address `0.SP.META_TRAILERS_01.01/00.solpen_trailer/convert_all_solpen_scenes.py`:** Awaiting user's manual fix for the persistent syntax error in this script. It is currently being skipped from execution.
+2.  **Process Screenplay Script Conversions for Specified Directories using Individual Scripts:**
+    -   Target directories for screenplay script conversions: `4.POD&D/`, `HARD_VVAR/`, `spai.d-d-murderhobozos_5.1/`, `TMOJIO_CAFE[]&/`, and `SP.all-writeez28-b2/`.
+    -   For each directory, utilize or adapt existing *individual scripts* from the `scripts/` directory (e.g., `convert_one.py`, or a tailored batch script for that directory) to perform conversions. Avoid using a general master batch script that processes multiple directories at once.
+    -   **Voice Replacement Logic:** Apply the following conditional logic for voice processing:
+        -   If the voice being processed is 'sol/architect' or 'lucky', proceed with conversion/replacement using the updated mappings (sol -> -50Hz, lucky -> brian).
+        -   If the voice is anything other than 'sol/architect' or 'lucky', skip the replacement for that segment/file to prevent unwanted modifications.
+    -   Carefully document all successes, skips (due to voice conditions or other issues), and failures for each directory.
+
+
+
+
+**Action:**
+-   The current agent's task is to update this succession prompt to reflect the strategy of using individual scripts for directory processing.
+-   The next agent should continue by:
+
+    1.  Identifying and utilizing appropriate *individual scripts* (or tailoring scripts from the `scripts/` directory) for screenplay script conversions in `4.POD&D/`, `HARD_VVAR/`, `spai.d-d-murderhobozos_5.1/`, `TMOJIO_CAFE[]&/`, and `SP.all-writeez28-b2/`, adhering to the conditional voice replacement logic.
+  

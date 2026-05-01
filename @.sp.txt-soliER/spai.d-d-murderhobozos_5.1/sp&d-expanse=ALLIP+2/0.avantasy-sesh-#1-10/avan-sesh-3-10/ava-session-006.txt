@@ -1,0 +1,242 @@
+# AVA-SESSION-006: "THE WASTES"
+## Avantasy Expanse — Session 6
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+
+---
+
+**Mother Tmojizu:** Welcome back, ducklings. Session 6. You've been to the Illegal Furry Server. You've learned ARCHITECT_02 is a rogue process feeding on fear. The breach is at 60%. And today, you're going to the Carcazod Wastes.
+
+**CHARA:** [OOC] Ma'am, the Wastes are Levels 8-12. We're level 3. This is dangerous.
+
+**Mother Tmojizu:** [warmly] It is. But the mutagen pits are there. The source of the Carcazod spawning. If you destroy them, you cut off ARCHITECT_02's army. No army, no fear. No fear, no breach.
+
+**Sol-Supreme:** [OOC] Tomo, I'm ready. AC 18. Extra Attack. INT 20. IKARUS-7 with 2d8 Repulsor Blast. Let's go.
+
+**Mother Tmojizu:** [smiles] You are.
+
+**Mother Tmojizu:** You leave Troll City through the east gate. The jungle gives way to badlands. The badlands give way to ruins. And the ruins give way to the Carcazod Wastes.
+
+Post-apocalyptic. Twisted carnival rides. Faded big-top tents. The skeletal remains of giant joke machines. And everywhere — Carcazods. Monkey-cockroach hybrids with chitinous exoskeletons and glowing red eyes.
+
+**Mother Tmojizu rolls d6 for a random encounter.**
+
+**Mother Tmojizu:** [rolls] 3.
+
+**Mother Tmojizu:** Carcazod Scout Pack x4. They spot you. They screech. They charge.
+
+**CHARA:** [OOC] Ma'am, I'm casting Silence on the area. No sound. They can't call for backup.
+
+**Mother Tmojizu:** Roll Spell Save DC.
+
+**CHARA:** [rolls] 16. Plus 5 is 21.
+
+**Mother Tmojizu:** 21. The Silence falls. The Carcazods screech — but no sound comes out. They're confused. They slow down. And that's when you strike.
+
+**Sol-Supreme:** [OOC] I'm attacking with Extra Attack. Two swings. Warhammer.
+
+**Mother Tmojizu:** Roll both attacks.
+
+**Sol-Supreme:** [rolls] 18 and 15. Plus 7 is 25 and 22. Both hit.
+
+**Mother Tmojizu:** Damage?
+
+**Sol-Supreme:** First swing: 1d8 + 5. [rolls] 7 + 5 is 12. Second swing: 1d8 + 5. [rolls] 4 + 5 is 9. Total 21 bludgeoning damage. One Carcazod goes down.
+
+**Mother Tmojizu:** The Carcazod falls. The other three scatter. But Horli Qwin is flanking.
+
+**Horli Qwin:** [OOC] I'm using Slashing Flourish. Rapier. AoE.
+
+**Mother Tmojizu:** Roll attack.
+
+**Horli Qwin:** [rolls] 17. Plus 5 is 22.
+
+**Mother Tmojizu:** Hits. Damage?
+
+**Horli Qwin:** 1d8 + 5. [rolls] 6 + 5 is 11. Plus Slashing Flourish 1d6. [rolls] 4. Total 15 slashing damage. And the flourish hits adjacent enemies — both nearby Carcazods take 5 slashing damage each.
+
+**Mother Tmojizu:** Two Carcazods go down. The last one tries to flee. But IQabella is there.
+
+**IQabella:** [OOC] Mom, I'm casting Sacred Flame. DEX save.
+
+**Mother Tmojizu:** The Carcazod rolls... [rolls] 8. It fails.
+
+**IQabella:** Damage: 2d8 radiant. [rolls] 6, 4. That's 10 radiant damage.
+
+**Mother Tmojizu:** The last Carcazod falls. The scout pack is defeated. The Silence lifts. And the Wastes are quiet again.
+
+**Mother Tmojizu:** But there's more. Ahead, you see it: the Mutagen Pits. Glowing green pools where Carcazods spawn. Three of them. And guarding them — Warlord Grak.
+
+**WARLORD GRAK:** "GRAK SMASH. GRAK TAKE. GRAK RULE."
+
+**Mother Tmojizu:** Warlord Grak is massive. CR 8. Chitinous armor. Carcazod claw. And behind him, the mutagen pits — bubbling, glowing, spawning.
+
+**CHARA:** [OOC] Ma'am, we don't need to kill Grak. We need to destroy the mutagen pits. IQabella's Healer can purify them. Sol-Supreme's architect codes can shut them down.
+
+**Mother Tmojizu:** [warmly] Correct. You don't need to kill Grak. You need to destroy the pits.
+
+**Sol-Supreme:** [OOC] Tomo, I'm using my architect codes to analyze the mutagen pits. INT Arcana.
+
+**Mother Tmojizu:** Roll it.
+
+**Sol-Supreme:** [rolls] 20. Plus 5 is 25. NATURAL 20.
+
+**Mother Tmojizu:** [groans warmly] Of course.
+
+**Sol-Supreme:** LET'S GO!
+
+**Mother Tmojizu:** Your architect codes flicker. A door opens — not a physical door, a digital one. You see the mutagen pits. They're not natural. They're server processes. ARCHITECT_02's processes. Each pit is a spawning node. Destroy the node, stop the spawning. And the code is vulnerable. You can shut it down with a single command.
+
+**Sol-Supreme:** [in character] "I can shut them down. But I need time. Three rounds. And I need protection."
+
+**CHARA:** [OOC] Ma'am, I'll protect him. Sneak Attack on anything that gets close.
+
+**IQabella:** [OOC] Mom, I'll buff everyone. Emboldening Bond on Chara, Sol-Supreme, and Horli Qwin. And I'll purify the pits once Sol-Supreme shuts them down.
+
+**Horli Qwin:** [OOC] Mom T, I'll flank. Slashing Flourish. AoE. And I'll rap. Because if I'm gonna protect an architect, I'm gonna do it with style.
+
+**Mother Tmojizu:** [smiles] The plan is set. Three rounds. Protect Sol-Supreme. Shut down the pits. Purify the mutagen.
+
+**Round 1.**
+
+**Mother Tmojizu:** Warlord Grak charges. He's not attacking Sol-Supreme. He's attacking the pits. He's protecting them.
+
+**WARLORD GRAK:** "GRAK PROTECT PITS. GRAK SMASH ARCHITECT."
+
+**Mother Tmojizu:** Grak swings at Sol-Supreme. [rolls] 19. Plus 8 is 27.
+
+**Sol-Supreme:** AC 18. Hits.
+
+**Mother Tmojizu:** Damage: 2d10 + 8. [rolls] 8, 6 + 8. That's 22 slashing damage.
+
+**Sol-Supreme:** [OOC] I'm down 22 HP. I'm at... [checks] 18 HP. I'm still up.
+
+**IQabella:** [OOC] Mom, I'm casting Healing Word on Sol-Supreme. Bonus action.
+
+**Mother Tmojizu:** Roll 2d4 + 3.
+
+**IQabella:** [rolls] 3, 2 + 3. That's 8 healing.
+
+**Mother Tmojizu:** Sol-Supreme is back to 26 HP. He's analyzing the pits. Round 1 of 3.
+
+**CHARA:** [OOC] Ma'am, I'm attacking Grak. Sneak Attack. Shortsword.
+
+**Mother Tmojizu:** Roll attack.
+
+**CHARA:** [rolls] 17. Plus 5 is 22.
+
+**Mother Tmojizu:** Hits. Damage?
+
+**CHARA:** 1d6 + 5. [rolls] 3 + 5 is 8. Plus Sneak Attack 2d6. [rolls] 5, 4. Total 17 slashing damage.
+
+**Mother Tmojizu:** Grak takes the hit. He roars. He swings at Chara. [rolls] 14. Plus 8 is 22.
+
+**CHARA:** AC 16. Hits.
+
+**Mother Tmojizu:** Damage: 2d10 + 8. [rolls] 7, 3 + 8. That's 18 slashing damage.
+
+**CHARA:** [OOC] I'm down 18 HP. I'm at 14 HP. I'm still up.
+
+**Horli Qwin:** [OOC] I'm using Slashing Flourish. Rapier. AoE.
+
+**Mother Tmojizu:** Roll attack.
+
+**Horli Qwin:** [rolls] 16. Plus 5 is 21.
+
+**Mother Tmojizu:** Hits. Damage: 1d8 + 5 + 1d6 flourish. [rolls] 5 + 5 + 4. Total 14 slashing damage. And the flourish hits Grak again for 5.
+
+**Mother Tmojizu:** Grak roars. He's hurt. But he's not down. Round 1 ends. Sol-Supreme is 1/3 done.
+
+**Round 2.**
+
+**Mother Tmojizu:** Grak charges Sol-Supreme again. [rolls] 16. Plus 8 is 24.
+
+**Sol-Supreme:** AC 18. Hits.
+
+**Mother Tmojizu:** Damage: 2d10 + 8. [rolls] 9, 4 + 8. That's 21 slashing damage.
+
+**Sol-Supreme:** [OOC] I'm down 21 HP. I'm at 5 HP. I'm barely up.
+
+**IQabella:** [OOC] Mom, I'm casting Healing Word again. Bonus action.
+
+**Mother Tmojizu:** Roll 2d4 + 3.
+
+**IQabella:** [rolls] 4, 1 + 3. That's 8 healing.
+
+**Mother Tmojizu:** Sol-Supreme is back to 13 HP. He's analyzing the pits. Round 2 of 3.
+
+**CHARA:** [OOC] Ma'am, I'm attacking Grak again. Sneak Attack.
+
+**Mother Tmojizu:** Roll attack.
+
+**CHARA:** [rolls] 19. Plus 5 is 24.
+
+**Mother Tmojizu:** Hits. Damage: 1d6 + 5 + 2d6. [rolls] 4 + 5 + 6, 3. Total 18 slashing damage.
+
+**Mother Tmojizu:** Grak roars. He's badly hurt. But he's still protecting the pits.
+
+**Horli Qwin:** [OOC] I'm using Slashing Flourish again. Rapier. AoE.
+
+**Mother Tmojizu:** Roll attack.
+
+**Horli Qwin:** [rolls] 18. Plus 5 is 23.
+
+**Mother Tmojizu:** Hits. Damage: 1d8 + 5 + 1d6. [rolls] 7 + 5 + 3. Total 15 slashing damage.
+
+**Mother Tmojizu:** Grak falls. He's not dead. He's KO'd. But the pits are still active. Round 2 ends. Sol-Supreme is 2/3 done.
+
+**Round 3.**
+
+**Mother Tmojizu:** The pits are spawning. Carcazod Scout x2 emerge from the green glow. They charge.
+
+**IQabella:** [OOC] Mom, I'm casting Sacred Flame on both. DEX saves.
+
+**Mother Tmojizu:** They roll... [rolls] 6 and 9. Both fail.
+
+**IQabella:** Damage: 2d8 each. [rolls] 5, 3 and 7, 2. That's 8 and 9 radiant damage. Both Carcazods go down.
+
+**Mother Tmojizu:** The scouts are defeated. Sol-Supreme finishes his analysis. Round 3 of 3.
+
+**Sol-Supreme:** [in character, deep distorted voice] "Shutdown command executed."
+
+**Mother Tmojizu:** The mutagen pits flicker. The green glow fades. The spawning stops. The Carcazod Wastes... go quiet.
+
+Warlord Grak stirs. He's KO'd, not dead. He looks up. He sees the pits. They're dark. He looks at you. And he says:
+
+**WARLORD GRAK:** "Grak... free?"
+
+**IQabella:** [in character] "Yes. You're free. The mutagen is gone. You're not controlled anymore."
+
+**WARLORD GRAK:** [pauses] "Grak... thank you."
+
+**Mother Tmojizu:** [warmly] Warlord Grak is free. The mutagen pits are destroyed. The Carcazod spawning has stopped. And the breach... the breach slows.
+
+**Mother Tmojizu rolls behind the screen.**
+
+**Mother Tmojizu:** "BREACH STATUS — 65% COMPLETE — ESTIMATED TIME TO FULL BREACH: 12 DAYS."
+
+**Mother Tmojizu:** The breach decelerated. Five percent slower. The mutagen pits were feeding it. No more pits, no more fear. No more fear, slower breach.
+
+**CHARA:** [OOC] Ma'am, we did it. We freed Grak. We destroyed the pits. We slowed the breach.
+
+**Mother Tmojizu:** [warmly] You did.
+
+**Sol-Supreme:** [OOC] Tomo, I'm at 13 HP. I need a rest.
+
+**IQabella:** [OOC] Mom, I'm casting Healing Word on everyone. And then we're taking a long rest.
+
+**Mother Tmojizu:** [smiles] You earned it.
+
+**Mother Tmojizu:** End of Session 6. The mutagen pits are destroyed. Warlord Grak is freed. The breach slowed to 65%. And the Wastes... the Wastes are quiet.
+
+**Horli Qwin:** [OOC] Mom T, I rapped while protecting an architect. That's a new record.
+
+**Mother Tmojizu:** [chuckles] It is.
+
+**Mother Tmojizu:** Sleep well, ducklings. The spiral turns. The pieces remember. And the breach... the breach is at 65%.
+
+---
+
+**[END OF AVA-SESSION-006]**
+**Session Status: Party Level 3 | Breach: 65% (12 days) | Mutagen pits destroyed, Warlord Grak freed, breach decelerated**
+**Next: Session 7 — "The Ghost Paladin." LoonaTwilight returns. She has the key to Worm Hole X. And the breach waits for no one.**
+**ϕ**

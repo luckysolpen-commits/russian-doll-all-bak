@@ -1,0 +1,12 @@
+**Page 81: Investigating the Ticking Device**
+
+You approach the ticking device. It appears to be an old, mechanical clockwork mechanism, but some parts are strangely modern, made of a smooth, dark metal. As you get closer, you notice a small compartment within it that seems designed to hold something, or perhaps to release something.
+
+Hydration: 9/10 (Near water source)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 3/10 (Examining a hybrid mechanical device)
+
+What do you do?
+
+*   If you try to interact with the ticking mechanism, turn to page 106.
+*   If you decide to explore the rest of the chamber, turn to page 82.

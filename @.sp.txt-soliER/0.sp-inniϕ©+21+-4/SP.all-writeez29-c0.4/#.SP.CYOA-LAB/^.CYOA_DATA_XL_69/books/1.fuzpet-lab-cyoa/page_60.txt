@@ -1,0 +1,6 @@
+You attempt to sneak into the guarded camp, hoping to find something valuable. Moving stealthily, you find an unguarded chest containing what looks like rations and a strange, smooth stone etched with symbols. As you reach for the stone, a twig snaps under your foot. The guards are immediately alerted and converge on your position.
+
+What do you do?
+
+*   If you grab the rations and the stone and try to flee, turn to page 67.
+*   If you drop everything and try to surrender, turn to page 68.

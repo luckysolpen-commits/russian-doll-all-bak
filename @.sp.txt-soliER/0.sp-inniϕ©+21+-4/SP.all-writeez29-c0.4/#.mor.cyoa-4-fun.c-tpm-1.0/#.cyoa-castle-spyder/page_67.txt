@@ -1,0 +1,12 @@
+**Page 67: More on Project Chimera**
+
+You sift through the spy's discarded documents. "Project Chimera" appears to be an initiative focused on enhancing human capabilities through bio-integration and cybernetic augmentation. The high energy signatures on the security map likely relate to the power demands of such advanced research.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 6/10 (Learned "Project Chimera" involves bio-integration and cybernetics)
+
+What do you do?
+
+*   If you try to interpret the energy signatures on the map, turn to page 68.
+*   If you observe his interaction with a hidden security console, turn to page 44.

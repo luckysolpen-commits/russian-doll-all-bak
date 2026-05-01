@@ -1,0 +1,256 @@
+# SCREENPLAY VOICE CONVERSION PLAN
+# ==================================
+# Date: April 11, 2026
+# Status: Planning Phase — awaiting Lucky's approval
+
+---
+
+## OVERVIEW
+
+Convert ALL screenplay scene files (~345 scenes across 15+ books) to multi-voice audio using edge-tts. These are our most valuable assets for animation. Each scene file becomes an MP3 with distinct character voices + narrator.
+
+---
+
+## FORMAT FAMILIES
+
+Screenplays use TWO format families. We need parsers for BOTH:
+
+### Family A — HTML/Blockquote (Books: Sol Pen, Geminii, Red Rock, Moonshine, SUPERWAR, Hellride, AVANTA.C, Digi_Sol, Metal Sun, XO Files, Footrace.FU, Centroid)
+
+```
+<center>LUCKY</center>
+> (Frantic)
+> Astra! What is this place?!
+
+<center>ASTRA</center>
+> You orchestrated this?
+```
+
+**Parser Logic:**
+1. Detect `<center>NAME</center>` → switch to character voice
+2. Read subsequent `> ` lines as dialogue (skip `> (parenthetical)` lines)
+3. Non-`>` lines → narrator (action/description)
+4. `**...**` lines → narrator (scene headings)
+
+### Family B — Plain Text (Books: Death-Kryo!, CHAR.A.NON, NGL Mpyre, Tear-It)
+
+```
+LUCKY
+(grinning)
+Thank you! Thank you all for coming.
+
+LUCKY (CONT'D)
+But this isn't just my victory.
+
+UN AGENT
+(a synthesized voice)
+Lucky is guilty.
+```
+
+**Parser Logic:**
+1. Detect ALL CAPS line (optionally with `(CONT'D)`, `(age...)`, or `V.O.` prefix) → switch to character voice
+2. Read subsequent plain text lines as dialogue until next ALL CAPS name or blank line
+3. Skip `(parenthetical)` lines
+4. Prose paragraphs → narrator
+5. Edge cases: `NAME (50s), his hair...` → narrator (character intro, not dialogue)
+
+---
+
+## CHARACTER VOICE ASSIGNMENTS
+
+**Strategy:** REUSE established voices from Centroid/INNI.BIZ sessions for main cast. Supporting/NPC voices get unused voices with accents matching personality. NO overlap between main cast and NPCs.
+
+### ESTABLISHED MAIN CAST (REUSE from Centroid/INNI.BIZ):
+| Character | Voice | Notes |
+|-----------|-------|-------|
+| **LUCKY SHEPHERD** | `en-US-GuyNeural` | Male, deep — Lucky's established voice (aka "Brian") |
+| **ASTRA** | `es-MX-DaliaNeural` | Female, Mexican Spanish — Astra's established Spanish voice |
+| **GEM** | `en-US-AvaNeural` | Female, expressive — established from Sol Pen screenplay |
+| **CHARA** | `fr-FR-VivienneMultilingualNeural` | Female, confident — established from Centroid |
+| **Sol-Supreme** | `en-US-ChristopherNeural` | Male, deep authority — established from Centroid |
+| **IQabella** | `en-US-AnaNeural` | Female, cute — established from Centroid |
+| **Horli Qwin** | `fr-FR-DeniseNeural` | Female, French accent — established from Centroid |
+| **Mother Tmojizu / DM** | `zh-CN-XiaoxiaoNeural` | Female, warm — established |
+| **Professor Pylorus** | `en-GB-SoniaNeural` | Female, British — established |
+| **The Nihililator** | `ar-AE-HamdanNeural` | Male, void voice — established |
+
+### SCREENPLAY-SPECIFIC CHARACTERS:
+| Character | Personality | Voice | Notes |
+|-----------|-------------|-------|-------|
+| **Narrator** | Neutral, cinematic | `en-GB-RyanNeural` | Male, British, storytelling |
+| **MARIA** | Astra's big sister, heavier Spanish accent | `es-ES-ElviraNeural` | Female, Spanish from Spain, can speak Spanish lines |
+| **SPIKE** | Tough, loyal, protector | `en-AU-WilliamNeural` | Male, Australian, gruff |
+| **QUEEN SOPHIA** | Regal, graceful | `en-GB-MaisieNeural` | Female, British, elegant |
+| **DORCHESTER** | Villain, menacing, female Irish | `en-IE-OrlaNeural` | Female, Irish, dark |
+| **LOONA TWILIGHT** | Mysterious, enigmatic, moon-related | `ko-KR-SunHiNeural` | Female, Korean, ethereal |
+| **EDGE DANGERMAN** | Tough, action-hero | `en-AU-WilliamNeural` | Male, Australian, gruff |
+| **SAORSI** | Fierce, independent | `en-IE-EmilyNeural` | Female, Irish, spirited |
+| **SOL (screenplay)** | Enigmatic, masked leader | `en-ZA-LukeNeural` | Male, South African, mysterious |
+| **KAITO** | Dangerous, suspicious | `ja-JP-KeitaNeural` | Male, Japanese, intense |
+| **AGENT THOMPSON** | Ruthless, blackmailing | `en-US-CoraNeural` | Female, cold, authoritative |
+| **BLACK QUEEN** | Antagonist, depraved | `en-NG-EzinneNeural` | Female, Nigerian, commanding |
+| **PRINCESS MEGAN8R** | Agile, rebel leader | `en-US-AshleyNeural` | Female, young, fierce |
+| **BORIN IRONMUG** | Gruff, dwarf-like | `en-GB-AlfieNeural` | Male, British, rough |
+| **GoldQueen_Astra** | Royal, powerful | `en-GB-LibbyNeural` | Female, British, regal |
+| **Guardian** | Ancient, wise | `en-US-RogerNeural` | Male, deep, ancient |
+| **Fuzzball Priestess** | Mystical, serene | `en-IN-NeerjaNeural` | Female, Indian, spiritual |
+| **MERC 1 / UN AGENT / NPCs** | Generic | Rotate from pool | See NPC pool below |
+
+### NPC VOICE POOL (rotate for minor characters — NO overlap with main cast):
+| Voice | Accent | Use For |
+|-------|--------|---------|
+| `en-US-JasonNeural` | American | Male NPCs, soldiers |
+| `en-US-SteffanNeural` | American | Male NPCs, officials |
+| `en-GB-OliverNeural` | British | Male NPCs, aristocrats |
+| `en-AU-NatashaNeural` | Australian | Female NPCs, warriors |
+| `en-CA-ClaraNeural` | Canadian | Female NPCs, civilians |
+| `en-NG-AbeoNeural` | Nigerian | African NPCs |
+| `en-KE-AsiliaNeural` | Kenyan | African NPCs |
+| `en-KE-ChilembaNeural` | Kenyan | African NPCs, male |
+| `en-NG-EzinneNeural` | Nigerian | African NPCs, female |
+| `fr-FR-HenriNeural` | French | European NPCs, male |
+| `de-DE-KatjaNeural` | German | European NPCs |
+| `de-DE-ConradNeural` | German | European NPCs, male |
+| `it-IT-ElsaNeural` | Italian | European NPCs |
+| `ru-RU-DmitryNeural` | Russian | Eastern European NPCs |
+| `ru-RU-SvetlanaNeural` | Russian | Eastern European NPCs, female |
+| `ar-AE-FatimaNeural` | Arabic | Middle Eastern NPCs, female |
+| `zh-CN-XiaoyiNeural` | Chinese | Asian NPCs, female |
+| `ja-JP-NanamiNeural` | Japanese | Asian NPCs, female |
+
+### SPECIAL RULES — CONTEXT-BASED VOICE SWAPS:
+| Context | Rule | Voices to Use |
+|---------|------|---------------|
+| **Luna / Moon scenes** | Characters in moon-related scenes get Asian voices | `zh-CN-XiaoxiaoNeural`, `zh-CN-YunxiaNeural`, `ja-JP-NanamiNeural`, `ja-JP-KeitaNeural`, `ko-KR-SunHiNeural` |
+| **Time Fu scenes** | Martial arts / temporal training characters get Asian voices | Same as above — match the Asian aesthetic of Time Fu |
+| **Chinese dialogue** | Any character speaking Chinese lines | `zh-CN-XiaoxiaoNeural` (female) or `zh-CN-YunxiaNeural` (male) |
+| **Japanese dialogue** | Any character speaking Japanese lines | `ja-JP-NanamiNeural` (female) or `ja-JP-KeitaNeural` (male) |
+
+**Note:** The parser should detect scene context keywords like "Luna", "Moon", "Time Fu", "dojo", "temple", "martial" and switch to Asian voice pool for characters in those scenes. This overrides the default voice map for those specific scenes only.
+
+---
+
+## INVENTORY: ALL SCREENPLAY FILES TO CONVERT
+
+### Books with Scene Files (~345 total):
+
+| # | Book | Dir | Scene Count | Format | Est. Audio |
+|---|------|-----|-------------|--------|------------|
+| 1 | **Sol Pen Book 0** | `0.Sol Pen]bk0/0.scenes]ALL+named/` | 31 | Family A | ~2 hours |
+| 2 | **Geminii Part 1** | `1.ii.geminii]2part]a0/1.GEMINI_PART_1]Tarantin0/` | 20 | Family A | ~1.5 hours |
+| 3 | **Red Rock & Roll** | `2.RedRock.AndROLL]ING]mid]a1/` | 20 | Family A | ~1.5 hours |
+| 4 | **Death-Kryo!** | `3.DEATH-KRYO!]big]b2/` | 18 | Family B | ~1.5 hours |
+| 5 | **Moonshine** | `4.moonshine]big]b1/` | 20 | Family A | ~1.5 hours |
+| 6 | **SUPERWAR** | `5.SUPERWAR.ikrs]FULwc]bk0/` | 23 | Family A | ~2 hours |
+| 7 | **Hellride** | `6.hellride-bk0]BIG]b1/` | 20 | Family A (UPPERCASE) | ~1.5 hours |
+| 8 | **AVANTA.C** | `7.AVANTA.C]mid]c6/` | 0 (outline only) | N/A | N/A |
+| 9 | **Digi_Sol Suicider** | `8.Digi_Sol.Suicider]BIG]b1/` | 20 | Family A | ~1.5 hours |
+| 10 | **Metal Sun** | `9.METAL SUN[METAL]wcsm+wtf]a1/` | 20 | Family A | ~1.5 hours |
+| 11 | **XO Files** | `10.xo.files]wc.smol]a0/` | 14 | Family A | ~1 hour |
+| 12 | **Footrace.FU** | `11.FOOTRACE.FU]HUGE/` | 22 | Family A | ~1.5 hours |
+| 13 | **Centroid** | `12.centroid.u.ϕ]2xvsp]big]b1/` | 20 | Family A | ~1.5 hours |
+| 14 | **NGL Mpyre** | `100.%.NGL.MPYRE]bk0/` | 0 (outline only) | N/A | N/A |
+| 15 | **CHAR.A.NON 1010%** | `-1.MyChara+21]b1/.../1010%/` | ~15 | Family B | ~1 hour |
+| 16 | **CHAR.A.NON 1100** | `-1.MyChara+21]b1/.../1100/` | ~20 | Family B | ~1.5 hours |
+| 17 | **CHAR.A.NON 101** | `-1.MyChara+21]b1/.../101/` | ~18 | Family B | ~1.5 hours |
+| 18 | **CHAR.A.NON 110** | `-1.MyChara+21]b1/.../110/` | ~15 | Family B | ~1 hour |
+| 19 | **CHAR.A.NON 111** | `-1.MyChara+21]b1/.../111/` | ~13 | Family B | ~1 hour |
+| 20 | **Tear-It Witch** | `111.tear-it]accidental.witch]y3/` | ~19 | Family B | ~1.5 hours |
+
+**TOTAL: ~345 scene files, ~25-30 hours of audio**
+
+---
+
+## CONVERSION STRATEGY
+
+### Phase 1: Build the Parser
+Create `screenplay_tts.py` — a universal screenplay parser that:
+1. Auto-detects Family A vs Family B format
+2. Parses character names, dialogue, parentheticals, action lines
+3. Maps characters to voices using the voice map above
+4. Generates segment MP3s and concatenates with ffmpeg
+5. Handles edge cases: character intros, SOUND cues, FLASHBACK blocks, CONT'D, V.O.
+
+### Phase 2: Per-Book Voice Maps
+Each book has its own character roster. Create a voice map file per book:
+- `screen-voices/voice-map-sol-pen.txt`
+- `screen-voices/voice-map-geminii.txt`
+- `screen-voices/voice-map-death-kryo.txt`
+- etc.
+
+### Phase 3: Convert Book by Book
+Start with Sol Pen (31 scenes), then work through the list. Each book gets:
+- Its own converter script (or one universal script with book-specific voice map)
+- Output directory: `screen-voices/{book-name}/`
+- Output naming: `{book}.scene{N}.mp3`
+
+### Phase 4: Quality Check
+- Spot-check 2-3 scenes per book
+- Verify character voices are distinct
+- Verify narrator voice is consistent
+- Verify parentheticals are skipped
+- Verify scene headings are read by narrator
+
+---
+
+## OUTPUT STRUCTURE
+
+**MP3s go in an `audio/` subfolder INSIDE the original screenplay directory:**
+```
+SP.all-writeez28-b2/{book-dir}/{scene-dir}/
+├── scene_01.txt
+├── scene_02.txt
+├── ...
+└── audio/                          ← MP3s go HERE
+    ├── {book-shortname}-scene-01.mp3
+    ├── {book-shortname}-scene-02.mp3
+    └── ...
+```
+
+**Then copy to iphone folder with SAME structure:**
+```
+@.sp.iphone-MAC中/SP.all-writeez28-b2/{book-dir}/{scene-dir}/audio/
+    ├── {book-shortname}-scene-01.mp3
+    └── ...
+```
+
+**Example (Sol Pen):**
+```
+SP.all-writeez28-b2/0.Sol Pen]bk0/0.scenes]ALL+named/audio/
+├── sol-pen-scene-01-casino-flashback.mp3
+├── sol-pen-scene-02-ranch-peace.mp3
+└── ... (31 files)
+```
+
+---
+
+## EDGE CASES TO HANDLE
+
+| Edge Case | Example | Treatment |
+|-----------|---------|-----------|
+| Character intro | `LUCKY SHEPHERD (50s), his hair now streaked...` | Narrator (prose, not dialogue) |
+| CONT'D | `LUCKY (CONT'D)` | Same character voice |
+| V.O. | `V.O. LUCKY` | Narrator or ethereal voice |
+| SOUND cues | `SOUND of slot machines` | Narrator |
+| FLASHBACK blocks | `FLASHBACK ... END FLASHBACK` | Narrator |
+| CLOSE UP | `CLOSE UP - Lucky's face` | Narrator |
+| FADE OUT | `FADE TO BLACK.` | Skip |
+| Generic names | `MERC 1`, `UN AGENT` | Valid speakers, assign from NPC pool |
+| Multiple speakers in one line | Rare | Split by context |
+| Empty dialogue | `LUCKY\n\n` | Skip |
+
+---
+
+## NEXT STEPS
+
+1. ✅ Write this plan
+2. ⏳ Lucky reviews and approves voice assignments
+3. ⏳ Build `screenplay_tts.py` universal parser
+4. ⏳ Create per-book voice map files
+5. ⏳ Convert Sol Pen Book 0 (31 scenes) — test run
+6. ⏳ Convert remaining books in priority order
+7. ⏳ Quality check all output
+
+---
+
+*End of Screenplay Voice Conversion Plan*

@@ -1,0 +1,252 @@
+# FU D&D — SESSION 2: "ELEMENTS, FUZZPETS & STARDUSTBALL"
+## Footrace.FU Chinese Learning — Episode 2
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** [out of character] Session 2. Chemistry is the main course today. Everything else — Chinese, Stardustball, Fuzzpets — is the delivery vehicle. By the end of this session, you'll understand quark composition, molecular orbital theory, reaction mechanisms, enzyme kinetics, pharmacokinetics, and drug design principles. You'll be able to walk into an MCAT and destroy it. Let's begin. [in character] Morning in the Time Dojo Classroom. The temporal chalkboard is already covered in equations. I stand at the front with a cup of tea. IQabella made it. 175 degrees. Perfect.
+
+**IQabella:** , eng, good morning, ... tx, 早上好, zǎo shang hǎo, ... xt, , eng, tea, ... tx, 茶, chá, ... xt, is ready.
+
+**Mother Tmojizu:** , eng, thank you, ... tx, 谢谢, xiè xie, ... xt, IQabella. Ducklings — before we get to Fuzzpets and Stardustball, we need to talk about the periodic table. Not the cute version. The real version. Every element. Every orbital. Every reaction. Roll WIS Focus.
+
+**Horli Qwin:** [rolls] 14. Plus 3 is 17. I'm ready. I think. Is this gonna be the kind of chemistry where things explode?
+
+**Mother Tmojizu:** Some of it. But first — the foundation. Quarks.
+
+---
+
+## SCENE 1: TIME DOJO CLASSROOM — QUARKS TO ELEMENTS
+
+**Mother Tmojizu:** Everything starts with quarks. Up quarks and down quarks. That's it. Protons and neutrons are made of quarks. Electrons are fundamental — no substructure. Roll INT Particle Physics.
+
+**Sol-Supreme:** [rolls] 19. Plus 4 is 23. [out of character] This is my bread and butter. [in character] , eng, up quark, ... tx, 上夸克, shàng kuā kè, ... xt, has charge +2/3. , eng, down quark, ... tx, 下夸克, xià kuā kè, ... xt, has charge -1/3. A , eng, proton, ... tx, 质子, zhì zǐ, ... xt, is uud — two up quarks and one down quark. Charge: +2/3 + 2/3 - 1/3 = +1. A , eng, neutron, ... tx, 中子, zhōng zǐ, ... xt, is udd — one up quark and two down quarks. Charge: +2/3 - 1/3 - 1/3 = 0. The , eng, strong force, ... tx, 强力, qiáng lì, ... xt, — mediated by gluons — holds the quarks together inside the proton and neutron. The residual strong force — mediated by pions — holds protons and neutrons together in the nucleus.
+
+**Mother Tmojizu:** 23. Perfect. Now — the temporal signature. In the Land of Time, every subatomic particle has five temporal coordinates. Roll INT Arcana to map quarks to temporal signatures.
+
+**Sol-Supreme:** [rolls] 18. Plus 4 is 22. [out of character] Up quark: -1, -1, -1, -1, -1. Down quark: -1, -1, -1, -1, -1. Electron: 0, 0, 1, -1, -1. When you combine them into protons and neutrons, the temporal coordinates add up. Proton: 1, 0, 0, 3, 1. Neutron: 0, 1, 0, 0, 4. [in character] , eng, up quark, ... tx, 上夸克, shàng kuā kè, ... xt, temporal signature: -1, -1, -1, -1, -1. , eng, down quark, ... tx, 下夸克, xià kuā kè, ... xt, temporal signature: -1, -1, -1, -1, -1. , eng, electron, ... tx, 电子, diàn zǐ, ... xt, temporal signature: 0, 0, 1, -1, -1. Combine two up quarks and one down quark: the temporal coordinates sum to , eng, proton, ... tx, 质子, zhì zǐ, ... xt, signature: 1, 0, 0, 3, 1. One up and two down: , eng, neutron, ... tx, 中子, zhōng zǐ, ... xt, signature: 0, 1, 0, 0, 4.
+
+**Mother Tmojizu:** 22. Correct. The temporal signature of a composite particle is the sum of its constituents' signatures. This is the Temporal Conservation Law — temporal coordinates are additive under composition. Now build elements. Start with hydrogen.
+
+**中文老师:** , eng, up quark, ... tx, 上夸克, shàng kuā kè, ... xt, , eng, down quark, ... tx, 下夸克, xià kuā kè, ... xt, , eng, proton, ... tx, 质子, zhì zǐ, ... xt, , eng, neutron, ... tx, 中子, zhōng zǐ, ... xt, , eng, electron, ... tx, 电子, diàn zǐ, ... xt, , eng, nucleus, ... tx, 原子核, yuán zǐ hé, ... xt, , eng, orbital, ... tx, 轨道, guǐ dào, ... xt, , eng, shell, ... tx, 壳层, ké céng, ... xt, , eng, hydrogen, ... tx, 氢, qīng, ... xt, , eng, helium, ... tx, 氦, hài, ... xt, , eng, lithium, ... tx, 锂, lǐ, ... xt, , eng, beryllium, ... tx, 铍, pí, ... xt, , eng, boron, ... tx, 硼, péng, ... xt, , eng, carbon, ... tx, 碳, tàn, ... xt, , eng, nitrogen, ... tx, 氮, dàn, ... xt, , eng, oxygen, ... tx, 氧, yǎng, ... xt, , eng, fluorine, ... tx, 氟, fú, ... xt, , eng, neon, ... tx, 氖, nǎi, ... xt,
+
+**CHARA:** [rolls INT Investigation] 17. Plus 3 is 20. [out of character] Hydrogen: 1 proton, 0 neutrons, 1 electron. Temporal signature: 1, 0, 1, 5, 2. Helium: 2 protons, 2 neutrons, 2 electrons. Temporal signature: 2, 2, 2, 5, 6. The time stability jumps from 2 to 6 when you fill the first electron shell. That's the key — filled shells = maximum temporal stability. [in character] , eng, hydrogen, ... tx, 氢, qīng, ... xt, 1 proton, 0 neutrons, 1 electron. Temporal: 1, 0, 1, 5, 2. , eng, helium, ... tx, 氦, hài, ... xt, 2 protons, 2 neutrons, 2 electrons. Temporal: 2, 2, 2, 5, 6. The chrono resonance jumps from 2 to 6 because helium has a filled 1s shell. , eng, lithium, ... tx, 锂, lǐ, ... xt, 3 protons, 4 neutrons, 3 electrons. Temporal: 3, 4, 3, 5, 6. The third electron goes into the 2s orbital — new shell, same temporal stability.
+
+**Mother Tmojizu:** 20. Exactly right. Filled electron shells = maximum chrono resonance (6). Partially filled shells = lower chrono resonance. This is why noble gases are temporally inert — their shells are full, their temporal signatures are maximally stable. They don't react because they don't need to. Now — molecular orbital theory. This is where chemistry becomes real. Roll INT Chemistry.
+
+**Sol-Supreme:** [rolls] 20. Plus 4 is 24. NATURAL 20. [out of character] Molecular orbital theory. Atomic orbitals combine to form molecular orbitals. Bonding orbitals are lower in energy than the parent atomic orbitals. Antibonding orbitals are higher. Bond order = (bonding electrons - antibonding electrons) / 2. [in character] When two hydrogen atoms approach each other, their 1s atomic orbitals combine to form two molecular orbitals: a , eng, bonding orbital, ... tx, 成键轨道, chéng jiàn guǐ dào, ... xt, σ(1s) that is lower in energy, and an , eng, antibonding orbital, ... tx, 反键轨道, fǎn jiàn guǐ dào, ... xt, σ*(1s) that is higher in energy. The two electrons fill the bonding orbital. Bond order = (2 - 0) / 2 = 1. Single bond. H2 is stable. For helium: He2 would have 4 electrons — 2 in bonding, 2 in antibonding. Bond order = (2 - 2) / 2 = 0. No bond. He2 doesn't exist. This is why helium is inert.
+
+**Mother Tmojizu:** NATURAL 20. Perfect molecular orbital analysis. Now apply this to the molecules that matter for life — and for Fuzzball biology. Water. H2O. Roll INT Chemistry to build the MO diagram.
+
+**IQabella:** [rolls] 16. Plus 3 is 19. [out of character] Oxygen has 8 electrons: 1s² 2s² 2p⁴. In H2O, oxygen's 2p orbitals hybridize to sp³. Two sp³ orbitals form σ bonds with hydrogen 1s orbitals. Two sp³ orbitals hold lone pairs. The molecule is bent — 104.5° bond angle — because the lone pairs repel more than bonding pairs. [in character] , eng, water, ... tx, 水, shuǐ, ... xt, H2O. Oxygen: 1s² 2s² 2p⁴. , eng, sp³ hybridization, ... tx, sp³ 杂化, zá huà, ... xt, Two sp³ orbitals form , eng, sigma bonds, ... tx, σ键, σ jiàn, ... xt, with hydrogen 1s. Two sp³ orbitals hold , eng, lone pairs, ... tx, 孤对电子, gū duì diàn zǐ, ... xt, The molecule is , eng, bent, ... tx, 弯曲, wān qū, ... xt, — 104.5° bond angle. Lone pairs repel more than bonding pairs. This gives water its , eng, polarity, ... tx, 极性, jí xìng, ... xt, — partial negative on oxygen, partial positive on hydrogens. Polarity enables , eng, hydrogen bonding, ... tx, 氢键, qīng jiàn, ... xt, — the force that makes water liquid at room temperature.
+
+**Mother Tmojizu:** 19. Excellent. Water's polarity and hydrogen bonding are the foundation of all biochemistry. Without hydrogen bonding, water would be a gas at room temperature. Life wouldn't exist. CHARA — apply this to Fuzzball fur. Keratin. C28H40N8O10S2. What holds keratin together?
+
+**CHARA:** [rolls INT Investigation] 19. Plus 3 is 22. [out of character] Keratin is a structural protein. It's held together by peptide bonds (amide linkages), hydrogen bonds (secondary structure — alpha helices and beta sheets), disulfide bridges (covalent S-S bonds between cysteine residues), and van der Waals forces. The disulfide bridges are what make keratin strong — they're covalent cross-links. [in character] , eng, keratin, ... tx, 角蛋白, jiǎo dàn bái, ... xt, C28H40N8O10S2. Four forces hold it together. One: , eng, peptide bond, ... tx, 肽键, tài jiàn, ... xt, — amide linkage between amino acids. C=O plus H-N → C(=O)-N-H. Condensation reaction, releases H2O. Two: , eng, hydrogen bond, ... tx, 氢键, qīng jiàn, ... xt, — between backbone C=O and N-H groups. Forms alpha helices and beta sheets. Three: , eng, disulfide bridge, ... tx, 二硫键, èr liú jiàn, ... xt, — covalent S-S bond between two cysteine residues. R-SH plus HS-R → R-S-S-R plus H2. Oxidation reaction. This is the strongest force in keratin. Four: , eng, van der Waals, ... tx, 范德华力, fàn wá huá lì, ... xt, — weak intermolecular forces between side chains. The disulfide bridges are why Fuzzball fur is so resilient — temporal energy strengthens the S-S bonds.
+
+**Mother Tmojizu:** 22. Outstanding. You just described protein structure from primary to quaternary. Peptide bonds = primary. Hydrogen bonds = secondary (alpha helices, beta sheets). Disulfide bridges = tertiary. Van der Waals = quaternary packing. Horli — can you summarize protein structure in a way you'll remember?
+
+**Horli Qwin:** [rolls CHA Performance] 18. Plus 3 is 21. [out of character] I got this. [in character] Primary structure is the sequence — the amino acid chain, like letters in a rap. Secondary is the local fold — alpha helix spiral, beta sheet pleat, held by hydrogen bonds. Tertiary is the 3D shape — the whole protein folded up, held by disulfide bridges and hydrophobic interactions. Quaternary is multiple proteins working together — like a crew. , eng, peptide bond, ... tx, 肽键, tài jiàn, ... xt, connects the letters. , eng, hydrogen bond, ... tx, 氢键, qīng jiàn, ... xt, folds the verses. , eng, disulfide bridge, ... tx, 二硫键, èr liú jiàn, ... xt, locks the album. , eng, van der Waals, ... tx, 范德华力, fàn wá huá lì, ... xt, is the vibe between tracks.
+
+**Mother Tmojizu:** 21. That's... actually a perfect analogy. 5 bonus points for Horli. Now — reaction mechanisms. This is where chemistry becomes action. Every reaction is a story of electrons moving from where they are to where they want to be.
+
+---
+
+## SCENE 2: PHARMA-CHEM LAB — REACTION MECHANISMS
+
+**Mother Tmojizu:** Pharma-Chem Lab. The temporal chalkboard now shows reaction mechanisms. Curved arrows. Electron flow. Every drug ever made was built using these principles. Roll INT Organic Chemistry.
+
+**Sol-Supreme:** [rolls] 20. Plus 4 is 24. NATURAL 20. [out of character] Reaction mechanisms are just electron accounting. Nucleophiles attack electrophiles. Leaving groups leave. Acids donate protons. Bases accept them. Every reaction in organic chemistry is one of maybe ten patterns repeated over and over. [in character] There are four fundamental reaction types. One: , eng, nucleophilic substitution, ... tx, 亲核取代, qīn hé qǔ dài, ... xt, — a nucleophile attacks an electrophilic carbon, a leaving group departs. SN2: backside attack, inversion of stereochemistry. SN1: carbocation intermediate, racemization. Two: , eng, nucleophilic addition, ... tx, 亲核加成, qīn hé jiā chéng, ... xt, — a nucleophile attacks a carbonyl carbon. The C=O pi bond breaks, electrons go to oxygen. Forms a tetrahedral intermediate. Three: , eng, electrophilic addition, ... tx, 亲电加成, qīn diàn jiā chéng, ... xt, — an electrophile attacks a double bond. The pi bond breaks, electrons go to the electrophile. Four: , eng, elimination, ... tx, 消除反应, xiāo chú fǎn yìng, ... xt, — a base removes a proton, a leaving group departs, a double bond forms. E2: concerted. E1: carbocation intermediate.
+
+**Mother Tmojizu:** NATURAL 20. Perfect classification. Now apply this to drug synthesis. Acetaminophen. C8H9NO2. The most common painkiller in the world. Roll INT Organic Chemistry to synthesize it.
+
+**CHARA:** [rolls] 20. Plus 3 is 23. NATURAL 20. [out of character] Acetaminophen synthesis. Start with p-aminophenol. React with acetic anhydride. The amine nitrogen attacks the carbonyl carbon of acetic anhydride. Nucleophilic acyl substitution. The acetate leaving group departs. Product: N-acetyl-p-aminophenol — acetaminophen. [in character] Step one: start with , eng, p-aminophenol, ... tx, 对氨基酚, duì ān jī fēn, ... xt, — a benzene ring with an -OH group and an -NH2 group para to each other. Step two: add , eng, acetic anhydride, ... tx, 乙酸酐, yǐ suān gān, ... xt, (CH3CO)2O. The amine nitrogen is a , eng, nucleophile, ... tx, 亲核试剂, qīn hé shì jì, ... xt, — it has a lone pair. It attacks the , eng, carbonyl carbon, ... tx, 羰基碳, tāng jī tàn, ... xt, of acetic anhydride — this is an , eng, electrophile, ... tx, 亲电试剂, qīn diàn shì jì, ... xt, because the C=O bond polarizes electrons toward oxygen. Step three: the carbonyl pi bond breaks, electrons go to oxygen, forming a tetrahedral intermediate. Step four: the carbonyl reforms, kicking out , eng, acetate, ... tx, 乙酸根, yǐ suān gēn, ... xt, CH3COO− as the , eng, leaving group, ... tx, 离去基团, lí qù jī tuán, ... xt, Product: , eng, acetaminophen, ... tx, 对乙酰氨基酚, duì yǐ xiān ān jī fēn, ... xt, C8H9NO2. Also called N-acetyl-p-aminophenol. Or paracetamol.
+
+**Mother Tmojizu:** NATURAL 20. Perfect mechanism. Every step, every arrow, every intermediate. Now — how does acetaminophen work? What's the mechanism of action? Roll INT Pharmacology.
+
+**IQabella:** [rolls] 19. Plus 3 is 22. [out of character] Acetaminophen inhibits cyclooxygenase (COX) enzymes — specifically COX-2 in the central nervous system. It reduces prostaglandin synthesis, which reduces pain signaling and fever. Unlike NSAIDs, it has minimal anti-inflammatory effect because it doesn't inhibit COX-1 in peripheral tissues. [in character] , eng, acetaminophen, ... tx, 对乙酰氨基酚, duì yǐ xiān ān jī fēn, ... xt, inhibits , eng, cyclooxygenase, ... tx, 环氧化酶, huán yǎng huà méi, ... xt, COX enzymes. COX converts arachidonic acid to prostaglandins — signaling molecules that cause pain and fever. Acetaminophen blocks COX-2 in the , eng, central nervous system, ... tx, 中枢神经系统, zhōng shū shén jīng xì tǒng, ... xt, — the brain and spinal cord. This reduces , eng, prostaglandin, ... tx, 前列腺素, qián liè xiàn sù, ... xt, synthesis, which reduces pain signaling. Unlike ibuprofen, it doesn't inhibit COX-1 in the stomach — so it doesn't cause ulcers. But overdose causes liver damage because the metabolite NAPQI depletes glutathione.
+
+**Mother Tmojizu:** 22. Perfect pharmacology. You just described mechanism of action, selectivity, and toxicity. Now — let's go deeper. Enzyme kinetics. How do we quantify how well a drug works? Roll INT Biochemistry.
+
+**Sol-Supreme:** [rolls] 18. Plus 4 is 22. [out of character] Michaelis-Menten kinetics. V = Vmax[S] / (Km + [S]). Km is the substrate concentration at half Vmax — it measures enzyme affinity. Lower Km = higher affinity. Vmax is the maximum rate — it measures turnover number. kcat = Vmax / [E]total. Catalytic efficiency = kcat / Km. [in character] , eng, Michaelis-Menten equation, ... tx, 米氏方程, mǐ shì fāng chéng, ... xt, V equals Vmax times substrate concentration divided by Km plus substrate concentration. , eng, Km, ... tx, 米氏常数, mǐ shì cháng shù, ... xt, is the substrate concentration at half-maximal velocity. It measures the enzyme's , eng, affinity, ... tx, 亲和力, qīn hé lì, ... xt, for its substrate. Lower Km means higher affinity — the enzyme binds the substrate more tightly. , eng, Vmax, ... tx, 最大速度, zuì dà sù dù, ... xt, is the maximum reaction rate when all enzyme active sites are saturated. , eng, kcat, ... tx, 转换数, zhuǎn huàn shù, ... xt, equals Vmax divided by total enzyme concentration — it's the , eng, turnover number, ... tx, 转换数, zhuǎn huàn shù, ... xt, — how many substrate molecules one enzyme converts per second. , eng, Catalytic efficiency, ... tx, 催化效率, cuī huà xiào lǜ, ... xt, equals kcat divided by Km. The higher the catalytic efficiency, the better the enzyme.
+
+**Mother Tmojizu:** 22. Excellent. Now apply this to drug inhibition. There are three types of enzyme inhibition. Competitive, noncompetitive, and uncompetitive. Explain each.
+
+**CHARA:** [rolls INT Investigation] 18. Plus 3 is 21. [out of character] Competitive inhibition: inhibitor competes with substrate for the active site. Increases apparent Km, Vmax unchanged. Noncompetitive: inhibitor binds to an allosteric site. Km unchanged, Vmax decreases. Uncompetitive: inhibitor binds only to the enzyme-substrate complex. Both Km and Vmax decrease. [in character] , eng, Competitive inhibition, ... tx, 竞争性抑制, jìng zhēng xìng yì zhì, ... xt, — the inhibitor looks like the substrate and competes for the , eng, active site, ... tx, 活性位点, huó xìng wèi diǎn, ... xt, On a Lineweaver-Burk plot, the lines intersect on the y-axis. Km increases, Vmax stays the same. Example: statins competitively inhibit HMG-CoA reductase. , eng, Noncompetitive inhibition, ... tx, 非竞争性抑制, fēi jìng zhēng xìng yì zhì, ... xt, — the inhibitor binds to an , eng, allosteric site, ... tx, 变构位点, biàn gòu wèi diǎn, ... xt, away from the active site. It changes the enzyme's shape so it can't catalyze the reaction. Km stays the same, Vmax decreases. , eng, Uncompetitive inhibition, ... tx, 反竞争性抑制, fǎn jìng zhēng xìng yì zhì, ... xt, — the inhibitor binds only to the , eng, enzyme-substrate complex, ... tx, 酶-底物复合物, méi dǐ wù fù hé wù, ... xt, Both Km and Vmax decrease proportionally.
+
+**Mother Tmojizu:** 21. Perfect. Now — drug design. How do we go from knowing an enzyme's structure to designing a drug that inhibits it? Roll INT Medicinal Chemistry.
+
+**Sol-Supreme:** [rolls] 19. Plus 4 is 23. [out of character] Structure-based drug design. You get the enzyme's crystal structure via X-ray crystallography or cryo-EM. You identify the active site. You use computational docking to screen millions of compounds. You optimize lead compounds for potency, selectivity, and pharmacokinetics. [in character] Step one: get the , eng, crystal structure, ... tx, 晶体结构, jīng tǐ jié gòu, ... xt, of the target enzyme using , eng, X-ray crystallography, ... tx, X射线晶体学, X shè xiàn jīng tǐ xué, ... xt, or , eng, cryo-EM, ... tx, 冷冻电镜, lěng dòng diàn jìng, ... xt, Step two: identify the , eng, active site, ... tx, 活性位点, huó xìng wèi diǎn, ... xt, — the pocket where the substrate binds. Step three: use , eng, computational docking, ... tx, 计算对接, jì suàn duì jiē, ... xt, to screen millions of compounds against the active site. Software like AutoDock or Schrödinger calculates the , eng, binding energy, ... tx, 结合能, jié hé néng, ... xt, of each compound. Step four: identify , eng, lead compounds, ... tx, 先导化合物, xiān dǎo huà hé wù, ... xt, — molecules with good binding energy. Step five: optimize for , eng, potency, ... tx, 效力, xiào lì, ... xt, (lower IC50), , eng, selectivity, ... tx, 选择性, xuǎn zé xìng, ... xt, (doesn't hit off-target enzymes), and , eng, pharmacokinetics, ... tx, 药代动力学, yào dài dòng lì xué, ... xt, — ADME: absorption, distribution, metabolism, excretion.
+
+**Mother Tmojizu:** 23. Outstanding. You just described the entire drug discovery pipeline. Now — pharmacokinetics. ADME. What happens to a drug after you swallow it? Roll INT Pharmacokinetics.
+
+**IQabella:** [rolls] 20. Plus 3 is 23. NATURAL 20. [out of character] ADME. Absorption: the drug crosses the gut wall into the bloodstream. Governed by Lipinski's Rule of 5. Distribution: the drug travels through blood to tissues. Governed by protein binding and volume of distribution. Metabolism: the liver breaks down the drug via cytochrome P450 enzymes. Excretion: the kidneys filter the drug out in urine. [in character] , eng, Absorption, ... tx, 吸收, xī shōu, ... xt, — the drug crosses the intestinal epithelium into the bloodstream. Governed by , eng, Lipinski's Rule of 5, ... tx, 里宾斯基五规则, lǐ bīn sī jī wǔ guī zé, ... xt, — a drug is likely to have poor absorption if it has: molecular weight > 500, more than 5 hydrogen bond donors, more than 10 hydrogen bond acceptors, or logP > 5. , eng, Distribution, ... tx, 分布, fēn bù, ... xt, — the drug travels through blood to tissues. Governed by , eng, protein binding, ... tx, 蛋白结合, dàn bái jié hé, ... xt, — drugs bound to albumin can't cross cell membranes. , eng, Volume of distribution, ... tx, 分布容积, fēn bù róng jī, ... xt, Vd — how widely the drug spreads. , eng, Metabolism, ... tx, 代谢, dài xiè, ... xt, — the liver breaks down the drug via , eng, cytochrome P450, ... tx, 细胞色素P450, xì bāo sè sù P450, ... xt, enzymes. Phase 1: oxidation, reduction, hydrolysis. Phase 2: conjugation — add glucuronic acid, sulfate, or glutathione to make the drug water-soluble. , eng, Excretion, ... tx, 排泄, pái xiè, ... xt, — the kidneys filter the drug into urine. Governed by glomerular filtration rate.
+
+**Mother Tmojizu:** NATURAL 20. Perfect pharmacokinetics. You just described everything that happens to a pill from mouth to toilet. Now — let's apply all of this to a real drug discovery problem. Roll INT Drug Design.
+
+---
+
+## SCENE 3: DRUG DESIGN CHALLENGE — BUILD A FUZZBALL ANTIDOTE
+
+**Mother Tmojizu:** Here's the challenge. A Fuzzball has been poisoned with , eng, tetrodotoxin, ... tx, 河豚毒素, hé tún dú sù, ... xt, C11H17N3O8. It blocks voltage-gated sodium channels — Nav1.4 in skeletal muscle. The Fuzzball is paralyzed. Its purr has dropped to 410 Hz. You need to design an antidote. Not just treat it — DESIGN a drug. Roll INT Drug Design.
+
+**Sol-Supreme:** [rolls] 19. Plus 4 is 23. [out of character] Tetrodotoxin binds to the outer pore of Nav1.4 with nanomolar affinity. It physically blocks sodium ions from passing through. The antidote needs to either displace TTX from the binding site or provide an alternative sodium pathway. [in character] , eng, Tetrodotoxin, ... tx, 河豚毒素, hé tún dú sù, ... xt, C11H17N3O8 binds to the , eng, voltage-gated sodium channel, ... tx, 电压门控钠通道, diàn yā mén kòng nà tōng dào, ... xt, Nav1.4 with a , eng, dissociation constant, ... tx, 解离常数, jiě lí cháng shù, ... xt, Kd of approximately 10 nanomolar. It binds to the outer pore region, physically blocking Na+ ions. The mechanism: the guanidinium group of TTX forms salt bridges with carboxylate residues in the channel pore. To design an antidote, I need a molecule that binds the same site with higher affinity — a , eng, competitive antagonist, ... tx, 竞争性拮抗剂, jìng zhēng xìng jié kàng jì, ... xt,
+
+**Mother Tmojizu:** 23. Good start. What's your lead compound?
+
+**CHARA:** [rolls INT Investigation] 17. Plus 3 is 20. [out of character] Neostigmine doesn't work — that's for acetylcholinesterase inhibition. For TTX, we need something that displaces it from the sodium channel. 4-aminopyridine blocks potassium channels, which indirectly increases sodium current. But a better approach: design a TTX analog that binds the channel but doesn't block it — a competitive displacer. [in character] I'll use , eng, structure-based drug design, ... tx, 基于结构的药物设计, jī yú jié gòu de yào wù shè jì, ... xt, The TTX binding site has three key interactions: one — the guanidinium group forms salt bridges with Glu755 and Asp400. Two — the hydroxyl groups form hydrogen bonds with Tyr401 and Ser756. Three — the hydrophobic cage interacts with Phe758. My lead compound: a , eng, guanidinium derivative, ... tx, 胍衍生物, guān yǎn shēng wù, ... xt, that mimics TTX's guanidinium group but is smaller — it can slip into the binding site and displace TTX through mass action. I'll add a , eng, carboxylate, ... tx, 羧酸根, suō suān gēn, ... xt, group to form the salt bridge, and a , eng, hydrophobic tail, ... tx, 疏水尾, shū shuǐ wěi, ... xt, to fill the hydrophobic pocket.
+
+**Mother Tmojizu:** 20. Excellent lead compound design. Now optimize it. Roll INT Medicinal Chemistry for ADME optimization.
+
+**IQabella:** [rolls] 18. Plus 3 is 21. [out of character] The lead compound needs to cross the blood-brain barrier to reach Nav1.4 in the CNS. It needs to be small enough (MW < 500), have reasonable logP (1-3), and not be a substrate for P-glycoprotein efflux. [in character] Optimization steps. One: reduce molecular weight. TTX is 319 g/mol — my compound should be under 300 to satisfy , eng, Lipinski's Rule of 5, ... tx, 里宾斯基五规则, lǐ bīn sī jī wǔ guī zé, ... xt, Two: optimize , eng, logP, ... tx, 脂水分配系数, zhī shuǐ fēn pèi xì shù, ... xt, — the partition coefficient between octanol and water. Target logP of 2-3 for blood-brain barrier penetration. Three: add a , eng, methyl group, ... tx, 甲基, jiǎ jī, ... xt, — CH3 — to block metabolic hotspots where cytochrome P450 would oxidize the molecule. Four: ensure the compound is not a substrate for , eng, P-glycoprotein, ... tx, P-糖蛋白, P táng dàn bái, ... xt, — the efflux pump that kicks drugs out of the brain. Five: add a , eng, prodrug, ... tx, 前药, qián yào, ... xt, strategy — make the drug as an ester that gets cleaved by esterases in the brain to release the active compound.
+
+**Mother Tmojizu:** 21. Outstanding. You just designed a drug from target identification to ADME optimization. Now — the final step. Clinical trials. Roll INT Clinical Pharmacology.
+
+**Sol-Supreme:** [rolls] 17. Plus 4 is 21. [out of character] Phase 1: safety in healthy volunteers. Phase 2: efficacy in poisoned Fuzzballs. Phase 3: large-scale comparison to standard of care. [in character] , eng, Phase 1, ... tx, 一期临床, yī qī lín chuáng, ... xt, — test safety and pharmacokinetics in 20-80 healthy volunteers. Determine the , eng, maximum tolerated dose, ... tx, 最大耐受剂量, zuì dà nài shòu jì liàng, ... xt, MTD. Measure Cmax, Tmax, AUC, half-life. , eng, Phase 2, ... tx, 二期临床, èr qī lín chuáng, ... xt, — test efficacy in 100-300 poisoned Fuzzballs. Primary endpoint: restoration of purr frequency from 410 Hz to 432 Hz. Secondary endpoints: muscle function recovery, survival rate. , eng, Phase 3, ... tx, 三期临床, sān qī lín chuáng, ... xt, — large-scale trial in 1000+ poisoned Fuzzballs. Compare to standard of care (supportive treatment only). Primary endpoint: survival at 24 hours. If Phase 3 succeeds, file an , eng, NDA, ... tx, 新药申请, xīn yào shēn qǐng, ... xt, — New Drug Application — with the regulatory authority.
+
+**Mother Tmojizu:** 21. You just walked through the entire drug discovery and development pipeline. From quark composition to clinical trials. That's the full arc of medicinal chemistry. Now — let's lighten things up. Stardustball.
+
+**中文老师:** , eng, drug design, ... tx, 药物设计, yào wù shè jì, ... xt, , eng, lead compound, ... tx, 先导化合物, xiān dǎo huà hé wù, ... xt, , eng, binding energy, ... tx, 结合能, jié hé néng, ... xt, , eng, affinity, ... tx, 亲和力, qīn hé lì, ... xt, , eng, potency, ... tx, 效力, xiào lì, ... xt, , eng, selectivity, ... tx, 选择性, xuǎn zé xìng, ... xt, , eng, absorption, ... tx, 吸收, xī shōu, ... xt, , eng, distribution, ... tx, 分布, fēn bù, ... xt, , eng, metabolism, ... tx, 代谢, dài xiè, ... xt, , eng, excretion, ... tx, 排泄, pái xiè, ... xt, , eng, clinical trial, ... tx, 临床试验, lín chuáng shì yàn, ... xt, , eng, Phase 1, ... tx, 一期, yī qī, ... xt, , eng, Phase 2, ... tx, 二期, èr qī, ... xt, , eng, Phase 3, ... tx, 三期, sān qī, ... xt,
+
+---
+
+## SCENE 4: PE ARENA — STARDUSTBALL
+
+**Mother Tmojizu:** PE Arena. Stardustball. 星尘球 (xīng chén qiú). Each of you mounts a hover-vacuum Dyson sphere. Wild Fuzzballs are released. Catch them using the right method for their temperament. Throw them through floating Temporal Rings. Highest score wins.
+
+**中文老师:** , eng, Stardustball, ... tx, 星尘球, xīng chén qiú, ... xt, , eng, Dyson sphere, ... tx, 戴森球, dài sēn qiú, ... xt, , eng, catch, ... tx, 抓住, zhuā zhù, ... xt, , eng, throw, ... tx, 扔, rēng, ... xt, , eng, score, ... tx, 得分, dé fēn, ... xt, , eng, ring, ... tx, 环, huán, ... xt, , eng, playful, ... tx, 活泼的, huó pō de, ... xt, , eng, skittish, ... tx, 胆小的, dǎn xiǎo de, ... xt, , eng, aggressive, ... tx, 好斗的, hào dòu de, ... xt, , eng, wise, ... tx, 聪明的, cōng míng de, ... xt, , eng, curious, ... tx, 好奇的, hào qí de, ... xt, , eng, sleepy, ... tx, 困倦的, kùn juàn de, ... xt,
+
+**Mother Tmojizu:** Before we play — a chemistry question for each Fuzzball temperament. Answer correctly, and you get a bonus on your catch roll. First Fuzzball: Playful. It's bouncing around, chasing its own tail. What neurotransmitter drives playful behavior?
+
+**Horli Qwin:** [rolls CHA Performance] 18. Plus 3 is 21. [out of character] Dopamine. The reward neurotransmitter. Playful behavior is driven by dopaminergic signaling in the nucleus accumbens. [in character] , eng, dopamine, ... tx, 多巴胺, duō bā àn, ... xt, C8H11NO2. The , eng, reward neurotransmitter, ... tx, 奖励神经递质, jiǎng lì shén jīng dì zhì, ... xt, Playful behavior is driven by dopaminergic signaling in the , eng, nucleus accumbens, ... tx, 伏隔核, fú gé hé, ... xt, Dopamine binds to D1 and D2 receptors — G-protein coupled receptors. D1 increases cAMP. D2 decreases cAMP. The playful Fuzzball has high dopamine — it wants to play, chase, and interact. I'll use CHA Persuasion — offer it a treat and sweet talk.
+
+**Mother Tmojizu:** 21. Correct. Dopamine is right. +2 bonus on your catch roll. Roll CHA Persuasion.
+
+**Horli Qwin:** [rolls] 19. Plus 3 plus 2 is 24. [in character] Hey little buddy, you wanna play? I got a temporal treat right here. Come on, come to Horli.
+
+**Mother Tmojizu:** 24. The Playful Fuzzball jumps right into your arms. It's 🔴 Red element, 438 Hz (excited). 1 point base. Now — Sol-Supreme. Wise Fuzzball. Sitting on top of a gravity well, observing. What neurotransmitter is associated with wisdom and observation?
+
+**Sol-Supreme:** [rolls INT Arcana] 20. Plus 4 is 24. NATURAL 20. [out of character] Serotonin. 5-HT. Regulates mood, cognition, and observation. High serotonin is associated with calm, observant states. [in character] , eng, serotonin, ... tx, 血清素, xuè qīng sù, ... xt, 5-hydroxytryptamine, C10H12N2O. The , eng, mood and cognition neurotransmitter, ... tx, 情绪和认知神经递质, qíng xù hé rèn zhī shén jīng dì zhì, ... xt, High serotonin is associated with calm, observant states. The Wise Fuzzball is in a high-serotonin state — it's watching, analyzing, waiting. It won't be caught with treats or stealth. It wants intellectual engagement. I'll use WIS Insight — solve its puzzle.
+
+**Mother Tmojizu:** NATURAL 20. Serotonin is correct. +2 bonus. Roll WIS Insight.
+
+**Sol-Supreme:** [rolls] 18. Plus 1 plus 2 is 21. The Wise Fuzzball shows me a molecular structure. It's asking me to identify it. Benzene ring with a carboxyl group and a hydroxyl group para to each other. That's p-hydroxybenzoic acid. C7H6O3. A precursor to parabens.
+
+**Mother Tmojizu:** 21. Correct. The Wise Fuzzball nods and jumps into your arms. ⚫ Black element, 430 Hz. 2 points base + 1 bonus for rare temperament. CHARA — Aggressive Fuzzball. Charging at you, firing temporal static. What neurotransmitter?
+
+**CHARA:** [rolls INT Investigation] 19. Plus 3 is 22. [out of character] Norepinephrine. The fight-or-flight neurotransmitter. Aggressive behavior is driven by noradrenergic signaling in the amygdala and locus coeruleus. [in character] , eng, norepinephrine, ... tx, 去甲肾上腺素, qù jiǎ shèn shàng xiàn sù, ... xt, C8H11NO3. The , eng, fight-or-flight neurotransmitter, ... tx, 战斗或逃跑神经递质, zhàn dòu huò táo pǎo shén jīng dì zhì, ... xt, Aggressive behavior is driven by noradrenergic signaling in the , eng, amygdala, ... tx, 杏仁核, xìng rén hé, ... xt, and , eng, locus coeruleus, ... tx, 蓝斑核, lán bān hé, ... xt, The Aggressive Fuzzball has high norepinephrine — it's in fight mode. I need to assert dominance. INT Intimidation. I won't flinch. I'll create a temporal shield and stand my ground.
+
+**Mother Tmojizu:** 22. Correct. Norepinephrine is right. +2 bonus. Roll INT Intimidation.
+
+**CHARA:** [rolls] 17. Plus 3 plus 2 is 22. I activate my temporal shield. I stare at the Fuzzball. I don't move. I don't blink. I am the wall.
+
+**Mother Tmojizu:** 22. The Aggressive Fuzzball charges, hits your shield, bounces off, and realizes you're not prey. It calms down. Jumps into your arms. 🔵 Blue element, 425 Hz. 2 points base + 1 bonus. IQabella — Sleepy Fuzzball. Napping in a warm nest. What neurotransmitter?
+
+**IQabella:** [rolls WIS Medicine] 20. Plus 3 is 23. NATURAL 20. [out of character] GABA. Gamma-aminobutyric acid. The inhibitory neurotransmitter. High GABA = sedation, sleep, relaxation. [in character] , eng, GABA, ... tx, γ-氨基丁酸, γ ān jī dīng suān, ... xt, C4H9NO2. The , eng, inhibitory neurotransmitter, ... tx, 抑制性神经递质, yì zhì xìng shén jīng dì zhì, ... xt, GABA binds to GABA-A receptors — ligand-gated chloride channels. When GABA binds, Cl− flows into the neuron, hyperpolarizing it, making it less likely to fire. This causes , eng, sedation, ... tx, 镇静, zhèn jìng, ... xt, , eng, sleep, ... tx, 睡眠, shuì mián, ... xt, , eng, relaxation, ... tx, 放松, fàng sōng, ... xt, The Sleepy Fuzzball has high GABA. I won't disturb it. I'll wait. I'll prepare a warm temporal treat at exactly 432 Hz. When it wakes up naturally, it'll walk right into my arms.
+
+**Mother Tmojizu:** NATURAL 20. GABA is correct. +2 bonus. Roll WIS Medicine.
+
+**IQabella:** [rolls] 19. Plus 3 plus 2 is 24. I sit quietly. I warm the treat to 432 Hz. The Fuzzball wakes up, smells the treat, crawls into my lap, and purrs at exactly 432 Hz. Perfect health.
+
+**Mother Tmojizu:** 24. The Sleepy Fuzzball is 🟢 Green, 432 Hz. 1 point base. But the NAT 20 means it bonds with you temporarily — it won't escape. Now — THROW. The rings are drifting. Horli, your Fuzzball is 🔴 Red. The 🔴 Red ring is at 3 o'clock. The 🔵 Blue ring (opposite) is at 9 o'clock. What's your play?
+
+**Horli Qwin:** [rolls DEX Throwing] 17. Plus 3 is 20. I'm going for the opposite. 3 points. I bounce it off a mirror wall, through a temporal geyser, and INTO the 🔵 Blue ring!
+
+**Mother Tmojizu:** 20. The 🔴 Red Fuzzball bounces off the mirror wall, gets launched by the geyser, and finds the 🔵 Blue ring. 3 points! CHARA?
+
+**CHARA:** [rolls DEX Throwing] 16. Plus 3 is 19. My Fuzzball is 🔵 Blue. I'll go for the 🔴 Red ring (opposite) — 3 points. I calculate the trajectory accounting for the gravity well's pull.
+
+**Mother Tmojizu:** 19. The gravity well pulls your throw slightly off course — but you compensated. The 🔵 Blue Fuzzball sails through the 🔴 Red ring. 3 points! Sol-Supreme?
+
+**Sol-Supreme:** [rolls DEX Throwing] 15. Plus 0 is 15. My Fuzzball is ⚫ Black. I'll go for the ⚪ White ring (opposite) — 3 points. I use the conveyor belt's motion to add velocity to my throw.
+
+**Mother Tmojizu:** 15. The conveyor belt helps. The ⚫ Black Fuzzball goes through the ⚪ White ring. 3 points! IQabella?
+
+**IQabella:** [rolls DEX Throwing] 18. Plus 0 is 18. My Fuzzball is 🟢 Green. I'll go for the matching 🟢 Green ring — safer, 2 points. I aim carefully.
+
+**Mother Tmojizu:** 18. Perfect throw. The 🟢 Green Fuzzball sails through the 🟢 Green ring. The ring glows brighter. 2 points. Final score: CHARA 6, Sol-Supreme 6, Horli 4, IQabella 3. But IQabella has a bonded Fuzzball, so she considers that a win.
+
+**IQabella:** I absolutely consider that a win.
+
+---
+
+## SCENE 5: IMPERIAL DINING HALL — LUNCH & CHEMISTRY REVIEW
+
+**Mother Tmojizu:** Lunch. Imperial Dining Hall. Floating lanterns. Lazy susan tables. While you eat, I'm going to test everything you learned this session. Rapid fire. No rolls. Just knowledge.
+
+**中文老师:** , eng, lunch, ... tx, 午餐, wǔ cān, ... xt, , eng, rice, ... tx, 米饭, mǐ fàn, ... xt, , eng, noodles, ... tx, 面条, miàn tiáo, ... xt, , eng, fish, ... tx, 鱼, yú, ... xt, , eng, chicken, ... tx, 鸡肉, jī ròu, ... xt, , eng, tofu, ... tx, 豆腐, dòu fu, ... xt, , eng, soup, ... tx, 汤, tāng, ... xt, , eng, chopsticks, ... tx, 筷子, kuài zi, ... xt, , eng, bowl, ... tx, 碗, wǎn, ... xt, , eng, plate, ... tx, 盘子, pán zi, ... xt,
+
+**Mother Tmojizu:** Question 1: What is the quark composition of a proton?
+
+**Sol-Supreme:** uud. Two up quarks, one down quark. Charge: +2/3 + 2/3 - 1/3 = +1.
+
+**Mother Tmojizu:** Question 2: What is the bond order of O2?
+
+**CHARA:** O2 has 12 valence electrons. σ(2s)² σ*(2s)² σ(2p)² π(2p)⁴ π*(2p)². Bond order = (8 - 4) / 2 = 2. Double bond. Paramagnetic because of two unpaired electrons in π*(2p).
+
+**Mother Tmojizu:** Question 3: What is the mechanism of acetaminophen?
+
+**IQabella:** COX-2 inhibitor in the central nervous system. Reduces prostaglandin synthesis. Minimal COX-1 inhibition — no gastric ulcers. Overdose causes NAPQI accumulation, which depletes glutathione and causes hepatotoxicity.
+
+**Mother Tmojizu:** Question 4: What is Km?
+
+**Sol-Supreme:** The Michaelis constant. Substrate concentration at half Vmax. Measures enzyme affinity. Lower Km = higher affinity.
+
+**Mother Tmojizu:** Question 5: What are the three types of enzyme inhibition and their effects on Km and Vmax?
+
+**CHARA:** Competitive: Km increases, Vmax unchanged. Noncompetitive: Km unchanged, Vmax decreases. Uncompetitive: both Km and Vmax decrease proportionally.
+
+**Mother Tmojizu:** Question 6: What is Lipinski's Rule of 5?
+
+**IQabella:** A drug is likely to have poor oral absorption if: MW > 500, H-bond donors > 5, H-bond acceptors > 10, logP > 5. Two or more violations = poor absorption.
+
+**Mother Tmojizu:** Question 7: What neurotransmitter drives playful behavior?
+
+**Horli Qwin:** Dopamine. C8H11NO2. Nucleus accumbens. D1 and D2 receptors.
+
+**Mother Tmojizu:** Question 8: What holds keratin together? Name all four forces.
+
+**Sol-Supreme:** Peptide bonds (primary). Hydrogen bonds (secondary — alpha helices, beta sheets). Disulfide bridges (tertiary — covalent S-S bonds). Van der Waals forces (quaternary packing).
+
+**Mother Tmojizu:** Question 9: What is the chemical formula for glucose?
+
+**IQabella:** C6H12O6. Aldohexose. Six carbons, aldehyde group, five hydroxyl groups. Exists primarily as a pyranose ring in solution.
+
+**Mother Tmojizu:** Question 10: What is the drug discovery pipeline?
+
+**CHARA:** Target identification → crystal structure → computational docking → lead compound → ADME optimization → Phase 1 (safety) → Phase 2 (efficacy) → Phase 3 (large-scale) → NDA → approval.
+
+**Mother Tmojizu:** 10 for 10. Across all four of you. That's MCAT-level chemistry. You're ready.
+
+---
+
+## SCENE 6: FUZZPET SANCTUARY — EVENING WINDOWN
+
+**Mother Tmojizu:** Evening. Fuzzpet Sanctuary. The temporal heating lamps are on. Fuzzballs are purring. You've earned a quiet moment. Practice your Chinese. Reflect on what you learned.
+
+**中文老师:** , eng, evening, ... tx, 晚上, wǎn shang, ... xt, , eng, quiet, ... tx, 安静, ān jìng, ... xt, , eng, purr, ... tx, 呼噜, hū lū, ... xt, , eng, warm, ... tx, 温暖, wēn nuǎn, ... xt, , eng, friend, ... tx, 朋友, péng yǒu, ... xt, , eng, happy, ... tx, 开心, kāi xīn, ... xt, , eng, learn, ... tx, 学习, xué xí, ... xt, , eng, today, ... tx, 今天, jīn tiān, ... xt, , eng, tomorrow, ... tx, 明天, míng tiān, ... xt, , eng, good night, ... tx, 晚安, wǎn ān, ... xt,
+
+**Horli Qwin:** [out of character] I learned more chemistry today than in my entire life. And I rapped about dopamine. [in character] , eng, dopamine, ... tx, 多巴胺, duō bā àn, ... xt, C8H11NO2. , eng, today, ... tx, 今天, jīn tiān, ... xt, I learned a lot. , eng, happy, ... tx, 开心, kāi xīn, ... xt,
+
+**CHARA:** [out of character] I can now describe protein structure from primary to quaternary. And I designed a drug. [in character] , eng, peptide bond, ... tx, 肽键, tài jiàn, ... xt, , eng, hydrogen bond, ... tx, 氢键, qīng jiàn, ... xt, , eng, disulfide bridge, ... tx, 二硫键, èr liú jiàn, ... xt, , eng, van der Waals, ... tx, 范德华力, fàn wá huá lì, ... xt, Four forces. I'll never forget them.
+
+**Sol-Supreme:** [out of character] Molecular orbital theory, Michaelis-Menten kinetics, the full drug discovery pipeline. This is graduate-level chemistry. [in character] , eng, molecular orbital, ... tx, 分子轨道, fēn zǐ guǐ dào, ... xt, , eng, bonding, ... tx, 成键, chéng jiàn, ... xt, , eng, antibonding, ... tx, 反键, fǎn jiàn, ... xt, , eng, Michaelis-Menten, ... tx, 米氏方程, mǐ shì fāng chéng, ... xt, , eng, drug design, ... tx, 药物设计, yào wù shè jì, ... xt, I can build a chemical simulation from these abstractions. Atomic orbitals → molecular orbitals → binding energy → lead compound → ADME. It's all connected.
+
+**IQabella:** [out of character] I diagnosed Fuzzballs by purr frequency, synthesized glucose, and described the full pharmacokinetic pipeline. I'm a Fuzzball pharmacist. [in character] , eng, glucose, ... tx, 葡萄糖, pú táo táng, ... xt, C6H12O6. , eng, absorption, ... tx, 吸收, xī shōu, ... xt, , eng, distribution, ... tx, 分布, fēn bù, ... xt, , eng, metabolism, ... tx, 代谢, dài xiè, ... xt, , eng, excretion, ... tx, 排泄, pái xiè, ... xt, ADME. I'll carry this forever.
+
+**Mother Tmojizu:** [out of character] That's Session 2. You've covered quark composition, molecular orbital theory, protein structure, reaction mechanisms, enzyme kinetics, drug design, pharmacokinetics, neurotransmitters, and Stardustball. Next session: Chronoment building, integrated crisis, final exam, dorm party, graduation. [in character] Rest well, ducklings. Tomorrow is the final exam. And the dorm party. And the graduation. And the end of your training. You're almost ready.
+
+**中文老师:** , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, good night, ... tx, 晚安, wǎn ān, ... xt, , eng, dream, ... tx, 梦, mèng, ... xt, , eng, sleep, ... tx, 睡觉, shuì jiào, ... xt, , eng, tomorrow, ... tx, 明天, míng tiān, ... xt, , eng, final exam, ... tx, 期末考试, qī mò kǎo shì, ... xt, , eng, graduation, ... tx, 毕业, bì yè, ... xt,
+
+**Mother Tmojizu:** , eng, 加油, ... tx, 加油, jiā yóu, ... xt, ducklings. Add oil. Keep going. You're almost there.
+
+---
+
+**[END OF FU D&D SESSION 2 — ELEMENTS, FUZZPETS & STARDUSTBALL]**
+**Session Score: CHARA 6, Sol-Supreme 6, Horli Qwin 4, IQabella 3 (but has bonded Fuzzball)**
+**Chemistry Covered: Quark composition (uud, udd), temporal signatures, molecular orbital theory (σ, σ*, bond order), H2O sp³ hybridization, keratin four forces (peptide/H-bond/disulfide/vdW), reaction mechanisms (SN1/SN2/nucleophilic addition/elimination), acetaminophen synthesis C8H9NO2, COX mechanism, Michaelis-Menten kinetics, enzyme inhibition (competitive/noncompetitive/uncompetitive), drug design pipeline (crystal structure → docking → lead → ADME), Lipinski's Rule of 5, pharmacokinetics (ADME), cytochrome P450, tetrodotoxin C11H17N3O8 antidote design, neurotransmitters (dopamine C8H11NO2, serotonin C10H12N2O, norepinephrine C8H11NO3, GABA C4H9NO2), glucose C6H12O6**
+**Chinese Vocabulary: ~80 words — particle physics, organic chemistry, pharmacology, neurotransmitters, food, evening**
+**Locations Visited: Time Dojo Classroom, Pharma-Chem Lab, PE Arena (Stardustball), Imperial Dining Hall, Fuzzpet Sanctuary**
+**Next: Session 3 — Simulations, Lawsuits & The Market**
+**ϕ**

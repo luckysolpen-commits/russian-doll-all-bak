@@ -1,0 +1,352 @@
+# TPMOJIO — Business & Marketing Plan
+## "The Board Remembers" — Audio D&D Sessions as Lead Magnets
+
+---
+
+## 1. Product Overview
+
+**What we have:**
+- 10 TPMOJIO D&D sessions + 1 Rematch = 11 multi-voice audio files
+- Sessions tell a complete story arc: draft → domination → empathy → counters → resolution
+- Each session is 2-9 minutes of edge-tts multi-voice audio (5 distinct character voices)
+- Unique IP: board game meets D&D meets emotional storytelling
+- The Nihilator arc alone is a compelling narrative hook
+
+**What makes it special:**
+- Not combat porn — it's about a monster that learns to feel
+- Five distinct voices (DM, CHARA, Sol-Supreme, IQabella, Horli Qwin)
+- Real gameplay with real dice rolls embedded in narrative
+- The "board remembers" motif — kintsugi cracks, sanctuary zones, tea parties
+- Horli Qwin's escalating emotional breakdowns ("I lost to tea")
+
+---
+
+## 2. Core Strategy: Tease → Capture → Nurture → Convert
+
+### Phase 1: TEASE (Social Media — Free Reach)
+
+**Goal:** Get people curious enough to click the link.
+
+**Tactics:**
+
+#### A. Audio Clips (15-60 seconds)
+Pull the most viral-worthy moments from sessions:
+
+| Clip | Session | Duration | Hook |
+|------|---------|----------|------|
+| "I lost to tea" | Rematch | 15s | Horli Qwin's defeat line |
+| "It killed the flower" | Rematch | 20s | Nihilator's first moment of unintended harm |
+| "It heard itself" | Rematch | 25s | Alpha Sinder reflecting the Nihilator's frequency |
+| "The Nihilator has a soul" | Session 3 | 20s | IQabella's discovery moment |
+| "It's lonely" | Rematch | 30s | Patch discovering the hollow gap |
+| "My Clown just defected" | Session 4 | 15s | Horli Qwin's comedic timing |
+| "IT'S BEING FINED TO DEATH?!" | Rematch | 10s | Pure comedic gold |
+| "The board remembers" | Session 10 | 30s | Emotional finale |
+| Nihilator speaks (first time) | Session 6 | 20s | "I'm not ready. I'm still hungry. But not for souls." |
+| "Ember" reveal | Session 7 | 30s | Nihilator remembers it was a Fuzzball |
+
+**Platform strategy:**
+- **YouTube Shorts** — vertical video with static image + audio clip + subtitles
+- **TikTok** — same format, trending audio underneath at low volume
+- **X/Twitter** — audio clip + transcript screenshot + link
+- **Reddit** — r/DnD, r/TTRPG, r/actualplay, r/audiobooks (story-first posts, not promotional)
+- **Instagram Reels** — same as Shorts
+
+#### B. Character Portrait Posts
+Each of the 5 players gets a "character card" post:
+- Horli Qwin — Tabaxi bard, chaos agent, secretly soft
+- CHARA — paranoid clone, weaponizes law and finance
+- Sol-Supreme — artificer, builds things that feel
+- IQabella — cyborg cleric, wins with tea
+- DM (Mother Tmojizu) — warm, terrifying, calls everyone "ducklings"
+
+#### C. "The Board Remembers" Art Series
+Post images of the board's evolution:
+- Session 1: cracked earth, gold-filled scars
+- Session 5: garden growing in the cracks
+- Session 10: full sanctuary zone, waterfall, tea party
+- Rematch: kintsugi stained-glass board
+
+#### D. Quote Cards
+Pull the best lines as text-on-image:
+- "Don't pick the Nihilator unless you have a full support team. And even then... maybe just pick tea."
+- "The law is stronger than the sword. And fines are deadlier than blades."
+- "Healing isn't always gentle. Sometimes it's a weapon."
+- "The board doesn't need to be conquered. It just needs to be warm."
+
+---
+
+### Phase 2: CAPTURE (CRM Signup — The Gate)
+
+**Goal:** Get email + basic data in exchange for full sessions.
+
+**The Gate Strategy:**
+
+#### Option A: Free Sample → Full Access (Recommended)
+- **Free:** Sessions 1-2 available publicly (YouTube, podcast platforms)
+- **Gated:** Sessions 3-10 + Rematch require signup
+- **Landing page:** "The Nihilator Arc" — sessions 3-7 as a complete story bundle
+- **CTA:** "Want to know what happens to the Nihilator? Sign up. It's free."
+
+#### Option B: Episode-by-Episode Drip
+- Each session release requires signup
+- After signup, unlock all previous sessions automatically
+- Creates FOMO: "Session 7 just dropped. You're on Session 3. Catch up."
+
+#### Option C: Tiered Access
+- **Free tier:** Sessions 1-5 (email signup)
+- **Supporter tier:** All sessions + bonus content (Patreon/Ko-fi)
+- **Creator tier:** Raw session transcripts + behind-the-scenes + voting on next game
+
+**CRM Data to Collect (minimum viable):**
+- Email (required)
+- Name (optional, for personalization)
+- How they found us (dropdown: TikTok, YouTube, Reddit, Friend, Other)
+- Interest tags (checkboxes): D&D, Board Games, Audio Drama, AI Voice, Storytelling
+
+**CRM Platform Options:**
+- **ConvertKit** — best for creators, free up to 1,000 subs
+- **Beehiiv** — newsletter + landing pages, built-in referral program
+- **Mailchimp** — familiar, free tier available
+- **Self-hosted** (Listmonk) — full control, more work
+
+**Recommended: ConvertKit** — simplest for this use case. Landing page + email automation + tags.
+
+---
+
+### Phase 3: NURTURE (Email Sequences)
+
+**Goal:** Keep them engaged, build anticipation, turn listeners into fans.
+
+#### Welcome Sequence (Automated, 5 emails over 10 days)
+
+**Email 1 — Immediate: "Welcome to the Board"**
+- Thank you + link to Session 3
+- Brief intro: "What is TPMOJIO?"
+- One quote: "The board remembers."
+- CTA: Listen to Session 3
+
+**Email 2 — Day 2: "The Nihilator Has a Soul"**
+- Context: "Last time, the Nihilator was dominating. Now something's changing."
+- Link to Session 4
+- Behind-the-scenes: how multi-voice audio works
+- CTA: Listen to Session 4
+
+**Email 3 — Day 4: "It's Lonely"**
+- The emotional core: "Patch found something unexpected..."
+- Link to Session 5
+- Character spotlight: Horli Qwin
+- CTA: Listen to Session 5
+
+**Email 4 — Day 7: "Ember"**
+- The reveal: "The Nihilator wasn't always the Nihilator."
+- Link to Sessions 6-7
+- Ask for reply: "What did you think when Ember spoke?"
+- CTA: Listen to Sessions 6-7
+
+**Email 5 — Day 10: "The Board Remembers"**
+- The finale: "Session 10. The last round."
+- Link to Sessions 8-10
+- Survey: "What should we play next?"
+- CTA: Listen to the finale + tell us what's next
+
+#### Ongoing Newsletter (Bi-weekly)
+- New session releases
+- Behind-the-scenes: how sessions are created
+- Character deep-dives
+- Fan art / community highlights
+- "What we're playing next" polls
+- Cross-promote: Sol Pen audiobook chapters
+
+---
+
+### Phase 4: CONVERT (Monetization Paths)
+
+**Goal:** Turn engaged listeners into supporters.
+
+#### Revenue Stream 1: Patreon / Ko-fi
+- **$3/mo:** Early access to new sessions + bonus content
+- **$7/mo:** Vote on next game + raw transcripts + character sheets
+- **$15/mo:** Monthly live session (you play, they watch) + name in session credits
+
+#### Revenue Stream 2: YouTube Ad Revenue
+- Upload sessions as full-length videos with static/slideshow art
+- Shorts drive traffic to full videos
+- TPMOJIO is "actualplay" content — growing niche on YouTube
+
+#### Revenue Stream 3: Merch (Later)
+- "The Board Remembers" poster
+- "I Lost to Tea" mug
+- Character cards (physical printables)
+- Nihilator plush (grey, glowing)
+
+#### Revenue Stream 4: Licensing (Much Later)
+- TPMOJIO as an actual board game
+- Digital version (Tabletop Simulator, Tabletopia)
+- Print-and-play PDF
+
+---
+
+## 3. Accompanying Content (Per Session)
+
+Each session release should include:
+
+### Minimum:
+- **Audio file** (the MP3 we've generated)
+- **Session summary** (2-3 paragraphs, spoiler-free)
+- **Character spotlight** (which character shone this session)
+- **Best quote** from the session
+- **Link to previous sessions** (for new listeners)
+
+### Ideal:
+- **Session transcript** (the .txt file, cleaned up)
+- **Board state diagram** (simple text or image showing piece positions)
+- **Behind-the-scenes note** (how the session was created, funny OOC moments)
+- **Next session teaser** (1-2 sentences, no spoilers)
+- **Fan engagement prompt** ("What would YOU have done with the Nihilator?")
+
+### Bonus:
+- **Character art** (AI-generated portraits for this session's key moments)
+- **Soundtrack** (background music used during the session, if any)
+- **Rules explainer** (for complex TPMOJIO mechanics mentioned)
+- **Post-session interview** (players react to what happened)
+
+---
+
+## 4. Social Media Posting Schedule
+
+### Week 1-2: Launch
+| Day | Platform | Content |
+|-----|----------|---------|
+| Mon | YouTube | Session 1 (full, public) |
+| Mon | YouTube | Session 2 (full, public) |
+| Tue | TikTok/Shorts | "I lost to tea" clip |
+| Wed | Twitter/X | Quote card: "The board remembers" |
+| Thu | Reddit | r/DnD post: "We played a board game D&D campaign and the monster learned to feel" |
+| Fri | TikTok/Shorts | "It killed the flower" clip |
+| Sat | Landing page | "Sign up for Sessions 3-10" goes live |
+| Sun | Email | Welcome sequence starts |
+
+### Week 3-6: Drip
+| Week | Release | Social Push |
+|------|---------|-------------|
+| 3 | Sessions 3-4 (gated) | "The Nihilator Arc begins" |
+| 4 | Sessions 5-6 (gated) | "Patch finds something unexpected" |
+| 5 | Sessions 7-8 (gated) | "Ember speaks" |
+| 6 | Sessions 9-10 + Rematch (gated) | "The Board Remembers — finale" |
+
+### Ongoing:
+- 2-3 Shorts/TikToks per week (pull from existing audio)
+- 1 Twitter/X post per day (quotes, art, behind-the-scenes)
+- 1 Reddit post per week (different subreddit each time)
+- Bi-weekly newsletter email
+
+---
+
+## 5. Landing Page Copy (Draft)
+
+```
+THE BOARD REMEMBERS
+TPMOJIO — A Board Game D&D Audio Drama
+
+Four players. One board. A monster that learns to feel.
+
+TPMOJIO is a board game played as D&D. Each session, four players 
+draft game pieces and play them on a shared board. But the board 
+remembers everything. And the pieces... the pieces start to feel.
+
+🎧 11 sessions of multi-voice audio drama
+🎲 Real dice rolls, real strategy, real emotions
+🫖 Someone wins with tea. Someone gets fined to death. 
+   Someone's monster learns its own name.
+
+Start listening. It's free.
+
+[EMAIL INPUT] [SIGN UP]
+
+Already have an account? Listen here →
+
+---
+
+What people are saying:
+"I lost to tea. I have never been happier." — Horli Qwin, probably
+
+"The most beautiful thing I've ever played." — Every player, eventually
+
+"The Nihilator wasn't overpowered. It was just misunderstood." 
+— Mother Tmojizu, DM
+```
+
+---
+
+## 6. Metrics to Track
+
+| Metric | Target (Month 1) | Target (Month 3) |
+|--------|-----------------|-----------------|
+| Email subscribers | 100 | 500 |
+| YouTube views (Session 1) | 500 | 2,000 |
+| TikTok/Shorts views | 1,000 | 10,000 |
+| Email open rate | 40%+ | 35%+ |
+| Email click rate | 15%+ | 10%+ |
+| Patreon supporters | 5 | 25 |
+| Reddit upvotes | 100+ | 500+ |
+
+---
+
+## 7. Next Steps (Immediate)
+
+1. **Set up ConvertKit** (or chosen CRM) — landing page + welcome sequence
+2. **Create social media accounts** (YouTube, TikTok, X) if not existing
+3. **Upload Sessions 1-2** to YouTube (public) as proof of quality
+4. **Build landing page** with email capture
+5. **Create 5-10 short clips** from the best moments
+6. **Write welcome email sequence** (5 emails drafted above)
+7. **Launch** — post Session 1-2 publicly, gate 3-10 behind signup
+8. **Post to Reddit** — r/DnD story post about the Nihilator arc
+9. **Cross-promote** — mention TPMOJIO in Sol Pen audiobook releases
+10. **Track everything** — adjust based on what clips perform best
+
+---
+
+## 8. Sol Pen Audiobook Cross-Promotion
+
+TPMOJIO and Sol Pen share the same universe and audience:
+- Same DM voice (Mother Tmojizu / en-US-JennyNeural)
+- Same players (CHARA, Sol-Supreme, IQabella, Horli Qwin)
+- TPMOJIO listeners → Sol Pen audiobook subscribers
+- Sol Pen readers → TPMOJIO listeners
+
+**Cross-promo tactics:**
+- End of each Sol Pen chapter: "Want to hear these characters play a board game? Try TPMOJIO."
+- End of each TPMOJIO session: "Want to hear Lucky's story? Listen to Sol Pen Book 0."
+- Shared landing page: "The Sol Pen Universe — Audio Drama"
+- Bundle offer: "Sign up once, get both."
+
+---
+
+## 9. Risks & Mitigations
+
+| Risk | Mitigation |
+|------|-----------|
+| Low signup rate | A/B test landing page copy, try different hooks |
+| Audio quality complaints | Already solved — edge-tts is high quality |
+| Not enough content | 11 sessions is a solid start; plan Season 2 |
+| People share gated content | Accept it — free distribution is still marketing |
+| CRM costs scale up | Start free, migrate to self-hosted if needed |
+| AI voice stigma | Lead with story quality, not tech novelty |
+
+---
+
+## 10. Long-Term Vision
+
+**Season 1:** TPMOJIO Sessions 1-10 + Rematch (DONE — audio complete)
+**Season 2:** New TPMOJIO campaign with new pieces, new board, new story
+**Season 3:** Crossover — TPMOJIO pieces enter the Sol Pen universe
+**Spin-off:** "The Board Remembers" — solo audio stories from individual pieces
+**Physical:** TPMOJIO print-and-play board game
+**Community:** Fans submit their own TPMOJIO sessions, we produce the best ones
+
+---
+
+*The board remembers. The spiral turns. The pieces remember.*
+*ϕ*

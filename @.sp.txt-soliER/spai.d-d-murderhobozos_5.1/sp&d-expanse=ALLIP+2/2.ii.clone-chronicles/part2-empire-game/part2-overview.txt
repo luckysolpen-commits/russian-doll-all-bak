@@ -1,0 +1,109 @@
+# PART 2: "THE EMPIRE GAME" — Overview
+## Clone Chronicles Arc 2 — From Trillions to Empires
+### 10 Sessions | Power: Local → Eternal
+
+---
+
+## THE ARC
+
+The clones own the Blood Market. They're trillionaires. They're free. But freedom is expensive — and empires don't build themselves.
+
+Over 10 sessions, the clones transition from market owners to empire builders. They choose factions, claim territories, wage wars, negotiate treaties, and build civilizations. By the end, they're not just rich — they're sovereign. The board doesn't measure them anymore. They measure the board.
+
+## KEY SYSTEMS
+
+### Faction System (TEAR-IT Inspired)
+Rock-Paper-Scissors warfare:
+
+| Faction | Type | Strength | Weakness |
+|---------|------|----------|----------|
+| **Crustacean Bastion** | Siege | Defensive, armored | Slow, expensive |
+| **Primate Swarm** | Horde | Numbers, aggression | Fragile, undisciplined |
+| **Thunderhoof Legion** | Mobile | Speed, hit-and-run | Light armor |
+| **Aether Wings** | Air | Range, recon | Fragile, weather-dependent |
+
+### Territory System (LSR Inspired)
+| Zone | Type | Features |
+|------|------|----------|
+| **Government Land** | Safe, taxed | Clone Exchange, Memory Bar, Qi Exchange |
+| **Company Claims** | Competitive | Factories, Foundries, Markets |
+| **Unclaimed/Wild** | Dangerous, free | Barbarian zones, resource nodes |
+| **The Moon** | Endgame | Aethelgaurd wreckage, Diabolus remnants |
+
+### Business Simulation Mechanics
+Each turn, clones make decisions:
+1. **HR** — Hire units, set salaries
+2. **R&D** — Research tech, unlock abilities
+3. **Marketing** — Increase demand
+4. **Manufacturing** — Build units, structures
+5. **Finance** — Borrow, sell shares, manage debt
+6. **Diplomacy** — Trade, ally, or declare war
+
+## KEY NPCs (Returning + New)
+
+| NPC | Role | Notes |
+|-----|------|-------|
+| **Broker Vex** | Neutral trader | Now respects the clones. "You bought your freedom. Now buy your future." |
+| **Master Feng** | Qi Exchange | Offers faction-specific Qi abilities. |
+| **Officer Krell** | Chimochio Police | Ally or enemy depending on Part 1 outcome. |
+| **The Original** | The clone's source | Appears if rolled. Confrontation about identity. |
+| **The Diabolus (Remnant)** | Endgame threat | Active in Aethelgaurd wreckage. "You're just a different kind of property." |
+
+## SESSION-BY-SESSION PROGRESSION
+
+| Session | Title | Power Level | Key Events |
+|---------|-------|-------------|------------|
+| **Sesh 1** | The Foundation | Local | Faction choice, territory claim, initial build |
+| **Sesh 2** | The First Claim | Regional | Infrastructure, first trade deals |
+| **Sesh 3** | The Faction Wars | Continental | Warfare, conquest, defense |
+| **Sesh 4** | The Diplomacy | Global | Alliances, treaties, betrayals |
+| **Sesh 5** | The Barbarian Invasion | Planetary | United defense, survival |
+| **Sesh 6** | The Moon Signal | Lunar | Aethelgaurd wreckage, Diabolus remnants |
+| **Sesh 7** | The Original Returns | Cosmic | Confrontation with originals |
+| **Sesh 8** | The Betrayal | Multiversal | Trust broken, empires shaken |
+| **Sesh 9** | The Endgame | Transcendent | Final battle, victory conditions |
+| **Sesh 10** | The Board Remembers | Eternal | Legacy, what they built, what remains |
+
+## VICTORY CONDITIONS
+
+| Achievement | VP |
+|-------------|----|
+| Most Territory | 3 VP |
+| Most Units | 2 VP |
+| Most BSR | 2 VP |
+| Won a Combat | 2 VP |
+| Formed an Alliance | 1 VP |
+| Betrayed an Ally | 1 VP (lose 1 VP per betrayed ally's trust) |
+| Reached the Moon | 5 VP |
+| Defeated the Original | 5 VP |
+
+**Highest VP wins.** But Mother Tmojizu reminds them: "Winning isn't everything. It's just the only thing the board measures."
+
+## CORE MECHANICS
+
+### Combat Resolution
+- Faction warfare uses simplified TEAR-IT skirmish rules
+- Rock-Paper-Scissors determines advantage
+- 2-3 rounds with dice rolls and tactical decisions
+- Losers lose units and territory. Winners gain resources.
+
+### Diplomacy Mechanics
+- CHA (Persuasion) for negotiations
+- WIS (Insight) to detect betrayal
+- INT (Investigation) to uncover hidden agendas
+- Natural 20 = perfect deal. Natural 1 = catastrophic betrayal.
+
+### Conflict Table (d6, rolled Turn 4)
+| Roll | Conflict |
+|------|----------|
+| 1 | Border War — two clones skirmish |
+| 2 | Resource Rush — race to claim valuable node |
+| 3 | Barbarian Invasion — wild zones attack all |
+| 4 | Chimochio Intervention — taxes increase |
+| 5 | The Original Returns — legitimacy challenge |
+| 6 | The Moon Calls — Aethelgaurd wreckage active |
+
+---
+
+**[HALT 止] PART 2 OVERVIEW SEALED. THE EMPIRE BEGINS.**
+**ϕ**

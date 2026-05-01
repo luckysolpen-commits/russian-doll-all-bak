@@ -1,0 +1,449 @@
+# AVA-SERVER-0001 — "THE EXPANSE SHARD"
+## World Document / Dungeon Master Reference
+### Avantasy Expanse — Persistent VR-MMORPG D&D World
+
+---
+
+## 1. SERVER OVERVIEW
+
+**Server Name:** Ava-Server-0001 "The Expanse Shard"
+**Server Type:** Persistent VR-MMORPG running on the Avantasy engine (TPMOS v03)
+**Server Age:** ~3 years server-time (~9 months real-time)
+**Active Population:** ~200 player-characters per cycle, thousands of NPCs
+**World State:** Stable (minor breaches detected in Worm Hole X sector)
+**Current Epoch:** The Troll City Era — most players are concentrated in the starter zones
+
+### Server History
+- **Year 0, Month 1:** Server initialized by unknown architect (lore: Sol-Supreme). Troll City spawns as the first settlement.
+- **Year 0, Month 6:** Fairy City floats into existence above Troll City. Rainbow Bridge connection established.
+- **Year 1, Month 3:** First server breach — a Carcazod incursion from the Wastes. Player coalition led by GoldQueen_Astra repels it.
+- **Year 1, Month 8:** The Illegal Furry Server discovered by hackers. Becomes underground hub.
+- **Year 2, Month 2:** LoonaTwilight sacrifices herself to seal a massive breach at Skullmoon Crater. Returns as ghost-paladin.
+- **Year 2, Month 10:** New Atlantis zone unlocked. Underwater expansion begins.
+- **Year 3, Current:** Server stable. New players (the party) arriving. Whispers of a second breach building in the Wastes.
+
+---
+
+## 2. GEOGRAPHY — CONTINENTS & ZONES
+
+### 2.1 TROLL CITY (Levels 1-5) — STARTER ZONE
+
+**Description:** A bustling market town built inside the ribcage of a dead titan. The titan's bones form natural walls — curved white pillars rising 200 feet into the sky. Cobblestone streets wind between timber-and-stone buildings. The air smells of roasted meat, forge smoke, and something faintly magical. Neon signs (ASCII-GL rendered) flicker above shops. The sky above is a perpetual twilight purple, shot through with golden ϕ-spiral auroras.
+
+**Key Locations:**
+
+1. **The Rusty Anchor Tavern**
+   - Owner: Borin Ironmug (dwarf, NPC)
+   - Function: Rest spot, rumor mill, session starting point
+   - Menu: Roasted boar (5sp), Dwarven Ale (2sp), "Borin's Mystery Stew" (1sp — don't ask)
+   - Rooms: 4 available (5cp/night)
+   - Secret: Borin's cellar connects to a smuggler's tunnel leading to the Illegal Furry Server
+
+2. **Gimble's Gear & Steel**
+   - Owner: Gimble Copperfist (gnome, NPC)
+   - Function: Weapons, armor, upgrades
+   - Current Inventory:
+     - Longsword (15gp)
+     - Shortbow + 20 arrows (25gp)
+     - Studded Leather Armor (45gp)
+     - Shield, +1 (150gp — "barely used!")
+     - "Gimble's Special": A rusty helmet he claims belonged to a king (50gp — it did not)
+   - Services: Weapon sharpening (1gp), Armor repair (5gp), "Upgrades" (negotiable, results vary)
+
+3. **The Soul Pen Emporium**
+   - Owner: Madame Zixi (tiefling, NPC)
+   - Function: Soul Pens, ink, Tear-It cards, rare items
+   - Current Inventory:
+     - Soul Pen Mark 0 (basic, 25gp)
+     - Soul Pen Mark 1 (advanced, 100gp)
+     - Nothing Ink Vial (500gp — only 1 in stock)
+     - Tear-It Card Booster Pack (15gp each, 3 available)
+     - Cursed Item: "The Mirror of Maybe" (75gp — shows you an alternate reality where you made better choices)
+   - Secret: Madame Zixi knows who the server architect really is. She won't say. Yet.
+
+4. **The Quest Board**
+   - Location: Central plaza, next to the Healing Spring
+   - Current Postings:
+     - "Giant spiders in the Lost Temple. 500gp + loot." (Medium, Levels 3-5)
+     - "My cat is stuck in a tree. The tree is on fire." (Easy, Levels 1-2, 25gp)
+     - "Carcazod scouts spotted near the east gate. Handle it." (Hard, Levels 5-7, 200gp + faction reputation)
+     - "Seeking brave adventurers for a totally legitimate business venture." — Signed, "Definitely Not a Scam" (Suspicious)
+
+5. **The Magic Tree**
+   - Guardian: Tree-Sage Elowen (ancient elf druid, NPC)
+   - Function: Crafting station, magic item creation, spell learning
+   - Services:
+     - Craft magic items (requires Nothing Ink + gold + time)
+     - Learn new spells (gold cost based on spell level)
+     - Blessing of the Tree (+1 to all spell saves for 24 hours, 10gp donation)
+   - Lore: The Magic Tree is the server's original spawning point. Everything grew from here.
+
+6. **The Healing Spring**
+   - Function: Free HP/MP restoration (once per long rest)
+   - Appearance: A glowing pool of cyan water at the base of a ϕ-spiral stone fountain
+   - Blessed by: The 8 Fuzzball spirits (tiny colored lights dance above the water)
+   - Secret: If you throw a gold coin in and make a wish, the DM *might* give you advantage on your next roll
+
+**Background Players in Troll City (d6 random):**
+1. **SilentBlade42** — Level 3 Rogue, AFK in the corner of the tavern
+2. **HealPlz_99** — Level 4 Cleric, begging for healing tips outside the spring
+3. **xX_DarkMage_Xx** — Level 5 Wizard, showing off a new fire spell in the plaza
+4. **CraftKing_Tim** — Level 2 Artificer, trying to sell homemade potions (they're just colored water)
+5. **PvP_Queen** — Level 6 Fighter, challenging anyone to a duel behind the blacksmith
+6. **LoreMaster_Jen** — Level 7 Bard, telling exaggerated stories about the Carcazod Wars for tips
+
+---
+
+### 2.2 FAIRY CITY (Levels 3-7) — MAGIC ZONE
+
+**Description:** An ethereal floating district suspended above Troll City, connected by the Rainbow Bridge — a shimmering, multi-colored pathway of solid light. Fairy City is all pastel colors, floating gardens, crystalline towers, and soft glowing music. The architecture is impossible — buildings curve in ϕ-spiral patterns, stairs lead to nowhere, and gravity is a suggestion.
+
+**Key Locations:**
+1. **The Arcane Academy** — Where wizards and sorcerers train. Professor Void occasionally lectures here via portal.
+2. **The Enchanter's Row** — Shops selling enchanted items, potions, and spell components.
+3. **The Fuzzball Shrine** — Temple dedicated to the 8 Fuzzball spirits. The Priestess grants blessings and temporary buffs.
+4. **The Rainbow Bridge Tollhouse** — Guarded by a bored angel named Kevin. 5cp toll to cross. Kevin can be bribed with snacks.
+
+**Notable NPC:**
+- **Fuzzball Shrine Priestess** (Aasimar, serene, channels the 8 Fuzzball spirits)
+  - Blessings available (one per long rest):
+    - Crimson's Guard: +2 AC for 1 hour
+    - Ember's Warmth: Resistance to cold damage for 1 hour
+    - Glimmer's Trick: Advantage on one DEX save within the next hour
+    - Verdi's Bloom: Regenerate 1 HP/minute for 10 minutes
+    - Aqua's Depth: Water breathing for 1 hour
+    - Nebula's Dream: Advantage on one INT save within the next hour
+    - Void's Silence: Can't be detected by magical means for 10 minutes
+    - Lumen's Light: Full HP restore (once per week, the Priestess's discretion)
+
+---
+
+### 2.3 THE ILLEGAL FURRY SERVER (Levels 5-10) — UNDERGROUND ZONE
+
+**Description:** A hidden zone accessed through a secret portal in Borin Ironmug's cellar (Troll City). The transition is jarring — from medieval fantasy to neon-lit cyberpunk chaos. Pulsating electronic music, strobe lights, ever-shifting graffiti walls. Avatars of every conceivable design: dragons with galaxy-scale fur, cybernetic felines, abstract geometric beings. This is where the server's hackers, rebels, and freedom-freaks gather.
+
+**Key Locations:**
+1. **The Dance Floor** — Central hub. Players dance, socialize, and show off. ShadowFang's stage is here.
+2. **The Hacker Den** — Back room where firewall exploits and server hacks are discussed. Entry requires a password (changes weekly, currently: "Fuzzball420").
+3. **The Black Market** — Illegal items: stolen Tear-It cards, hacked Soul Pens, Nothing Ink knockoffs ("Something Ink" — side effects unknown).
+4. **The VIP Lounge** — ShadowFang's private area. Invitation only.
+
+**Notable NPC/Player:**
+- **xX_ShadowFang_Xx** (Level 14 Rogue / Shadar-Kai)
+  - Legendary hacker. Runs this zone.
+  - Can bypass any firewall in Avantasy.
+  - Neutral to all factions.
+  - Appearance: Six-legged wolf avatar with glowing eyes and shifting shadow-fur.
+  - Will help the party if they bring him something interesting (he's bored).
+  - Secret: He knows about the second breach building in the Wastes. He's been monitoring it.
+
+---
+
+### 2.4 THE LOST TEMPLE JUNGLE (Levels 5-7) — DUNGEON ZONE
+
+**Description:** A massive, overgrown jungle surrounding ancient ruins. Vines snake around weathered stone pillars. A faint, eerie glow emanates from within the temple structures. The air is heavy with the scent of damp earth and decay. Giant spiders, undead warriors, and trap-filled corridors await.
+
+**Dungeon Features:**
+- **Floor 1:** Giant spiders (CR 1-2), web traps, pressure plate puzzles
+- **Floor 2:** Undead warriors (CR 2-3), cursed treasure (save or be hexed), hidden passages
+- **Floor 3 (Boss):** Temple Guardian — a stone golem infused with Carcazod mutagen (CR 5)
+- **Treasure:** 500gp, Dragon Slayer Armor (chestpiece, +10 STR, +15 DEF), Mana Crystals x3
+
+---
+
+### 2.5 THE CARCAZOD WASTES (Levels 8-12) — ENDGAME APPROACH
+
+**Description:** Post-apocalyptic badlands. The ruins of the old Clown World — twisted carnival rides, faded big-top tents, and the skeletal remains of giant joke machines. Now overrun by Carcazods (monkey-cockroach hybrids with chitinous exoskeletons and glowing red/green eyes).
+
+**Key Locations:**
+1. **Scavenger Camp** — Survivors living in armored vehicles. Led by "Sarge" (veteran human fighter, NPC).
+2. **The Mutagen Pits** — Glowing green pools where Carcazods spawn. Destroying one is a major quest.
+3. **Warlord Grak's Fortress** — Built inside a crashed clown-ship. Heavily guarded.
+
+**Notable Enemy:**
+- **Carcazod Warlord Grak** (CR 8)
+  - Brutal, intelligent, leads raiding parties.
+  - Speaks broken Common: "Grak smash. Grak take. Grak RULE."
+  - Recurring villain. If he escapes, he comes back stronger.
+  - Drops: Grak's Cleaver (greatsword, +2, deals extra damage to humanoids), Carcazod Armor (medium, +1), Mutagen Vial (quest item)
+
+---
+
+### 2.6 NEW ATLANTIS DEPTHS (Levels 10-15) — UNDERWATER CITY
+
+**Description:** A bioluminescent underwater city built to escape the non-swimming Carcazods. Glowing coral towers, hydroponic farms, and the UN Embassy. The water is rendered as ASCII "*" symbols that shimmer with bioluminescent colors.
+
+**Key Locations:**
+1. **The Hydroponic Farms** — Food source for the server. Guarded by Captain Finnick.
+2. **The UN Embassy** — Political hub. Quests involving diplomacy and espionage.
+3. **The Deep Forge** — Crafting station for underwater gear. Requires Nothing Ink to operate.
+
+**Notable NPC:**
+- **Captain Finnick** (Fish-person Angler Guard, stern but fair)
+  - Recruits for sea quests: hunting sea monsters, exploring shipwrecks, defending supply lines.
+  - Appearance: Humanoid fish with glowing lure on forehead. Carries an emerald energy spear.
+
+---
+
+### 2.7 THE METAL SUN (Levels 15-20) — ENDGAME ZONE
+
+**Description:** The interior of a Dyson Sphere. Golden corridors, quantum-cooled white walls, and the blazing light of the Metal Sun at the center. Sol's legion of world-police bots patrol the halls. This is where the server's deepest lore lives.
+
+**Key Locations:**
+1. **Solar City** — The Clean Zone. Luxury penthouses, quantum-cooled everything.
+2. **The Ikarus Hangar** — Where the legendary Ikarus ship is docked. Heavily guarded.
+3. **The Throne Room** — Emperor Sol's seat (not the player — an NPC version, the "bad future" Sol).
+
+**Notable NPC:**
+- **Emperor Sol (NPC)** — The "bad future" version of Sol-Supreme. If the player ever loses hope, this is what he could become. Final boss energy.
+
+---
+
+### 2.8 WORM HOLE X (Levels 20+) — THE EDGE
+
+**Description:** The edge of the map. Reality is unstable. Colors don't render correctly. Sound echoes backwards. Only the bravest venture here. The second breach is building somewhere in this sector.
+
+**Features:**
+- Random reality tears (portals to unknown locations)
+- Glitch monsters (creatures made of corrupted code)
+- The Architect's Vault (contains the server's source code — ultimate quest goal)
+
+---
+
+## 3. NOTABLE EXISTING PLAYERS (NPC-PROXY CHARACTERS)
+
+These are established players the DM controls as semi-main characters. They function as quest-givers, rivals, allies, and world flavor.
+
+### 3.1 GoldQueen_Astra (Level 12 Wizard / High Elf)
+- **Reputation:** Respected. Co-founder of the server.
+- **Location:** Fairy City, Arcane Academy
+- **Personality:** Brilliant, warm, slightly exhausted from managing everything.
+- **Role:** Ally to newcomers. Gives high-level quests. Knows server history.
+- **Appearance:** High elf with golden hair, robes woven with ϕ-spiral patterns, carries a staff topped with a glowing Fuzzball crystal.
+- **Secret:** She was there when the server was first initialized. She knows Sol-Supreme is the architect. She's waiting for him to remember.
+
+### 3.2 RaTheButcher (Level 11 Barbarian / Half-Orc)
+- **Reputation:** Infamous. Gordon Ramsay energy.
+- **Location:** Wanders. Currently in Troll City, arguing with Borin about his stew.
+- **Personality:** Loud, aggressive, obsessed with cooking monsters. Secretly soft.
+- **Role:** Comic relief, occasional ally, will challenge the party to a cooking contest.
+- **Appearance:** Massive half-orc in a chef's apron over barbarian armor. Carries a greatsword and a cast iron skillet.
+- **Quote:** "THIS STEW IS [ __ ] RAW, BORIN! I'VE SEEN CARCAZOD DROPPINGS WITH MORE SEASONING!"
+
+### 3.3 Tronald_The_Mage (Level 9 Wizard / Variant Human)
+- **Reputation:** Mocked. Thinks he's OP. Has -3 STR.
+- **Location:** Troll City, usually at the tavern, usually starting fights he can't win.
+- **Personality:** Arrogant, incompetent, somehow survives through luck and DM pity.
+- **Role:** Comic relief. Accidentally triggers quests.
+- **Appearance:** Variant human in robes that are too big for him. Carries a staff he barely knows how to use.
+- **Quote:** "I don't need strength when I have MAGIC, buddy. Totally different thing."
+
+### 3.4 GilroThazor_Warlock (Level 10 Warlock / Tiefling)
+- **Reputation:** Respected. Samuel L. Jackson energy.
+- **Location:** The Illegal Furry Server, VIP Lounge
+- **Personality:** Cool, competent, drops one-liners. Actually gets things done.
+- **Role:** Ally for underground quests. Will back up the party in a fight.
+- **Appearance:** Tiefling in a sharp suit, red skin polished, horns filed and decorated with gold rings.
+- **Quote:** "I have had it with every mother-hacking Carcazod on this mother-hacking server!"
+
+### 3.5 LoonaTwilight (Level 13 Paladin / Aasimar Ghost)
+- **Reputation:** Revered. Sacrificed herself to seal a server breach.
+- **Location:** Skullmoon Crater (between Troll City and the Wastes), haunts the area.
+- **Personality:** Serene, slightly sad, still dutiful despite being dead.
+- **Role:** Quest-giver for breach-related quests. Can grant ghostly blessings.
+- **Appearance:** Translucent aasimar in paladin armor. Glows with white-hot light. Skull-shaped crater beneath her.
+- **Secret:** She can be resurrected. The quest requires items from every zone.
+
+### 3.6 Dorchester_Pirate (Level 12 Assassin / Tabaxi)
+- **Reputation:** Feared. Runs Tear-It card duels.
+- **Location:** Back alleys of Troll City, moves around.
+- **Personality:** Charming, dangerous, will steal your loot if you're careless.
+- **Role:** Rival, occasional ally, runs the underground card game economy.
+- **Appearance:** Tabaxi in pirate garb, dual daggers, Tear-It cards fanned across his knuckles like claws.
+- **Quote:** "Care to play, friend? Don't worry — I'll go easy on you. First time."
+
+---
+
+## 4. ECONOMY & CURRENCY
+
+### 4.1 Standard Currency
+- **Copper Pieces (cp):** Common transactions
+- **Silver Pieces (sp):** Moderate transactions
+- **Gold Pieces (gp):** Standard adventurer currency
+- **Platinum Pieces (pp):** High-end transactions (1pp = 10gp)
+
+### 4.2 Special Currencies
+- **Soul Pen Ink:** Crafting currency. Used to create spells and magic items at the Magic Tree. Drops from elite enemies and dungeon bosses. (1 vial = ~50gp value)
+- **Nothing Ink:** Ultra-rare crafting currency. The fuel of creation. Only drops from boss enemies or deep exploration. (1 vial = ~500gp value)
+- **Tear-It Cards:** Collectible/tradable. Some have mechanical effects. Booster packs contain 10 cards (1 rare guaranteed). Individual rare cards trade for 20-100gp.
+
+### 4.3 Starting Party Wealth
+- Each character begins with 30-75gp (see individual stats.txt)
+- Total party gold: ~200gp
+- Enough for basic gear, tavern stays, and a few purchases. Not enough for Nothing Ink.
+
+---
+
+## 5. ENCOUNTER TABLES
+
+### 5.1 Troll City Random Encounters (d20)
+
+| Roll | Encounter |
+|------|-----------|
+| 1 | Street urchin pickpockets — Horli notices (Sleight of Hand contest) |
+| 2 | Tronald_The_Mage accidentally starts a fire with a misfired spell |
+| 3 | Two players arguing over a Tear-It card trade — it escalates |
+| 4 | Gimble Copperfist tries to upsell the party a "legendary" sword (+1 at best) |
+| 5 | RaTheButcher is yelling at Borin about the stew. Gets physical. |
+| 6 | A hooded figure (LoonaTwilight's ghost) whispers a warning about the Wastes |
+| 7 | Carcazod scout spotted at the east gate — alarm bells ring |
+| 8 | Dorchester_Pirate challenges a party member to a Tear-It card duel |
+| 9 | Madame Zixi calls the party over — she has "something interesting" |
+| 10 | GoldQueen_Astra arrives from Fairy City with a quest offer |
+| 11 | GilroThazor_Warlock walks through town, nods at the party, keeps walking |
+| 12 | xX_ShadowFang_Xx's avatar flickers into existence, scans the area, vanishes |
+| 13 | A group of background players recruiting for a guild — "The Fuzzball Fellowship" |
+| 14 | A merchant's cart overturns — chaos, things spill, opportunistic theft |
+| 15 | The Healing Spring glows red instead of cyan — something's wrong |
+| 16 | Tree-Sage Elowen sends a messenger: the Magic Tree needs visitors |
+| 17 | A server-wide announcement: "BREACH DETECTED IN SECTOR 7" (false alarm... probably) |
+| 18 | PvP_Queen challenges the party's strongest member to a duel |
+| 19 | A mysterious chest appears in the plaza. It's not trapped. It's definitely trapped. |
+| 20 | GoldQueen_Astra AND GilroThazor arrive together — this is important |
+
+### 5.2 Lost Temple Encounters (d10)
+
+| Roll | Encounter |
+|------|-----------|
+| 1-2 | Giant Spiders x2 (CR 1 each) |
+| 3-4 | Web trap (DEX save or restrained) + Spider ambush |
+| 5-6 | Undead Warriors x3 (CR 2 each) |
+| 7 | Pressure plate puzzle (INT check to solve, failure = dart trap) |
+| 8 | Cursed treasure chest (WIS save or hexed: -2 to attacks for 1 hour) |
+| 9 | Hidden passage to secret room (contains Mana Crystals x2) |
+| 10 | Temple Guardian (CR 5 boss — stone golem with Carcazod mutagen) |
+
+### 5.3 Carcazod Wastes Encounters (d10)
+
+| Roll | Encounter |
+|------|-----------|
+| 1-2 | Carcazod Scout Pack x4 (CR 1/4 each) |
+| 3-4 | Mutagen Pool — leaking, contaminating the area (can be sealed) |
+| 5-6 | Carcazod Warrior x2 (CR 2 each) + War Hound (CR 1) |
+| 7 | Scavenger Camp — Sarge offers a quest |
+| 8 | Abandoned clown-ship ruin — loot inside, but it's a Carcazod nest |
+| 9 | Warlord Grak's patrol (CR 3 elite + 2 CR 1 scouts) — flee or fight |
+| 10 | Warlord Grak himself (CR 8) — he's hunting. Run. |
+
+---
+
+## 6. SHOP INVENTORIES (ROTATING — REFRESH EACH SESSION)
+
+### 6.1 Gimble's Gear & Steel — Session 1
+
+| Item | Cost | Notes |
+|------|------|-------|
+| Longsword | 15gp | Standard |
+| Shortbow + 20 arrows | 25gp | Standard |
+| Studded Leather Armor | 45gp | Standard |
+| Shield, +1 | 150gp | "Barely used!" |
+| Potion of Healing | 50gp | 2 in stock |
+| "Gimble's Special" | 50gp | Rusty helmet. Not magical. He insists it is. |
+
+### 6.2 Madame Zixi's Emporium — Session 1
+
+| Item | Cost | Notes |
+|------|------|-------|
+| Soul Pen Mark 0 | 25gp | Basic model |
+| Soul Pen Mark 1 | 100gp | Advanced, can craft uncommon items |
+| Nothing Ink Vial | 500gp | Only 1 in stock |
+| Tear-It Card Booster Pack | 15gp | 3 available |
+| The Mirror of Maybe | 75gp | Cursed. Shows alternate realities. |
+
+### 6.3 The Magic Tree — Crafting Services
+
+| Service | Cost | Requirements |
+|---------|------|-------------|
+| Learn Cantrip | 25gp | Must be spellcasting class |
+| Learn 1st-Level Spell | 50gp | Must be spellcasting class |
+| Craft Common Magic Item | 100gp + 1 Soul Pen Ink | Access to Magic Tree |
+| Craft Uncommon Magic Item | 500gp + 3 Soul Pen Ink | Access to Magic Tree |
+| Craft Rare Magic Item | 2000gp + 1 Nothing Ink | Access to Magic Tree + Tree-Sage approval |
+| Blessing of the Tree | 10gp donation | +1 to all spell saves for 24 hours |
+
+---
+
+## 7. LORE PRIMER — WHAT THE PLAYERS KNOW
+
+### 7.1 Common Knowledge (Everyone Knows This)
+- Avantasy is a VR MMORPG. At least, that's what it claims to be.
+- Troll City is the starting zone. The Magic Tree, the Healing Spring, and the Quest Board are essential services.
+- The server has been running for ~3 years. Some players have been here since the beginning.
+- Carcazods are the main enemy. They come from the Wastes.
+- There are rumors that Avantasy is "more than a game." Most players dismiss this.
+
+### 7.2 Uncommon Knowledge (Requires Investigation/Lore Rolls)
+- The server was built by someone called "The Architect." Identity unknown.
+- The Fuzzball spirits (8 colored entities) are tied to the server's core code.
+- The Illegal Furry Server exists. Access requires knowing someone who knows someone.
+- LoonaTwilight died sealing a breach. The breach came from Worm Hole X.
+- Soul Pens are more than crafting tools — they're interfaces with the server's source code.
+
+### 7.3 Hidden Knowledge (Requires High Rolls / Quest Discovery)
+- Sol-Supreme is the Architect. He's trapped inside his own creation.
+- The server is built on TPMOS — a real-world operating system framework.
+- The "game" is actually a simulation running inside a larger reality.
+- The second breach is building. It will be worse than the first.
+- The 20 Pillars of the Spiral are the server's foundational code. Each Pillar corresponds to a zone, a story, and a piece of the truth.
+
+---
+
+## 8. DM NOTES — RUNNING AVA-SERVER-0001
+
+### 8.1 Tone
+- Avantasy is a VR game world, so the players can be aware of game mechanics (HP bars, menus, console commands like `/ability` and `/spell`).
+- Blend D&D 5e mechanics with video game aesthetics: combat menus flash before players' eyes, loot drops are accompanied by golden light, level-ups trigger server-wide notifications.
+- The Murderhobos style means table banter, rules debates, and comedy are just as important as the in-world action.
+
+### 8.2 Pacing
+- Start in the Rusty Anchor Tavern. Let the party meet, introduce themselves, and get their bearings.
+- Move to the Quest Board or an NPC interaction to give them direction.
+- First combat should be medium difficulty — enough to teach the mechanics without overwhelming.
+- End Session 1 with a hook: a clue about the second breach, a mysterious NPC, or a lore reveal about Sol-Supreme's identity.
+
+### 8.3 The Meta Layer
+- Characters can be aware they're in a game. This is intentional.
+- Sol-Supreme knows MORE than he should. Let this create tension.
+- Chara's CIA background means she'll investigate the "real world" implications. Feed her clues.
+- IQabella's emotional intelligence means she'll notice when NPCs seem "too aware."
+- Horli Qwin will exploit game mechanics. Let her. It's fun.
+
+### 8.4 The Overarching Plot
+- **Session 1-3:** Establish the party, explore Troll City, first dungeon (Lost Temple).
+- **Session 4-6:** The Carcazod threat escalates. Warlord Grak becomes a recurring villain.
+- **Session 7-9:** The Illegal Furry Server, ShadowFang's intel, the truth about the breach.
+- **Session 10-12:** Fairy City, the Fuzzball Shrine, GoldQueen_Astra's revelation about Sol-Supreme.
+- **Session 13-15:** The Wastes, confronting Grak, discovering the breach source.
+- **Session 16+:** Worm Hole X, the Architect's Vault, the truth about Avantasy.
+
+---
+
+## 9. QUICK REFERENCE — NPC ROSTER
+
+| NPC | Role | Location | Voice/Personality |
+|-----|------|----------|-------------------|
+| Borin Ironmug | Tavern Keeper | Rusty Anchor | Gruff Scottish dwarf accent |
+| Gimble Copperfist | Blacksmith | Troll City Market | Fast-talking gnome, speaks in run-on sentences |
+| Madame Zixi | Merchant | Soul Pen Emporium | Mysterious, speaks in riddles, purring voice |
+| Tree-Sage Elowen | Druid | The Magic Tree | Ancient, slow, wise — speaks like a meditation app |
+| Captain Finnick | Angler Guard | New Atlantis | Gruff fish-man, literal-minded |
+| Professor Void | Lecturer | Centroid Academy | Eccentric, distracted, brilliant |
+| Fuzzball Priestess | Healer | Fairy City Temple | Serene, ethereal, channels 8 voices |
+| Warlord Grak | Boss Enemy | Carcazod Wastes | Broken Common, loud, brutal |
+| Kevin the Angel | Bridge Guard | Rainbow Bridge | Bored, millennial energy |
+| Sarge | Scavenger Leader | Wastes Camp | Military, tired, seen it all |
+
+---
+
+**[END OF AVA-SERVER-0001 WORLD DOCUMENT]**
+**The world is set. The server is live. The spiral turns. ϕ**

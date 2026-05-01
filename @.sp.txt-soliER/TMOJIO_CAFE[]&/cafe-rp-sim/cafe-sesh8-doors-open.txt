@@ -1,0 +1,109 @@
+# TPMOJIO CAFE — RP SIMULATION SESSION 8: "THE DOORS OPEN"
+## Phase 1: First Location — "From Network to Neighborhood"
+### Players: Sol-Supreme (as Lucky), IQabella, Chara, Horli Qwin | DM (Mother Tmojizu)
+### Setting: Month 9. 200 nodes. ~800 active users. 312 cafe membership commitments. The church event was a success. The network is humming. Now they're signing a lease.
+
+---
+
+**Mother Tmojizu:** Welcome back, ducklings. Month 9. The P2P network has 200 nodes. ~800 active users. 312 people have committed to cafe membership at $15/month. That's $4,680/month in guaranteed recurring revenue from day one. The church event brought 220 attendees. The FuzzLab result got cited by 7 academic labs. The AR battle league has 400 weekly viewers. The Soul Pen has 120 published stories.
+
+**Mother Tmojizu:** And now you're signing a lease.
+
+**Mother Tmojizu:** 1,800 sqft. Strip mall. Near the college. Near the library. Near the church that hosted your first event. Rent: $3,800/month. Build-out: $60,000 (Chara negotiated a tenant improvement allowance from the landlord). Opening date: 6 weeks.
+
+**Mother Tmojizu:** You're opening a cafe.
+
+**Sol-Supreme:** [in character] I'm looking at the floor plan. Cafe counter on the left. Gaming lounge in the center. Event corner in the back. Node server room in the closet (climate-controlled, 20 nodes minimum). AR battle zone by the windows. Soul Pen reading nook in the corner. Quest board on the main wall — physical + digital. It's small. It's real. It's ours.
+
+**Mother Tmojizu:** Roll INT Space Planning. You're fitting a network into 1,800 square feet.
+
+**Sol-Supreme:** [rolls] 18. Plus 4 is 22.
+
+**Mother Tmojizu:** 22. Lucky designs the layout:
+- **Cafe counter (300 sqft):** Espresso machine, tea bar, pastry display. IQabella's domain.
+- **Gaming lounge (600 sqft):** 8 tables. Board games. TTRPG corner. TPMOS node terminals.
+- **Event corner (400 sqft):** Stage area. Streaming setup. AR battle arena. Open mic space.
+- **Node server room (100 sqft):** Climate-controlled. 20 nodes minimum. P2P backbone. Redundant power.
+- **Soul Pen nook (200 sqft):** Quiet. Comfortable. Reading chairs. Writing desks. Publishing station.
+- **Quest board wall (100 sqft):** Physical board + digital screen. Live network stats. BSR flow. Active research.
+- **Storage/office (100 sqft):** Supplies. Admin. Private meetings.
+
+**Mother Tmojizu:** [warmly] It fits. Barely. But it fits. Now — the build-out. $60,000. You have $51 in the bank. How do you fund it?
+
+**Chara:** [in character] I negotiated a tenant improvement allowance: $25,000 from the landlord. That covers basic build-out: walls, electrical, plumbing, HVAC. We still need $35,000 for equipment, furniture, TPMOS infrastructure, and opening inventory.
+
+**Mother Tmojizu:** Roll INT Financial Engineering. You're funding a cafe with no capital.
+
+**Chara:** [rolls] 19. Plus 4 is 23.
+
+**Mother Tmojizu:** 23. Chara structures the funding:
+- **Tenant improvement allowance:** $25,000 (landlord)
+- **Equipment financing:** $15,000 (espresso machine, refrigerators, POS — 36-month term, $450/month)
+- **Community pre-sale:** $10,000 (312 members × $32 "founding member" one-time fee — covers build-out gap)
+- **Personal contribution:** $0 (they have no money. That's the point.)
+
+**Chara:** [in character] The founding member fee is optional. It's not required for membership. It's a one-time contribution to help us open. People who pay it get: their name on the Founders Wall, priority seating for the first month, and a free TPMOS node (Raspberry Pi 4, pre-flashed, mailed to them). 187 people pay it. That's $5,984. We're still short $4,016.
+
+**IQabella:** [in character] I'm covering it. I've been saving. $4,000 from six years at Starbucks. It's everything I have. I'm putting it into the cafe. Not as a loan. As a contribution. As belief.
+
+**Mother Tmojizu:** [quietly] She does.
+
+**Mother Tmojizu:** The build-out begins. Volunteers from the community help. College students paint walls. Gamers assemble tables. Researchers wire the node server room. Writers build the Soul Pen nook. Horli Qwin organizes the work crews. She raps while they paint. The cafe takes shape.
+
+**Mother Tmojizu:** Six weeks later: the doors open.
+
+**Mother Tmojizu:** What's the first day like?
+
+**Horli Qwin:** [in character] I'm opening the doors at 7 AM. The line is already around the block. 200 people. Members. Guests. Curious neighbors. College kids. Librarians. Church folks. Gamers. Researchers. Writers. Rappers. I'm at the door. I'm handing out tea. Free for members. $3 for guests. No one turned away. The cafe is full by 8 AM. The node server room is humming. The quest board is live. The AR battle zone is running. The Soul Pen nook is occupied. The event corner has a DM running a TPMOJIO session. The cafe is alive.
+
+**Mother Tmojizu:** Roll CHA Opening Day. You're managing chaos with joy.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23.
+
+**Mother Tmojizu:** NATURAL 20. The opening day is legendary:
+- **Revenue:** $2,847 (tea, coffee, pastries, guest fees, founding member sales)
+- **Attendance:** 412 unique visitors
+- **New nodes:** 34 (people brought old laptops, left with TPMOS)
+- **New members:** 67 (walk-ins who signed up on the spot)
+- **AR battles:** 28 matches, 150 viewers
+- **Soul Pen stories published:** 12 (written in the nook, published on-site)
+- **Research quests completed:** 5 (FuzzLab simulations run on cafe nodes)
+- **Vibe:** Warm. Loud. Alive. Messy. Perfect.
+
+**Mother Tmojizu:** [warmly] It is.
+
+**Mother Tmojizu:** But the real story happens at night.
+
+**Mother Tmojizu:** 10 PM. The cafe closes to the public. The members with keycard access stay. The night lockin begins. 40 people. Laptops open. Nodes syncing. AR battles running. FuzzLab simulations crunching. Soul Pen stories writing. Tea brewing. Coffee flowing. Baklava appearing. The network hums. The community works. The cafe becomes something else: a lab. A studio. A sanctuary. A home.
+
+**Sol-Supreme:** [in character] I'm sitting in the node server room. 20 nodes humming. Temperature: 68°F. Humidity: 45%. P2P sync: healthy. BSR flow: 120K/week (up from 80K). Active users: ~1,200 (up from 600). Research outputs: 3 validated results (Chagas, malaria, aging pathway). I'm watching the network grow. And I'm thinking: this is just the first one.
+
+**Mother Tmojizu:** [quietly] It is.
+
+**Mother Tmojizu:** End of Session 8.
+
+**Mother Tmojizu:** The cafe is open. 1,800 sqft. Strip mall. Near the college. Near the library. Near the church.
+
+**Mother Tmojizu:** Night lockins are happening. 40 members. Keycard access. 10 PM - 6 AM. The network grows. The research accelerates. The community deepens.
+
+**Mother Tmojizu:** [quietly] Four broke dreamers. One cafe. 200 nodes. 1,200 users. And a plan.
+
+**Mother Tmojizu:** Did you learn anything, ducklings?
+
+**Sol-Supreme:** [in character] "I learned that a network needs a home. And a home needs a network. And together, they become a community."
+
+**Chara:** [in character] "I learned that funding doesn't have to come from investors. It can come from the people who believe in you. 187 founding members. $5,984. That's not capital. That's trust."
+
+**IQabella:** [in character] "I learned that tea tastes better when you make it for people who need it. And that $4,000 was the best investment I ever made."
+
+**Horli Qwin:** [in character] "I learned that night lockins are where the magic happens. When the doors close. When the world sleeps. When the network hums. That's when we become something more."
+
+**Mother Tmojizu:** [warmly] You did. All of you. The doors are open. The lockins are running. The network is growing. And the cafe... the cafe is no longer a dream. It's a destination.
+
+**Mother Tmojizu:** Sleep well, ducklings. The nodes are humming. The tea is brewing. The lockins are alive. And the arena... the arena remembers.
+
+---
+
+**[END OF TPMOJIO CAFE RP SIM SESSION 8]**
+**Session Status: Phase 1 — First Location Open | Cafe: 1,800 sqft, strip mall, near college/library/church | Opening day: 412 visitors, $2,847 revenue, 67 new members, 34 new nodes | Night lockins: 40 members, 10 PM - 6 AM, keycard access | Active nodes: 200 (20 in cafe, 180 distributed) | Active users: ~1,200 | BSR flow: 120K/week | Research: 3 validated results | Cafe members: 379 (312 pre + 67 walk-in) | Monthly recurring revenue: $5,685 | Budget: $0 (fully funded by TI allowance, equipment financing, founding members, IQabella's savings) | Next: Second location scouting, hotel partnership, Lucky's casino concept, FDA pathway research**
+**ϕ**

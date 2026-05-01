@@ -1,0 +1,82 @@
+# INDIVIDUAL BOOK TRAILERS — PLAN
+# =================================
+# Each book gets its own ~3 minute movie trailer
+# Format: Cinematic trailer with Narrator (en-GB-RyanNeural) + character voices
+# NO D&D meta stuff — pure story summaries as movie trailers
+# Location: META_TRAILER/<book_name>_trailer/
+
+## VOICE MAP (from convert_all_solpen_scenes.py):
+| Character          | Voice                          |
+|--------------------|--------------------------------|
+| Narrator           | en-GB-RyanNeural               |
+| LUCKY              | en-US-GuyNeural                |
+| ASTRA              | es-MX-DaliaNeural              |
+| GEM                | en-US-AvaNeural                |
+| LOONA              | ko-KR-SunHiNeural              |
+| SOL                | en-ZA-LukeNeural               |
+| MARIA              | es-ES-ElviraNeural             |
+| SPIKE              | en-AU-WilliamNeural            |
+| DORCHESTER         | en-IE-OrlaNeural               |
+| EDGE               | en-AU-WilliamNeural            |
+| DANGERMAN          | en-AU-WilliamNeural            |
+| SAORSI             | en-IE-EmilyNeural              |
+| KAITO              | ja-JP-KeitaNeural              |
+| AGENT THOMPSON     | en-US-MichelleNeural           |
+| BLACK QUEEN        | en-NG-EzinneNeural             |
+| PRINCESS MEGAN8R   | en-US-JennyNeural              |
+| QUEEN SOPHIA       | en-GB-MaisieNeural             |
+| BORIN IRONMUG      | en-GB-AlfieNeural              |
+| PIT BOSS           | en-US-SteffanNeural            |
+| MANAGER            | en-US-SteffanNeural            |
+| UN AGENT           | en-GB-OliverNeural             |
+| MERC 1             | en-NG-AbeoNeural               |
+| MERC 2             | en-KE-ChilembaNeural           |
+| Guardian           | en-US-RogerNeural              |
+| Fuzzball Priestess | en-IN-NeerjaNeural             |
+| GoldQueen_Astra    | en-GB-LibbyNeural              |
+
+## TRAILER STRUCTURE (each ~3 min, ~12-15 segments):
+1. **Narrator opens** — cinematic hook, setting the world
+2. **Protagonist intro** — who they are, what they want
+3. **Inciting incident** — the event that changes everything
+4. **Rising action** — complications, allies, enemies
+5. **Midpoint twist** — revelation that changes the game
+6. **Climax tease** — the big confrontation
+7. **Narrator closes** — "Coming soon" style ending
+
+## BOOKS TO COVER:
+
+| # | Book | Trailer Dir | Key Characters |
+|---|------|-------------|----------------|
+| 0 | Sol Pen | 00.solpen_trailer/ | Lucky, Astra, Gem, Sol, Loona, Kaito, Black Queen, Princess Megan8R |
+| 1 | Geminii Part 1 | 01.geminii_trailer/ | Lucky, Astra, Gem, Carcazods |
+| 2 | Red Rock | 02.redrock_trailer/ | Lucky, Astra, Gem, UN, Dorchester |
+| 3 | Death-Kryo | 03.deathkryo_trailer/ | Lucky, Astra, Dorchester, space pirates |
+| 4 | Moonshine | 04.moonshine_trailer/ | Lucky, Astra, Gem, Edge, Chaebol team |
+| 5 | Superwar | 05.superwar_trailer/ | Lucky, Sol (Emperor), Astra, Ikarus |
+| 6 | Hellride | 06.hellride_trailer/ | Lucky, Blue Bird Bounty Hunter |
+| 7 | Avanta.C | 07.avanta_trailer/ | Lucky, virtual world characters |
+| 8 | Digi_Sol | 08.digisol_trailer/ | Lucky, Glitch Mob |
+| 9 | Metal Sun | 09.metalsun_trailer/ | Sol (Emperor), Lucky, clones |
+| 10 | XO Files | 10.xofiles_trailer/ | Lucky, Zick, Zack, Extremophiles |
+| 11 | Footrace.FU | 11.footrace_trailer/ | Lucky, Time Fu, Emperor's guards |
+| 12 | Centroid | 12.centroid_trailer/ | Lucky, Astra, Professor Void |
+| 13 | Tear-It | 13.tearit_trailer/ | Angler fish-police |
+| 14 | NGL Mpyre | 14.nglmpyre_trailer/ | Various |
+
+## STATUS:
+- [ ] 00.solpen_trailer/ — STARTING FIRST
+- [ ] 01.geminii_trailer/
+- [ ] 02.redrock_trailer/
+- [ ] 03.deathkryo_trailer/
+- [ ] 04.moonshine_trailer/
+- [ ] 05.superwar_trailer/
+- [ ] 06.hellride_trailer/
+- [ ] 07.avanta_trailer/
+- [ ] 08.digisol_trailer/
+- [ ] 09.metalsun_trailer/
+- [ ] 10.xofiles_trailer/
+- [ ] 11.footrace_trailer/
+- [ ] 12.centroid_trailer/
+- [ ] 13.tearit_trailer/
+- [ ] 14.nglmpyre_trailer/

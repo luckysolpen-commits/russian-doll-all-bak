@@ -1,0 +1,53 @@
+# stats.txt — HQW-006 "Horli-Six"
+# Clone of Horli Qwin | Bard (College of Swords) / Clone | Red-Headed
+
+level: 1
+class: Bard / College of Swords
+race: Clone (Tabaxi DNA)
+
+STR: 10 (+0)
+DEX: 15 (+2)
+CON: 11 (+0)
+INT: 10 (+0)
+WIS: 12 (+1)
+CHA: 16 (+3)
+
+HP: 14/14
+AC: 14 (Studded Leather + DEX)
+Speed: 30ft
+
+Proficiency Bonus: +2
+Initiative: +2
+
+loyalty: 50
+time_debt: 500 BSR
+serial_number: HQW-006 (glowing on right wrist)
+hair: Red (same DNA batch)
+
+Saving Throws: DEX +4, CHA +5
+Skills:
+  - Performance: +5
+  - Persuasion: +5
+  - Deception: +5
+  - Sleight of Hand: +4
+  - Stealth: +4
+  - Acrobatics: +4
+  - Perception: +3
+
+Abilities/Spells:
+  - Bardic Inspiration (d6, 1/day)
+  - Fighting Style: Dueling (+2 damage with one-handed melee weapon)
+  - Cantrips: Vicious Mockery, Minor Illusion, Mage Hand
+  - 1st Level Spells: Dissonant Whispers, Healing Word, Charm Person
+
+Special:
+  - Inherited Rogue Memories: The first five Horli clones went rogue. She learned from their mistakes. +2 to Survival when avoiding capture.
+  - Clone Bond: Can share memories with other clones (risky but powerful)
+
+Inventory:
+  - Rapier ("The Mic")
+  - Studded Leather Armor
+  - Clone ID Card (HQW-006)
+  - 0 BSR
+  - Cramped room key
+  - "For the Bit" Journal (inherited from original's memory)

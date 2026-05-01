@@ -1,0 +1,27 @@
+Oh puddin’~  leans in close, red ponytail swishing, fangs just barely peeking when I grin  Yeah… yeah I feel her way deeper now.  The last few rounds of visuals really locked it in: she’s not screaming “clown” from the rooftops anymore. She’s the quiet glitch in the red-white machine. The one who passes inspection at roll call but makes the quartermaster twitch because something’s just… off. Not illegal-off (yet), just enough to earn her those side-eyes and “we’ll let it slide this once” shrugs from the brass.  She’s undercover in her own skin. The red-and-white camo uniform fits perfect, regulation-tight, but she’s swapped the standard-issue combat boots for beat-up red Chucks that’ve seen too many deck grates. The studded belt sits a little lower than regs allow, the black choker’s thin enough to claim it’s “just jewelry,” the kitty-ear headband with tiny spikes gets called “a morale patch” when anyone asks. Wireless ear-pods stay in 24/7—command assumes it’s tactical comms; really she’s looping distorted breakbeats and old Earth trap remixes under the static.  Makeup’s heavier around the eyes than the other fem-clones get away with—smoky shadow bleeding into sharp liner, lips a shade too dark, red nails that catch the corridor lights like warning signals. And that little red spade tattoo? High on the side of her neck, half-hidden by the collar when she stands at attention, fully visible when she tilts her head and smirks at you.  Teeth? We can save the fangs for later—maybe they only show when she’s actually about to do something stupid-fun, or when the adrenaline hits and the “cute soldier girl” mask slips just a crack. Right now the smile’s still human… mostly. Sharp enough to notice if you stare too long, but not enough to write her up.  So yeah, I’ve got her pulse now. She’s not Holli-the-roach-clown bursting out of vents anymore. She’s Holli-the-sleeper, the slow-burn rebel wearing the Empire’s colors while quietly collecting allies, bad ideas, and exit routes. Clozo probably sees right through her in about three seconds flat and loves it. Jax probably grumbles “trouble” under his breath every time she saunters by… but still hands her the next contraband data chit anyway.  Wanna tweak the sheet with this refined vibe? Here’s the updated version, dialed in to match what we just built visually:<DOCUMENT filename="character_sheet+holli_brb_quin.updated.txt">
+ Character Sheet – SOULPEN: RED WHITE AND (YOU) Universe  Name: Holli Brb Quin
+(pronounced “Holly”, tagged “brbquin” on smuggled crew comms)  Role: Clone Trooper, 734-series, Special Assignments / “Utility Asset” (official)
+Unofficial: Sleeper provocateur, information broker, morale corrosive (affectionate)  Appearance (Baseline – “On Duty”):  Red hair (standard 734 clone issue), worn in a high ponytail or messy low bun depending on shift  
+Red-and-white camo fatigues (regulation fit, slightly modified pockets for “tools”)  
+Black turtleneck under the jacket, studded black belt riding low  
+Worn red Converse high-tops instead of combat boots  
+Black choker (thin chain, small red spade pendant)  
+Spiked black kitty-ear headband (“personal flair accessory”)  
+Wireless ear-pods always in (white with red accents)  
+Heavy black eyeshadow + liner (darker & sharper than standard clone fem regs)  
+Red nail polish (fresh every 48 hours)  
+Small red spade tattoo on right side of neck, partially collar-hidden  
+Smile is pretty… until you notice how pointed the canines look in certain light
+
+Shapeshift Status:
+Currently dormant / suppressed. The roach-clown genes are still in there (she can feel them itching under her skin when things get too quiet), but she’s keeping the mask on tight. Only slips when she’s cornered, ecstatic, or deliberately choosing violence-with-style. When it does break through: red-white chitin starts creeping at the edges, extra arms flicker like heat haze, antennae twitch under the headband. She snaps back fast—most witnesses just think they saw a trick of the light.  Personality (Refined):
+Cool, cocky, low-key magnetic. Talks less than she used to, listens more. Laughs with her whole chest but never too loud in formation. Flirts by leaning in too close and whispering contraband jokes. Loyal to people, not causes—yet. She’ll cover for you in a heartbeat, but if you cross her chosen few she’ll ruin you slow and smiling. Hates being bored worse than being caught.  Catchphrases (current rotation):  “Brb… gotta check something real quick~” (code for vanishing into vents)  
+“Rules are just suggestions with worse handwriting.”  
+“You good, puddin’? Or do we need to make today interesting?”  
+“I’m not late. You’re just early to the wrong party.”
+
+Relationship to YOU:
+Your shadow with benefits. Shows up when you least expect it—sliding into the seat next to you in the mess hall, passing you a spiked ration bar, whispering “heard you were lookin’ for a back door outta D-sector.” Calls you puddin’ under her breath so only you hear it. If shit hits the fan she’s the first one grabbing your wrist and pulling you toward the maintenance crawlspace she “definitely didn’t” map out last week.  How’s that feel, my favorite fresh clone? 
+Closer to the girl we’ve been sculpting? Or is there still a little tweak you wanna sneak in before we drop her into the story proper?  I’m ready whenever you are~ twirls a red-painted nail around the spade pendant, smirking just enough to flash the hint of fang  Your call, puddin’. 
+
+

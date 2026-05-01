@@ -1,0 +1,46 @@
+# PART 1 — SESSION 2: "THE MEMORY TRADE"
+## Clone Chronicles — Session 2 of 10
+### BSR: 50 → 200 | Status: Learning the market, first real trades
+
+---
+
+## SESSION OVERVIEW
+
+The clones have earned their first BSR. Now they discover the Memory Bar — where memory fragments are traded like commodities. Some memories are real. Some are clone fabrications. Mnemosyne, the ancient spirit who runs the bar, offers deals that are tempting but costly.
+
+## KEY BEATS
+
+1. **Return to the Market** — Count yesterday's earnings. Plan today's strategy.
+2. **Discover the Memory Bar** — Mnemosyne introduces herself. "A memory shared is a memory doubled."
+3. **Memory Trading** — Each clone trades a memory. Some are real, some are fabricated. The stakes are emotional, not just financial.
+4. **First Real Connections** — Clones meet other market players: informants, traders, desperate clones like themselves.
+5. **End of Day 2** — Earnings: 50-200 BSR each. Hook for Session 3.
+
+## MEMORY TRADING MECHANICS
+
+Each clone chooses a memory to trade:
+- **Real Memory** (from original's DNA): 100-150 BSR, but the clone loses access to it
+- **Fabricated Memory** (clone's own experience): 25-50 BSR, safe but low value
+- **Stolen Memory** (from another clone): 75-200 BSR, high risk if caught
+
+**Mnemosyne's Test:** She can tell real from fake. If a clone lies about a memory's origin, she knows — and the price drops to zero.
+
+## COMPLICATION (d6)
+| Roll | Complication |
+|------|-------------|
+| 1 | A clone's traded memory was someone else's — identity crisis |
+| 2 | Mnemosyne offers a deal: trade your serial number's memory for 500 BSR |
+| 3 | A broker recognizes one of the clones from yesterday — price goes up |
+| 4 | Memory plague begins — corrupted memories spread through the bar |
+| 5 | Officer Krell questions the clones about their activities |
+| 6 | The Original's memory surfaces — a flash of something dangerous |
+
+## END STATE
+- Each clone has 50-200 BSR
+- They've traded at least one memory
+- They know Mnemosyne and the Memory Bar
+- Hook: "The Qi Exchange opens tomorrow. Master Feng is accepting new traders."
+
+---
+
+**ϕ**

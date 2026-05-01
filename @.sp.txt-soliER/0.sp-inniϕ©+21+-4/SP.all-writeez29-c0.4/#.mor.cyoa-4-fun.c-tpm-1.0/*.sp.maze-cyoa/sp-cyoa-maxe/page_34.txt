@@ -1,0 +1,6 @@
+With Ember by your side and the Ember Resonance Key humming with warmth in your hand, you step through the portal. The transition is smoother, guided by the key's energy. You emerge into a vibrant, organized chamber filled with floating orbs of various colors and humming machinery. A larger Fuzzball, glowing with pure white light (⚪ Lumen), approaches. Ember chirps excitedly, seemingly communicating with it.
+
+"Welcome, traveler!" Lumen's voice chimes. "We sense the Resonance Key. You are an anomaly, a unique resonance. You have come to the Fuzzball Collective's primary research hub. Ember will guide you."
+
+*   If you ask Lumen about this place, turn to page 41.
+*   If you ask about Ember's role, turn to page 42.

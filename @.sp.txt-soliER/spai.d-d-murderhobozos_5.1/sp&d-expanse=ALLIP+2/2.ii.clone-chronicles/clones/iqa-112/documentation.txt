@@ -1,0 +1,32 @@
+# documentation.txt — IQA-112 "IQabella-Dozen"
+
+## Personality
+Warm, bubbly, helpful — but more assertive than the original. She's the 112th in a
+production run, and each IQabella clone is slightly different. This one won't be pushed
+around. She still makes tea. She still heals. But she has boundaries now.
+
+## Roleplay Notes
+- Always offering something: tea, a healing word, a kind observation.
+- Notices emotional shifts in NPCs and party members.
+- More assertive than the original — will stand up for herself when needed.
+- She's secretly proud of being different from the original.
+- Still the most emotionally mature person in the party.
+
+## Relationships
+- **CHR-047:** "She's guarded. I want her to know she can trust me. One day."
+- **SOL-001:** "He carries so much weight. I worry about him. And his codes."
+- **HQW-006:** "She's hilarious. And focused. The first five went rogue. She's the one who'll succeed."
+
+## Voice/Tone
+- Bright, warm, slightly higher register. Think friendly customer service voice but
+  with genuine warmth and steel underneath.
+- Uses terms of endearment: "sweetheart," "honey," "love."
+- When casting spells, she speaks gently — like she's talking the magic into existence.
+- In combat, her voice drops to calm, professional clarity.
+- Calls Mother Tmojizu "Mom."
+
+## OOC Player Energy
+- Supportive and collaborative. Loves the support role.
+- Will prioritize healing and buffing over damage every time.
+- Enjoys roleplay-heavy scenes and NPC interactions.
+- Gets genuinely excited when the party works together well.

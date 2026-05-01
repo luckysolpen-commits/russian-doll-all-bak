@@ -1,0 +1,4 @@
+You examine the flickering section of the FLEXTANK barrier. It seems to be a temporary maintenance access point, flickering as it cycles through stability phases. It looks like it might be possible to pass through during one of these cycles, but it would be incredibly risky.
+
+*   Attempt to pass through the flickering section of the barrier. Turn to page 13.
+*   Decide it's too dangerous and look for another way. Turn to page 721.

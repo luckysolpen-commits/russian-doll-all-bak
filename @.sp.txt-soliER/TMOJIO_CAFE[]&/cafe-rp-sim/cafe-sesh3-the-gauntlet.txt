@@ -1,0 +1,169 @@
+# TPMOJIO CAFE — RP SIMULATION SESSION 3: "THE GAUNTLET"
+## Phase 0: Pre-Launch — "Everything Breaks at Once"
+### Players: Sol-Supreme (as Lucky), IQabella, Chara, Horli Qwin | DM (Mother Tmojizu)
+### Setting: Month 3. Things were going well. Then everything broke.
+
+---
+
+**Mother Tmojizu:** Welcome back, ducklings. Month 3. Things were going well. The quest board had 340 users. The blog had 120,000 views. The podcast had 8 episodes and 2,000 downloads. Pre-signups were at 87. You were on track.
+
+**Mother Tmojizu:** And then — everything broke. At once.
+
+**Mother Tmojizu:** Lucky, your laptop — the one with all the quest board code, the user database, the pre-signup list — died. Motherboard failure. The repair shop says $400. You have $31.
+
+**Mother Tmojizu:** IQabella, the library partnership — the one where they were going to host your first in-person quest board event, the one that was going to bring 50 new users — the library director got replaced. The new director says "we don't partner with unregistered organizations." You're an LLC, but you're not a 501(c)(3). She said no.
+
+**Mother Tmojizu:** Chara, a competitor launched. "QuestHub." Same concept. Same features. Same drag-and-drop quest board. They have funding. They have a team of five. They have a mobile app. They're charging $9.99/month. And they copied your README — word for word.
+
+**Mother Tmojizu:** Horli Qwin, your podcast host raised prices. From $15/month to $45/month. You can't afford it. You have two episodes in the queue and no place to host them.
+
+**Mother Tmojizu:** Four problems. At once. No money. No time. No margin for error.
+
+**Mother Tmojizu:** What do you do?
+
+**Sol-Supreme:** [in character] I'm... I'm staring at a black screen. My laptop won't turn on. The repair guy said "motherboard." $400. I have $31. The quest board code is on that laptop. The user database. The pre-signup list. Everything. I'm... I'm panicking.
+
+**Mother Tmojizu:** Roll WIS Composure. You're about to make a decision under pressure.
+
+**Sol-Supreme:** [rolls] 12. Plus 1 is 13.
+
+**Mother Tmojizu:** 13. You breathe. You don't panic. You assess. The code is on GitHub — it's open source. You can pull it from there. The user database... you set up automated backups to a free tier cloud storage, right?
+
+**Sol-Supreme:** [in character] I... I think so. Let me check. I'm looking at my shelf. I have... a Raspberry Pi 3 from a project two years ago. A Raspberry Pi 4 I bought for $35 and never used. An old Chromebook from 2018 that barely boots. A ThinkPad T430 with a cracked screen but a working keyboard. And a stack of SD cards. I'm a builder. I hoard hardware. I just never thought I'd need it like this.
+
+**Mother Tmojizu:** Roll INT Resourcefulness. You're finding a way to code with what you have.
+
+**Sol-Supreme:** [rolls] 19. Plus 4 is 23.
+
+**Mother Tmojizu:** 23. You inventory your options:
+
+1. **Raspberry Pi 4:** $35 when you bought it. Has WiFi, Ethernet, USB. Can run Linux. Can code. Needs a monitor — you have an old HDMI TV in the closet. Needs a keyboard — you have a USB keyboard from an old desktop. Total cost: $0. You already own everything.
+2. **ThinkPad T430:** Cracked screen, but you can plug it into the TV via HDMI. Runs Linux. Slow but functional. Battery is dead — needs to be plugged in. Total cost: $0.
+3. **Chromebook 2018:** Barely boots. Can run Linux in developer mode. Very slow. But it's a laptop — portable. Total cost: $0.
+4. **Raspberry Pi 3:** Older. Slower. But it works. Can code on it. Total cost: $0.
+
+**Sol-Supreme:** [in character] I'm setting up the Pi 4. I'm flashing Raspberry Pi OS to an SD card. I'm plugging it into the old TV. I'm connecting the USB keyboard. I'm pulling the code from GitHub. I'm restoring the database from backup. I'm back online. Three days of user data lost. But the board is still live — it's hosted on GitHub Pages. It doesn't need my laptop. It doesn't need anything. It just runs.
+
+**Mother Tmojizu:** [warmly] It does. Because you built it right. Open source. Cloud backups. Decentralized hosting. The board survives even when your hardware dies.
+
+**Sol-Supreme:** [in character] I'm also setting up the Pi 4 as a permanent dev server. I'm adding automated backups — hourly, to two different free cloud services. If this happens again, I lose minutes, not days. And I'm setting up the ThinkPad as a backup dev machine. Cracked screen, but it works. I'll code on the TV until I can afford a monitor.
+
+**Mother Tmojizu:** You buy nothing. You spend nothing. You use what you have. The Pi 4 hums. The TV glows. The keyboard clacks. You're coding again.
+
+**Mother Tmojizu:** [warmly] Good. Now — IQabella. The library partnership fell through. What do you do?
+
+**IQabella:** [in character] I'm... frustrated. We had everything lined up. The event. The space. The 50 potential users. And the new director just said no. Because we're not a 501(c)(3). I'm calling her. I'm asking if there's a way to work around it. Can we partner with an existing 501(c)(3)? Can we operate under their umbrella?
+
+**Mother Tmojizu:** Roll CHA Negotiation. You're trying to salvage the partnership.
+
+**IQabella:** [rolls] 16. Plus 3 is 19.
+
+**Mother Tmojizu:** 19. The new director is firm but not hostile. She says: "I can't partner with an LLC. But I can partner with a registered community organization. If you can find a 501(c)(3) to sponsor you — a church, a school, a nonprofit — I can host your event under their name."
+
+**IQabella:** [in character] Okay. I know a church. The one near my apartment. They have a community outreach program. They've been looking for ways to engage young people. I'm calling the pastor.
+
+**Mother Tmojizu:** Roll CHA Community Outreach. You're asking a church to sponsor your event.
+
+**IQabella:** [rolls] 17. Plus 3 is 20.
+
+**Mother Tmojizu:** 20. The pastor is interested. She says: "We'd love to host a community event. We have space. We have volunteers. We have a budget for community outreach. But we need to know: what's the mission? What's the impact? Who benefits?"
+
+**IQabella:** [in character] I'm telling her the truth. We're building a community quest board. Free. Open source. Anyone can use it. Libraries, schools, churches, game stores. We're helping people connect. We're helping communities organize. We're not selling anything. We're building something. And we want to host our first in-person event at your church, under your name, because you care about community and so do we.
+
+**Mother Tmojizu:** [warmly] She says yes. The church will sponsor the event. They'll provide the space. They'll provide volunteers. They'll promote it to their congregation. The event is back on. Bigger, actually — the church has a larger space than the library. And a congregation of 300.
+
+**IQabella:** [in character] I'm crying. The event is back on. And it's bigger. And it's at a church. And the pastor is excited. This is... this is better than the library.
+
+**Mother Tmojizu:** [warmly] Sometimes the door that closes leads to a better door. Now — Chara. QuestHub copied your README. Word for word. What do you do?
+
+**Chara:** [in character] I'm reading their README. It's... it's literally our README. Same words. Same structure. Same license notice. They didn't even change the project name. It says "TPMOJIO Quest Board" in their repo. They copied the code too — it's our MIT-licensed code, which they're allowed to do, but they're charging $9.99/month for it and they didn't include the MIT license attribution. That's a violation.
+
+**Mother Tmojizu:** Roll INT Legal Analysis. You're assessing the situation.
+
+**Chara:** [rolls] 20. Plus 4 is 24.
+
+**Mother Tmojizu:** NATURAL 20. Chara pulls up the MIT License. She reads it carefully. The MIT License says: *"The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."*
+
+**Chara:** [in character] They're in violation. They didn't include the copyright notice. They didn't include the permission notice. They're charging for our code without attribution. That's a license violation. But... we're four broke people. We can't afford a lawsuit. We can't afford a cease-and-desist letter from a real lawyer. We can't afford anything.
+
+**Mother Tmojizu:** Roll INT Strategy. You're finding a way to handle this with no money.
+
+**Chara:** [rolls] 18. Plus 4 is 22.
+
+**Mother Tmojizu:** 22. Chara drafts an email. Not a legal threat. A conversation. She sends it to QuestHub's contact email:
+
+*"Hi. I'm Chara, co-founder of the TPMOJIO Quest Board. I noticed you're using our code. That's fine — it's MIT licensed. You're allowed to use it. But the MIT License requires attribution. You didn't include our copyright notice or license text in your repo. Also, your README is word-for-word ours. I understand the temptation — it's a good README. But it's ours.*
+
+*I'm not asking you to stop using our code. I'm asking you to follow the license. Add the attribution. Change the README to your own words. And if you're charging for our code, I'd ask you to consider: our project is free because we believe community tools should be free. You're welcome to charge for your version. But please be honest about where the code came from.*
+
+*I'm not a threat. I'm a neighbor. Fix the attribution, and we're good. Don't, and I'll have to escalate. I'd rather not. Let's be decent to each other."*
+
+**Mother Tmojizu:** She sends it. She waits. Two days pass. Then — a reply.
+
+**Mother Tmojizu:** *"Hey Chara. I'm the founder of QuestHub. I'm sorry. I didn't know about the attribution requirement. I copied the README because I was lazy. I didn't think anyone would notice. I've added the attribution. I've rewritten the README. I've added the MIT license text. And... I'm dropping the price to free. You're right. Community tools should be free. I was wrong to charge for your code. I'm sorry."*
+
+**Chara:** [in character] I'm... I'm stunned. They fixed it. They dropped the price. They apologized. I didn't expect that.
+
+**Mother Tmojizu:** [warmly] Most people are decent when you treat them as decent. You didn't threaten. You didn't sue. You talked. And they listened.
+
+**Chara:** [in character] I'm also adding a "Competitors" page to our website. "QuestHub uses our code. That's fine — it's MIT licensed. Here's the difference: we're free forever. We're open source. We're community-built. They're... not." I'm not attacking them. I'm just telling the truth.
+
+**Mother Tmojizu:** [smiles] Good. Now — Horli Qwin. Your podcast host raised prices from $15 to $45/month. You can't afford it. What do you do?
+
+**Horli Qwin:** [in character] I'm pissed. $45? I was barely affording $15. I have two episodes in the queue. I can't lose them. I'm looking for alternatives. Free podcast hosting. What's out there?
+
+**Mother Tmojizu:** Roll INT Research. You're finding a free podcast host.
+
+**Horli Qwin:** [rolls] 15. Plus 1 is 16.
+
+**Mother Tmojizu:** 16. You find options:
+
+1. **Spotify for Podcasters:** Free. Unlimited episodes. Analytics. Easy to use. Owned by Spotify.
+2. **Internet Archive:** Free. Unlimited storage. Not a podcast host, but you can upload audio and link to it.
+3. **YouTube:** Free. Upload audio as video (static image). Huge audience. Not a podcast, but people listen.
+4. **GitHub Pages + RSS:** Free. Host audio files on GitHub. Write your own RSS feed. Technical but free.
+
+**Horli Qwin:** [in character] I'm going with Spotify for Podcasters. It's free. It's easy. It has analytics. And it's not going to raise prices on me next month. I'm migrating my episodes. I'm re-uploading the two queued episodes. I'm updating the RSS feed. I'm telling my listeners: "New host. Same show. Still free."
+
+**Mother Tmojizu:** Roll CHA Communication. You're telling your audience about the change without losing them.
+
+**Horli Qwin:** [rolls] 19. Plus 3 is 22.
+
+**Mother Tmojizu:** 22. Horli Qwin records a bonus episode. "Hey questers. Quick update. Our podcast host raised prices. We couldn't afford it. So we moved to Spotify for Podcasters. It's free. It's better. And it means this show stays free forever. Same episodes. Same quests. Same energy. Just a new home. Link in the description. See you next week."
+
+**Mother Tmojizu:** The episode gets 500 downloads. More than any previous episode. People comment: *"Respect for keeping it free."* *"This is why I support you."* *"The quest board is the only free option. Keep going."*
+
+**Horli Qwin:** [in character] I'm... I'm emotional. People care. They're not just listening. They're supporting. They believe in this.
+
+**Mother Tmojizu:** [warmly] They do.
+
+**Mother Tmojizu:** End of Session 3.
+
+**Mother Tmojizu:** Four challenges. Four solutions. No money spent (except $89 for the Chromebook, which Lucky will pay off next month).
+
+**Mother Tmojizu:** The quest board survived the laptop death. Automated backups added.
+**Mother Tmojizu:** The library partnership became a church partnership. Bigger space. Bigger audience.
+**Mother Tmojizu:** QuestHub fixed their attribution. Dropped their price. Became a competitor, not an enemy.
+**Mother Tmojizu:** The podcast moved to Spotify for Podcasters. Free. Better. 500 downloads on the announcement episode.
+
+**Mother Tmojizu:** [quietly] Everything broke at once. And you fixed it. Not with money. With resourcefulness. With honesty. With community.
+
+**Mother Tmojizu:** Did you learn anything, ducklings?
+
+**Sol-Supreme:** [in character] "I learned that open source isn't just a license. It's a survival strategy. When my laptop died, the code survived because it was on GitHub. Because it was backed up. Because it was shared."
+
+**IQabella:** [in character] "I learned that 'no' isn't the end. It's a redirect. The library said no. The church said yes. And the church is better."
+
+**Chara:** [in character] "I learned that you don't need a lawsuit to enforce a license. You need a conversation. Most people are decent when you treat them as decent."
+
+**Horli Qwin:** [in character] "I learned that free isn't a limitation. It's a commitment. And people respect commitment."
+
+**Mother Tmojizu:** [warmly] You did. All of you. The gauntlet tested you. You passed. Not with money. With wisdom. With community. With the belief that the quest board matters.
+
+**Mother Tmojizu:** Sleep well, ducklings. The board survived. The team survived. And the cafe... the cafe is still coming.
+
+---
+
+**[END OF TPMOJIO CAFE RP SIM SESSION 3]**
+**Session Status: Phase 0 — Pre-Launch | Quest Board: Live (340 users, automated backups added) | Team: 4 members (LLC intact) | Pre-signups: 87 | Blog: 120K views | Podcast: 2K downloads (moved to Spotify, free) | Church partnership: Confirmed (event planned) | Budget: $31 (no debt — used existing hardware) | Revenue: $0 | Next: Church event, grow to 500 users, 100 pre-signups by Month 6**
+**ϕ**

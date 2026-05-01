@@ -1,0 +1,12 @@
+**Page 74: Identifying the Intruder**
+
+You focus your senses on the security operative. His scent is one of standard issue uniform fabric and a faint metallic tang from his concealed weapon. His heart rate is elevated but steady, indicating a trained professional responding to an anomaly. He doesn't appear to be anyone you've encountered before.
+
+Hydration: 8/10 (Adequate)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 5/10 (Identified the intruder as a trained security operative)
+
+What do you do?
+
+*   If you try to sense the intruder's specific mission or objective, turn to page 100.
+*   If you decide to retreat back into the vents, turn to page 8.

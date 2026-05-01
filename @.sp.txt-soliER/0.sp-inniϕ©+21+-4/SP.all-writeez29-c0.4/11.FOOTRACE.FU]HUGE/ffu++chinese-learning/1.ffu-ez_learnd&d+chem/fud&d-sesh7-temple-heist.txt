@@ -1,0 +1,200 @@
+# FU D&D — SESSION 7: "THE MIDNIGHT TEMPLE HEIST"
+## Footrace.FU Chinese Learning — Episode 7
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** Grand heist time. You're standing outside the Temple of Eternal Time — a massive fortress guarded by elite temporal monks. Inside: a vault containing a legendary Fuzzpet egg — the Black , eng, black, ... tx, 黑, hēi, ... xt, gravity-type that escaped last session. You need to sneak in at midnight, steal the egg, fight guards, forge new Chronoments, shop for supplies, level up, and escape alive. Roll for initiative.
+
+**Horli Qwin:** [rolls] 22. Plus 3 is 25. I'm going in through the roof. Parkour style.
+
+**CHARA:** [rolls] 19. Plus 3 is 22. I've mapped the guard patrol routes. There are forty-seven guards. I know their schedules.
+
+**IQabella:** [rolls] 15. Plus 0 is 15. I'm bringing healing potions. And tea. You can't heist on an empty stomach.
+
+**Sol-Supreme:** [rolls] 12. Plus 0 is 12. I've analyzed the temple's temporal shielding. The vault has a frequency of 7.83 hertz. Schumann resonance. I can jam it.
+
+**Mother Tmojizu:** 中文老师, teach us the stealth vocabulary.
+
+**中文老师:** , eng, night, ... tx, 夜, yè, ... xt, , eng, dark, ... tx, 暗, àn, ... xt, , eng, steal, ... tx, 偷, tōu, ... xt, , eng, sneak, ... tx, 潜, qián, ... xt, , eng, quiet, ... tx, 静, jìng, ... xt,
+
+**Horli Qwin:** , eng, night, ... tx, 夜, yè, ... xt, , eng, dark, ... tx, 暗, àn, ... xt, Perfect heisting weather. , eng, steal, ... tx, 偷, tōu, ... xt, , eng, sneak, ... tx, 潜, qián, ... xt, , eng, quiet, ... tx, 静, jìng, ... xt, I'm , eng, quiet, ... tx, 静, jìng, ... xt, like a shadow.
+
+**Mother Tmojizu:** Roll DEX Stealth.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20. I scale the temple wall. , eng, night, ... tx, 夜, yè, ... xt, covers me. , eng, dark, ... tx, 暗, àn, ... xt, is my friend. I'm on the roof.
+
+**Mother Tmojizu:** NATURAL 20. Horli is on the roof. CHARA, you're next. 中文老师, guard vocabulary.
+
+**中文老师:** , eng, guard, ... tx, 卫, wèi, ... xt, , eng, patrol, ... tx, 巡逻, xún luó, ... xt, , eng, discover, ... tx, 发现, fā xiàn, ... xt, , eng, hide, ... tx, 躲藏, duǒ cáng, ... xt,
+
+**CHARA:** , eng, guard, ... tx, 卫, wèi, ... xt, , eng, patrol, ... tx, 巡逻, xún luó, ... xt, Two guards approaching. I , eng, hide, ... tx, 躲藏, duǒ cáng, ... xt, behind a pillar. They , eng, discover, ... tx, 发现, fā xiàn, ... xt, nothing.
+
+**Mother Tmojizu:** Roll INT Stealth Tactics.
+
+**CHARA:** [rolls] 18. Plus 4 is 22. I time my movement between , eng, patrol, ... tx, 巡逻, xún luó, ... xt, cycles. The gap is exactly 3.2 seconds. I slip through. , eng, hide, ... tx, 躲藏, duǒ cáng, ... xt, , eng, discover, ... tx, 发现, fā xiàn, ... xt, avoided.
+
+**Mother Tmojizu:** 22. CHARA is inside. IQabella, your turn. 中文老师.
+
+**中文老师:** , eng, door, ... tx, 门, mén, ... xt, , eng, lock, ... tx, 锁, suǒ, ... xt, , eng, open, ... tx, 开, kāi, ... xt, , eng, medicine, ... tx, 药, yào, ... xt, , eng, tea, ... tx, 茶, chá, ... xt,
+
+**IQabella:** , eng, door, ... tx, 门, mén, ... xt, , eng, lock, ... tx, 锁, suǒ, ... xt, I , eng, open, ... tx, 开, kāi, ... xt, it with a temporal hairpin. Inside: a supply room. , eng, medicine, ... tx, 药, yào, ... xt, , eng, tea, ... tx, 茶, chá, ... xt, I grab healing potions.
+
+**Mother Tmojizu:** Roll WIS Perception.
+
+**IQabella:** [rolls] 17. Plus 2 is 19. I find three , eng, medicine, ... tx, 药, yào, ... xt, potions and one perfect , eng, tea, ... tx, 茶, chá, ... xt, blend. 175 degrees. , eng, open, ... tx, 开, kāi, ... xt, the thermos.
+
+**Mother Tmojizu:** 19. IQabella is stocked. Sol-Supreme, you're last. 中文老师, tech vocabulary.
+
+**中文老师:** , eng, shield, ... tx, 盾, dùn, ... xt, , eng, break, ... tx, 破, pò, ... xt, , eng, frequency, ... tx, 频率, pín lǜ, ... xt, , eng, jam, ... tx, 干扰, gān rǎo, ... xt,
+
+**Sol-Supreme:** , eng, shield, ... tx, 盾, dùn, ... xt, The temple's temporal , eng, shield, ... tx, 盾, dùn, ... xt, operates at 7.83 hertz. I , eng, break, ... tx, 破, pò, ... xt, it by , eng, jam, ... tx, 干扰, gān rǎo, ... xt, the , eng, frequency, ... tx, 频率, pín lǜ, ... xt, Counter-frequency: 7.84 hertz. Destructive interference.
+
+**Mother Tmojizu:** Roll INT Engineering.
+
+**Sol-Supreme:** [rolls] 16. Plus 1 is 17. The , eng, shield, ... tx, 盾, dùn, ... xt, flickers. I , eng, break, ... tx, 破, pò, ... xt, through. , eng, jam, ... tx, 干扰, gān rǎo, ... xt, successful.
+
+**Mother Tmojizu:** 17. The whole team is inside the temple. You're in the main corridor. Torches flicker. Guards patrol above. The vault is three floors down. 中文老师, dungeon vocabulary.
+
+**中文老师:** , eng, corridor, ... tx, 走廊, zǒu láng, ... xt, , eng, stairs, ... tx, 楼梯, lóu tī, ... xt, , eng, underground, ... tx, 地下, dì xià, ... xt, , eng, trap, ... tx, 陷阱, xiàn jǐng, ... xt,
+
+**CHARA:** , eng, corridor, ... tx, 走廊, zǒu láng, ... xt, Clear. , eng, stairs, ... tx, 楼梯, lóu tī, ... xt, down. , eng, underground, ... tx, 地下, dì xià, ... xt, vault. But I detect , eng, trap, ... tx, 陷阱, xiàn jǐng, ... xt, on the third step. Chemical signature: Fe2O3. Iron oxide. Rust trap.
+
+**Mother Tmojizu:** Roll INT Chemistry.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. Fe2O3 — iron oxide. The rust trap triggers on weight. I neutralize it with a reducing agent. Fe2O3 plus 3CO equals 2Fe plus 3CO2. The rust becomes pure iron. , eng, trap, ... tx, 陷阱, xiàn jǐng, ... xt, disarmed.
+
+**Mother Tmojizu:** NATURAL 20. Perfect chemistry. The team descends. Floor one: the Armory. Floor two: the Library. Floor three: the Vault. You reach the vault door. It's massive. Covered in temporal runes. 中文老师, vault vocabulary.
+
+**中文老师:** , eng, vault, ... tx, 库, kù, ... xt, , eng, treasure, ... tx, 宝, bǎo, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, take, ... tx, 拿, ná, ... xt, , eng, run, ... tx, 跑, pǎo, ... xt,
+
+**Horli Qwin:** , eng, vault, ... tx, 库, kù, ... xt, , eng, treasure, ... tx, 宝, bǎo, ... xt, inside. , eng, egg, ... tx, 蛋, dàn, ... xt, — the Black Fuzzpet egg! I , eng, take, ... tx, 拿, ná, ... xt, it. Then we , eng, run, ... tx, 跑, pǎo, ... xt,
+
+**Mother Tmojizu:** Roll DEX Lockpicking.
+
+**Horli Qwin:** [rolls] 14. Plus 3 is 17. I pick the temporal lock. , eng, vault, ... tx, 库, kù, ... xt, door opens. , eng, treasure, ... tx, 宝, bǎo, ... xt, revealed. , eng, egg, ... tx, 蛋, dàn, ... xt, — it's glowing with gravity energy. I , eng, take, ... tx, 拿, ná, ... xt, it!
+
+**Mother Tmojizu:** 17. The egg is yours. But the alarm trips. Bells ring. Guards awaken. 中文老师, alarm vocabulary.
+
+**中文老师:** , eng, alarm, ... tx, 警报, jǐng bào, ... xt, , eng, wake, ... tx, 醒, xǐng, ... xt, , eng, chase, ... tx, 追, zhuī, ... xt, , eng, fight, ... tx, 战, zhàn, ... xt, , eng, escape, ... tx, 逃, táo, ... xt,
+
+**IQabella:** , eng, alarm, ... tx, 警报, jǐng bào, ... xt, Guards , eng, wake, ... tx, 醒, xǐng, ... xt, We need to , eng, escape, ... tx, 逃, táo, ... xt, Or , eng, fight, ... tx, 战, zhàn, ... xt,
+
+**Mother Tmojizu:** Roll initiative! Six guards burst into the vault. They're armed with temporal staves. 中文老师, combat vocabulary.
+
+**中文老师:** , eng, hit, ... tx, 打, dǎ, ... xt, , eng, attack, ... tx, 攻, gōng, ... xt, , eng, defend, ... tx, 防, fáng, ... xt, , eng, wound, ... tx, 伤, shāng, ... xt, , eng, victory, ... tx, 胜, shèng, ... xt, , eng, defeat, ... tx, 败, bài, ... xt,
+
+**Horli Qwin:** Sparky! , eng, fire, ... tx, 火, huǒ, ... xt, , eng, attack, ... tx, 攻, gōng, ... xt, , eng, hit, ... tx, 打, dǎ, ... xt, them! , eng, fireball, ... tx, 火球, huǒ qiú, ... xt,
+
+**Mother Tmojizu:** Roll DEX Battle.
+
+**Horli Qwin:** [rolls] 19. Plus 3 is 22. Sparky launches , eng, fireball, ... tx, 火球, huǒ qiú, ... xt, , eng, attack, ... tx, 攻, gōng, ... xt, , eng, hit, ... tx, 打, dǎ, ... xt, three guards!
+
+**Mother Tmojizu:** 22. Three guards are burned. But the other three counter-attack. Roll DEX Defense, Horli.
+
+**Horli Qwin:** [rolls] 12. Plus 3 is 15. I , eng, defend, ... tx, 防, fáng, ... xt, but take , eng, wound, ... tx, 伤, shāng, ... xt, , eng, pain, ... tx, 痛, tòng, ... xt,
+
+**Mother Tmojizu:** 15. Partial defense. You take , eng, wound, ... tx, 伤, shāng, ... xt, IQabella, heal him! 中文老师.
+
+**中文老师:** , eng, heal, ... tx, 治, zhì, ... xt, , eng, therapy, ... tx, 疗, liáo, ... xt, , eng, recover, ... tx, 恢复, huī fù, ... xt, , eng, life, ... tx, 命, mìng, ... xt,
+
+**IQabella:** Aqua! , eng, heal, ... tx, 治, zhì, ... xt, , eng, therapy, ... tx, 疗, liáo, ... xt, , eng, recover, ... tx, 恢复, huī fù, ... xt, , eng, life, ... tx, 命, mìng, ... xt, restore!
+
+**Mother Tmojizu:** Roll WIS Healing.
+
+**IQabella:** [rolls] 18. Plus 2 is 20. , eng, heal, ... tx, 治, zhì, ... xt, , eng, therapy, ... tx, 疗, liáo, ... xt, Horli's , eng, wound, ... tx, 伤, shāng, ... xt, closes. , eng, recover, ... tx, 恢复, huī fù, ... xt, complete. , eng, life, ... tx, 命, mìng, ... xt, restored.
+
+**Mother Tmojizu:** 20. Horli is fully healed. CHARA, your turn. Boulder is up. 中文老师.
+
+**中文老师:** , eng, earth, ... tx, 地, dì, ... xt, , eng, quake, ... tx, 震, zhèn, ... xt, , eng, stone, ... tx, 石, shí, ... xt, , eng, power, ... tx, 力, lì, ... xt,
+
+**CHARA:** Boulder! , eng, earth, ... tx, 地, dì, ... xt, , eng, quake, ... tx, 震, zhèn, ... xt, , eng, stone, ... tx, 石, shí, ... xt, pillars! , eng, power, ... tx, 力, lì, ... xt, maximum! , eng, earthquake, ... tx, 地震, dì zhèn, ... xt,
+
+**Mother Tmojizu:** Roll INT Battle Strategy.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. Boulder slams the ground. , eng, earthquake, ... tx, 地震, dì zhèn, ... xt, , eng, stone, ... tx, 石, shí, ... xt, pillars erupt! , eng, power, ... tx, 力, lì, ... xt, level 7! All remaining guards are knocked down!
+
+**Mother Tmojizu:** NATURAL 20. All six guards are defeated. , eng, victory, ... tx, 胜, shèng, ... xt, But more guards are coming. You need to , eng, escape, ... tx, 逃, táo, ... xt, 中文老师.
+
+**中文老师:** , eng, fast, ... tx, 快, kuài, ... xt, , eng, run, ... tx, 跑, pǎo, ... xt, , eng, jump, ... tx, 跳, tiào, ... xt, , eng, fly, ... tx, 飞, fēi, ... xt,
+
+**Sol-Supreme:** Circuit! , eng, electricity, ... tx, 电, diàn, ... xt, , eng, lightning, ... tx, 闪电, shǎn diàn, ... xt, Create a temporal bridge. We , eng, jump, ... tx, 跳, tiào, ... xt, across the gap. , eng, fly, ... tx, 飞, fēi, ... xt, over the guards!
+
+**Mother Tmojizu:** Roll INT Engineering.
+
+**Sol-Supreme:** [rolls] 17. Plus 1 is 18. Circuit generates , eng, lightning, ... tx, 闪电, shǎn diàn, ... xt, The temporal bridge forms. We , eng, jump, ... tx, 跳, tiào, ... xt, , eng, fly, ... tx, 飞, fēi, ... xt,
+
+**Mother Tmojizu:** 18. The team escapes to the roof. But the Temple Guardian awaits — a massive stone golem with glowing eyes. 中文老师, boss vocabulary.
+
+**中文老师:** , eng, king, ... tx, 王, wáng, ... xt, , eng, boss, ... tx, 王, wáng, ... xt, , eng, strong, ... tx, 强, qiáng, ... xt, , eng, big, ... tx, 大, dà, ... xt, , eng, fear, ... tx, 怕, pà, ... xt,
+
+**Horli Qwin:** , eng, boss, ... tx, 王, wáng, ... xt, , eng, strong, ... tx, 强, qiáng, ... xt, , eng, big, ... tx, 大, dà, ... xt, But I'm not , eng, fear, ... tx, 怕, pà, ... xt, Let's , eng, fight, ... tx, 打, dǎ, ... xt,
+
+**Mother Tmojizu:** Roll CHA Bravery.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20. I'm not , eng, fear, ... tx, 怕, pà, ... xt, Sparky! Volt! Double attack! , eng, fire, ... tx, 火, huǒ, ... xt, plus , eng, electricity, ... tx, 电, diàn, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. But wait — you can combine Chronoments! Forge a new elemental attack! 中文老师, forge vocabulary.
+
+**中文老师:** , eng, combine, ... tx, 合, hé, ... xt, , eng, forge, ... tx, 造, zào, ... xt, , eng, new, ... tx, 新, xīn, ... xt, , eng, ability, ... tx, 能, néng, ... xt, , eng, fire-electric, ... tx, 火电, huǒ diàn, ... xt,
+
+**CHARA:** , eng, combine, ... tx, 合, hé, ... xt, , eng, forge, ... tx, 造, zào, ... xt, , eng, new, ... tx, 新, xīn, ... xt, , eng, ability, ... tx, 能, néng, ... xt, , eng, fire, ... tx, 火, huǒ, ... xt, plus , eng, electricity, ... tx, 电, diàn, ... xt, equals , eng, fire-electric, ... tx, 火电, huǒ diàn, ... xt, The chemical formula: CH4 plus 2O2 plus electrical spark equals CO2 plus 2H2O plus PLASMA! Combustion with electrical amplification!
+
+**Mother Tmojizu:** Roll INT Chemistry Forge.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. , eng, combine, ... tx, 合, hé, ... xt, , eng, forge, ... tx, 造, zào, ... xt, , eng, fire-electric, ... tx, 火电, huǒ diàn, ... xt, storm! CH4 combustion amplified by electrical discharge! The plasma temperature is 3000 degrees Celsius!
+
+**Mother Tmojizu:** NATURAL 20. The , eng, fire-electric, ... tx, 火电, huǒ diàn, ... xt, storm hits the Temple Guardian. , eng, stone, ... tx, 石, shí, ... xt, cracks. , eng, big, ... tx, 大, dà, ... xt, golem crumbles. , eng, victory, ... tx, 胜, shèng, ... xt,
+
+**中文老师:** , eng, win, ... tx, 赢, yíng, ... xt, , eng, victory, ... tx, 胜, shèng, ... xt, , eng, level up, ... tx, 升级, shēng jí, ... xt,
+
+**Mother Tmojizu:** You defeated the Temple Guardian! Time to , eng, level up, ... tx, 升级, shēng jí, ... xt, 中文老师, stat vocabulary.
+
+**中文老师:** , eng, strength, ... tx, 力, lì, ... xt, , eng, speed, ... tx, 速, sù, ... xt, , eng, defense, ... tx, 防, fáng, ... xt, , eng, magic, ... tx, 魔, mó, ... xt, , eng, life, ... tx, 命, mìng, ... xt, , eng, luck, ... tx, 运, yùn, ... xt,
+
+**Horli Qwin:** , eng, level up, ... tx, 升级, shēng jí, ... xt, Sparky: , eng, strength, ... tx, 力, lì, ... xt, plus 2! , eng, speed, ... tx, 速, sù, ... xt, plus 1! , eng, fire-electric, ... tx, 火电, huǒ diàn, ... xt, Chronoment unlocked!
+
+**CHARA:** Boulder: , eng, defense, ... tx, 防, fáng, ... xt, plus 3! , eng, magic, ... tx, 魔, mó, ... xt, plus 1! New Chronoment: , eng, rock, ... tx, 岩石, yán shí, ... xt, armor! Fe2O3 becomes Fe3O4 — magnetite! Magnetic armor!
+
+**IQabella:** Aqua: , eng, life, ... tx, 命, mìng, ... xt, plus 3! , eng, luck, ... tx, 运, yùn, ... xt, plus 2! New Chronoment: , eng, ice storm, ... tx, 冰暴, bīng bào, ... xt, H2O plus cold equals , eng, ice, ... tx, 冰, bīng, ... xt,
+
+**Sol-Supreme:** Circuit: , eng, magic, ... tx, 魔, mó, ... xt, plus 3! , eng, speed, ... tx, 速, sù, ... xt, plus 2! New Chronoment: , eng, electromagnetic, ... tx, 电磁, diàn cí, ... xt, Silicon carbide conductivity maximized!
+
+**Mother Tmojizu:** Everyone leveled up! New Chronoments forged! But the temple is collapsing. You need to escape. On the way out, you pass a merchant Fuzzpet shop. 中文老师, shop vocabulary.
+
+**中文老师:** , eng, shop, ... tx, 店, diàn, ... xt, , eng, buy, ... tx, 买, mǎi, ... xt, , eng, sell, ... tx, 卖, mài, ... xt, , eng, money, ... tx, 钱, qián, ... xt, , eng, expensive, ... tx, 贵, guì, ... xt, , eng, cheap, ... tx, 便宜, pián yi, ... xt,
+
+**IQabella:** , eng, shop, ... tx, 店, diàn, ... xt, I , eng, buy, ... tx, 买, mǎi, ... xt, healing supplies! , eng, medicine, ... tx, 药, yào, ... xt, , eng, tea, ... tx, 茶, chá, ... xt, How , eng, expensive, ... tx, 贵, guì, ... xt,
+
+**Mother Tmojizu:** The merchant Fuzzpet — a wise old owl-type — hoots: "For heroes who defeated the Guardian? , eng, cheap, ... tx, 便宜, pián yi, ... xt, Half price." Roll CHA Bargaining.
+
+**IQabella:** [rolls] 19. Plus 2 is 21. , eng, cheap, ... tx, 便宜, pián yi, ... xt, I , eng, buy, ... tx, 买, mǎi, ... xt, five , eng, medicine, ... tx, 药, yào, ... xt, potions, three , eng, tea, ... tx, 茶, chá, ... xt, blends, and one rare , eng, egg, ... tx, 蛋, dàn, ... xt, incubator!
+
+**Mother Tmojizu:** 21. Great deal. Horli, you , eng, buy, ... tx, 买, mǎi, ... xt, something?
+
+**Horli Qwin:** I , eng, buy, ... tx, 买, mǎi, ... xt, a , eng, fire, ... tx, 火, huǒ, ... xt, amplifier! Makes Sparky's , eng, fireball, ... tx, 火球, huǒ qiú, ... xt, twice as strong! How , eng, expensive, ... tx, 贵, guì, ... xt,
+
+**Mother Tmojizu:** "For you? , eng, cheap, ... tx, 便宜, pián yi, ... xt, Three gold." Roll CHA Bargaining.
+
+**Horli Qwin:** [rolls] 17. Plus 3 is 20. I , eng, buy, ... tx, 买, mǎi, ... xt, it! , eng, money, ... tx, 钱, qián, ... xt, well spent!
+
+**Mother Tmojizu:** 20. Sol-Supreme?
+
+**Sol-Supreme:** I , eng, buy, ... tx, 买, mǎi, ... xt, a temporal capacitor. Stores , eng, electricity, ... tx, 电, diàn, ... xt, energy. Circuit can use it to power , eng, electromagnetic, ... tx, 电磁, diàn cí, ... xt, attacks without draining. , eng, money, ... tx, 钱, qián, ... xt, five gold.
+
+**Mother Tmojizu:** Roll INT Appraisal.
+
+**Sol-Supreme:** [rolls] 16. Plus 1 is 17. The capacitor is genuine. , eng, buy, ... tx, 买, mǎi, ... xt, confirmed.
+
+**Mother Tmojizu:** CHARA?
+
+**CHARA:** I , eng, buy, ... tx, 买, mǎi, ... xt, a chemical analysis kit. Identifies any , eng, compound, ... tx, 化合物, huà hé wù, ... xt, instantly. , eng, money, ... tx, 钱, qián, ... xt, four gold. , eng, cheap, ... tx, 便宜, pián yi, ... xt, for the value.
+
+**Mother Tmojizu:** Roll INT Value Assessment.
+
+**CHARA:** [rolls] 18. Plus 4 is 22. The kit is worth ten gold. I got it for four. , eng, cheap, ... tx, 便宜, pián yi, ... xt, , eng, buy, ... tx, 买, mǎi, ... xt, confirmed.
+
+**Mother Tmojizu:** Everyone has their new items. The temple is collapsing behind you. You reach the roof. The Black Fuzzpet egg is safe. 中文老师, escape vocabulary.
+
+**中文老师:** , eng, escape, ... tx, 逃, táo, ... xt, , eng, leave, ... tx, 走, zǒu, ... xt, , eng, return, ... tx, 回, huí, ... xt, , eng, home, ... tx, 家, jiā, ... xt, , eng, safe, ... tx, 安全, ān quán, ... xt,

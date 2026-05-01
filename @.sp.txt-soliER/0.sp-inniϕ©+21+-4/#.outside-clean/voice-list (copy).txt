@@ -1,0 +1,213 @@
+# SUPPORTING CHARACTER VOICE LIST
+# ================================
+# Main character voices (NEVER use for supporting characters):
+#   zh-CN-XiaoxiaoNeural       — Mother Tmojizu (DM)
+#   zh-CN-YunxiaNeural         — QOO (Chinese Teacher)
+#   fr-FR-VivienneMultilingual — CHARA
+#   fr-FR-DeniseNeural         — Horli Qwin
+#   en-US-ChristopherNeural    — Sol-Supreme
+#   en-US-AnaNeural            — IQabella
+
+# ============================================================
+# ENGLISH — US (non-main)
+# ============================================================
+en-US-AndrewNeural              Male    Warm, Confident, Authentic
+en-US-AndrewMultilingualNeural  Male    Warm, Confident (multilingual)
+en-US-AriaNeural                Female  Positive, Confident (News/Novel)
+en-US-AvaNeural                 Female  Expressive, Caring, Friendly
+en-US-AvaMultilingualNeural     Female  Expressive, Caring (multilingual)
+en-US-BrianNeural               Male    Approachable, Casual, Sincere
+en-US-BrianMultilingualNeural   Male    Approachable, Casual (multilingual)
+en-US-EmmaNeural                Female  Cheerful, Clear, Conversational
+en-US-EmmaMultilingualNeural    Female  Cheerful, Clear (multilingual)
+en-US-EricNeural                Male    Rational (News/Novel)
+en-US-GuyNeural                 Male    Passion (News/Novel)
+en-US-JennyNeural               Female  Friendly, Considerate, Comfort
+en-US-MichelleNeural            Female  Friendly, Pleasant (News/Novel)
+en-US-RogerNeural               Male    Lively (News/Novel)
+en-US-SteffanNeural             Male    Rational (News/Novel)
+
+# ============================================================
+# ENGLISH — UK (British accent)
+# ============================================================
+en-GB-LibbyNeural               Female  Friendly, Positive
+en-GB-MaisieNeural              Female  Friendly, Positive
+en-GB-RyanNeural                Male    Friendly, Positive
+en-GB-SoniaNeural               Female  Friendly, Positive
+en-GB-ThomasNeural              Male    Friendly, Positive
+
+# ============================================================
+# ENGLISH — Australian
+# ============================================================
+en-AU-NatashaNeural             Female  Friendly, Positive
+en-AU-WilliamMultilingualNeural Male    Friendly, Positive (multilingual)
+
+# ============================================================
+# ENGLISH — Canadian
+# ============================================================
+en-CA-ClaraNeural               Female  Friendly, Positive
+
+# ============================================================
+# ENGLISH — Irish
+# ============================================================
+en-IE-ConnorNeural              Male    Friendly, Positive
+en-IE-EmilyNeural               Female  Friendly, Positive
+
+# ============================================================
+# ENGLISH — Indian
+# ============================================================
+en-IN-NeerjaNeural              Female  Friendly, Positive
+en-IN-NeerjaExpressiveNeural    Female  Friendly, Positive (expressive)
+en-IN-PrabhatNeural             Male    Friendly, Positive
+
+# ============================================================
+# ENGLISH — African / NZ / Singapore / Philippines / etc.
+# ============================================================
+en-ZA-LeahNeural                Female  Friendly, Positive (South Africa)
+en-ZA-LukeNeural                Male    Friendly, Positive (South Africa)
+en-NG-AbeoNeural                Male    Friendly, Positive (Nigeria)
+en-NG-EzinneNeural              Female  Friendly, Positive (Nigeria)
+en-KE-AsiliaNeural              Female  Friendly, Positive (Kenya)
+en-KE-ChilembaNeural            Male    Friendly, Positive (Kenya)
+en-TZ-ElimuNeural               Male    Friendly, Positive (Tanzania)
+en-TZ-ImaniNeural               Female  Friendly, Positive (Tanzania)
+en-NZ-MitchellNeural            Male    Friendly, Positive (New Zealand)
+en-NZ-MollyNeural               Female  Friendly, Positive (New Zealand)
+en-PH-JamesNeural               Male    Friendly, Positive (Philippines)
+en-PH-RosaNeural                Female  Friendly, Positive (Philippines)
+en-SG-LunaNeural                Female  Friendly, Positive (Singapore)
+en-SG-WayneNeural               Male    Friendly, Positive (Singapore)
+
+# ============================================================
+# FRENCH (non-main)
+# ============================================================
+fr-FR-EloiseNeural              Female  Friendly, Positive
+fr-FR-HenriNeural               Male    Friendly, Positive
+fr-FR-RemyMultilingualNeural    Male    Friendly, Positive (multilingual)
+fr-CA-AntoineNeural             Male    Friendly, Positive (Canadian)
+fr-CA-JeanNeural                Male    Friendly, Positive (Canadian)
+fr-CA-SylvieNeural              Female  Friendly, Positive (Canadian)
+fr-CA-ThierryNeural             Male    Friendly, Positive (Canadian)
+fr-BE-CharlineNeural            Female  Friendly, Positive (Belgian)
+fr-BE-GerardNeural              Male    Friendly, Positive (Belgian)
+fr-CH-ArianeNeural              Female  Friendly, Positive (Swiss)
+fr-CH-FabriceNeural             Male    Friendly, Positive (Swiss)
+
+# ============================================================
+# GERMAN
+# ============================================================
+de-DE-AmalaNeural               Female  Friendly, Positive
+de-DE-ConradNeural              Male    Friendly, Positive
+de-DE-KatjaNeural               Female  Friendly, Positive
+de-DE-KillianNeural             Male    Friendly, Positive
+de-DE-FlorianMultilingualNeural Male    Friendly, Positive (multilingual)
+de-DE-SeraphinaMultilingualNeural Female Friendly, Positive (multilingual)
+
+# ============================================================
+# SPANISH
+# ============================================================
+es-ES-AlvaroNeural              Male    Friendly, Positive (Spain)
+es-ES-ElviraNeural              Female  Friendly, Positive (Spain)
+es-ES-XimenaNeural              Female  Friendly, Positive (Spain)
+es-MX-DaliaNeural               Female  Friendly, Positive (Mexico)
+es-MX-JorgeNeural               Male    Friendly, Positive (Mexico)
+
+# ============================================================
+# ITALIAN
+# ============================================================
+it-IT-DiegoNeural               Male    Friendly, Positive
+it-IT-ElsaNeural                Female  Friendly, Positive
+it-IT-IsabellaNeural            Female  Friendly, Positive
+it-IT-GiuseppeMultilingualNeural Male   Friendly, Positive (multilingual)
+
+# ============================================================
+# PORTUGUESE
+# ============================================================
+pt-BR-AntonioNeural             Male    Friendly, Positive (Brazil)
+pt-BR-FranciscaNeural           Female  Friendly, Positive (Brazil)
+pt-BR-ThalitaMultilingualNeural Female  Friendly, Positive (Brazil, multilingual)
+pt-PT-DuarteNeural              Male    Friendly, Positive (Portugal)
+pt-PT-RaquelNeural              Female  Friendly, Positive (Portugal)
+
+# ============================================================
+# RUSSIAN
+# ============================================================
+ru-RU-DmitryNeural              Male    Friendly, Positive
+ru-RU-SvetlanaNeural            Female  Friendly, Positive
+
+# ============================================================
+# JAPANESE
+# ============================================================
+ja-JP-KeitaNeural               Male    Friendly, Positive
+ja-JP-NanamiNeural              Female  Friendly, Positive
+
+# ============================================================
+# KOREAN
+# ============================================================
+ko-KR-HyunsuMultilingualNeural  Male    Friendly, Positive (multilingual)
+ko-KR-InJoonNeural              Male    Friendly, Positive
+ko-KR-SunHiNeural               Female  Friendly, Positive
+
+# ============================================================
+# CHINESE (non-main)
+# ============================================================
+zh-CN-XiaoyiNeural              Female  Lively (Cartoon/Novel)
+zh-CN-YunjianNeural             Male    Passion (Sports/Novel)
+zh-CN-YunxiNeural               Male    Lively, Sunshine (Novel)
+zh-CN-YunyangNeural             Male    Professional, Reliable (News)
+zh-HK-HiuGaaiNeural             Female  Friendly, Positive (Hong Kong)
+zh-HK-HiuMaanNeural             Female  Friendly, Positive (Hong Kong)
+zh-HK-WanLungNeural             Male    Friendly, Positive (Hong Kong)
+zh-TW-HsiaoChenNeural           Female  Friendly, Positive (Taiwan)
+zh-TW-HsiaoYuNeural             Female  Friendly, Positive (Taiwan)
+zh-TW-YunJheNeural              Male    Friendly, Positive (Taiwan)
+
+# ============================================================
+# ARABIC (selection)
+# ============================================================
+ar-AE-FatimaNeural              Female  Friendly, Positive (UAE)
+ar-AE-HamdanNeural              Male    Friendly, Positive (UAE)
+ar-EG-SalmaNeural               Female  Friendly, Positive (Egypt)
+ar-EG-ShakirNeural              Male    Friendly, Positive (Egypt)
+ar-SA-HamedNeural               Male    Friendly, Positive (Saudi)
+ar-SA-ZariyahNeural             Female  Friendly, Positive (Saudi)
+
+# ============================================================
+# HINDI
+# ============================================================
+hi-IN-MadhurNeural              Male    Friendly, Positive
+hi-IN-SwaraNeural               Female  Friendly, Positive
+
+# ============================================================
+# OTHER EUROPEAN
+# ============================================================
+nl-NL-ColetteNeural             Female  Friendly, Positive (Dutch)
+nl-NL-MaartenNeural             Male    Friendly, Positive (Dutch)
+pl-PL-MarekNeural               Male    Friendly, Positive (Polish)
+pl-PL-ZofiaNeural               Female  Friendly, Positive (Polish)
+sv-SE-MattiasNeural             Male    Friendly, Positive (Swedish)
+sv-SE-SofieNeural               Female  Friendly, Positive (Swedish)
+tr-TR-AhmetNeural               Male    Friendly, Positive (Turkish)
+tr-TR-EmelNeural                Female  Friendly, Positive (Turkish)
+el-GR-AthinaNeural              Female  Friendly, Positive (Greek)
+da-DK-ChristelNeural            Female  Friendly, Positive (Danish)
+da-DK-JeppeNeural               Male    Friendly, Positive (Danish)
+fi-FI-HarriNeural               Male    Friendly, Positive (Finnish)
+fi-FI-NooraNeural               Female  Friendly, Positive (Finnish)
+nb-NO-FinnNeural                Male    Friendly, Positive (Norwegian)
+nb-NO-PernilleNeural            Female  Friendly, Positive (Norwegian)
+
+# ============================================================
+# MULTILINGUAL (can switch languages mid-speech)
+# ============================================================
+en-US-AndrewMultilingualNeural  Male    Warm, Confident
+en-US-AvaMultilingualNeural     Female  Expressive, Caring
+en-US-BrianMultilingualNeural   Male    Approachable, Casual
+en-US-EmmaMultilingualNeural    Female  Cheerful, Clear
+de-DE-FlorianMultilingualNeural Male    Friendly, Positive
+de-DE-SeraphinaMultilingualNeural Female Friendly, Positive
+fr-FR-RemyMultilingualNeural    Male    Friendly, Positive
+it-IT-GiuseppeMultilingualNeural Male   Friendly, Positive
+ko-KR-HyunsuMultilingualNeural  Male    Friendly, Positive
+pt-BR-ThalitaMultilingualNeural Female  Friendly, Positive
+en-AU-WilliamMultilingualNeural Male    Friendly, Positive

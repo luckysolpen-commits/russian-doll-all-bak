@@ -1,0 +1,9 @@
+You push through the access panel and find yourselves in a maze of humming conduits, pulsing energy nodes, and whirring machinery. This is the engine room of the FLEXTANK, the hidden infrastructure that maintains the illusion of contained universes. It's grimy, utilitarian, and dangerous, a stark contrast to the exhibit hall.
+
+You see several large conduits labeled with cryptic symbols. One seems to lead to what looks like a high-speed transport system. Another goes deeper into the technological heart of the FLEXTANK. There's also a smaller hatch that seems to lead to a maintenance crawlspace.
+
+Do you:
+
+*   Head for the **high-speed transport conduit**? Turn to page 46.
+*   Venture into the **deeper technological heart** of the FLEXTANK? Turn to page 47.
+*   Try the **maintenance crawlspace hatch**? Turn to page 48.

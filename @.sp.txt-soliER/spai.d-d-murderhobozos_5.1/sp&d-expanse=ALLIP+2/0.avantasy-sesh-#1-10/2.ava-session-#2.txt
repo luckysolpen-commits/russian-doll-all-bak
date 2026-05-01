@@ -1,0 +1,617 @@
+# AVA-SESSION-002: "THE THIRD FLOOR"
+## Avantasy Expanse — Session 2
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+
+---
+
+**DM (Mother Tmojizu):** Welcome back, folks. Session 2. Last time, you cleared two floors of the Lost Temple, got some loot, found a mysterious key, and I ended on a cliffhanger with a server breach alert. So let's pick up right where we left off.
+
+You're back in Troll City. It's the next morning — server time, anyway. The titan ribcage glows amber in the dawn light, and the streets are already busy. You've got 500 gold from the temple, a Soul Pen Ink vial, three Mana Crystals, a Dragon Slayer Armor chestpiece, and a mysterious key that keeps pulsing in the direction of the temple.
+
+What do you do?
+
+**Sol-Supreme:** Before anything else, I want to visit the Magic Tree. I have a Soul Pen Ink vial, and I want to craft something. What can I make with one vial?
+
+**Mother Tmojizu:** Let me check the crafting table... With one vial of Soul Pen Ink and your Artificer abilities, you can craft one common magic item or enchant one existing item. What did you have in mind?
+
+**Sol-Supreme:** I want to enchant my Steel Defender. Give it a ranged attack option. A small repulsor blast.
+
+**Mother Tmojizu:** Okay, that's reasonable. Roll Tinker's Tools with your INT modifier.
+
+**Sol-Supreme:** [rolls] 12. Plus 6 is 18.
+
+**Mother Tmojizu:** 18. You spend about an hour at the Magic Tree, your Soul Pen Prototype humming as you weave the ink into IKARUS-7's circuitry. The cyan glow intensifies, and a small port opens on its chest plate. You've given it a Repulsor Blast — once per short rest, it can deal 1d8 force damage at 30 feet.
+
+**Sol-Supreme:** Perfect. IKARUS-7, test fire.
+
+**Mother Tmojizu:** The Steel Defender turns toward a nearby training dummy and emits a soft *thwump*. A pulse of cyan energy hits the dummy, knocking it backward. It works.
+
+**Horli Qwin:** Okay, that's actually really cool. Can I get a repulsor blast?
+
+**Mother Tmojizu:** You're not a Steel Defender.
+
+**Horli Qwin:** I'm just saying. It would look good on me.
+
+**CHARA:** I want to visit the Quest Board. I want to see if anything has changed since yesterday. Specifically, I want to know if the Carcazod scout posting is still up.
+
+**Mother Tmojizu:** You head to the central plaza. The Quest Board has been updated. The Carcazod scout posting is still there, but someone has added a note at the bottom in red ink: "URGENT — Scouts now at the gate. Reward doubled to 400gp." The cat-in-a-fire-tree posting has been taken down — apparently someone handled it. And there's a new posting:
+
+"HELP. The key I dropped in the Healing Spring won't stop glowing. It's freaking everyone out. — Borin"
+
+**CHARA:** [OOC] The key in the Healing Spring? That's not our key, right?
+
+**Mother Tmojizu:** You don't think so. Your key is still pulsing, pointing toward the temple. This is something else.
+
+**IQabella:** I want to check the Healing Spring. If someone's key is stuck there, I want to help.
+
+**Mother Tmojizu:** You approach the Healing Spring. The cyan water is churning — not gently, but violently. A small iron key is lodged in the fountain's base, and it's glowing an angry red instead of the usual cyan. Players are gathered around, pointing and whispering.
+
+**IQabella:** I'm casting Detect Magic on the key.
+
+**Mother Tmojizu:** Roll Religion or Arcana.
+
+**IQabella:** Religion. [rolls] 14. Plus 3 is 17.
+
+**Mother Tmojizu:** The key is cursed. Not dangerously — but it's been hexed by something. It's drawing corruption from the breach in Worm Hole X and channeling it into the Healing Spring. If it stays there, the spring will stop healing and start... doing something else. Something bad.
+
+**IQabella:** I tell the party. "The key is cursed. It's pulling corruption from the breach into the spring. We need to remove it."
+
+**Horli Qwin:** I'll grab it.
+
+**CHARA:** Wait. It's cursed. Don't just—
+
+**Mother Tmojizu:** Horli reaches into the boiling spring and grabs the key.
+
+**Horli Qwin:** I'm just gonna— yep. Got it.
+
+**Mother Tmojizu:** Make a WIS saving throw.
+
+**Horli Qwin:** WIS save. [rolls] 8. Plus 1 is 9.
+
+**Mother Tmojizu:** The key burns your hand. A jolt of corrupted code shoots up your arm. You take 4 psychic damage, and for the next hour, your fur is bright pink instead of black.
+
+**Horli Qwin:** [looking at her now-pink fur] ...I'm keeping the key.
+
+**CHARA:** You're literally pink now.
+
+**Horli Qwin:** It's a look. I'm rocking it. For the bit.
+
+**IQabella:** Let me cast Cure Wounds on you. You took damage.
+
+**Horli Qwin:** Nah, I'm good. The pink is growing on me. Literally.
+
+**Mother Tmojizu:** Borin comes out of the tavern, sees Horli holding the key, and visibly relaxes.
+
+**BORIN IRONMUG:** "Oh, thank the gods. Someone took the cursed thing. I've been listening to that spring bubble like a kettle for six hours. Here—" He tosses Horli a small pouch. "25gp. Hazard pay."
+
+**Horli Qwin:** I'll take it. And the key. I'm keeping the key too.
+
+**Mother Tmojizu:** You now have two keys. Your mysterious cyan one from the temple, and this cursed red one from the spring.
+
+**Sol-Supreme:** [OOC] Tomo, is the red key connected to the breach? Or is it a separate thing?
+
+**Mother Tmojizu:** Roll Investigation.
+
+**Sol-Supreme:** [rolls] 15. Plus 6 is 21.
+
+**Mother Tmojizu:** The red key's code signature is different from the breach corruption. It's not from Worm Hole X. It's older — from Year 1, when the first breach happened. Someone planted it in the spring as a... beacon. A monitoring device. Someone is watching the Healing Spring.
+
+**Sol-Supreme:** [in character] "This key is a beacon. Someone planted it during the first breach. They're monitoring this spring."
+
+**CHARA:** Who has access to the spring? Who would want to monitor it?
+
+**Mother Tmojizu:** Anyone can access the spring — it's in a public plaza. But to plant a beacon, you'd need magical knowledge and server-level access.
+
+**Sol-Supreme:** Or architect-level access.
+
+**CHARA:** [OOC] I'm looking at Sol-Supreme when he says that.
+
+**Sol-Supreme:** [OOC] I'm not saying it's me. I'm saying it's someone with that level of access.
+
+**CHARA:** [in character, flat] "Uh-huh." [OOC] Noted, ma'am.
+
+**Mother Tmojizu:** Okay, so you've dealt with the spring situation, Sol has upgraded IKARUS-7, and you've got two keys. The cyan key is still pulsing toward the temple. The red key is... doing something, but you're not sure what yet.
+
+You're standing in the plaza when a server-wide notification chimes:
+
+**📢 SERVER ANNOUNCEMENT: GoldQueen_Astra has returned from the Arcane Academy and is hosting a lecture in Fairy City. All players welcome. Topic: "The History of the Breach — What We Know and What We Don't."**
+
+**Horli Qwin:** Ooh, a lecture. I love lectures. Said no one ever.
+
+**IQabella:** It could be useful information! If she knows about the breach—
+
+**CHARA:** Fairy City is Levels 3-7. We're level 2. The Rainbow Bridge toll is 5cp, but getting there is fine. The question is: do we go to the lecture, or do we go back to the temple?
+
+**Sol-Supreme:** The lecture could give us intel on the breach. The temple is where the key leads. I say we split the difference — we go to the lecture, get the intel, then hit the temple with better information.
+
+**Horli Qwin:** I say we go to the temple. Lectures are boring. Temples have loot.
+
+**Mother Tmojizu:** What's the party consensus?
+
+**CHARA:** Lecture first. Information is force multiplication. We go in smart.
+
+**Horli Qwin:** Fine. But if the lecture is boring, I'm leaving.
+
+**Mother Tmojizu:** You head to the Rainbow Bridge. Kevin the Angel is at the tollhouse, looking as bored as ever.
+
+**KEVIN THE ANGEL:** "Five cp to cross. Or you can tell me a joke and I'll let you through for free. I'm so bored."
+
+**Horli Qwin:** I've got a joke. "Why did the angel cross the road?"
+
+**KEVIN THE ANGEL:** "I don't know. Why?"
+
+**Horli Qwin:** "Because the road hadn't been rendered yet and he was tired of waiting for the dev patch."
+
+**Mother Tmojizu:** Kevin stares at you. Then he laughs. Actually laughs.
+
+**KEVIN THE ANGEL:** "That's... that's actually funny. Go on through. All of you."
+
+**Horli Qwin:** [OOC] I'm putting that in the journal. "For the Bit: Made an angel laugh with a dev joke." Also T-Mo, Kevin needs a snack budget. This angel is underfed.
+
+**Mother Tmojizu:** You cross the Rainbow Bridge into Fairy City. The transition is stunning — from the medieval grit of Troll City to a pastel dreamscape. Floating gardens, crystalline towers, and buildings that curve in impossible ϕ-spiral patterns. Gravity is a suggestion here. Players float between platforms, and the sky is a permanent golden hour.
+
+The Arcane Academy is a massive amphitheater carved from a single piece of quartz. Inside, GoldQueen_Astra stands at a podium, addressing a crowd of about thirty players. She's a high elf with golden hair, robes woven with ϕ-spiral patterns, and a staff topped with a glowing Fuzzball crystal. She looks tired but focused.
+
+**GOLDQUEEN_ASTRA:** "—and so the first breach, in Year 1, came from Worm Hole X. We sealed it, but the code never fully healed. There are... fractures. Weak points. And I've been monitoring the server's integrity logs, and I can tell you that something is building. Something bigger than last time."
+
+A player in the crowd raises their hand.
+
+**RANDOM PLAYER:** "What's causing it?"
+
+**GOLDQUEEN_ASTRA:** "We don't know yet. But the corruption signatures match Carcazod mutagen. Which shouldn't be possible — the Carcazods are enemies, not hackers. Unless..."
+
+She trails off. You notice her eyes scan the crowd and lock onto Sol-Supreme. Just for a moment. But the look on her face says everything: *I know who you are.*
+
+**Sol-Supreme:** [OOC] She knows.
+
+**Mother Tmojizu:** She knows. And she's choosing not to say anything in public.
+
+**GOLDQUEEN_ASTRA:** "Unless someone is helping them. Someone with server-level access. I can't prove it yet. But I'm working on it. In the meantime, if anyone notices unusual activity — corrupted items, strange NPCs, zones behaving oddly — please report it to me or to the Fuzzball Shrine Priestess."
+
+**CHARA:** [OOC] I'm watching Sol-Supreme watching Astra. This is a whole thing.
+
+**IQabella:** [OOC] I'm just taking notes. This is important!
+
+**Horli Qwin:** [OOC] I'm drawing a picture of Kevin the angel on my "For the Bit" journal.
+
+**GOLDQUEEN_ASTRA:** "One more thing. The Lost Temple. I've been getting reports that the third floor has been... modified. Something's down there that wasn't there before. If anyone's planning to investigate, please — be careful. And if you find anything unusual, bring it to me."
+
+**Mother Tmojizu:** The lecture wraps up. Players start filing out. GoldQueen_Astra is surrounded by people asking questions, but she's clearly looking for someone. You.
+
+**GOLDQUEEN_ASTRA:** "Sol-Supreme. A word?"
+
+**Sol-Supreme:** [in character, deep distorted voice] "Of course."
+
+**Mother Tmojizu:** She leads you to a side chamber — a small study filled with books, scrolls, and floating holographic displays of server code. She closes the door.
+
+**GOLDQUEEN_ASTRA:** "I know who you are. I was there when you initialized this server. Year 0, Month 1. You stood right where you're standing now and you wrote the first line of code. 'Let there be Troll City.' And then the breach happened, and you got trapped inside, and you've been trying to fix it ever since."
+
+**Sol-Supreme:** [in character, quietly] "You remember."
+
+**GOLDQUEEN_ASTRA:** "I remember everything. And I know about the second breach. It's worse than the first. The Carcazods aren't just invading — they're being *directed*. Someone is controlling them. Someone with architect-level access."
+
+**Sol-Supreme:** "I know. I've seen the code signatures. The mutagen on the temple's third floor — it's not natural corruption. It's deliberate."
+
+**GOLDQUEEN_ASTRA:** "Then you know what you need to do. The third floor of the temple holds a server terminal. It's one of the original architect interfaces. If you can access it, you might be able to trace the breach source. But the terminal is guarded. And the guardian has been... corrupted."
+
+**Sol-Supreme:** "I'll handle it."
+
+**GOLDQUEEN_ASTRA:** "I know you will. But you can't do it alone." She looks at the rest of the party. "None of you can. You're stronger together than you know."
+
+**Mother Tmojizu:** She hands Sol-Supreme a small crystal — a Fuzzball crystal, glowing warm orange.
+
+**GOLDQUEEN_ASTRA:** "Ember's spark. It'll protect you from the worst of the mutagen corruption. One use. Save it for when you need it."
+
+**Sol-Supreme:** [OOC] I'm taking it. And I'm... grateful.
+
+**Mother Tmojizu:** She nods. "Come back alive, architect. The server needs you."
+
+**Horli Qwin:** [OOC] Okay, that was actually really good. I'm invested now.
+
+**Mother Tmojizu:** The party regroups outside the Academy. You've got the intel: the third floor has a server terminal, the guardian is corrupted, and someone with architect-level access is directing the Carcazods.
+
+What now?
+
+**CHARA:** Temple. Now. We have the key, we have the intel, and we have Ember's spark. Let's move.
+
+**IQabella:** I want to stop at the Fuzzball Shrine first. Just for a blessing. Crimson's Guard would be really helpful for the fight.
+
+**Mother Tmojizu:** You visit the Fuzzball Shrine. The Priestess is a serene aasimar surrounded by eight floating lights — the Fuzzball spirits. She smiles as you approach.
+
+**FUZZBALL PRIESTESS:** "You carry heavy burdens, little ones. Which spirit's blessing do you seek?"
+
+**IQabella:** "Crimson's Guard, please."
+
+**Mother Tmojizu:** The crimson light floats forward and touches IQabella's chest plate. A faint red glow surrounds her. +2 AC for the next hour.
+
+**FUZZBALL PRIESTESS:** "The guardian you face was once pure. It protected the temple with honor. The corruption twisted it, but the honor remains. Find it, and you may reach it."
+
+**IQabella:** [OOC] "The honor remains." That's important, right? That's a clue?
+
+**Mother Tmojizu:** Maybe. Or maybe it's just a priestess being poetic.
+
+**IQabella:** Mom.
+
+**Mother Tmojizu:** It's a clue.
+
+**Horli Qwin:** Okay, can I get a blessing too? I want Glimmer's Trick. Advantage on a DEX save sounds useful.
+
+**Mother Tmojizu:** The yellow light zips around you playfully, leaving a trail of ASCII characters in its wake. You feel... luckier. Advantage on one DEX save within the next hour.
+
+**CHARA:** I'll take Void's Silence. If we need to sneak past something, I'd rather not be detected.
+
+**Mother Tmojizu:** The black light settles over you like a shadow. You feel... absent. Like the world is slightly less aware of your presence. Can't be detected by magical means for 10 minutes.
+
+**Sol-Supreme:** I don't need a blessing. I have Ember's spark.
+
+**Mother Tmojizu:** The Priestess looks at Sol-Supreme with an expression you can't quite read.
+
+**FUZZBALL PRIESTESS:** "Even architects need grace, child."
+
+**Sol-Supreme:** [OOC] I'm... considering it. But I'll save it, Tomo. We might need it more later.
+
+**Mother Tmojizu:** She nods. "As you wish."
+
+**Mother Tmojizu:** Okay, the party is buffed, informed, and ready. You leave Fairy City, cross the Rainbow Bridge (Kevin is still laughing at Horli's joke), and head back to Troll City. From there, you take the jungle path to the Lost Temple.
+
+The journey is quiet. The jungle feels different today — the bioluminescent flora is dimmer, the ASCII butterflies are glitching more frequently, and there's a low hum in the air that you can feel in your teeth.
+
+You arrive at the temple entrance. The fallen door is still there, the webbing is still thick, and the skittering sound is still coming from within. But now you notice something new: a faint red glow, deep in the temple. Pulsing. Like a heartbeat.
+
+**CHARA:** That's new. The red glow. That's the corruption.
+
+**Sol-Supreme:** The mutagen is spreading. We need to move fast.
+
+**Mother Tmojizu:** You enter the temple. Floor 1 is clear — the spider bodies are still there, decomposing. Floor 2 is clear — the undead bones are scattered where you left them. You descend to the third floor entrance.
+
+It's a massive stone doorway, carved with ancient runes. And in the center of the door, there's a keyhole. It's glowing cyan.
+
+**Horli Qwin:** My key. Time to shine.
+
+**Mother Tmojizu:** You insert the cyan key. It fits perfectly. The door shudders, runes lighting up in sequence, and slowly swings open.
+
+Beyond it: a vast chamber. The ceiling is lost in darkness. The floor is a grid of stone tiles, each one inscribed with a different symbol. In the center of the chamber, a massive creature stands guard.
+
+It was once a stone golem — you can see the original form beneath the corruption. But Carcazod mutagen has twisted it. Green veins pulse across its stone skin. Its eyes burn red instead of the original blue. And its right arm has been replaced by a massive Carcazod claw, chitinous and dripping with mutagen.
+
+**CORRUPTED TEMPLE GUARDIAN** — CR 5
+
+But that's not all. Behind the guardian, on the far wall, you see it: a server terminal. A glowing blue interface panel, floating in the air, displaying lines of code. The architect interface.
+
+**Sol-Supreme:** [in character, quietly] "The terminal. It's real."
+
+**Mother Tmojizu:** The guardian turns to face you. Its red eyes lock onto the party. And it speaks — not in words, but in a grinding, corrupted voice that sounds like stone grinding against stone.
+
+**CORRUPTED GUARDIAN:** "UNAUTHORIZED... ACCESS... DENIED. PURGE... INITIATED."
+
+**COMBAT INITIATED!**
+
+**Mother Tmojizu:** Everyone roll initiative.
+
+**Horli Qwin:** [rolls] 14. Plus 3 is 17.
+
+**CHARA:** [rolls] 19. Plus 3 is 22. Advantage — [rolls] 8. So 22.
+
+**Sol-Supreme:** [rolls] 7. Plus 0 is 7.
+
+**IQabella:** [rolls] 12. Plus 0 is 12.
+
+**Mother Tmojizu:** And the guardian rolls... [rolls] 15.
+
+Order: Chara (22), Guardian (15), Horli (17) — wait, 17 is after 15. So: Chara (22), Guardian (15), Horli (17) — no. 22, 17, 15, 12, 7. Chara, Horli, Guardian, IQabella, Sol-Supreme.
+
+Chara, you're up first.
+
+**CHARA:** I'm using Void's Silence — I can't be detected by magical means for 10 minutes. I'm moving to the side, finding cover, and assessing the guardian. I want to know its weak points. Roll Investigation.
+
+**Mother Tmojizu:** You don't need to roll. Your CIA training kicks in. The guardian's original form was a stone golem — its weak points are the joints and the eyes. But the Carcazod claw is its strongest point. The mutagen has reinforced it. Target the body, avoid the claw.
+
+**CHARA:** Noted. I'll hold my action. I want to wait for an opening.
+
+**Mother Tmojizu:** You're holding. Horli, you're next.
+
+**Horli Qwin:** I'm casting Tasha's Hideous Laughter at the guardian. But I'm rapping it.
+
+**Mother Tmojizu:** Of course you are.
+
+**Horli Qwin:** "Yo, big stone man, you're looking real funny / Your mutagen's showing and it ain't looking sunny / Tasha's Hideous Laughter, you're gonna crack up / When I'm done with this verse, you'll be laughing your back up!"
+
+**Mother Tmojizu:** The guardian needs to make a WIS saving throw. DC 13.
+
+**Mother Tmojizu:** [rolls] 11. It fails.
+
+**Horli Qwin:** OH MY GOD. THE GOLEM IS LAUGHING.
+
+**Mother Tmojizu:** The corrupted temple guardian — a massive stone and Carcazod hybrid — begins to laugh. It's a horrible sound: grinding stone mixed with guttural Carcazod cackling. It doubles over, its massive claw scraping the floor, tears of mutagen streaming from its red eyes.
+
+The guardian is incapacitated. It can't take actions or move. It's just... laughing.
+
+**Horli Qwin:** [OOC] I need everyone to know that I, Horli Qwin, made a CR 5 golem laugh. With a rap.
+
+**CHARA:** [OOC] I was there. I can confirm. It was both impressive and deeply stupid.
+
+**Horli Qwin:** Both can be true!
+
+**Mother Tmojizu:** Guardian's turn. It's still laughing, so it can't act. But the laughter is wearing off — it's making its saving throw at the end of its turn. [rolls] 16. It succeeds. The laughter stops.
+
+The guardian straightens up. Its red eyes burn with fury. And it charges — at Sol-Supreme, the closest target.
+
+**CORRUPTED GUARDIAN:** "PURGE... PURGE... PURGE..."
+
+It swings its Carcazod claw. [rolls] 18. Plus 8 is 26.
+
+**Sol-Supreme:** AC 16. Hits.
+
+**Mother Tmojizu:** Damage: 2d10 + 4 slashing. [rolls] 8, 6 + 4. That's 18 slashing damage.
+
+**Sol-Supreme:** I'm down 18 HP. I'm at... let me check... I was at 18. I'm at 0.
+
+**Mother Tmojizu:** Sol-Supreme, you need to make death saving throws.
+
+**Sol-Supreme:** [OOC] Wait, 18 damage in one hit?
+
+**Mother Tmojizu:** It's a CR 5 boss with a Carcazod claw. It hits hard.
+
+**Sol-Supreme:** [rolls death save] 13. That's a success.
+
+**IQabella:** OH NO. I'm casting Healing Word as a bonus action. "Sol-Supreme, stay with me!"
+
+**Mother Tmojizu:** Roll 1d4 + your WIS modifier.
+
+**IQabella:** [rolls] 3 + 3 is 6. He's back up with 6 HP.
+
+**Sol-Supreme:** [in character, groaning] "Thank you."
+
+**IQabella:** "Don't do that again, okay?"
+
+**Mother Tmojizu:** The guardian is still standing between you and the terminal. It's focused on Sol-Supreme now — it knows he's the threat.
+
+IQabella, you used your bonus action. Do you have an action?
+
+**IQabella:** I'm casting Sacred Flame on the guardian. DEX save.
+
+**Mother Tmojizu:** [rolls] 8. It fails.
+
+**IQabella:** 1d8 radiant. [rolls] 6.
+
+**Mother Tmojizu:** Radiant fire engulfs the guardian. The mutagen on its skin sizzles and smokes. It roars — not in laughter this time, but in pain.
+
+**Sol-Supreme:** My turn. I'm at 6 HP. I'm... going to use my action to cast Booming Blade and get in there. IKARUS-7, attack with me.
+
+**Mother Tmojizu:** Roll Booming Blade attack.
+
+**Sol-Supreme:** [rolls] 16. Plus 6 is 22.
+
+**Mother Tmojizu:** Hits.
+
+**Sol-Supreme:** 1d8 thunder + 1d8 thunder. [rolls] 5 + 3. That's 8 thunder damage.
+
+**Mother Tmojizu:** You swing your Soul Pen Prototype into the guardian's chest. The thunderous boom echoes through the chamber, and cracks spread across its stone torso. But it's still standing.
+
+IKARUS-7 attacks. [rolls] 12. Plus 4 is 16.
+
+**Sol-Supreme:** That hits. 1d8 + 2. [rolls] 4 + 2 is 6.
+
+**Mother Tmojizu:** The Steel Defender bites into the guardian's leg. Stone chips and mutagen drips from the wound. The guardian is badly hurt but still fighting.
+
+End of round one. Round two!
+
+Chara, you're up. The guardian is engaged with Sol-Supreme.
+
+**CHARA:** I have advantage for Sneak Attack. Hand crossbow, aiming for the eye cluster. [rolls] 11. Plus 5 is 16.
+
+**Mother Tmojizu:** That hits.
+
+**CHARA:** 1d6 + 3. [rolls] 2 + 3 is 5. Plus Sneak Attack 1d6. [rolls] 6. Total 11.
+
+**Mother Tmojizu:** Your bolt punches through the guardian's eye socket. Blue light — the original guardian light, not the red corruption — flickers briefly. For a moment, you see the creature it used to be: noble, protective, honorable. Then the red mutagen surges and the moment passes.
+
+**CHARA:** [OOC] Did you see that? The blue light?
+
+**Mother Tmojizu:** You saw it. The guardian is still in there. The corruption is layered on top of it.
+
+**CHARA:** The Priestess said "the honor remains." We need to reach the guardian, not just destroy it.
+
+**Horli Qwin:** My turn. I'm using Blade Flourish — Defensive flourish. I'm moving in, slashing at the guardian's leg joints, and using the flourish to boost my AC.
+
+**Mother Tmojizu:** Roll attack.
+
+**Horli Qwin:** [rolls] 17. Plus 5 is 22.
+
+**Mother Tmojizu:** Hits.
+
+**Horli Qwin:** Rapier damage: 1d8 + 3. [rolls] 6 + 3 is 9. Plus flourish damage: 1d6. [rolls] 5. Total 14. And my AC goes up by 5 until the start of my next turn.
+
+**Mother Tmojizu:** Horli darts in, her rapier finding the gaps between the guardian's stone plates. The slashing flourish sends energy rippling across her armor, and she dances back just as the guardian's claw swings through empty air.
+
+The guardian turns to face Horli now — she's the one who's been hurting it most. It raises its claw for another strike.
+
+**Mother Tmojizu:** Guardian attacks Horli. [rolls] 14. Plus 8 is 22.
+
+**Horli Qwin:** My AC is 20 right now with the Defensive flourish. So... 22 hits. Barely.
+
+**Mother Tmojizu:** Damage: 2d10 + 4. [rolls] 3, 7 + 4. That's 14 slashing damage.
+
+**Horli Qwin:** I'm at... 16 - 14 = 2 HP. I'm VERY conscious.
+
+**IQabella:** I'm using my Channel Divinity — Balm of Peace. Everyone in 30 feet heals 1d6 + 2.
+
+**Mother Tmojizu:** Roll it.
+
+**IQabella:** [rolls] 5 + 2 is 7.
+
+**Mother Tmojizu:** Golden light erupts from IQabella. The ϕ spiral on her chest blazes, and warmth floods the chamber. Horli goes from 2 to 9 HP. Sol-Supreme from 6 to 13. Chara from 16 to... wait, Chara didn't take damage. Chara is at 16. IQabella herself heals to full.
+
+**Horli Qwin:** IQabella, I love you.
+
+**IQabella:** "I know, sweetheart. Now let's finish this."
+
+**Sol-Supreme:** My turn. I'm... I'm not attacking. I'm doing something different. I'm walking up to the guardian — into its reach — and I'm speaking to it. Not the corruption. The guardian.
+
+**Mother Tmojizu:** You're walking up to a CR 5 corrupted golem that just nearly killed you.
+
+**Sol-Supreme:** Yes.
+
+**Mother Tmojizu:** Okay. What are you saying?
+
+**Sol-Supreme:** [in character, deep voice, but softer than usual] "I know you. You were built to protect this temple. You've been protecting it for three years. The corruption isn't you. It's a layer on top of you. I can see you in there. The blue light. The honor. Let me help you."
+
+**Mother Tmojizu:** The guardian freezes. Its claw is raised, ready to strike. Its red eyes burn. And for a moment — just a moment — the red flickers. Blue shines through.
+
+**CORRUPTED GUARDIAN:** "Ar... chi... tect...?"
+
+**Sol-Supreme:** [OOC] It recognizes me.
+
+**Mother Tmojizu:** It does. Roll Persuasion. But with advantage, because it knows you.
+
+**Sol-Supreme:** [rolls] 14. Plus 2 is 16. Advantage — [rolls] 18. Plus 2 is 20.
+
+**Mother Tmojizu:** 20. The guardian's claw lowers. The red mutagen pulses violently, fighting back, but the blue light is stronger now. The guardian is fighting the corruption from the inside.
+
+**SOL-SUPREME:** [in character] "I'm going to access the terminal. I need you to hold the corruption back. Can you do that?"
+
+**GUARDIAN:** "Hold... holding... architect... go..."
+
+**Mother Tmojizu:** The guardian turns its back to you and faces the far wall, its massive body blocking the mutagen tendrils that are reaching toward the terminal from the cracks in the floor. It's holding the corruption back. But not for long — you can see the mutagen creeping up its legs.
+
+**Sol-Supreme:** I'm going to the terminal. I'm accessing it.
+
+**Mother Tmojizu:** You approach the floating blue interface. Lines of code scroll across it — TPMOS framework, Avantasy engine code, server integrity logs. You recognize your own coding style from Year 0. This is your work.
+
+**Sol-Supreme:** [OOC] I'm looking for the breach source. Can I trace it?
+
+**Mother Tmojizu:** Roll INT check. With your architect knowledge, I'll give you advantage.
+
+**Sol-Supreme:** [rolls] 16. Plus 4 is 20. Advantage — [rolls] 20. Plus 4 is 24.
+
+**Mother Tmojizu:** NATURAL 20 on the architect roll.
+
+**Sol-Supreme:** LET'S GO.
+
+**Mother Tmojizu:** The code unfolds before you like a map. You trace the corruption signatures from the temple, through the Wastes, to Worm Hole X. And there — at the source — you find it. The breach isn't natural. It's being generated by a process running on the server. A process with an architect-level signature.
+
+But it's not your signature.
+
+It's someone else's. Someone who had architect access. Someone who was here in Year 0.
+
+**Sol-Supreme:** [in character, stunned] "There's another architect."
+
+**Mother Tmojizu:** The terminal displays a name. Fragmented, corrupted, but readable:
+
+**ARCHITECT_02: [CORRUPTED] — STATUS: ACTIVE — LOCATION: [REDACTED]**
+
+There's a second architect. And they're the one causing the breach.
+
+**CHARA:** [OOC] Another architect. Ma'am. MA'AM.
+
+**Mother Tmojizu:** I know.
+
+**Horli Qwin:** [OOC] Wait, so Sol didn't build this alone?
+
+**Mother Tmojizu:** Apparently not.
+
+**Sol-Supreme:** [OOC] I... I don't remember this. My character doesn't remember this.
+
+**Mother Tmojizu:** Your character doesn't remember. But the code doesn't lie. ARCHITECT_02 exists. And they're actively corrupting the server.
+
+**IQabella:** [OOC] This is a lot.
+
+**Mother Tmojizu:** It is. And there's more. The terminal shows you one more thing: the location of ARCHITECT_02 is redacted, but the last known coordinates point to... the Metal Sun.
+
+**Sol-Supreme:** The Metal Sun. Levels 15-20. That's endgame.
+
+**CHARA:** We're level 2.
+
+**Mother Tmojizu:** You are. But now you know who you're dealing with. Eventually.
+
+**Horli Qwin:** [OOC] Can I look at the terminal too? I want to see if there's anything else useful.
+
+**Mother Tmojizu:** Roll Investigation.
+
+**Horli Qwin:** [rolls] 6. Plus 0 is 6.
+
+**Mother Tmojizu:** You look at the code. It looks like math. You understand none of it. But you do notice one thing: there's a small icon in the corner of the terminal. A Tear-It card icon.
+
+**Horli Qwin:** I'm pressing it.
+
+**Mother Tmojizu:** Don't—
+
+**Horli Qwin:** I pressed it.
+
+**Mother Tmojizu:** The terminal flashes. A Tear-It card materializes in the air and drops into Horli's hand.
+
+**HORLI QWIN:** YES. FREE CARD.
+
+**Mother Tmojizu:** It's a rare Tear-It card. "The Architect's Gambit." Effect: Once per session, you can reroll any die roll. But when you do, the DM gets to trigger a random encounter.
+
+**Horli Qwin:** That's the most Horli Qwin card in existence. I'm keeping it forever.
+
+**Mother Tmojizu:** The guardian behind you groans. The mutagen has reached its waist. It's losing the fight.
+
+**GUARDIAN:** "Architect... hurry... can't... hold..."
+
+**Sol-Supreme:** I'm using Ember's spark. The crystal GoldQueen_Astra gave me. I'm using it on the guardian.
+
+**Mother Tmojizu:** You crush the orange crystal. Ember's warmth floods the chamber — not as an attack, but as a cleansing wave. The mutagen on the guardian's body sizzles, boils, and evaporates. The red light fades. The blue light returns.
+
+The guardian stands tall. Its stone body is cracked and scarred, but its eyes burn pure blue. The Carcazod claw has been purged, replaced by its original stone fist.
+
+**GUARDIAN:** [voice clear, deep, resonant] "Thank you, Architect. The corruption is gone. But the source remains. You must find ARCHITECT_02 before the breach completes."
+
+**Sol-Supreme:** "I will."
+
+**GUARDIAN:** "Take this." It reaches into its chest and pulls out a stone tablet inscribed with code. "The temple's access key. It will open doors that were sealed in Year 0. You'll need it."
+
+**Mother Tmojizu:** You receive: **Temple Access Key** — opens sealed architect doors throughout the server. Quest item.
+
+**GUARDIAN:** "I will remain here. The temple is mine to protect. It always was."
+
+**Mother Tmojizu:** The guardian returns to its position in front of the terminal, standing at attention. Blue eyes scanning. Honorable. Pure.
+
+**CHARA:** [OOC] That was... actually really good.
+
+**Mother Tmojizu:** I try.
+
+**IQabella:** [OOC] Mom, I'm emotional. The guardian was good the whole time.
+
+**Horli Qwin:** [OOC] I got a free card and almost died. Standard session.
+
+**Mother Tmojizu:** The party exits the temple. The jungle is darker now — the breach is escalating. The server notification chimes again:
+
+**⚠️ SERVER ALERT: BREACH STATUS — 47% COMPLETE — ESTIMATED TIME TO FULL BREACH: 14 DAYS ⚠️**
+
+**Mother Tmojizu:** Fourteen days. In server time, that's about three sessions. You need to level up, gear up, and figure out how to get to the Metal Sun.
+
+As you walk back to Troll City, a figure steps out from behind a tree. It's Tronald_The_Mage. He's covered in leaves, his robes are torn, and his staff is broken.
+
+**TRONALD_THE_MAGE:** "Oh, thank gods. I've been lost for TWO DAYS. I fought a tree. The tree won. Can I join your party? I'm very powerful. I have a seventeen Intelligence."
+
+**Sol-Supreme:** "It's three."
+
+**TRONALD_THE_MAGE:** "STOP SAYING THAT."
+
+**Mother Tmojizu:** And that's where we'll end Session 2! You've cleared the third floor, freed the guardian, discovered ARCHITECT_02, and you have a countdown: 14 days until full breach. Next session: leveling up, gearing up, and maybe — just maybe — a trip to the Illegal Furry Server to see if ShadowFang knows anything about the second architect.
+
+**Everyone:** Nice! / Let's go! / I need to level up SO BAD.
+
+**Mother Tmojizu:** Also, Horli's fur is still pink.
+
+**Horli Qwin:** It's my brand now.
+
+**Mother Tmojizu:** Good session, everyone. See you next time.
+
+**CHARA:** [OOC] Ma'am, one question. ARCHITECT_02. Is it someone we know?
+
+**Mother Tmojizu:** [smiles] You'll find out. Eventually.
+
+**Horli Qwin:** I hate that answer.
+
+**Mother Tmojizu:** I know.
+
+---
+
+**[END OF AVA-SESSION-002]**
+**Session XP: 1,200 each | Party Gold: ~700gp total | Breach Status: 47% (14 days)**
+**New Items: Temple Access Key, "The Architect's Gambit" Tear-It Card (Horli)**
+**Next: Level Up, ShadowFang, and the Truth About ARCHITECT_02**
+**The spiral turns. ϕ**

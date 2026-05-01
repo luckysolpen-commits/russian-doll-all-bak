@@ -1,0 +1,8 @@
+You observe the Bubble Wardens intently. They move with synchronized precision, their lures pulsing in coordinated patterns. One Warden uses its lure to project a holographic map of the immediate area, highlighting points of interest and energy signatures. Another deploys a device that emits a low hum, scanning the environment. They seem to be hunting for any anomalies, any deviations from the norm.
+
+You notice one Warden’s lure flickers erratically for a moment, perhaps due to a minor power fluctuation or interference. It seems to be a moment of weakness. Their tactics are efficient, but they appear to rely heavily on their technology and coordinated movements. Disrupting their communication or their sensors might be key.
+
+Do you:
+
+*   Attempt to **disrupt their communication systems** by creating a loud, disorienting noise or light burst? Turn to page 10.
+*   Try to **use the environment to your advantage** to create a trap or mislead them? Turn to page 11.

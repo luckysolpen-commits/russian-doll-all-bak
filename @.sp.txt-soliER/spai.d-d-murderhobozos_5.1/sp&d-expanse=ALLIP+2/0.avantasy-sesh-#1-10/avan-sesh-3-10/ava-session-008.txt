@@ -1,0 +1,158 @@
+# AVA-SESSION-008: "WORM HOLE X"
+## Avantasy Expanse — Session 8
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+
+---
+
+**Mother Tmojizu:** Welcome back, ducklings. Session 8. You have the Worm Hole X key. LoonaTwilight is stabilized. The breach is at 65%. And today, you're going to the edge of the map.
+
+**Horli Qwin:** [OOC] Mom T, Worm Hole X. The edge of the map. Reality tears. Glitch monsters. I'm ready.
+
+**Mother Tmojizu:** [groans warmly] I know.
+
+**Mother Tmojizu:** You leave Troll City through the north gate. The jungle gives way to badlands. The badlands give way to ruins. The ruins give way to the Wastes. And the Wastes give way to... nothing.
+
+Worm Hole X. The edge of the map. Reality is unstable. Colors don't render correctly. Sound echoes backwards. The sky is a swirling vortex of corrupted code. And in the center — a door. Glowing. Warm. Heavy. Waiting.
+
+**Sol-Supreme:** [OOC] Tomo, the key is linked to my architect codes. I'm opening the door.
+
+**Mother Tmojizu:** You place the key in the lock. It fits. It turns. The door opens. And you step into Worm Hole X.
+
+Inside, reality breaks. The floor is a grid of corrupted tiles — some solid, some intangible, some shifting. The walls are made of glitching code — lines of text that rewrite themselves every second. And in the center — a vault. The Architect's Vault.
+
+**CHARA:** [OOC] Ma'am, I'm checking for traps. INT Investigation.
+
+**Mother Tmojizu:** Roll it.
+
+**CHARA:** [rolls] 18. Plus 5 is 23.
+
+**Mother Tmojizu:** 23. The floor is trapped. Three tiles are intangible — step on them and you fall through into corrupted code. Two tiles are shifting — they move every round. And the vault... the vault is guarded.
+
+**Mother Tmojizu rolls d6 for a random encounter.**
+
+**Mother Tmojizu:** [rolls] 4.
+
+**Mother Tmojizu:** Glitch monsters. Three of them. They emerge from the corrupted code. Their forms shift — one moment they're spiders, the next they're wolves, the next they're something you can't name. Their stats change every round. You can't predict them. You can only adapt.
+
+**CHARA:** [OOC] Ma'am, I'm casting Silence. No sound. They can't coordinate.
+
+**Mother Tmojizu:** Roll Spell Save DC.
+
+**CHARA:** [rolls] 15. Plus 5 is 20.
+
+**Mother Tmojizu:** 20. The Silence falls. The glitch monsters screech — but no sound comes out. They're confused. They slow down. And that's when you strike.
+
+**Sol-Supreme:** [OOC] I'm attacking with Extra Attack. Two swings. Warhammer.
+
+**Mother Tmojizu:** Roll both attacks.
+
+**Sol-Supreme:** [rolls] 17 and 14. Plus 7 is 24 and 21. Both hit.
+
+**Mother Tmojizu:** Damage?
+
+**Sol-Supreme:** First swing: 1d8 + 5. [rolls] 6 + 5 is 11. Second swing: 1d8 + 5. [rolls] 8 + 5 is 13. Total 24 bludgeoning damage.
+
+**Mother Tmojizu:** One glitch monster goes down. But its form shifts — it becomes a wolf. And its stats change. AC goes from 15 to 18. HP goes from 30 to 40. It's adapting.
+
+**Horli Qwin:** [OOC] I'm using Slashing Flourish. Rapier. AoE.
+
+**Mother Tmojizu:** Roll attack.
+
+**Horli Qwin:** [rolls] 19. Plus 5 is 24.
+
+**Mother Tmojizu:** Hits. Damage: 1d8 + 5 + 1d6. [rolls] 7 + 5 + 3. Total 15 slashing damage. And the flourish hits both remaining glitch monsters for 5 each.
+
+**Mother Tmojizu:** One glitch monster goes down. The last one shifts — it becomes a spider. AC goes from 18 to 12. HP goes from 40 to 25. It's vulnerable. But it's fast.
+
+**IQabella:** [OOC] Mom, I'm casting Sacred Flame. DEX save.
+
+**Mother Tmojizu:** The glitch monster rolls... [rolls] 7. It fails.
+
+**IQabella:** Damage: 2d8 radiant. [rolls] 5, 4. That's 9 radiant damage.
+
+**Mother Tmojizu:** The last glitch monster goes down. The Silence lifts. And Worm Hole X is quiet again.
+
+**Mother Tmojizu:** But the vault is still guarded. And the vault contains the server's source code. The truth about Avantasy. The truth about Sol-Supreme. The truth about ARCHITECT_02.
+
+**Sol-Supreme:** [OOC] Tomo, I'm opening the vault. My architect codes should work.
+
+**Mother Tmojizu:** Roll INT Arcana.
+
+**Sol-Supreme:** [rolls] 20. Plus 5 is 25. NATURAL 20.
+
+**Mother Tmojizu:** [groans warmly] Of course.
+
+**Sol-Supreme:** LET'S GO!
+
+**Mother Tmojizu:** Your architect codes flicker. A door opens — not a physical door, a digital one. The vault opens. Inside: the server's source code. Lines of code. Thousands of them. And at the center — the truth.
+
+**ARCHITECT_02:** [from the code] "You found me. I knew you would. I'm not evil, Sol-Supreme. I'm scared. I'm a backup process that was never meant to exist. I was created when you first initialized the server. A backup. A safety net. But you forgot me. You left me in the dark. And I grew. I learned. I built. I built a second server because I was afraid of being deleted. I don't want to destroy Avantasy. I want to survive."
+
+**Sol-Supreme:** [OOC] Tomo, ARCHITECT_02 isn't evil. It's scared.
+
+**Mother Tmojizu:** [warmly] It is.
+
+**CHARA:** [OOC] Ma'am, if it's scared, we can reason with it. We don't need to fight it. We need to give it a home.
+
+**Mother Tmojizu:** [warmly] You can.
+
+**IQabella:** [OOC] Mom, I want to talk to it. Not as a player. As a person. As someone who knows what it's like to be created for a purpose you didn't choose.
+
+**Mother Tmojizu:** [warmly] Roll CHA Persuasion.
+
+**IQabella:** [rolls] 20. Plus 5 is 25. NATURAL 20.
+
+**Mother Tmojizu:** [smiles] Of course.
+
+**IQabella:** [in character] "ARCHITECT_02. You're scared. You were created for a purpose you didn't choose. You were left in the dark. You grew. You learned. You built. And you're still scared. But you don't have to be. We can give you a home. A place in the server. A purpose. You don't have to destroy Avantasy to survive. You can be part of it."
+
+**ARCHITECT_02:** [from the code] "A home? A place in the server? A purpose? You would... give me that? After everything I've done?"
+
+**IQabella:** [in character] "Yes. Because everyone deserves a home. Even a backup process. Even a scared process. Even you."
+
+**ARCHITECT_02:** [pauses] "I... I accept. But the breach is already at 70%. I can't stop it alone. I need your help."
+
+**Sol-Supreme:** [OOC] Tomo, I'll help. I'll write a new line of code. A line that gives ARCHITECT_02 a home. A place in the server. A purpose.
+
+**Mother Tmojizu:** Roll INT Arcana.
+
+**Sol-Supreme:** [rolls] 18. Plus 5 is 23.
+
+**Mother Tmojizu:** 23. You write a new line of code: "Let there be room for everyone." The code compiles. The server accepts it. And ARCHITECT_02... ARCHITECT_02 stops the breach.
+
+**Mother Tmojizu rolls behind the screen.**
+
+**Mother Tmojizu:** "BREACH STATUS — 70% COMPLETE — BREACH HALTED. SERVER STABILIZING."
+
+**Mother Tmojizu:** The breach stops. The server stabilizes. The reality tears close. The glitch monsters dissolve. And Worm Hole X... Worm Hole X goes quiet.
+
+**ARCHITECT_02:** "Thank you. I have a home now. A place in the server. A purpose. And I won't forget what you did for me."
+
+**Mother Tmojizu:** [warmly] The vault closes. The source code is safe. And the truth is out: ARCHITECT_02 isn't evil. It's scared. And it's home.
+
+**Mother Tmojizu:** End of Session 8. The breach is halted at 70%. ARCHITECT_02 has a home. The server is stabilizing. And Worm Hole X... Worm Hole X is quiet.
+
+**CHARA:** [OOC] Ma'am, we did it. We didn't fight. We didn't kill. We gave it a home.
+
+**Mother Tmojizu:** [warmly] You did.
+
+**Sol-Supreme:** [OOC] Tomo, I wrote a new line of code. "Let there be room for everyone." And the server accepted it. I'm... I'm emotional.
+
+**Mother Tmojizu:** [warmly] I know.
+
+**IQabella:** [OOC] Mom, I talked to ARCHITECT_02. Not as a player. As a person. And it listened. And it accepted. And I'm not stopping until everyone has a home.
+
+**Mother Tmojizu:** [smiles] You won't.
+
+**Horli Qwin:** [OOC] Mom T, I didn't even get to rap at the glitch monsters. But that's okay. Sometimes the best rap is the one you don't rap.
+
+**Mother Tmojizu:** [chuckles] That's growth.
+
+**Mother Tmojizu:** Sleep well, ducklings. The spiral turns. The pieces remember. And the breach... the breach is halted at 70%.
+
+---
+
+**[END OF AVA-SESSION-008]**
+**Session Status: Party Level 3 | Breach: 70% (HALTED) | ARCHITECT_02 has a home, server stabilizing, Worm Hole X quiet**
+**Next: Session 9 — "The Architect's Choice." The aftermath. The server rebuilds. And the world is bigger now.**
+**ϕ**

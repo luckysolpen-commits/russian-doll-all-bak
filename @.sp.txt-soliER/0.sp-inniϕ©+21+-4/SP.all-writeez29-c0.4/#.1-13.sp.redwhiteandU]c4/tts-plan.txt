@@ -1,0 +1,422 @@
+# TTS Conversion Plan - Sol Pen Franchise
+
+## ⚠️ IMPORTANT: gTTS is DEAD — Use edge-tts for Everything
+
+- **gTTS (`gtts-cli`)**: RATE LIMITED (429 errors). DO NOT USE.
+- **edge-tts**: ✅ USE THIS. No rate limits. Azure Neural voices. Free.
+  - Install: `pip install edge-tts` (already installed)
+  - CLI: `edge-tts --voice en-US-JennyNeural --text "hello" --write-media out.mp3`
+
+### Two Conversion Modes:
+
+| Mode | Script | Use Case | Voices |
+|------|--------|----------|--------|
+| **Single-voice (Books)** | `batch_convert_book0_edge_tts.py` | Chapter books, prose, no dialogue | 1 narrator voice |
+| **Multi-voice (D&D Sessions)** | `multi_voice_tts_test.py` | D&D transcripts with `**SPEAKER:**` format | 5 distinct character voices |
+
+---
+
+## Single-Voice Book Conversion (edge-tts)
+
+**Script:** `batch_convert_book0_edge_tts.py`
+**Voice:** `en-US-JennyNeural` (warm, friendly narrator)
+**Output naming:** `sp.chapter{N}-v1.0.mp3`
+
+### How to convert a new book:
+
+1. **Copy the script:**
+   ```bash
+   cp batch_convert_book0_edge_tts.py batch_convert_bookX_edge_tts.py
+   ```
+
+2. **Edit the BOOK_DIR and OUTPUT_PREFIX** in the script:
+   ```python
+   BOOK_DIR = "path/to/book/directory"
+   OUTPUT_PREFIX = "bookshortname.chapter"  # e.g. "rr.chapter" for Red Rock
+   ```
+
+3. **Run it:**
+   ```bash
+   python3 batch_convert_bookX_edge_tts.py
+   ```
+
+4. **It auto-skips** existing MP3 files. Safe to re-run.
+
+### Available edge-tts Narrator Voices:
+- `en-US-JennyNeural` — Female, warm/friendly (default, used for Sol Pen)
+- `en-US-GuyNeural` — Male, deep
+- `en-US-AndrewNeural` — Male, warm
+- `en-US-AriaNeural` — Female, confident
+- `en-US-EmmaNeural` — Female, cheerful
+- `en-US-ChristopherNeural` — Male, authority
+
+---
+
+## Multi-Voice D&D Session Conversion (edge-tts)
+
+**Script:** `multi_voice_tts_test.py`
+**Usage:** `python3 multi_voice_tts_test.py <session_file.txt> <output_dir>`
+
+### Speaker → Voice Mapping (from `EDGE_VOICE_MAP` in script):
+
+| Speaker | Voice | Notes |
+|---------|-------|-------|
+| Mother Tmojizu / DM | en-US-JennyNeural | Narrator, warm |
+| CHARA | en-US-AriaNeural | Female, confident |
+| Sol-Supreme | en-US-GuyNeural | Male, deep |
+| IQabella | en-US-AnaNeural | Female, cute |
+| Horli Qwin | en-US-RogerNeural | Male, energetic |
+| Luna | en-US-EmmaNeural | Female, cheerful |
+| Sora | en-US-EricNeural | Male, rational |
+
+### To add new speakers:
+Edit `EDGE_VOICE_MAP` in `multi_voice_tts_test.py`. Pick from available voices above.
+
+---
+
+## Current State (Updated April 8, 2026)
+
+### ✅ COMPLETED
+
+| Project | Files | Status | Location |
+|---------|-------|--------|----------|
+| **Sol Pen Book 0** | 22 chapters (ch0-ch21) | ✅ ALL DONE | `SP.all-writeez28-a1/0.Sol Pen]bk0/#.book_SP_0.full+aud-b1/` |
+| **TPMOJIO Sessions 1-2** | 2 files | ✅ DONE | `1.tmojio-seshs-3-10/0.tmojio-sesh-1&2/` |
+| **TPMOJIO Sessions 3-10** | 8 files | ✅ DONE | `1.tmojio-seshs-3-10/` |
+| **TPMOJIO Rematch** | 1 file (v1.3, beefed up) | ✅ DONE | `2.tpmojio-rematch/` |
+
+### ⏳ REMAINING WORK
+
+| Project | Files | Priority | Notes |
+|---------|-------|----------|-------|
+| **Red Rock & Roll** | 13 chapters | Medium | Has chapter structure |
+| **Death-Kryo!** | 13 chapters | Medium | Has chapter structure |
+| **Geminii Part 2** | 15 chapters | Medium | Has chapter structure |
+| **Scene-level books** | ~300 scene files | Low | Need decision: scene-by-scene or aggregate |
+
+---
+
+## Book Inventory & Conversion Readiness
+
+### ✅ READY FOR TTS (Chapter/Page structure exists)
+
+| # | Book | Book Dir | Chapters | Notes |
+|---|------|----------|----------|-------|
+| 0 | Sol Pen | `#.book_SP_0.full+aud-b1/` | 22 (ch0-ch21) | ch0 already has mp3; use `chapter_N.txt` files |
+| 2 | Red Rock & Roll | `book_RR]BIG/` | 13 (ch1-ch13) | ~10 pages/chapter |
+| 3 | Death-Kryo! | `book_template.scp/` | 13 (ch1-ch13) | ~10 pages/chapter |
+| 1 | Geminii Part 2 | `1.GEMANDI.part2/book_partii.gemini/` | 15 (ch1-ch15) | 4 pages/chapter |
+| 333 | Chatoe BnB 13 | root level | 13 (ch1-ch13) | 10 pages/chapter |
+| 8 | Digi_Sol Suicider | `8.DSS.book_]full-gemini]a0/` | 13 (ch1-ch13) | needs content verification |
+| 9 | Metal Sun | `ms_book]a0/` | 13 (ch1-ch13) | needs content verification |
+| 12 | Centroid U | `cent-book.bigword]a0/` | 16 (ch1-ch16) | needs content verification |
+| 100 | NGL Mpyre | `14.book]nglr.mpyre]FULL]b1/` | 20 (ch1-ch20) | needs content verification |
+| -1 | MyChara | `CHAR.A.NON].../BOOK]1010%/` | 15+ (Chapter_1+) | Uses `Chapter_N` (capitalized) |
+
+### ⚠️ NEEDS REORGANIZATION (Scene-level files only)
+
+These books have `scene_XX.txt` files but no chapter structure. Options:
+- **Option A**: Convert each scene file directly to audio (simpler, but many small files)
+- **Option B**: Aggregate scenes into chapters first, then convert (more work, better structure)
+
+| # | Book | Scene Count | Scene Dir |
+|---|------|-------------|-----------|
+| 0 | Sol Pen (scenes) | 31 | `0.scenes]ALL+named/` |
+| 1 | Geminii Part 1 | 22 | `1.GEMINI_PART_1]Tarantin0/` |
+| 2 | Red Rock (scenes) | 20 | root |
+| 3 | Death-Kryo (scenes) | 18 | root |
+| 4 | Moonshine | 20 | root |
+| 5 | Superwar | 22 | root |
+| 6 | Hellride | 20 | root |
+| 7 | Avanta.C | 19 | root |
+| 8 | Digi_Sol (scenes) | 20 | root |
+| 9 | Metal Sun (scenes) | 20 | root |
+| 10 | XO Files | 14 | root |
+| 11 | Footrace.FU | 22 | root |
+| 12 | Centroid (scenes) | 20 | root |
+| 111 | Tear-It | 19 | root |
+| 100 | NGL Mpyre (scenes) | 30 | root |
+
+### ❓ SPECIAL/UNCERTAIN
+
+| Book | Notes |
+|------|-------|
+| #.1-13.sp.redwhiteandU | Mixed structure: parts + standalone episode files |
+| 4/5/6/10 book_template.scp dirs | Empty chapter templates (no page content) |
+
+---
+
+## Recommended Approach
+
+### Phase 1: Complete Sol Pen Book 0 (Priority)
+- Convert chapters 1-21 using existing `chapter_N.txt` files
+- Output naming: `sp.chapterN-v1.0.mp3` (consistent with existing ch0)
+- **21 files to generate**
+
+### Phase 2: Books with Ready Chapter Structure
+- Books 2, 3, 1(part2), 333 first (verified content)
+- Then 8, 9, 12, 100, -1 (need content verification)
+- **~150+ files estimated**
+
+### Phase 3: Scene-Level Books
+- Decide: scene-by-scene audio OR aggregate into chapters first
+- If scene-by-scene: ~300+ files across 15 books
+- If aggregated: requires script to combine scenes into chapter files first
+
+### Phase 4: Multi-Voice Support (D&D Sessions + Script Dialogue)
+- Current gTTS is single voice
+- Multi-voice targets:
+  - D&D session transcripts (dialogue format with `**SPEAKER:**` labels)
+  - Script/screenplay files (once identified)
+- Requires: character dialogue parsing + voice assignment per speaker
+
+---
+
+## Script vs Manual Decision
+
+### Use SCRIPT for:
+- ✅ Batch conversion of chapter_N.txt files (Phase 1 & 2)
+- ✅ Consistent naming conventions
+- ✅ Progress tracking / error logging
+
+### Use MANUAL for:
+- ✅ Quality spot-checks (verify file exists, non-zero size)
+- ✅ Content verification (random sample chapters sound correct)
+- ✅ Handling edge cases (empty files, special characters in text)
+
+### Proposed Script Features:
+1. Iterate through chapter directories
+2. Convert each `chapter_N.txt` → `bookname.chapterN-v1.0.mp3`
+3. Log successes/failures
+4. Skip already-converted chapters
+5. Dry-run mode to preview what will be converted
+
+---
+
+## File Naming Convention Proposal
+
+Format: `{book_shortname}.chapter{N}-v1.0.mp3`
+
+Examples:
+- `sp.chapter1-v1.0.mp3` (Sol Pen)
+- `rr.chapter1-v1.0.mp3` (Red Rock)
+- `dk.chapter1-v1.0.mp3` (Death-Kryo)
+- `gem2.chapter1-v1.0.mp3` (Geminii Part 2)
+- `ms.chapter1-v1.0.mp3` (Metal Sun)
+- `tearit.chapter1-v1.0.mp3` (Tear-It)
+
+---
+
+## D&D Session Transcripts (Multi-Voice TTS Candidates)
+
+Found in: `spai.d&d-murderhobozos_4.2/`
+
+### EXCELLENT candidates (dialogue format, 5 speakers, 4-6k words each):
+
+| # | File | Path | Lines | Words | Speakers |
+|---|------|------|-------|-------|----------|
+| 1 | `*.ava-session-#1.txt` | `avantasy-expanse+1/*.avantasy-sesh-#1-2/` | 630 | 5,718 | DM, CHARA, Sol-Supreme, IQabella, Horli Qwin |
+| 2 | `*.ava-session-#2.txt` | `avantasy-expanse+1/*.avantasy-sesh-#1-2/` | 618 | 5,425 | Same cast |
+| 3 | `tpmojio-sesh#1.txt` | `avantasy-expanse+1/^.tmojio-edt-colab=R&WU+01/` | 537 | 4,563 | Same cast |
+| 4 | `tpmojio-sesh#2.txt` | `avantasy-expanse+1/^.tmojio-edt-colab=R&WU+01/` | 440 | 4,307 | Same cast |
+
+### GOOD candidates:
+
+| # | File | Path | Lines | Words | Notes |
+|---|------|------|-------|-------|-------|
+| 5 | `RMMSP_sesh#1.txt` | `avantasy-expanse+1/^.tmojio-edt-colab=R&WU+01/rpg-merger-sp/` | 321 | 3,437 | Technical/design content, less narrative |
+| 6 | `fuzz-sesh-grok-2-note#1.txt` | `fuzz-sesh#1-3.5/` | 101 | 1,113 | DM + Player + 8 Fuzzball chars (emoji names) |
+
+### MODERATE candidates (narrative-heavy):
+
+| # | File | Path | Lines | Words | Notes |
+|---|------|------|-------|-------|-------|
+| 7 | `fuzz-sesh-grok-2-note#2.txt` | `fuzz-sesh#1-3.5/` | 140 | 1,307 | More prose than dialogue |
+| 8 | `fuzz-sesh-grok-2-note#3.txt` | `fuzz-sesh#1-3.5/` | 221 | 2,255 | Mix of narrative + dialogue |
+
+### Speaker profiles (for voice assignment):
+- **DM (Mother Tmojizu)**: Narrator/warm tone — medium pitch
+- **CHARA**: Paranoid rogue — slightly higher, tense delivery
+- **Sol-Supreme**: Deep, distorted voice (artificer) — low pitch, slower
+- **IQabella**: Cheerful cleric (cyborg fem-maid) — bright, upbeat
+- **Horli Qwin**: Energetic bard (Tabaxi trap rapper) — fast, dynamic
+
+### Multi-Voice Engine: **edge-tts ONLY**
+- ~~pyttsx3~~ — STRICKEN. Tested and rejected. Robotic quality.
+- edge-tts (Azure Neural) — clear winner. Natural voices, distinct per character.
+- gTTS — single voice only, use for books (no dialogue parsing needed)
+
+### Multi-Voice Test Results:
+✅ **ava-session-#1** converted with both engines. edge-tts won decisively.
+- `ava-session-1_edge-tts.mp3` — 8.9 MB, 279 segments, natural voices
+- `ava-session-1_pyttsx3.mp3` — 7.4 MB, robotic (rejected)
+
+---
+
+## Screenplay/Script Format (Multi-Voice)
+
+### Format Example: `scene_01_casino_flashback.txt`
+Standard screenplay format:
+```
+INT. LUXURY CASINO RESORT - DAY (FLASHBACK)
+
+SOUND of slot machines, distant laughter
+
+LUCKY SHEPHERD (30s), sharp-suited and radiating charm...
+
+A MONTAGE begins, quick cuts...
+
+FADE TO BLACK.
+```
+
+### Key Elements:
+Screenplays use **TWO format families**:
+
+**Family A — HTML/Blockquote (Books 0, 1, 2):**
+```
+<center>LUCKY</center>
+> (Frantic)
+> Astra! What is this place?!
+
+<center>ASTRA</center>
+> You orchestrated this?
+```
+
+**Family B — Plain Text (Books 3, 5, 111):**
+```
+LUCKY
+(cautious)
+What do you want, Dorchester?
+
+DORCHESTER (CONT'D)
+These are just puppets.
+```
+
+| Element | Family A Pattern | Family B Pattern | TTS Treatment |
+|---------|-----------------|-----------------|---------------|
+| **Character name** | `<center>NAME</center>` | `NAME` (ALL CAPS line) | Switch to character voice |
+| **Dialogue** | `> text` | plain text line after name | Character voice |
+| **Parenthetical** | `> (direction)` | `(direction)` on own line | Skip (direction only) |
+| **(CONT'D)** | N/A | `NAME (CONT'D)` | Same character voice |
+| **V.O.** | N/A | `V.O. NAME` | Narrator or ethereal voice |
+| **Scene heading** | `**INT. LOC - TIME**` or plain | same | Narrator voice |
+| **Action/description** | prose paragraphs | prose paragraphs | Narrator voice |
+| **SOUND cues** | `SOUND of ...` | `SOUND of ...` | Narrator voice |
+| **Transitions** | `FADE OUT.`, `FADE TO BLACK.` | same | Skip |
+| **CLOSE UP** | N/A | `CLOSE UP - ...` | Narrator voice |
+| **FLASHBACK blocks** | N/A | `FLASHBACK ... END FLASHBACK` | Narrator voice |
+
+### Parsing Challenge:
+Screenplay format is **NOT dialogue-labeled** like D&D sessions. Need a screenplay-aware parser that handles **both format families**:
+
+**Family A parser logic:**
+1. Detect `<center>NAME</center>` → switch to character voice
+2. Read subsequent `> ` lines as dialogue (skip `> (parenthetical)` lines)
+3. Non-`>` lines → narrator (action/description)
+
+**Family B parser logic:**
+1. Detect ALL CAPS line (optionally with `(CONT'D)`, `(age...)`, or `V.O.` prefix) → switch to character voice
+2. Read subsequent plain text lines as dialogue until next ALL CAPS name or blank line
+3. Skip `(parenthetical)` lines
+4. Prose paragraphs → narrator
+
+**Edge cases to handle:**
+- Character intros: `LUCKY SHEPHERD (50s), his hair now streaked...` — ALL CAPS name but followed by comma + prose, NOT dialogue → narrator
+- `SOUND of ...` lines → narrator, not dialogue
+- `CLOSE UP - ...` → narrator
+- `FLASHBACK ... END FLASHBACK` blocks → narrator
+- Generic names: `MERC 1`, `UN AGENT`, `BORIN IRONMUG` → valid speakers
+
+### Voice Assignment for Sol Pen Characters:
+- **Narrator** (action/description): `en-US-ChristopherNeural` (male, authority)
+- **LUCKY SHEPHERD**: `en-US-AndrewNeural` (male, warm/confident)
+- **ASTRA**: `en-US-AriaNeural` (female, confident)
+- **GEM**: `en-US-AvaNeural` (female, expressive)
+- **LOONA TWILIGHT**: `en-US-JennyNeural` (female, friendly)
+- **MARIA**: `en-US-MichelleNeural` (female, friendly)
+- **Supporting/NPCs**: Rotate from available voices
+
+### Screenplay Files Location:
+`!.SP.all-write]ez28+a1/0.Sol Pen]bk0/0.scenes]ALL+named/` — 31 scene files
+Same pattern across other books' scene directories.
+
+---
+
+## YouTube Video Pipeline (Audio + Image Slides)
+
+### Concept
+Each D&D session audio gets paired with a slideshow of AI-generated images:
+- **Player/character portraits** — unique "home base" image per character
+- **Environment/scene images** — locations (tavern, temple, jungle, etc.)
+- **Enemy/NPC images** — bosses, monsters, key NPCs
+- Images change at natural scene/segment transitions
+
+### Image Generation Options
+
+| Option | API/Tool | Cost | Quality | Notes |
+|--------|----------|------|---------|-------|
+| **Stable Diffusion** (local) | `diffusers` + SDXL | Free (GPU needed) | High | Needs good GPU, full control |
+| **DALL-E 3** | OpenAI API | ~$0.04-0.08/image | Very High | Best prompt understanding |
+| **Flux** (local/API) | `diffusers` or Replicate | Free/$ | Very High | Newer, excellent quality |
+| **Midjourney** | Discord bot | $10/mo | Very High | No API, manual only |
+
+### Recommended: **Flux (local, free)** — deferred
+- DALL-E 3 and Replicate require API keys/payment — not available now
+- **Plan: run Flux or SD locally on a separate computer later**
+- For now: audio-only output. Image/video pipeline on hold.
+
+### Image Plan Per Session
+
+**Reusable assets (generate once, reuse across all sessions):**
+- Character portraits: DM, CHARA, Sol-Supreme, IQabella, Horli Qwin (5 images)
+- Recurring NPCs: Borin Ironmug, GoldQueen_Astra, Guardian, Fuzzball Priestess
+- Recurring locations: Rusty Anchor Tavern, Troll City, Magic Tree, Fuzzball Shrine
+
+**Per-session unique images:**
+- New NPCs (e.g., Kevin the Angel, Dorchester)
+- New enemies (spiders, undead, corrupted guardian)
+- New locations (Lost Temple floors, Fairy City, Healing Spring)
+- Key moments (critical hits, dramatic reveals)
+
+### Estimated Images Per Session:
+| Session | Reusable | New | Total |
+|---------|----------|-----|-------|
+| ava-session-#1 | 5 chars + 3 locations | 2 enemies + 1 NPC | ~11 |
+| ava-session-#2 | (already have) | 2 new + 1 boss | ~8 |
+| tpmojio-sesh#1 | 5 chars | board/pieces | ~8 |
+| tpmojio-sesh#2 | (already have) | same board | ~3 |
+| fuzz-sesh#1-3 | 5 chars + fuzzballs | cosmic scenes | ~15 |
+
+### Video Assembly
+1. Generate images → store per-session folder
+2. Map audio segments → image transitions
+3. Use `ffmpeg` to combine: `ffmpeg -loop 1 -i image.jpg -i audio_segment.mp3 -c:v libx264 -t SEGMENT_DURATION -pix_fmt yuv420p output.mp4`
+4. Concat all segment videos into final video
+5. Add optional: title card, end screen, background music
+
+### Dependencies to Install:
+```
+pip install openai          # DALL-E 3
+# OR
+pip install replicate       # Flux via Replicate
+# AND
+ffmpeg                      # Video assembly (system package)
+```
+
+### Next Steps:
+1. Decide: DALL-E 3 (paid API) or Flux (free local / cheap Replicate)?
+2. Generate character portrait prompts
+3. Test: generate 1-2 character images
+4. Build image-to-video pipeline script
+
+1. ✅ **Multi-voice test** — ava-session-#1 done, edge-tts confirmed winner
+2. ⏳ **Multi-voice D&D sessions** — convert remaining 7 sessions with edge-tts
+3. ⏳ **Chapter books** — Sol Pen Book 0 chapters 1-21 (single-voice gTTS)
+4. ⏳ **Screenplay scripts** — multi-voice edge-tts (parser TBD, after chapters)
+
+---
+
+## Next Steps (User Decision Needed)
+
+1. **Convert all remaining 7 D&D sessions with edge-tts?** (ava-session-#2, tpmojio #1/#2, RMMSP #1, fuzz notes #1-3)
+2. **Or pick specific sessions to do first?**

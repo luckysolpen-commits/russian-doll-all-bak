@@ -1,0 +1,12 @@
+**Page 119: Escaping the Lab**
+
+Alarms blare, and you hear the sound of approaching footsteps. Realizing you've caused enough disruption, you quickly retreat from the lab through the vent system, leaving the sabotaged apparatus and the chaos behind. You need to find a safer place to observe.
+
+Hydration: 8/10 (Adequate)
+Silk Reserves: 7/10 (Used silk for sabotage)
+Intel: 6/10 (Successfully escaped the lab after sabotage)
+
+What do you do?
+
+*   If you decide to head back towards the main castle halls, turn to page 2.
+*   If you head back towards the vents to observe the drones, turn to page 17.

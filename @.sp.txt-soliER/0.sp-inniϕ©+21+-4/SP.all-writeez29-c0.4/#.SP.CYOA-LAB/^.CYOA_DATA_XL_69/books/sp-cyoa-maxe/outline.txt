@@ -1,0 +1,6 @@
+CYOA Book Outline
+
+- **Introduction:** Introduce the player character, the setting, and the main conflict.
+- **First Choice:** A clear decision that sets the player on a path (e.g., obey or rebel).
+- **Branching Paths:** Develop the consequences of the first choice, leading to further choices.
+- **Multiple Endings:** Create a few different outcomes based on the player's decisions.

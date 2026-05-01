@@ -1,0 +1,8 @@
+You quickly slip into the narrow maintenance conduit. It's dark, cramped, and smells faintly of ozone and something metallic. The conduit is slick with condensation, and you have to use your new Angleri claws to gain traction as you move. You can hear the Bubble Wardens searching nearby, their voices muffled by the conduit walls.
+
+The conduit twists and turns, descending into the unknown depths of the FLEXTANK's infrastructure. You’re not sure if you’re heading towards safety or a more dangerous part of the system. After a few minutes of crawling, you come to a junction. One path leads further down, while the other seems to curve upwards.
+
+Do you:
+
+*   Take the path **leading further down**? Turn to page 31.
+*   Take the path **curving upwards**? Turn to page 32.

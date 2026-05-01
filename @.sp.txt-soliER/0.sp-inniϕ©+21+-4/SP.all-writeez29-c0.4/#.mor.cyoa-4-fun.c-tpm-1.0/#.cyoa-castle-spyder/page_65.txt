@@ -1,0 +1,12 @@
+**Page 65: Examining the Lab Equipment**
+
+You scuttle around the high-tech laboratory, observing the advanced equipment. There are holographic projectors displaying complex genetic sequences, bio-printers, and containment units holding various glowing samples. One apparatus in the center seems designed for some form of rapid biological manipulation.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 6/10 (Observed advanced bio-tech equipment in the lab)
+
+What do you do?
+
+*   If you investigate the central apparatus for biological manipulation, turn to page 75.
+*   If you try to identify the spy's objective within the lab, turn to page 66.

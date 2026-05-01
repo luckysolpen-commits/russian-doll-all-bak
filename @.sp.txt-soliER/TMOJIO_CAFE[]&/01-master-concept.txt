@@ -1,0 +1,172 @@
+# TPMOJIO CAFE — Master Concept Document
+## "The Third Place for Nerds, Nerds-in-Training, and Nerds-at-Heart"
+
+---
+
+## The Core Idea
+
+A physical space that combines:
+- **Cafe** (tea, coffee, baked goods — quality, not afterthought)
+- **Board game / TTRPG lounge** (play, buy, learn)
+- **Tech retail** (computers, phones, peripherals — curated, not overwhelming)
+- **Community center** (events, quests, networking, classes)
+- **Cultural venue** (exhibits, cosplay, streaming, open mics, comedy)
+
+**The vibe:** Barnes & Noble's comfort × Apple Store's curation × Hot Topic's subculture energy × YMCA's community function × a game store that doesn't smell like despair.
+
+---
+
+## Why This Doesn't Exist Yet
+
+| Existing Place | What They Do | What They Miss |
+|---------------|-------------|----------------|
+| **Barnes & Noble** | Books, cafe, events | No gaming, no tech, sterile |
+| **Apple Store** | Tech, workshops | No food, no community, corporate |
+| **GameStop** | Games, merch | No space to play, no community |
+| **Board game cafe** | Games, food | Usually small, no tech, no events |
+| **YMCA** | Community, classes | No retail, no subculture, dated |
+| **Hot Topic** | Subculture merch | No space, no food, no community |
+
+**The gap:** No one has combined quality food + curated tech + gaming space + community programming + subculture identity into one coherent brand.
+
+---
+
+## The TPMOJIO Advantage
+
+We already have:
+1. **IP** — TPMOJIO, Clone Chronicles, Sol Pen, HARD_VVAR, Avantasy
+2. **Audio content** — 40+ sessions of multi-voice audio drama
+3. **Lore** — Deep universe with characters, factions, themes
+4. **Community** — The sessions themselves model community (tea, peace, learning)
+5. **Open source ethos** — Software is free. IP is Creative Commons. The store is the product.
+
+---
+
+## Revenue Streams (High-Level)
+
+| Stream | Description | Margin | Notes |
+|--------|-------------|--------|-------|
+| **Food & Beverage** | Tea, coffee, baked goods, light meals | 60-70% | Highest margin. Quality matters. |
+| **Tech Retail** | Computers, phones, peripherals | 10-20% | Low margin but high ticket. Drives foot traffic. |
+| **Game Retail** | Board games, TTRPG books, miniatures | 30-40% | Decent margin. Complements play space. |
+| **Merch** | Plushies, figures, apparel, prints | 50-70% | High margin. IP-driven. |
+| **Membership** | Tiered access (see below) | 80%+ | Pure margin. Recurring revenue. |
+| **Events** | Ticketed events, tournaments, cons | 40-60% | Variable. Draws new crowds. |
+| **Space Rental** | Private rooms, streaming setups, parties | 70%+ | Underutilized asset monetization. |
+| **Software** | TPMOJIO digital, tools, apps | 90%+ | Bootstrap engine. Open core model. |
+| **Classes** | Coding, D&D, cosplay, streaming | 50-70% | Community building + revenue. |
+
+---
+
+## Membership Tiers (Sam's Club Model)
+
+| Tier | Price/Mo | Perks |
+|------|----------|-------|
+| **Free** | $0 | Cafe access, open play area, public events |
+| **Player** | $15/mo | Board game library, priority seating, 10% retail discount |
+| **Builder** | $35/mo | Private room access (4 hrs/mo), streaming setup, 15% discount, quest board access |
+| **Architect** | $75/mo | Unlimited private rooms, networking lounge, 20% discount, event hosting rights, early access to exhibits |
+| **Founder** | $150/mo | All above + hotel partnership perks, ride-share credits, concierge, voting on new locations |
+
+---
+
+## The "Quest Board" Concept
+
+A physical + digital board where community members post:
+- **Game quests** — "Need 2 players for TPMOJIO session Thursday"
+- **Learning quests** — "Teach me to code Python" / "Teach me to paint miniatures"
+- **Community quests** — "Help me move" / "Need a ride to the airport"
+- **Creative quests** — "Looking for a D&D writer" / "Need a streamer collab"
+- **Business quests** — "Looking for a co-founder" / "Need feedback on my app"
+
+This is the **community engine**. It turns a store into a network.
+
+---
+
+## Location Strategy
+
+| Location Type | Size | Cost | Audience | Notes |
+|--------------|------|------|----------|-------|
+| **Mall kiosk** | 200-400 sqft | Medium | Foot traffic | Proof of concept. Limited function. |
+| **Strip mall** | 1,500-3,000 sqft | Low-Med | Suburban families | Standard model. Cafe + games + tech. |
+| **Near college** | 2,000-4,000 sqft | Medium | Students, faculty | Heavy on events, classes, late hours. |
+| **Near library** | 1,500-3,000 sqft | Low | Readers, families, seniors | Partnership potential. Quiet + loud zones. |
+| **Downtown** | 3,000-6,000 sqft | High | Professionals, tourists | Full model. Events, exhibits, streaming. |
+| **Multi-story** | 10,000+ sqft | Very High | Destination | Hotel rooms, gym, full community center. |
+
+**Start small. Prove the model. Scale what works.**
+
+---
+
+## The Lore Connection
+
+TPMOJIO Cafe isn't just a store — it's **diegetic**. It exists in the universe:
+
+- **In-lore:** Mother Tmojizu's ducklings open a cafe after the arena closes. It's where clones go to decompress. The quest board is literal — the board remembers.
+- **In-reality:** We're building the real thing. The lore feeds the store. The store feeds the lore.
+- **Meta:** The cafe is where the next session happens. Every store is a potential recording studio. Every event is potential content.
+
+---
+
+## Open Source + Creative Commons Strategy
+
+**Why:**
+- If the stores fail, the IP survives.
+- If the stores succeed, the open source community becomes a marketing engine.
+- Investors can't hold the IP hostage. The community owns it.
+
+**How:**
+- **Software:** Open source (MIT/Apache). TPMOJIO digital, quest board app, session tools.
+- **IP:** Creative Commons BY-NC-SA. Anyone can create TPMOJIO content. Commercial use requires license.
+- **Merch:** Trademarked. Only we sell official merch. But fan art is encouraged.
+- **Audio:** Free to listen. Free to share. Free to remix (non-commercial).
+
+**Investor pitch:** "We're not selling IP. We're selling experience. The IP is the moat — it's so open that everyone uses it, but the stores are where the magic happens."
+
+---
+
+## Bootstrap vs. Investor Path
+
+### Bootstrap Path:
+1. **Year 1:** Build software (TPMOJIO digital, quest board app). Sell licenses. $50-100K revenue.
+2. **Year 2:** Pop-up events at existing venues (libraries, colleges, cons). Build community. $20-50K revenue.
+3. **Year 3:** First physical location (strip mall, 2,000 sqft). Funded by software revenue + pre-sold memberships. $200-400K revenue.
+4. **Year 4-5:** Second location. Refine model. $500K-1M revenue.
+
+### Investor Path:
+1. **Seed:** $500K-1M for first location + software development.
+2. **Series A:** $2-5M for 3-5 locations.
+3. **Series B:** $10-20M for regional expansion.
+4. **Exit:** Acquisition by Barnes & Noble, GameStop, or IPO.
+
+**Recommendation:** Bootstrap as long as possible. Investors will push for speed over quality. This concept needs quality.
+
+---
+
+## Risks & Mitigations
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|------------|
+| **Food service is hard** | High | High | Start with pre-made quality (baklava, fudge, toffee). Add kitchen later. |
+| **Tech retail margins are thin** | High | Medium | Curated selection only. No competing with Amazon on price. Compete on experience. |
+| **Community doesn't show up** | Medium | High | Pre-build community online. Quest board before store opens. Events before doors open. |
+| **Membership model fails** | Medium | Medium | Free tier always available. Paid tiers must deliver real value (rooms, discounts, access). |
+| **IP dilution** | Low | Medium | CC BY-NC-SA protects commercial rights. Trademark protects brand. |
+| **Location costs kill us** | Medium | High | Start small. Prove unit economics. Don't sign long leases without proof of concept. |
+| **Competition copies us** | Medium | Medium | First-mover advantage + IP moat + community loyalty. Hard to copy culture. |
+
+---
+
+## Next Steps (Immediate)
+
+1. **Define the MVP location** — What's the smallest viable store? (Answer: ~1,500 sqft, cafe + game tables + small tech display + event corner.)
+2. **Build the quest board app** — Digital first. Community before physical space.
+3. **Run pop-up events** — Test the concept at libraries, colleges, cons.
+4. **Pre-sell memberships** — If 100 people will pay $15/mo before the store opens, you have validation.
+5. **Find the first location** — Strip mall near college or library. Low rent. High foot traffic.
+6. **Design the space** — Barnes & Noble comfort × Apple Store curation × game store energy.
+
+---
+
+*The board remembers. The cafe awaits. The spiral turns.*
+*ϕ*

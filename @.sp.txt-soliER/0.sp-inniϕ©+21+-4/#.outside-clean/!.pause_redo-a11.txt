@@ -1,0 +1,76 @@
+# BOOKS WITH UNWANTED PAUSES — NEED RE-CONVERSION
+# =================================================
+# Issue: Old scripts used "\n\n".join(page_text) which inserts
+# paragraph-break pauses (~300-500ms) between every page boundary.
+# Also preserved internal blank lines from source files.
+#
+# Fix: Use new batch_convert.py with "charanon" category:
+#   - Reads all page_*.txt files
+#   - Strips blank lines (only keeps non-empty lines)
+#   - Joins with SINGLE SPACES (no paragraph breaks = no pauses)
+#   - Splits into 3000-char chunks for edge-tts limits
+#
+# Total: 15 books, ~215 chapters need redo
+
+## CATEGORY: HIGH PAUSE ISSUE (used "\n\n".join, no blank line filtering)
+
+1.  Centroid              (16 ch)  en-US-JennyNeural
+    Dir: SP.all-writeez28-a1/12.centroid.u.phi]2xvsp]big]b1/cent-book.bigword]a0/
+
+2.  CHAR.A.NON Book 101   (18 ch)  en-US-AriaNeural
+    Dir: SP.all-writeez28-a1/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111101a0-fixed/
+
+3.  CHAR.A.NON Book 1010% (15 ch)  en-US-AriaNeural
+    Dir: SP.all-writeez28-a1/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111011]a0/
+
+4.  CHAR.A.NON Book 110   (8 ch)   en-US-AriaNeural
+    Dir: SP.all-writeez28-a1/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111110/
+
+5.  CHAR.A.NON Book 1100  (15 ch)  en-US-AriaNeural
+    Dir: SP.all-writeez28-a1/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111100]a1-fixed/
+
+6.  CHAR.A.NON Book 111   (13 ch)  en-US-AriaNeural
+    Dir: SP.all-writeez28-a1/-1.MyChara+21]b1/CHAR.A.NON]c3]++/-1.CHAR.A.NON]1111111111111111/
+
+7.  Chatoe BnB 13         (13 ch)  en-US-JennyNeural
+    Dir: SP.all-writeez28-a1/333.chatoe.bnb.13]a0]FULL/
+
+8.  Death-Kryo!           (13 ch)  en-US-JennyNeural
+    Dir: SP.all-writeez28-a1/3.DEATH-KRYO!]big]b2/book_template.scp/
+
+9.  Digi_Sol Suicider     (13 ch)  en-US-JennyNeural
+    Dir: SP.all-writeez28-a1/8.Digi_Sol.Suicider]BIG]b1/8.DSS.book_]full-gemini]a0/
+
+10. Geminii Part 2        (15 ch)  en-US-JennyNeural
+    Dir: SP.all-writeez28-a1/1.ii.geminii]2part]a0/1.GEMANDI.part2/book_partii.gemini/
+
+11. Moonshine             (13 ch)  en-US-JennyNeural
+    Dir: SP.all-writeez28-a1/4.moonshine]big]b1/book_template.scp/
+
+12. NGL MPYRE             (20 ch)  en-US-GuyNeural
+    Dir: SP.all-writeez28-a1/100.%.NGL.MPYRE]bk0/14.book]nglr.mpyre]FULL]b1/
+
+13. Red Rock & Roll       (13 ch)  en-US-JennyNeural
+    Dir: SP.all-writeez28-a1/2.RedRock.AndROLL]ING]mid]a1/book_RR]BIG/
+
+14. Superwar              (13 ch)  en-US-JennyNeural
+    Dir: SP.all-writeez28-a1/5.SUPERWAR.ikrs]FULwc]bk0/book_template.scp/
+
+15. XO Files              (13 ch)  en-US-JennyNeural
+    Dir: SP.all-writeez28-a1/10.xo.files]wc.smol]a0/book_template.scp/
+
+## NOT AFFECTED (single-file chapters, no page join):
+- Sol Pen Book 0 (22 ch)
+- Footrace.FU (13 ch)
+- Footrace.FU zh-CN (13 ch)
+- Metal Sun (13 ch)
+- Tear-It Accidental Witch (13 ch)
+
+## NOT AFFECTED (CYOA — per-page MP3, no aggregation):
+- CYOA Books 0, 1, 3, 4
+
+## HOW TO RE-CONVERT:
+# Use batch_convert.py with "charanon" category for each book's chapter dirs:
+# python3 batch_convert.py <chapter_dir> "^page_\d+\.txt$" "charanon"
+#
+# Or create a dedicated script similar to convert_charanon_books.sh

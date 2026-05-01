@@ -1,0 +1,45 @@
+# stats.txt — IQABELLA
+# Bubbly Droid/Cyborg Fem-Maid | Cleric (Peace Domain) | Warforged
+
+level: 2
+class: Cleric / Peace Domain
+race: Warforged
+
+STR: 12 (+1)
+DEX: 10 (+0)
+CON: 14 (+2)
+INT: 13 (+1)
+WIS: 17 (+3)
+CHA: 15 (+2)
+
+HP: 18/18
+AC: 17 (Natural Armor Warforged + Shield)
+Speed: 30ft
+
+Proficiency Bonus: +2
+Initiative: +0
+
+Saving Throws: WIS +5, CHA +4
+Skills:
+  - Medicine: +5
+  - Insight: +5
+  - Persuasion: +4
+  - Religion: +3
+  - Perception: +5
+
+Abilities/Spells:
+  - Implements of Peace (Emboldening Bond — 2/day, bonus action to give ally d4 to attack/save/check)
+  - Spellcasting (WIS-based)
+  - Channel Divinity: Balm of Peace (heal 1d6 + level in a 30ft radius)
+  - Cantrips: Sacred Flame, Spare the Dying, Guidance, Thaumaturgy
+  - 1st Level Spells: Healing Word, Cure Wounds, Bless, Shield of Faith, Detect Magic
+
+Inventory:
+  - Mace (decorated with gold filigree)
+  - Shield (emblazoned with Fuzzball sigil)
+  - Holy Symbol (embedded in chest plate — ϕ spiral)
+  - Healer's Kit (10 uses)
+  - Maid Outfit of the Warforged (cosmetic, AC included in base)
+  - Tea Set (enchanted — brews restorative tea, 1d4 temp HP)
+  - 45 Gold Pieces
+  - First Aid Kit (flavor — adds +1 to Medicine checks)

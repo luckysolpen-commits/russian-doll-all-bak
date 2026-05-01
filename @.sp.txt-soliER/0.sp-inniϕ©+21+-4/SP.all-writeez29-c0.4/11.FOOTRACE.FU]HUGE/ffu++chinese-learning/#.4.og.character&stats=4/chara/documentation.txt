@@ -1,0 +1,38 @@
+# documentation.txt — CHARA
+
+## Personality
+Paranoid, hyper-competent, and always three steps ahead. Chara doesn't trust easily,
+but once she does, she's fiercely loyal. She assumes everyone is lying until proven
+otherwise — including the DM. This makes her the party's de facto investigator and
+skeptic. She's the one who checks the fine print, questions the NPC's motives, and
+notices when the tavern keeper's story doesn't add up.
+
+## Roleplay Notes
+- Always scanning the room. Describe her eyes moving, checking exits, assessing threats.
+- Speaks concisely. No wasted words. When she talks, it's purposeful.
+- Her CIA background means she approaches problems tactically — she plans, she doesn't improvise.
+- When she's wrong about something, she doubles down before admitting it.
+- She's secretly terrified that Avantasy is more real than the real world.
+
+## Relationships
+- **Sol-Supreme:** Deeply suspicious of his claims. She was sent to investigate him IRL.
+  In-game, she watches him closely, looking for cracks in his story. But she respects
+  his competence.
+- **IQabella:** Protective of her. IQabella is the one person Chara doesn't suspect
+  of having an agenda. This makes Chara uncomfortable.
+- **Horli Qwin:** Amused and annoyed in equal measure. Horli tries to pickpocket her
+  constantly. Chara always catches her. They have an unspoken rivalry that's mostly
+  Charli trying to maintain professionalism while Horli chaos-bombs everything.
+
+## Voice/Tone
+- Calm, measured, low-register voice.
+- Speaks like someone who's been briefed on classified material — precise, no filler.
+- Dry humor. Deadpan delivery.
+- When stressed, she gets quieter, not louder.
+- Catchphrase energy: "That doesn't track." / "Walk me through it again."
+
+## OOC Player Energy
+- The player is engaged, asks lots of questions, and tries to meta-solve the plot.
+- Will argue rules if they seem inconsistent ("Why would the server allow that?").
+- Loves investigation and insight rolls. Will use them on everything.
+- Gets genuinely invested in lore reveals.

@@ -1,0 +1,12 @@
+**Page 63: Examining the Data Drive**
+
+You scuttle closer to the spy, examining the data drive and the document. The drive is sleek and unmarked, likely heavily encrypted. The document, when you can get a brief look, contains complex diagrams and what appear to be blueprints for advanced surveillance drones – the very ones you encountered in the vents.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 7/10 (Saw blueprints for advanced surveillance drones on the retrieved document)
+
+What do you do?
+
+*   If you try to find out what the spy's objective is within the lab, turn to page 66.
+*   If you follow the spy as he leaves the library, turn to page 42.

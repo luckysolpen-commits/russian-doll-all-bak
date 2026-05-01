@@ -1,0 +1,169 @@
+# FU D&D — SESSION 11: "THE PHARMA LAB"
+## World Building / Plot / Character Document
+
+---
+
+## 🧪 SETTING: THE MULTI-STORY PHARMA LAB
+
+**Name:** , eng, pharmaceutical factory, ... tx, 制药厂, zhì yào chǎng, ... xt,
+**Location:** A towering glass structure on a floating research station in the temporal void. 12 floors. Each floor is a different lab specialty.
+**Atmosphere:** Sterile white walls, humming centrifuges, bubbling beakers, holographic molecular models floating in the air. Smells like , eng, alcohol, ... tx, 酒精, jiǔ jīng, ... xt, , eng, disinfectant, ... tx, 消毒水, xiāo dú shuǐ, ... xt, and something sweet underneath.
+**Lighting:** Fluorescent panels, glowing chemical tanks, emergency red lights that flash when alarms trigger.
+
+### Floor Layout:
+| Floor | Chinese | Pinyin | Purpose |
+|-------|---------|--------|---------|
+| 1 | 接待 jie dai | Reception | Check-in, safety briefing, lab coats |
+| 2 | 基础 ji chu | Basic Lab | Simple compounds: pain relief, energy boosters |
+| 3 | 治疗 zhi liao | Healing Lab | Burns, paralysis, wound healing, vaccines |
+| 4 | 增强 zeng qiang | Enhancement Lab | Performance drugs, perception boosters, life extension |
+| 5 | 毒素 du su | Toxin Lab | Poisons, tear gas, confusion agents (for enemies) |
+| 6 | 复活 fu huo | Resurrection Lab | Bring the dead back to life (dangerous, restricted) |
+| 7-11 | 研究 yan jiu | Research Floors | Locked. The twins' private labs. |
+| 12 | 屋顶 wu ding | Rooftop | Escape point. Helipad for temporal aircraft. |
+
+---
+
+## 👥 THE TWIN MAD SCIENTISTS (Gym Leaders)
+
+### Male Twin: 博士 Dr. Venom 毒博士 dú bó shì
+**Name:** , eng, poison, ... tx, 毒, dú, ... xt, + , eng, doctor, ... tx, 博士, bó shì, ... xt, = Dr. Venom
+**Appearance:** Tall, thin, white lab coat stained with chemical burns. Goggles with six lenses (one per element). Hair that stands up from static electricity. Left hand is a mechanical prosthetic with built-in syringes.
+**Personality:** , eng, crazy, ... tx, 疯狂, fēng kuáng, ... xt, but , eng, genius, ... tx, 天才, tiān cái, ... xt, Speaks fast. Interrupts himself. Laughs at his own experiments. Obsessed with toxins and poisons.
+**Voice:** Rapid-fire Chinese. High-pitched. Excited.
+
+### Female Twin: 博士 Dr. Panacea 万灵博士 wàn líng bó shì
+**Name:** , eng, panacea/cure-all, ... tx, 万灵, wàn líng, ... xt, + , eng, doctor, ... tx, 博士, bó shì, ... xt, = Dr. Panacea
+**Appearance:** Same height as her brother but where he's thin, she's muscular. Lab coat is pristine. Hair in a tight bun. Eyes glow faintly green from years of exposure to resurrection compounds. Carries a clipboard that's actually a temporal tablet.
+**Personality:** , eng, calm, ... tx, 冷静, lěng jìng, ... xt, , eng, precise, ... tx, 精确, jīng què, ... xt, Speaks slowly. Every word measured. Obsessed with healing and life extension.
+**Voice:** Slow, deliberate Chinese. Low-pitched. Each word carries weight.
+
+### Their Dynamic:
+- They finish each other's sentences — one in Chinese, one translates to English (badly).
+- They argue constantly about methodology: poison vs. cure, destruction vs. healing.
+- But in battle, they're perfectly synchronized. Six arms between them (his mechanical + her natural + their shared temporal bond).
+- They respect the party's Blue Belt status but think they're ", eng, amateur, ... tx, 业余, yè yú, ... xt,"
+
+---
+
+## 🐭 THE LABPETS
+
+**Name:** , eng, lab mouse, ... tx, 实验鼠, shí yàn shǔ, ... xt, (but they roll instead of walk)
+**Appearance:** Small, round, furless creatures with wheels instead of feet. They roll around the lab floors like tiny Roombas. Big eyes. Twitching noses. Surprisingly intelligent.
+**Purpose:** Test subjects for all compounds. The party will administer drugs to them and observe effects.
+**Behavior:** They squeak in Chinese. 中文老师 voices them.
+- , eng, pain, ... tx, 疼, téng, ... xt, — when given a painful compound
+- , eng, comfortable, ... tx, 舒服, shū fu, ... xt, — when healed
+- , eng, fast, ... tx, 快, kuài, ... xt, — when given an energy booster
+- , eng, dizzy, ... tx, 晕, yūn, ... xt, — when given a confusion agent
+
+---
+
+## 🧬 CHEMISTRY CURRICULUM
+
+### Healing Compounds (Floor 3)
+| English | Chinese | Pinyin | Formula | Effect |
+|---------|---------|--------|---------|--------|
+| Painkiller | 止痛药 zhi tong yao | zhi tong yao | C8H9NO2 (acetaminophen) | Relieves pain |
+| Burn cream | 烧伤膏 shao shang gao | shao shang gao | Ag sulfadiazine | Heals burns |
+| Paralysis cure | 麻痹解药 ma bi jie yao | ma bi jie yao | Neostigmine | Reverses paralysis |
+| Wound healer | 伤口愈合药 shang kou yu he yao | shang kou yu he yao | Fibrin + thrombin | Closes wounds |
+| Vaccine | 疫苗 yi miao | yi miao | mRNA/LNP | Prevents disease |
+
+### Enhancement Compounds (Floor 4)
+| English | Chinese | Pinyin | Formula | Effect |
+|---------|---------|--------|---------|--------|
+| Energy booster | 能量增强剂 neng liang zeng qiang ji | neng liang zeng qiang ji | C8H10N4O2 (caffeine) + ATP | Increases energy |
+| Perception boost | 感知增强剂 gan zhi zeng qiang ji | gan zhi zeng qiang ji | Psilocybin C12H17N2O4 | Psychoactive perception |
+| Life extension | 延寿药 yan shou yao | yan shou yao | Telomerase activator | Extends lifespan |
+| Resurrection | 复活药 fu huo yao | fu huo yao | Unknown (temporal compound) | Brings dead back to life |
+
+### Toxin Compounds (Floor 5)
+| English | Chinese | Pinyin | Formula | Effect |
+|---------|---------|--------|---------|--------|
+| Poison | 毒药 du yao | du yao | KCN (potassium cyanide) | Lethal to enemies |
+| Tear gas | 催泪瓦斯 cui lei wa si | cui lei wa si | C4H5Cl2N (CS gas) | Blinds and chokes |
+| Confusion agent | 混乱剂 hun luan ji | hun luan ji | Scopolamine C17H21NO4 | Causes confusion |
+| Paralysis toxin | 麻痹毒素 ma bi du su | ma bi du su | Tetrodotoxin C11H17N3O8 | Paralyzes enemies |
+
+### Advanced/Dangerous (Floor 6)
+| English | Chinese | Pinyin | Formula | Effect |
+|---------|---------|--------|---------|--------|
+| Resurrection serum | 复活血清 fu huo xue qing | fu huo xue qing | Temporal enzyme complex | Brings dead back |
+| Immortality drug | 不死药 bu si yao | bu si yao | Telomerase + stem cells | Grants immortality |
+| Time dilation drug | 时间膨胀药 shi jian peng zhang yao | shi jian peng zhang yao | Chroniton compound | Slows perception of time |
+
+### Dangerous Combinations (DO NOT MIX)
+| Mix | Result | Chinese | Pinyin |
+|-----|--------|---------|--------|
+| KCN + acid | Hydrogen cyanide gas | 氰化氢 qing hua qing | Deadly |
+| Bleach + ammonia | Chloramine gas | 氯胺 lv an | Deadly |
+| Resurrection + poison | Zombie compound | 僵尸 jiang shi | Undead |
+| Tear gas + fire | Phosgene gas | 光气 guang qi | Deadly |
+
+---
+
+## 📖 PLOT OUTLINE
+
+### Phase 1: Invitation & Arrival
+- Party receives a formal invitation from the twins. Delivered by a rolling labpet.
+- They arrive at the 12-story lab. Check in on Floor 1. Get lab coats. Safety briefing (in Chinese).
+- Meet the twins: Dr. Venom (poison specialist) and Dr. Panacea (healing specialist).
+
+### Phase 2: Lab Training (Floors 2-6)
+- **Floor 2:** Basic compounds. Make painkillers and energy boosters. Test on labpets.
+- **Floor 3:** Healing compounds. Make burn cream, paralysis cure, vaccines. Test on injured labpets.
+- **Floor 4:** Enhancement compounds. Make perception boosters, life extension. Test on willing labpets.
+- **Floor 5:** Toxin compounds. Make poisons, tear gas, confusion agents. Test on enemy-simulated labpets.
+- **Floor 6:** Resurrection Lab. The twins reveal the resurrection serum. It's dangerous. One labpet dies during testing. They bring it back. The party is horrified and amazed.
+
+### Phase 3: The Test Begins
+- The twins announce: ", eng, now, ... tx, 现在, xiàn zài, ... xt, , eng, battle, ... tx, 战斗, zhàn dòu, ... xt,"
+- They release their modified ferrets: , eng, poison fang, ... tx, 毒牙, dú yá, ... xt, ferrets.
+- The ferrets are horrifying: stretchable bodies, work together as arms, poison fangs, coordinated attacks.
+- The battle destroys the lab. Equipment smashes. Chemicals spill. Alarms blare.
+
+### Phase 4: The Battle
+- **Ferret 1 (Venom's):** , eng, venomous snake, ... tx, 毒蛇, dú shé, ... xt, — long, thin, strikes from distance. Poison fangs inject , eng, paralysis toxin, ... tx, 麻痹毒素, má bì dú sù, ... xt,
+- **Ferret 2 (Panacea's):** , eng, iron armor, ... tx, 铁甲, tiě jiǎ, ... xt, — short, thick, heavily armored. Uses its body as a whip. Can stretch 10 meters.
+- The ferrets work together: one stretches to grab, the other strikes. They use the lab environment — swinging from pipes, bouncing off walls, knocking over chemical tanks.
+- The party must use their Time Fu + Fuzzpets + newly-made compounds to fight.
+- Security alarms trigger: , eng, alarm, ... tx, 警报, jǐng bào, ... xt, Red lights. Sprinklers. Chemical fires.
+
+### Phase 5: The Escape
+- The lab is collapsing. Chemical reactions are cascading. The twins are still fighting.
+- The party must escape from Floor 6 to Floor 12 (rooftop) while the lab self-destructs.
+- Each floor presents a new hazard: chemical floods on Floor 3, fire on Floor 5, gravity failure on Floor 8, temporal distortion on Floor 10.
+- They reach the rooftop. Temporal aircraft waiting. The twins, defeated but impressed, grant them the next belt.
+
+### Phase 6: Graduation
+- Earn , eng, red belt, ... tx, 红带, hóng dài, ... xt,
+- Unlocks: 5 Fuzzpets, 5 combo slots, 5 Chronoments each.
+- The twins give a final speech — one in Chinese, one in broken English. They respect the party now.
+
+---
+
+## ⚔️ TIME FU MOVES FOR THIS SESSION
+
+| Move | Chinese | Pinyin | Effect |
+|------|---------|--------|--------|
+| **Chemical Strike** | 化学拳 hua xue quan | hua xue quan | Hit with concentrated chemical energy. Ages the target's armor to rust. |
+| **Temporal Antidote** | 时间解药 shi jian jie yao | shi jian jie yao | Reverse poison damage by rewinding 5 seconds. |
+| **Lab Pet Summon** | 实验鼠召唤 shi yan shu zhao huan | shi yan shu zhao huan | Summon a rolling labpet to distract enemies. |
+| **Compound Forge** | 化合物锻造 hua he wu duan zao | hua he wu duan zao | Combine two chemicals mid-battle for a new effect. |
+| **Emergency Escape** | 紧急逃生 jin ji tao sheng | jin ji tao sheng | Temporal blink to a safe location. 10m range. |
+
+---
+
+## 🎲 NEW FORMAT
+
+Same as Session 10:
+```
+, eng, English, ... tx, 汉字, pinyin, ... xt,
+```
+
+The `, eng,` at the start and `, ... xt,` at the end mark the Chinese learning segment. English voices read the pinyin. 中文老师 reads everything including the character.
+
+---
+
+**ϕ**

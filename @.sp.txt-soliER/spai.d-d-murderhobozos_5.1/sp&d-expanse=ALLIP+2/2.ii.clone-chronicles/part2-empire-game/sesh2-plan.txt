@@ -1,0 +1,54 @@
+# PART 2 — SESSION 2: "THE FIRST CLAIM"
+## Clone Chronicles — Part 2, Session 2 of 10
+### Power: Regional | Status: Building infrastructure, first trade deals
+
+---
+
+## SESSION OVERVIEW
+
+The clones expand their territories, build infrastructure, and negotiate their first trade deals. This session is about growth: HR, R&D, Manufacturing, Marketing, Finance, and Diplomacy.
+
+## KEY BEATS
+
+1. **Turn 2 Begins** — Each clone makes their business decisions.
+2. **Infrastructure Building** — Factories, Foundries, Markets, Defenses.
+3. **First Trade Deals** — Clones negotiate with each other and NPCs.
+4. **Expansion** — Claim additional territory or reinforce existing claims.
+5. **End of Turn 2** — Hook for Session 3.
+
+## BUSINESS DECISIONS (Per Clone)
+
+| Decision | Effect | Cost |
+|----------|--------|------|
+| **HR** | Hire units, set salaries | BSR (salary × hires) |
+| **R&D** | Research tech, unlock abilities | BSR |
+| **Marketing** | Increase demand for goods | BSR |
+| **Manufacturing** | Build units, structures | BSR |
+| **Finance** | Borrow money, sell shares | Interest or equity |
+| **Diplomacy** | Trade, ally, or declare war | CHA checks |
+
+## TRADE DEAL MECHANICS
+
+- CHA (Persuasion) for negotiations
+- WIS (Insight) to detect bad deals
+- INT (Investigation) to assess value
+- Natural 20 = perfect deal. Natural 1 = catastrophic betrayal.
+
+## COMPLICATION (d6)
+| Roll | Complication |
+|------|-------------|
+| 1 | A clone's factory malfunctions — production halts |
+| 2 | Trade deal betrayal — one clone breaks an agreement |
+| 3 | Resource shortage — manufacturing costs double |
+| 4 | A barbarian faction raids a clone's territory |
+| 5 | The House demands a favor |
+| 6 | The Original's forces appear on the border |
+
+## END STATE
+- Each clone has expanded territory or infrastructure
+- First trade deals completed (or broken)
+- Hook: "Faction warfare begins. The board is set. Choose your allies."
+
+---
+
+**ϕ**

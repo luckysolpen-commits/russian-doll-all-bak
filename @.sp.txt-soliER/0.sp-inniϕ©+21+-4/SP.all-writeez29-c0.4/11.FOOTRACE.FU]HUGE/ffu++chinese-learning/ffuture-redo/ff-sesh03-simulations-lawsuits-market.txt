@@ -1,0 +1,231 @@
+# FU D&D — SESSION 3: "SIMULATIONS, LAWSUITS & THE MARKET"
+## Footrace.FU Chinese Learning — Episode 3
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** [out of character] Session 3. No graduation today. We're going deeper. Three topics: molecular simulation using TPMOS abstractions, law (how to defend yourself against predatory lawsuits — framed as Time World gangster tactics), and drug/chronoment market approval. Chemistry is still the main course. Let's begin. [in character] Morning. Time Dojo Classroom. The temporal chalkboard now shows a 3D molecular structure rotating in space. I stand at the front with tea. IQabella made it. 175 degrees.
+
+**IQabella:** , eng, good morning, ... tx, 早上好, zǎo shang hǎo, ... xt, , eng, tea, ... tx, 茶, chá, ... xt,
+
+**Mother Tmojizu:** , eng, thank you, ... tx, 谢谢, xiè xie, ... xt, Today we're going to learn how to simulate chemistry in 3D, how to survive a lawsuit, and how to bring a drug to market. Roll WIS Focus.
+
+**Horli Qwin:** [rolls] 16. Plus 3 is 19. Lawsuits? Like, real lawsuits? Or Time World lawsuits?
+
+**Mother Tmojizu:** Both. The mechanics are identical. In the Time World, gangsters use temporal law the way Mafiosos use civil court on Earth. Same filings, same motions, same judges. Just with more time travel.
+
+---
+
+## SCENE 1: TIME DOJO CLASSROOM — MOLECULAR SIMULATION WITH TPMOS
+
+**Mother Tmojizu:** You learned molecular orbital theory last session. Now let's simulate it. In 3D. In real time. Using the TPMOS architecture — the True Piece Method. Every atom is a Piece. Every bond is a file relationship. The simulation loop is the 12-step pipeline. Sol-Supreme, you'll love this.
+
+**Sol-Supreme:** [out of character] TPMOS. I've been studying this. Everything is a Piece with DNA and state. [in character] , eng, Piece, ... tx, 件, jiàn, ... xt, , eng, DNA, ... tx, DNA, DNA, ... xt, , eng, state, ... tx, 状态, zhuàng tài, ... xt, Every atom is a Piece. Its DNA defines its element — proton count, electron configuration, van der Waals radius. Its state.txt defines its position, velocity, energy.
+
+**Mother Tmojizu:** Exactly. Roll INT Systems Architecture to map a water molecule to TPMOS.
+
+**Sol-Supreme:** [rolls] 20. Plus 4 is 24. NATURAL 20. [out of character] H2O. Three Pieces: oxygen, hydrogen-1, hydrogen-2. Each has a piece.pdl (DNA) and state.txt (Mirror). The oxygen Piece's DNA defines: element=O, protons=8, electrons=6 valence, hybridization=sp³, van_der_Waals_radius=1.52Å. Its state.txt defines: pos_x, pos_y, pos_z, vel_x, vel_y, vel_z, kinetic_energy, potential_energy. The hydrogen Pieces are similar but simpler. The bonds are file-based relationships — oxygen's state.txt contains bond_H1=hydrogen_1/piece_id and bond_H2=hydrogen_2/piece_id. The 12-step pipeline is the simulation loop: Input (external force) → Route → Relay → Tick (calculate forces) → Op (update positions) → Mirror Sync (write state.txt) → Stage (render 3D view) → Display. [in character] Three Pieces. , eng, oxygen, ... tx, 氧, yǎng, ... xt, Piece: piece.pdl defines element=O, 8 protons, sp³ hybridization, 1.52Å van der Waals radius. state.txt defines pos_x=0, pos_y=0, pos_z=0, vel_x=0, vel_y=0, vel_z=0. Two , eng, hydrogen, ... tx, 氢, qīng, ... xt, Pieces: similar DNA, state.txt has their positions at 0.96Å from oxygen at 104.5° bond angle. The bonds are file references — oxygen's state.txt contains bond_H1=h1 and bond_H2=h2. The , eng, 12-step pipeline, ... tx, 十二步管道, shí èr bù guǎn dào, ... xt, is the simulation loop. Step 4 (Tick) calculates forces: Lennard-Jones potential for van der Waals, Coulomb's law for electrostatics, harmonic oscillator for bonds. Step 5-6 (Op) integrates positions using Velocity Verlet. Step 7 (Mirror Sync) writes new positions to state.txt. Step 8 (Stage) renders the 3D view.
+
+**Mother Tmojizu:** NATURAL 20. Perfect TPMOS mapping. Now — the force calculations. Every molecular dynamics simulation uses the same force field. Roll INT Computational Chemistry.
+
+**CHARA:** [rolls] 18. Plus 3 is 21. [out of character] The total potential energy is the sum of bonded and non-bonded terms. Bonded: bond stretching (harmonic), angle bending (harmonic), dihedral torsion (periodic). Non-bonded: van der Waals (Lennard-Jones 12-6), electrostatics (Coulomb's law). [in character] Total potential energy: V_total = V_bond + V_angle + V_dihedral + V_vdW + V_electrostatic. , eng, Bond stretching, ... tx, 键伸缩, jiàn shēn suō, ... xt, V_bond = ½ k_b (r - r₀)² — harmonic oscillator. k_b is the bond force constant, r is current bond length, r₀ is equilibrium bond length. For O-H in water: k_b ≈ 450 kcal/mol/Å², r₀ = 0.96Å. , eng, Angle bending, ... tx, 角弯曲, jiǎo wān qū, ... xt, V_angle = ½ k_θ (θ - θ₀)². For H-O-H: k_θ ≈ 55 kcal/mol/rad², θ₀ = 104.5°. , eng, van der Waals, ... tx, 范德华力, fàn wá huá lì, ... xt, V_vdW = 4ε[(σ/r)¹² - (σ/r)⁶] — the Lennard-Jones 12-6 potential. The r¹² term is repulsion (Pauli exclusion), the r⁶ term is attraction (London dispersion). , eng, Electrostatics, ... tx, 静电, jìng diàn, ... xt, V_elec = q₁q₂ / (4πε₀r) — Coulomb's law. Partial charges on water: oxygen δ- = -0.834e, each hydrogen δ+ = +0.417e.
+
+**Mother Tmojizu:** 21. Perfect force field. Now — integration. How do you go from forces to motion? Roll INT Numerical Methods.
+
+**Sol-Supreme:** [rolls] 19. Plus 4 is 23. [out of character] Velocity Verlet integration. It's symplectic — conserves energy over long simulations. Better than Euler, better than Runge-Kutta for MD. [in character] , eng, Velocity Verlet, ... tx, 速度VerLET, sù dù VERLET, ... xt, Three steps. Step 1: x(t + Δt) = x(t) + v(t)Δt + ½a(t)Δt² — update position using current velocity and acceleration. Step 2: Calculate new forces F(t + Δt) from new positions, get new acceleration a(t + Δt) = F(t + Δt) / m. Step 3: v(t + Δt) = v(t) + ½[a(t) + a(t + Δt)]Δt — update velocity using average of old and new acceleration. Time step Δt = 1 femtosecond (10⁻¹⁵ s) for water. Small enough to resolve O-H bond vibrations. Large enough to simulate nanoseconds in reasonable compute time.
+
+**Mother Tmojizu:** 23. Now — the TPMOS pipeline maps to this perfectly. Each atom is a Piece. The Module (Brain) runs the Tick step — calculating forces from all pairwise interactions. The Ops (Muscles) run the integration — updating each atom's position. The Mirror Sync writes state.txt. The Stage renders the 3D view. Roll INT Simulation Architecture to complete the mapping.
+
+**Sol-Supreme:** [rolls] 18. Plus 4 is 22. [out of character] The Module is the MD engine. It reads all Pieces' state.txt files using the stat() guard pattern — 0% CPU when nothing moves. It calculates the force matrix (N² pairwise interactions, or O(N log N) with a cell list). It writes force data to each Piece's history.txt. Each atom's Op reads its force, integrates its position, writes new state.txt. The renderer reads all state.txt files and produces a 3D view. [in character] The , eng, Module, ... tx, 模块, mó kuài, ... xt, is the MD engine. It uses the , eng, stat() guard, ... tx, stat() 守卫, stat() shǒu wèi, ... xt, pattern — only reads state.txt when mtime changes. 0% CPU when idle. It calculates the force matrix: for N atoms, N² pairwise interactions. For efficiency, use a , eng, cell list, ... tx, 细胞列表, xì bāo liè biǎo, ... xt, — divide space into cells of size equal to the cutoff radius. Only check atoms in neighboring cells. O(N) instead of O(N²). Each atom's , eng, Op, ... tx, 操作, cāo zuò, ... xt, reads its force from history.txt, integrates position via Velocity Verlet, writes new state.txt. The , eng, renderer, ... tx, 渲染器, xuàn rǎn qì, ... xt, reads all state.txt files and produces a 3D , eng, view, ... tx, 视图, shì tú, ... xt,
+
+**Mother Tmojizu:** 22. Now — fractal rendering. The Scale-Free Container Model in TPMOS means a Piece can contain Pieces which contain Pieces. That's a fractal. Roll INT Fractal Geometry.
+
+**CHARA:** [rolls] 17. Plus 3 is 20. [out of character] Fractals are self-similar structures at every scale. The Mandelbrot set: z(n+1) = z(n)² + c. Each zoom reveals the same structure. In TPMOS, a galaxy contains solar systems contains planets contains atoms contains quarks. Same container model at every level. [in character] , eng, Fractal, ... tx, 分形, fēn xíng, ... xt, Self-similarity at every scale. The , eng, Mandelbrot set, ... tx, 曼德博集合, màn dé bó jí hé, ... xt, z(n+1) = z(n)² + c. Each iteration maps a complex number to a new complex number. If the sequence stays bounded, the point is in the set. If it diverges to infinity, it's outside. The boundary is infinitely complex — zoom forever and you always find new structure. In TPMOS, the , eng, Scale-Free Container Model, ... tx, 无标度容器模型, wú biāo dù róng qì mó xíng, ... xt, is fractal: a galaxy Piece contains solar system Pieces, which contain planet Pieces, which contain atom Pieces, which contain quark Pieces. Same file structure at every level: piece.pdl + state.txt. The rendering is recursive — render the galaxy by rendering each solar system by rendering each planet by rendering each atom.
+
+**Mother Tmojizu:** 20. Now — how do you actually CODE this? How do you go from the TPMOS textbook to a working molecular dynamics simulation? Roll INT Software Engineering.
+
+**Sol-Supreme:** [rolls] 20. Plus 4 is 24. NATURAL 20. [out of character] I can walk through the entire implementation. [in character] Step 1: Define each atom as a Piece directory. pieces/oxygen/piece.pdl defines element=O, mass=15.999, charge=-0.834, vdw_radius=1.52. pieces/oxygen/state.txt defines pos_x=0, pos_y=0, pos_z=0, vel_x=0, vel_y=0, vel_z=0, force_x=0, force_y=0, force_z=0. Step 2: The Module (md_engine.+x) reads all Pieces using the stat() guard. For each pair, calculate Lennard-Jones + Coulomb forces. Write forces to each Piece's history.txt. Step 3: Each atom's Op (integrate.+x) reads its force, runs Velocity Verlet, writes new state.txt. Step 4: The renderer (render_3d.+x) reads all state.txt, produces a 3D view.txt with atom positions and bond lines. Step 5: The display loop hits frame_changed.txt, the parser composes the frame, the renderer displays it. The entire loop runs in 16ms per timestep. 60 timesteps per second. Real-time molecular dynamics.
+
+**Mother Tmojizu:** NATURAL 20. You just described a complete MD simulation built entirely on TPMOS primitives. File-based IPC. stat() guards. Piece sovereignty. The 12-step pipeline. This is how you build chemical simulations from first principles. Now — let's apply this to drug design.
+
+**中文老师:** , eng, simulation, ... tx, 模拟, mó nǐ, ... xt, , eng, molecule, ... tx, 分子, fēn zǐ, ... xt, , eng, atom, ... tx, 原子, yuán zǐ, ... xt, , eng, force, ... tx, 力, lì, ... xt, , eng, position, ... tx, 位置, wèi zhì, ... xt, , eng, velocity, ... tx, 速度, sù dù, ... xt, , eng, acceleration, ... tx, 加速度, jiā sù dù, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt, , eng, bond, ... tx, 键, jiàn, ... xt, , eng, angle, ... tx, 角, jiǎo, ... xt, , eng, fractal, ... tx, 分形, fēn xíng, ... xt, , eng, render, ... tx, 渲染, xuàn rǎn, ... xt, , eng, pipeline, ... tx, 管道, guǎn dào, ... xt, , eng, file, ... tx, 文件, wén jiàn, ... xt, , eng, state, ... tx, 状态, zhuàng tài, ... xt,
+
+---
+
+## SCENE 2: PHARMA-CHEM LAB — DRUG DESIGN TO MOLECULAR DYNAMICS
+
+**Mother Tmojizu:** Pharma-Chem Lab. Last session, you designed a tetrodotoxin antidote through rational drug design. Now let's simulate it. Molecular dynamics of your drug binding to its target. Roll INT Computational Drug Design.
+
+**Sol-Supreme:** [rolls] 19. Plus 4 is 23. [out of character] Molecular docking gives you a static snapshot — the best binding pose. But MD simulation shows you the dynamics — does the drug stay bound? Does the protein flex? Does water mediate the interaction? You run the simulation for 100 nanoseconds and calculate the binding free energy using MM-PBSA. [in character] , eng, Molecular docking, ... tx, 分子对接, fēn zǐ duì jiē, ... xt, gives the static binding pose. But , eng, molecular dynamics, ... tx, 分子动力学, fēn zǐ dòng lì xué, ... xt, shows the dynamics. I simulate the drug-target complex for 100 nanoseconds. I calculate the , eng, root mean square deviation, ... tx, 均方根偏差, jūn fāng gēn piān chā, ... xt, RMSD — does the drug stay in the binding pocket? I calculate the , eng, root mean square fluctuation, ... tx, 均方根涨落, jūn fāng gēn zhǎng luò, ... xt, RMSF — which protein residues are flexible? I calculate the , eng, binding free energy, ... tx, 结合自由能, jié hé zì yóu néng, ... xt, ΔG_bind using , eng, MM-PBSA, ... tx, MM-PBSA, MM-PBSA, ... xt, — Molecular Mechanics Poisson-Boltzmann Surface Area. ΔG_bind = ΔE_MM + ΔG_solvation - TΔS. ΔE_MM is the gas-phase molecular mechanics energy (van der Waals + electrostatics). ΔG_solvation is the solvation free energy (polar + nonpolar). TΔS is the entropic contribution from conformational changes. If ΔG_bind < 0, the drug binds spontaneously.
+
+**Mother Tmojizu:** 23. What's a good ΔG_bind for a drug candidate?
+
+**IQabella:** [rolls INT Pharmacology] 18. Plus 3 is 21. [out of character] Clinical drugs typically have ΔG_bind between -8 and -15 kcal/mol. That corresponds to Kd values between nanomolar and picomolar. ΔG = -RT ln(Kd). At 310K (body temperature), ΔG = -8 kcal/mol gives Kd ≈ 1.3 μM. ΔG = -12 kcal/mol gives Kd ≈ 1.6 nM. ΔG = -15 kcal/mol gives Kd ≈ 10 pM. [in character] Clinical drugs have , eng, binding free energy, ... tx, 结合自由能, jié hé zì yóu néng, ... xt, between -8 and -15 kcal/mol. The relationship: ΔG = -RT ln(Kd). At 310K (body temperature, , eng, 体温, ... tx, 体温, tǐ wēn, ... xt, ), ΔG = -8 kcal/mol gives Kd ≈ 1.3 micromolar. ΔG = -12 kcal/mol gives Kd ≈ 1.6 nanomolar. ΔG = -15 kcal/mol gives Kd ≈ 10 picomolar. My tetrodotoxin antidote needs Kd < 10 nM to compete with TTX's 10 nM affinity. So I need ΔG_bind < -11.4 kcal/mol.
+
+**Mother Tmojizu:** 21. Perfect calculation. Now — the physics of what's actually happening in 3D when your drug binds. Roll INT Biophysics.
+
+**CHARA:** [rolls] 17. Plus 3 is 20. [out of character] Drug binding is a diffusion-limited process. The drug molecule diffuses through solvent (water), encounters the protein's electrostatic field, gets guided into the binding pocket by long-range electrostatics, then forms specific interactions (H-bonds, salt bridges, hydrophobic contacts) that lock it in place. The binding pathway is stochastic — you need many simulation runs to map it. [in character] The drug molecule , eng, diffuses, ... tx, 扩散, kuò sàn, ... xt, through water. The diffusion coefficient D ≈ 10⁻⁵ cm²/s for a small molecule. It encounters the protein's , eng, electrostatic field, ... tx, 静电场, jìng diàn chǎng, ... xt, — the charged residues on the protein surface create an electrostatic funnel that guides the drug toward the binding pocket. This is , eng, electrostatic steering, ... tx, 静电引导, jìng diàn yǐn dǎo, ... xt, Once near the pocket, the drug forms specific interactions: , eng, hydrogen bonds, ... tx, 氢键, qīng jiàn, ... xt, (2-5 kcal/mol each), , eng, salt bridges, ... tx, 盐桥, yán qiáo, ... xt, (3-8 kcal/mol each), , eng, hydrophobic contacts, ... tx, 疏水接触, shū shuǐ jiē chù, ... xt, (1-2 kcal/mol per buried Å²), and , eng, pi-stacking, ... tx, π-π堆积, π-π duī jī, ... xt, (2-5 kcal/mol for aromatic rings). The total binding energy is the sum of all these interactions minus the , eng, desolvation penalty, ... tx, 去溶剂化惩罚, qù róng jì huà chéng fá, ... xt, — the energy cost of stripping water molecules from the binding pocket.
+
+**Mother Tmojizu:** 20. Now — the entropic cost. When a drug binds, it loses conformational freedom. It goes from flopping around in solution to being locked in one pose. That costs entropy. Roll INT Statistical Mechanics.
+
+**Sol-Supreme:** [rolls] 18. Plus 4 is 22. [out of character] The entropic penalty is TΔS ≈ 2-5 kcal/mol for a typical drug. Flexible drugs pay more entropy (more conformations to lose). Rigid drugs pay less. That's why drug designers pre-organize their molecules — make them rigid in the bioactive conformation before they bind. [in character] The , eng, entropic penalty, ... tx, 熵惩罚, shāng chéng fá, ... xt, TΔS ≈ 2-5 kcal/mol. A flexible drug has many , eng, conformations, ... tx, 构象, gòu xiàng, ... xt, in solution — it can rotate around every single bond. Each rotatable bond adds approximately 0.7 kcal/mol of entropic cost upon binding. My tetrodotoxin antidote has 3 rotatable bonds. Entropic cost ≈ 2.1 kcal/mol. To minimize this, I , eng, pre-organize, ... tx, 预组织, yù zǔ zhī, ... xt, the molecule — add a ring constraint that locks it into the bioactive conformation. Now it has only 1 rotatable bond. Entropic cost ≈ 0.7 kcal/mol. That's 1.4 kcal/mol of free energy saved — which translates to a 10-fold improvement in Kd.
+
+**Mother Tmojizu:** 22. You just optimized a drug using statistical mechanics. Now — let's pivot. You've designed a drug. You've simulated it. You've optimized it. Now you need to bring it to market. And in the Time World, that means navigating the regulatory system — and defending against gangsters who use the law as a weapon.
+
+---
+
+## SCENE 3: TIME DOJO CLASSROOM — LAW & SELF-DEFENSE
+
+**Mother Tmojizu:** In the Land of Time, there are people who lose to you in Time-Fu, in business, in Chronoment engineering. And they hold a grudge. They file lawsuits. Frivolous ones. Predatory ones. Designed to bleed you dry with legal fees even if you win. You need to know how to defend yourself. Cheaply. Effectively. Without hiring a $500/hour attorney. Roll INT Legal Strategy.
+
+**中文老师:** , eng, lawsuit, ... tx, 诉讼, sù sòng, ... xt, , eng, judge, ... tx, 法官, fǎ guān, ... xt, , eng, court, ... tx, 法院, fǎ yuàn, ... xt, , eng, file, ... tx, 提交, tí jiāo, ... xt, , eng, defend, ... tx, 辩护, biàn hù, ... xt, , eng, evidence, ... tx, 证据, zhèng jù, ... xt, , eng, motion, ... tx, 动议, dòng yì, ... xt, , eng, dismiss, ... tx, 驳回, bó huí, ... xt, , eng, settlement, ... tx, 和解, hé jiě, ... xt, , eng, pro se, ... tx, 自辩, zì biàn, ... xt, , eng, frivolous, ... tx, 无理的, wú lǐ de, ... xt, , eng, predatory, ... tx, 掠夺的, lüè duó de, ... xt,
+
+**CHARA:** [out of character] I've been on the receiving end of these. CIA legal threats. SBA audits. I know how this works. [in character] , eng, lawsuit, ... tx, 诉讼, sù sòng, ... xt, I've seen them. They're designed to intimidate, not to win.
+
+**Mother Tmojizu:** Exactly. Here's the framework. A lawsuit has three phases. Phase 1: Filing. Phase 2: Response. Phase 3: Resolution. Let me walk you through each.
+
+**Phase 1: Filing (提交, tí jiāo).** The plaintiff files a complaint with the court. The complaint alleges wrongdoing. You get served — someone hands you papers. Don't panic. Don't ignore it. You have a deadline to respond — usually 20-30 days. If you don't respond, you lose by default judgment.
+
+**Phase 2: Response (答辩, dá biàn).** You file an Answer. In the Answer, you admit or deny each allegation. You also file affirmative defenses — reasons why even if the allegations are true, you still win. And you file a Motion to Dismiss — arguing that even if everything the plaintiff says is true, there's no legal claim.
+
+**Phase 3: Resolution (解决, jiě jué).** Either the judge dismisses the case (best outcome), or you settle (cheapest outcome), or you go to trial (most expensive outcome).
+
+**Roll INT Legal Procedure to identify the most powerful tool against frivolous lawsuits.**
+
+**CHARA:** [rolls] 20. Plus 3 is 23. NATURAL 20. [out of character] The Motion to Dismiss under Rule 12(b)(6) — failure to state a claim. If the plaintiff's complaint doesn't allege facts that constitute a valid legal claim, the judge dismisses it immediately. No discovery. No depositions. No legal fees. Just gone. [in character] , eng, Motion to Dismiss, ... tx, 驳回动议, bó huí dòng yì, ... xt, Rule 12(b)(6) — , eng, failure to state a claim, ... tx, 未能提出诉求, wèi néng tí chū sù qiú, ... xt, If the complaint doesn't allege facts that constitute a valid legal claim, the , eng, judge, ... tx, 法官, fǎ guān, ... xt, dismisses it immediately. No , eng, discovery, ... tx, 证据开示, zhèng jù kāi shì, ... xt, No , eng, depositions, ... tx, 证词取证, zhèng cí qǔ zhèng, ... xt, No legal fees. Just gone. The standard from Bell Atlantic v. Twombly and Ashcroft v. Iqbal: the complaint must allege enough facts to be , eng, plausible, ... tx, 合理的, hé lǐ de, ... xt, on its face. Not just possible. Plausible. Most frivolous lawsuits fail this test.
+
+**Mother Tmojizu:** 23. Perfect. Now — what if the Motion to Dismiss is denied? What's your next move?
+
+**IQabella:** [rolls INT Investigation] 17. Plus 3 is 20. [out of character] Motion for Summary Judgment. After discovery, if there's no genuine dispute of material fact, the judge can decide the case as a matter of law. No trial needed. [in character] , eng, Motion for Summary Judgment, ... tx, 即决判决动议, jí jué pàn jué dòng yì, ... xt, After , eng, discovery, ... tx, 证据开示, zhèng jù kāi shì, ... xt, — the evidence-gathering phase — if there's no , eng, genuine dispute of material fact, ... tx, 实质性事实争议, shí zhì xìng shì shí zhēng yì, ... xt, the judge can decide the case as a matter of law. No trial. No jury. Just the judge reading the evidence and saying "case dismissed." The standard: no reasonable jury could find for the non-moving party.
+
+**Mother Tmojizu:** 20. Now — the cheapest, most effective self-defense tactic. Roll INT Legal Economics.
+
+**Sol-Supreme:** [rolls] 19. Plus 4 is 23. [out of character] Pro se representation — representing yourself. But strategically. You don't go pro se for the whole case. You go pro se for the Motion to Dismiss. It costs nothing but your time. And if the judge grants it, the case is over before the plaintiff's attorney has billed a single hour. If the judge denies it, you can always hire an attorney for the rest. [in character] , eng, Pro se, ... tx, 自辩, zì biàn, ... xt, — representing yourself. Strategically: file the , eng, Motion to Dismiss, ... tx, 驳回动议, bó huí dòng yì, ... xt, pro se. It costs nothing but your time. The format is simple: caption (case name, court, docket number), introduction, statement of facts, legal argument, conclusion, prayer for relief. The legal argument cites the relevant statute and case law. If the judge grants it, the case is over. If the judge denies it, you can hire an attorney for the rest. You've only spent a few weekends researching and writing. The plaintiff's attorney has spent hundreds of billable hours. The economics are in your favor.
+
+**Mother Tmojizu:** 23. Now — reaching out to the judge. You can't just call the judge. But you CAN file an ex parte motion in an emergency. And you CAN write a letter to the court clerk asking for procedural guidance. Roll INT Court Procedure.
+
+**CHARA:** [rolls] 18. Plus 3 is 21. [out of character] You can't communicate with the judge directly about the merits of the case — that's ex parte communication and it's prohibited. But you CAN: file a motion asking for a hearing, write to the court clerk about procedural questions (not substantive ones), and request a status conference. In some courts, you can also request alternative dispute resolution — mediation — which is free and often resolves frivolous cases quickly. [in character] You cannot communicate with the , eng, judge, ... tx, 法官, fǎ guān, ... xt, directly about the case merits — that's , eng, ex parte communication, ... tx, 单方沟通, dān fāng gōu tōng, ... xt, and it's prohibited. But you CAN: file a , eng, motion for hearing, ... tx, 听证动议, tīng zhèng dòng yì, ... xt, write to the , eng, court clerk, ... tx, 法院书记员, fǎ yuàn shū jì yuán, ... xt, about procedural questions, request a , eng, status conference, ... tx, 状态会议, zhuàng tài huì yì, ... xt, and request , eng, mediation, ... tx, 调解, tiáo jiě, ... xt, — free alternative dispute resolution. Mediation is especially effective against frivolous lawsuits because the mediator will tell the plaintiff's attorney "this case has no merit" in private — and the attorney will often advise their client to drop it.
+
+**Mother Tmojizu:** 21. Now — the nuclear option. Anti-SLAPP statutes. Roll INT Constitutional Law.
+
+**Sol-Supreme:** [rolls] 17. Plus 4 is 21. [out of character] Anti-SLAPP laws protect people who are sued for exercising their free speech rights. SLAPP = Strategic Lawsuit Against Public Participation. If you're sued for something you said or published, you can file an anti-SLAPP motion. If the judge grants it, the case is dismissed AND the plaintiff has to pay YOUR legal fees. [in character] , eng, Anti-SLAPP, ... tx, 反SLAPP, fǎn SLAPP, ... xt, — Strategic Lawsuit Against Public Participation. If you're sued for exercising your , eng, free speech, ... tx, 言论自由, yán lùn zì yóu, ... xt, rights — writing a review, publishing research, speaking publicly — you can file an anti-SLAPP motion. The plaintiff must show a probability of prevailing on the merits. If they can't, the case is dismissed AND they pay your , eng, attorney's fees, ... tx, 律师费, lǜ shī fèi, ... xt, This is the nuclear option because it turns the lawsuit against the plaintiff — they go from trying to bleed you to potentially paying your legal bills.
+
+**Mother Tmojizu:** 21. Now — the Time World parallel. In the Land of Time, gangsters file "Temporal Grievance Claims" — the equivalent of frivolous lawsuits. The mechanics are identical: filing, response, resolution. But the stakes are temporal — if you lose, they can accelerate your Time Debt. The same defenses apply: Motion to Dismiss (the grievance doesn't allege a valid temporal violation), Summary Judgment (no genuine dispute of temporal fact), and the Time World equivalent of anti-SLAPP — the Temporal Speech Protection Act. Roll INT Temporal Law.
+
+**Horli Qwin:** [rolls CHA Performance] 16. Plus 3 is 19. [out of character] So the Time World has the same legal system but with time penalties. That's actually scarier. [in character] , eng, Temporal Grievance, ... tx, 时间申诉, shí jiān shēn sù, ... xt, If I file a , eng, Motion to Dismiss, ... tx, 驳回动议, bó huí dòng yì, ... xt, and the judge grants it, the gangster's case is gone. But if I lose, they accelerate my , eng, Time Debt, ... tx, 时间债, shí jiān zhài, ... xt, So the stakes are higher. But the strategy is the same: file pro se, cite the Temporal Code, move to dismiss, and if that fails, request temporal mediation.
+
+**Mother Tmojizu:** 19. Exactly right. The strategy is identical. The stakes are just higher. Now — let's talk about bringing drugs and Chronoments to market.
+
+---
+
+## SCENE 4: PHARMA-CHEM LAB — MARKET APPROVAL
+
+**Mother Tmojizu:** You've designed a drug. You've simulated it. You've optimized it. Now you need regulatory approval to sell it. In the real world, that's the FDA. In the Time World, that's the Temporal Pharmaceutical Authority. The process is parallel. Roll INT Regulatory Affairs.
+
+**中文老师:** , eng, market approval, ... tx, 市场批准, shì chǎng pī zhǔn, ... xt, , eng, regulatory, ... tx, 监管, jiān guǎn, ... xt, , eng, FDA, ... tx, 食品药品监督管理局, shí pǐn yào pǐn jiān dū guǎn lǐ jú, ... xt, , eng, application, ... tx, 申请, shēn qǐng, ... xt, , eng, review, ... tx, 审查, shěn chá, ... xt, , eng, approval, ... tx, 批准, pī zhǔn, ... xt, , eng, safety, ... tx, 安全, ān quán, ... xt, , eng, efficacy, ... tx, 疗效, liáo xiào, ... xt, , eng, manufacturing, ... tx, 生产, shēng chǎn, ... xt, , eng, quality control, ... tx, 质量控制, zhì liàng kòng zhì, ... xt,
+
+**IQabella:** [rolls] 19. Plus 3 is 22. [out of character] The FDA approval process has three phases of clinical trials, then an NDA (New Drug Application), then FDA review, then approval. But before clinical trials, you need an IND (Investigational New Drug) application. And after approval, you have Phase 4 post-marketing surveillance. [in character] The regulatory pipeline. Step 1: , eng, Preclinical research, ... tx, 临床前研究, lín chuáng qián yán jiū, ... xt, — in vitro (test tube) and in vivo (animal) studies. Toxicology, pharmacology, pharmacokinetics. Step 2: , eng, IND application, ... tx, 临床试验申请, lín chuáng shì yàn shēn qǐng, ... xt, — Investigational New Drug. You submit your preclinical data to the FDA. They have 30 days to review. If they don't put a clinical hold on you, you can start human trials. Step 3: , eng, Phase 1, ... tx, 一期, yī qī, ... xt, — 20-80 healthy volunteers. Safety and pharmacokinetics. Step 4: , eng, Phase 2, ... tx, 二期, èr qī, ... xt, — 100-300 patients. Efficacy and side effects. Step 5: , eng, Phase 3, ... tx, 三期, sān qī, ... xt, — 1,000-3,000 patients. Large-scale efficacy and safety. Step 6: , eng, NDA, ... tx, 新药申请, xīn yào shēn qǐng, ... xt, — New Drug Application. 100,000+ pages of data. The FDA has 10 months to review. Step 7: , eng, Approval, ... tx, 批准, pī zhǔn, ... xt, or Complete Response Letter (rejection). Step 8: , eng, Phase 4, ... tx, 四期, sì qī, ... xt, — Post-marketing surveillance. Monitor for rare side effects.
+
+**Mother Tmojizu:** 22. Now — the Time World parallel. Chronoment market approval. The Temporal Pharmaceutical Authority requires the same pipeline but with temporal safety data. Roll INT Temporal Regulatory Affairs.
+
+**Sol-Supreme:** [rolls] 18. Plus 4 is 22. [out of character] Chronoments manipulate local time. The safety data needs to include temporal side effects: what happens to the user's biological age? What happens to nearby objects? What's the temporal half-life — how long does the effect persist after the Chronoment is deactivated? [in character] The , eng, Chronoment approval, ... tx, 时计批准, shí jì pī zhǔn, ... xt, pipeline. Preclinical: test Chronoments on temporal cell cultures (Fuzzball fur samples). Measure temporal distortion, chronoment particle leakage, and temporal radiation. IND equivalent: , eng, Temporal Investigation Permit, ... tx, 时间调查许可, shí jiān diào chá xǔ kě, ... xt, Phase 1: test on willing Fuzzballs. Measure purr frequency shifts, temporal resonance changes, and τ-ATP levels. Phase 2: test on human volunteers. Measure biological age changes, temporal perception shifts, and Time Debt accumulation. Phase 3: large-scale trial. Measure long-term temporal stability. NDA equivalent: , eng, Temporal New Device Application, ... tx, 时间新设备申请, shí jiān xīn shè bèi shēn qǐng, ... xt, 100,000+ pages of temporal safety data. The TPA has 10 months to review. Approval or Complete Temporal Response Letter.
+
+**Mother Tmojizu:** 22. Now — manufacturing. You can design a drug in a lab, but can you manufacture it at scale? Roll INT Pharmaceutical Manufacturing.
+
+**CHARA:** [rolls] 17. Plus 3 is 20. [out of character] cGMP — current Good Manufacturing Practice. The FDA requires that every batch of drug product meets the same quality standards. You need validated processes, qualified equipment, trained personnel, and documented procedures. Every batch is tested for identity, strength, quality, and purity. [in character] , eng, cGMP, ... tx, 现行良好生产规范, xiàn xíng liáng hǎo shēng chǎn guī fàn, ... xt, — current Good Manufacturing Practice. Every batch must meet the same , eng, quality standards, ... tx, 质量标准, zhì liàng biāo zhǔn, ... xt, You need: , eng, validated processes, ... tx, 验证的工艺, yàn zhèng de gōng yì, ... xt, — prove your synthesis works the same way every time. , eng, Qualified equipment, ... tx, 合格的设备, hé gé de shè bèi, ... xt, — every reactor, filter, and dryer must be qualified (IQ/OQ/PQ). , eng, Trained personnel, ... tx, 培训的人员, péi xùn de rén yuán, ... xt, — every operator must be trained and documented. , eng, Batch records, ... tx, 批记录, pī jì lù, ... xt, — every step of every batch is documented. , eng, Quality control, ... tx, 质量控制, zhì liàng kòng zhì, ... xt, — every batch is tested for identity (is it the right molecule?), strength (is the concentration correct?), quality (are impurities below limits?), and purity (is it free of contaminants?).
+
+**Mother Tmojizu:** 20. Now — the economics. How much does it cost to bring a drug to market? Roll INT Pharmaceutical Economics.
+
+**IQabella:** [rolls] 16. Plus 3 is 19. [out of character] The Tufts Center study says $2.6 billion per approved drug. But that includes the cost of failures — for every drug that gets approved, 10 fail in development. The actual cost per successful drug is $300-500 million in out-of-pocket costs, plus $2+ billion in opportunity cost and failed compounds. [in character] The cost to bring a drug to market: , eng, $2.6 billion, ... tx, 二十六亿美元, èr shí liù yì měi yuán, ... xt, per approved drug (Tufts Center). But that includes the cost of failures. For every drug approved, 10 fail. The , eng, out-of-pocket cost, ... tx, 自付成本, zì fù chéng běn, ... xt, is $300-500 million. The rest is , eng, opportunity cost, ... tx, 机会成本, jī huì chéng běn, ... xt, and failed compounds. The timeline: 10-15 years from discovery to approval. The , eng, patent life, ... tx, 专利期, zhuān lì qī, ... xt, is 20 years from filing — but you spend 10 of those years in development. So you have 10 years of market exclusivity to recoup $2.6 billion. That's $260 million per year minimum.
+
+**Mother Tmojizu:** 19. Now — the Time World parallel. Chronoment manufacturing. Instead of chemical synthesis, you're growing temporal crystals and calibrating them. But the regulatory framework is identical. Roll INT Temporal Manufacturing.
+
+**Sol-Supreme:** [rolls] 17. Plus 4 is 21. [out of character] Temporal crystal growth is like semiconductor fabrication — clean room, precise temperature control, seeded crystallization. Each crystal must be calibrated to the same temporal frequency. Quality control means measuring temporal output, not chemical purity. [in character] , eng, Temporal crystal growth, ... tx, 时间晶体生长, shí jiān jīng tǐ shēng zhǎng, ... xt, is like , eng, semiconductor fabrication, ... tx, 半导体制造, bàn dǎo tǐ zhì zào, ... xt, Clean room. Precise temperature control. Seeded crystallization from a master crystal. Each crystal must be calibrated to the same temporal frequency — 432 Hz baseline. , eng, Quality control, ... tx, 质量控制, zhì liàng kòng zhì, ... xt, measures temporal output: frequency stability (±0.1 Hz), chrono resonance (minimum 5.0), and temporal half-life (how long the effect persists). The manufacturing cost is lower than chemical drugs — no toxic reagents, no complex purification. But the , eng, temporal safety testing, ... tx, 时间安全测试, shí jiān ān quán cè shì, ... xt, is more expensive — you need temporal containment chambers and chronoment particle detectors.
+
+**Mother Tmojizu:** 21. You now understand the full pipeline from drug design to market approval — in both the real world and the Time World. Chemistry, simulation, regulation, manufacturing, economics. That's the complete arc.
+
+---
+
+## SCENE 5: IMPERIAL DINING HALL — LUNCH & REVIEW
+
+**Mother Tmojizu:** Lunch. Imperial Dining Hall. While you eat, rapid-fire review. No rolls. Just knowledge.
+
+**中文老师:** , eng, lunch, ... tx, 午餐, wǔ cān, ... xt, , eng, rice, ... tx, 米饭, mǐ fàn, ... xt, , eng, fish, ... tx, 鱼, yú, ... xt, , eng, chicken, ... tx, 鸡肉, jī ròu, ... xt, , eng, tofu, ... tx, 豆腐, dòu fu, ... xt, , eng, soup, ... tx, 汤, tāng, ... xt, , eng, chopsticks, ... tx, 筷子, kuài zi, ... xt,
+
+**Mother Tmojizu:** Question 1: What is the Velocity Verlet integration formula?
+
+**Sol-Supreme:** x(t+Δt) = x(t) + v(t)Δt + ½a(t)Δt². Then calculate new forces. Then v(t+Δt) = v(t) + ½[a(t) + a(t+Δt)]Δt.
+
+**Mother Tmojizu:** Question 2: What is the Lennard-Jones 12-6 potential?
+
+**CHARA:** V = 4ε[(σ/r)¹² - (σ/r)⁶]. r¹² is repulsion (Pauli exclusion). r⁶ is attraction (London dispersion).
+
+**Mother Tmojizu:** Question 3: What is MM-PBSA?
+
+**IQabella:** Molecular Mechanics Poisson-Boltzmann Surface Area. ΔG_bind = ΔE_MM + ΔG_solvation - TΔS. Used to calculate binding free energy from MD simulations.
+
+**Mother Tmojizu:** Question 4: What is the most powerful tool against a frivolous lawsuit?
+
+**CHARA:** Motion to Dismiss under Rule 12(b)(6) — failure to state a claim. If the complaint doesn't allege plausible facts constituting a valid legal claim, the judge dismisses immediately. No discovery, no depositions, no fees.
+
+**Mother Tmojizu:** Question 5: What is pro se strategy?
+
+**Sol-Supreme:** Represent yourself for the Motion to Dismiss only. Costs nothing but time. If the judge grants it, case over. If denied, hire an attorney for the rest.
+
+**Mother Tmojizu:** Question 6: What is the FDA approval pipeline?
+
+**IQabella:** Preclinical → IND → Phase 1 (safety) → Phase 2 (efficacy) → Phase 3 (large-scale) → NDA → FDA review (10 months) → Approval → Phase 4 (post-marketing). Total: 10-15 years, $2.6 billion.
+
+**Mother Tmojizu:** Question 7: What is the TPMOS 12-step pipeline?
+
+**Sol-Supreme:** Input → Route → Relay → Tick → Trait/Op → Sovereignty → Mirror Sync → Stage → Sync → Composition → Render → Display. The entire loop in 16ms.
+
+**Mother Tmojizu:** Question 8: What is the Scale-Free Container Model?
+
+**CHARA:** A Piece can contain Pieces which contain Pieces. Galaxy → solar system → planet → atom → quark. Same file structure at every level: piece.pdl + state.txt.
+
+**Mother Tmojizu:** Question 9: What is the stat() guard pattern?
+
+**Sol-Supreme:** Don't open a file unless stat() tells you the mtime has changed. 0% CPU when nothing is happening. The foundation of TPMOS efficiency.
+
+**Mother Tmojizu:** Question 10: What is "If it's not in a file, it's a lie"?
+
+**IQabella:** The Mirror of Tomokazu. Never trust memory. If a process dies, the file remains. Reality persists through file-based state.
+
+**Mother Tmojizu:** 10 for 10. You're getting stronger. Not graduation yet — we have more to cover. But you're ready for whatever comes next.
+
+---
+
+## SCENE 6: FUZZPET SANCTUARY — EVENING WINDOWN
+
+**Mother Tmojizu:** Evening. Fuzzpet Sanctuary. The temporal heating lamps are on. Fuzzballs are purring. You've covered molecular dynamics simulation, fractal rendering, TPMOS architecture, legal self-defense, and drug market approval. Three sessions in. Not done yet. More to come.
+
+**中文老师:** , eng, evening, ... tx, 晚上, wǎn shang, ... xt, , eng, quiet, ... tx, 安静, ān jìng, ... xt, , eng, purr, ... tx, 呼噜, hū lū, ... xt, , eng, warm, ... tx, 温暖, wēn nuǎn, ... xt, , eng, continue, ... tx, 继续, jì xù, ... xt, , eng, more, ... tx, 更多, gèng duō, ... xt, , eng, next time, ... tx, 下次, xià cì, ... xt,
+
+**Horli Qwin:** [out of character] I can now explain molecular dynamics, defend myself in court, and understand the FDA pipeline. In three sessions. This is insane. [in character] , eng, molecular dynamics, ... tx, 分子动力学, fēn zǐ dòng lì xué, ... xt, , eng, lawsuit, ... tx, 诉讼, sù sòng, ... xt, , eng, FDA, ... tx, 药监局, yào jiān jú, ... xt, Three sessions. I'm a different person.
+
+**CHARA:** [out of character] I went from knowing basic chemistry to understanding MM-PBSA binding free energy calculations and filing Motions to Dismiss. [in character] , eng, binding free energy, ... tx, 结合自由能, jié hé zì yóu néng, ... xt, ΔG = -RT ln(Kd). , eng, Motion to Dismiss, ... tx, 驳回动议, bó huí dòng yì, ... xt, Rule 12(b)(6). I carry these forever.
+
+**Sol-Supreme:** [out of character] The TPMOS mapping to molecular dynamics is elegant. Every atom as a Piece, the 12-step pipeline as the simulation loop, the stat() guard for efficiency. I can build this. [in character] , eng, Piece, ... tx, 件, jiàn, ... xt, , eng, state, ... tx, 状态, zhuàng tài, ... xt, , eng, pipeline, ... tx, 管道, guǎn dào, ... xt, , eng, fractal, ... tx, 分形, fēn xíng, ... xt, The Scale-Free Container Model maps to molecular hierarchy perfectly. Quark → atom → molecule → protein → cell → organism. Same pattern at every level.
+
+**IQabella:** [out of character] I understand the full drug pipeline now — from target identification through Phase 4 post-marketing. And I know how to defend myself against a predatory lawsuit. [in character] , eng, drug pipeline, ... tx, 药物流程, yào wù liú chéng, ... xt, , eng, pro se, ... tx, 自辩, zì biàn, ... xt, , eng, mediation, ... tx, 调解, tiáo jiě, ... xt, I'm not just a Fuzzball veterinarian anymore. I'm a Fuzzball pharmacist with legal training.
+
+**Mother Tmojizu:** [out of character] That's Session 3. No graduation — we're not done. More sessions coming. Next: whatever you need. More chemistry? More law? More Chinese? More Stardustball? More TPMOS simulation architecture? The Time Academy is always open. [in character] Rest well, ducklings. You've earned it. The dojo will be here when you return. In meta-time, it's always here.
+
+**中文老师:** , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, good night, ... tx, 晚安, wǎn ān, ... xt, , eng, continue, ... tx, 继续, jì xù, ... xt, , eng, next session, ... tx, 下节课, xià jié kè, ... xt, , eng, keep going, ... tx, 加油, jiā yóu, ... xt,
+
+**Mother Tmojizu:** , eng, 加油, ... tx, 加油, jiā yóu, ... xt, ducklings. Add oil. Keep going. We're not done yet.
+
+---
+
+**[END OF FU D&D SESSION 3 — SIMULATIONS, LAWSUITS & THE MARKET]**
+**Session Score: All 10/10 on review quiz**
+**Chemistry Covered: Velocity Verlet integration, Lennard-Jones 12-6 potential, Coulomb's law, MM-PBSA binding free energy, RMSD/RMSF, electrostatic steering, desolvation penalty, entropic penalty, pre-organization, rotatable bond entropy (0.7 kcal/mol per bond), Kd to ΔG conversion (ΔG = -RT ln Kd), cGMP manufacturing, batch records, IQ/OQ/PQ qualification, pharmaceutical economics ($2.6B/drug, 10-15 years)**
+**Simulation/TPMOS Covered: Piece/pdl/state.txt mapping to atoms, 12-step pipeline as MD loop, stat() guard for 0% CPU idle, Scale-Free Container Model as fractal, file-based IPC for force calculations, cell list optimization O(N) vs O(N²), Velocity Verlet as Op, renderer as Stage**
+**Law Covered: Motion to Dismiss Rule 12(b)(6), Twombly/Iqbal plausibility standard, Summary Judgment, pro se strategy, ex parte communication limits, court clerk procedures, mediation/ADR, anti-SLAPP statutes, attorney's fee shifting, Time World Temporal Grievance Claims parallel**
+**Regulatory Covered: FDA pipeline (preclinical→IND→Phase 1-3→NDA→review→Phase 4), $2.6B cost, 10-15 year timeline, patent life economics, cGMP manufacturing, Temporal Pharmaceutical Authority parallel, Chronoment crystal growth as semiconductor fabrication**
+**Chinese Vocabulary: ~70 words — simulation, physics, law, regulatory, manufacturing**
+**Locations Visited: Time Dojo Classroom, Pharma-Chem Lab, Imperial Dining Hall, Fuzzpet Sanctuary**
+**Status: NOT GRADUATED — more sessions to come**
+**ϕ**

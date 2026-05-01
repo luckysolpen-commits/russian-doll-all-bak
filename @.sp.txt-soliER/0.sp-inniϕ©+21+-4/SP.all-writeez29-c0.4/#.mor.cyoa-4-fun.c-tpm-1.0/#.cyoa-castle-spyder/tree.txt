@@ -1,0 +1,44 @@
+# CYOA Book Structure: The Weaver of Gilded Secrets
+
+## Project Goal:
+Create a ~70-page interactive choose-your-own-adventure book based on the "Weaver of Gilded Secrets" concept, using the spider avatar. The book will feature branching narratives, sensory details from a spider's perspective, and will culminate in one of several possible endings or paths (Silent Witness, Saboteur, Hitchhiker, Mutation, Cyborg).
+
+## Format Inspiration:
+- Narrative text describing the current situation.
+- Clear choices, presented as numbered options, leading to specific page numbers.
+- Each page will include a "Spider-Sense HUD" (Hydration, Silk Reserves, Intel).
+
+## Page Outline (Conceptual - ~70 pages total):
+
+**Page 1: The Awakening**
+  Description: You are an ancient, intelligent cellar spider living in the molding of Castle Aethelgard. You awaken to the sounds of the castle gates opening.
+  Choices:
+    - Stay in the Great Hall chandelier. -> Page 2
+    - Retreat to the vents. -> Page 3
+
+**Page 2: Great Hall Chandelier**
+  Description: Perched in the chandelier, you observe the arrival of guests. Heat from lights is a minor risk.
+  Choices:
+    - Focus on the Tech Titan's arrival. -> Page 4
+    - Focus on the Pop Icon's arrival. -> Page 5
+    - Focus on the Spies' arrival. -> Page 6
+
+**Page 3: Vents and Whispers**
+  Description: In the dark, cool vents, you smell copper and overhear whispers about "The Red Room."
+  Choices:
+    - Follow the whispers towards the Red Room. -> Page 7
+    - Explore deeper into the vent system. -> Page 8
+
+---
+**(Continue mapping out ~65 more pages, creating branches for each choice, introducing characters and plot points from castle-webber.txt, and developing the wildcard paths. Ensure a clear progression towards potential endings.)**
+
+## Potential Branching Paths & Endings:
+- **Core Path:** Interactions within the castle, observing secrets.
+- **Wildcard - Mutation:** Encountering a glowing substance, gaining enhanced abilities.
+- **Wildcard - Cyborg:** Discovered by tinkerer, integrated into a mechanical spider.
+- **Endings:** The Silent Witness, The Saboteur, The Hitchhiker, outcomes from Mutation/Cyborg paths.
+
+## Implementation Notes:
+- Each page will be a separate text file or section, clearly labeled with its page number.
+- Cross-referencing between pages will use the "Page #: [Page Title]" format for easy navigation.
+- The structure will be iteratively developed to ensure logical flow and reach the target page count.

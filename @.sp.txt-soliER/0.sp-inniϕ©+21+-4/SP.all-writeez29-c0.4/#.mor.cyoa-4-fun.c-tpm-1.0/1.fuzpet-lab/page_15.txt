@@ -1,0 +1,6 @@
+You move towards the twisted metal wreckage scattered on the beach. Among the mangled fuselage, you find a few surprisingly intact items: a half-empty water bottle, a waterproof bag containing a tattered journal, and a rusty but functional flare gun with one flare. These are valuable finds that could significantly aid your survival.
+
+What do you do?
+
+*   If you decide to read the waterlogged journal, turn to page 27.
+*   If you decide to secure the flare gun and leave the journal for later, turn to page 28.

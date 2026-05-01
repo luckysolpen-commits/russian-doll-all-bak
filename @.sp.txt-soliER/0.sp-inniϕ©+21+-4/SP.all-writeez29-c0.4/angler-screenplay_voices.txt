@@ -1,0 +1,26 @@
+# Voice mappings for: ./100.%.NGL.MPYRE]bk1/angler-screenplay
+# Generated on: 2026-04-19 18:27:39
+# Copy and paste these lines directly into your EXISTING_VOICE_MAP dictionary
+
+    "JAX": "en-US-AndrewNeural",
+    "LUNA": "en-US-AndrewNeural",
+    "JURETH": "en-US-AndrewNeural",
+    "KAEL": "en-US-AndrewNeural",
+    "JACK": "en-US-AndrewNeural",
+    "HANA": "en-US-AndrewNeural",
+    "VORITH": "en-US-AndrewNeural",
+    "THANE": "en-US-AndrewNeural",
+    "KATO": "en-US-AndrewNeural",
+    "NAETH": "en-US-AndrewNeural",
+    "MIRAH": "en-US-AndrewNeural",
+    "GADRETH": "en-US-AndrewNeural",
+    "ZORATH": "en-US-AndrewNeural",
+    "LIRITH": "en-US-AndrewNeural",
+    "TAMIN": "en-US-AndrewNeural",
+    "VORITH PRIME": "en-US-AndrewNeural",
+    "APEX": "en-US-AndrewNeural",
+    "SHOW": "en-US-AndrewNeural",
+    "ESHAR": "en-US-AndrewNeural",
+    "KAI": "en-US-AndrewNeural",
+    "LEO": "en-US-AndrewNeural",
+    "NEW VORITH": "en-US-AndrewNeural",

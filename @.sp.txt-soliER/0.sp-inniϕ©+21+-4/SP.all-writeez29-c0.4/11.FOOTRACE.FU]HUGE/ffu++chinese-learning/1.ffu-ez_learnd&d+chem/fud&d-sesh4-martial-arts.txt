@@ -1,0 +1,146 @@
+# FU D&D — SESSION 4: "THE 2v2 MARTIAL ARTS TOURNAMENT"
+## Footrace.FU Chinese Learning — Episode 4
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** Event three: 2v2 Martial Arts Tournament. You pick your teams. The demon gangsters are fielding their best fighters — a pair of twin horned warriors with tattoos that move on their own. The arena is a floating platform above a temporal vortex. Roll for initiative.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. I want Chara on my team. She's the strongest fighter.
+
+**CHARA:** [rolls] 19. Plus 3 is 22. I've already evaluated the optimal team composition. Horli and I. We're the offensive pair.
+
+**IQabella:** [rolls] 14. Plus 0 is 14. Sol and I will be the defensive pair. I'll heal. He'll... calculate.
+
+**Sol-Supreme:** [rolls] 12. Plus 0 is 12. Acceptable. My temporal shielding combined with IQabella's healing creates a sustainable combat loop.
+
+**Mother Tmojizu:** Teams set: Horli and Chara versus IQabella and Sol-Supreme. 中文老师, teach us the fighting vocabulary.
+
+**中文老师:** , eng, fight, ... tx, 打, dǎ, ... xt, , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, fist, ... tx, 拳, quán, ... xt, , eng, foot, ... tx, 脚, jiǎo, ... xt, , eng, block, ... tx, 挡, dǎng, ... xt, , eng, dodge, ... tx, 躲, duǒ, ... xt, , eng, pain, ... tx, 痛, tòng, ... xt,
+
+**Mother Tmojizu:** Round one. Horli and Chara attack first. 中文老师, attack words.
+
+**中文老师:** , eng, attack, ... tx, 攻击, gōng jī, ... xt, , eng, charge, ... tx, 冲, chōng, ... xt, , eng, jump, ... tx, 跳, tiào, ... xt, , eng, spin, ... tx, 转, zhuǎn, ... xt, , eng, force, ... tx, 力, lì, ... xt,
+
+**Horli Qwin:** I'm going , eng, charge, ... tx, 冲, chōng, ... xt, , eng, attack, ... tx, 攻击, gōng jī, ... xt, I , eng, jump, ... tx, 跳, tiào, ... xt, into the air and , eng, spin, ... tx, 转, zhuǎn, ... xt, with my mallet. , eng, force, ... tx, 力, lì, ... xt,
+
+**Mother Tmojizu:** Roll DEX Attack.
+
+**Horli Qwin:** [rolls] 18. Plus 3 is 21. I , eng, fight, ... tx, 打, dǎ, ... xt, with everything I've got. , eng, martial arts, ... tx, 功夫, gōng fu, ... xt,
+
+**Mother Tmojizu:** 21. Horli comes down swinging. IQabella and Sol, defend. Roll DEX Defense.
+
+**IQabella:** , eng, block, ... tx, 挡, dǎng, ... xt, [rolls] 16. Plus 0 is 16. I raise a temporal shield. , eng, block, ... tx, 挡, dǎng, ... xt,
+
+**Sol-Supreme:** , eng, dodge, ... tx, 躲, duǒ, ... xt, [rolls] 13. Plus 1 is 14. I , eng, dodge, ... tx, 躲, duǒ, ... xt, to the left.
+
+**Mother Tmojizu:** 16 and 14. IQabella's shield absorbs most of the impact. Sol dodges cleanly. But Horli's , eng, force, ... tx, 力, lì, ... xt, cracks the shield. IQabella takes , eng, pain, ... tx, 痛, tòng, ... xt, 中文老师.
+
+**中文老师:** , eng, heal, ... tx, 治疗, zhì liáo, ... xt, , eng, protect, ... tx, 保护, bǎo hù, ... xt, , eng, shield, ... tx, 盾, dùn, ... xt,
+
+**IQabella:** , eng, pain, ... tx, 痛, tòng, ... xt, But I'm okay. , eng, heal, ... tx, 治疗, zhì liáo, ... xt, I , eng, heal, ... tx, 治疗, zhì liáo, ... xt, myself. , eng, protect, ... tx, 保护, bǎo hù, ... xt, Sol. , eng, shield, ... tx, 盾, dùn, ... xt, up.
+
+**Mother Tmojizu:** Roll WIS Healing.
+
+**IQabella:** [rolls] 17. Plus 2 is 19. The , eng, pain, ... tx, 痛, tòng, ... xt, fades. My , eng, shield, ... tx, 盾, dùn, ... xt, is restored. , eng, protect, ... tx, 保护, bǎo hù, ... xt,
+
+**Mother Tmojizu:** 19. IQabella is fully healed and shielded. Chara, your turn. You're facing both of them alone. 中文老师.
+
+**中文老师:** , eng, strategy, ... tx, 策略, cè lüè, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, trick, ... tx, 骗, piàn, ... xt, , eng, win, ... tx, 赢, yíng, ... xt,
+
+**CHARA:** , eng, strategy, ... tx, 策略, cè lüè, ... xt, I'm going to , eng, trick, ... tx, 骗, piàn, ... xt, them. I'll use , eng, slow, ... tx, 慢, màn, ... xt, Time Fu to appear vulnerable. Then , eng, fast, ... tx, 快, kuài, ... xt, strike. , eng, win, ... tx, 赢, yíng, ... xt,
+
+**Mother Tmojizu:** Roll INT Deception.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. I slow my temporal signature. I look weak. IQabella lowers her , eng, shield, ... tx, 盾, dùn, ... xt, Sol steps forward. Then I , eng, fast, ... tx, 快, kuài, ... xt, , eng, attack, ... tx, 攻击, gōng jī, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. Chara's deception is perfect. IQabella drops her guard. Sol walks right into the trap. Chara strikes. Roll DEX Attack.
+
+**CHARA:** [rolls] 19. Plus 4 is 23. , eng, fight, ... tx, 打, dǎ, ... xt, , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, fist, ... tx, 拳, quán, ... xt, , eng, foot, ... tx, 脚, jiǎo, ... xt, I hit them both.
+
+**Mother Tmojizu:** 23. Chara lands a devastating combo. , eng, fist, ... tx, 拳, quán, ... xt, to Sol's temporal core. , eng, foot, ... tx, 脚, jiǎo, ... xt, sweep on IQabella. They're both down. 中文老师, round result.
+
+**中文老师:** , eng, win, ... tx, 赢, yíng, ... xt, , eng, lose, ... tx, 输, shū, ... xt, , eng, round, ... tx, 回合, huí hé, ... xt,
+
+**Mother Tmojizu:** Round one: Horli and Chara , eng, win, ... tx, 赢, yíng, ... xt, IQabella and Sol , eng, lose, ... tx, 输, shū, ... xt, , eng, round, ... tx, 回合, huí hé, ... xt, over. But the tournament is best of three. Round two. 中文老师, new words.
+
+**中文老师:** , eng, tired, ... tx, 累, lèi, ... xt, , eng, rest, ... tx, 休息, xiū xi, ... xt, , eng, continue, ... tx, 继续, jì xù, ... xt, , eng, strong, ... tx, 强, qiáng, ... xt, , eng, weak, ... tx, 弱, ruò, ... xt,
+
+**IQabella:** I'm , eng, tired, ... tx, 累, lèi, ... xt, But I need to , eng, continue, ... tx, 继续, jì xù, ... xt, , eng, rest, ... tx, 休息, xiū xi, ... xt, for a moment. , eng, heal, ... tx, 治疗, zhì liáo, ... xt,
+
+**Sol-Supreme:** My temporal shielding took significant damage. I'm , eng, weak, ... tx, 弱, ruò, ... xt, But I can recalibrate. , eng, continue, ... tx, 继续, jì xù, ... xt,
+
+**Mother Tmojizu:** Roll CON Endurance for both.
+
+**IQabella:** [rolls] 15. Plus 2 is 17. I , eng, rest, ... tx, 休息, xiū xi, ... xt, , eng, heal, ... tx, 治疗, zhì liáo, ... xt, I'm ready. , eng, continue, ... tx, 继续, jì xù, ... xt,
+
+**Sol-Supreme:** [rolls] 14. Plus 1 is 15. Recalibration complete. I'm , eng, strong, ... tx, 强, qiáng, ... xt, again. , eng, continue, ... tx, 继续, jì xù, ... xt,
+
+**Mother Tmojizu:** 17 and 15. Both recover. Round two begins. IQabella and Sol attack first. 中文老师.
+
+**中文老师:** , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, coordinate, ... tx, 配合, pèi hé, ... xt, , eng, combined attack, ... tx, 合击, hé jī, ... xt,
+
+**IQabella:** , eng, together, ... tx, 一起, yī qǐ, ... xt, Sol. , eng, coordinate, ... tx, 配合, pèi hé, ... xt, , eng, combined attack, ... tx, 合击, hé jī, ... xt, I create a temporal opening. Sol fires through it.
+
+**Sol-Supreme:** , eng, combined attack, ... tx, 合击, hé jī, ... xt, My temporal beam goes through IQabella's portal. , eng, force, ... tx, 力, lì, ... xt, multiplied by 1.7.
+
+**Mother Tmojizu:** Roll INT Combined Attack.
+
+**IQabella:** [rolls] 18. Plus 2 is 20. , eng, together, ... tx, 一起, yī qǐ, ... xt,
+
+**Sol-Supreme:** [rolls] 17. Plus 1 is 18. , eng, coordinate, ... tx, 配合, pèi hé, ... xt,
+
+**Mother Tmojizu:** 20 and 18. The , eng, combined attack, ... tx, 合击, hé jī, ... xt, is devastating. Horli and Chara, defend! Roll DEX Defense.
+
+**Horli Qwin:** , eng, dodge, ... tx, 躲, duǒ, ... xt, [rolls] 16. Plus 3 is 19. I , eng, dodge, ... tx, 躲, duǒ, ... xt, , eng, block, ... tx, 挡, dǎng, ... xt,
+
+**CHARA:** , eng, block, ... tx, 挡, dǎng, ... xt, [rolls] 15. Plus 4 is 19. I , eng, block, ... tx, 挡, dǎng, ... xt, with Time Fu. , eng, slow, ... tx, 慢, màn, ... xt, the attack.
+
+**Mother Tmojizu:** 19 and 19. Both defend perfectly. The , eng, combined attack, ... tx, 合击, hé jī, ... xt, is neutralized. But the impact shakes the arena. The demon gangsters are watching from the stands, eating temporal popcorn. 中文老师.
+
+**中文老师:** , eng, watch, ... tx, 看, kàn, ... xt, , eng, laugh, ... tx, 笑, xiào, ... xt, , eng, shout, ... tx, 叫, jiào, ... xt,
+
+**Horli Qwin:** The horned gangsters are , eng, watch, ... tx, 看, kàn, ... xt, us. They , eng, laugh, ... tx, 笑, xiào, ... xt, One of them , eng, shout, ... tx, 叫, jiào, ... xt, "Fight harder!"
+
+**Mother Tmojizu:** Round two is a draw. Both teams defended perfectly. Final round. Winner takes the tournament. 中文老师, final words.
+
+**中文老师:** , eng, final, ... tx, 最后, zuì hòu, ... xt, , eng, decide, ... tx, 决定, jué dìng, ... xt, , eng, full power, ... tx, 全力, quán lì, ... xt, , eng, battle, ... tx, 战斗, zhàn dòu, ... xt,
+
+**Mother Tmojizu:** Everyone rolls DEX Attack simultaneously. Highest combined team score wins.
+
+**Horli Qwin:** [rolls] 19. Plus 3 is 22. , eng, full power, ... tx, 全力, quán lì, ... xt, , eng, fight, ... tx, 打, dǎ, ... xt, , eng, martial arts, ... tx, 功夫, gōng fu, ... xt,
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. , eng, full power, ... tx, 全力, quán lì, ... xt, , eng, attack, ... tx, 攻击, gōng jī, ... xt, , eng, win, ... tx, 赢, yíng, ... xt,
+
+**IQabella:** [rolls] 16. Plus 2 is 18. , eng, full power, ... tx, 全力, quán lì, ... xt, , eng, protect, ... tx, 保护, bǎo hù, ... xt, Sol! , eng, together, ... tx, 一起, yī qǐ, ... xt,
+
+**Sol-Supreme:** [rolls] 19. Plus 1 is 20. , eng, full power, ... tx, 全力, quán lì, ... xt, , eng, combined attack, ... tx, 合击, hé jī, ... xt,
+
+**Mother Tmojizu:** Horli and Chara: 22 + 24 = 46. IQabella and Sol: 18 + 20 = 38. Horli and Chara win the tournament! 中文老师.
+
+**中文老师:** , eng, champion, ... tx, 冠军, guàn jūn, ... xt, , eng, victory, ... tx, 胜利, shèng lì, ... xt, , eng, finished, ... tx, 结束, jié shù, ... xt,
+
+**Mother Tmojizu:** Horli and Chara are the , eng, champion, ... tx, 冠军, guàn jūn, ... xt, of the 2v2 Martial Arts Tournament! , eng, victory, ... tx, 胜利, shèng lì, ... xt, The demon gangsters applaud. Even the three-horned leader is impressed. , eng, battle, ... tx, 战斗, zhàn dòu, ... xt, , eng, finished, ... tx, 结束, jié shù, ... xt,
+
+**Horli Qwin:** WE WON! , eng, champion, ... tx, 冠军, guàn jūn, ... xt, , eng, victory, ... tx, 胜利, shèng lì, ... xt, Chara, we're unstoppable. , eng, fight, ... tx, 打, dǎ, ... xt, , eng, martial arts, ... tx, 功夫, gōng fu, ... xt,
+
+**CHARA:** , eng, win, ... tx, 赢, yíng, ... xt, The data confirmed it. , eng, strategy, ... tx, 策略, cè lüè, ... xt, plus , eng, force, ... tx, 力, lì, ... xt, equals , eng, victory, ... tx, 胜利, shèng lì, ... xt,
+
+**IQabella:** Good fight. , eng, together, ... tx, 一起, yī qǐ, ... xt, was fun. , eng, protect, ... tx, 保护, bǎo hù, ... xt, Sol was my priority. , eng, heart, ... tx, 心, xīn, ... xt,
+
+**Sol-Supreme:** The , eng, combined attack, ... tx, 合击, hé jī, ... xt, was effective. But the , eng, strategy, ... tx, 策略, cè lüè, ... xt, of Horli and Chara was superior. , eng, learn, ... tx, 学习, xué xí, ... xt,
+
+**Mother Tmojizu:** Event three complete. Next event: The Grand Banquet. Never-ending food. 中文老师, food words.
+
+**中文老师:** , eng, eat, ... tx, 吃, chī, ... xt, , eng, drink, ... tx, 喝, hē, ... xt, , eng, food, ... tx, 食物, shí wù, ... xt, , eng, delicious, ... tx, 好吃, hǎo chī, ... xt, , eng, full, ... tx, 饱, bǎo, ... xt,
+
+**Mother Tmojizu:** , eng, eat, ... tx, 吃, chī, ... xt, , eng, drink, ... tx, 喝, hē, ... xt, , eng, food, ... tx, 食物, shí wù, ... xt, Get ready, ducklings. The banquet awaits.
+
+---
+
+**[END OF FU D&D SESSION 4 — 2v2 MARTIAL ARTS]**
+**Winners: Horli & Chara (46 vs 38, Chara NAT 20 in round 2)**
+**Vocabulary: , eng, fight, ... tx, 打, dǎ, ... xt, , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, fist, ... tx, 拳, quán, ... xt, , eng, foot, ... tx, 脚, jiǎo, ... xt, , eng, block, ... tx, 挡, dǎng, ... xt, , eng, dodge, ... tx, 躲, duǒ, ... xt, , eng, pain, ... tx, 痛, tòng, ... xt, , eng, attack, ... tx, 攻击, gōng jī, ... xt, , eng, charge, ... tx, 冲, chōng, ... xt, , eng, jump, ... tx, 跳, tiào, ... xt, , eng, spin, ... tx, 转, zhuǎn, ... xt, , eng, force, ... tx, 力, lì, ... xt, , eng, heal, ... tx, 治疗, zhì liáo, ... xt, , eng, protect, ... tx, 保护, bǎo hù, ... xt, , eng, shield, ... tx, 盾, dùn, ... xt, , eng, strategy, ... tx, 策略, cè lüè, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, trick, ... tx, 骗, piàn, ... xt, , eng, win, ... tx, 赢, yíng, ... xt, , eng, lose, ... tx, 输, shū, ... xt, , eng, round, ... tx, 回合, huí hé, ... xt, , eng, tired, ... tx, 累, lèi, ... xt, , eng, rest, ... tx, 休息, xiū xi, ... xt, , eng, continue, ... tx, 继续, jì xù, ... xt, , eng, strong, ... tx, 强, qiáng, ... xt, , eng, weak, ... tx, 弱, ruò, ... xt, , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, coordinate, ... tx, 配合, pèi hé, ... xt, , eng, combined attack, ... tx, 合击, hé jī, ... xt, , eng, watch, ... tx, 看, kàn, ... xt, , eng, laugh, ... tx, 笑, xiào, ... xt, , eng, shout, ... tx, 叫, jiào, ... xt, , eng, final, ... tx, 最后, zuì hòu, ... xt, , eng, decide, ... tx, 决定, jué dìng, ... xt, , eng, full power, ... tx, 全力, quán lì, ... xt, , eng, battle, ... tx, 战斗, zhàn dòu, ... xt, , eng, champion, ... tx, 冠军, guàn jūn, ... xt, , eng, victory, ... tx, 胜利, shèng lì, ... xt, , eng, finished, ... tx, 结束, jié shù, ... xt, , eng, learn, ... tx, 学习, xué xí, ... xt, , eng, heart, ... tx, 心, xīn, ... xt, , eng, eat, ... tx, 吃, chī, ... xt, , eng, drink, ... tx, 喝, hē, ... xt, , eng, food, ... tx, 食物, shí wù, ... xt, , eng, delicious, ... tx, 好吃, hǎo chī, ... xt, , eng, full, ... tx, 饱, bǎo, ... xt,**
+**Next Event: The Grand Banquet — never-ending buffet**
+**ϕ**

@@ -1,0 +1,451 @@
+# FU D&D — SESSION 1: "WELCOME TO THE TIME ACADEMY"
+## Footrace.FU Chinese Learning — Episode 1
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** [out of character] Session 1. Welcome to the Time Academy. Imperial Chinese boarding school meets quantum physics lab. I'm your headmistress, your teacher, and your den mother. You're my ducklings. Let's begin. [in character] You stand before the great jade archway of , eng, the Time Academy, ... tx, 时间学院, shí jiān xué yuàn, ... xt, Cherry blossoms fall upward. The temporal wards hum at 432 Hz. The air smells of ozone and green tea. Four trunks sit at your feet. Four invitations brought you here. And I — , eng, Mother Tmojizu, ... tx, 母亲, mǔ qīn, ... xt, — have been waiting for you. Welcome, ducklings.
+
+**中文老师:** , eng, welcome, ... tx, 欢迎, huān yíng, ... xt, , eng, Time Academy, ... tx, 时间学院, shí jiān xué yuàn, ... xt, , eng, teacher, ... tx, 老师, lǎo shī, ... xt, , eng, student, ... tx, 学生, xué shēng, ... xt, , eng, gate, ... tx, 大门, dà mén, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt, , eng, jade, ... tx, 玉, yù, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt, , eng, beautiful, ... tx, 美丽, měi lì, ... xt, , eng, amazing, ... tx, 神奇, shén qí, ... xt,
+
+**Horli Qwin:** [out of character] Cherry blossoms falling upward? That's the coolest thing I've ever seen. [in character] , eng, welcome, ... tx, 欢迎, huān yíng, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt, falling UP. I love this place already. , eng, beautiful, ... tx, 美丽, měi lì, ... xt,
+
+**Mother Tmojizu:** Roll WIS First Impression, Horli. You're taking in the archway, the cherry blossoms, the humming wards, the smell of ozone and tea.
+
+**Horli Qwin:** [rolls] 19. Plus 3 is 22. [out of character] I'm soaking it all in. The vibes are immaculate. [in character] , eng, beautiful, ... tx, 美丽, měi lì, ... xt, , eng, amazing, ... tx, 神奇, shén qí, ... xt, The , eng, gate, ... tx, 大门, dà mén, ... xt, is made of , eng, jade, ... tx, 玉, yù, ... xt, I can feel the , eng, energy, ... tx, 能量, néng liàng, ... xt, humming through my boots.
+
+**Mother Tmojizu:** 22. You feel the temporal energy like music — a low bass note at 432 Hz, with cherry blossom harmonics layered on top. CHARA, your trunk is vibrating. Roll INT Investigation.
+
+**CHARA:** [rolls] 18. Plus 3 is 21. [out of character] My trunk is vibrating at a different frequency than the wards. That means it's keyed to something specific. [in character] , eng, trunk, ... tx, 箱子, xiāng zi, ... xt, vibrating at 440 Hz. The wards are at 432. Eight hertz difference. That's intentional. This trunk is , eng, special, ... tx, 特别, tè bié, ... xt, Is it , eng, safe, ... tx, 安全, ān quán, ... xt,
+
+**Mother Tmojizu:** 21. You detect the frequency difference. The trunk is safe — it's keyed to your temporal signature. It's your student ID, your dorm key, and your emergency beacon. Sol-Supreme, you're analyzing the archway's construction. Roll INT Arcana.
+
+**Sol-Supreme:** [rolls] 17. Plus 4 is 21. [out of character] The archway is piezoelectric jade. NaAlSi2O6 — jadeite. It converts mechanical stress from the cherry blossoms landing on it into electrical signals that power the temporal wards. [in character] , eng, jade, ... tx, 玉, yù, ... xt, is NaAlSi2O6. Piezoelectric. The , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt, petals create mechanical stress. The archway converts it to , eng, electricity, ... tx, 电, diàn, ... xt, which powers the , eng, temporal ward, ... tx, 时间结界, shí jiān jié jiè, ... xt, Elegant engineering.
+
+**Mother Tmojizu:** 21. Perfect analysis. The Time Academy runs on cherry blossom energy. IQabella, you're the last to arrive. Your trunk has a tea stain on it. Roll WIS Medicine.
+
+**IQabella:** [rolls] 20. Plus 3 is 23. NATURAL 20. [out of character] The tea stain is green tea. Matcha. Someone made tea in this trunk. Recently. [in character] , eng, tea, ... tx, 茶, chá, ... xt, stain. Green tea. Matcha. Someone brewed tea in this trunk within the last hour. The temperature is still warm. , eng, 175 degrees, ... tx, 一百七十五度, yī bǎi qī shí wǔ dù, ... xt, Perfect for green tea. Whoever packed this trunk knows their tea.
+
+**Mother Tmojizu:** NATURAL 20. IQabella, the trunk was packed by the school's tea master. That's you, now. You're the designated tea maker for the dormitory. The trunk came pre-stocked with a tea set. IQabella beams.
+
+**IQabella:** [out of character] I have a tea set in my trunk. This is the best school ever. [in character] , eng, tea set, ... tx, 茶具, chá jù, ... xt, , eng, green tea, ... tx, 绿茶, lǜ chá, ... xt, , eng, perfect, ... tx, 完美, wán měi, ... xt, I'll make tea for everyone. Right away.
+
+**Mother Tmojizu:** [out of character] That's the introduction. Now let's get you inside. [in character] The archway opens. Beyond it: a cobblestone path lined with cherry blossom trees, leading to a sprawling campus of pagodas, domes, and floating structures. I stand at the threshold, arms crossed, smiling. "Come in, ducklings. Take off your shoes. Leave your trunks — they'll find your dorm rooms on their own."
+
+**中文老师:** , eng, come in, ... tx, 进来, jìn lái, ... xt, , eng, take off shoes, ... tx, 脱鞋, tuō xié, ... xt, , eng, follow me, ... tx, 跟我来, gēn wǒ lái, ... xt, , eng, path, ... tx, 路, lù, ... xt, , eng, tree, ... tx, 树, shù, ... xt, , eng, building, ... tx, 建筑, jiàn zhù, ... xt, , eng, upstairs, ... tx, 楼上, lóu shàng, ... xt, , eng, downstairs, ... tx, 楼下, lóu xià, ... xt,
+
+**Horli Qwin:** , eng, come in, ... tx, 进来, jìn lái, ... xt, , eng, follow you, ... tx, 跟你来, gēn nǐ lái, ... xt, Do my boots count as shoes? Because these are custom bedazzled combat boots and I'm not taking them off for anyone.
+
+**Mother Tmojizu:** The boots stay on. But if you scuff my temporal floors, you're polishing them with your tongue. Roll DEX Acrobatics to navigate the cobblestone path without tripping on the cherry blossom roots.
+
+**Horli Qwin:** [rolls] 16. Plus 3 is 19. I glide. Like a cat. A very stylish cat.
+
+**Mother Tmojizu:** 19. You glide. CHARA?
+
+**CHARA:** [rolls] 14. Plus 3 is 17. I'm watching the roots. And the wards. And the structural integrity of those floating domes. But I make it across.
+
+**Mother Tmojizu:** 17. Solid. Sol-Supreme?
+
+**Sol-Supreme:** [rolls] 12. Plus 0 is 12. I'm analyzing the floating domes' anti-gravity field. I trip on a root. But I catch myself.
+
+**Mother Tmojizu:** 12. You catch yourself, but your dignity doesn't. IQabella?
+
+**IQabella:** [rolls] 18. Plus 0 is 18. I'm helping Sol-Supreme up. , eng, careful, ... tx, 小心, xiǎo xīn, ... xt, The roots are tricky.
+
+**Mother Tmojizu:** 18. You help Sol up. The four of you reach the front steps of the main building. I turn to face you. "Before we go further — let me tell you where you are."
+
+---
+
+## SCENE 2: HEADMISTRESS'S OFFICE — WELCOME TEA
+
+**Mother Tmojizu:** My office. Top floor. The stairs rearrange themselves as you climb — temporal architecture, don't think about it too hard or you'll get a headache. The office is warm. Floating scrolls orbit a temporal globe showing the Land of Time. A tea service sits on a low table. IQabella's eyes lock onto it immediately.
+
+**IQabella:** [rolls WIS Medicine] 19. Plus 3 is 22. The tea is already brewed. Oolong. , eng, 185 degrees, ... tx, 一百八十五度, yī bǎi bā shí wǔ dù, ... xt, Steeped for exactly three minutes. Someone here knows their tea almost as well as I do.
+
+**Mother Tmojizu:** 22. Almost. I brewed it. Sit. All of you. IQabella pours.
+
+**IQabella:** , eng, tea, ... tx, 茶, chá, ... xt, for everyone. , eng, please, ... tx, 请, qǐng, ... xt, , eng, thank you, ... tx, 谢谢, xiè xie, ... xt,
+
+**Mother Tmojizu:** Before we discuss the curriculum — let's talk about the tea you're drinking. Roll WIS Medicine to analyze it.
+
+**IQabella:** [rolls] 18. Plus 3 is 21. [out of character] Oolong tea. Partially oxidized. Contains L-theanine C5H10N2O3 — an amino acid that promotes relaxation without drowsiness. Also catechins — polyphenol antioxidants. Epigallocatechin gallate, C22H18O11. And caffeine, C8H10N4O2. [in character] , eng, oolong tea, ... tx, 乌龙茶, wū lóng chá, ... xt, Contains , eng, L-theanine, ... tx, 茶氨酸, chá ān suān, ... xt, C5H10N2O3. Promotes , eng, relaxation, ... tx, 放松, fàng sōng, ... xt, Also , eng, catechin, ... tx, 儿茶素, ér chá sù, ... xt, C22H18O11. , eng, antioxidant, ... tx, 抗氧化, kàng yǎng huà, ... xt, And , eng, caffeine, ... tx, 咖啡因, kā fēi yīn, ... xt, C8H10N4O2. For , eng, energy, ... tx, 能量, néng liàng, ... xt,
+
+**Mother Tmojizu:** 21. Excellent analysis. The tea is specifically formulated for temporal students. L-theanine keeps you calm during Chinese lessons. Caffeine keeps you alert during chemistry. Catechins protect your cells from temporal radiation. Now — the curriculum.
+
+**中文老师:** , eng, curriculum, ... tx, 课程, kè chéng, ... xt, , eng, six disciplines, ... tx, 六门学科, liù mén xué kē, ... xt, , eng, Chinese, ... tx, 中文, zhōng wén, ... xt, , eng, chemistry, ... tx, 化学, huà xué, ... xt, , eng, Time-Fu, ... tx, 时间功夫, shí jiān gōng fu, ... xt, , eng, Fuzzpet, ... tx, 毛球宠物, máo qiú chǒng wù, ... xt, , eng, Chronoment, ... tx, 时计, shí jì, ... xt, , eng, Mental-Fu, ... tx, 精神功夫, jīng shén gōng fu, ... xt,
+
+**Mother Tmojizu:** You're at the Time Academy. , eng, 时间学院, ... tx, 时间学院, shí jiān xué yuàn, ... xt, This school exists outside normal time. That means you can be here before your adventures, during them, or after. Time is flexible here. We're operating in meta-time — outside the scope of normal temporal flow. That's Mental-Fu.
+
+**中文老师:** , eng, meta-time, ... tx, 元时间, yuán shí jiān, ... xt, , eng, outside time, ... tx, 时间之外, shí jiān zhī wài, ... xt, , eng, flexible, ... tx, 灵活, líng huó, ... xt, , eng, before, ... tx, 之前, zhī qián, ... xt, , eng, during, ... tx, 期间, qī jiān, ... xt, , eng, after, ... tx, 之后, zhī hòu, ... xt,
+
+**CHARA:** [out of character] Outside normal time. So this is a pocket dimension. [in character] , eng, outside time, ... tx, 时间之外, shí jiān zhī wài, ... xt, Is this school , eng, CIA approved, ... tx, 中情局批准, zhōng qíng jú pī zhǔn, ... xt, I need to know who has access to this location.
+
+**Mother Tmojizu:** CHARA, you can't investigate the headmistress. The school is approved by the Keeper of the Land of Time. That's the highest authority you'll encounter. Roll INT Insight to determine if I'm telling the truth.
+
+**CHARA:** [rolls] 16. Plus 2 is 18. [out of character] She's telling the truth. But she's also withholding information about the Red Wax Time Police. [in character] You're telling the truth. But you're not telling us everything. There's something about the Red Wax Time Police.
+
+**Mother Tmojizu:** 18. Sharp. I'm not telling you everything. You'll learn about the Time Police when you're ready. For now: the curriculum. Six disciplines.
+
+**Mother Tmojizu:** One: Chinese. , eng, 中文, ... tx, 中文, zhōng wén, ... xt, You'll learn to speak, read, and think in Chinese. Two: Chemistry. , eng, 化学, ... tx, 化学, huà xué, ... xt, Real chemistry. Real formulas. Real reactions. Three: Time-Fu. , eng, 时间功夫, ... tx, 时间功夫, shí jiān gōng fu, ... xt, Temporal martial arts. Four: Fuzzpet Training. , eng, 毛球宠物训练, ... tx, 毛球宠物训练, máo qiú chǒng wù xùn liàn, ... xt, You'll bond with Fuzzballs and learn to command them. Five: Chronoment Engineering. , eng, 时计工程, ... tx, 时计工程, shí jì gōng chéng, ... xt, You'll build temporal instruments from scratch. Six: Mental-Fu. , eng, 精神功夫, ... tx, 精神功夫, jīng shén gōng fu, ... xt, The integration of all five.
+
+**Horli Qwin:** [out of character] Six disciplines. I'm gonna rap them. [in character] , eng, Chinese, ... tx, 中文, zhōng wén, ... xt, , eng, chemistry, ... tx, 化学, huà xué, ... xt, , eng, Time-Fu, ... tx, 时间功夫, shí jiān gōng fu, ... xt, , eng, Fuzzpets, ... tx, 毛球宠物, máo qiú chǒng wù, ... xt, , eng, Chronoments, ... tx, 时计, shí jì, ... xt, , eng, Mental-Fu, ... tx, 精神功夫, jīng shén gōng fu, ... xt, — that's the curriculum, six ways to level up!
+
+**Mother Tmojizu:** Horli, that's a bar. I'm not penalizing you yet. But the day is young.
+
+**Sol-Supreme:** [out of character] Mental-Fu as integration. That's systems thinking. [in character] , eng, Mental-Fu, ... tx, 精神功夫, jīng shén gōng fu, ... xt, Is there a formula? Like — how do the six disciplines combine?
+
+**Mother Tmojizu:** Roll INT Investigation.
+
+**Sol-Supreme:** [rolls] 15. Plus 4 is 19.
+
+**Mother Tmojizu:** 19. The Mental-Fu equation is: , eng, Chemistry, ... tx, 化学, huà xué, ... xt, times , eng, Temporal Understanding, ... tx, 时间理解, shí jiān lǐ jiě, ... xt, times , eng, Chinese Fluency, ... tx, 中文流利, zhōng wén liú lì, ... xt, times , eng, Fuzzball Bond, ... tx, 毛球连接, máo qiú lián jiē, ... xt, — divided by , eng, Ego, ... tx, 自我, zì wǒ, ... xt, The lower your ego, the more effective your Mental-Fu.
+
+**CHARA:** Divided by ego. So the more arrogant you are, the weaker you get. Noted.
+
+**Mother Tmojizu:** Exactly. Now — campus tour. Finish your tea. IQabella, you're carrying the tea set.
+
+**IQabella:** , eng, yes, ... tx, 是, shì, ... xt, , eng, teacher, ... tx, 老师, lǎo shī, ... xt,
+
+---
+
+## SCENE 3: CAMPUS TOUR — THE GROUNDS
+
+**Mother Tmojizu:** We walk through the campus. Each building hums with temporal energy. I point as we go.
+
+**Mother Tmojizu:** First: the , eng, Time Dojo Classroom, ... tx, 时间道场教室, shí jiān dào chǎng jiào shì, ... xt, Polished dark wood. Brass hourglasses. A temporal chalkboard that writes in four languages simultaneously. This is where most of your lessons happen.
+
+**中文老师:** , eng, classroom, ... tx, 教室, jiào shì, ... xt, , eng, dojo, ... tx, 道场, dào chǎng, ... xt, , eng, chalkboard, ... tx, 黑板, hēi bǎn, ... xt, , eng, desk, ... tx, 桌子, zhuō zi, ... xt, , eng, chair, ... tx, 椅子, yǐ zi, ... xt, , eng, book, ... tx, 书, shū, ... xt, , eng, pen, ... tx, 笔, bǐ, ... xt, , eng, paper, ... tx, 纸, zhǐ, ... xt, , eng, read, ... tx, 读, dú, ... xt, , eng, write, ... tx, 写, xiě, ... xt, , eng, listen, ... tx, 听, tīng, ... xt, , eng, speak, ... tx, 说, shuō, ... xt,
+
+**Mother Tmojizu:** Next: the , eng, Pharma-Chem Lab, ... tx, 药学实验室, yào xué shí yàn shì, ... xt, Glass beakers. Temporal burners. A poison cabinet — locked, obviously. Things explode here. Safely. Usually.
+
+**Sol-Supreme:** [rolls INT Arcana] 20. Plus 4 is 24. NATURAL 20. [out of character] The temporal burners use chronoment particle combustion. SiO2 quartz catalyzes the reaction. The poison cabinet contains KCN, tetrodotoxin C11H17N3O8, and scopolamine C17H21NO4. All real toxins. [in character] , eng, poison cabinet, ... tx, 毒药柜, dú yào guì, ... xt, contains , eng, potassium cyanide, ... tx, 氰化钾, qíng huà jiǎ, ... xt, KCN. , eng, tetrodotoxin, ... tx, 河豚毒素, hé tún dú sù, ... xt, C11H17N3O8. , eng, scopolamine, ... tx, 东莨菪碱, dōng làng dàng jiǎn, ... xt, C17H21NO4. All real. All dangerous. I love this lab.
+
+**Mother Tmojizu:** NATURAL 20. You identified every toxin through the glass. Impressive. And terrifying. Please don't touch anything.
+
+**CHARA:** [out of character] She has a poison cabinet. In a school. I need to document this. [in character] Is the poison cabinet , eng, locked, ... tx, 锁, suǒ, ... xt, with a temporal lock or a regular lock?
+
+**Mother Tmojizu:** Both. And a Fuzzball. The Fuzzball bites.
+
+**Horli Qwin:** Can I pet the Fuzzball?
+
+**Mother Tmojizu:** No.
+
+**Horli Qwin:** I'm gonna pet the Fuzzball.
+
+**Mother Tmojizu:** Roll DEX Sleight of Hand to pet the poison cabinet Fuzzball without me noticing.
+
+**Horli Qwin:** [rolls] 8. Plus 3 is 11.
+
+**Mother Tmojizu:** 11. The Fuzzball bites you. It's not venomous, but it's judgmental. You take 1 point of emotional damage.
+
+**Horli Qwin:** Worth it. It was fluffy.
+
+**Mother Tmojizu:** Moving on. The , eng, Fuzzpet Sanctuary, ... tx, 毛球宠物园, máo qiú chǒng wù yuán, ... xt, Warm room. Nesting cushions. Temporal heating lamps. Purring everywhere. IQabella immediately melts.
+
+**IQabella:** [rolls WIS Medicine] 17. Plus 3 is 20. [out of character] I can hear at least twelve different purr frequencies. Most are at 432 Hz — healthy. One is at 428 Hz — mild toxin. I want to check on that one. [in character] , eng, Fuzzball, ... tx, 毛球, máo qiú, ... xt, at 428 Hz. , eng, mild toxin, ... tx, 轻度中毒, qīng dù zhòng dú, ... xt, Can I check on it? Please?
+
+**Mother Tmojizu:** 20. You hear the off-frequency Fuzzball. It's in the corner — a small sapphire one, shivering slightly. You approach. Roll WIS Medicine to diagnose.
+
+**IQabella:** [rolls] 19. Plus 3 is 22. It's a mild temporal disruption. Probably ate something it shouldn't have. I warm my hands to 432 Hz and hum. The Fuzzball crawls into my lap and purrs back to 430 Hz. Improving.
+
+**Mother Tmojizu:** 22. The Fuzzball is already better. IQabella, you have a gift. The Fuzzpet Sanctuary has adopted you. Let me teach you about Fuzzball biology while we're here. Roll INT Biology.
+
+**IQabella:** [rolls] 16. Plus 3 is 19.
+
+**Mother Tmojizu:** 19. Fuzzball fur is made of keratin — C28H40N8O10S2 — the same protein in human hair and nails. But Fuzzball keratin is infused with chronoment particles, subatomic particles that exist in multiple time states simultaneously. That's why their fur conducts temporal energy. Their core organ produces τ-ATP — temporal adenosine triphosphate, C10H16N5O13P3 with a temporal twist. It's their energy source. When a Fuzzball's τ-ATP drops, their purr frequency drops. That's how you diagnose illness.
+
+**中文老师:** , eng, fur, ... tx, 毛, máo, ... xt, , eng, keratin, ... tx, 角蛋白, jiǎo dàn bái, ... xt, , eng, core organ, ... tx, 核心器官, hé xīn qì guān, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt, , eng, purr, ... tx, 呼噜, hū lū, ... xt, , eng, healthy, ... tx, 健康, jiàn kāng, ... xt, , eng, sick, ... tx, 生病, shēng bìng, ... xt, , eng, warm, ... tx, 温暖, wēn nuǎn, ... xt, , eng, cold, ... tx, 冷, lěng, ... xt, , eng, soft, ... tx, 柔软, róu ruǎn, ... xt,
+
+**Mother Tmojizu:** Next: the , eng, Chronoment Workshop, ... tx, 时计工坊, shí jì gōng fāng, ... xt, Workbenches. Quartz crystals. Jade casings. Tools. Smells like ozone. Sol-Supreme's eyes light up.
+
+**Sol-Supreme:** , eng, quartz crystal, ... tx, 石英晶体, shí yīng jīng tǐ, ... xt, SiO2. , eng, jade casing, ... tx, 玉外壳, yù wài wài ké, ... xt, NaAlSi2O6. This is where we build Chronoments. , eng, amazing, ... tx, 神奇, shén qí, ... xt,
+
+**Mother Tmojizu:** Correct. You'll each build your own Chronoment by Session 3. For now, just look. Don't touch. Horli, that means you.
+
+**Horli Qwin:** I wasn't gonna touch anything.
+
+**Mother Tmojizu:** You were literally reaching for a quartz crystal.
+
+**Horli Qwin:** I was gonna touch it respectfully.
+
+**Mother Tmojizu:** That's still touching. Hands in pockets. The , eng, Imperial Dining Hall, ... tx, 皇家餐厅, huáng jiā cān tīng, ... xt, Floating lanterns. Lazy susan tables. Food appears via temporal summon. You'll eat here every day.
+
+**中文老师:** , eng, dining hall, ... tx, 餐厅, cān tīng, ... xt, , eng, food, ... tx, 食物, shí wù, ... xt, , eng, eat, ... tx, 吃, chī, ... xt, , eng, drink, ... tx, 喝, hē, ... xt, , eng, rice, ... tx, 米饭, mǐ fàn, ... xt, , eng, noodles, ... tx, 面条, miàn tiáo, ... xt, , eng, vegetable, ... tx, 蔬菜, shū cài, ... xt, , eng, meat, ... tx, 肉, ròu, ... xt, , eng, fruit, ... tx, 水果, shuǐ guǒ, ... xt, , eng, delicious, ... tx, 好吃, hǎo chī, ... xt, , eng, hungry, ... tx, 饿, è, ... xt, , eng, full, ... tx, 饱, bǎo, ... xt,
+
+**Horli Qwin:** Food appears via temporal summon? Can it summon bubble tea?
+
+**Mother Tmojizu:** Roll CHA Persuasion to convince the temporal summon to produce bubble tea.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20. [out of character] I'm manifesting bubble tea into existence. [in character] , eng, bubble tea, ... tx, 珍珠奶茶, zhēn zhū nǎi chá, ... xt, I believe in you, temporal summon. Bring me the boba.
+
+**Mother Tmojizu:** NATURAL 20. A cup of bubble tea materializes in front of Horli. The other three stare.
+
+**IQabella:** That's not fair. I've been asking for bubble tea since we got here.
+
+**Mother Tmojizu:** Horli rolled a NAT 20. The temporal summon respects NAT 20s. The rest of you get regular tea. For now.
+
+**Horli Qwin:** [sips] , eng, delicious, ... tx, 好喝, hǎo hē, ... xt, , eng, sweet, ... tx, 甜, tián, ... xt, , eng, thank you, ... tx, 谢谢, xiè xie, ... xt, temporal summon.
+
+**Mother Tmojizu:** Finally: the , eng, Temporal Garden, ... tx, 时间花园, shí jiān huā yuán, ... xt, Rose quartz paths. Butterflies with light-wings. Flowers that bloom and wilt in seconds. This is where you'll go to think, to rest, to practice Chinese in peace.
+
+**中文老师:** , eng, garden, ... tx, 花园, huā yuán, ... xt, , eng, flower, ... tx, 花, huā, ... xt, , eng, butterfly, ... tx, 蝴蝶, hú dié, ... xt, , eng, path, ... tx, 路, lù, ... xt, , eng, rest, ... tx, 休息, xiū xi, ... xt, , eng, think, ... tx, 想, xiǎng, ... xt, , eng, peace, ... tx, 安静, ān jìng, ... xt, , eng, rose, ... tx, 玫瑰, méi gui, ... xt, , eng, crystal, ... tx, 水晶, shuǐ jīng, ... xt,
+
+**CHARA:** [out of character] Flowers that bloom and wilt in seconds. That's accelerated temporal cycling. [in character] , eng, flower, ... tx, 花, huā, ... xt, blooms and wilts in approximately 4.7 seconds. That's a full life cycle compressed into seconds. The temporal acceleration factor is roughly 10,000 times normal.
+
+**Mother Tmojizu:** 10,000 is a good estimate. The garden runs on accelerated time. Don't sit on the flowers — they'll bloom through you.
+
+**Sol-Supreme:** Noted.
+
+---
+
+## SCENE 4: TIME DOJO CLASSROOM — CHINESE FUNDAMENTALS
+
+**Mother Tmojizu:** Back to the Time Dojo Classroom. Sit. Desks are arranged in a square — face each other. Learning is communal here. No front row, no back row. Everyone is equal. Except IQabella, who gets the tea station.
+
+**IQabella:** , eng, yes, ... tx, 是, shì, ... xt, , eng, teacher, ... tx, 老师, lǎo shī, ... xt,
+
+**Mother Tmojizu:** First lesson. Chinese fundamentals. The four tones of Mandarin. Each tone is linked to a temporal concept. Listen carefully.
+
+**中文老师:** , eng, first tone, flat, steady time flow, ... tx, 第一声，平的，妈, mā, ... xt, , eng, mother, ... tx, 妈妈, mā ma, ... xt, , eng, second tone, rising, time accelerating, ... tx, 第二声，升的，麻, má, ... xt, , eng, hemp, ... tx, 麻, má, ... xt, , eng, third tone, dipping, time reversing, ... tx, 第三声，降升的，马, mǎ, ... xt, , eng, horse, ... tx, 马, mǎ, ... xt, , eng, fourth tone, falling, time stopping, ... tx, 第四声，降的，骂, mà, ... xt, , eng, scold, ... tx, 骂, mà, ... xt,
+
+**Mother Tmojizu:** Repeat after 中文老师. All of you.
+
+**Horli Qwin:** , eng, first tone, ... tx, 妈, mā, ... xt, , eng, second tone, ... tx, 麻, má, ... xt, , eng, third tone, ... tx, 马, mǎ, ... xt, , eng, fourth tone, ... tx, 骂, mà, ... xt, [out of character] Wait, I can make a beat out of this. [starts beatboxing] mā má mǎ mà — mā má mǎ mà —
+
+**Mother Tmojizu:** Horli, that's actually a good mnemonic. Keep going.
+
+**Horli Qwin:** [rapping] First tone flat like a steady time line / Second tone rising like a steep incline / Third tone dips then it climbs back up / Fourth tone drops like a temporal cup / 妈麻马骂 — mā má mǎ mà — that's how we learn Chinese at the Time Academy, ya!
+
+**Mother Tmojizu:** I said keep going, not release a single. But I'll allow it. Roll CHA Performance.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20.
+
+**Mother Tmojizu:** NATURAL 20. The entire classroom resonates at 432 Hz. The temporal chalkboard writes the four tones in glowing calligraphy. Even the poison cabinet Fuzzball is nodding along. 5 bonus points for Horli.
+
+**Horli Qwin:** THAT'S what I'm talking about!
+
+**Mother Tmojizu:** CHARA, your turn. Repeat the tones.
+
+**CHARA:** , eng, first tone, ... tx, 妈, mā, ... xt, , eng, second tone, ... tx, 麻, má, ... xt, , eng, third tone, ... tx, 马, mǎ, ... xt, , eng, fourth tone, ... tx, 骂, mà, ... xt, [out of character] I'm mapping these to CIA phonetic alphabet. Alpha, Bravo, Charlie, Delta. Flat, rising, dipping, falling. [in character] , eng, mother, ... tx, 妈, mā, ... xt, — Alpha. , eng, hemp, ... tx, 麻, má, ... xt, — Bravo. , eng, horse, ... tx, 马, mǎ, ... xt, — Charlie. , eng, scold, ... tx, 骂, mà, ... xt, — Delta.
+
+**Mother Tmojizu:** Roll INT Translation.
+
+**CHARA:** [rolls] 17. Plus 3 is 20.
+
+**Mother Tmojizu:** 20. Perfect mapping. The CIA would be proud. But you're not in the CIA anymore. You're in Chinese class. Sol-Supreme?
+
+**Sol-Supreme:** , eng, first tone, ... tx, 妈, mā, ... xt, , eng, second tone, ... tx, 麻, má, ... xt, , eng, third tone, ... tx, 马, mǎ, ... xt, , eng, fourth tone, ... tx, 骂, mà, ... xt, [out of character] The frequency ratios are approximately 1:1.12:0.89:0.78. I can model this mathematically. [in character] The tone frequencies follow a predictable pattern. First tone is baseline. Second tone is 12 percent higher. Third tone dips 11 percent then rises. Fourth tone drops 22 percent.
+
+**Mother Tmojizu:** Roll INT Arcana.
+
+**Sol-Supreme:** [rolls] 16. Plus 4 is 20.
+
+**Mother Tmojizu:** 20. Your mathematical model is correct. The temporal chalkboard displays your frequency ratios in glowing numbers. IQabella?
+
+**IQabella:** , eng, first tone, ... tx, 妈, mā, ... xt, , eng, second tone, ... tx, 麻, má, ... xt, , eng, third tone, ... tx, 马, mǎ, ... xt, , eng, fourth tone, ... tx, 骂, mà, ... xt, [out of character] I'm linking tones to tea steeping temperatures. First tone is 175 degrees — steady green tea. Second tone is 200 — rising to black tea. Third tone is 160 then 190 — dipping oolong. Fourth tone is boiling — 212, full stop. [in character] , eng, first tone, ... tx, 妈, mā, ... xt, is green tea at 175. , eng, Second tone, ... tx, 麻, má, ... xt, is black tea at 200. , eng, Third tone, ... tx, 马, mǎ, ... xt, is oolong — 160 then 190. , eng, Fourth tone, ... tx, 骂, mà, ... xt, is boiling water. 212. Full stop.
+
+**Mother Tmojizu:** Roll WIS Medicine.
+
+**IQabella:** [rolls] 18. Plus 3 is 21.
+
+**Mother Tmojizu:** 21. Your tea-tone mapping is brilliant. The temporal chalkboard displays a tea temperature chart with tone overlays. Now — vocabulary. 中文老师 will teach you the foundational words. Repeat each one.
+
+**中文老师:** , eng, welcome, ... tx, 欢迎, huān yíng, ... xt, , eng, school, ... tx, 学校, xué xiào, ... xt, , eng, teacher, ... tx, 老师, lǎo shī, ... xt, , eng, student, ... tx, 学生, xué shēng, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, study, ... tx, 学习, xué xí, ... xt, , eng, practice, ... tx, 练习, liàn xí, ... xt, , eng, spirit, ... tx, 精神, jīng shén, ... xt, , eng, connect, ... tx, 连接, lián jiē, ... xt, , eng, good, ... tx, 好, hǎo, ... xt, , eng, big, ... tx, 大, dà, ... xt, , eng, small, ... tx, 小, xiǎo, ... xt, , eng, water, ... tx, 水, shuǐ, ... xt, , eng, fire, ... tx, 火, huǒ, ... xt, , eng, earth, ... tx, 地, dì, ... xt, , eng, wind, ... tx, 风, fēng, ... xt, , eng, light, ... tx, 光, guāng, ... xt, , eng, dark, ... tx, 暗, àn, ... xt, , eng, one, ... tx, 一, yī, ... xt, , eng, two, ... tx, 二, èr, ... xt, , eng, three, ... tx, 三, sān, ... xt, , eng, four, ... tx, 四, sì, ... xt, , eng, five, ... tx, 五, wǔ, ... xt, , eng, six, ... tx, 六, liù, ... xt, , eng, seven, ... tx, 七, qī, ... xt, , eng, eight, ... tx, 八, bā, ... xt, , eng, nine, ... tx, 九, jiǔ, ... xt, , eng, ten, ... tx, 十, shí, ... xt, , eng, hundred, ... tx, 百, bǎi, ... xt, , eng, thousand, ... tx, 千, qiān, ... xt, , eng, head, ... tx, 头, tóu, ... xt, , eng, hand, ... tx, 手, shǒu, ... xt, , eng, foot, ... tx, 脚, jiǎo, ... xt, , eng, heart, ... tx, 心, xīn, ... xt, , eng, eye, ... tx, 眼睛, yǎn jing, ... xt, , eng, nose, ... tx, 鼻子, bí zi, ... xt, , eng, mouth, ... tx, 嘴, zuǐ, ... xt, , eng, ear, ... tx, 耳朵, ěr duo, ... xt, , eng, body, ... tx, 身体, shēn tǐ, ... xt, , eng, happy, ... tx, 开心, kāi xīn, ... xt, , eng, sad, ... tx, 伤心, shāng xīn, ... xt, , eng, angry, ... tx, 生气, shēng qì, ... xt, , eng, afraid, ... tx, 害怕, hài pà, ... xt, , eng, tired, ... tx, 累, lèi, ... xt, , eng, red, ... tx, 红色, hóng sè, ... xt, , eng, blue, ... tx, 蓝色, lán sè, ... xt, , eng, green, ... tx, 绿色, lǜ sè, ... xt, , eng, yellow, ... tx, 黄色, huáng sè, ... xt, , eng, black, ... tx, 黑色, hēi sè, ... xt, , eng, white, ... tx, 白色, bái sè, ... xt, , eng, left, ... tx, 左, zuǒ, ... xt, , eng, right, ... tx, 右, yòu, ... xt, , eng, up, ... tx, 上, shàng, ... xt, , eng, down, ... tx, 下, xià, ... xt, , eng, front, ... tx, 前, qián, ... xt, , eng, back, ... tx, 后, hòu, ... xt, , eng, walk, ... tx, 走, zǒu, ... xt, , eng, run, ... tx, 跑, pǎo, ... xt, , eng, jump, ... tx, 跳, tiào, ... xt, , eng, sit, ... tx, 坐, zuò, ... xt, , eng, stand, ... tx, 站, zhàn, ... xt, , eng, look, ... tx, 看, kàn, ... xt, , eng, see, ... tx, 看见, kàn jiàn, ... xt, , eng, hear, ... tx, 听见, tīng jiàn, ... xt, , eng, today, ... tx, 今天, jīn tiān, ... xt, , eng, tomorrow, ... tx, 明天, míng tiān, ... xt, , eng, yesterday, ... tx, 昨天, zuó tiān, ... xt, , eng, morning, ... tx, 早上, zǎo shang, ... xt, , eng, noon, ... tx, 中午, zhōng wǔ, ... xt, , eng, evening, ... tx, 晚上, wǎn shang, ... xt, , eng, friend, ... tx, 朋友, péng yǒu, ... xt, , eng, family, ... tx, 家人, jiā rén, ... xt, , eng, person, ... tx, 人, rén, ... xt, , eng, is, ... tx, 是, shì, ... xt, , eng, have, ... tx, 有, yǒu, ... xt, , eng, at, ... tx, 在, zài, ... xt, , eng, not, ... tx, 不, bù, ... xt, , eng, very, ... tx, 很, hěn, ... xt, , eng, extremely, ... tx, 非常, fēi cháng, ... xt,
+
+**Mother Tmojizu:** Roll WIS Learning for the full vocabulary set. Group roll — everyone rolls, I take the average.
+
+**Horli Qwin:** [rolls] 15. Plus 0 is 15.
+
+**CHARA:** [rolls] 18. Plus 2 is 20.
+
+**IQabella:** [rolls] 17. Plus 3 is 20.
+
+**Sol-Supreme:** [rolls] 14. Plus 1 is 15.
+
+**Mother Tmojizu:** Average is 17.5, round up to 18. Good. You absorb most of the vocabulary. Horli and Sol-Supreme, you'll need extra practice. CHARA and IQabella, you're ahead. Assignment time: each of you builds a 5-word memory palace room and teaches it to the class.
+
+**中文老师:** , eng, memory palace, ... tx, 记忆宫殿, jì yì gōng diàn, ... xt, , eng, five words, ... tx, 五个词, wǔ ge cí, ... xt,
+
+**Horli Qwin:** I'll do the Snack Pavilion. , eng, snack, ... tx, 零食, líng shí, ... xt, , eng, sweet, ... tx, 甜, tián, ... xt, , eng, bubble tea, ... tx, 珍珠奶茶, zhēn zhū nǎi chá, ... xt, , eng, delicious, ... tx, 好吃, hǎo chī, ... xt, , eng, hungry, ... tx, 饿, è, ... xt, My memory palace room is a pavilion full of snacks. You walk in and you're hungry. You walk out and you're full. Simple.
+
+**Mother Tmojizu:** Roll CHA Performance to teach your memory palace.
+
+**Horli Qwin:** [rolls] 19. Plus 3 is 22.
+
+**Mother Tmojizu:** 22. Your Snack Pavilion memory palace is vivid, delicious, and everyone can taste the bubble tea. 5 words locked in. CHARA?
+
+**CHARA:** I'll do the Headmistress's Office. , eng, office, ... tx, 办公室, bàn gōng shì, ... xt, , eng, scroll, ... tx, 卷轴, juǎn zhóu, ... xt, , eng, globe, ... tx, 地球, dì qiú, ... xt, , eng, tea, ... tx, 茶, chá, ... xt, , eng, secret, ... tx, 秘密, mì mì, ... xt, You walk in and you see floating scrolls, a temporal globe, tea on the table, and secrets in the drawers.
+
+**Mother Tmojizu:** Roll INT Investigation.
+
+**CHARA:** [rolls] 20. Plus 3 is 23. NATURAL 20.
+
+**Mother Tmojizu:** NATURAL 20. Your office memory palace is so detailed that the temporal globe in your memory starts showing real-time data. 5 words locked in, plus a bonus word: , eng, secret, ... tx, 秘密, mì mì, ... xt, Sol-Supreme?
+
+**Sol-Supreme:** I'll do the Chronoment Workshop. , eng, workshop, ... tx, 工坊, gōng fāng, ... xt, , eng, crystal, ... tx, 水晶, shuǐ jīng, ... xt, , eng, tool, ... tx, 工具, gōng jù, ... xt, , eng, build, ... tx, 建造, jiàn zào, ... xt, , eng, ozone, ... tx, 臭氧, chòu yǎng, ... xt, You walk in and smell ozone. Workbenches covered in quartz crystals and jade casings. Tools everywhere. It's beautiful.
+
+**Mother Tmojizu:** Roll INT Arcana.
+
+**Sol-Supreme:** [rolls] 17. Plus 4 is 21.
+
+**Mother Tmojizu:** 21. Your workshop memory palace includes the chemical composition of every material on the benches. 5 words locked in. IQabella?
+
+**IQabella:** I'll do the Fuzzpet Sanctuary. , eng, sanctuary, ... tx, 宠物园, chǒng wù yuán, ... xt, , eng, warm, ... tx, 温暖, wēn nuǎn, ... xt, , eng, purr, ... tx, 呼噜, hū lū, ... xt, , eng, soft, ... tx, 柔软, róu ruǎn, ... xt, , eng, heal, ... tx, 治疗, zhì liáo, ... xt, You walk in and it's warm. Fuzzballs everywhere, purring at 432 Hz. Soft cushions. Healing energy. It's my favorite room.
+
+**Mother Tmojizu:** Roll WIS Medicine.
+
+**IQabella:** [rolls] 19. Plus 3 is 22.
+
+**Mother Tmojizu:** 22. Your sanctuary memory palace is so warm that everyone in the classroom feels their stress melt away. 5 words locked in. Excellent work, all of you.
+
+---
+
+## SCENE 5: SNACK PAVILION — SNACK TIME
+
+**Mother Tmojizu:** Break time. Snack Pavilion. Steamed buns, bubble tea, temporal candy. Practice your Chinese while you eat.
+
+**中文老师:** , eng, snack time, ... tx, 零食时间, líng shí shí jiān, ... xt, , eng, steamed bun, ... tx, 包子, bāo zi, ... xt, , eng, dumpling, ... tx, 饺子, jiǎo zi, ... xt, , eng, rice ball, ... tx, 饭团, fàn tuán, ... xt, , eng, temporal candy, ... tx, 时间糖, shí jiān táng, ... xt, , eng, bubble tea, ... tx, 珍珠奶茶, zhēn zhū nǎi chá, ... xt, , eng, spring roll, ... tx, 春卷, chūn juǎn, ... xt, , eng, hot tea, ... tx, 热茶, rè chá, ... xt, , eng, cold tea, ... tx, 冷茶, lěng chá, ... xt, , eng, sugar, ... tx, 糖, táng, ... xt, , eng, salt, ... tx, 盐, yán, ... xt, , eng, flour, ... tx, 面粉, miàn fěn, ... xt,
+
+**Horli Qwin:** [out of character] Temporal candy? What does it do? [in character] , eng, temporal candy, ... tx, 时间糖, shí jiān táng, ... xt, What happens if I eat it?
+
+**Mother Tmojizu:** Roll CON Constitution to eat temporal candy.
+
+**Horli Qwin:** [rolls] 14. Plus 1 is 15.
+
+**Mother Tmojizu:** 15. The candy makes you experience the last 10 seconds twice. You eat it. You taste it. Then you taste it again. It's like a temporal encore.
+
+**Horli Qwin:** [out of character] That's the coolest candy ever. [in character] , eng, delicious, ... tx, 好吃, hǎo chī, ... xt, , eng, again, ... tx, 再来, zài lái, ... xt, I taste it AGAIN. , eng, amazing, ... tx, 神奇, shén qí, ... xt,
+
+**Mother Tmojizu:** Let me explain the chemistry. Roll INT Chemistry.
+
+**Sol-Supreme:** [rolls] 18. Plus 4 is 22. [out of character] Temporal candy contains sucrose C12H22O11 infused with chronoment particles. When ingested, the chronoment particles create a localized temporal echo — a 10-second closed timelike curve in the taste buds. The sucrose provides the energy to sustain the echo. [in character] , eng, temporal candy, ... tx, 时间糖, shí jiān táng, ... xt, contains , eng, sucrose, ... tx, 蔗糖, zhè táng, ... xt, C12H22O11 plus , eng, chronoment particles, ... tx, 时计粒子, shí jì lì zǐ, ... xt, The particles create a 10-second , eng, time loop, ... tx, 时间循环, shí jiān xún huán, ... xt, in the taste buds. The sucrose provides , eng, energy, ... tx, 能量, néng liàng, ... xt, to sustain the echo. Brilliant.
+
+**Mother Tmojizu:** 22. Exactly right. The candy is essentially a glucose-powered temporal echo generator. CHARA?
+
+**CHARA:** [out of character] A glucose-powered temporal echo. That's a weapon if I've ever seen one. [in character] Can the temporal candy be weaponized? If you concentrated the chronoment particles —
+
+**Mother Tmojizu:** CHARA. No weaponizing the candy.
+
+**CHARA:** , eng, I understand, ... tx, 我明白, wǒ míng bai, ... xt,
+
+**IQabella:** [out of character] I'm making tea for everyone. [in character] , eng, green tea, ... tx, 绿茶, lǜ chá, ... xt, , eng, 175 degrees, ... tx, 一百七十五度, yī bǎi qī shí wǔ dù, ... xt, , eng, please, ... tx, 请, qǐng, ... xt, Who wants tea?
+
+**Sol-Supreme:** , eng, I want, ... tx, 我要, wǒ yào, ... xt, , eng, tea, ... tx, 茶, chá, ... xt, , eng, thank you, ... tx, 谢谢, xiè xie, ... xt,
+
+**CHARA:** , eng, I want, ... tx, 我要, wǒ yào, ... xt, , eng, tea, ... tx, 茶, chá, ... xt, , eng, thank you, ... tx, 谢谢, xiè xie, ... xt,
+
+**Horli Qwin:** , eng, I want, ... tx, 我要, wǒ yào, ... xt, , eng, bubble tea, ... tx, 珍珠奶茶, zhēn zhū nǎi chá, ... xt, , eng, please, ... tx, 请, qǐng, ... xt,
+
+**Mother Tmojizu:** Horli, the temporal summon is on break.
+
+**Horli Qwin:** I'll roll for it.
+
+**Mother Tmojizu:** You may not roll for bubble tea during snack time.
+
+**Horli Qwin:** Fine. , eng, I want, ... tx, 我要, wǒ yào, ... xt, , eng, green tea, ... tx, 绿茶, lǜ chá, ... xt, , eng, thank you, ... tx, 谢谢, xiè xie, ... xt, But I'm manifesting bubble tea in my mind.
+
+**Mother Tmojizu:** While you sip, let me tell you about the Land of Time. The world you're preparing to enter. Roll WIS Listening.
+
+**Horli Qwin:** [rolls] 16. Plus 3 is 19.
+
+**CHARA:** [rolls] 18. Plus 2 is 20.
+
+**IQabella:** [rolls] 17. Plus 3 is 20.
+
+**Sol-Supreme:** [rolls] 15. Plus 1 is 16.
+
+**Mother Tmojizu:** The Land of Time is a realm where time is tangible. People manipulate it like clay. The Time Emperor rules from the Imperial Palace. Beneath the palace lies the Time Factory — a temporal engine that controls all time in the realm. The Red Wax Time Police enforce temporal law. The Keeper of the Land of Time — my old friend — maintains the balance. And you four... you're the Fuzzball Wielders. The prophecy says you'll either save the Land of Time or destroy it. No pressure.
+
+**中文老师:** , eng, Land of Time, ... tx, 时间之地, shí jiān zhī dì, ... xt, , eng, Time Emperor, ... tx, 时间皇帝, shí jiān huáng dì, ... xt, , eng, Time Factory, ... tx, 时间工厂, shí jiān gōng chǎng, ... xt, , eng, Time Police, ... tx, 时间警察, shí jiān jǐng chá, ... xt, , eng, Keeper, ... tx, 守护者, shǒu hù zhě, ... xt, , eng, prophecy, ... tx, 预言, yù yán, ... xt, , eng, save, ... tx, 拯救, zhěng jiù, ... xt, , eng, destroy, ... tx, 毁灭, huǐ miè, ... xt, , eng, balance, ... tx, 平衡, píng héng, ... xt, , eng, realm, ... tx, 世界, shì jiè, ... xt, , eng, palace, ... tx, 宫殿, gōng diàn, ... xt, , eng, engine, ... tx, 引擎, yǐn qíng, ... xt, , eng, law, ... tx, 法律, fǎ lǜ, ... xt, , eng, friend, ... tx, 朋友, péng yǒu, ... xt,
+
+**CHARA:** [out of character] The Fuzzball Wielders prophecy. That's the CIA-level intel I've been waiting for. [in character] , eng, prophecy, ... tx, 预言, yù yán, ... xt, Who wrote it? When? Can I see the original document?
+
+**Mother Tmojizu:** CHARA, you can't investigate the prophecy.
+
+**CHARA:** I'm not investigating. I'm... researching.
+
+**Mother Tmojizu:** That's investigating.
+
+**CHARA:** Fine. , eng, I understand, ... tx, 我明白, wǒ míng bai, ... xt,
+
+**Sol-Supreme:** [out of character] The Time Factory as a temporal engine. That's essentially a closed-loop thermodynamic system manipulating entropy. [in character] , eng, Time Factory, ... tx, 时间工厂, shí jiān gōng chǎng, ... xt, Is it a heat engine? Does it operate on a Carnot cycle? What's the efficiency?
+
+**Mother Tmojizu:** Sol-Supreme, you'll learn about the Time Factory's mechanics in Chemistry class. For now, just know: it controls all time in the realm. And someone needs to shut it down.
+
+**IQabella:** [out of character] Shut it down. That means the Time Emperor is using it for control. [in character] , eng, shut down, ... tx, 关闭, guān bì, ... xt, The Time Factory. To free the , eng, Land of Time, ... tx, 时间之地, shí jiān zhī dì, ... xt, That's our mission?
+
+**Mother Tmojizu:** Eventually. First, you need to learn. Chinese. Chemistry. Time-Fu. Fuzzpets. Chronoments. Mental-Fu. All of it. Snack's over. Back to class.
+
+**Horli Qwin:** Can I take the temporal candy?
+
+**Mother Tmojizu:** You can take ONE temporal candy.
+
+**Horli Qwin:** I take three.
+
+**Mother Tmojizu:** Horli.
+
+**Horli Qwin:** I take one. Respectfully.
+
+---
+
+## SCENE 6: PHARMA-CHEM LAB — FIRST LAB SESSION
+
+**Mother Tmojizu:** Pharma-Chem Lab. First session. Today: basic chemistry through Fuzzball care. Every element is a temporal building block. Every compound is a frozen time pattern. Sol-Supreme, you'll love this.
+
+**Sol-Supreme:** [out of character] Finally, my time to shine. [in character] , eng, element, ... tx, 元素, yuán sù, ... xt, , eng, compound, ... tx, 化合物, huà hé wù, ... xt, , eng, reaction, ... tx, 反应, fǎn yìng, ... xt, Let's go.
+
+**Mother Tmojizu:** The periodic table. Each element has five temporal coordinates: protons, neutrons, electrons, time stability, and chrono resonance. Sol-Supreme, explain.
+
+**Sol-Supreme:** [rolls INT Arcana] 19. Plus 4 is 23. [out of character] Protons define identity. Neutrons define temporal mass. Electrons define temporal charge. Time stability is how resistant the element is to temporal manipulation. Chrono resonance is how strongly it resonates with chronoment particles. [in character] , eng, proton, ... tx, 质子, zhì zǐ, ... xt, equals identity. , eng, neutron, ... tx, 中子, zhōng zǐ, ... xt, equals temporal mass. , eng, electron, ... tx, 电子, diàn zǐ, ... xt, equals temporal charge. , eng, hydrogen, ... tx, 氢, qīng, ... xt, has 1 proton, 0 neutrons, 1 electron. Time stability 5. Chrono resonance 2. , eng, helium, ... tx, 氦, hài, ... xt, has 2 protons, 2 neutrons, 2 electrons. Time stability 5. Chrono resonance 6. , eng, carbon, ... tx, 碳, tàn, ... xt, has 6 protons, 6 neutrons, 6 electrons. Time stability 5. Chrono resonance 6. , eng, nitrogen, ... tx, 氮, dàn, ... xt, has 7 protons, 7 neutrons, 7 electrons. Time stability 5. Chrono resonance 6. , eng, oxygen, ... tx, 氧, yǎng, ... xt, has 8 protons, 8 neutrons, 8 electrons. Time stability 5. Chrono resonance 6.
+
+**Mother Tmojizu:** 23. Excellent. The key elements for Fuzzball care: , eng, hydrogen, ... tx, 氢, qīng, ... xt, , eng, carbon, ... tx, 碳, tàn, ... xt, , eng, nitrogen, ... tx, 氮, dàn, ... xt, , eng, oxygen, ... tx, 氧, yǎng, ... xt, , eng, sulfur, ... tx, 硫, liú, ... xt, These five make up Fuzzball fur — keratin. C28H40N8O10S2. Roll INT Chemistry to synthesize a basic Fuzzball food compound.
+
+**中文老师:** , eng, hydrogen, ... tx, 氢, qīng, ... xt, , eng, carbon, ... tx, 碳, tàn, ... xt, , eng, nitrogen, ... tx, 氮, dàn, ... xt, , eng, oxygen, ... tx, 氧, yǎng, ... xt, , eng, sulfur, ... tx, 硫, liú, ... xt, , eng, element, ... tx, 元素, yuán sù, ... xt, , eng, compound, ... tx, 化合物, huà hé wù, ... xt, , eng, reaction, ... tx, 反应, fǎn yìng, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt, , eng, atom, ... tx, 原子, yuán zǐ, ... xt, , eng, molecule, ... tx, 分子, fēn zǐ, ... xt, , eng, water, ... tx, 水, shuǐ, ... xt, , eng, H2O, ... tx, 水, shuǐ, ... xt, , eng, carbon dioxide, ... tx, 二氧化碳, èr yǎng huà tàn, ... xt, , eng, methane, ... tx, 甲烷, jiǎ wán, ... xt, , eng, glucose, ... tx, 葡萄糖, pú táo táng, ... xt, , eng, salt, ... tx, 盐, yán, ... xt, NaCl, , eng, mix, ... tx, 混合, hùn hé, ... xt, , eng, heat, ... tx, 加热, jiā rè, ... xt, , eng, stir, ... tx, 搅拌, jiǎo bàn, ... xt, , eng, dissolve, ... tx, 溶解, róng jiě, ... xt, , eng, burn, ... tx, 燃烧, rán shāo, ... xt,
+
+**CHARA:** [rolls INT Investigation] 18. Plus 3 is 21. [out of character] Fuzzball food needs water, a carbon source, and energy. H2O + CH4 + O2 → CO2 + H2O + energy. Basic combustion reaction providing caloric energy. [in character] , eng, water, ... tx, 水, shuǐ, ... xt, H2O. , eng, methane, ... tx, 甲烷, jiǎ wán, ... xt, CH4. , eng, oxygen, ... tx, 氧, yǎng, ... xt, O2. , eng, reaction, ... tx, 反应, fǎn yìng, ... xt, CH4 plus 2O2 yields CO2 plus 2H2O plus , eng, energy, ... tx, 能量, néng liàng, ... xt, Exothermic. The Fuzzball absorbs the energy through its fur.
+
+**Mother Tmojizu:** 21. Correct synthesis. You mix the compound. A small sapphire Fuzzball approaches, sniffs it, and purrs at 432 Hz. Perfect food. CHARA gets 5 points.
+
+**CHARA:** [out of character] I just fed a Fuzzball using a combustion reaction. This is the best day of my life. [in character] , eng, Fuzzball, ... tx, 毛球, máo qiú, ... xt, , eng, happy, ... tx, 开心, kāi xīn, ... xt, , eng, purr, ... tx, 呼噜, hū lū, ... xt, 432 Hz.
+
+**Sol-Supreme:** [rolls INT Chemistry] 17. Plus 4 is 21. I'll make a different compound. , eng, carbon dioxide, ... tx, 二氧化碳, èr yǎng huà tàn, ... xt, CO2. Fuzzballs exhale CO2 during temporal resonance. I'll create a CO2 scrubber using sodium hydroxide. NaOH + CO2 → NaHCO3. Sodium bicarbonate. Baking soda. It absorbs the excess CO2 and keeps the Fuzzball's breathing clean.
+
+**Mother Tmojizu:** 21. Your CO2 scrubber works. The Fuzzball breathes easier. Its purr goes from 428 Hz to 431 Hz. Almost perfect. Sol-Supreme gets 5 points.
+
+**IQabella:** [rolls WIS Medicine] 20. Plus 3 is 23. NATURAL 20. [out of character] I'm not making a compound. I'm diagnosing. The sapphire Fuzzball from the sanctuary — the one at 428 Hz. I know what's wrong. It has mild temporal disruption. The treatment is warm temporal energy at exactly 432 Hz, plus a small dose of glucose — C6H12O6 — to restore its τ-ATP levels. [in character] , eng, glucose, ... tx, 葡萄糖, pú táo táng, ... xt, C6H12O6. , eng, warm, ... tx, 温暖, wēn nuǎn, ... xt, at 432 Hz. The Fuzzball's , eng, core organ, ... tx, 核心器官, hé xīn qì guān, ... xt, produces τ-ATP. The glucose restores its energy. The warmth restores its temporal resonance.
+
+**Mother Tmojizu:** NATURAL 20. IQabella, your diagnosis is perfect. The sapphire Fuzzball's purr jumps from 428 Hz to 432 Hz instantly. It curls up in your lap and falls asleep. IQabella gets 10 points — double for the NAT 20.
+
+**IQabella:** [out of character] I just cured a Fuzzball with glucose and warmth. I'm a Fuzzball veterinarian now. [in character] , eng, healthy, ... tx, 健康, jiàn kāng, ... xt, , eng, 432 Hz, ... tx, 四百三十二赫兹, sì bǎi sān shí èr hè zī, ... xt, , eng, perfect, ... tx, 完美, wán měi, ... xt,
+
+**Horli Qwin:** [rolls CHA Performance] 16. Plus 3 is 19. [out of character] I'm not doing chemistry. I'm doing a Fuzzball rap. [in character] Yo, I got a Fuzzball, sapphire blue / Purring at 432, how about you? / I feed it , eng, methane, ... tx, 甲烷, jiǎ wán, ... xt, CH4 / It purrs so loud it shakes the floor! / , eng, Carbon, ... tx, 碳, tàn, ... xt, , eng, hydrogen, ... tx, 氢, qīng, ... xt, , eng, oxygen, ... tx, 氧, yǎng, ... xt, too / That's the chemistry of me and you!
+
+**Mother Tmojizu:** That's two bars. -2 points for the rap penalty. BUT — roll CHA Performance to see if the Fuzzball likes it.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20.
+
+**Mother Tmojizu:** NATURAL 20. The Fuzzball LOVES it. It starts dancing. Its purr goes from 430 Hz to 435 Hz — it's overstimulated but HAPPY. Horli gets 5 points minus 2 for the rap penalty. Net: 3 points.
+
+**Horli Qwin:** I'll take it! The Fuzzball is dancing!
+
+**Mother Tmojizu:** End of first lab session. Score tally: IQabella leads with 10 points. CHARA and Sol-Supreme tied at 5. Horli at 3. But Horli has a dancing Fuzzball, so she considers that a win.
+
+**Horli Qwin:** I absolutely consider that a win.
+
+**Mother Tmojizu:** [out of character] That's Session 1. Welcome to the Time Academy. You've arrived, toured, learned Chinese fundamentals, had snack time with temporal candy, and done your first pharma-chem lab. Next session: Temporal Elements, Fuzzpet bonding, Stardustball PE, and more pharma chemistry. [in character] Go to your dorm rooms. Your trunks have found them. Rest. Practice your Chinese. And ducklings? Don't eat more than three temporal candies. I mean it.
+
+**中文老师:** , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, rest, ... tx, 休息, xiū xi, ... xt, , eng, practice, ... tx, 练习, liàn xí, ... xt, , eng, Chinese, ... tx, 中文, zhōng wén, ... xt, , eng, tomorrow, ... tx, 明天, míng tiān, ... xt, , eng, see you, ... tx, 明天见, míng tiān jiàn, ... xt, , eng, good night, ... tx, 晚安, wǎn ān, ... xt, , eng, dream, ... tx, 梦, mèng, ... xt, , eng, sleep, ... tx, 睡觉, shuì jiào, ... xt,
+
+**Mother Tmojizu:** , eng, 加油, ... tx, 加油, jiā yóu, ... xt, ducklings. Add oil. Keep going. I'll see you tomorrow.
+
+---
+
+**[END OF FU D&D SESSION 1 — WELCOME TO THE TIME ACADEMY]**
+**Session Score: IQabella 10, CHARA 5, Sol-Supreme 5, Horli Qwin 3 (but has a dancing Fuzzball)**
+**Chinese Vocabulary Covered: ~160 words across 6 scenes**
+**Chemistry Covered: NaAlSi2O6 jadeite, L-theanine C5H10N2O3, catechin C22H18O11, caffeine C8H10N4O2, keratin C28H40N8O10S2, τ-ATP C10H16N5O13P3, sucrose C12H22O11, CH4+2O2→CO2+2H2O, NaOH+CO2→NaHCO3, glucose C6H12O6, H/He/C/N/O/S elements with temporal signatures**
+**Mental-Fu Introduced: Six disciplines, the Mental-Fu equation**
+**Locations Visited: Main Gate, Headmistress's Office, Campus Tour (6 buildings), Time Dojo Classroom, Snack Pavilion, Pharma-Chem Lab**
+**Next: Session 2 — Elements, Fuzzpets & Stardustball**
+**ϕ**

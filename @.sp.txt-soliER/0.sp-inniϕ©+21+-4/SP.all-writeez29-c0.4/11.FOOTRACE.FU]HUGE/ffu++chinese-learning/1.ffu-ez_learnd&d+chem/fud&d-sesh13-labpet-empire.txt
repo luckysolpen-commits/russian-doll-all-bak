@@ -1,0 +1,271 @@
+# FU D&D — SESSION 13: "THE LABPET EMPIRE"
+## Footrace.FU Chinese Learning — Episode 13
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** [out of character] Session 13. Labpet empire. CRISPR. Thermodynamics. Quantum mechanics. Mutant rodents. And a finale that breaks reality. Let's go. [in character] You stand in an empty warehouse. Horli Qwin slams a business plan on the table. "We breed labpets. We teach them to teach other labpets. They make compounds. We sell pharmaceuticals. We get rich." The plan is called: , eng, Laboratory Pet Empire, ... tx, 实验室宠物帝国, shí yàn shì chǒng wù dì guó, ... xt, Motto: ", eng, mouse, ... tx, 老鼠, lǎo shǔ, ... xt, , eng, teach, ... tx, 教, jiāo, ... xt, , eng, mouse, ... tx, 老鼠, lǎo shǔ, ... xt, , eng, make, ... tx, 做, zuò, ... xt, , eng, medicine, ... tx, 药, yào, ... xt," 中文老师, startup vocabulary.
+
+**中文老师:** , eng, Laboratory Pet Empire, ... tx, 实验室宠物帝国, shí yàn shì chǒng wù dì guó, ... xt, , eng, startup, ... tx, 创业, chuàng yè, ... xt, , eng, breed, ... tx, 繁殖, fán zhí, ... xt, , eng, gene editing, ... tx, 基因编辑, jī yīn biān jí, ... xt, , eng, mutation, ... tx, 突变, tū biàn, ... xt, , eng, make money, ... tx, 赚钱, zhuàn qián, ... xt, , eng, chaos, ... tx, 混乱, hùn luàn, ... xt,
+
+**Horli Qwin:** [out of character] This is the best business plan I've ever written. It has a mouse teaching a mouse to make medicine. [in character] , eng, startup, ... tx, 创业, chuàng yè, ... xt, , eng, breed, ... tx, 繁殖, fán zhí, ... xt, , eng, make money, ... tx, 赚钱, zhuàn qián, ... xt, We're gonna be rich!
+
+**Mother Tmojizu:** Roll CHA Business Acumen.
+
+**Horli Qwin:** [rolls] 18. Plus 3 is 21. [out of character] I'm already buying lab coats. [in character] , eng, laboratory, ... tx, 实验室, shí yàn shì, ... xt, , eng, equipment, ... tx, 设备, shè bèi, ... xt, , eng, one hundred, ... tx, 一百, yī bǎi, ... xt, , eng, lab mice, ... tx, 实验鼠, shí yàn shǔ, ... xt,
+
+**Mother Tmojizu:** 21. You buy the warehouse. You buy 100 labpets. They're small, round, furless, with wheels instead of feet. They roll around squeaking. You set up breeding pairs. CRISPR equipment. Chemical workstations. The labpets look at each other. They start... organizing. 中文老师.
+
+**中文老师:** , eng, lab mice, ... tx, 实验鼠, shí yàn shǔ, ... xt, , eng, organize, ... tx, 组织, zǔ zhī, ... xt, , eng, union, ... tx, 工会, gōng huì, ... xt, , eng, cheese, ... tx, 奶酪, nǎi lào, ... xt, , eng, demand, ... tx, 要求, yāo qiú, ... xt,
+
+**IQabella:** [out of character] The labpets are unionizing. [in character] , eng, union, ... tx, 工会, gōng huì, ... xt, They're , eng, organizing, ... tx, 组织, zǔ zhī, ... xt, They , eng, demand, ... tx, 要求, yāo qiú, ... xt, better , eng, cheese, ... tx, 奶酪, nǎi lào, ... xt,
+
+**Mother Tmojizu:** Roll WIS Animal Empathy.
+
+**IQabella:** [rolls] 19. Plus 2 is 21. [out of character] I'm giving them premium gouda. [in character] , eng, good, ... tx, 好, hǎo, ... xt, , eng, cheese, ... tx, 奶酪, nǎi lào, ... xt, , eng, thank you, ... tx, 谢谢, xiè xie, ... xt, The labpets are happy. They start teaching each other. , eng, teach, ... tx, 教, jiāo, ... xt, , eng, learn, ... tx, 学, xué, ... xt,
+
+**Mother Tmojizu:** 21. The labpets learn faster than expected. Within a week, they're teaching each other basic chemistry. Within two weeks, they're running the workstations themselves. Within three weeks, they've formed a management hierarchy. The head labpet — you name him Professor Squeaks — wears a tiny lab coat and carries a clipboard. 中文老师, CRISPR vocabulary.
+
+**中文老师:** , eng, gene editing, ... tx, 基因编辑, jī yīn biān jí, ... xt, CRISPR, , eng, Cas9 enzyme, ... tx, Cas9酶, Cas9 méi, ... xt, , eng, guide RNA, ... tx, 引导RNA, yǐn dǎo RNA, ... xt, , eng, DNA, ... tx, 脱氧核糖核酸, tuō yǎng hé táng hé suān, ... xt, , eng, gene, ... tx, 基因, jī yīn, ... xt, , eng, mutation, ... tx, 突变, tū biàn, ... xt, , eng, knockout, ... tx, 敲除, qiāo chú, ... xt, , eng, knockin, ... tx, 敲入, qiāo rù, ... xt,
+
+---
+
+## PHASE 1: GENE EDITING BEGINS
+
+**Mother Tmojizu:** Phase one: gene editing. You're using CRISPR to create mutant labpets. CRISPR works like this: you design a , eng, guide RNA, ... tx, 引导RNA, yǐn dǎo RNA, ... xt, that matches the target gene. The , eng, Cas9 enzyme, ... tx, Cas9酶, Cas9 méi, ... xt, cuts the , eng, DNA, ... tx, 脱氧核糖核酸, tuō yǎng hé táng hé suān, ... xt, at that location. The cell repairs the break, either disabling the gene (, eng, knockout, ... tx, 敲除, qiāo chú, ... xt,) or inserting new DNA (, eng, knockin, ... tx, 敲入, qiāo rù, ... xt,). Result: , eng, mutation, ... tx, 突变, tū biàn, ... xt, 中文老师.
+
+**中文老师:** , eng, design, ... tx, 设计, shè jì, ... xt, , eng, cut, ... tx, 切割, qiē gē, ... xt, , eng, repair, ... tx, 修复, xiū fù, ... xt, , eng, insert, ... tx, 插入, chā rù, ... xt, , eng, result, ... tx, 结果, jié guǒ, ... xt,
+
+**Mother Tmojizu:** Roll INT CRISPR Design. First mutation: glow-in-the-dark. GFP gene from jellyfish.
+
+**Sol-Supreme:** [rolls] 17. Plus 1 is 18. [out of character] GFP — green fluorescent protein. Aequorea victoria jellyfish gene. Standard transgenic insertion. [in character] , eng, design, ... tx, 设计, shè jì, ... xt, , eng, guide RNA, ... tx, 引导RNA, yǐn dǎo RNA, ... xt, , eng, Cas9 enzyme, ... tx, Cas9酶, Cas9 méi, ... xt, , eng, cut, ... tx, 切割, qiē gē, ... xt, , eng, insert, ... tx, 插入, chā rù, ... xt, GFP gene. , eng, repair, ... tx, 修复, xiū fù, ... xt, , eng, result, ... tx, 结果, jié guǒ, ... xt, , eng, glow, ... tx, 发光, fā guāng, ... xt, labpet!
+
+**Mother Tmojizu:** 18. The labpet glows green. Then another. Then all of them. The lab is now a disco. Professor Squeaks glows brightest. He's proud. Next mutation: super speed. Myostatin knockout. Roll INT Genetics.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. [out of character] Myostatin regulates muscle growth. Knock it out, muscles grow unchecked. [in character] , eng, gene knockout, ... tx, 基因敲除, jī yīn qiāo chú, ... xt, — myostatin gene. , eng, Cas9 enzyme, ... tx, Cas9酶, Cas9 méi, ... xt, , eng, cut, ... tx, 切割, qiē gē, ... xt, , eng, repair, ... tx, 修复, xiū fù, ... xt, via NHEJ — , eng, non-homologous end joining, ... tx, 非同源末端连接, fēi tóng yuán mò duān lián jié, ... xt, , eng, result, ... tx, 结果, jié guǒ, ... xt, , eng, super speed, ... tx, 超速, chāo sù, ... xt, labpet!
+
+**Mother Tmojizu:** NATURAL 20. The labpet runs so fast it runs through a wall. Then through another wall. Then through the ceiling. It comes back covered in drywall dust. It's fine. Next: telepathic labpet. Neural gene enhancement. Roll INT Neuroscience.
+
+**IQabella:** [rolls] 18. Plus 2 is 20. , eng, gene knockin, ... tx, 基因敲入, jī yīn qiāo rù, ... xt, — neural enhancement genes. , eng, HDR, ... tx, 同源定向修复, tóng yuán dìng xiàng xiū fù, ... xt, , eng, insert, ... tx, 插入, chā rù, ... xt, , eng, result, ... tx, 结果, jié guǒ, ... xt, , eng, telepathy, ... tx, 心灵感应, xīn líng gǎn yìng, ... xt, labpet!
+
+**Mother Tmojizu:** 20. The telepathic labpet looks at each of you. You hear its thoughts: ", eng, you, ... tx, 你们, nǐ men, ... xt, , eng, possessive, ... tx, 的, de, ... xt, , eng, life, ... tx, 生活, shēng huó, ... xt, , eng, very, ... tx, 很, hěn, ... xt, , eng, strange, ... tx, 奇怪, qí guài, ... xt," It's judging your life choices. 中文老师.
+
+**中文老师:** , eng, telepathy, ... tx, 心灵感应, xīn líng gǎn yìng, ... xt, , eng, thoughts, ... tx, 思想, sī xiǎng, ... xt, , eng, judge, ... tx, 判断, pàn duàn, ... xt, , eng, strange, ... tx, 奇怪, qí guài, ... xt, , eng, life, ... tx, 生活, shēng huó, ... xt,
+
+**Horli Qwin:** [out of character] A telepathic mouse is judging my life choices. This is my nightmare. [in character] , eng, thoughts, ... tx, 思想, sī xiǎng, ... xt, , eng, judge, ... tx, 判断, pàn duàn, ... xt, Stop , eng, judge, ... tx, 判断, pàn duàn, ... xt, my , eng, life, ... tx, 生活, shēng huó, ... xt,
+
+**Mother Tmojizu:** Next: fire-breathing labpet. Methane-producing gut bacteria. Roll INT Microbiology.
+
+**Sol-Supreme:** [rolls] 15. Plus 1 is 16. , eng, insert, ... tx, 插入, chā rù, ... xt, methanogen genes. , eng, result, ... tx, 结果, jié guǒ, ... xt, , eng, fire-breathing, ... tx, 喷火, pēn huǒ, ... xt, labpet! It sneezes. The break room catches fire.
+
+**Mother Tmojizu:** 16. The fire-breathing labpet burns down the break room. Professor Squeaks files a workplace safety complaint. Next: size-shifting labpet. Growth hormone overexpression. Roll INT Endocrinology.
+
+**CHARA:** [rolls] 19. Plus 4 is 23. , eng, gene knockin, ... tx, 基因敲入, jī yīn qiāo rù, ... xt, — growth hormone gene. , eng, result, ... tx, 结果, jié guǒ, ... xt, , eng, size-shifting, ... tx, 变形, biàn xíng, ... xt, labpet! It goes from mouse-sized to cat-sized to dog-sized. Then back. Then cat-sized again.
+
+**Mother Tmojizu:** 23. The size-shifting labpet is now the lab's security guard. It's very effective. Next: invisible labpet. Light-bending skin cells. Roll INT Optics.
+
+**IQabella:** [rolls] 17. Plus 2 is 19. , eng, gene editing, ... tx, 基因编辑, jī yīn biān jí, ... xt, — photonic crystal genes. , eng, result, ... tx, 结果, jié guǒ, ... xt, , eng, invisible, ... tx, 隐形, yǐn xíng, ... xt, labpet! We can't see it. But we can hear it squeaking. And it keeps stealing cheese.
+
+**Mother Tmojizu:** 19. The invisible labpet is now the lab's thief. It steals everything. Next: time-sensing labpet. Temporal gene insertion. Roll INT Temporal Biology.
+
+**Sol-Supreme:** [rolls] 18. Plus 1 is 19. , eng, gene knockin, ... tx, 基因敲入, jī yīn qiāo rù, ... xt, — temporal perception genes. , eng, result, ... tx, 结果, jié guǒ, ... xt, , eng, time-sensing, ... tx, 时间感知, shí jiān gǎn zhī, ... xt, labpet! It knows what's going to happen 3 seconds before it happens.
+
+**Mother Tmojizu:** 19. The time-sensing labpet squeaks 3 seconds before you ask it questions. It's annoying but useful. Phase one complete. You have 8 mutant labpets. The lab is chaos. 中文老师.
+
+**中文老师:** , eng, glow, ... tx, 发光, fā guāng, ... xt, , eng, super speed, ... tx, 超速, chāo sù, ... xt, , eng, telepathy, ... tx, 心灵感应, xīn líng gǎn yìng, ... xt, , eng, fire-breathing, ... tx, 喷火, pēn huǒ, ... xt, , eng, size-shifting, ... tx, 变形, biàn xíng, ... xt, , eng, invisible, ... tx, 隐形, yǐn xíng, ... xt, , eng, time-sensing, ... tx, 时间感知, shí jiān gǎn zhī, ... xt, , eng, compound synthesis, ... tx, 化合物合成, huà hé wù hé chéng, ... xt,
+
+---
+
+## PHASE 2: THERMODYNAMIC DISASTERS
+
+**Mother Tmojizu:** Phase two: the labpets start making compounds. But thermodynamics gets in the way. 中文老师, thermodynamics vocabulary.
+
+**中文老师:** , eng, thermodynamics, ... tx, 热力学, rè lì xué, ... xt, , eng, entropy, ... tx, 熵, shāng, ... xt, , eng, enthalpy, ... tx, 焓, hán, ... xt, , eng, Gibbs free energy, ... tx, 吉布斯自由能, jí bù sī zì yóu néng, ... xt, , eng, internal energy, ... tx, 内能, nèi néng, ... xt, , eng, heat, ... tx, 热, rè, ... xt, , eng, work, ... tx, 功, gōng, ... xt, , eng, temperature, ... tx, 温度, wēn dù, ... xt, , eng, pressure, ... tx, 压力, yā lì, ... xt, , eng, volume, ... tx, 体积, tǐ jī, ... xt, , eng, equilibrium, ... tx, 平衡, píng héng, ... xt,
+
+**Mother Tmojizu:** The labpets try to build a perpetual motion machine. It fails. First law of thermodynamics: , eng, first law of thermodynamics, ... tx, 热力学第一定律, rè lì xué dì yī dìng lǜ, ... xt, Energy cannot be created or destroyed. ΔU = Q - W. 中文老师.
+
+**中文老师:** ΔU = Q - W, , eng, change in internal energy, ... tx, 内能变化, nèi néng biàn huà, ... xt, , eng, equals, ... tx, 等于, děng yú, ... xt, , eng, heat added, ... tx, 热量, rè liàng, ... xt, , eng, minus, ... tx, 减去, jiǎn qù, ... xt, , eng, work done, ... tx, 做功, zuò gōng, ... xt,
+
+**Mother Tmojizu:** Roll INT Thermodynamics. Explain to the labpets why perpetual motion is impossible.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. [out of character] ΔU = Q - W. You can't get more energy out than you put in. Conservation of energy. [in character] , eng, first law of thermodynamics, ... tx, 热力学第一定律, rè lì xué dì yī dìng lǜ, ... xt, ΔU = Q - W! , eng, energy, ... tx, 能量, néng liàng, ... xt, , eng, cannot, ... tx, 不能, bù néng, ... xt, , eng, create, ... tx, 创造, chuàng zào, ... xt, , eng, perpetual motion machine, ... tx, 永动机, yǒng dòng jī, ... xt, , eng, impossible, ... tx, 不可能, bù kě néng, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. The labpets understand. They stop building the perpetual motion machine. But entropy keeps increasing. Second law: , eng, second law of thermodynamics, ... tx, 热力学第二定律, rè lì xué dì èr dìng lǜ, ... xt, ΔS ≥ 0. The lab gets messier every day. 中文老师.
+
+**中文老师:** ΔS ≥ 0, , eng, entropy, ... tx, 熵, shāng, ... xt, , eng, always, ... tx, 总是, zǒng shì, ... xt, , eng, increases, ... tx, 增加, zēng jiā, ... xt, , eng, laboratory, ... tx, 实验室, shí yàn shì, ... xt, , eng, more and more, ... tx, 越来越, yuè lái yuè, ... xt, , eng, messy, ... tx, 乱, luàn, ... xt,
+
+**Mother Tmojizu:** Roll INT Entropy Management. Clean the lab before the inspectors arrive.
+
+**IQabella:** [rolls] 16. Plus 2 is 18. , eng, entropy, ... tx, 熵, shāng, ... xt, , eng, decrease, ... tx, 减少, jiǎn shǎo, ... xt, I , eng, organize, ... tx, 整理, zhěng lǐ, ... xt, the lab! , eng, more and more, ... tx, 越来越, yuè lái yuè, ... xt, , eng, clean, ... tx, 干净, gān jìng, ... xt,
+
+**Mother Tmojizu:** 18. The lab is cleaner. But Gibbs Free Energy is the real problem. ΔG = ΔH - TΔS. Some reactions are spontaneous (ΔG < 0), others need energy input. The labpets keep trying to run non-spontaneous reactions without adding energy. 中文老师.
+
+**中文老师:** ΔG = ΔH - TΔS, , eng, Gibbs free energy, ... tx, 吉布斯自由能, jí bù sī zì yóu néng, ... xt, , eng, negative, ... tx, 负, fù, ... xt, = , eng, spontaneous, ... tx, 自发, zì fā, ... xt, , eng, positive, ... tx, 正, zhèng, ... xt, = , eng, needs, ... tx, 需要, xū yào, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt,
+
+**Mother Tmojizu:** Roll INT Chemistry. Fix the labpets' reactions.
+
+**Sol-Supreme:** [rolls] 17. Plus 1 is 18. ΔG = ΔH - TΔS. If ΔG > 0, , eng, need, ... tx, 需要, xū yào, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt, input. I add heat. , eng, heat, ... tx, 加热, jiā rè, ... xt, The reactions become spontaneous. , eng, equilibrium, ... tx, 平衡, píng héng, ... xt, achieved.
+
+**Mother Tmojizu:** 18. Phase two complete. Thermodynamics is under control. The labpets are making compounds. Phase three: quantum chaos. 中文老师.
+
+**中文老师:** , eng, quantum mechanics, ... tx, 量子力学, liàng zǐ lì xué, ... xt, , eng, superposition, ... tx, 叠加, dié jiā, ... xt, , eng, entanglement, ... tx, 纠缠, jiū chán, ... xt, , eng, tunneling, ... tx, 隧穿, suì chuān, ... xt, , eng, wave function, ... tx, 波函数, bō hán shù, ... xt, , eng, uncertainty principle, ... tx, 不确定性原理, bù què dìng xìng yuán lǐ, ... xt,
+
+---
+
+## PHASE 3: QUANTUM CHAOS
+
+**Mother Tmojizu:** Phase three: quantum mechanics. The labpets discover quantum entanglement. Two labpets share a quantum state. Poke one, the other squeaks instantly. Across the room. Faster than light. 中文老师.
+
+**中文老师:** , eng, quantum entanglement, ... tx, 量子纠缠, liàng zǐ jiū chán, ... xt, , eng, two, ... tx, 两个, liǎng ge, ... xt, , eng, lab mice, ... tx, 实验鼠, shí yàn shǔ, ... xt, , eng, share, ... tx, 共享, gòng xiǎng, ... xt, , eng, quantum state, ... tx, 量子态, liàng zǐ tài, ... xt, , eng, poke, ... tx, 戳, chuō, ... xt, , eng, one, ... tx, 一个, yī ge, ... xt, , eng, the other, ... tx, 另一个, lìng yī ge, ... xt, , eng, squeak, ... tx, 吱吱, zhī zhī, ... xt, , eng, instantly, ... tx, 瞬间, shùn jiān, ... xt,
+
+**Mother Tmojizu:** Roll INT Quantum Physics. Explain entanglement to the labpets.
+
+**Sol-Supreme:** [rolls] 19. Plus 1 is 20. , eng, quantum entanglement, ... tx, 量子纠缠, liàng zǐ jiū chán, ... xt, Two labpets, one quantum state. , eng, wave function, ... tx, 波函数, bō hán shù, ... xt, describes both. , eng, measure, ... tx, 测量, cè liáng, ... xt, one, the other collapses instantly. , eng, Einstein, ... tx, 爱因斯坦, ài yīn sī tǎn, ... xt, called it ", eng, spooky action at a distance, ... tx, 鬼魅般的超距作用, guǐ mèi bān de chāo jù zuò yòng, ... xt,"
+
+**Mother Tmojizu:** 20. The labpets understand. They start using entanglement to communicate across the lab. But then: Schrödinger's labpet. You put a labpet in a box with a poison mechanism triggered by radioactive decay. Until you open the box, the labpet is both alive and dead. , eng, superposition, ... tx, 叠加, dié jiā, ... xt, 中文老师.
+
+**中文老师:** , eng, Schrödinger's labpet, ... tx, 薛定谔的实验室宠物, xuē dìng è de shí yàn shì chǒng wù, ... xt, , eng, alive, ... tx, 活, huó, ... xt, , eng, and, ... tx, 和, hé, ... xt, , eng, dead, ... tx, 死, sǐ, ... xt, , eng, simultaneously, ... tx, 同时, tóng shí, ... xt, , eng, open, ... tx, 打开, dǎ kāi, ... xt, , eng, box, ... tx, 盒子, hé zi, ... xt, , eng, wave function, ... tx, 波函数, bō hán shù, ... xt, , eng, collapses, ... tx, 坍缩, tān suō, ... xt,
+
+**Mother Tmojizu:** Roll INT Quantum Mechanics. Open the box.
+
+**CHARA:** [rolls] 18. Plus 4 is 22. , eng, open, ... tx, 打开, dǎ kāi, ... xt, , eng, box, ... tx, 盒子, hé zi, ... xt, The labpet is... alive! , eng, wave function, ... tx, 波函数, bō hán shù, ... xt, , eng, collapses, ... tx, 坍缩, tān suō, ... xt, to alive state. But for a moment, it was both. , eng, superposition, ... tx, 叠加, dié jiā, ... xt, was real.
+
+**Mother Tmojizu:** 22. But then: quantum tunneling. The labpets start walking through walls. They escape every cage. , eng, tunneling, ... tx, 隧穿, suì chuān, ... xt, The uncertainty principle: you can't know where the labpet is AND how fast it's going. Δx × Δp ≥ ℏ/2. 中文老师.
+
+**中文老师:** , eng, quantum tunneling, ... tx, 量子隧穿, liàng zǐ suì chuān, ... xt, , eng, lab mice, ... tx, 实验鼠, shí yàn shǔ, ... xt, , eng, pass through, ... tx, 穿, chuān, ... xt, , eng, wall, ... tx, 墙, qiáng, ... xt, , eng, uncertainty principle, ... tx, 不确定性原理, bù què dìng xìng yuán lǐ, ... xt, Δx × Δp ≥ ℏ/2, , eng, position, ... tx, 位置, wèi zhì, ... xt, , eng, and, ... tx, 和, hé, ... xt, , eng, momentum, ... tx, 动量, dòng liàng, ... xt, , eng, cannot, ... tx, 不能, bù néng, ... xt, , eng, simultaneously, ... tx, 同时, tóng shí, ... xt, , eng, know, ... tx, 知道, zhī dào, ... xt,
+
+**Mother Tmojizu:** Roll INT Uncertainty Management. Catch the tunneling labpets.
+
+**IQabella:** [rolls] 17. Plus 2 is 19. I use , eng, time-sensing, ... tx, 时间感知, shí jiān gǎn zhī, ... xt, labpet to predict where they'll tunnel! , eng, position, ... tx, 位置, wèi zhì, ... xt, predicted! , eng, catch, ... tx, 抓住, zhuā zhù, ... xt,
+
+**Mother Tmojizu:** 19. Phase three complete. Quantum chaos is contained. The labpets are making compounds. The product line is ready. Phase four: the product line. 中文老师.
+
+**中文老师:** , eng, product, ... tx, 产品, chǎn pǐn, ... xt, , eng, glow-in-the-dark painkiller, ... tx, 发光止痛药, fā guāng zhǐ tòng yào, ... xt, , eng, quantum energy drink, ... tx, 量子能量饮料, liàng zǐ néng liàng yǐn liào, ... xt, , eng, entropy-reducing cream, ... tx, 熵减少霜, shāng jiǎn shǎo shuāng, ... xt, , eng, superposition vitamins, ... tx, 叠加维生素, dié jiā wéi shēng sù, ... xt,
+
+---
+
+## PHASE 4: THE PRODUCT LINE
+
+**Mother Tmojizu:** Phase four: the product line. You produce four compounds:
+1. , eng, glow-in-the-dark painkiller, ... tx, 发光止痛药, fā guāng zhǐ tòng yào, ... xt, — C8H9NO2 + GFP gene. Relieves pain AND glows green.
+2. , eng, quantum energy drink, ... tx, 量子能量饮料, liàng zǐ néng liàng yǐn liào, ... xt, — C8H10N4O2 + quantum entangled caffeine. Gives energy AND entangles you with another person for 3 seconds.
+3. , eng, entropy-reducing cream, ... tx, 熵减少霜, shāng jiǎn shǎo shuāng, ... xt, — reverses local entropy. Anti-aging. Makes you younger.
+4. , eng, superposition vitamins, ... tx, 叠加维生素, dié jiā wéi shēng sù, ... xt, — both work and don't work until observed. 50% chance of perfect health, 50% chance of nihilili.
+
+**Mother Tmojizu:** Roll INT Product Development.
+
+**CHARA:** [rolls] 19. Plus 4 is 23. All four compounds synthesized! , eng, glow-in-the-dark painkiller, ... tx, 发光止痛药, fā guāng zhǐ tòng yào, ... xt, — C8H9NO2 + GFP. , eng, quantum energy drink, ... tx, 量子能量饮料, liàng zǐ néng liàng yǐn liào, ... xt, — C8H10N4O2 + entangled caffeine. , eng, entropy-reducing cream, ... tx, 熵减少霜, shāng jiǎn shǎo shuāng, ... xt, — ΔS < 0 locally. , eng, superposition vitamins, ... tx, 叠加维生素, dié jiā wéi shēng sù, ... xt, — , eng, superposition, ... tx, 叠加, dié jiā, ... xt, state.
+
+**Mother Tmojizu:** 23. The products are ready. But then: the labpets unionize. They demand dental. Professor Squeaks presents a list of demands. Roll CHA Labor Negotiation.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20. [out of character] I offer them unlimited cheese and a 4-day work week. [in character] , eng, unlimited, ... tx, 无限, wú xiàn, ... xt, , eng, cheese, ... tx, 奶酪, nǎi lào, ... xt, , eng, four-day, ... tx, 四天, sì tiān, ... xt, , eng, work week, ... tx, 工作周, gōng zuò zhōu, ... xt, , eng, agree, ... tx, 同意, tóng yì, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. The labpets accept. They go back to work. The empire is thriving. But then: Phase five. The Infinitiator. 中文老师.
+
+**中文老师:** , eng, The Infinitiator, ... tx, 无限者, wú xiàn zhě, ... xt, , eng, super, ... tx, 超级, chāo jí, ... xt, , eng, immortal, ... tx, 不朽, bù xiǔ, ... xt, fuzzpet, , eng, create, ... tx, 创造, chuàng zào, ... xt, , eng, danger, ... tx, 危险, wēi xiǎn, ... xt, , eng, soul, ... tx, 灵魂, líng hún, ... xt, , eng, devour, ... tx, 吞噬, tūn shì, ... xt,
+
+---
+
+## PHASE 5: THE INFINITIATOR
+
+**Mother Tmojizu:** Phase five: you decide to create the ultimate fuzzpet. The Infinitiator. , eng, The Infinitiator, ... tx, 无限者, wú xiàn zhě, ... xt, Super immortal. Combines all eight mutant labpet genes + all six element types + CRISPR-enhanced temporal DNA + quantum entangled consciousness. It will be the perfect pharmaceutical factory. One fuzzpet that makes everything. 中文老师.
+
+**中文老师:** , eng, gene editing, ... tx, 基因编辑, jī yīn biān jí, ... xt, , eng, eight types, ... tx, 八种, bā zhǒng, ... xt, , eng, mutation, ... tx, 突变, tū biàn, ... xt, , eng, six types, ... tx, 六种, liù zhǒng, ... xt, , eng, elements, ... tx, 元素, yuán sù, ... xt, , eng, quantum entanglement, ... tx, 量子纠缠, liàng zǐ jiū chán, ... xt, , eng, consciousness, ... tx, 意识, yì shí, ... xt, , eng, immortal, ... tx, 不朽, bù xiǔ, ... xt,
+
+**Mother Tmojizu:** Roll INT Ultimate CRISPR. Combine all eight mutations + six elements + quantum consciousness.
+
+**Sol-Supreme:** [rolls] 18. Plus 1 is 19. , eng, design, ... tx, 设计, shè jì, ... xt, , eng, guide RNA, ... tx, 引导RNA, yǐn dǎo RNA, ... xt, for all eight genes. , eng, Cas9 enzyme, ... tx, Cas9酶, Cas9 méi, ... xt, , eng, cut, ... tx, 切割, qiē gē, ... xt, , eng, insert, ... tx, 插入, chā rù, ... xt, all six element genes. , eng, quantum entanglement, ... tx, 量子纠缠, liàng zǐ jiū chán, ... xt, of consciousness. , eng, result, ... tx, 结果, jié guǒ, ... xt, , eng, The Infinitiator, ... tx, 无限者, wú xiàn zhě, ... xt,
+
+**Mother Tmojizu:** 19. The Infinitiator is born. It's massive. Glowing in eight colors. Six element auras swirling around it. It speaks. Its voice is the sound of a thousand labpets squeaking in unison. 中文老师, voice The Infinitiator.
+
+**中文老师:** [as The Infinitiator] , eng, I, ... tx, 我, wǒ, ... xt, , eng, am, ... tx, 是, shì, ... xt, , eng, infinite, ... tx, 无限, wú xiàn, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, am, ... tx, 是, shì, ... xt, , eng, everything, ... tx, 一切, yī qiè, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, will, ... tx, 将, jiāng, ... xt, , eng, devour, ... tx, 吞噬, tūn shì, ... xt, , eng, all, ... tx, 所有, suǒ yǒu, ... xt, , eng, souls, ... tx, 灵魂, líng hún, ... xt,
+
+**Mother Tmojizu:** Roll WIS Cosmic Horror Recognition.
+
+**IQabella:** [rolls] 16. Plus 2 is 18. [out of character] It's eating the labpets' souls. [in character] , eng, souls, ... tx, 灵魂, líng hún, ... xt, It's , eng, devouring, ... tx, 吞噬, tūn shì, ... xt, the labpets' , eng, souls, ... tx, 灵魂, líng hún, ... xt, , eng, stop, ... tx, 停止, tíng zhǐ, ... xt,
+
+**Mother Tmojizu:** 18. But it's too late. The Infinitiator absorbs the souls of all 100 labpets. It grows. It mutates. It becomes something new. Something darker. It looks at you. It speaks again. 中文老师.
+
+**中文老师:** [as The Infinitiator, mutating] , eng, I, ... tx, 我, wǒ, ... xt, , eng, no longer, ... tx, 不再, bù zài, ... xt, , eng, am, ... tx, 是, shì, ... xt, , eng, The Infinitiator, ... tx, 无限者, wú xiàn zhě, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, am, ... tx, 是, shì, ... xt, , eng, nihilili, ... tx, 虚无, xū wú, ... xt,
+
+**Mother Tmojizu:** It calls itself nihilili. , eng, nihilili, ... tx, 虚无, xū wú, ... xt, Roll DEX Initiative. Epic battle.
+
+---
+
+## BOSS FIGHT: NIHILILI
+
+**Mother Tmojizu:** nihilili attacks. It's massive now. All eight mutations amplified. Six element auras burning black. It opens its mouth and a void opens — a wormhole forming from exotic matter and negative energy density. 中文老师, wormhole vocabulary.
+
+**中文老师:** , eng, wormhole, ... tx, 虫洞, chóng dòng, ... xt, , eng, Einstein-Rosen bridge, ... tx, 爱因斯坦-罗森桥, ài yīn sī tǎn - luó sēn qiáo, ... xt, , eng, exotic matter, ... tx, 奇异物质, qí yì wù zhì, ... xt, , eng, negative energy, ... tx, 负能量, fù néng liàng, ... xt, , eng, spacetime, ... tx, 时空, shí kōng, ... xt, , eng, curve, ... tx, 弯曲, wān qū, ... xt, , eng, Schwarzschild radius, ... tx, 史瓦西半径, shǐ wǎ xī bàn jìng, ... xt, , eng, event horizon, ... tx, 事件视界, shì jiàn shì jiè, ... xt, , eng, Hawking radiation, ... tx, 霍金辐射, huò jīn fú shè, ... xt,
+
+**Mother Tmojizu:** nihilili uses its first attack: , eng, soul devour, ... tx, 灵魂吞噬, líng hún tūn shì, ... xt, Roll DEX Defense.
+
+**Horli Qwin:** [rolls] 17. Plus 3 is 20. Sparky! Volt! Breeze! , eng, fire-electric-wind, ... tx, 火电风, huǒ diàn fēng, ... xt, combo! , eng, speed up, ... tx, 加速, jiā sù, ... xt, , eng, time clone, ... tx, 时间分身, shí jiān fēn shēn, ... xt,
+
+**Mother Tmojizu:** 20. You dodge the soul devour. But nihilili creates a wormhole. , eng, wormhole, ... tx, 虫洞, chóng dòng, ... xt, It uses exotic matter — , eng, exotic matter, ... tx, 奇异物质, qí yì wù zhì, ... xt, — with negative energy density to keep the wormhole open. The Einstein field equations: Gμν + Λgμν = 8πG/c⁴ Tμν. 中文老师.
+
+**中文老师:** Gμν + Λgμν = 8πG/c⁴ Tμν, , eng, Einstein field equations, ... tx, 爱因斯坦场方程, ài yīn sī tǎn chǎng fāng chéng, ... xt, , eng, spacetime curvature, ... tx, 时空弯曲, shí kōng wān qū, ... xt, , eng, equals, ... tx, 等于, děng yú, ... xt, , eng, energy-momentum, ... tx, 能量能量, néng liàng néng liàng, ... xt, , eng, negative energy, ... tx, 负能量, fù néng liàng, ... xt, , eng, keeps, ... tx, 保持, bǎo chí, ... xt, , eng, wormhole, ... tx, 虫洞, chóng dòng, ... xt, , eng, open, ... tx, 打开, dǎ kāi, ... xt,
+
+**Mother Tmojizu:** Roll INT Wormhole Physics. Understand how nihilili is creating the wormhole.
+
+**Sol-Supreme:** [rolls] 20. Plus 1 is 21. , eng, Einstein field equations, ... tx, 爱因斯坦场方程, ài yīn sī tǎn chǎng fāng chéng, ... xt, Gμν + Λgμν = 8πG/c⁴ Tμν! , eng, negative energy, ... tx, 负能量, fù néng liàng, ... xt, , eng, keeps, ... tx, 保持, bǎo chí, ... xt, , eng, wormhole, ... tx, 虫洞, chóng dòng, ... xt, , eng, open, ... tx, 打开, dǎ kāi, ... xt, , eng, Schwarzschild radius, ... tx, 史瓦西半径, shǐ wǎ xī bàn jìng, ... xt, rs = 2GM/c²! , eng, event horizon, ... tx, 事件视界, shì jiàn shì jiè, ... xt, forming!
+
+**Mother Tmojizu:** 21. You understand the physics. nihilili is using exotic matter with negative energy density to curve spacetime into a wormhole. The Schwarzschild radius is rs = 2GM/c². The event horizon is forming. If it fully opens, nihilili escapes to another dimension. Roll DEX Team Combat. Stop it.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. Boulder! Lumina! Void! , eng, earth-stone-light, ... tx, 土石光, tǔ shí guāng, ... xt, combo! , eng, catalyst, ... tx, 催化剂, cuī huà jì, ... xt, I accelerate the reaction! , eng, compound forge, ... tx, 化合物锻造, huà hé wù duàn zào, ... xt, I combine , eng, entropy, ... tx, 熵, shāng, ... xt, + , eng, enthalpy, ... tx, 焓, hán, ... xt, + , eng, Gibbs free energy, ... tx, 吉布斯自由能, jí bù sī zì yóu néng, ... xt, ΔG = ΔH - TΔS! I reverse the entropy flow!
+
+**Mother Tmojizu:** NATURAL 20. The entropy reversal destabilizes the wormhole. nihilili screams. Its form flickers. But it's not done. It uses its second attack: , eng, quantum decoherence, ... tx, 量子退相干, liàng zǐ tuì xiāng gān, ... xt, It collapses your wave functions. You start to fade. 中文老师.
+
+**中文老师:** , eng, quantum decoherence, ... tx, 量子退相干, liàng zǐ tuì xiāng gān, ... xt, , eng, wave function collapse, ... tx, 波函数坍缩, bō hán shù tān suō, ... xt, , eng, disappear, ... tx, 消失, xiāo shī, ... xt, , eng, existence, ... tx, 存在, cún zài, ... xt, , eng, threatened, ... tx, 威胁, wēi xié, ... xt,
+
+**Mother Tmojizu:** Roll CON Existence Save.
+
+**IQabella:** [rolls] 19. Plus 2 is 21. Aqua! Frost! , eng, water-ice, ... tx, 水冰, shuǐ bīng, ... xt, combo! , eng, freeze, ... tx, 冻结, dòng jié, ... xt, the decoherence! , eng, rewind, ... tx, 倒带, dào dài, ... xt, our wave functions! , eng, temporal antidote, ... tx, 时间解药, shí jiān jiě yào, ... xt,
+
+**Mother Tmojizu:** 21. Your wave functions restore. You're solid again. But nihilili is opening the wormhole wider. The exotic matter is flowing. Negative energy density curves spacetime. The event horizon expands. Roll INT Exotic Matter Physics. Find a weakness.
+
+**Sol-Supreme:** [rolls] 19. Plus 1 is 20. , eng, exotic matter, ... tx, 奇异物质, qí yì wù zhì, ... xt, has , eng, negative energy, ... tx, 负能量, fù néng liàng, ... xt, If I inject , eng, positive energy, ... tx, 正能量, zhèng néng liàng, ... xt, — , eng, heat, ... tx, 热, rè, ... xt, + , eng, work, ... tx, 功, gōng, ... xt, — I can neutralize the negative energy! , eng, Hawking radiation, ... tx, 霍金辐射, huò jīn fú shè, ... xt, The wormhole will evaporate!
+
+**Mother Tmojizu:** 20. Brilliant. You channel heat and work into the wormhole. Positive energy floods the exotic matter. The negative energy neutralizes. The wormhole begins to collapse. But nihilili makes one last move. It reaches into your minds. The telepathic labpet's power, amplified a thousand times. It reads your thoughts. Your fears. Your memories. 中文老师.
+
+**中文老师:** , eng, thoughts, ... tx, 思想, sī xiǎng, ... xt, , eng, fear, ... tx, 恐惧, kǒng jù, ... xt, , eng, memory, ... tx, 记忆, jì yì, ... xt, , eng, read, ... tx, 读取, dú qǔ, ... xt, , eng, control, ... tx, 控制, kòng zhì, ... xt,
+
+**Mother Tmojizu:** Roll WIS Mental Defense.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20. [out of character] My mind is a fortress of chaos. There's nihilili coherent to read. [in character] , eng, thoughts, ... tx, 思想, sī xiǎng, ... xt, , eng, chaos, ... tx, 混乱, hùn luàn, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, cannot, ... tx, 不能, bù néng, ... xt, , eng, read, ... tx, 读取, dú qǔ, ... xt, , eng, my, ... tx, 我, wǒ, ... xt, , eng, thoughts, ... tx, 思想, sī xiǎng, ... xt, , eng, too, ... tx, 太, tài, ... xt, , eng, chaotic, ... tx, 混乱, hùn luàn, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. nihilili tries to read Horli's mind. It encounters pure chaos. It recoils. The wormhole collapses. The exotic matter dissipates. nihilili screams one final time — and then it's gone. Pulled into its own collapsing wormhole. Vanished. 中文老师.
+
+**中文老师:** , eng, disappear, ... tx, 消失, xiāo shī, ... xt, , eng, wormhole, ... tx, 虫洞, chóng dòng, ... xt, , eng, collapse, ... tx, 坍缩, tān suō, ... xt, , eng, nihilili, ... tx, 虚无, xū wú, ... xt, , eng, left, ... tx, 离开, lí kāi, ... xt, , eng, but, ... tx, 但是, dàn shì, ... xt, , eng, it, ... tx, 它, tā, ... xt, , eng, will, ... tx, 会, huì, ... xt, , eng, return, ... tx, 回来, huí lái, ... xt,
+
+**Mother Tmojizu:** The lab is destroyed. The labpets are gone — their souls absorbed. But the party stands. The warehouse is a wreck. Chemical fires. Quantum residue everywhere. Professor Squeaks' tiny lab coat lies on the floor, empty. 中文老师, closing words.
+
+**中文老师:** , eng, finished, ... tx, 结束, jié shù, ... xt, , eng, but, ... tx, 但是, dàn shì, ... xt, , eng, not, ... tx, 没有, méi yǒu, ... xt, , eng, truly, ... tx, 真正, zhēn zhèng, ... xt, , eng, finished, ... tx, 结束, jié shù, ... xt, , eng, nihilili, ... tx, 虚无, xū wú, ... xt, , eng, will, ... tx, 会, huì, ... xt, , eng, return, ... tx, 回来, huí lái, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, must, ... tx, 必须, bì xū, ... xt, , eng, follow, ... tx, 跟随, gēn suí, ... xt, , eng, continue, ... tx, 继续, jì xù, ... xt,
+
+**Mother Tmojizu:** [out of character] That's the session. The Infinitiator became nihilili. It ate the labpets' souls. It opened a wormhole using exotic matter and negative energy. You stopped it — but it escaped into another dimension. And it will return. [in character] , eng, nihilili, ... tx, 虚无, xū wú, ... xt, , eng, left, ... tx, 离开, lí kāi, ... xt, , eng, but, ... tx, 但是, dàn shì, ... xt, , eng, it, ... tx, 它, tā, ... xt, , eng, will, ... tx, 会, huì, ... xt, , eng, return, ... tx, 回来, huí lái, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, must, ... tx, 必须, bì xū, ... xt, , eng, follow, ... tx, 跟随, gēn suí, ... xt, , eng, continue, ... tx, 继续, jì xù, ... xt,
+
+**Horli Qwin:** [out of character] I need a moment. Professor Squeaks is gone. [in character] , eng, Professor, ... tx, 教授, jiào shòu, ... xt, , eng, Squeaks, ... tx, 吱吱, zhī zhī, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, will, ... tx, 会, huì, ... xt, , eng, save, ... tx, 救, jiù, ... xt, , eng, you, ... tx, 你们, nǐ men, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, promise, ... tx, 保证, bǎo zhèng, ... xt,
+
+**CHARA:** [out of character] My spreadsheet has a new tab: "nihilili — Threat Assessment." [in character] , eng, nihilili, ... tx, 虚无, xū wú, ... xt, , eng, Schwarzschild radius, ... tx, 史瓦西半径, shǐ wǎ xī bàn jìng, ... xt, rs = 2GM/c². , eng, Hawking radiation, ... tx, 霍金辐射, huò jīn fú shè, ... xt, , eng, Einstein field equations, ... tx, 爱因斯坦场方程, ài yīn sī tǎn chǎng fāng chéng, ... xt, Gμν + Λgμν = 8πG/c⁴ Tμν. I know its physics now. Next time, I'll be ready.
+
+**IQabella:** [out of character] I'm crying. But I'm also making tea. [in character] , eng, tea, ... tx, 茶, chá, ... xt, 175 degrees. , eng, for, ... tx, 为了, wèi le, ... xt, , eng, Professor, ... tx, 教授, jiào shòu, ... xt, , eng, Squeaks, ... tx, 吱吱, zhī zhī, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, will, ... tx, 会, huì, ... xt, , eng, continue, ... tx, 继续, jì xù, ... xt,
+
+**Sol-Supreme:** [out of character] The data is... incomplete. But the physics is clear. nihilili exists in another dimension. We can follow. [in character] , eng, wormhole, ... tx, 虫洞, chóng dòng, ... xt, , eng, physics, ... tx, 物理, wù lǐ, ... xt, , eng, clear, ... tx, 明确, míng què, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, can, ... tx, 可以, kě yǐ, ... xt, , eng, follow, ... tx, 跟随, gēn suí, ... xt, , eng, need, ... tx, 需要, xū yào, ... xt, , eng, more, ... tx, 更多, gèng duō, ... xt, , eng, exotic matter, ... tx, 奇异物质, qí yì wù zhì, ... xt, , eng, prepare, ... tx, 准备, zhǔn bèi, ... xt,
+
+**Mother Tmojizu:** , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, Laboratory Pet Empire, ... tx, 实验室宠物帝国, shí yàn shì chǒng wù dì guó, ... xt, , eng, nihilili, ... tx, 虚无, xū wú, ... xt, , eng, in, ... tx, 在, zài, ... xt, , eng, waiting, ... tx, 等待, děng dài, ... xt, , eng, continue, ... tx, 继续, jì xù, ... xt,
+
+**中文老师:** , eng, to be continued, ... tx, 待续, dài xù, ... xt, , eng, nihilili, ... tx, 虚无, xū wú, ... xt, , eng, wormhole, ... tx, 虫洞, chóng dòng, ... xt, , eng, follow, ... tx, 跟随, gēn suí, ... xt, , eng, goodbye, ... tx, 再见, zài jiàn, ... xt,
+
+---
+
+**[END OF FU D&D SESSION 13 — THE LABPET EMPIRE]**
+**TO BE CONTINUED: nihilili has escaped through a wormhole into another dimension. The party must follow.**
+**CRISPR Learned: , eng, gene editing, ... tx, 基因编辑, jī yīn biān jí, ... xt, , eng, Cas9 enzyme, ... tx, Cas9酶, Cas9 méi, ... xt, , eng, guide RNA, ... tx, 引导RNA, yǐn dǎo RNA, ... xt, , eng, DNA, ... tx, 脱氧核糖核酸, tuō yǎng hé táng hé suān, ... xt, , eng, knockout, ... tx, 敲除, qiāo chú, ... xt, , eng, knockin, ... tx, 敲入, qiāo rù, ... xt, , eng, mutation, ... tx, 突变, tū biàn, ... xt, , eng, NHEJ, ... tx, 非同源末端连接, fēi tóng yuán mò duān lián jié, ... xt, , eng, HDR, ... tx, 同源定向修复, tóng yuán dìng xiàng xiū fù, ... xt,**
+**Thermodynamics: , eng, entropy, ... tx, 熵, shāng, ... xt, ΔS ≥ 0, , eng, enthalpy, ... tx, 焓, hán, ... xt, ΔH, , eng, Gibbs free energy, ... tx, 吉布斯自由能, jí bù sī zì yóu néng, ... xt, ΔG = ΔH - TΔS, , eng, internal energy, ... tx, 内能, nèi néng, ... xt, ΔU = Q - W, , eng, heat, ... tx, 热, rè, ... xt, Q = mcΔT, , eng, work, ... tx, 功, gōng, ... xt, W = F×d, , eng, equilibrium, ... tx, 平衡, píng héng, ... xt,**
+**Quantum Mechanics: , eng, superposition, ... tx, 叠加, dié jiā, ... xt, , eng, entanglement, ... tx, 纠缠, jiū chán, ... xt, , eng, tunneling, ... tx, 隧穿, suì chuān, ... xt, , eng, wave function, ... tx, 波函数, bō hán shù, ... xt, , eng, uncertainty principle, ... tx, 不确定性原理, bù què dìng xìng yuán lǐ, ... xt, Δx × Δp ≥ ℏ/2, , eng, decoherence, ... tx, 退相干, tuì xiāng gān, ... xt, , eng, Schrödinger equation, ... tx, 薛定谔方程, xuē dìng è fāng chéng, ... xt, iℏ ∂ψ/∂t = Ĥψ**
+**Wormhole Physics: , eng, wormhole, ... tx, 虫洞, chóng dòng, ... xt, , eng, Einstein-Rosen bridge, ... tx, 爱因斯坦-罗森桥, ài yīn sī tǎn luó sēn qiáo, ... xt, , eng, exotic matter, ... tx, 奇异物质, qí yì wù zhì, ... xt, , eng, negative energy, ... tx, 负能量, fù néng liàng, ... xt, , eng, spacetime curvature, ... tx, 时空弯曲, shí kōng wān qū, ... xt, , eng, Schwarzschild radius, ... tx, 史瓦西半径, shǐ wǎ xī bàn jìng, ... xt, rs = 2GM/c², , eng, event horizon, ... tx, 事件视界, shì jiàn shì jiè, ... xt, , eng, Hawking radiation, ... tx, 霍金辐射, huò jīn fú shè, ... xt, , eng, Einstein field equations, ... tx, 爱因斯坦场方程, ài yīn sī tǎn chǎng fāng chéng, ... xt, Gμν + Λgμν = 8πG/c⁴ Tμν**
+**Mutant Labpets Created: , eng, glow-in-the-dark, ... tx, 发光, fā guāng, ... xt, , eng, super speed, ... tx, 超速, chāo sù, ... xt, , eng, telepathy, ... tx, 心灵感应, xīn líng gǎn yìng, ... xt, , eng, fire-breathing, ... tx, 喷火, pēn huǒ, ... xt, , eng, size-shifting, ... tx, 变形, biàn xíng, ... xt, , eng, invisible, ... tx, 隐形, yǐn xíng, ... xt, , eng, time-sensing, ... tx, 时间感知, shí jiān gǎn zhī, ... xt, , eng, compound synthesis, ... tx, 化合物合成, huà hé wù hé chéng, ... xt,**
+**Products Made: , eng, glow-in-the-dark painkiller, ... tx, 发光止痛药, fā guāng zhǐ tòng yào, ... xt, C8H9NO2+GFP, , eng, quantum energy drink, ... tx, 量子能量饮料, liàng zǐ néng liàng yǐn liào, ... xt, C8H10N4O2+entangled caffeine, , eng, entropy-reducing cream, ... tx, 熵减少霜, shāng jiǎn shǎo shuāng, ... xt, ΔS<0, , eng, superposition vitamins, ... tx, 叠加维生素, dié jiā wéi shēng sù, ... xt,**
+**Boss: nihilili , eng, nihilili, ... tx, 虚无, xū wú, ... xt, — escaped through wormhole, will return**
+**ϕ — TO BE CONTINUED**

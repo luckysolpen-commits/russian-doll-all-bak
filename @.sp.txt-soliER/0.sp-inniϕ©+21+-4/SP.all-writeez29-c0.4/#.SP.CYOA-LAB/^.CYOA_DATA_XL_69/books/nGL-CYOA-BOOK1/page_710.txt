@@ -1,0 +1,4 @@
+You enter the storage bay, finding yourself surrounded by crates filled with holographic projectors, spare parts for exhibits, and bizarre Angler-themed decorations. It seems like a good place to hide and observe. You see a large, double door labeled "Exhibit Hall Access - Authorized Personnel Only."
+
+*   Attempt to open the "Exhibit Hall Access" door. Turn to page 711.
+*   Search the storage bay for useful items or alternative exits. Turn to page 712.

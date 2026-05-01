@@ -1,0 +1,53 @@
+# PART 2 — SESSION 1: "THE FOUNDATION"
+## Clone Chronicles — Part 2, Session 1 of 10
+### Power: Local | Status: Choosing factions, claiming territory
+
+---
+
+## SESSION OVERVIEW
+
+The clones are trillionaires. They own the Blood Market. Now they choose factions, claim territories, and begin building empires. This session is about foundation-laying: faction choice, territory claims, initial infrastructure.
+
+## KEY BEATS
+
+1. **The Transition** — Mother Tmojizu opens: "You're free. You're rich. You own the market. But freedom is expensive. What do you build?"
+2. **Faction Choice** — Each clone chooses a faction (Crustacean Bastion, Primate Swarm, Thunderhoof Legion, Aether Wings).
+3. **Territory Claim** — Each clone claims their starting territory on the map.
+4. **Initial Build** — HR, R&D, Manufacturing, Finance decisions for Turn 1.
+5. **End of Turn 1** — Hook for Session 2.
+
+## FACTION CHOICE MECHANICS
+
+Each clone chooses based on personality and strategy:
+- **Crustacean Bastion** (Siege) — Defensive, armored. For the patient builder.
+- **Primate Swarm** (Horde) — Numbers, aggression. For the chaotic hustler.
+- **Thunderhoof Legion** (Mobile) — Speed, hit-and-run. For the strategic mover.
+- **Aether Wings** (Air) — Range, recon. For the visionary.
+
+**Rock-Paper-Scissors:** Siege > Horde > Mobile > Air > Siege
+
+## TERRITORY CLAIM MECHANICS
+
+- Each clone claims 1 territory (starting claim)
+- Territory types: Government Land (safe, taxed), Company Claims (competitive), Unclaimed/Wild (dangerous, free)
+- WIS (Insight) to choose the best territory
+- INT (Investigation) to assess resource potential
+
+## COMPLICATION (d6)
+| Roll | Complication |
+|------|-------------|
+| 1 | Two clones claim adjacent territories — border tension |
+| 2 | A valuable resource node appears in Unclaimed territory |
+| 3 | Chimochio taxes the clones' new territories |
+| 4 | A barbarian faction raids a clone's territory |
+| 5 | The House demands its cut of the empire |
+| 6 | The Original sends a message: "I'm watching." |
+
+## END STATE
+- Each clone has a faction and territory
+- Initial infrastructure is built
+- Hook: "Your first trade deal is ready. But the market is volatile."
+
+---
+
+**ϕ**

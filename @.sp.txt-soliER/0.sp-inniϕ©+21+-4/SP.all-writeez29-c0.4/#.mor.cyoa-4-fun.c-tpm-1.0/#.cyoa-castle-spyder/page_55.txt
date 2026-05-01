@@ -1,0 +1,12 @@
+**Page 55: The Dripping Water Source**
+
+You follow the sound of dripping water to a small, moss-covered cistern. It's filled with clear, cool water, a welcome find. As you drink, you notice intricate carvings on the stone surrounding the cistern, depicting celestial patterns and strange, spiraling symbols.
+
+Hydration: 10/10 (Fully hydrated)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 3/10 (Found a water source and observed cryptic carvings)
+
+What do you do?
+
+*   If you try to decipher the celestial patterns, turn to page 83.
+*   If you decide to explore the rest of the damp chamber, turn to page 82.

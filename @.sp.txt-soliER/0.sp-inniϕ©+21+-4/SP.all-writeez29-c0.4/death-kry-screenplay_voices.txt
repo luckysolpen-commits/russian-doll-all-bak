@@ -1,0 +1,19 @@
+# Voice mappings for: 3.DEATH-KRYO!]big]b2/death-kry-screenplay
+# Generated on: 2026-04-19 17:26:11
+# Copy and paste these lines directly into your EXISTING_VOICE_MAP dictionary
+
+    "DORCHESTER": "en-US-AndrewNeural",
+    "SPIKE": "en-US-AndrewNeural",
+    "NEW-KOREA GENERAL": "en-US-AndrewNeural",
+    "SOO-JIN": "en-US-AndrewNeural",
+    "JI-HYUN": "en-US-AndrewNeural",
+    "LUNA": "en-US-AndrewNeural",
+    "ASSISTANT": "en-US-AndrewNeural",
+    "SAOIRSE": "en-US-AndrewNeural",
+    "RAVEN": "en-US-AndrewNeural",
+    "MER-ELDER": "en-US-AndrewNeural",
+    "HYE-MI": "en-US-AndrewNeural",
+    "MI-SUN": "en-US-AndrewNeural",
+    "MER-PEOPLE DIPLOMAT": "en-US-AndrewNeural",
+    "TECHNICIAN": "en-US-AndrewNeural",
+    "THE ARCHITECT": "en-US-AndrewNeural",

@@ -1,0 +1,80 @@
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_01_cryptic_summons.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_02_arrival_mine_camp.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_03_architects_double_game.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_04_uns_response.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_05_equestrian_games_announced.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_06_machines_of_war.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_07_olympics_of_destruction.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_08_unexpected_challengers.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_09_01_agility_strength.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_09_02_equestrian_skills.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_09_03_sumo_battle.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_09_04_aerial_acrobatics.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_10_vote_of_citizens.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_11_icarus_departure.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_12_metal_sun_rises.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_13_un_seeks_luckys_help.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_14_world_police_bots_take_control.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_15_astras_choice.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_16_supreme_emperor_sol.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_17_astras_resolve.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_18_luckys_struggle.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_19_edge_dangermans_dilemma.txt
+../SP.all-writeez28-c0.3/5.SUPERWAR.ikrs]FULwc]bk0/scene_20_gems_lab.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_001_METAL_SUN_RISES.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_002_WORLD_POLICE_BOTS_LAUNCH.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_003_WORLD_POLICE_BOTS_TAKE_CONTROL.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_004_SUPREME_EMPEROR_SOL.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_005_EDGES_BETRAYAL.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_006_CORE_OF_DESPAIR.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_008_TUNNEL_VISION.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_010_SURFACE_COMES_INTO_VIEW.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_011_NEW_CHALLENGE.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_012_CARAMELLE_NEST.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_013_MUTAGEN_HEIST.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_014_BATTLE_FOR_MUTAGEN.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_015_BLUE_BIRD_RESCUE.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_016_JOURNEY_TO_IKARUS.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_017_AVANTA_C_AVATAR_SELECTION.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_018_AVANTA_C_ENTRY.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_019_AVANTA_C_EXPLORATION.txt
+../SP.all-writeez28-c0.3/6.hellride-bk0]BIG]b1/SCENE_020_AVANTA_C_ENCOUNTER.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_10_INT_GLITCH_WORLD_OLD_DATA_CENTER_INTERIOR_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_11_INT_GLITCH_WORLD_CITY_PARK_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_12_INT_GLITCH_WORLD_CITY_PARK_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_13_INT_GLITCH_WORLD_CITY_PARK_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_14_INT_GLITCH_WORLD_CITY_PARK_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_15_INT_GLITCH_WORLD_MAINTENANCE_TUNNEL_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_16_INT_GLITCH_WORLD_THE_CORE_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_17_INT_GLITCH_WORLD_THE_CORE_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_18_INT_GLITCH_WORLD_THE_CORE_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_19_INT_GLITCH_WORLD_THE_CORE_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_1_INT_GLITCH_WORLD_BUSTLING_CITY_STREET_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_20_INT_GLITCH_WORLD_EDGE_OF_SIMULATION_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_2_INT_GLITCH_WORLD_BUSTLING_CITY_STREET_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_3_INT_GLITCH_WORLD_ABANDONED_APARTMENT_NIGHT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_4_INT_GLITCH_WORLD_DOWNTOWN_STREETS_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_5_INT_GLITCH_WORLD_OLD_LIBRARY_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_6_INT_GLITCH_WORLD_OLD_LIBRARY_DAY_CONT.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_7_INT_GLITCH_WORLD_INDUSTRIAL_ZONE_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_8_INT_GLITCH_WORLD_OLD_DATA_CENTER_INTERIOR_DAY.txt
+../SP.all-writeez28-c0.3/8.Digi_Sol.Suicider]BIG]b1/scene_9_INT_GLITCH_WORLD_OLD_DATA_CENTER_INTERIOR_DAY_CONT.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_10_sol_powersuit_vs_mafia.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_12_soulpen_broken_halo_comms.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_13_mafia_blocks_wormhole.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_14_the_architect_revealed.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_15_unobtainium_suit_confrontation.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_16_quantum_quarter_exploration.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_17_temporal_resonance_key.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_18_quantum_pizza_party.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_19_gigishixmix_map_discovery.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_1_lucky_returns.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_20_journey_to_unknown.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_2_sol_obsession.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_3_gem_escapes_with_riley.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_4_lucky_unease.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_5_sol_kills_sons.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_6_gigishixmix_clingy.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_7_wormhole_x_discovery.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_8_metal_mafia_unobtainium.txt
+../SP.all-writeez28-c0.3/9.METAL SUN[METAL]wcsm+wtf]a1/scene_9_lucky_escapes_wormhole.txt

@@ -1,0 +1,31 @@
+
+
+
+chara = character 1 : ex cia woman. very prefessional, confused/paranoid but quick witted
+
+sol-supreme = character : (super deep voice) : bio tech genius , business mastermind
+basically a "dark ironman batman type character" inventor of soulpen and ikarus 
+
+iqabella = character :  bubbly droid/cyborg fem-maid ; helpful friendly 
+
+horli qwin = character : female trap rapper, secretly a clown/funny, very devious and catty. 
+
+++++++++++++++++++++++++++++++++++++++++++
+Yes — it's using the exact same voice assignments from EDGE_VOICE_MAP in the
+     script, which is what sessions 1-2 used:
+
+
+    ┌─────────────────┬───────────────────┐
+    │ Speaker         │ Voice             │
+    ├─────────────────┼───────────────────┤
+    │ Mother Tmojizu │ en-US-JennyNeural │
+    │ CHARA           │ en-US-AriaNeural  │
+    │ Sol-Supreme     │ en-US-GuyNeural   │
+    │ IQabella        │ en-US-AnaNeural   │
+    │ Horli Qwin      │ en-US-RogerNeural │
+    └─────────────────┴───────────────────┘
+
+
+    Same script, same voice map, same parsing logic. Sessions 1-2 and 3 are
+    identical in voice assignment.
+

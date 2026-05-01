@@ -1,0 +1,12 @@
+**Page 87: Investigating the Humming Machinery**
+
+The hum originates from a large, humming device installed near the vault door. It appears to be a power source or a containment unit, radiating intense energy. Sparks occasionally flicker from its exterior, and the air around it feels unnaturally charged. This might be related to the vault's security.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 7/10 (Found a powerful, humming energy device near the vault)
+
+What do you do?
+
+*   If you attempt to sabotage the humming device, turn to page 110.
+*   If you try to follow Aris Thorne into the vault, turn to page 109.

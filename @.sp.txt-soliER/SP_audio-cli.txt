@@ -1,0 +1,6 @@
+pip install gTTS
+
+gtts-cli -f chapter_0/chapter_0.txt --output chapter0.mp3
+
+i still need one with multiple voices tho
+may have to make that one later

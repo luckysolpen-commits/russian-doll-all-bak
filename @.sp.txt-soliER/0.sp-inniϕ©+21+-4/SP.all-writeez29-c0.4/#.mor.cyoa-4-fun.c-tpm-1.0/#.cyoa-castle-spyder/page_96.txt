@@ -1,0 +1,12 @@
+**Page 96: Closer Look at Prototype Schematics**
+
+You focus on the holographic schematics. The cyborg spider prototype appears to be a sophisticated blend of organic and mechanical components, designed for enhanced intelligence and physical capabilities. It features integrated weaponry and advanced sensory arrays. The "wildcard mutation agent" seems to be a key component for its final activation.
+
+Hydration: 8/10 (Adequate)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 6/10 (Studied schematics of a cyborg spider prototype)
+
+What do you do?
+
+*   If you attempt to sabotage the prototype's development, turn to page 95.
+*   If you try to interact with the "wildcard mutation agent" vial, turn to page 53.

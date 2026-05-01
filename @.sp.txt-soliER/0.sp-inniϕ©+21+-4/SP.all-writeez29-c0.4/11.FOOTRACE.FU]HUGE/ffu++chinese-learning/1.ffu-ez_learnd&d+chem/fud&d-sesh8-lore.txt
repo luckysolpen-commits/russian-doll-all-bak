@@ -1,0 +1,100 @@
+# FU D&D — GRAND ADVENTURE LORE & INFRASTRUCTURE
+## "The Uranium Heist" — 4-Part Finale Arc
+
+---
+
+## 🏛️ THE SETTING: CHRONO-GLADIATOR STADIUM
+
+**Name:** , eng, arena, ... tx, 竞技场, jìng jì chǎng, ... xt,
+**Owner:** Boss Kurogane , eng, black iron, ... tx, 黑铁, hēi tiě, ... xt, — a four-armed demon gangster with obsidian horns, tattoos that shift like living ink, and a voice like grinding tectonic plates.
+**What's Inside:** The Vault of Elements — contains the rarest Fuzzpet eggs in the temporal multiverse:
+- **Uranium Fuzzpet** , eng, uranium, ... tx, 铀, yóu, ... xt, — glows green, radiates temporal decay. Chronoment: , eng, nuclear explosion, ... tx, 核爆, hé bào, ... xt,
+- **Unobtainium Fuzzpet** , eng, unobtainium, ... tx, 难得, nán dé, ... xt, — shifts between all six elements. Chronoment: , eng, everything, ... tx, 万象, wàn xiàng, ... xt,
+
+**Stadium Atmosphere:**
+- Smells like: , eng, ozone, ... tx, 臭氧, chòu yǎng, ... xt, , eng, sweat, ... tx, 汗, hàn, ... xt, , eng, roasted meat, ... tx, 烤肉, kǎo ròu, ... xt,
+- Sounds like: , eng, cheering, ... tx, 欢呼, huān hū, ... xt, , eng, drum sounds, ... tx, 鼓声, gǔ shēng, ... xt, , eng, metal, ... tx, 金属, jīn shǔ, ... xt, clashing
+- Feels like: , eng, vibration, ... tx, 震动, zhèn dòng, ... xt, through the floor, , eng, hot, ... tx, 热, rè, ... xt, temporal energy in the air
+- Looks like: , eng, neon, ... tx, 霓虹, ní hóng, ... xt, lights, , eng, hologram, ... tx, 全息, quán xī, ... xt, projections of past champions
+
+---
+
+## 🚀 THE KIDNAPPING: SPACE SHIP "TEMPORAL EEL"
+
+**Ship Name:** , eng, time eel, ... tx, 时间鳗, shí jiān mán, ... xt,
+**Captain:** Boss Nami , eng, wave, ... tx, 波, bō, ... xt, — a Time Pirate queen with silver hair that floats in zero gravity, six fingers on each hand, and eyes that see three seconds into the future.
+**Crew:** ALL speak ONLY Chinese. No subtitles. No translation devices. The party must listen, translate for each other, and figure out what's happening.
+
+**Ship Atmosphere:**
+- Smells like: , eng, machine oil, ... tx, 机油, jī yóu, ... xt, , eng, salt, ... tx, 盐, yán, ... xt, , eng, old clothes, ... tx, 旧衣服, jiù yī fu, ... xt,
+- Sounds like: , eng, engine, ... tx, 引擎, yǐn qíng, ... xt, humming, , eng, alarm, ... tx, 警报, jǐng bào, ... xt, beeping, , eng, laughter, ... tx, 笑声, xiào shēng, ... xt, from the crew
+- Feels like: , eng, gravity, ... tx, 重力, zhòng lì, ... xt, shifting (sometimes heavy, sometimes floating), , eng, cold, ... tx, 冷, lěng, ... xt, metal walls
+- Looks like: , eng, pipes, ... tx, 管道, guǎn dào, ... xt, everywhere, , eng, flickering, ... tx, 闪烁, shǎn shuò, ... xt, lights, , eng, Chinese writing, ... tx, 中文, zhōng wén, ... xt, on every surface
+
+---
+
+## 🏚️ THE OUTSKIRT CITY: "RUST HAVEN"
+
+**Name:** , eng, rust port, ... tx, 锈港, xiù gǎng, ... xt,
+**Lore:** A city built inside the corpse of a dead temporal leviathan. The ribcage forms the city walls. The spine is the main street. Organs have been converted into buildings — the heart is the marketplace, the brain is the library, the stomach is the tavern.
+**Population:** Monsters, pirates, refugees, and things that don't have names yet.
+
+**Micro-Settings:**
+
+### 1. The Ribcage Gates , eng, rib bone, ... tx, 肋骨, lèi gǔ, ... xt,
+- Smells like: , eng, rust, ... tx, 铁锈, tiě xiù, ... xt, , eng, blood, ... tx, 血, xuè, ... xt, , eng, spice, ... tx, 香料, xiāng liào, ... xt,
+- Sounds like: , eng, guards, ... tx, 守卫, shǒu wèi, ... xt, shouting, , eng, chains, ... tx, 锁链, suǒ liàn, ... xt, rattling
+- Feels like: , eng, rough, ... tx, 粗糙, cū cāo, ... xt, bone under your fingers, , eng, wind, ... tx, 风, fēng, ... xt, howling through the gaps
+
+### 2. The Heart Market , eng, heart, ... tx, 心脏, xīn zàng, ... xt,
+- Smells like: , eng, fruit, ... tx, 水果, shuǐ guǒ, ... xt, , eng, fish, ... tx, 鱼, yú, ... xt, , eng, perfume, ... tx, 香水, xiāng shuǐ, ... xt,
+- Sounds like: , eng, hawking/selling, ... tx, 叫卖, jiào mài, ... xt, , eng, bargaining, ... tx, 讨价还价, tǎo jià huán jià, ... xt, , eng, music, ... tx, 音乐, yīn yuè, ... xt,
+- Feels like: , eng, pulsing, ... tx, 跳动, tiào dòng, ... xt, under your feet (the heart still beats, slowly), , eng, crowded, ... tx, 拥挤, yōng jǐ, ... xt,
+
+### 3. The Brain Library , eng, brain, ... tx, 大脑, dà nǎo, ... xt,
+- Smells like: , eng, old books, ... tx, 旧书, jiù shū, ... xt, , eng, dust, ... tx, 灰尘, huī chén, ... xt, , eng, ink, ... tx, 墨水, mò shuǐ, ... xt,
+- Sounds like: , eng, page turning, ... tx, 翻页, fān yè, ... xt, , eng, whispering, ... tx, 低语, dī yǔ, ... xt, , eng, clock, ... tx, 钟, zhōng, ... xt, ticking
+- Feels like: , eng, quiet, ... tx, 安静, ān jìng, ... xt, , eng, soft, ... tx, 柔软, róu ruǎn, ... xt, neural tissue underfoot
+
+### 4. The Stomach Tavern , eng, stomach, ... tx, 胃, wèi, ... xt,
+- Smells like: , eng, alcohol, ... tx, 酒, jiǔ, ... xt, , eng, sour, ... tx, 酸, suān, ... xt, , eng, smoke, ... tx, 烟, yān, ... xt,
+- Sounds like: , eng, singing, ... tx, 唱歌, chàng gē, ... xt, , eng, fighting, ... tx, 打架, dǎ jià, ... xt, , eng, vomiting, ... tx, 呕吐, ǒu tù, ... xt,
+- Feels like: , eng, acid, ... tx, 酸, suān, ... xt, dripping from the ceiling (harmless but stings), , eng, slippery, ... tx, 滑, huá, ... xt, floor
+
+### 5. The Spine Street , eng, spine, ... tx, 脊柱, jǐ zhù, ... xt,
+- Smells like: , eng, rain, ... tx, 雨, yǔ, ... xt, , eng, mud, ... tx, 泥, ní, ... xt, , eng, garbage, ... tx, 垃圾, lā jī, ... xt,
+- Sounds like: , eng, footsteps, ... tx, 脚步声, jiǎo bù shēng, ... xt, , eng, dog barking, ... tx, 狗叫, gǒu jiào, ... xt, , eng, thunder, ... tx, 雷, léi, ... xt,
+- Feels like: , eng, bone, ... tx, 骨头, gǔ tou, ... xt, vertebrae under your boots, , eng, wet, ... tx, 湿, shī, ... xt, from constant rain
+
+---
+
+## 👥 SIDE CHARACTERS
+
+### Boss Kurogane , eng, black iron, ... tx, 黑铁, hēi tiě, ... xt,
+- Four arms, obsidian horns, living tattoo skin
+- Voice: grinding tectonic plates
+- Personality: , eng, proud, ... tx, 骄傲, jiāo ào, ... xt, , eng, cruel, ... tx, 残忍, cán rěn, ... xt, but , eng, respects, ... tx, 尊重, zūn zhòng, ... xt, strength
+- Motivation: Protecting the vault. The Uranium egg is his retirement fund.
+
+### Boss Nami , eng, wave, ... tx, 波, bō, ... xt, — Time Pirate Queen
+- Silver floating hair, six fingers per hand, sees 3 seconds ahead
+- Voice: like ocean waves in a shell
+- Personality: , eng, smart, ... tx, 聪明, cōng míng, ... xt, , eng, cunning, ... tx, 狡猾, jiǎo huá, ... xt, , eng, fair, ... tx, 公平, gōng píng, ... xt, (in her own way)
+- Motivation: Wants the Unobtainium egg to power her ship through the temporal void.
+- **She ONLY speaks Chinese.** Her crew ONLY speaks Chinese.
+
+### Rusty , eng, rust, ... tx, 锈, xiù, ... xt, — The Informant
+- A half-robot, half-monster creature living in the Ribcage Gates
+- Speaks broken Chinese and broken English
+- Sells information for , eng, money, ... tx, 钱, qián, ... xt, or , eng, food, ... tx, 食物, shí wù, ... xt,
+- Knows everything about Rust Haven
+
+### Old Man Feng , eng, wind, ... tx, 风, fēng, ... xt, — The Library Keeper
+- Ancient monster who lives in the Brain Library
+- Speaks only in riddles and Chinese proverbs
+- Has the map to the vault's secret entrance
+- Will only help if you answer his riddle correctly
+
+### Mama Sour , eng, sour, ... tx, 酸, suān, ... xt, — The Tavern Owner
+- Giant slug-like creature who runs the Stomach Tavern
+- Speaks Chinese with a thick accent

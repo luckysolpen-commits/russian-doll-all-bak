@@ -1,0 +1,6 @@
+You approach the gruff Angler smuggler. "We're looking for adventure," you say, trying to sound bold. "Or maybe a challenge. If you've got a job that needs doing, something that takes us off the beaten path, we're your crew."
+
+The Angler grins, revealing sharp teeth. "Adventure, eh? I like your spirit. There's a deal going down in the Outer Veils, collecting some rare samples. High risk, high reward. But it means navigating some tricky currents and avoiding Imperial patrols. You in?"
+
+*   Accept the smuggler's job to collect samples in the Outer Veils. Turn to page 704.
+*   Decline the job, deciding it's too dangerous. Turn to page 67.

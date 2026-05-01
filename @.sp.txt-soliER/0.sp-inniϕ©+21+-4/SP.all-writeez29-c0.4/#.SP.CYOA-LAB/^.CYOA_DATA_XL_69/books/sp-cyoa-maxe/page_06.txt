@@ -1,0 +1,7 @@
+The maintenance tunnel twists and turns, far deeper than you expected. The air grows strangely charged, and a faint humming fills your ears. You round a bend and find yourself in a vast, dimly lit chamber. Strange, glowing orbs of various colors float in containment fields, and complex machinery hums with alien energy. In the center of the chamber, a vortex of shimmering light pulses – a portal. On a console nearby, a small, iridescent creature with worried eyes hovers, chirping softly. It seems to be trying to communicate, pointing a tiny appendage towards the portal, then towards you. This is unlike anything you've ever seen.
+
+What do you do?
+
+*   If you cautiously approach the hovering creature, turn to page 8.
+*   If you step directly into the shimmering portal, turn to page 9.
+*   If you attempt to interact with the glowing orbs, turn to page 10.

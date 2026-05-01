@@ -1,2 +1,0 @@
-./curriculum/corpus]similarity10/corpus]similarity10.txt
-./curriculum/test_emoji/test_emoji.txt

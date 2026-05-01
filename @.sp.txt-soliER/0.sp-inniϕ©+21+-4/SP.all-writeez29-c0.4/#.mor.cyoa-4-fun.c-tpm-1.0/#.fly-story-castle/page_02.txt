@@ -1,0 +1,12 @@
+**Page 2: The Kitchen's Bounty**
+
+The castle kitchen is a sensory explosion. Enticing aromas of roasting meat, spilled sugar, and discarded fruit fill the air. It's a fly's paradise, but also a place of swift human hands and humming, dangerous machinery. You must tread carefully.
+
+Hunger: 7/10 (Eager for sustenance)
+Danger Sense: 4/10 (Aware of general threats)
+Speed: 8/10 (Agile flyer)
+
+What do you do?
+
+*   If you land on a table for crumbs, turn to page 4.
+*   If you buzz near the humming oven, turn to page 5.

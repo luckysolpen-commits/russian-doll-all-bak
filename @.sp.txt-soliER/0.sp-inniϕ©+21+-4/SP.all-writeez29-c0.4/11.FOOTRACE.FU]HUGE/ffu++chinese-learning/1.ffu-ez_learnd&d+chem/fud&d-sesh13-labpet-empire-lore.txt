@@ -1,0 +1,100 @@
+# FU D&D — SESSION 13: "THE LABPET EMPIRE"
+## World Building / Plot / Character Document
+
+---
+
+## 💡 THE HAIRBRAINED SCHEME
+
+**The Idea:** Breed labpets → teach them to teach other labpets → self-sustaining compound factory → sell pharmaceuticals → get rich.
+**The Reality:** Chaos. Mutant labpets. Gene editing accidents. Thermodynamic disasters. Quantum entanglement between labpets. But also genuine discoveries.
+
+**Business Name:** , eng, Laboratory Pet Empire, ... tx, 实验室宠物帝国, shí yàn shì chǒng wù dì guó, ... xt,
+**Motto:** ", eng, mouse, ... tx, 老鼠, lǎo shǔ, ... xt, , eng, teach, ... tx, 教, jiāo, ... xt, , eng, mouse, ... tx, 老鼠, lǎo shǔ, ... xt, , eng, make, ... tx, 做, zuò, ... xt, , eng, medicine, ... tx, 药, yào, ... xt," — "Mice teach mice to make medicine."
+
+---
+
+## 🧬 GENE EDITING & CRISPR
+
+### CRISPR Basics
+| English | Chinese | Pinyin | Description |
+|---------|---------|--------|-------------|
+| CRISPR | , eng, gene editing, ... tx, 基因编辑, jī yīn biān jí, ... xt, | ji yin bian ji | Clustered Regularly Interspaced Short Palindromic Repeats |
+| Cas9 enzyme | Cas9酶 Cas9 mei | Cas9 mei | The molecular scissors that cut DNA |
+| Guide RNA | , eng, guide RNA, ... tx, 引导RNA, yǐn dǎo RNA, ... xt, | yin dao RNA | The GPS that tells Cas9 where to cut |
+| DNA | , eng, DNA, ... tx, 脱氧核糖核酸, tuō yǎng hé táng hé suān, ... xt, | tuo yang he tang he suan | Deoxyribonucleic acid |
+| Gene | , eng, gene, ... tx, 基因, jī yīn, ... xt, | ji yin | Unit of heredity |
+| Mutation | , eng, mutation, ... tx, 突变, tū biàn, ... xt, | tu bian | Change in DNA sequence |
+| Knockout | , eng, gene knockout, ... tx, 基因敲除, jī yīn qiāo chú, ... xt, | ji yin qiao chu | Disable a gene |
+| Knockin | , eng, gene knockin, ... tx, 基因敲入, jī yīn qiāo rù, ... xt, | ji yin qiao ru | Insert a new gene |
+
+### CRISPR Process (Step by Step)
+1. **Design guide RNA** — , eng, design, ... tx, 设计, shè jì, ... xt, the RNA sequence to match the target gene
+2. **Cas9 cuts DNA** — , eng, Cas9 enzyme, ... tx, Cas9酶, Cas9 méi, ... xt, cuts the DNA at the target location
+3. **Cell repairs** — , eng, cell, ... tx, 细胞, xì bāo, ... xt, repairs the break, either disabling the gene (NHEJ) or inserting new DNA (HDR)
+4. **Result** — , eng, mutation, ... tx, 突变, tū biàn, ... xt, or , eng, insertion, ... tx, 插入, chā rù, ... xt,
+
+### CRISPR History
+- **Discovered:** 2012 by Jennifer Doudna 珍妮弗·道德纳, Zhēn nī fú Dào dé nà, and Emmanuelle Charpentier 埃马纽埃尔·沙尔庞捷, Āi mǎ niǔ āi ěr Shā páng jié,
+- **Nobel Prize:** 2020 Chemistry
+- **First therapeutic use:** 2019 — sickle cell disease , eng, sickle cell disease, ... tx, 镰状细胞病, lián zhuàng xì bāo bìng, ... xt,
+- **Controversy:** 2018 — He Jiankui 贺建奎, Hè Jiàn Kuí, edited twin babies' genes (CCR5) for HIV resistance. Widely condemned.
+
+---
+
+## 🐭 MUTANT LABPETS
+
+### Mutations Created (Intentional and Accidental)
+| Mutation | Chinese | Pinyin | Effect | Comedy Potential |
+|----------|---------|--------|--------|-----------------|
+| Glow-in-the-dark | , eng, glow, ... tx, 发光, fā guāng, ... xt, | fa guang | GFP gene from jellyfish | Lights up the lab at night |
+| Super speed | , eng, super speed, ... tx, 超速, chāo sù, ... xt, | chao su | Myostatin knockout | Runs through walls |
+| Telepathic | , eng, telepathy, ... tx, 心灵感应, xīn líng gǎn yìng, ... xt, | xin ling gan ying | Neural gene enhancement | Reads everyone's thoughts, judges them |
+| Size-shifting | , eng, size-shifting, ... tx, 变形, biàn xíng, ... xt, | bian xing | Growth hormone overexpression | Goes from mouse-sized to cat-sized |
+| Fire-breathing | , eng, fire-breathing, ... tx, 喷火, pēn huǒ, ... xt, | pen huo | Methane-producing gut bacteria | Sets things on fire accidentally |
+| Invisibility | , eng, invisible, ... tx, 隐形, yǐn xíng, ... xt, | yin xing | Light-bending skin cells | Disappears during important moments |
+| Time-sensing | , eng, time-sensing, ... tx, 时间感知, shí jiān gǎn zhī, ... xt, | shi jian gan zhi | Temporal gene insertion | Knows what's going to happen 3 seconds ahead |
+| Compound synthesis | , eng, compound synthesis, ... tx, 化合物合成, huà hé wù hé chéng, ... xt, | hua he wu he cheng | Engineered metabolic pathways | Makes drugs in its own body |
+
+---
+
+## 🔬 THERMODYNAMICS
+
+### Laws of Thermodynamics (Labpet Edition)
+| Law | Chinese | Pinyin | Labpet Interpretation |
+|-----|---------|--------|----------------------|
+| **Zeroth** | , eng, zeroth law of thermodynamics, ... tx, 热力学第零定律, rè lì xué dì líng dìng lǜ, ... xt, | re li xue di ling ding lv | If labpet A is same temp as labpet B, and B same as C, then A same as C. Labpets reach thermal equilibrium when cuddling. |
+| **First** | , eng, first law of thermodynamics, ... tx, 热力学第一定律, rè lì xué dì yī dìng lǜ, ... xt, | re li xue di yi ding lv | Energy cannot be created or destroyed. Labpets can't make energy from nothing (despite trying). ΔU = Q - W |
+| **Second** | , eng, second law of thermodynamics, ... tx, 热力学第二定律, rè lì xué dì èr dìng lǜ, ... xt, | re li xue di er ding lv | Entropy always increases. The lab always gets messier. ΔS ≥ 0 |
+| **Third** | , eng, third law of thermodynamics, ... tx, 热力学第三定律, rè lì xué dì sān dìng lǜ, ... xt, | re li xue di san ding lv | Entropy approaches zero at absolute zero. Labpets can never reach 0 Kelvin. |
+
+### Key Thermodynamic Concepts
+| English | Chinese | Pinyin | Formula/Description |
+|---------|---------|--------|---------------------|
+| Entropy | , eng, entropy, ... tx, 熵, shāng, ... xt, | shang | Disorder. Always increases. ΔS = Q/T |
+| Enthalpy | , eng, enthalpy, ... tx, 焓, hán, ... xt, | han | Heat content. ΔH = ΔU + PΔV |
+| Gibbs Free Energy | , eng, Gibbs free energy, ... tx, 吉布斯自由能, jí bù sī zì yóu néng, ... xt, | ji bu si zi you neng | ΔG = ΔH - TΔS. If negative, reaction is spontaneous |
+| Internal Energy | , eng, internal energy, ... tx, 内能, nèi néng, ... xt, | nei neng | Total energy of the system. ΔU = Q - W |
+| Heat | , eng, heat, ... tx, 热, rè, ... xt, | re | Energy transfer due to temperature difference. Q = mcΔT |
+| Work | , eng, work, ... tx, 功, gōng, ... xt, | gong | Energy transfer due to force. W = F × d |
+| Temperature | , eng, temperature, ... tx, 温度, wēn dù, ... xt, | wen du | Measure of average kinetic energy. Kelvin scale |
+| Pressure | , eng, pressure, ... tx, 压力, yā lì, ... xt, | ya li | Force per unit area. P = F/A |
+| Volume | , eng, volume, ... tx, 体积, tǐ jī, ... xt, | ti ji | Space occupied. V = l × w × h |
+| Equilibrium | , eng, equilibrium, ... tx, 平衡, píng héng, ... xt, | ping heng | Forward rate = reverse rate. K = [products]/[reactants] |
+
+---
+
+## ⚛️ QUANTUM MECHANICS
+
+### Quantum Concepts (Labpet Edition)
+| English | Chinese | Pinyin | Labpet Interpretation |
+|---------|---------|--------|----------------------|
+| Superposition | , eng, superposition, ... tx, 叠加, dié jiā, ... xt, | die jia | Labpet is both alive and dead until observed (Schrödinger's labpet) |
+| Entanglement | , eng, entanglement, ... tx, 纠缠, jiū chán, ... xt, | jiu chan | Two labpets share a quantum state. Change one, the other changes instantly |
+| Tunneling | , eng, tunneling, ... tx, 隧穿, suì chuān, ... xt, | sui chuan | Labpet passes through walls it shouldn't be able to |
+| Wave function | , eng, wave function, ... tx, 波函数, bō hán shù, ... xt, | bo han shu | Probability distribution of labpet's position |
+| Uncertainty principle | , eng, uncertainty principle, ... tx, 不确定性原理, bù què dìng xìng yuán lǐ, ... xt, | bu que ding xing yuan li | Can't know labpet's position AND momentum simultaneously. Δx × Δp ≥ ℏ/2 |
+| Quantum decoherence | , eng, quantum decoherence, ... tx, 量子退相干, liàng zǐ tuì xiāng gān, ... xt, | liang zi tui xiang gan | When labpet interacts with environment, quantum behavior collapses |
+| Planck's constant | , eng, Planck's constant, ... tx, 普朗克常数, pǔ lǎng kè cháng shù, ... xt, | pu lang ke chang shu | h = 6.626 × 10⁻³⁴ J·s. The smallest unit of action |
+| Schrödinger equation | , eng, Schrödinger equation, ... tx, 薛定谔方程, xuē dìng è fāng chéng, ... xt, | xue ding e fang cheng | iℏ ∂ψ/∂t = Ĥψ. Describes how labpet's wave function evolves |
+
+### Quantum Labpet Experiments

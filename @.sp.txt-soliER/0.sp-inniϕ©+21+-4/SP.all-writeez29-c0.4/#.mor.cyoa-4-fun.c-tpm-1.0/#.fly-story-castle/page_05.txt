@@ -1,0 +1,12 @@
+**Page 5: The Oven's Warmth**
+
+You buzz near the large, humming oven. The warmth is inviting, a stark contrast to the cool kitchen air, but the intense heat is a clear danger. You spot a tiny crack in the oven door, offering a tempting, though risky, peek inside at what might be cooking.
+
+Hunger: 6/10 (Slightly peckish)
+Danger Sense: 7/10 (Heat is a clear risk)
+Speed: 8/10 (Agile flyer)
+
+What do you do?
+
+*   If you risk a quick peek into the oven, turn to page 9.
+*   If you fly away to find safer food, turn to page 4.

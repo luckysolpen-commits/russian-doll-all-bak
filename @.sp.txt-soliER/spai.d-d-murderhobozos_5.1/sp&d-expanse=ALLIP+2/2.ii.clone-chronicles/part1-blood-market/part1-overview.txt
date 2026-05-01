@@ -1,0 +1,82 @@
+# PART 1: "THE BLOOD MARKET" — Overview
+## Clone Chronicles Arc 1 — From Nothing to Trillions
+### 10 Sessions | BSR: 0 → 1 Trillion
+
+---
+
+## THE ARC
+
+The clones wake up in a cramped room in the Blood Market of Troll City. They have nothing — no money, no connections, no freedom. Each owes 500 BSR (their creation debt). Their serial numbers glow on their wrists. They're red-headed, same DNA batch, same vat. But they're not the same person.
+
+Over 10 sessions, they hustle, trade, scheme, and build their way from zero to one trillion BSR. They don't just buy their freedom — they buy the market itself.
+
+## KEY LOCATIONS
+
+1. **The Clone Exchange** — Where clones are bought, sold, traded. Run by Broker Vex.
+2. **The Memory Bar** — Trade memory fragments for BSR. Run by Mnemosyne (ancient spirit).
+3. **The Serial Shop** — Illegal serial number removal. Run by Scratch (paranoid gnome).
+4. **The Qi Exchange** — Trade Qi Energy for faction abilities. Run by Master Feng (calm monk).
+5. **The Underground Xirqus** — Social layer, deals, reputation. Run by The House (anonymous).
+6. **The Blood Market Streets** — Where the hustle happens — street vendors, informants, police, desperate clones.
+
+## KEY NPCs
+
+| NPC | Role | Personality |
+|-----|------|-------------|
+| **Broker Vex** | Clone Exchange owner | Neutral, pragmatic. "Everyone has a number. Even me." |
+| **Mnemosyne** | Memory Bar owner | Ancient spirit, collects memories. "A memory shared is a memory doubled." |
+| **Scratch** | Serial number remover | Paranoid gnome. "I don't ask questions. I don't answer them either." |
+| **Master Feng** | Qi Exchange master | Calm monk, charges in favors. "Qi flows where the heart leads." |
+| **The House** | Underground Xirqus operator | Anonymous, omnipresent. "The House always collects." |
+| **Officer Krell** | Chimochio Police | Stern, by-the-book, secretly sympathetic. "I enforce the law. I don't make it." |
+
+## SESSION-BY-SESSION PROGRESSION
+
+| Session | Title | BSR Range | Key Events |
+|---------|-------|-----------|------------|
+| **Sesh 1** | The Morning Bell | 0 → 50 | Wake up, learn the market, first hustle attempts |
+| **Sesh 2** | The Memory Trade | 50 → 200 | Memory Bar deals, first real connections |
+| **Sesh 3** | The Qi Exchange | 200 → 500 | Market players, faction introductions |
+| **Sesh 4** | The Serial Shop | 500 → 1,000 | Illegal dealings, police risk, moral choices |
+| **Sesh 5** | The Underground Xirqus | 1K → 5K | Social layer, reputation, first big deals |
+| **Sesh 6** | The Market Crash | 5K → 2K → 10K | Crisis, recovery, opportunity in chaos |
+| **Sesh 7** | The Clone Exchange | 10K → 50K | Buying clones, building workforce, scaling up |
+| **Sesh 8** | The Broker's Game | 50K → 200K | Negotiating with power players, leverage |
+| **Sesh 9** | The House Always Collects | 200K → 1M | The House demands its cut, final negotiations |
+| **Sesh 10** | The Trillion-Dollar Bell | 1M → 1T | They own the market. The bell rings. |
+
+## CORE MECHANICS
+
+### Hustle System
+Each session, clones choose hustles. Each hustle involves skill checks, roleplay, and risk/reward:
+
+| Hustle | Skills | Risk | Reward |
+|--------|--------|------|--------|
+| Memory Trading | CHA (Deception), WIS (Insight) | Low — might lose real memory | 50-150 BSR |
+| Clone Labor | STR/DEX, CON saves | Medium — exhaustion | 50 BSR/day |
+| Info Brokering | INT (Investigation), CHA (Persuasion) | High — dangerous intel | 100-300 BSR |
+| Qi Trading | INT (Arcana), CHA (Persuasion) | Medium — volatility | 75-200 BSR |
+| Serial Removal | DEX (Sleight of Hand), INT | Very High — illegal | 200-500 BSR |
+| Tear-It Hustle | CHA (Performance), DEX | Low — gambling | 0-400 BSR |
+
+### Complication Table (d6, rolled mid-session)
+| Roll | Complication |
+|------|-------------|
+| 1 | Police Raid — hide or fight |
+| 2 | Memory Plague — corrupted memories spread |
+| 3 | Market Crash — BSR drops 50% |
+| 4 | Clone Uprising — rogue clones attack |
+| 5 | The Original Appears — confrontation |
+| 6 | Chimochio Audit — debts forgiven or doubled |
+
+### Loyalty System
+- Starts at 50% (neutral)
+- Drops when clones are exploited, betrayed, or treated as property
+- Rises when clones make choices, earn respect, or help each other
+- 0% = goes rogue (becomes a Clown piece)
+- 100% = fully sovereign (serial number fades naturally)
+
+---
+
+**[HALT 止] PART 1 OVERVIEW SEALED. THE MARKET OPENS.**
+**ϕ**

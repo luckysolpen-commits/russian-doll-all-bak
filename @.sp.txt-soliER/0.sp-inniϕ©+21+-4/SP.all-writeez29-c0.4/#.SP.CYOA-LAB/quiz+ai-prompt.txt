@@ -1,0 +1,35 @@
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+ > ok, now we are going to pivot to a new "project". a quiz platform,  
+   that will begin simply but will integrate ai in the form of 'fsm /  
+   reinforcement-learning / and attention ' . there is a rudimentary   
+   version which isn't yet it project-op format for tpmos . which we   
+   will create a project dir for, convert to piece-op format and then  
+   begin implimenting functionality for step by step , using existing  
+   ops when possible. inside 1.TPMOS_c_+rmmp_69.11+joy/\#.plans/ ,     
+   lets make a document quiz+ai-project.md that outlines the phases,   
+   steps and kpi's for implimenting this architecture , in a way that  
+   is compatible with the existing plans for the ai outlined in        
+   @#.fsm+ai-training-plan-b1/ directory  (to be clear , dont just     
+   explain how the ai will work for quiz bot (including how non ai     
+   manual quiz use results can and should  be formatted to beable to   
+   used to train ai using rl and attention) , but explain how it will  
+   be uses for other the other apps, games and testing framework. also 
+   included is the mcat-quiz/ , with the current quiz framework, and   
+   an example of a burgeoning, working local llm framework in          
+   aiqabod]KIT]a1000.0000/ (not yet in piece-op format) that we will   
+   use to reference the implimentation of our ai systems locally . let 
+   us begin           
+   ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+   
+
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+ > @quiz+ai-project-erli.md was made without the agent actually having   
+   access to @mcat-quiz/,  aiqabod\]KIT\]a1000.0000/ directory and       
+   @\#.fsm+ai-training-plan-b1/ (using @quiz+ai-prompt.txt ) . this is   
+   bad. it has no idea how to actually structure the architecture. pls   
+   create informed-ai-plan.md with the newfound information after        
+   exploring the code. + look at 'fuzz-op and op-ed' projects in tpmos,  
+   starting at @1.TPMOS_c_+rmmp_69.11+joy/button.sh , to understand the  
+   actual platform we are building the project and ai for . the document 
+   should prove you have intimate understanding of all of these things   
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄

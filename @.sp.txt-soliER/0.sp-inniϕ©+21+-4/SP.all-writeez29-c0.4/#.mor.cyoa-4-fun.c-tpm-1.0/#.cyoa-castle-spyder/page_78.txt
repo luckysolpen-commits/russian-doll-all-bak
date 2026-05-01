@@ -1,0 +1,12 @@
+**Page 78: Searching for the Drones' Target**
+
+You follow the drones deeper into the basement, their scanners sweeping across dusty crates and ancient stone walls. They seem to be converging on a particular section of the far wall, emitting more intense beams of light and higher-pitched whirring sounds. There appears to be something hidden behind the stone.
+
+Hydration: 8/10 (Adequate)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 5/10 (Drones are focusing on a section of the basement wall)
+
+What do you do?
+
+*   If you attempt to investigate the wall section the drones are targeting, turn to page 102.
+*   If you decide to observe the drones' behavior more closely, turn to page 31.

@@ -1,0 +1,12 @@
+**Page 69: Spy Exits the Office**
+
+The spy finishes his console work and exits the East Wing office, leaving you to observe the security map's details. He heads back towards the main corridors, his mission in the office seemingly complete. You are left with the knowledge of the energy signatures and the spy's brief access to the security system.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 6/10 (Spy completed his task in the office and departed)
+
+What do you do?
+
+*   If you decide to investigate the East Wing lab's energy signature, turn to page 49.
+*   If you decide to investigate the West Wing vault's energy signature, turn to page 87.

@@ -1,0 +1,231 @@
+# FU D&D — SESSION 6: "THE FUZZPET CHRONICLES"
+## Footrace.FU Chinese Learning — Episode 6
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** Grand adventure time. You're entering the Fuzzpet Wilderness — a vast temporal ecosystem where Fuzzpet Elementals roam free. Each one has an element type. Each one can learn Chronoments — magic skills from the six colors: Yellow , eng, yellow, ... tx, 黄, huáng, ... xt, Red , eng, red, ... tx, 红, hóng, ... xt, Green , eng, green, ... tx, 绿, lǜ, ... xt, Blue , eng, blue, ... tx, 蓝, lán, ... xt, Black , eng, black, ... tx, 黑, hēi, ... xt, White , eng, white, ... tx, 白, bái, ... xt, You'll hunt them, weaken them with chemistry, capture them with temporal balls, heal them at temples, and battle the demon gangster team who's also hunting. Roll for initiative.
+
+**Horli Qwin:** [rolls] 24. Plus 3 is 27. I want a Fire-type Fuzzpet. Something that goes boom.
+
+**CHARA:** [rolls] 20. Plus 3 is 23. I've mapped the element compound chart. Hydrogen , eng, hydrogen, ... tx, 氢, qīng, ... xt, plus Oxygen , eng, oxygen, ... tx, 氧, yǎng, ... xt, equals Water , eng, water, ... tx, 水, shuǐ, ... xt, The chemistry is real.
+
+**IQabella:** [rolls] 16. Plus 0 is 16. I want a Healing-type. Something that can , eng, heal, ... tx, 治疗, zhì liáo, ... xt,
+
+**Sol-Supreme:** [rolls] 13. Plus 0 is 13. I'm building a Fuzzpet from Carbon , eng, carbon, ... tx, 碳, tàn, ... xt, and Silicon , eng, silicon, ... tx, 硅, guī, ... xt, A semiconductor Fuzzpet.
+
+**Mother Tmojizu:** 中文老师, teach us the element vocabulary.
+
+**中文老师:** , eng, element, ... tx, 元素, yuán sù, ... xt, , eng, fire, ... tx, 火, huǒ, ... xt, , eng, water, ... tx, 水, shuǐ, ... xt, , eng, earth, ... tx, 土, tǔ, ... xt, , eng, wind, ... tx, 风, fēng, ... xt, , eng, light, ... tx, 光, guāng, ... xt, , eng, dark, ... tx, 暗, àn, ... xt, , eng, electricity, ... tx, 电, diàn, ... xt,
+
+**Mother Tmojizu:** And the chemistry words.
+
+**中文老师:** , eng, chemistry, ... tx, 化学, huà xué, ... xt, , eng, atom, ... tx, 原子, yuán zǐ, ... xt, , eng, molecule, ... tx, 分子, fēn zǐ, ... xt, , eng, reaction, ... tx, 反应, fǎn yìng, ... xt, , eng, compound, ... tx, 化合物, huà hé wù, ... xt,
+
+**Horli Qwin:** , eng, element, ... tx, 元素, yuán sù, ... xt, , eng, fire, ... tx, 火, huǒ, ... xt, I want a , eng, fire, ... tx, 火, huǒ, ... xt, element Fuzzpet. Something that does , eng, reaction, ... tx, 反应, fǎn yìng, ... xt, , eng, compound, ... tx, 化合物, huà hé wù, ... xt, Let's go!
+
+**Mother Tmojizu:** You enter the Fuzzpet Wilderness. The first creature you see is a small flame Fuzzpet — a Fireball-type. It's made of pure , eng, fire, ... tx, 火, huǒ, ... xt, energy. 中文老师, capture vocabulary.
+
+**中文老师:** , eng, capture, ... tx, 捕捉, bǔ zhuō, ... xt, , eng, ball, ... tx, 球, qiú, ... xt, , eng, weaken, ... tx, 削弱, xuē ruò, ... xt, , eng, battle, ... tx, 战斗, zhàn dòu, ... xt, , eng, run away, ... tx, 逃跑, táo pǎo, ... xt,
+
+**Horli Qwin:** I'm going to , eng, capture, ... tx, 捕捉, bǔ zhuō, ... xt, it! I throw a temporal , eng, ball, ... tx, 球, qiú, ... xt,
+
+**Mother Tmojizu:** Roll DEX Capture.
+
+**Horli Qwin:** [rolls] 8. Plus 3 is 11. The Fuzzpet , eng, run away, ... tx, 逃跑, táo pǎo, ... xt, It's too strong.
+
+**Mother Tmojizu:** 11. The Fireball Fuzzpet is too powerful. You need to , eng, weaken, ... tx, 削弱, xuē ruò, ... xt, it first. Use chemistry. CHARA, you're the scientist. 中文老师.
+
+**中文老师:** , eng, hydrogen, ... tx, 氢, qīng, ... xt, , eng, oxygen, ... tx, 氧, yǎng, ... xt, , eng, water, ... tx, 水, shuǐ, ... xt, , eng, extinguish fire, ... tx, 灭火, miè huǒ, ... xt,
+
+**CHARA:** , eng, hydrogen, ... tx, 氢, qīng, ... xt, plus , eng, oxygen, ... tx, 氧, yǎng, ... xt, equals , eng, water, ... tx, 水, shuǐ, ... xt, H2O. I create a water , eng, compound, ... tx, 化合物, huà hé wù, ... xt, , eng, extinguish fire, ... tx, 灭火, miè huǒ, ... xt, The chemical , eng, reaction, ... tx, 反应, fǎn yìng, ... xt, is 2H2 plus O2 equals 2H2O.
+
+**Mother Tmojizu:** Roll INT Chemistry.
+
+**CHARA:** [rolls] 19. Plus 4 is 23. The water , eng, compound, ... tx, 化合物, huà hé wù, ... xt, hits the Fireball Fuzzpet. , eng, extinguish fire, ... tx, 灭火, miè huǒ, ... xt, It's , eng, weaken, ... tx, 削弱, xuē ruò, ... xt, now.
+
+**Mother Tmojizu:** 23. Perfect chemistry. The Fireball Fuzzpet is weakened. Horli, throw the , eng, ball, ... tx, 球, qiú, ... xt, again.
+
+**Horli Qwin:** [rolls] 18. Plus 3 is 21. I , eng, capture, ... tx, 捕捉, bǔ zhuō, ... xt, Got it! My first Fuzzpet! I name him Sparky. He's , eng, fire, ... tx, 火, huǒ, ... xt, type.
+
+**Mother Tmojizu:** 21. Sparky is captured! He learns his first Chronoment: Fireball , eng, fireball, ... tx, 火球, huǒ qiú, ... xt, 中文老师, Chronoment words.
+
+**中文老师:** , eng, skill, ... tx, 技能, jì néng, ... xt, , eng, magic, ... tx, 魔法, mó fǎ, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, power, ... tx, 力量, lì liàng, ... xt, , eng, level, ... tx, 等级, děng jí, ... xt,
+
+**Horli Qwin:** Sparky's , eng, skill, ... tx, 技能, jì néng, ... xt, is , eng, fireball, ... tx, 火球, huǒ qiú, ... xt, , eng, magic, ... tx, 魔法, mó fǎ, ... xt, , eng, power, ... tx, 力量, lì liàng, ... xt, , eng, level, ... tx, 等级, děng jí, ... xt, one!
+
+**Mother Tmojizu:** You move deeper into the wilderness. IQabella spots a gentle Water-type Fuzzpet near a stream. It's made of pure , eng, water, ... tx, 水, shuǐ, ... xt, 中文老师.
+
+**中文老师:** , eng, river, ... tx, 河, hé, ... xt, , eng, stream, ... tx, 溪, xī, ... xt, , eng, cure, ... tx, 治愈, zhì yù, ... xt, , eng, medicine, ... tx, 药, yào, ... xt, , eng, temple, ... tx, 庙, miào, ... xt,
+
+**IQabella:** A , eng, water, ... tx, 水, shuǐ, ... xt, Fuzzpet near a , eng, stream, ... tx, 溪, xī, ... xt, It looks hurt. I want to , eng, cure, ... tx, 治愈, zhì yù, ... xt, it. , eng, medicine, ... tx, 药, yào, ... xt, Let me check if there's a , eng, temple, ... tx, 庙, miào, ... xt, nearby.
+
+**Mother Tmojizu:** Roll WIS Perception.
+
+**IQabella:** [rolls] 17. Plus 2 is 19. I see a Healing Temple in the distance. Golden roof. Temporal energy radiating from it. , eng, temple, ... tx, 庙, miào, ... xt,
+
+**Mother Tmojizu:** 19. You find the Healing Temple. Inside, a monk Fuzzpet greets you. 中文老师, temple vocabulary.
+
+**中文老师:** , eng, heal, ... tx, 治疗, zhì liáo, ... xt, , eng, restore, ... tx, 恢复, huī fù, ... xt, , eng, health, ... tx, 健康, jiàn kāng, ... xt, , eng, life, ... tx, 生命, shēng mìng, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt,
+
+**IQabella:** , eng, heal, ... tx, 治疗, zhì liáo, ... xt, , eng, restore, ... tx, 恢复, huī fù, ... xt, I bring my Water Fuzzpet to the monk. Please , eng, heal, ... tx, 治疗, zhì liáo, ... xt, her. , eng, health, ... tx, 健康, jiàn kāng, ... xt, , eng, life, ... tx, 生命, shēng mìng, ... xt,
+
+**Mother Tmojizu:** Roll WIS Healing.
+
+**IQabella:** [rolls] 20. Plus 2 is 22. NATURAL 20. The monk , eng, heal, ... tx, 治疗, zhì liáo, ... xt, the Water Fuzzpet. , eng, restore, ... tx, 恢复, huī fù, ... xt, full , eng, health, ... tx, 健康, jiàn kāng, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt, restored.
+
+**Mother Tmojizu:** NATURAL 20. The Water Fuzzpet is fully healed. She bonds with you. She's yours now. You name her Aqua. She's , eng, water, ... tx, 水, shuǐ, ... xt, type. Her Chronoment: AquaBeam , eng, water wave, ... tx, 水波, shuǐ bō, ... xt, 中文老师.
+
+**中文老师:** , eng, water wave, ... tx, 水波, shuǐ bō, ... xt, , eng, ice, ... tx, 冰, bīng, ... xt, , eng, heal, ... tx, 治愈, zhì yù, ... xt, , eng, protect, ... tx, 保护, bǎo hù, ... xt,
+
+**IQabella:** Aqua's , eng, skill, ... tx, 技能, jì néng, ... xt, is , eng, water wave, ... tx, 水波, shuǐ bō, ... xt, And , eng, ice, ... tx, 冰, bīng, ... xt, And , eng, heal, ... tx, 治愈, zhì yù, ... xt, And , eng, protect, ... tx, 保护, bǎo hù, ... xt, She's a healer.
+
+**Mother Tmojizu:** Sol-Supreme, you're building your own Fuzzpet from raw elements. 中文老师, building vocabulary.
+
+**中文老师:** , eng, carbon, ... tx, 碳, tàn, ... xt, , eng, silicon, ... tx, 硅, guī, ... xt, , eng, iron, ... tx, 铁, tiě, ... xt, , eng, gold, ... tx, 金, jīn, ... xt, , eng, silver, ... tx, 银, yín, ... xt, , eng, copper, ... tx, 铜, tóng, ... xt,
+
+**Sol-Supreme:** , eng, carbon, ... tx, 碳, tàn, ... xt, is element 6. , eng, silicon, ... tx, 硅, guī, ... xt, is element 14. I combine them. Carbon , eng, carbon, ... tx, 碳, tàn, ... xt, plus Silicon , eng, silicon, ... tx, 硅, guī, ... xt, equals a semiconductor Fuzzpet. The chemical formula is SiC — silicon carbide. , eng, compound, ... tx, 化合物, huà hé wù, ... xt,
+
+**Mother Tmojizu:** Roll INT Engineering.
+
+**Sol-Supreme:** [rolls] 18. Plus 1 is 19. The SiC Fuzzpet forms. It's , eng, electricity, ... tx, 电, diàn, ... xt, type. It conducts temporal energy. I name it Circuit.
+
+**Mother Tmojizu:** 19. Circuit is born. His Chronoment: ElectroJolt , eng, electric shock, ... tx, 电击, diàn jī, ... xt, 中文老师.
+
+**中文老师:** , eng, electric shock, ... tx, 电击, diàn jī, ... xt, , eng, lightning, ... tx, 闪电, shǎn diàn, ... xt, , eng, thunder, ... tx, 雷, léi, ... xt,
+
+**Sol-Supreme:** Circuit's , eng, skill, ... tx, 技能, jì néng, ... xt, is , eng, electric shock, ... tx, 电击, diàn jī, ... xt, , eng, lightning, ... tx, 闪电, shǎn diàn, ... xt, , eng, thunder, ... tx, 雷, léi, ... xt, The voltage output is optimal.
+
+**Mother Tmojizu:** CHARA, you're hunting for a rare Fuzzpet. You find tracks leading to a cave. Inside, an Earth-type Fuzzpet sleeps — made of pure , eng, earth, ... tx, 土, tǔ, ... xt, 中文老师.
+
+**中文老师:** , eng, stone, ... tx, 石头, shí tou, ... xt, , eng, mountain, ... tx, 山, shān, ... xt, , eng, cave, ... tx, 洞, dòng, ... xt, , eng, sleep, ... tx, 睡觉, shuì jiào, ... xt, , eng, quiet, ... tx, 安静, ān jìng, ... xt,
+
+**CHARA:** , eng, earth, ... tx, 土, tǔ, ... xt, Fuzzpet. In a , eng, cave, ... tx, 洞, dòng, ... xt, , eng, sleep, ... tx, 睡觉, shuì jiào, ... xt, , eng, quiet, ... tx, 安静, ān jìng, ... xt, I need to , eng, weaken, ... tx, 削弱, xuē ruò, ... xt, it without waking it. I use a Nitrogen , eng, nitrogen, ... tx, 氮, dàn, ... xt, compound. Liquid nitrogen. The chemical formula is N2. Temperature: minus 196 degrees Celsius.
+
+**Mother Tmojizu:** Roll INT Chemistry.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. The liquid , eng, nitrogen, ... tx, 氮, dàn, ... xt, freezes the cave entrance. The Earth Fuzzpet is trapped in ice. , eng, weaken, ... tx, 削弱, xuē ruò, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. Perfect chemistry. The Earth Fuzzpet is frozen. Throw the , eng, ball, ... tx, 球, qiú, ... xt,
+
+**CHARA:** [rolls] 19. Plus 3 is 22. I , eng, capture, ... tx, 捕捉, bǔ zhuō, ... xt, Got it! I name him Boulder. He's , eng, earth, ... tx, 土, tǔ, ... xt, type. His Chronoment: Earthquake , eng, earthquake, ... tx, 地震, dì zhèn, ... xt,
+
+**中文老师:** , eng, earthquake, ... tx, 地震, dì zhèn, ... xt, , eng, rock, ... tx, 岩石, yán shí, ... xt, , eng, sand, ... tx, 沙, shā, ... xt,
+
+**CHARA:** Boulder's , eng, skill, ... tx, 技能, jì néng, ... xt, is , eng, earthquake, ... tx, 地震, dì zhèn, ... xt, , eng, rock, ... tx, 岩石, yán shí, ... xt, , eng, sand, ... tx, 沙, shā, ... xt, The seismic output is , eng, power, ... tx, 力量, lì liàng, ... xt, level 7.
+
+**Mother Tmojizu:** The demon gangster team appears. Their leader — three-horned, fully tattooed — has captured a rare Lightning-type Fuzzpet. He's using it to terrorize a village. 中文老师, conflict vocabulary.
+
+**中文老师:** , eng, help, ... tx, 帮助, bāng zhù, ... xt, , eng, villagers, ... tx, 村民, cūn mín, ... xt, , eng, danger, ... tx, 危险, wēi xiǎn, ... xt, , eng, rescue, ... tx, 救, jiù, ... xt, , eng, justice, ... tx, 正义, zhèng yì, ... xt, , eng, evil, ... tx, 邪恶, xié è, ... xt,
+
+**Horli Qwin:** The gangster is hurting , eng, villagers, ... tx, 村民, cūn mín, ... xt, That's , eng, evil, ... tx, 邪恶, xié è, ... xt, We need to , eng, help, ... tx, 帮助, bāng zhù, ... xt, them. , eng, rescue, ... tx, 救, jiù, ... xt, the Lightning Fuzzpet. , eng, justice, ... tx, 正义, zhèng yì, ... xt,
+
+**Mother Tmojizu:** Roll CHA Leadership.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20. I rally the team. We fight for , eng, justice, ... tx, 正义, zhèng yì, ... xt, We , eng, help, ... tx, 帮助, bāng zhù, ... xt, the , eng, villagers, ... tx, 村民, cūn mín, ... xt, We , eng, rescue, ... tx, 救, jiù, ... xt, the Lightning Fuzzpet!
+
+**Mother Tmojizu:** NATURAL 20. The team is united. Battle time. The demon gangster sends out his Lightning Fuzzpet. It's , eng, electricity, ... tx, 电, diàn, ... xt, type. Level 8. Chronoment: ThundaSnake , eng, thunder snake, ... tx, 雷蛇, léi shé, ... xt, 中文老师.
+
+**中文老师:** , eng, thunder snake, ... tx, 雷蛇, léi shé, ... xt, , eng, lightning, ... tx, 闪电, shǎn diàn, ... xt, , eng, attack, ... tx, 攻击, gōng jī, ... xt, , eng, defense, ... tx, 防御, fáng yù, ... xt,
+
+**Mother Tmojizu:** Everyone sends out their Fuzzpets. Horli sends Sparky , eng, fire, ... tx, 火, huǒ, ... xt, IQabella sends Aqua , eng, water, ... tx, 水, shuǐ, ... xt, Sol sends Circuit , eng, electricity, ... tx, 电, diàn, ... xt, CHARA sends Boulder , eng, earth, ... tx, 土, tǔ, ... xt, The demon gangster sends his Lightning Fuzzpet , eng, electricity, ... tx, 电, diàn, ... xt, Roll for battle order.
+
+**中文老师:** , eng, first, ... tx, 先, xiān, ... xt, , eng, after, ... tx, 后, hòu, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt,
+
+**CHARA:** Boulder is , eng, earth, ... tx, 土, tǔ, ... xt, Earth conducts , eng, electricity, ... tx, 电, diàn, ... xt, I need to use a different , eng, strategy, ... tx, 策略, cè lüè, ... xt, Aqua is , eng, water, ... tx, 水, shuǐ, ... xt, Water also conducts , eng, electricity, ... tx, 电, diàn, ... xt, But Sparky is , eng, fire, ... tx, 火, huǒ, ... xt, Fire versus , eng, electricity, ... tx, 电, diàn, ... xt, Circuit is also , eng, electricity, ... tx, 电, diàn, ... xt, Same type.
+
+**Mother Tmojizu:** Roll INT Battle Strategy.
+
+**CHARA:** [rolls] 19. Plus 4 is 23. Sparky , eng, fire, ... tx, 火, huǒ, ... xt, uses Fireball , eng, fireball, ... tx, 火球, huǒ qiú, ... xt, against the Lightning Fuzzpet. Fire doesn't conduct electricity. It's the best matchup. , eng, strategy, ... tx, 策略, cè lüè, ... xt,
+
+**Mother Tmojizu:** 23. Smart play. Horli, Sparky attacks. Roll DEX Battle.
+
+**Horli Qwin:** Sparky! , eng, fireball, ... tx, 火球, huǒ qiú, ... xt, [rolls] 18. Plus 3 is 21. , eng, attack, ... tx, 攻击, gōng jī, ... xt,
+
+**Mother Tmojizu:** 21. Sparky's , eng, fireball, ... tx, 火球, huǒ qiú, ... xt, hits the Lightning Fuzzpet. But the demon gangster counters. Roll DEX Defense for the gangster.
+
+**Mother Tmojizu:** [rolls d20] 15. The Lightning Fuzzpet takes damage but fights back. It uses ThundaSnake , eng, thunder snake, ... tx, 雷蛇, léi shé, ... xt, IQabella, Aqua needs to defend. Roll DEX Defense.
+
+**IQabella:** Aqua! , eng, protect, ... tx, 保护, bǎo hù, ... xt, , eng, water wave, ... tx, 水波, shuǐ bō, ... xt, shield! [rolls] 16. Plus 2 is 18. , eng, defense, ... tx, 防御, fáng yù, ... xt,
+
+**Mother Tmojizu:** 18. Aqua's , eng, water wave, ... tx, 水波, shuǐ bō, ... xt, shield absorbs the ThundaSnake. But water conducts electricity — Aqua takes some , eng, pain, ... tx, 痛, tòng, ... xt, 中文老师.
+
+**中文老师:** , eng, pain, ... tx, 痛, tòng, ... xt, , eng, potion, ... tx, 药, yào, ... xt, , eng, use, ... tx, 使用, shǐ yòng, ... xt,
+
+**IQabella:** Aqua is , eng, pain, ... tx, 痛, tòng, ... xt, I , eng, use, ... tx, 使用, shǐ yòng, ... xt, a , eng, potion, ... tx, 药, yào, ... xt, , eng, heal, ... tx, 治疗, zhì liáo, ... xt, , eng, restore, ... tx, 恢复, huī fù, ... xt,
+
+**Mother Tmojizu:** Roll WIS Item Use.
+
+**IQabella:** [rolls] 17. Plus 2 is 19. The , eng, potion, ... tx, 药, yào, ... xt, works. Aqua is , eng, restore, ... tx, 恢复, huī fù, ... xt, , eng, health, ... tx, 健康, jiàn kāng, ... xt,
+
+**Mother Tmojizu:** 19. Aqua is healed. Sol-Supreme, Circuit's turn. Roll DEX Battle.
+
+**Sol-Supreme:** Circuit! , eng, electric shock, ... tx, 电击, diàn jī, ... xt, Same type versus same type. The temporal resonance will amplify the output. [rolls] 17. Plus 1 is 18. , eng, attack, ... tx, 攻击, gōng jī, ... xt,
+
+**Mother Tmojizu:** 18. Circuit's , eng, electric shock, ... tx, 电击, diàn jī, ... xt, creates a temporal feedback loop. The Lightning Fuzzpet is confused. CHARA, Boulder's turn.
+
+**CHARA:** Boulder! , eng, earthquake, ... tx, 地震, dì zhèn, ... xt, The ground shakes. The Lightning Fuzzpet loses its footing. [rolls] 20. Plus 4 is 24. NATURAL 20. , eng, attack, ... tx, 攻击, gōng jī, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. Boulder's , eng, earthquake, ... tx, 地震, dì zhèn, ... xt, is devastating. The Lightning Fuzzpet is knocked out. The demon gangster's Fuzzpet falls. 中文老师, victory words.
+
+**中文老师:** , eng, win, ... tx, 赢, yíng, ... xt, , eng, lose, ... tx, 输, shū, ... xt, , eng, freedom, ... tx, 自由, zì yóu, ... xt, , eng, release, ... tx, 释放, shì fàng, ... xt,
+
+**Mother Tmojizu:** The Lightning Fuzzpet is , eng, freedom, ... tx, 自由, zì yóu, ... xt, You , eng, release, ... tx, 释放, shì fàng, ... xt, it from the gangster's control. It bonds with Horli. It's yours now. You name him Volt. He's , eng, electricity, ... tx, 电, diàn, ... xt, type. His Chronoment: ThundaStorm , eng, thunderstorm, ... tx, 雷暴, léi bào, ... xt,
+
+**中文老师:** , eng, thunderstorm, ... tx, 雷暴, léi bào, ... xt, , eng, storm, ... tx, 风暴, fēng bào, ... xt, , eng, sky, ... tx, 天空, tiān kōng, ... xt,
+
+**Horli Qwin:** Volt! , eng, thunderstorm, ... tx, 雷暴, léi bào, ... xt, , eng, storm, ... tx, 风暴, fēng bào, ... xt, , eng, sky, ... tx, 天空, tiān kōng, ... xt, I have two Fuzzpets now! Sparky , eng, fire, ... tx, 火, huǒ, ... xt, and Volt , eng, electricity, ... tx, 电, diàn, ... xt,
+
+**Mother Tmojizu:** The demon gangster surrenders. The , eng, villagers, ... tx, 村民, cūn mín, ... xt, cheer. You've saved the village. 中文老师, reward vocabulary.
+
+**中文老师:** , eng, reward, ... tx, 奖励, jiǎng lì, ... xt, , eng, gift, ... tx, 礼物, lǐ wù, ... xt, , eng, gratitude, ... tx, 感谢, gǎn xiè, ... xt, , eng, hero, ... tx, 英雄, yīng xióng, ... xt,
+
+**Mother Tmojizu:** The , eng, villagers, ... tx, 村民, cūn mín, ... xt, give you , eng, reward, ... tx, 奖励, jiǎng lì, ... xt, , eng, gift, ... tx, 礼物, lǐ wù, ... xt, , eng, gratitude, ... tx, 感谢, gǎn xiè, ... xt, You are , eng, hero, ... tx, 英雄, yīng xióng, ... xt,
+
+**Horli Qwin:** , eng, hero, ... tx, 英雄, yīng xióng, ... xt, I like the sound of that. , eng, gratitude, ... tx, 感谢, gǎn xiè, ... xt, villagers!
+
+**Mother Tmojizu:** You continue your journey. You find a rare Fuzzpet nesting ground. Dozens of eggs, each with a different element signature. 中文老师, egg vocabulary.
+
+**中文老师:** , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, hatch, ... tx, 孵化, fū huà, ... xt, , eng, birth, ... tx, 出生, chū shēng, ... xt, , eng, new, ... tx, 新, xīn, ... xt, , eng, life, ... tx, 生命, shēng mìng, ... xt,
+
+**IQabella:** , eng, egg, ... tx, 蛋, dàn, ... xt, So many , eng, egg, ... tx, 蛋, dàn, ... xt, I want to help them , eng, hatch, ... tx, 孵化, fū huà, ... xt, , eng, new, ... tx, 新, xīn, ... xt, , eng, life, ... tx, 生命, shēng mìng, ... xt, , eng, birth, ... tx, 出生, chū shēng, ... xt,
+
+**Mother Tmojizu:** Roll WIS Nurturing.
+
+**IQabella:** [rolls] 19. Plus 2 is 21. I warm the eggs with temporal energy. They , eng, hatch, ... tx, 孵化, fū huà, ... xt, One by one. , eng, new, ... tx, 新, xīn, ... xt, , eng, life, ... tx, 生命, shēng mìng, ... xt, , eng, birth, ... tx, 出生, chū shēng, ... xt,
+
+**Mother Tmojizu:** 21. Five new Fuzzpets are born. A Green , eng, green, ... tx, 绿, lǜ, ... xt, wind-type. A Blue , eng, blue, ... tx, 蓝, lán, ... xt, ice-type. A Yellow , eng, yellow, ... tx, 黄, huáng, ... xt, earth-type. A White , eng, white, ... tx, 白, bái, ... xt, light-type. And a rare Black , eng, black, ... tx, 黑, hēi, ... xt, gravity-type. 中文老师.
+
+**中文老师:** , eng, green, ... tx, 绿, lǜ, ... xt, , eng, blue, ... tx, 蓝, lán, ... xt, , eng, yellow, ... tx, 黄, huáng, ... xt, , eng, white, ... tx, 白, bái, ... xt, , eng, black, ... tx, 黑, hēi, ... xt,
+
+**Mother Tmojizu:** Each player chooses one. Horli takes the Green , eng, green, ... tx, 绿, lǜ, ... xt, wind-type. She names her Breeze. Chronoment: AeroSaucer , eng, wind blade, ... tx, 风刃, fēng rèn, ... xt, IQabella takes the Blue , eng, blue, ... tx, 蓝, lán, ... xt, ice-type. She names her Frost. Chronoment: IceLance , eng, ice lance, ... tx, 冰枪, bīng qiāng, ... xt, Sol takes the Yellow , eng, yellow, ... tx, 黄, huáng, ... xt, earth-type. He names her Terra. Chronoment: ElectroBolt , eng, lightning, ... tx, 闪电, shǎn diàn, ... xt, CHARA takes the White , eng, white, ... tx, 白, bái, ... xt, light-type. She names her Lumina. Chronoment: PhotonRay , eng, photon, ... tx, 光子, guāng zǐ, ... xt,
+
+**中文老师:** , eng, wind blade, ... tx, 风刃, fēng rèn, ... xt, , eng, ice lance, ... tx, 冰枪, bīng qiāng, ... xt, , eng, lightning, ... tx, 闪电, shǎn diàn, ... xt, , eng, photon, ... tx, 光子, guāng zǐ, ... xt,
+
+**Mother Tmojizu:** The Black , eng, black, ... tx, 黑, hēi, ... xt, gravity-type Fuzzpet chooses no one. It's too powerful. It floats away into the temporal sky. 中文老师, closing words.
+
+**中文老师:** , eng, adventure, ... tx, 冒险, mào xiǎn, ... xt, , eng, finished, ... tx, 结束, jié shù, ... xt, , eng, friend, ... tx, 朋友, péng you, ... xt, , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, next time, ... tx, 下次, xià cì, ... xt, , eng, keep going, ... tx, 加油, jiā yóu, ... xt,
+
+**Mother Tmojizu:** The Fuzzpet Chronicles , eng, finished, ... tx, 结束, jié shù, ... xt, Six Fuzzpets captured. One village saved. Five new Fuzzpets born. One Black , eng, black, ... tx, 黑, hēi, ... xt, Fuzzpet lost to the sky. , eng, adventure, ... tx, 冒险, mào xiǎn, ... xt, complete.
+
+**Horli Qwin:** I have Sparky , eng, fire, ... tx, 火, huǒ, ... xt, and Volt , eng, electricity, ... tx, 电, diàn, ... xt, and Breeze , eng, green, ... tx, 绿, lǜ, ... xt, Three Fuzzpets! , eng, friend, ... tx, 朋友, péng you, ... xt, , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, keep going, ... tx, 加油, jiā yóu, ... xt,
+
+**CHARA:** I have Boulder , eng, earth, ... tx, 土, tǔ, ... xt, and Lumina , eng, white, ... tx, 白, bái, ... xt, Two Fuzzpets. The element , eng, compound, ... tx, 化合物, huà hé wù, ... xt, analysis is complete. , eng, gratitude, ... tx, 感谢, gǎn xiè, ... xt,
+
+**IQabella:** I have Aqua , eng, water, ... tx, 水, shuǐ, ... xt, and Frost , eng, blue, ... tx, 蓝, lán, ... xt, Two healers. , eng, heal, ... tx, 治疗, zhì liáo, ... xt, , eng, protect, ... tx, 保护, bǎo hù, ... xt, , eng, heart, ... tx, 心, xīn, ... xt,
+
+**Sol-Supreme:** I have Circuit , eng, electricity, ... tx, 电, diàn, ... xt, and Terra , eng, yellow, ... tx, 黄, huáng, ... xt, Two conductors. The temporal energy matrix is stable. , eng, learn, ... tx, 学习, xué xí, ... xt,
+
+**Mother Tmojizu:** , eng, adventure, ... tx, 冒险, mào xiǎn, ... xt, , eng, finished, ... tx, 结束, jié shù, ... xt, , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, ducklings. , eng, keep going, ... tx, 加油, jiā yóu, ... xt,
+
+**中文老师:** , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, keep going, ... tx, 加油, jiā yóu, ... xt,
+
+---
+
+**[END OF FU D&D SESSION 6 — THE FUZZPET CHRONICLES]**
+**Fuzzpets Captured: 6 (Sparky , eng, fire, ... tx, 火, huǒ, ... xt, Aqua , eng, water, ... tx, 水, shuǐ, ... xt, Circuit , eng, electricity, ... tx, 电, diàn, ... xt, Boulder , eng, earth, ... tx, 土, tǔ, ... xt, Volt , eng, electricity, ... tx, 电, diàn, ... xt, Breeze , eng, green, ... tx, 绿, lǜ, ... xt, Frost , eng, blue, ... tx, 蓝, lán, ... xt, Terra , eng, yellow, ... tx, 黄, huáng, ... xt, Lumina , eng, white, ... tx, 白, bái, ... xt,)**
+**Vocabulary: , eng, element, ... tx, 元素, yuán sù, ... xt, , eng, fire, ... tx, 火, huǒ, ... xt, , eng, water, ... tx, 水, shuǐ, ... xt, , eng, earth, ... tx, 土, tǔ, ... xt, , eng, wind, ... tx, 风, fēng, ... xt, , eng, light, ... tx, 光, guāng, ... xt, , eng, dark, ... tx, 暗, àn, ... xt, , eng, electricity, ... tx, 电, diàn, ... xt, , eng, chemistry, ... tx, 化学, huà xué, ... xt, , eng, atom, ... tx, 原子, yuán zǐ, ... xt, , eng, molecule, ... tx, 分子, fēn zǐ, ... xt, , eng, reaction, ... tx, 反应, fǎn yìng, ... xt, , eng, compound, ... tx, 化合物, huà hé wù, ... xt, , eng, capture, ... tx, 捕捉, bǔ zhuō, ... xt, , eng, ball, ... tx, 球, qiú, ... xt, , eng, weaken, ... tx, 削弱, xuē ruò, ... xt, , eng, battle, ... tx, 战斗, zhàn dòu, ... xt, , eng, run away, ... tx, 逃跑, táo pǎo, ... xt, , eng, hydrogen, ... tx, 氢, qīng, ... xt, , eng, oxygen, ... tx, 氧, yǎng, ... xt, , eng, extinguish fire, ... tx, 灭火, miè huǒ, ... xt, , eng, skill, ... tx, 技能, jì néng, ... xt, , eng, magic, ... tx, 魔法, mó fǎ, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, power, ... tx, 力量, lì liàng, ... xt, , eng, level, ... tx, 等级, děng jí, ... xt, , eng, river, ... tx, 河, hé, ... xt, , eng, stream, ... tx, 溪, xī, ... xt, , eng, cure, ... tx, 治愈, zhì yù, ... xt, , eng, medicine, ... tx, 药, yào, ... xt, , eng, temple, ... tx, 庙, miào, ... xt, , eng, heal, ... tx, 治疗, zhì liáo, ... xt, , eng, restore, ... tx, 恢复, huī fù, ... xt, , eng, health, ... tx, 健康, jiàn kāng, ... xt, , eng, life, ... tx, 生命, shēng mìng, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt, , eng, carbon, ... tx, 碳, tàn, ... xt, , eng, silicon, ... tx, 硅, guī, ... xt, , eng, iron, ... tx, 铁, tiě, ... xt, , eng, gold, ... tx, 金, jīn, ... xt, , eng, silver, ... tx, 银, yín, ... xt, , eng, copper, ... tx, 铜, tóng, ... xt, , eng, stone, ... tx, 石头, shí tou, ... xt, , eng, mountain, ... tx, 山, shān, ... xt, , eng, cave, ... tx, 洞, dòng, ... xt, , eng, sleep, ... tx, 睡觉, shuì jiào, ... xt, , eng, quiet, ... tx, 安静, ān jìng, ... xt, , eng, nitrogen, ... tx, 氮, dàn, ... xt, , eng, help, ... tx, 帮助, bāng zhù, ... xt, , eng, villagers, ... tx, 村民, cūn mín, ... xt, , eng, danger, ... tx, 危险, wēi xiǎn, ... xt, , eng, rescue, ... tx, 救, jiù, ... xt, , eng, justice, ... tx, 正义, zhèng yì, ... xt, , eng, evil, ... tx, 邪恶, xié è, ... xt, , eng, first, ... tx, 先, xiān, ... xt, , eng, after, ... tx, 后, hòu, ... xt, , eng, pain, ... tx, 痛, tòng, ... xt, , eng, potion, ... tx, 药, yào, ... xt, , eng, use, ... tx, 使用, shǐ yòng, ... xt, , eng, defense, ... tx, 防御, fáng yù, ... xt, , eng, attack, ... tx, 攻击, gōng jī, ... xt, , eng, win, ... tx, 赢, yíng, ... xt, , eng, lose, ... tx, 输, shū, ... xt, , eng, freedom, ... tx, 自由, zì yóu, ... xt, , eng, release, ... tx, 释放, shì fàng, ... xt, , eng, reward, ... tx, 奖励, jiǎng lì, ... xt, , eng, gift, ... tx, 礼物, lǐ wù, ... xt, , eng, gratitude, ... tx, 感谢, gǎn xiè, ... xt, , eng, hero, ... tx, 英雄, yīng xióng, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, hatch, ... tx, 孵化, fū huà, ... xt, , eng, birth, ... tx, 出生, chū shēng, ... xt, , eng, new, ... tx, 新, xīn, ... xt, , eng, green, ... tx, 绿, lǜ, ... xt, , eng, blue, ... tx, 蓝, lán, ... xt, , eng, yellow, ... tx, 黄, huáng, ... xt, , eng, white, ... tx, 白, bái, ... xt, , eng, black, ... tx, 黑, hēi, ... xt, , eng, adventure, ... tx, 冒险, mào xiǎn, ... xt, , eng, finished, ... tx, 结束, jié shù, ... xt, , eng, friend, ... tx, 朋友, péng you, ... xt, , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, next time, ... tx, 下次, xià cì, ... xt, , eng, keep going, ... tx, 加油, jiā yóu, ... xt, , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, heart, ... tx, 心, xīn, ... xt, , eng, learn, ... tx, 学习, xué xí, ... xt, , eng, strategy, ... tx, 策略, cè lüè, ... xt, , eng, protect, ... tx, 保护, bǎo hù, ... xt,**
+**Chemistry Taught: H2 + O2 = H2O (water), N2 (liquid nitrogen -196°C), SiC (silicon carbide), 2H2 + O2 = 2H2O**
+**Chronoments Used: , eng, fireball, ... tx, 火球, huǒ qiú, ... xt, , eng, water wave, ... tx, 水波, shuǐ bō, ... xt, , eng, electric shock, ... tx, 电击, diàn jī, ... xt, , eng, earthquake, ... tx, 地震, dì zhèn, ... xt, , eng, thunder snake, ... tx, 雷蛇, léi shé, ... xt, , eng, thunderstorm, ... tx, 雷暴, léi bào, ... xt, , eng, wind blade, ... tx, 风刃, fēng rèn, ... xt, , eng, ice lance, ... tx, 冰枪, bīng qiāng, ... xt, , eng, lightning, ... tx, 闪电, shǎn diàn, ... xt, , eng, photon, ... tx, 光子, guāng zǐ, ... xt,**
+**ϕ**

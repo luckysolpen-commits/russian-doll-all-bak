@@ -1,0 +1,164 @@
+# TTS VOICE CONVERSION CHECKLIST
+# ================================
+# Voice Changes:
+#   Mother Tmojizu → zh-CN-XiaoxiaoNeural (was JennyNeural)
+#   Horli Qwin     → en-US-JennyNeural (was RogerNeural)
+#   Sol-Supreme    → en-US-ChristopherNeural + pitch lowered (was GuyNeural)
+#   CHARA          → en-US-AriaNeural (unchanged)
+#   IQabella       → en-US-AnaNeural (unchanged)
+#   中文老师        → zh-CN-XiaoxiaoNeural (unchanged)
+#
+# Output: 中-prefixed MP3s, then copy to @.sp.iphone-MAC中/ (MP3 only, no .txt)
+#
+# Status: [ ] pending  [✓] done  [✗] failed  [R] needs retry
+
+# ============================================
+# CATEGORY 1: MULTI-VOICE (needs voice swap)
+# ============================================
+
+## ffu++chinese-learning/1.ffu-ez_learnd&d+chem/ (13 files)
+[ ] fud&d-sesh1-memory-palace-race.txt → 中fud&d-sesh1-memory-palace-race.mp3
+[ ] fud&d-sesh2-polo.txt → 中fud&d-sesh2-polo.mp3
+[ ] fud&d-sesh3-horse-race.txt → 中fud&d-sesh3-horse-race.mp3
+[ ] fud&d-sesh4-martial-arts.txt → 中fud&d-sesh4-martial-arts.mp3
+[ ] fud&d-sesh5-banquet.txt → 中fud&d-sesh5-banquet.mp3
+[ ] fud&d-sesh6-fuzzpet-chronicles.txt → 中fud&d-sesh6-fuzzpet-chronicles.mp3
+[ ] fud&d-sesh7-temple-heist.txt → 中fud&d-sesh7-temple-heist.mp3
+[ ] fud&d-sesh8p1-stadium-heist.txt → 中fud&d-sesh8p1-stadium-heist.mp3
+[ ] fud&d-sesh8p2-chase.txt → 中fud&d-sesh8p2-chase.mp3
+[ ] fud&d-sesh8p3-pirate-alliance.txt → 中fud&d-sesh8p3-pirate-alliance.mp3
+[ ] fud&d-sesh8p4-grand-finale.txt → 中fud&d-sesh8p4-grand-finale.mp3
+[ ] fud&d-sesh9-review-advanced.txt → 中fud&d-sesh9-review-advanced.mp3
+[ ] fud&d-sesh10-belt-gym.txt → 中fud&d-sesh10-belt-gym.mp3
+[ ] fud&d-sesh11-pharma-lab.txt → 中fud&d-sesh11-pharma-lab.mp3
+[ ] fud&d-sesh12-review-pharma.txt → 中fud&d-sesh12-review-pharma.mp3
+[ ] fud&d-sesh13-labpet-empire.txt → 中fud&d-sesh13-labpet-empire.mp3
+
+## ffu++chinese-learning/ffuture-redo/ (3 files)
+[ ] ff-sesh01-welcome-time-academy.txt → 中ff-sesh01-welcome-time-academy.mp3
+[ ] ff-sesh02-elements-fuzzpets-stardustball.txt → 中ff-sesh02-elements-fuzzpets-stardustball.mp3
+[ ] ff-sesh03-simulations-lawsuits-market.txt → 中ff-sesh03-simulations-lawsuits-market.mp3
+
+## spai.d-d-murderhobozos/0.avantasy-sesh-#1-10/ (10 files)
+[ ] ava-session-003.txt → 中ava-session-003.mp3
+[ ] ava-session-004.txt → 中ava-session-004.mp3
+[ ] ava-session-005.txt → 中ava-session-005.mp3
+[ ] ava-session-006.txt → 中ava-session-006.mp3
+[ ] ava-session-007.txt → 中ava-session-007.mp3
+[ ] ava-session-008.txt → 中ava-session-008.mp3
+[ ] ava-session-009.txt → 中ava-session-009.mp3
+[ ] ava-session-010.txt → 中ava-session-010.mp3
+
+## spai.d-d-murderhobozos/1.tmojio-1-10_v3/ (10 files)
+[ ] tpmojio-sesh#3.txt → 中tpmojio-sesh#3.mp3
+[ ] tpmojio-sesh#4.txt → 中tpmojio-sesh#4.mp3
+[ ] tpmojio-sesh#5.txt → 中tpmojio-sesh#5.mp3
+[ ] tpmojio-sesh#6.txt → 中tpmojio-sesh#6.mp3
+[ ] tpmojio-sesh#7.txt → 中tpmojio-sesh#7.mp3
+[ ] tpmojio-sesh#8.txt → 中tpmojio-sesh#8.mp3
+[ ] tpmojio-sesh#9.txt → 中tpmojio-sesh#9.mp3
+[ ] tpmojio-sesh#10.txt → 中tpmojio-sesh#10.mp3
+
+## spai.d-d-murderhobozos/2.ii.clone-chronicles/part1-blood-market/ (10 files)
+[ ] clone-chronicles-sesh1.txt → 中clone-chronicles-sesh1.mp3
+[ ] clone-chronicles-sesh2.txt → 中clone-chronicles-sesh2.mp3
+[ ] clone-chronicles-sesh3.txt → 中clone-chronicles-sesh3.mp3
+[ ] clone-chronicles-sesh4.txt → 中clone-chronicles-sesh4.mp3
+[ ] clone-chronicles-sesh5.txt → 中clone-chronicles-sesh5.mp3
+[ ] clone-chronicles-sesh6.txt → 中clone-chronicles-sesh6.mp3
+[ ] clone-chronicles-sesh7.txt → 中clone-chronicles-sesh7.mp3
+[ ] clone-chronicles-sesh8.txt → 中clone-chronicles-sesh8.mp3
+[ ] clone-chronicles-sesh9.txt → 中clone-chronicles-sesh9.mp3
+[ ] clone-chronicles-sesh10.txt → 中clone-chronicles-sesh10.mp3
+
+## spai.d-d-murderhobozos/2.ii.clone-chronicles/part2-empire-game/ (10 files)
+[ ] clone-chronicles-p2-sesh1.txt → 中clone-chronicles-p2-sesh1.mp3
+[ ] clone-chronicles-p2-sesh2.txt → 中clone-chronicles-p2-sesh2.mp3
+[ ] clone-chronicles-p2-sesh3.txt → 中clone-chronicles-p2-sesh3.mp3
+[ ] clone-chronicles-p2-sesh4.txt → 中clone-chronicles-p2-sesh4.mp3
+[ ] clone-chronicles-p2-sesh5.txt → 中clone-chronicles-p2-sesh5.mp3
+[ ] clone-chronicles-p2-sesh6.txt → 中clone-chronicles-p2-sesh6.mp3
+[ ] clone-chronicles-p2-sesh7.txt → 中clone-chronicles-p2-sesh7.mp3
+[ ] clone-chronicles-p2-sesh8.txt → 中clone-chronicles-p2-sesh8.mp3
+[ ] clone-chronicles-p2-sesh9.txt → 中clone-chronicles-p2-sesh9.mp3
+[ ] clone-chronicles-p2-sesh10.txt → 中clone-chronicles-p2-sesh10.mp3
+
+## spai.d-d-murderhobozos/3.rpg-canvas-sp-editsesh/ (1 file)
+[ ] RMMSP_sesh#1.txt → 中RMMSP_sesh#1.mp3
+
+## spai.d-d-murderhobozos/x20.fuzz-sesh#1-3.5/ (2 files)
+[ ] fuzz-sesh-grok-2-note#2.txt → 中fuzz-sesh-grok-2-note#2.mp3
+[ ] fuzz-sesh-grok-2-note#3.txt → 中fuzz-sesh-grok-2-note#3.mp3
+
+## HARD_VVAR/ (4 files)
+[ ] hard_vvar-sesh1.txt → 中hard_vvar-sesh1.mp3
+[ ] hard_vvar-sesh2.txt → 中hard_vvar-sesh2.mp3
+[ ] hard_vvar-sesh3.txt → 中hard_vvar-sesh3.mp3
+[ ] hard_vvar-sesh4.txt → 中hard_vvar-sesh4.mp3
+
+## TMOJIO_CAFE[]&/cafe-rp-sim/ (10 files)
+[ ] cafe-sesh1-first-quest.txt → 中cafe-sesh1-first-quest.mp3
+[ ] cafe-sesh2-first-meeting.txt → 中cafe-sesh2-first-meeting.mp3
+[ ] cafe-sesh3-the-gauntlet.txt → 中cafe-sesh3-the-gauntlet.mp3
+[ ] cafe-sesh4-the-kitchen.txt → 中cafe-sesh4-the-kitchen.mp3
+[ ] cafe-sesh5-the-rival.txt → 中cafe-sesh5-the-rival.mp3
+[ ] cafe-sesh6-the-health-inspector.txt → 中cafe-sesh6-the-health-inspector.mp3
+[ ] cafe-sesh7-the-food-festival.txt → 中cafe-sesh7-the-food-festival.mp3
+[ ] cafe-sesh8-the-secret-recipe.txt → 中cafe-sesh8-the-secret-recipe.mp3
+[ ] cafe-sesh9-the-grand-opening.txt → 中cafe-sesh9-the-grand-opening.mp3
+[ ] cafe-sesh10-the-moon-remembers.txt → 中cafe-sesh10-the-moon-remembers.mp3
+
+# ============================================
+# CATEGORY 2: SINGLE-VOICE (reconvert correct voice)
+# ============================================
+
+## ffu++chinese-learning/chara-notes/ (7 files, CHARA = AriaNeural)
+[ ] chara-study-sesh01-suing-people-101.txt → 中chara-study-sesh01-suing-people-101.mp3
+[ ] chara-study-sesh02-suing-governments.txt → 中chara-study-sesh02-suing-governments.mp3
+[ ] chara-study-sesh03-international-law.txt → 中chara-study-sesh03-international-law.mp3
+[ ] chara-study-sesh04-starting-government.txt → 中chara-study-sesh04-starting-government.mp3
+[ ] chara-study-sesh05-campaign-finance.txt → 中chara-study-sesh05-campaign-finance.mp3
+[ ] chara-study-sesh06-business-law.txt → 中chara-study-sesh06-business-law.mp3
+[ ] chara-study-sesh07-ultimate-play.txt → 中chara-study-sesh07-ultimate-play.mp3
+
+## ffu++chinese-learning/sol-notes/ (7 files, Sol = ChristopherNeural + deep pitch)
+[ ] sol-study-sesh01-material-science.txt → 中sol-study-sesh01-material-science.mp3
+[ ] sol-study-sesh02-matter-generation.txt → 中sol-study-sesh02-matter-generation.mp3
+[ ] sol-study-sesh03-c-type-blood.txt → 中sol-study-sesh03-c-type-blood.mp3
+[ ] sol-study-sesh04-wormholes.txt → 中sol-study-sesh04-wormholes.mp3
+[ ] sol-study-sesh05-zero-g-suit.txt → 中sol-study-sesh05-zero-g-suit.mp3
+[ ] sol-study-sesh06-ftl-travel.txt → 中sol-study-sesh06-ftl-travel.mp3
+[ ] sol-study-sesh07-flex-box.txt → 中sol-study-sesh07-flex-box.mp3
+
+## ffu++chinese-learning/iqa-notes/ (7 files, IQA = AnaNeural)
+[ ] iqa-study-sesh01-nothing-to-everything.txt → 中iqa-study-sesh01-nothing-to-everything.mp3
+[ ] iqa-study-sesh02-atoms-hold-hands.txt → 中iqa-study-sesh02-atoms-hold-hands.mp3
+[ ] iqa-study-sesh03-carbon-decides-life.txt → 中iqa-study-sesh03-carbon-decides-life.mp3
+[ ] iqa-study-sesh04-pill-that-fixes-you.txt → 中iqa-study-sesh04-pill-that-fixes-you.mp3
+[ ] iqa-study-sesh05-rewriting-blueprint.txt → 中iqa-study-sesh05-rewriting-blueprint.mp3
+[ ] iqa-study-sesh06-immortality-protocol.txt → 中iqa-study-sesh06-immortality-protocol.mp3
+[ ] iqa-study-sesh07-simulating-reality.txt → 中iqa-study-sesh07-simulating-reality.mp3
+
+## ffu++chinese-learning/horli-tutalage/ (7 files, Horli = JennyNeural + 中文老师)
+[ ] horli-tutalage-sesh01-street-chinese.txt → 中horli-tutalage-sesh01-street-chinese.mp3
+[ ] horli-tutalage-sesh02-restaurant-chinese.txt → 中horli-tutalage-sesh02-restaurant-chinese.mp3
+[ ] horli-tutalage-sesh03-martial-arts-chinese.txt → 中horli-tutalage-sesh03-martial-arts-chinese.mp3
+[ ] horli-tutalage-sesh04-underworld-chinese.txt → 中horli-tutalage-sesh04-underworld-chinese.mp3
+[ ] horli-tutalage-sesh05-club-chinese.txt → 中horli-tutalage-sesh05-club-chinese.mp3
+[ ] horli-tutalage-sesh06-full-sentences.txt → 中horli-tutalage-sesh06-full-sentences.mp3
+[ ] horli-tutalage-sesh07-chinese-gangster-rap.txt → 中horli-tutalage-sesh07-chinese-gangster-rap.mp3
+
+# ============================================
+# SUMMARY
+# ============================================
+# Category 1 (multi-voice): ___ / 73 done
+# Category 2 (single-voice): ___ / 28 done
+# TOTAL: ___ / 101 done
+#
+# Failed (need retry):
+# [list failures here]
+#
+# ============================================
+# COPY TO IPHONE (after all conversions done)
+# ============================================
+# [ ] Copy all 中*.mp3 to @.sp.iphone-MAC中/ (mirror dir structure, MP3 only)

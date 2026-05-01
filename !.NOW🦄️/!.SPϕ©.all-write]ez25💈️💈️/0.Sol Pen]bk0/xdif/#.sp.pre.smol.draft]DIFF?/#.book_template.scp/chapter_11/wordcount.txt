@@ -1,9 +1,0 @@
-Chapter 11 Word Count:
-
-page_1.txt: 299 words
-page_2.txt: 299 words
-page_3.txt: 200 words
-page_4.txt: 299 words
-page_5.txt: 200 words
-
-Total Chapter 11 Word Count: 1297 words

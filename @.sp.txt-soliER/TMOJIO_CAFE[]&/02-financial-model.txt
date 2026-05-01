@@ -1,0 +1,218 @@
+# TPMOJIO CAFE — Financial Model & Unit Economics
+## "Show Me the Numbers"
+
+---
+
+## Assumptions
+
+This model is for a **single location** — the MVP store (~2,000 sqft, strip mall near college).
+
+**All numbers are estimates.** They're based on industry averages for cafes, game stores, and community spaces. Actual numbers will vary.
+
+---
+
+## Startup Costs (One-Time)
+
+| Item | Cost | Notes |
+|------|------|-------|
+| **Lease deposit** | $15,000 | 3 months rent at $5,000/mo |
+| **Build-out / renovation** | $80,000 | Cafe counter, seating, gaming tables, tech display, event corner |
+| **Equipment** | $40,000 | Espresso machine, refrigerators, POS system, sound system, streaming setup |
+| **Initial inventory** | $25,000 | Food/beverage supplies, board games, tech products, merch |
+| **Furniture & fixtures** | $30,000 | Tables, chairs, shelving, display cases, decor |
+| **Technology** | $15,000 | Quest board app setup, WiFi, security cameras, digital signage |
+| **Licenses & permits** | $5,000 | Food service, business license, music licensing |
+| **Marketing (pre-opening)** | $10,000 | Social media, local ads, pop-up events, membership pre-sales |
+| **Working capital (3 months)** | $60,000 | Rent, payroll, utilities, inventory replenishment |
+| **TOTAL** | **$280,000** | |
+
+**Bootstrap note:** You can reduce this to ~$150K by:
+- Starting with a smaller space (1,200 sqft)
+- Doing more DIY build-out
+- Starting with limited tech inventory (consignment model)
+- Pre-selling memberships to fund working capital
+
+---
+
+## Monthly Operating Costs (Ongoing)
+
+| Item | Monthly Cost | Notes |
+|------|-------------|-------|
+| **Rent** | $5,000 | 2,000 sqft at $2.50/sqft (strip mall) |
+| **Payroll** | $18,000 | 1 manager ($4,500), 2 baristas ($3,500 each), 2 part-time ($2,000 each) |
+| **Food & beverage COGS** | $4,000 | 30% of F&B revenue |
+| **Retail COGS** | $6,000 | 70% of retail revenue (tech + games + merch) |
+| **Utilities** | $1,500 | Electric, water, gas, internet |
+| **Insurance** | $800 | Liability, property, workers comp |
+| **Marketing** | $1,500 | Social media, local ads, events |
+| **Software subscriptions** | $500 | POS, quest board app, accounting, scheduling |
+| **Miscellaneous** | $1,000 | Repairs, supplies, unexpected |
+| **TOTAL** | **$38,300/mo** | |
+
+---
+
+## Monthly Revenue Projections
+
+### Conservative (Month 6-12, established but not thriving)
+
+| Stream | Monthly Revenue | Margin | Gross Profit |
+|--------|----------------|--------|-------------|
+| **Food & Beverage** | $12,000 | 70% | $8,400 |
+| **Tech Retail** | $8,000 | 15% | $1,200 |
+| **Game Retail** | $4,000 | 35% | $1,400 |
+| **Merch** | $3,000 | 60% | $1,800 |
+| **Memberships** | $3,000 | 95% | $2,850 |
+| **Events** | $2,000 | 50% | $1,000 |
+| **Space Rental** | $1,000 | 80% | $800 |
+| **Software** | $2,000 | 90% | $1,800 |
+| **Classes** | $1,500 | 60% | $900 |
+| **TOTAL** | **$36,500** | | **$20,150** |
+
+**Result:** -$18,150/mo loss. **Not viable at conservative levels.**
+
+### Realistic (Month 12-24, healthy community location)
+
+| Stream | Monthly Revenue | Margin | Gross Profit |
+|--------|----------------|--------|-------------|
+| **Food & Beverage** | $20,000 | 70% | $14,000 |
+| **Tech Retail** | $15,000 | 15% | $2,250 |
+| **Game Retail** | $7,000 | 35% | $2,450 |
+| **Merch** | $6,000 | 60% | $3,600 |
+| **Memberships** | $7,500 | 95% | $7,125 |
+| **Events** | $5,000 | 50% | $2,500 |
+| **Space Rental** | $3,000 | 80% | $2,400 |
+| **Software** | $5,000 | 90% | $4,500 |
+| **Classes** | $4,000 | 60% | $2,400 |
+| **TOTAL** | **$72,500** | | **$41,225** |
+
+**Result:** +$2,925/mo profit. **Viable but thin margins.**
+
+### Optimistic (Month 24+, thriving community hub)
+
+| Stream | Monthly Revenue | Margin | Gross Profit |
+|--------|----------------|--------|-------------|
+| **Food & Beverage** | $30,000 | 70% | $21,000 |
+| **Tech Retail** | $25,000 | 15% | $3,750 |
+| **Game Retail** | $10,000 | 35% | $3,500 |
+| **Merch** | $10,000 | 60% | $6,000 |
+| **Memberships** | $15,000 | 95% | $14,250 |
+| **Events** | $10,000 | 50% | $5,000 |
+| **Space Rental** | $5,000 | 80% | $4,000 |
+| **Software** | $10,000 | 90% | $9,000 |
+| **Classes** | $7,000 | 60% | $4,200 |
+| **TOTAL** | **$122,000** | | **$70,700** |
+
+**Result:** +$32,400/mo profit. **Very viable.**
+
+---
+
+## Break-Even Analysis
+
+**Fixed costs:** $38,300/mo (operating costs)
+**Variable costs:** ~35% of revenue (COGS)
+**Contribution margin:** ~65%
+
+**Break-even revenue:** $38,300 / 0.65 = **$58,923/mo**
+
+You need ~$59K/month in revenue to break even. That's achievable but requires:
+- 200+ paying members ($15-75/mo tier)
+- $20K+/mo in F&B (67 customers/day at $10 avg)
+- $15K+/mo in retail
+- $10K+/mo in events, classes, software, space rental
+
+---
+
+## The Membership Math (Key Lever)
+
+Memberships are your **highest-margin, most-predictable revenue**. They're the backbone.
+
+| Members Needed | Avg Tier | Monthly Revenue | Covers Fixed Costs? |
+|---------------|----------|-----------------|-------------------|
+| 50 | Player ($15) | $750 | No |
+| 100 | Player ($15) | $1,500 | No |
+| 200 | Mix ($30 avg) | $6,000 | No, but helps |
+| 300 | Mix ($30 avg) | $9,000 | No, but getting close |
+| 500 | Mix ($35 avg) | $17,500 | Covers 46% of fixed costs |
+| 750 | Mix ($40 avg) | $30,000 | Covers 78% of fixed costs |
+| 1,000 | Mix ($45 avg) | $45,000 | **Covers 117% of fixed costs** |
+
+**Key insight:** If you can get 500+ members, the store is viable even if other revenue streams underperform. **Memberships are the make-or-break metric.**
+
+---
+
+## Software Revenue (Bootstrap Engine)
+
+This is your **secret weapon**. Software has 90%+ margins and scales infinitely.
+
+| Product | Price | Customers Needed | Monthly Revenue |
+|---------|-------|-----------------|-----------------|
+| **TPMOJIO Digital** (session player) | $5/mo | 1,000 | $5,000 |
+| **Quest Board App** (SaaS for other stores) | $29/mo | 100 | $2,900 |
+| **Session Recording Tools** | $15/mo | 200 | $3,000 |
+| **TPMOJIO Campaign Manager** | $49/mo | 50 | $2,450 |
+| **Merch Platform** (print-on-demand) | 20% margin | $10K sales | $2,000 |
+| **TOTAL** | | | **$15,350/mo** |
+
+**If you can build software that other game stores, cafes, and community spaces want to use, this becomes a real business even without physical locations.**
+
+---
+
+## Investor Pitch Numbers
+
+### Seed Round: $500K
+- **Use of funds:** First location build-out ($280K), 6 months operating capital ($180K), software development ($40K)
+- **Milestone:** Prove unit economics at first location. 300+ members. $60K+/mo revenue.
+- **Timeline:** 12-18 months
+
+### Series A: $2-5M
+- **Use of funds:** 3-5 additional locations, central software team, marketing
+- **Milestone:** 5 profitable locations. $300K+/mo combined revenue. Software SaaS at 500+ customers.
+- **Timeline:** 24-36 months
+
+### Series B: $10-20M
+- **Use of funds:** 20-30 locations, multi-story flagship, national marketing
+- **Milestone:** Regional brand recognition. $2M+/mo combined revenue. Software SaaS at 2,000+ customers.
+- **Timeline:** 48-60 months
+
+### Exit Scenarios:
+- **Acquisition by Barnes & Noble:** $50-100M (they need community spaces)
+- **Acquisition by GameStop:** $30-60M (they need experiential retail)
+- **Acquisition by software company:** $20-40M (for the SaaS platform)
+- **IPO:** Unlikely unless you hit 100+ locations
+
+---
+
+## The Honest Truth
+
+**This is a hard business.** Food service is brutal. Retail margins are thin. Community building takes years. Most cafes fail in year one. Most game stores never scale past one location.
+
+**But here's why it could work:**
+
+1. **You have IP.** Most cafes don't have a built-in universe of content, characters, and community.
+2. **You have audio content.** 40+ sessions of free marketing. Every listener is a potential customer.
+3. **You have open source ethos.** The community builds with you, not for you.
+4. **Software is the hedge.** Even if stores fail, software can sustain the business.
+5. **The concept is defensible.** No one else is combining cafe + tech + gaming + community + IP in one brand.
+
+**What you need to succeed:**
+- **Relentless focus on community.** The store is a vehicle. The community is the product.
+- **Pre-sell everything.** Memberships before opening. Software before stores. Events before space.
+- **Start small.** Prove the model at one location before scaling.
+- **Be willing to pivot.** If food doesn't work, focus on events. If retail doesn't work, focus on software. If memberships don't work, focus on classes.
+
+---
+
+## Your Personal Situation
+
+You have an MBA. You understand the numbers. What you haven't done is **run a business that makes money**. That's okay. Here's what to focus on:
+
+1. **Don't try to build everything at once.** Start with software + pop-up events. Prove demand.
+2. **Find a co-founder who's done food service.** You don't need to learn espresso machines from scratch.
+3. **Talk to 100 potential members before spending a dollar.** If they won't pre-pay, the concept isn't ready.
+4. **Track one metric obsessively:** Monthly recurring revenue (memberships + software). Everything else is noise.
+5. **Be okay with slow.** This is a 5-year business, not a 1-year business.
+
+---
+
+*The board remembers. The numbers don't lie.*
+*ϕ*

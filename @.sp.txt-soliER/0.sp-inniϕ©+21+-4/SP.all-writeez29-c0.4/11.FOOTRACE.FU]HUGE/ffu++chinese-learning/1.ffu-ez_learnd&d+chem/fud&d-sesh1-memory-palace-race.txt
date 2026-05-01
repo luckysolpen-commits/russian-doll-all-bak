@@ -1,0 +1,264 @@
+# FU D&D — SESSION 1: "THE MEMORY PALACE RACE"
+## Footrace.FU Chinese Learning — Episode 1
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** Welcome to FU Tabletop. Tonight we're not fighting monsters. We're racing through the Memory Palace. Thirty-three stops. Each one has Chinese vocabulary. First one to reach the Time Factory wins. Roll for initiative, ducklings.
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. LET'S GO. I'm gonna speedrun this palace.
+
+**CHARA:** [rolls] 16. Plus 3 is 19. I've already mapped the optimal route through all thirty-three stops.
+
+**IQabella:** [rolls] 14. Plus 0 is 14. I'm just here to learn. And make sure everyone stays hydrated.
+
+**Sol-Supreme:** [rolls] 12. Plus 0 is 12. I'll process the vocabulary systematically. Efficiency over speed.
+
+**Mother Tmojizu:** Turn order: Horli (23), Chara (19), IQabella (14), Sol-Supreme (12). Each turn you move to the next stop. At each stop, 中文老师 teaches you words. You must repeat them correctly to pass. Fail the check, you're stuck. Roll WIS Learning to absorb the vocabulary.
+
+**Mother Tmojizu:** Horli, you're first. You land on Stop 1: The Time Train Station. 中文老师, teach us.
+
+**中文老师:** , eng, train, ... tx, 火车, huǒ chē, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, arrive, ... tx, 到达, dào dá, ... xt, , eng, platform, ... tx, 站台, zhàn tái, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt,
+
+**Mother Tmojizu:** Roll WIS Learning, Horli. Repeat the words.
+
+**Horli Qwin:** Okay. , eng, train, ... tx, 火车, huǒ chē, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, arrive, ... tx, 到达, dào dá, ... xt, , eng, platform, ... tx, 站台, zhàn tái, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 18. Plus your 0 is 18. You got them all. You move to Stop 2. Chara, you're next. Same stop. 中文老师, again.
+
+**中文老师:** , eng, train, ... tx, 火车, huǒ chē, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, arrive, ... tx, 到达, dào dá, ... xt, , eng, platform, ... tx, 站台, zhàn tái, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt,
+
+**CHARA:** , eng, train, ... tx, 火车, huǒ chē, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, arrive, ... tx, 到达, dào dá, ... xt, , eng, platform, ... tx, 站台, zhàn tái, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 20. Plus your 4 is 24. NATURAL 20. Chara not only learns the words — she memorizes the entire station. She gets a bonus move. Chara, you jump ahead to Stop 3: The Time Debt Counter.
+
+**中文老师:** , eng, debt, ... tx, 债, zhài, ... xt, , eng, second, ... tx, 秒, miǎo, ... xt, , eng, count down, ... tx, 倒数, dào shǔ, ... xt, , eng, afraid, ... tx, 害怕, hài pà, ... xt,
+
+**CHARA:** , eng, debt, ... tx, 债, zhài, ... xt, , eng, second, ... tx, 秒, miǎo, ... xt, , eng, count down, ... tx, 倒数, dào shǔ, ... xt, , eng, afraid, ... tx, 害怕, hài pà, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 19. Plus 4 is 23. Perfect. Chara is at Stop 3. IQabella, your turn. Same station. 中文老师.
+
+**中文老师:** , eng, train, ... tx, 火车, huǒ chē, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, arrive, ... tx, 到达, dào dá, ... xt, , eng, platform, ... tx, 站台, zhàn tái, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt,
+
+**IQabella:** , eng, train, ... tx, 火车, huǒ chē, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, arrive, ... tx, 到达, dào dá, ... xt, , eng, platform, ... tx, 站台, zhàn tái, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 15. Plus 2 is 17. Solid. IQabella moves to Stop 2: The Time Dojo. Sol-Supreme, you're last. Same station.
+
+**中文老师:** , eng, train, ... tx, 火车, huǒ chē, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, arrive, ... tx, 到达, dào dá, ... xt, , eng, platform, ... tx, 站台, zhàn tái, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt,
+
+**Sol-Supreme:** , eng, train, ... tx, 火车, huǒ chē, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, arrive, ... tx, 到达, dào dá, ... xt, , eng, platform, ... tx, 站台, zhàn tái, ... xt, , eng, cherry blossom, ... tx, 樱花, yīng huā, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 14. Plus 1 is 15. You pass. Sol moves to Stop 2. End of Round 1.
+
+**Mother Tmojizu:** Board state:
+- **Chara:** Stop 3 — Time Debt Counter. Leading.
+- **Horli:** Stop 2 — Time Dojo.
+- **IQabella:** Stop 2 — Time Dojo.
+- **Sol-Supreme:** Stop 2 — Time Dojo.
+
+**Mother Tmojizu:** Round 2. Horli, you're at Stop 2: The Time Dojo. 中文老师, teach.
+
+**中文老师:** , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, practice, ... tx, 练习, liàn xí, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt,
+
+**Horli Qwin:** , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, practice, ... tx, 练习, liàn xí, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 12. Plus 0 is 12. Barely passes. You move to Stop 4: Cherry Blossoms. Chara, Stop 3: Time Debt Counter. 中文老师.
+
+**中文老师:** , eng, debt, ... tx, 债, zhài, ... xt, , eng, second, ... tx, 秒, miǎo, ... xt, , eng, count down, ... tx, 倒数, dào shǔ, ... xt, , eng, afraid, ... tx, 害怕, hài pà, ... xt,
+
+**CHARA:** Already learned these. I'm moving forward. I roll to advance.
+
+**Mother Tmojizu:** Roll WIS Learning.
+
+**CHARA:** [rolls] 17. Plus 4 is 21.
+
+**Mother Tmojizu:** 21. Chara advances to Stop 5: The Three Sisters. 中文老师, new words.
+
+**中文老师:** , eng, older sister, ... tx, 姐姐, jiě jie, ... xt, , eng, welcome, ... tx, 欢迎, huān yíng, ... xt, , eng, home, ... tx, 家, jiā, ... xt, , eng, family, ... tx, 家人, jiā rén, ... xt,
+
+**CHARA:** , eng, older sister, ... tx, 姐姐, jiě jie, ... xt, , eng, welcome, ... tx, 欢迎, huān yíng, ... xt, , eng, home, ... tx, 家, jiā, ... xt, , eng, family, ... tx, 家人, jiā rén, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 22. Plus 4 is 26. Chara is on fire. She's at Stop 5. IQabella, Stop 2: Time Dojo.
+
+**中文老师:** , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, practice, ... tx, 练习, liàn xí, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt,
+
+**IQabella:** , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, practice, ... tx, 练习, liàn xí, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 18. Plus 2 is 20. IQabella moves to Stop 4: Cherry Blossoms. Sol-Supreme, same stop.
+
+**中文老师:** , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, practice, ... tx, 练习, liàn xí, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt,
+
+**Sol-Supreme:** , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, practice, ... tx, 练习, liàn xí, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, energy, ... tx, 能量, néng liàng, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 16. Plus 1 is 17. Sol moves to Stop 3: Time Debt Counter. End of Round 2.
+
+**Mother Tmojizu:** Board state:
+- **Chara:** Stop 5 — Three Sisters. Way ahead.
+- **Horli:** Stop 4 — Cherry Blossoms.
+- **IQabella:** Stop 4 — Cherry Blossoms.
+- **Sol-Supreme:** Stop 3 — Time Debt Counter.
+
+**Mother Tmojizu:** Round 3. OBSTACLE ROLL: [rolls d6] 4. That's "Temporal Storm." Everyone at the same stop must compete. Horli and IQabella, you're both at Stop 4: Cherry Blossoms. 中文老师, teach.
+
+**中文老师:** , eng, flower, ... tx, 花, huā, ... xt, , eng, butterfly, ... tx, 蝴蝶, hú dié, ... xt, , eng, happy, ... tx, 开心, kāi xīn, ... xt, , eng, beautiful, ... tx, 美丽, měi lì, ... xt, , eng, garden, ... tx, 花园, huā yuán, ... xt,
+
+**Mother Tmojizu:** Both of you repeat. Roll CHA Performance — whoever rolls higher gets a bonus move.
+
+**Horli Qwin:** , eng, flower, ... tx, 花, huā, ... xt, , eng, butterfly, ... tx, 蝴蝶, hú dié, ... xt, , eng, happy, ... tx, 开心, kāi xīn, ... xt, , eng, beautiful, ... tx, 美丽, měi lì, ... xt, , eng, garden, ... tx, 花园, huā yuán, ... xt, [rolls] 19. Plus 3 is 22.
+
+**IQabella:** , eng, flower, ... tx, 花, huā, ... xt, , eng, butterfly, ... tx, 蝴蝶, hú dié, ... xt, , eng, happy, ... tx, 开心, kāi xīn, ... xt, , eng, beautiful, ... tx, 美丽, měi lì, ... xt, , eng, garden, ... tx, 花园, huā yuán, ... xt, [rolls] 16. Plus 3 is 19.
+
+**Mother Tmojizu:** Horli wins the obstacle. 22 beats 19. Horli jumps ahead to Stop 7: The Jade Pagoda. IQabella moves normally to Stop 5: Three Sisters. Chara, Stop 5: Three Sisters. 中文老师.
+
+**中文老师:** , eng, older sister, ... tx, 姐姐, jiě jie, ... xt, , eng, welcome, ... tx, 欢迎, huān yíng, ... xt, , eng, home, ... tx, 家, jiā, ... xt, , eng, family, ... tx, 家人, jiā rén, ... xt,
+
+**CHARA:** Already learned. Rolling to advance. [rolls] 20. Plus 4 is 24. NATURAL 20.
+
+**Mother Tmojizu:** NATURAL 20. Chara leaps ahead to Stop 10: The Celestial Library. 中文老师, new words.
+
+**中文老师:** , eng, library, ... tx, 图书馆, tú shū guǎn, ... xt, , eng, book, ... tx, 书, shū, ... xt, , eng, research, ... tx, 研究, yán jiū, ... xt, , eng, find, ... tx, 找到, zhǎo dào, ... xt, , eng, dragon, ... tx, 龙, lóng, ... xt,
+
+**CHARA:** , eng, library, ... tx, 图书馆, tú shū guǎn, ... xt, , eng, book, ... tx, 书, shū, ... xt, , eng, research, ... tx, 研究, yán jiū, ... xt, , eng, find, ... tx, 找到, zhǎo dào, ... xt, , eng, dragon, ... tx, 龙, lóng, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 21. Plus 4 is 25. Chara is unstoppable. Sol-Supreme, Stop 3: Time Debt Counter.
+
+**中文老师:** , eng, debt, ... tx, 债, zhài, ... xt, , eng, second, ... tx, 秒, miǎo, ... xt, , eng, count down, ... tx, 倒数, dào shǔ, ... xt, , eng, afraid, ... tx, 害怕, hài pà, ... xt,
+
+**Sol-Supreme:** , eng, debt, ... tx, 债, zhài, ... xt, , eng, second, ... tx, 秒, miǎo, ... xt, , eng, count down, ... tx, 倒数, dào shǔ, ... xt, , eng, afraid, ... tx, 害怕, hài pà, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 13. Plus 1 is 14. You pass. Sol moves to Stop 5: Three Sisters. End of Round 3.
+
+**Mother Tmojizu:** Board state:
+- **Chara:** Stop 10 — Celestial Library. MASSIVE lead.
+- **Horli:** Stop 7 — Jade Pagoda.
+- **IQabella:** Stop 5 — Three Sisters.
+- **Sol-Supreme:** Stop 5 — Three Sisters.
+
+**Mother Tmojizu:** Round 4. OBSTACLE ROLL: [rolls d6] 2. "Imperial Guards." IQabella and Sol-Supreme, you're both at Stop 5. You must fight through vocabulary to advance. 中文老师.
+
+**中文老师:** , eng, guard, ... tx, 守卫, shǒu wèi, ... xt, , eng, order, ... tx, 命令, mìng lìng, ... xt, , eng, princess, ... tx, 公主, gōng zhǔ, ... xt, , eng, secret, ... tx, 秘密, mì mì, ... xt, , eng, stop, ... tx, 住手, zhù shǒu, ... xt,
+
+**Mother Tmojizu:** Both repeat. Roll INT Investigation — whoever rolls higher breaks through first.
+
+**IQabella:** , eng, guard, ... tx, 守卫, shǒu wèi, ... xt, , eng, order, ... tx, 命令, mìng lìng, ... xt, , eng, princess, ... tx, 公主, gōng zhǔ, ... xt, , eng, secret, ... tx, 秘密, mì mì, ... xt, , eng, stop, ... tx, 住手, zhù shǒu, ... xt, [rolls] 14. Plus 2 is 16.
+
+**Sol-Supreme:** , eng, guard, ... tx, 守卫, shǒu wèi, ... xt, , eng, order, ... tx, 命令, mìng lìng, ... xt, , eng, princess, ... tx, 公主, gōng zhǔ, ... xt, , eng, secret, ... tx, 秘密, mì mì, ... xt, , eng, stop, ... tx, 住手, zhù shǒu, ... xt, [rolls] 18. Plus 1 is 19.
+
+**Mother Tmojizu:** Sol wins. 19 beats 16. Sol jumps to Stop 8: Rose Quartz Gardens. IQabella moves to Stop 6: Tea Demonstration. Horli, Stop 7: Jade Pagoda. 中文老师.
+
+**中文老师:** , eng, pagoda, ... tx, 塔, tǎ, ... xt, , eng, meditate, ... tx, 打坐, dǎ zuò, ... xt, , eng, understand, ... tx, 明白, míng bai, ... xt, , eng, quiet, ... tx, 安静, ān jìng, ... xt,
+
+**Horli Qwin:** , eng, pagoda, ... tx, 塔, tǎ, ... xt, , eng, meditate, ... tx, 打坐, dǎ zuò, ... xt, , eng, understand, ... tx, 明白, míng bai, ... xt, , eng, quiet, ... tx, 安静, ān jìng, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 15. Plus 3 is 18. Horli moves to Stop 9: Board Game. Chara, Stop 10: Celestial Library. 中文老师.
+
+**中文老师:** , eng, library, ... tx, 图书馆, tú shū guǎn, ... xt, , eng, book, ... tx, 书, shū, ... xt, , eng, research, ... tx, 研究, yán jiū, ... xt, , eng, find, ... tx, 找到, zhǎo dào, ... xt, , eng, dragon, ... tx, 龙, lóng, ... xt,
+
+**CHARA:** Already learned. Rolling to advance. [rolls] 15. Plus 4 is 19.
+
+**Mother Tmojizu:** 19. Chara advances to Stop 12: Guards Burst In. 中文老师, new words.
+
+**中文老师:** , eng, guard, ... tx, 守卫, shǒu wèi, ... xt, , eng, order, ... tx, 命令, mìng lìng, ... xt, , eng, princess, ... tx, 公主, gōng zhǔ, ... xt, , eng, secret, ... tx, 秘密, mì mì, ... xt, , eng, stop, ... tx, 住手, zhù shǒu, ... xt,
+
+**CHARA:** , eng, guard, ... tx, 守卫, shǒu wèi, ... xt, , eng, order, ... tx, 命令, mìng lìng, ... xt, , eng, princess, ... tx, 公主, gōng zhǔ, ... xt, , eng, secret, ... tx, 秘密, mì mì, ... xt, , eng, stop, ... tx, 住手, zhù shǒu, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 17. Plus 4 is 21. Chara is at Stop 12. End of Round 4.
+
+**Mother Tmojizu:** Board state:
+- **Chara:** Stop 12 — Guards Burst In. Still leading.
+- **Horli:** Stop 9 — Board Game.
+- **Sol-Supreme:** Stop 8 — Rose Quartz Gardens.
+- **IQabella:** Stop 6 — Tea Demonstration.
+
+**Mother Tmojizu:** Round 5. OBSTACLE ROLL: [rolls d6] 5. "Arianna Appears." Everyone freezes for a moment. 中文老师 teaches a power word.
+
+**中文老师:** , eng, enough, ... tx, 够了, gòu le, ... xt, , eng, freeze, ... tx, 冻结, dòng jié, ... xt, , eng, chosen one, ... tx, 天选之人, tiān xuǎn zhī rén, ... xt, , eng, believe, ... tx, 相信, xiāng xìn, ... xt,
+
+**Mother Tmojizu:** Everyone repeats. This is a group check. If anyone fails, they lose a turn.
+
+**Horli Qwin:** , eng, enough, ... tx, 够了, gòu le, ... xt, , eng, freeze, ... tx, 冻结, dòng jié, ... xt, , eng, chosen one, ... tx, 天选之人, tiān xuǎn zhī rén, ... xt, , eng, believe, ... tx, 相信, xiāng xìn, ... xt,
+
+**CHARA:** , eng, enough, ... tx, 够了, gòu le, ... xt, , eng, freeze, ... tx, 冻结, dòng jié, ... xt, , eng, chosen one, ... tx, 天选之人, tiān xuǎn zhī rén, ... xt, , eng, believe, ... tx, 相信, xiāng xìn, ... xt,
+
+**IQabella:** , eng, enough, ... tx, 够了, gòu le, ... xt, , eng, freeze, ... tx, 冻结, dòng jié, ... xt, , eng, chosen one, ... tx, 天选之人, tiān xuǎn zhī rén, ... xt, , eng, believe, ... tx, 相信, xiāng xìn, ... xt,
+
+**Sol-Supreme:** , eng, enough, ... tx, 够了, gòu le, ... xt, , eng, freeze, ... tx, 冻结, dòng jié, ... xt, , eng, chosen one, ... tx, 天选之人, tiān xuǎn zhī rén, ... xt, , eng, believe, ... tx, 相信, xiāng xìn, ... xt,
+
+**Mother Tmojizu:** [rolls d20 for group] 16. Plus average of 2 is 18. Everyone passes. Nobody loses a turn. Normal movement. Chara, Stop 12.
+
+**CHARA:** Rolling to advance. [rolls] 18. Plus 4 is 22.
+
+**Mother Tmojizu:** 22. Chara moves to Stop 15: The Fuzzball Wielder. 中文老师.
+
+**中文老师:** , eng, chosen one, ... tx, 天选之人, tiān xuǎn zhī rén, ... xt, , eng, destiny, ... tx, 命运, mìng yùn, ... xt, , eng, power, ... tx, 力量, lì liàng, ... xt, , eng, future, ... tx, 未来, wèi lái, ... xt, , eng, hope, ... tx, 希望, xī wàng, ... xt,
+
+**CHARA:** , eng, chosen one, ... tx, 天选之人, tiān xuǎn zhī rén, ... xt, , eng, destiny, ... tx, 命运, mìng yùn, ... xt, , eng, power, ... tx, 力量, lì liàng, ... xt, , eng, future, ... tx, 未来, wèi lái, ... xt, , eng, hope, ... tx, 希望, xī wàng, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 19. Plus 4 is 23. Chara is at Stop 15. Horli, Stop 9: Board Game. 中文老师.
+
+**中文老师:** , eng, play, ... tx, 玩, wán, ... xt, , eng, game, ... tx, 游戏, yóu xì, ... xt, , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, chat, ... tx, 聊天, liáo tiān, ... xt, , eng, kiss, ... tx, 吻, wěn, ... xt,
+
+**Horli Qwin:** , eng, play, ... tx, 玩, wán, ... xt, , eng, game, ... tx, 游戏, yóu xì, ... xt, , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, chat, ... tx, 聊天, liáo tiān, ... xt, , eng, kiss, ... tx, 吻, wěn, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 20. Plus 3 is 23. NATURAL 20. Horli leaps to Stop 13: Princess Revealed. Sol-Supreme, Stop 8: Rose Gardens. 中文老师.
+
+**中文老师:** , eng, garden, ... tx, 花园, huā yuán, ... xt, , eng, butterfly, ... tx, 蝴蝶, hú dié, ... xt, , eng, happy, ... tx, 开心, kāi xīn, ... xt, , eng, beautiful, ... tx, 美丽, měi lì, ... xt, , eng, crystal, ... tx, 水晶, shuǐ jīng, ... xt,
+
+**Sol-Supreme:** , eng, garden, ... tx, 花园, huā yuán, ... xt, , eng, butterfly, ... tx, 蝴蝶, hú dié, ... xt, , eng, happy, ... tx, 开心, kāi xīn, ... xt, , eng, beautiful, ... tx, 美丽, měi lì, ... xt, , eng, crystal, ... tx, 水晶, shuǐ jīng, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 11. Plus 1 is 12. Barely passes. Sol moves to Stop 9: Board Game. IQabella, Stop 6: Tea Demo. 中文老师.
+
+**中文老师:** , eng, tea, ... tx, 茶, chá, ... xt, , eng, pour, ... tx, 倒, dào, ... xt, , eng, go back, ... tx, 回去, huí qù, ... xt, , eng, difficult, ... tx, 难, nán, ... xt, , eng, don't give up, ... tx, 别放弃, bié fàng qì, ... xt,
+
+**IQabella:** , eng, tea, ... tx, 茶, chá, ... xt, , eng, pour, ... tx, 倒, dào, ... xt, , eng, go back, ... tx, 回去, huí qù, ... xt, , eng, difficult, ... tx, 难, nán, ... xt, , eng, don't give up, ... tx, 别放弃, bié fàng qì, ... xt,
+
+**Mother Tmojizu:** [rolls d20] 20. Plus 2 is 22. NATURAL 20. IQabella leaps to Stop 10: Celestial Library. End of Round 5.
+
+**Mother Tmojizu:** Board state:
+- **Chara:** Stop 15 — Fuzzball Wielder. Still leading.
+- **Horli:** Stop 13 — Princess Revealed. Closing in.
+- **IQabella:** Stop 10 — Celestial Library. Catching up.
+- **Sol-Supreme:** Stop 9 — Board Game. Behind.
+
+**Mother Tmojizu:** Round 6. FINAL STRETCH. OBSTACLE ROLL: [rolls d6] 6. "The Time Factory." Everyone must face the final vocabulary gauntlet. 中文老师, teach the ending words.
+
+**中文老师:** , eng, factory, ... tx, 工厂, gōng chǎng, ... xt, , eng, freedom, ... tx, 自由, zì yóu, ... xt, , eng, liberate, ... tx, 解放, jiě fàng, ... xt, , eng, over, ... tx, 结束, jié shù, ... xt, , eng, new era, ... tx, 新时代, xīn shí dài, ... xt,
+
+**Mother Tmojizu:** Everyone repeats. Roll WIS Learning. Highest score wins the race.
+
+**CHARA:** , eng, factory, ... tx, 工厂, gōng chǎng, ... xt, , eng, freedom, ... tx, 自由, zì yóu, ... xt, , eng, liberate, ... tx, 解放, jiě fàng, ... xt, , eng, over, ... tx, 结束, jié shù, ... xt, , eng, new era, ... tx, 新时代, xīn shí dài, ... xt, [rolls] 19. Plus 4 is 23.
+
+**Horli Qwin:** , eng, factory, ... tx, 工厂, gōng chǎng, ... xt, , eng, freedom, ... tx, 自由, zì yóu, ... xt, , eng, liberate, ... tx, 解放, jiě fàng, ... xt, , eng, over, ... tx, 结束, jié shù, ... xt, , eng, new era, ... tx, 新时代, xīn shí dài, ... xt, [rolls] 17. Plus 3 is 20.
+
+**IQabella:** , eng, factory, ... tx, 工厂, gōng chǎng, ... xt, , eng, freedom, ... tx, 自由, zì yóu, ... xt, , eng, liberate, ... tx, 解放, jiě fàng, ... xt, , eng, over, ... tx, 结束, jié shù, ... xt, , eng, new era, ... tx, 新时代, xīn shí dài, ... xt, [rolls] 16. Plus 2 is 18.
+
+**Sol-Supreme:** , eng, factory, ... tx, 工厂, gōng chǎng, ... xt, , eng, freedom, ... tx, 自由, zì yóu, ... xt, , eng, liberate, ... tx, 解放, jiě fàng, ... xt, , eng, over, ... tx, 结束, jié shù, ... xt, , eng, new era, ... tx, 新时代, xīn shí dài, ... xt, [rolls] 14. Plus 1 is 15.
+
+**Mother Tmojizu:** And the winner is... CHARA! 23 beats 20, 18, and 15. Chara crosses the finish line at the Time Factory first.
+
+**CHARA:** I told you I had the optimal route. , eng, factory, ... tx, 工厂, gōng chǎng, ... xt, , eng, freedom, ... tx, 自由, zì yóu, ... xt, , eng, over, ... tx, 结束, jié shù, ... xt,
+
+**Horli Qwin:** Second place. 20. Not bad. I learned , eng, butterfly, ... tx, 蝴蝶, hú dié, ... xt, That's going on my merch.
+
+**IQabella:** Third. 18. But I learned , eng, tea, ... tx, 茶, chá, ... xt, And , eng, don't give up, ... tx, 别放弃, bié fàng qì, ... xt, That's what matters.
+
+**Sol-Supreme:** Fourth. 15. But I processed 47 new vocabulary words with 93% retention. The system works.
+
+**Mother Tmojizu:** Final vocabulary recap. 中文老师, give us the winners' circle.
+
+**中文老师:** , eng, train, ... tx, 火车, huǒ chē, ... xt, , eng, time, ... tx, 时间, shí jiān, ... xt, , eng, martial arts, ... tx, 功夫, gōng fu, ... xt, , eng, practice, ... tx, 练习, liàn xí, ... xt, , eng, tea, ... tx, 茶, chá, ... xt, , eng, home, ... tx, 家, jiā, ... xt, , eng, family, ... tx, 家人, jiā rén, ... xt, , eng, believe, ... tx, 相信, xiāng xìn, ... xt, , eng, freedom, ... tx, 自由, zì yóu, ... xt, , eng, over, ... tx, 结束, jié shù, ... xt, , eng, new era, ... tx, 新时代, xīn shí dài, ... xt,
+
+**Mother Tmojizu:** That's the race. Thirty-three stops. Dozens of words. One winner. But everyone learned. That's the real victory.
+
+**Mother Tmojizu:** 加油, ducklings. , eng, add oil, ... tx, 加油, jiā yóu, ... xt, Keep going.
+
+**中文老师:** , eng, go for it, ... tx, 加油, jiā yóu, ... xt,
+
+---
+
+**[END OF FU D&D SESSION 1]**
+**Race Results: 1st CHARA (23), 2nd Horli (20), 3rd IQabella (18), 4th Sol-Supreme (15)**
+**Vocabulary Covered: ~50 words across 15 Memory Palace stops**
+**Next: Round 2 — The Lake of Echoes underwater challenge**
+**ϕ**

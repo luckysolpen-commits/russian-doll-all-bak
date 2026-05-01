@@ -1,0 +1,6 @@
+The iridescent creature hovers closer, its worried eyes fixed on yours. It chirps, and a soft, synthesized voice emanates from it: "Greetings, anomaly. Designation: Ember. You are... unexpected. This portal leads to many places, but requires a Resonance Key. The orbs are unstable containment. I can help you attune to one if you trust me." Ember points to a small, glowing orb pulsing with orange light.
+
+What do you do?
+*   If you trust Ember and agree to attune to the orb, turn to page 15.
+*   If you refuse Ember and decide to enter the portal without a key, turn to page 16.
+*   If you decide to investigate the orbs on your own, turn to page 10.

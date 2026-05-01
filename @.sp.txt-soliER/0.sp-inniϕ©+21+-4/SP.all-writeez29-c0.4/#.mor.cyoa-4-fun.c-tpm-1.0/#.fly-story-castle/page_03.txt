@@ -1,0 +1,12 @@
+**Page 3: The Grand Hall's Heights**
+
+The main hall is vast and echoing, its high ceilings offering safe perches, though the sheer space makes navigation tricky. You can see distant figures moving like giants and opulent decorations that shimmer in the dim light. It feels both majestic and perilous.
+
+Hunger: 7/10 (Eager for sustenance)
+Danger Sense: 3/10 (Aware of general threats)
+Speed: 8/10 (Agile flyer)
+
+What do you do?
+
+*   If you explore a high chandelier, turn to page 6.
+*   If you fly towards a distant window, turn to page 7.

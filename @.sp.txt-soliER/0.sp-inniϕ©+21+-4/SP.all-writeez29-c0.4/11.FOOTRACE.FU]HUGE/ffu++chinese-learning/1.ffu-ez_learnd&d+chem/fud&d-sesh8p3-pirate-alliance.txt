@@ -1,0 +1,109 @@
+# FU D&D — SESSION 8 PART 3: "THE PIRATE ALLIANCE"
+## Footrace.FU Chinese Learning — Episode 8.3
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** [out of character] Part three. This is where it gets wild. Boss Nami speaks ONLY Chinese. Her crew speaks ONLY Chinese. The party has to translate for each other, piece together what's being said, and negotiate an alliance. Meanwhile, CHARA and Horli are still prisoners. Let's start with them. [in character] CHARA and Horli, you're in the holding cell. The Time Eel is docking at Rust Haven. Through the porthole, you see the bone city. , eng, rust port, ... tx, 锈港, xiù gǎng, ... xt, 中文老师, prisoner vocabulary.
+
+**中文老师:** , eng, prison, ... tx, 牢, láo, ... xt, , eng, prison cell, ... tx, 牢房, láo fáng, ... xt, , eng, window, ... tx, 窗, chuāng, ... xt, , eng, look, ... tx, 看, kàn, ... xt, , eng, listen, ... tx, 听, tīng, ... xt, , eng, learn, ... tx, 学, xué, ... xt, , eng, speak, ... tx, 说, shuō, ... xt, , eng, understand, ... tx, 懂, dǒng, ... xt,
+
+**Horli Qwin:** [out of character] I've been practicing Chinese in the cell. I know like five words. [in character] , eng, I, ... tx, 我, wǒ, ... xt, , eng, learn, ... tx, 学, xué, ... xt, , eng, Chinese, ... tx, 中文, zhōng wén, ... xt, , eng, a little, ... tx, 一点, yī diǎn, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, speak, ... tx, 说, shuō, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, a little, ... tx, 一点, yī diǎn, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, understand, ... tx, 懂, dǒng, ... xt,
+
+**Mother Tmojizu:** Roll INT Language Learning. You've had 12 hours of immersion.
+
+**Horli Qwin:** [rolls] 14. Plus 3 is 17. [out of character] I'm picking up words from the guards talking outside. [in character] I , eng, listen, ... tx, 听, tīng, ... xt, Guards outside , eng, speak, ... tx, 说, shuō, ... xt, , eng, boss, ... tx, 老板, lǎo bǎn, ... xt, , eng, wave, ... tx, 波, bō, ... xt, , eng, coming back, ... tx, 回来, huí lái, ... xt, , eng, she, ... tx, 她, tā, ... xt, , eng, angry, ... tx, 生气, shēng qì, ... xt, , eng, because, ... tx, 因为, yīn wèi, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, by, ... tx, 被, bèi, ... xt, , eng, stolen, ... tx, 偷, tōu, ... xt,
+
+**CHARA:** [out of character] So Boss Nami is angry because the eggs were stolen. That means she doesn't have them. Kurogane's guards must have taken them back. [in character] , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, by, ... tx, 被, bèi, ... xt, , eng, stolen, ... tx, 偷, tōu, ... xt, , eng, wave, ... tx, 波, bō, ... xt, , eng, angry, ... tx, 生气, shēng qì, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, need, ... tx, 需要, xū yào, ... xt, , eng, escape, ... tx, 逃, táo, ... xt,
+
+**Mother Tmojizu:** Roll INT Deduction.
+
+**CHARA:** [rolls] 19. Plus 4 is 23. [out of character] The eggs were stolen by Kurogane's guards, not us. We grabbed them but then fell through the trap door. Kurogane's people must have picked them up. Boss Nami is angry because she wanted them. [in character] , eng, black iron, ... tx, 黑铁, hēi tiě, ... xt, , eng, people, ... tx, 的人, de rén, ... xt, , eng, took, ... tx, 拿, ná, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, wave, ... tx, 波, bō, ... xt, , eng, wants, ... tx, 想要, xiǎng yào, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, can, ... tx, 可以, kě yǐ, ... xt, , eng, help, ... tx, 帮助, bāng zhù, ... xt, , eng, her, ... tx, 她, tā, ... xt, , eng, trade, ... tx, 交易, jiāo yì, ... xt,
+
+**Mother Tmojizu:** 23. Brilliant deduction. The cell door opens. A pirate guard stands there. She speaks rapid Chinese. 中文老师.
+
+**中文老师:** [as guard] , eng, the boss wants to see you, ... tx, 老板要见你们, lǎo bǎn yào jiàn nǐ men, ... xt, , eng, follow me, ... tx, 跟我走, gēn wǒ zǒu, ... xt, , eng, don't try anything funny, ... tx, 别耍花样, bié shuǎ huā yàng, ... xt,
+
+**Horli Qwin:** [out of character] I understood "boss" and "follow me." The rest was vibes. [in character] , eng, boss, ... tx, 老板, lǎo bǎn, ... xt, , eng, go, ... tx, 走, zǒu, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, follow, ... tx, 跟, gēn, ... xt, , eng, no, ... tx, 不, bù, ... xt, , eng, funny business, ... tx, 耍花样, shuǎ huā yàng, ... xt, , eng, promise, ... tx, 保证, bǎo zhèng, ... xt,
+
+**Mother Tmojizu:** Roll CHA Impression. You're trying to look cooperative but not weak.
+
+**Horli Qwin:** [rolls] 16. Plus 3 is 19. I walk confidently. , eng, promise, ... tx, 保证, bǎo zhèng, ... xt, , eng, cooperate, ... tx, 合作, hé zuò, ... xt,
+
+**Mother Tmojizu:** 19. The guard leads you to the captain's quarters. Inside: Boss Nami , eng, wave, ... tx, 波, bō, ... xt, Silver hair floating in zero gravity. Six fingers on each hand. Eyes that see three seconds into the future. She looks at you before you speak. 中文老师, voice Boss Nami.
+
+**中文老师:** [as Boss Nami] , eng, ah, ... tx, 啊, a, ... xt, , eng, you, ... tx, 你们, nǐ men, ... xt, , eng, finally, ... tx, 终于, zhōng yú, ... xt, , eng, came, ... tx, 来了, lái le, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, three seconds ago, ... tx, 三秒前, sān miǎo qián, ... xt, , eng, already, ... tx, 就, jiù, ... xt, , eng, saw, ... tx, 看到, kàn dào, ... xt, , eng, you, ... tx, 你们, nǐ men, ... xt, , eng, sit, ... tx, 坐, zuò, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, talk, ... tx, 谈谈, tán tán, ... xt,
+
+**CHARA:** [out of character] She saw us three seconds ago. Literally. [in character] , eng, you, ... tx, 你, nǐ, ... xt, , eng, can, ... tx, 能, néng, ... xt, , eng, see, ... tx, 看到, kàn dào, ... xt, , eng, future, ... tx, 未来, wèi lái, ... xt, , eng, three seconds, ... tx, 三秒, sān miǎo, ... xt,
+
+**Boss Nami:** [in Chinese] , eng, three seconds, ... tx, 三秒, sān miǎo, ... xt, , eng, not, ... tx, 不, bù, ... xt, , eng, more, ... tx, 多, duō, ... xt, , eng, but, ... tx, 但, dàn, ... xt, , eng, enough, ... tx, 够, gòu, ... xt, , eng, now, ... tx, 现在, xiàn zài, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, know, ... tx, 知道, zhī dào, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, want, ... tx, 要, yào, ... xt, , eng, what, ... tx, 什么, shén me, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, want, ... tx, 想, xiǎng, ... xt, , eng, return, ... tx, 回, huí, ... xt, , eng, friends, ... tx, 朋友, péng you, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, want, ... tx, 想, xiǎng, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, uranium, ... tx, 铀, yóu, ... xt, , eng, unobtainium, ... tx, 难得, nán dé, ... xt,
+
+**Horli Qwin:** [out of character] Okay she wants the eggs and she knows we want our friends back. But Kurogane has the eggs, not us. [in character] , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, at, ... tx, 在, zài, ... xt, , eng, black iron, ... tx, 黑铁, hēi tiě, ... xt, , eng, there, ... tx, 那里, nà lǐ, ... xt, , eng, not, ... tx, 不, bù, ... xt, , eng, at, ... tx, 在, zài, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, here, ... tx, 这里, zhè lǐ, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, can, ... tx, 可以, kě yǐ, ... xt, , eng, help, ... tx, 帮助, bāng zhù, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, take, ... tx, 拿, ná, ... xt, , eng, back, ... tx, 回来, huí lái, ... xt,
+
+**Mother Tmojizu:** Roll CHA Negotiation. You're proposing an alliance with a pirate queen who sees the future.
+
+**Horli Qwin:** [rolls] 18. Plus 3 is 21. , eng, cooperate, ... tx, 合作, hé zuò, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, fight, ... tx, 打, dǎ, ... xt, , eng, black iron, ... tx, 黑铁, hēi tiě, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, take, ... tx, 拿, ná, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, take, ... tx, 拿, ná, ... xt, , eng, friends, ... tx, 朋友, péng you, ... xt, , eng, fair, ... tx, 公平, gōng píng, ... xt,
+
+**Mother Tmojizu:** 21. Boss Nami's six-fingered hands steeple. Her silver hair ripples. She smiles — and you see the smile three seconds before it happens. 中文老师.
+
+**中文老师:** [as Boss Nami] , eng, interesting, ... tx, 有趣, yǒu qù, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, have courage, ... tx, 有胆量, yǒu dǎn liàng, ... xt, , eng, but, ... tx, 但, dàn, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, how, ... tx, 怎么, zěn me, ... xt, , eng, trust, ... tx, 相信, xiāng xìn, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, prove, ... tx, 证明, zhèng míng, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, possessive, ... tx, 的, de, ... xt, , eng, value, ... tx, 价值, jià zhí, ... xt, , eng, go, ... tx, 去, qù, ... xt, , eng, kill, ... tx, 杀, shā, ... xt, , eng, spine monster, ... tx, 脊骨怪兽, jǐ gǔ guài shòu, ... xt, , eng, bring, ... tx, 带, dài, ... xt, , eng, back, ... tx, 回, huí, ... xt, , eng, its, ... tx, 它, tā, ... xt, , eng, heart, ... tx, 心, xīn, ... xt, , eng, that, ... tx, 那, nà, ... xt, , eng, time, ... tx, 时候, shí hou, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, trust, ... tx, 相信, xiāng xìn, ... xt, , eng, you, ... tx, 你, nǐ, ... xt,
+
+**CHARA:** [out of character] She wants us to kill a spine monster and bring back its heart. Classic fetch quest but with extra steps. [in character] , eng, spine monster, ... tx, 脊骨怪兽, jǐ gǔ guài shòu, ... xt, , eng, kill, ... tx, 杀, shā, ... xt, , eng, bring, ... tx, 带, dài, ... xt, , eng, back, ... tx, 回, huí, ... xt, , eng, heart, ... tx, 心, xīn, ... xt, , eng, good, ... tx, 好, hǎo, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, do, ... tx, 做, zuò, ... xt,
+
+**Mother Tmojizu:** Roll INT Monster Knowledge. What do you know about spine monsters?
+
+**CHARA:** [rolls] 17. Plus 4 is 21. [out of character] Spine monsters are made of calcified temporal bone. Their weak point is the neural cluster at the base of the skull. Chemical weakness: acid dissolves calcium. [in character] , eng, spine monster, ... tx, 脊骨怪兽, jǐ gǔ guài shòu, ... xt, , eng, afraid, ... tx, 怕, pà, ... xt, , eng, acid, ... tx, 酸, suān, ... xt, , eng, acid, ... tx, 酸, suān, ... xt, , eng, dissolve, ... tx, 溶解, róng jiě, ... xt, , eng, calcium, ... tx, 钙, gài, ... xt, , eng, weak point, ... tx, 弱点, ruò diǎn, ... xt, , eng, at, ... tx, 在, zài, ... xt, , eng, nerve, ... tx, 神经, shén jīng, ... xt, , eng, center, ... tx, 中心, zhōng xīn, ... xt,
+
+**Mother Tmojizu:** 21. You know exactly how to kill it. Boss Nami gives you a vial of , eng, acid, ... tx, 酸, suān, ... xt, and a , eng, knife, ... tx, 刀, dāo, ... xt, You head to the Spine Street. The monster is waiting — a massive creature made of living bone, with , eng, eyes, ... tx, 眼睛, yǎn jing, ... xt, like cracked mirrors. 中文老师.
+
+**中文老师:** , eng, monster, ... tx, 怪兽, guài shòu, ... xt, , eng, bone, ... tx, 骨头, gǔ tou, ... xt, , eng, acid, ... tx, 酸, suān, ... xt, , eng, knife, ... tx, 刀, dāo, ... xt, , eng, kill, ... tx, 杀, shā, ... xt, , eng, heart, ... tx, 心, xīn, ... xt,
+
+**Horli Qwin:** [out of character] Do I have my Fuzzpets? [in character] Sparky! , eng, fire, ... tx, 火, huǒ, ... xt, Volt! , eng, electricity, ... tx, 电, diàn, ... xt, Breeze! , eng, wind, ... tx, 风, fēng, ... xt, We , eng, fight, ... tx, 打, dǎ, ... xt,
+
+**Mother Tmojizu:** Roll DEX Monster Combat. You're using acid + Fuzzpets + teamwork.
+
+**Horli Qwin:** [rolls] 19. Plus 3 is 22. Sparky shoots , eng, fire, ... tx, 火, huǒ, ... xt, Volt adds , eng, electricity, ... tx, 电, diàn, ... xt, Breeze blows , eng, wind, ... tx, 风, fēng, ... xt, to spread the , eng, acid, ... tx, 酸, suān, ... xt, The monster's , eng, bone, ... tx, 骨头, gǔ tou, ... xt, , eng, dissolves, ... tx, 溶解, róng jiě, ... xt,
+
+**Mother Tmojizu:** 22. The acid spreads. The monster's bone armor melts. Its , eng, nerve, ... tx, 神经, shén jīng, ... xt, , eng, center, ... tx, 中心, zhōng xīn, ... xt, is exposed. CHARA, finish it.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. [out of character] Called it. Neural cluster. [in character] , eng, knife, ... tx, 刀, dāo, ... xt, , eng, nerve, ... tx, 神经, shén jīng, ... xt, , eng, center, ... tx, 中心, zhōng xīn, ... xt, , eng, stab, ... tx, 刺, cì, ... xt, , eng, monster, ... tx, 怪兽, guài shòu, ... xt, , eng, dead, ... tx, 死, sǐ, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. The monster falls. You cut out its , eng, heart, ... tx, 心, xīn, ... xt, — a pulsing crystal of temporal bone. You return to Boss Nami. 中文老师.
+
+**中文老师:** [as Boss Nami] , eng, good, ... tx, 好, hǎo, ... xt, , eng, very, ... tx, 很, hěn, ... xt, , eng, good, ... tx, 好, hǎo, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, proved, ... tx, 证明, zhèng míng, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, possessive, ... tx, 的, de, ... xt, , eng, value, ... tx, 价值, jià zhí, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, trust, ... tx, 相信, xiāng xìn, ... xt, , eng, you, ... tx, 你, nǐ, ... xt, , eng, now, ... tx, 现在, xiàn zài, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, are, ... tx, 是, shì, ... xt, , eng, allies, ... tx, 盟友, méng yǒu, ... xt,
+
+**IQabella:** [out of character] Wait, we're on the other side of the city. How do we connect? [in character] , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, have, ... tx, 有, yǒu, ... xt, , eng, map, ... tx, 地图, dì tú, ... xt, , eng, secret entrance, ... tx, 秘密入口, mì mì rù kǒu, ... xt, , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, plan, ... tx, 计划, jì huà, ... xt,
+
+**Mother Tmojizu:** Roll WIS Communication. You're trying to coordinate with CHARA and Horli through Boss Nami's ship radio.
+
+**IQabella:** [rolls] 16. Plus 2 is 18. , eng, hello, ... tx, 喂, wèi, ... xt, CHARA? Horli? , eng, you, ... tx, 你们, nǐ men, ... xt, , eng, hear, ... tx, 听, tīng, ... xt, , eng, particle, ... tx, 得, de, ... xt, , eng, arrive, ... tx, 到, dào, ... xt, , eng, question particle, ... tx, 吗, ma, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, have, ... tx, 有, yǒu, ... xt, , eng, plan, ... tx, 计划, jì huà, ... xt,
+
+**CHARA:** [over radio, broken Chinese] , eng, hear, ... tx, 听, tīng, ... xt, , eng, hear, ... tx, 听, tīng, ... xt, , eng, particle, ... tx, 得, de, ... xt, , eng, arrive, ... tx, 到, dào, ... xt, , eng, speak, ... tx, 说, shuō, ... xt, , eng, what, ... tx, 什么, shén me, ... xt, , eng, plan, ... tx, 计划, jì huà, ... xt,
+
+**IQabella:** , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, from, ... tx, 从, cóng, ... xt, , eng, underground, ... tx, 地下, dì xià, ... xt, , eng, enter, ... tx, 进, jìn, ... xt, , eng, you, ... tx, 你们, nǐ men, ... xt, , eng, from, ... tx, 从, cóng, ... xt, , eng, above, ... tx, 上面, shàng miàn, ... xt, , eng, middle, ... tx, 中间, zhōng jiān, ... xt, , eng, meet, ... tx, 会合, huì hé, ... xt, , eng, take, ... tx, 拿, ná, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, rescue, ... tx, 救, jiù, ... xt, , eng, friends, ... tx, 朋友, péng you, ... xt,
+
+**Horli Qwin:** [over radio] , eng, good, ... tx, 好, hǎo, ... xt, , eng, plan, ... tx, 计划, jì huà, ... xt, , eng, I, ... tx, 我, wǒ, ... xt, , eng, like, ... tx, 喜欢, xǐ huan, ... xt, , eng, what, ... tx, 什么, shén me, ... xt, , eng, time, ... tx, 时候, shí hou, ... xt,
+
+**Sol-Supreme:** [over radio] , eng, tonight, ... tx, 今晚, jīn wǎn, ... xt, , eng, moon, ... tx, 月亮, yuè liang, ... xt, , eng, come out, ... tx, 出来, chū lái, ... xt, , eng, when, ... tx, 时, shí, ... xt, , eng, we, ... tx, 我们, wǒ men, ... xt, , eng, act, ... tx, 行动, xíng dòng, ... xt,
+
+**Mother Tmojizu:** End of Part 3. Board state:
+- **All four reunited** via radio. Alliance with Boss Nami confirmed.
+- **Plan:** IQabella and Sol enter through the secret underground entrance. CHARA and Horli attack from above. Meet in the middle. Grab the eggs. Rescue anyone who needs rescuing.
+- **Boss Nami:** Provides air support. Her pirates create a distraction.
+- **Boss Kurogane:** Still doesn't know what's coming. But he will.
+- **Boss Nami's crew:** ALL speak Chinese. The party is getting better at understanding.
+
+**中文老师:** , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, next time, ... tx, 下次, xià cì, ... xt, , eng, keep going, ... tx, 加油, jiā yóu, ... xt,
+
+**Mother Tmojizu:** [out of character] Part 4: The Grand Finale. Boss Kurogane fight. Egg rescue. Ultimate Chronoment forge. Everything explodes. [in character] , eng, keep going, ... tx, 加油, jiā yóu, ... xt, ducklings.
+
+---
+
+**[END OF FU D&D SESSION 8 PART 3 — THE PIRATE ALLIANCE]**
+**Alliance Formed: Boss Nami , eng, wave, ... tx, 波, bō, ... xt, + Party vs Boss Kurogane , eng, black iron, ... tx, 黑铁, hēi tiě, ... xt,**
+**Monster Killed: , eng, spine monster, ... tx, 脊骨怪兽, jǐ gǔ guài shòu, ... xt, (NAT 20 by CHARA)**
+**Plan Set: Underground + above attack, meet in middle, grab eggs**
+**Vocabulary: , eng, prison, ... tx, 牢, láo, ... xt, , eng, prison cell, ... tx, 牢房, láo fáng, ... xt, , eng, window, ... tx, 窗, chuāng, ... xt, , eng, look, ... tx, 看, kàn, ... xt, , eng, listen, ... tx, 听, tīng, ... xt, , eng, learn, ... tx, 学, xué, ... xt, , eng, speak, ... tx, 说, shuō, ... xt, , eng, understand, ... tx, 懂, dǒng, ... xt, , eng, a little, ... tx, 一点, yī diǎn, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, coming back, ... tx, 回来, huí lái, ... xt, , eng, angry, ... tx, 生气, shēng qì, ... xt, , eng, because, ... tx, 因为, yīn wèi, ... xt, , eng, stolen, ... tx, 偷, tōu, ... xt, , eng, need, ... tx, 需要, xū yào, ... xt, , eng, escape, ... tx, 逃, táo, ... xt, , eng, can, ... tx, 可以, kě yǐ, ... xt, , eng, help, ... tx, 帮助, bāng zhù, ... xt, , eng, trade, ... tx, 交易, jiāo yì, ... xt, , eng, ah, ... tx, 啊, a, ... xt, , eng, finally, ... tx, 终于, zhōng yú, ... xt, , eng, came, ... tx, 来了, lái le, ... xt, , eng, three seconds ago, ... tx, 三秒前, sān miǎo qián, ... xt, , eng, already, ... tx, 就, jiù, ... xt, , eng, saw, ... tx, 看到, kàn dào, ... xt, , eng, sit, ... tx, 坐, zuò, ... xt, , eng, talk, ... tx, 谈谈, tán tán, ... xt, , eng, can, ... tx, 能, néng, ... xt, , eng, see, ... tx, 看到, kàn dào, ... xt, , eng, future, ... tx, 未来, wèi lái, ... xt, , eng, three seconds, ... tx, 三秒, sān miǎo, ... xt, , eng, not, ... tx, 不, bù, ... xt, , eng, more, ... tx, 多, duō, ... xt, , eng, but, ... tx, 但, dàn, ... xt, , eng, enough, ... tx, 够, gòu, ... xt, , eng, now, ... tx, 现在, xiàn zài, ... xt, , eng, know, ... tx, 知道, zhī dào, ... xt, , eng, want, ... tx, 要, yào, ... xt, , eng, what, ... tx, 什么, shén me, ... xt, , eng, want, ... tx, 想, xiǎng, ... xt, , eng, return, ... tx, 回, huí, ... xt, , eng, friend, ... tx, 朋友, péng you, ... xt, , eng, there, ... tx, 那里, nà lǐ, ... xt, , eng, here, ... tx, 这里, zhè lǐ, ... xt, , eng, take, ... tx, 拿, ná, ... xt, , eng, back, ... tx, 回来, huí lái, ... xt, , eng, cooperate, ... tx, 合作, hé zuò, ... xt, , eng, together, ... tx, 一起, yī qǐ, ... xt, , eng, fight, ... tx, 打, dǎ, ... xt, , eng, fair, ... tx, 公平, gōng píng, ... xt, , eng, interesting, ... tx, 有趣, yǒu qù, ... xt, , eng, have courage, ... tx, 有胆量, yǒu dǎn liàng, ... xt, , eng, how, ... tx, 怎么, zěn me, ... xt, , eng, trust, ... tx, 相信, xiāng xìn, ... xt, , eng, prove, ... tx, 证明, zhèng míng, ... xt, , eng, possessive, ... tx, 的, de, ... xt, , eng, value, ... tx, 价值, jià zhí, ... xt, , eng, go, ... tx, 去, qù, ... xt, , eng, kill, ... tx, 杀, shā, ... xt, , eng, spine monster, ... tx, 脊骨怪兽, jǐ gǔ guài shòu, ... xt, , eng, bring, ... tx, 带, dài, ... xt, , eng, its, ... tx, 它, tā, ... xt, , eng, heart, ... tx, 心, xīn, ... xt, , eng, that, ... tx, 那, nà, ... xt, , eng, time, ... tx, 时候, shí hou, ... xt, , eng, afraid, ... tx, 怕, pà, ... xt, , eng, dissolve, ... tx, 溶解, róng jiě, ... xt, , eng, calcium, ... tx, 钙, gài, ... xt, , eng, weak point, ... tx, 弱点, ruò diǎn, ... xt, , eng, at, ... tx, 在, zài, ... xt, , eng, nerve, ... tx, 神经, shén jīng, ... xt, , eng, center, ... tx, 中心, zhōng xīn, ... xt, , eng, monster, ... tx, 怪兽, guài shòu, ... xt, , eng, bone, ... tx, 骨头, gǔ tou, ... xt, , eng, acid, ... tx, 酸, suān, ... xt, , eng, knife, ... tx, 刀, dāo, ... xt, , eng, dead, ... tx, 死, sǐ, ... xt, , eng, very, ... tx, 很, hěn, ... xt, , eng, good, ... tx, 好, hǎo, ... xt, , eng, proved, ... tx, 证明, zhèng míng, ... xt, , eng, are, ... tx, 是, shì, ... xt, , eng, allies, ... tx, 盟友, méng yǒu, ... xt, , eng, have, ... tx, 有, yǒu, ... xt, , eng, map, ... tx, 地图, dì tú, ... xt, , eng, secret entrance, ... tx, 秘密入口, mì mì rù kǒu, ... xt, , eng, plan, ... tx, 计划, jì huà, ... xt, , eng, hello, ... tx, 喂, wèi, ... xt, , eng, hear, ... tx, 听, tīng, ... xt, , eng, particle, ... tx, 得, de, ... xt, , eng, arrive, ... tx, 到, dào, ... xt, , eng, question particle, ... tx, 吗, ma, ... xt, , eng, speak, ... tx, 说, shuō, ... xt, , eng, from, ... tx, 从, cóng, ... xt, , eng, underground, ... tx, 地下, dì xià, ... xt, , eng, enter, ... tx, 进, jìn, ... xt, , eng, above, ... tx, 上面, shàng miàn, ... xt, , eng, middle, ... tx, 中间, zhōng jiān, ... xt, , eng, meet, ... tx, 会合, huì hé, ... xt, , eng, rescue, ... tx, 救, jiù, ... xt, , eng, good plan, ... tx, 好计划, hǎo jì huà, ... xt, , eng, like, ... tx, 喜欢, xǐ huan, ... xt, , eng, when, ... tx, 什么时候, shén me shí hou, ... xt, , eng, tonight, ... tx, 今晚, jīn wǎn, ... xt, , eng, moon, ... tx, 月亮, yuè liang, ... xt, , eng, come out, ... tx, 出来, chū lái, ... xt, , eng, when, ... tx, 时, shí, ... xt, , eng, act, ... tx, 行动, xíng dòng, ... xt, , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, next time, ... tx, 下次, xià cì, ... xt, , eng, keep going, ... tx, 加油, jiā yóu, ... xt, , eng, eyes, ... tx, 眼睛, yǎn jing, ... xt, , eng, fire, ... tx, 火, huǒ, ... xt, , eng, electricity, ... tx, 电, diàn, ... xt, , eng, wind, ... tx, 风, fēng, ... xt, , eng, stab, ... tx, 刺, cì, ... xt,**
+**Next: Part 4 — The Grand Finale**
+**ϕ**

@@ -1,0 +1,12 @@
+**Page 75: The Central Apparatus**
+
+You approach the central apparatus in the laboratory. It hums with contained energy, featuring a chamber designed to hold organic matter and a complex array of projectors and injectors. The holographic display shows a spider's silhouette being scanned and modified, with "bio-integration" and "cybernetic overlay" labels flashing.
+
+Hydration: 8/10 (Adequate)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 5/10 (Observed a central apparatus for bio-integration and cybernetic overlay)
+
+What do you do?
+
+*   If you attempt to sabotage the apparatus, turn to page 95.
+*   If you try to get a closer look at the prototype schematics on the display, turn to page 96.

@@ -1,0 +1,49 @@
+# PART 2 — SESSION 4: "THE DIPLOMACY"
+## Clone Chronicles — Part 2, Session 4 of 10
+### Power: Global | Status: Alliances, treaties, betrayals
+
+---
+
+## SESSION OVERVIEW
+
+The clones negotiate. Alliances form. Treaties are signed. Betrayals lurk. This session is about diplomacy — the art of getting what you want without fighting (or setting up the fight you want).
+
+## KEY BEATS
+
+1. **Diplomatic Summit** — All clones gather. Negotiations begin.
+2. **Alliance Offers** — Clones propose alliances, trade deals, vassalage.
+3. **Treaty Signing** — Agreements are formalized. Trust is tested.
+4. **Betrayal** — Someone breaks an agreement. Or doesn't.
+5. **End of Turn 4** — Hook for Session 5.
+
+## DIPLOMACY MECHANICS
+
+- **Alliance:** Two clones combine forces. Shared resources, shared victory.
+- **Trade Deal:** Exchange resources, Qi Energy, or territory.
+- **Betrayal:** Break an alliance. Gain short-term advantage, lose long-term trust.
+- **Submission:** One clone submits to another. Becomes a vassal. Gains protection, loses autonomy.
+
+**Checks:**
+- CHA (Persuasion) for negotiations
+- WIS (Insight) to detect betrayal
+- INT (Investigation) to uncover hidden agendas
+- Natural 20 = perfect deal. Natural 1 = catastrophic betrayal.
+
+## COMPLICATION (d6)
+| Roll | Complication |
+|------|-------------|
+| 1 | A clone's betrayal is discovered mid-negotiation |
+| 2 | The House demands all clones submit to its authority |
+| 3 | A barbarian faction offers an alliance — unexpected |
+| 4 | The Original sends a peace offer — tempting but suspicious |
+| 5 | A clone's loyalty drops — they go rogue mid-summit |
+| 6 | The Moon Signal arrives early — everything changes |
+
+## END STATE
+- Alliances formed (or broken)
+- Trust levels established between clones
+- Hook: "The barbarians are coming. United or divided, you'll face them."
+
+---
+
+**ϕ**

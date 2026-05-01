@@ -1,0 +1,47 @@
+# stats.txt — CHARA
+# Ex-CIA Operative | Rogue (Arcane Trickster) | Half-Elf
+
+level: 2
+class: Rogue / Arcane Trickster
+race: Half-Elf
+
+STR: 8 (-1)
+DEX: 17 (+3)
+CON: 13 (+1)
+INT: 16 (+3)
+WIS: 14 (+2)
+CHA: 12 (+1)
+
+HP: 16/16
+AC: 15 (Leather Armor + DEX)
+Speed: 30ft
+
+Proficiency Bonus: +2
+Initiative: +3
+
+Saving Throws: DEX +5, INT +5
+Skills:
+  - Acrobatics: +5
+  - Investigation: +7 (+2 from Ex-CIA Training)
+  - Insight: +6 (+2 from Ex-CIA Training)
+  - Stealth: +7
+  - Perception: +4
+  - Deception: +3
+  - Sleight of Hand: +5
+
+Abilities/Spells:
+  - Sneak Attack (1d6)
+  - Cunning Action (Bonus Action: Dash, Disengage, Hide)
+  - Mage Hand (Cantrip) — invisible when cast
+  - Minor Illusion (Cantrip)
+  - Shield (1st level, 3/day)
+  - Charm Person (1st level, 2/day)
+
+Inventory:
+  - Shortsword x2 (one concealed in boot)
+  - Hand Crossbow + 20 bolts
+  - Leather Armor
+  - Thieves' Tools
+  - CIA-issued encrypted datapad (lore item)
+  - 50 Gold Pieces
+  - Cloak of Elvenkind (uncommon, inherited)

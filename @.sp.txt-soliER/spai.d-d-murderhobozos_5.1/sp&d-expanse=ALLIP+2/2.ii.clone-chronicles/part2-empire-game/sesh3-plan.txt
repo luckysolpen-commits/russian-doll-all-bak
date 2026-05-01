@@ -1,0 +1,44 @@
+# PART 2 — SESSION 3: "THE FACTION WARS"
+## Clone Chronicles — Part 2, Session 3 of 10
+### Power: Continental | Status: Warfare, conquest, defense
+
+---
+
+## SESSION OVERVIEW
+
+Faction warfare erupts. The clones' armies clash. Rock-Paper-Scissors determines advantage. Combat is resolved in 2-3 rounds with dice rolls and tactical decisions. This session is about war.
+
+## KEY BEATS
+
+1. **War Declared** — Two or more clones are at war.
+2. **Battle Planning** — Each clone positions units, chooses tactics.
+3. **Combat Rounds** — 2-3 rounds of faction warfare.
+4. **Aftermath** — Losers lose units and territory. Winners gain resources.
+5. **End of Turn 3** — Hook for Session 4.
+
+## COMBAT MECHANICS
+
+- **Faction Advantage:** Siege > Horde > Mobile > Air > Siege
+- **Attack Roll:** d20 + faction modifier vs. defender's AC
+- **Damage:** Based on unit type and faction strength
+- **Victory:** Eliminate enemy leader or control the territory
+- **Defeat:** Lose units, lose territory, pay reparations
+
+## COMPLICATION (d6)
+| Roll | Complication |
+|------|-------------|
+| 1 | Third clone intervenes — picks a side |
+| 2 | Barbarian invasion — wild zones attack both sides |
+| 3 | Weather affects the battle — Air faction gains advantage |
+| 4 | A clone's army mutinies — loyalty check |
+| 5 | The House offers to end the war — for a price |
+| 6 | The Original's forces join the battle |
+
+## END STATE
+- Warfare resolved (or ongoing)
+- Territory changes hands
+- Hook: "Diplomacy begins. Alliances form. Betrayals lurk."
+
+---
+
+**ϕ**

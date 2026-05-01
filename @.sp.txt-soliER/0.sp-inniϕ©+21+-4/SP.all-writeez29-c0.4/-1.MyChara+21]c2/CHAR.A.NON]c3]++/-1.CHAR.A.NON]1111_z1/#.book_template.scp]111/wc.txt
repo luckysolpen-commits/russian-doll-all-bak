@@ -1,0 +1,25 @@
+CHAR.A.NON Book 111 — "The Final Chapter" — Word Counts
+=========================================================
+
+Chapter  1 (Scenes 1-2):  1867 words  (4 pages)  — Cara's new office, Anon's message, Cyber Lab chaos, Nightingale reveal
+Chapter  2 (Scenes 3-4):  1598 words  (4 pages)  — Cara calls Anon at night, lab reveals UFO/non-terrestrial material connection
+Chapter  3 (Scenes 5-6):  1621 words  (4 pages)  — Cara sifts Nightingale files, Victor LaGraine's call, video proof
+Chapter  4 (Scenes 7-8):  1689 words  (4 pages)  — Cara drives to warehouse in rain, enters, meets Victor
+Chapter  5 (Scenes 9-10): 1819 words  (4 pages)  — Victor's hidden lab reveal, Luminis Fragment, Armstrong backstory
+Chapter  6 (Scenes 11-12):1971 words  (4 pages)  — Victor shows evidence, dawn breaks, they commit to exposing truth
+Chapter  7 (Scenes 13-14):1818 words  (4 pages)  — Distorted call summons Cara to windmill, meets Ariana
+Chapter  8 (Scenes 15-16):1293 words  (4 pages)  — Ariana's subterranean lab, alien metal fragment on altar
+Chapter  9 (Scene 17):     1305 words  (4 pages)  — Cara's mind reels from alien knowledge, vision tunnels, fades
+Chapter 10 (Scene 18):     1158 words  (4 pages)  — Cara wakes in Langley office, finds Ariana's note
+Chapter 11 (Scene 19):     1194 words  (4 pages)  — Cara meets Ariana at town square, golden eyes, trance attempt
+Chapter 12 (Scenes 20-21): 1299 words  (4 pages)  — Superiors threaten Cara, tearful goodbye to Anon, disappearance
+
+Chapter 13:                DO NOT TOUCH — complete and final (chapter-13-final-charanonbook.txt)
+
+=========================================================
+TOTAL (Chapters 1-12):     19,632 words  (48 pages)
+TOTAL (with Ch 13 ~3000):  ~22,600 words
+
+Format: Newline every ~10 words for readability (poetry/prose hybrid)
+POV: Third-person limited, focused on Cara
+Style: Atmospheric, tense, cinematic — matching chapter 13

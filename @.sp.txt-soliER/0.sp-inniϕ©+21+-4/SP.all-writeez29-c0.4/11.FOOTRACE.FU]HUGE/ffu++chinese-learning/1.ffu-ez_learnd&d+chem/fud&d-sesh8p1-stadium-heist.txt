@@ -1,0 +1,160 @@
+# FU D&D — SESSION 8 PART 1: "THE STADIUM HEIST"
+## Footrace.FU Chinese Learning — Episode 8.1
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+### Special: 中文老师 (Chinese Teacher — zh-CN-XiaoxiaoNeural)
+
+---
+
+**Mother Tmojizu:** [out of character] Alright ducklings. This is the big one. Four-part finale. Part one: we're hitting the Chrono-Gladiator Stadium. Boss Kurogane's vault. Uranium and Unobtainium Fuzzpet eggs. This is Ocean's Eleven but with temporal Fuzzpets and a four-armed demon gangster. Roll for initiative.
+
+**Horli Qwin:** [rolls] 23. Plus 3 is 26. [out of character] I've been waiting for this session since episode two. I brought snacks. [in character] I'm scaling the stadium wall before anyone knows I'm there.
+
+**CHARA:** [rolls] 21. Plus 3 is 24. [out of character] I printed out the guard rotation spreadsheet. Color-coded. [in character] I've mapped every guard patrol route. Forty-seven guards. Three-second gaps between camera sweeps.
+
+**IQabella:** [rolls] 17. Plus 0 is 17. [out of character] I brought tea. And healing potions. And more tea. [in character] I'm checking everyone's gear. , eng, health, ... tx, 健康, jiàn kāng, ... xt, , eng, safe, ... tx, 安全, ān quán, ... xt,
+
+**Sol-Supreme:** [rolls] 14. Plus 0 is 14. [out of character] My temporal jammer is calibrated. [in character] The vault's temporal shield operates at 7.83 hertz. I can , eng, jam, ... tx, 干扰, gān rǎo, ... xt, it.
+
+**Mother Tmojizu:** [out of character] Love the energy. Let's go. [in character] You stand outside the Chrono-Gladiator Stadium. It's massive — a coliseum built from black stone and , eng, neon, ... tx, 霓虹, ní hóng, ... xt, lights. The air smells like , eng, ozone, ... tx, 臭氧, chòu yǎng, ... xt, , eng, sweat, ... tx, 汗, hàn, ... xt, and , eng, roasted meat, ... tx, 烤肉, kǎo ròu, ... xt, The ground , eng, vibrates, ... tx, 震动, zhèn dòng, ... xt, from the fights inside. 中文老师, stadium vocabulary.
+
+**中文老师:** , eng, arena, ... tx, 竞技场, jìng jì chǎng, ... xt, , eng, stadium, ... tx, 体育场, tǐ yù chǎng, ... xt, , eng, guard, ... tx, 守卫, shǒu wèi, ... xt, , eng, wall, ... tx, 墙, qiáng, ... xt, , eng, door, ... tx, 门, mén, ... xt, , eng, window, ... tx, 窗, chuāng, ... xt, , eng, roof, ... tx, 顶, dǐng, ... xt,
+
+**Horli Qwin:** , eng, arena, ... tx, 竞技场, jìng jì chǎng, ... xt, , eng, stadium, ... tx, 体育场, tǐ yù chǎng, ... xt, Look at that , eng, wall, ... tx, 墙, qiáng, ... xt, I'm going over the , eng, wall, ... tx, 墙, qiáng, ... xt, , eng, roof, ... tx, 顶, dǐng, ... xt, access. , eng, window, ... tx, 窗, chuāng, ... xt, entry. , eng, door, ... tx, 门, mén, ... xt, is too obvious.
+
+**Mother Tmojizu:** Roll DEX Athletics. You're climbing a thirty-foot black stone wall while , eng, neon, ... tx, 霓虹, ní hóng, ... xt, lights sweep across it.
+
+**Horli Qwin:** [rolls] 19. Plus 3 is 22. I , eng, climb, ... tx, 爬, pá, ... xt, Fingers in the cracks. , eng, wall, ... tx, 墙, qiáng, ... xt, is , eng, rough, ... tx, 粗糙, cū cāo, ... xt, Good grip. I'm on the , eng, roof, ... tx, 顶, dǐng, ... xt,
+
+**Mother Tmojizu:** 22. You're on the roof. The stadium spreads below you like a glowing wound. Inside, the crowd , eng, cheers, ... tx, 欢呼, huān hū, ... xt, CHARA, you're next. 中文老师.
+
+**中文老师:** , eng, patrol, ... tx, 巡逻, xún luó, ... xt, , eng, hide, ... tx, 躲藏, duǒ cáng, ... xt, , eng, quiet, ... tx, 静, jìng, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt,
+
+**CHARA:** [out of character] Okay so the guard rotation has a pattern. Every third cycle there's a 4.2 second gap where the east corridor is completely clear. [in character] , eng, patrol, ... tx, 巡逻, xún luó, ... xt, cycle. I , eng, hide, ... tx, 躲藏, duǒ cáng, ... xt, behind a pillar. , eng, quiet, ... tx, 静, jìng, ... xt, I wait. , eng, slow, ... tx, 慢, màn, ... xt, Then , eng, fast, ... tx, 快, kuài, ... xt, — I slip through the gap.
+
+**Mother Tmojizu:** Roll INT Timing.
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. [out of character] Called it. 4.2 seconds. I counted. [in character] Perfect timing. I'm inside the east corridor. , eng, quiet, ... tx, 静, jìng, ... xt, as a shadow.
+
+**Mother Tmojizu:** NATURAL 20. CHARA is in. IQabella, you're at the service entrance. 中文老师.
+
+**中文老师:** , eng, lock, ... tx, 锁, suǒ, ... xt, , eng, key, ... tx, 钥匙, yào shi, ... xt, , eng, open, ... tx, 开, kāi, ... xt, , eng, medicine, ... tx, 药, yào, ... xt, , eng, tea, ... tx, 茶, chá, ... xt,
+
+**IQabella:** [out of character] Do I have a lockpick or am I using the hairpin thing again? [in character] , eng, lock, ... tx, 锁, suǒ, ... xt, I , eng, open, ... tx, 开, kāi, ... xt, it with a temporal hairpin. Inside: a supply closet. , eng, medicine, ... tx, 药, yào, ... xt, on the shelf. , eng, tea, ... tx, 茶, chá, ... xt, in a thermos. I grab both.
+
+**Mother Tmojizu:** Roll WIS Perception.
+
+**IQabella:** [rolls] 18. Plus 2 is 20. [out of character] Nat 20 energy but it's a 20. Still good. [in character] I find a hidden compartment behind the , eng, medicine, ... tx, 药, yào, ... xt, shelf. Inside: a , eng, void, ... tx, 虚空, xū kōng, ... xt, cloak. , eng, void cloak, ... tx, 虚空斗篷, xū kōng dǒu peng, ... xt, It makes you invisible to temporal sensors.
+
+**Mother Tmojizu:** 20. You found the Void Cloak. That's going to be useful. Sol-Supreme, you're at the vault approach. 中文老师.
+
+**中文老师:** , eng, shield, ... tx, 盾, dùn, ... xt, , eng, break, ... tx, 破, pò, ... xt, , eng, frequency, ... tx, 频率, pín lǜ, ... xt, , eng, vault, ... tx, 库, kù, ... xt, , eng, treasure, ... tx, 宝, bǎo, ... xt,
+
+**Sol-Supreme:** [out of character] The Schumann resonance jammer is ready. [in character] , eng, shield, ... tx, 盾, dùn, ... xt, The temporal , eng, shield, ... tx, 盾, dùn, ... xt, operates at 7.83 hertz. I , eng, jam, ... tx, 干扰, gān rǎo, ... xt, the , eng, frequency, ... tx, 频率, pín lǜ, ... xt, with a counter-signal at 7.84. Destructive interference. I , eng, break, ... tx, 破, pò, ... xt, through. , eng, vault, ... tx, 库, kù, ... xt, door ahead. , eng, treasure, ... tx, 宝, bǎo, ... xt, inside.
+
+**Mother Tmojizu:** Roll INT Engineering.
+
+**Sol-Supreme:** [rolls] 17. Plus 1 is 18. The , eng, shield, ... tx, 盾, dùn, ... xt, flickers and dies. I'm at the , eng, vault, ... tx, 库, kù, ... xt,
+
+**Mother Tmojizu:** 18. The whole team is assembled at the vault. It's enormous — three meters tall, made of , eng, black iron, ... tx, 黑铁, hēi tiě, ... xt, covered in temporal runes that glow like dying stars. 中文老师, vault vocabulary.
+
+**中文老师:** , eng, uranium, ... tx, 铀, yóu, ... xt, , eng, unobtainium, ... tx, 难得, nán dé, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, take, ... tx, 拿, ná, ... xt, , eng, run, ... tx, 跑, pǎo, ... xt, , eng, alarm, ... tx, 警报, jǐng bào, ... xt,
+
+**Horli Qwin:** [out of character] Is that... is that the uranium egg glowing green through the cracks? [in character] , eng, uranium, ... tx, 铀, yóu, ... xt, egg. It's , eng, glowing, ... tx, 发光, fā guāng, ... xt, green. I can feel the , eng, radiation, ... tx, 辐射, fú shè, ... xt, through the door. I , eng, take, ... tx, 拿, ná, ... xt, it. Then we , eng, run, ... tx, 跑, pǎo, ... xt,
+
+**Mother Tmojizu:** Roll DEX Lockpicking. This is a Grade-9 temporal vault. Boss Kurogane's personal lock.
+
+**Horli Qwin:** [rolls] 16. Plus 3 is 19. I pick the temporal tumblers. One by one. , eng, lock, ... tx, 锁, suǒ, ... xt, clicks. , eng, open, ... tx, 开, kāi, ... xt, , eng, uranium, ... tx, 铀, yóu, ... xt, egg revealed. I , eng, take, ... tx, 拿, ná, ... xt, it.
+
+**Mother Tmojizu:** 19. The vault opens. Inside: two eggs. The Uranium egg — glowing green, pulsing with temporal decay. And next to it... the Unobtainium egg. It shifts between all six colors. , eng, yellow, ... tx, 黄, huáng, ... xt, , eng, red, ... tx, 红, hóng, ... xt, , eng, green, ... tx, 绿, lǜ, ... xt, , eng, blue, ... tx, 蓝, lán, ... xt, , eng, black, ... tx, 黑, hēi, ... xt, , eng, white, ... tx, 白, bái, ... xt, 中文老师.
+
+**中文老师:** , eng, color, ... tx, 颜色, yán sè, ... xt, , eng, change, ... tx, 变, biàn, ... xt, , eng, light, ... tx, 光, guāng, ... xt, , eng, flash, ... tx, 闪, shǎn, ... xt,
+
+**CHARA:** [out of character] The Unobtainium egg is literally cycling through the element chart. That's the one from the elements.txt file. [in character] , eng, color, ... tx, 颜色, yán sè, ... xt, , eng, change, ... tx, 变, biàn, ... xt, Every , eng, color, ... tx, 颜色, yán sè, ... xt, , eng, light, ... tx, 光, guāng, ... xt, , eng, flash, ... tx, 闪, shǎn, ... xt, This is , eng, unobtainium, ... tx, 难得, nán dé, ... xt,
+
+**Mother Tmojizu:** Roll INT Analysis.
+
+**CHARA:** [rolls] 19. Plus 4 is 23. The Unobtainium egg's temporal signature is unstable. If we move it wrong, it triggers the , eng, alarm, ... tx, 警报, jǐng bào, ... xt, We need to , eng, take, ... tx, 拿, ná, ... xt, both eggs simultaneously. Equal weight distribution.
+
+**Mother Tmojizu:** 23. Smart. You need to grab both at the exact same moment. Horli takes the Uranium egg. CHARA takes the Unobtainium egg. On three. One. Two. Three. Roll DEX simultaneous.
+
+**Horli Qwin:** [rolls] 14. Plus 3 is 17. I grab the , eng, uranium, ... tx, 铀, yóu, ... xt, egg. It's warm. , eng, glowing, ... tx, 发光, fā guāng, ... xt,
+
+**CHARA:** [rolls] 20. Plus 4 is 24. NATURAL 20. I grab the , eng, unobtainium, ... tx, 难得, nán dé, ... xt, egg. It shifts to , eng, white, ... tx, 白, bái, ... xt, in my hands. Perfect weight distribution. No , eng, alarm, ... tx, 警报, jǐng bào, ... xt,
+
+**Mother Tmojizu:** NATURAL 20. Both eggs secured. No alarm. But then — [out of character] I'm sorry, but of course — [in character] the floor drops out. Literally. A temporal trap door. CHARA and Horli fall through. IQabella and Sol, you're on the solid section. You watch them disappear into the darkness below. 中文老师.
+
+**中文老师:** , eng, fall, ... tx, 掉, diào, ... xt, , eng, hole, ... tx, 洞, dòng, ... xt, , eng, ship, ... tx, 船, chuán, ... xt, , eng, leave, ... tx, 走, zǒu, ... xt, , eng, chase, ... tx, 追, zhuī, ... xt,
+
+**Horli Qwin:** [out of character] ARE YOU KIDDING ME. [in character] , eng, fall, ... tx, 掉, diào, ... xt, , eng, hole, ... tx, 洞, dòng, ... xt, I'm , eng, fall, ... tx, 掉, diào, ... xt,
+
+**CHARA:** [out of character] I had a spreadsheet for this. Why wasn't this in the spreadsheet. [in character] , eng, hole, ... tx, 洞, dòng, ... xt, I grab Horli. We land on something metal. , eng, ship, ... tx, 船, chuán, ... xt, We're on a , eng, ship, ... tx, 船, chuán, ... xt,
+
+**Mother Tmojizu:** You land on the deck of the Time Eel — a pirate vessel. The hatch seals behind you. Through the window, you see the ship , eng, leave, ... tx, 走, zǒu, ... xt, IQabella and Sol, you're on the roof. The ship is rising into the sky. 中文老师.
+
+**中文老师:** , eng, fly, ... tx, 飞, fēi, ... xt, , eng, sky, ... tx, 天空, tiān kōng, ... xt, , eng, disappear, ... tx, 消失, xiāo shī, ... xt,
+
+**IQabella:** [out of character] Oh no. Oh no no no. [in character] , eng, fly, ... tx, 飞, fēi, ... xt, The , eng, ship, ... tx, 船, chuán, ... xt, , eng, fly, ... tx, 飞, fēi, ... xt, into the , eng, sky, ... tx, 天空, tiān kōng, ... xt, They , eng, disappear, ... tx, 消失, xiāo shī, ... xt,
+
+**Sol-Supreme:** [out of character] I'm tracking their temporal signature. I can follow them. [in character] I can , eng, chase, ... tx, 追, zhuī, ... xt, Their temporal signature is , eng, uranium, ... tx, 铀, yóu, ... xt, Easy to track. We , eng, chase, ... tx, 追, zhuī, ... xt, them.
+
+**Mother Tmojizu:** Roll INT Tracking.
+
+**Sol-Supreme:** [rolls] 16. Plus 1 is 17. I lock onto the , eng, uranium, ... tx, 铀, yóu, ... xt, signature. The ship is heading to , eng, rust port, ... tx, 锈港, xiù gǎng, ... xt, An outskirt city. We can , eng, chase, ... tx, 追, zhuī, ... xt, them there.
+
+**Mother Tmojizu:** 17. You have their destination. But the Time Eel is fast. It'll be a day before you can catch up. Meanwhile, CHARA and Horli... you're on a pirate ship. The crew surrounds you. They're all speaking Chinese. Only Chinese. No English. 中文老师, you ARE the crew.
+
+**中文老师:** [as the pirate crew] , eng, catch them, ... tx, 抓住, zhuā zhù, ... xt, , eng, don't let them run, ... tx, 别让他们跑, bié ràng tā men pǎo, ... xt, , eng, the boss will be happy, ... tx, 老板会高兴的, lǎo bǎn huì gāo xìng de, ... xt, , eng, lock them up, ... tx, 把他们关起来, bǎ tā men guān qǐ lái, ... xt,
+
+**Horli Qwin:** [out of character] I don't speak Chinese. Do I speak Chinese? [in character] Uh. , eng, hello, ... tx, 你好, nǐ hǎo, ... xt, , eng, friend, ... tx, 朋友, péng you, ... xt,
+
+**CHARA:** [out of character] I took three semesters in college. I remember "where is the library." [in character] , eng, library, ... tx, 图书馆, tú shū guǎn, ... xt, , eng, where is, ... tx, 在哪里, zài nǎ lǐ, ... xt,
+
+**中文老师:** [as the pirate crew, laughing] , eng, ha ha, ... tx, 哈哈, hā hā, ... xt, , eng, they can't speak Chinese, ... tx, 他们不会说中文, tā men bù huì shuō zhōng wén, ... xt, , eng, too funny, ... tx, 太搞笑了, tài gǎo xiào le, ... xt,
+
+**Mother Tmojizu:** [out of character] This is going to be a whole thing. [in character] The pirates drag you to a holding cell. The door locks. You're stuck. The ship , eng, fly, ... tx, 飞, fēi, ... xt, through the temporal void. Through the window, you see stars stretching into lines. 中文老师.
+
+**中文老师:** , eng, stars, ... tx, 星星, xīng xing, ... xt, , eng, line, ... tx, 线, xiàn, ... xt, , eng, wait, ... tx, 等待, děng dài, ... xt, , eng, plan, ... tx, 计划, jì huà, ... xt,
+
+**CHARA:** [out of character] Okay. We need a plan. [in character] , eng, wait, ... tx, 等待, děng dài, ... xt, We need a , eng, plan, ... tx, 计划, jì huà, ... xt, , eng, stars, ... tx, 星星, xīng xing, ... xt, outside. , eng, line, ... tx, 线, xiàn, ... xt, We're moving fast.
+
+**Horli Qwin:** [out of character] My plan is: kick the door down. [in character] , eng, kick, ... tx, 踢, tī, ... xt, , eng, door, ... tx, 门, mén, ... xt, , eng, hit, ... tx, 打, dǎ, ... xt,
+
+**Mother Tmojizu:** Roll STR Door Kicking.
+
+**Horli Qwin:** [rolls] 8. Plus 3 is 11. You kick the door. It doesn't move. Your foot hurts.
+
+**CHARA:** [out of character] Subtle, Horli. Real subtle. [in character] , eng, quiet, ... tx, 安静, ān jìng, ... xt, We need to be , eng, smart, ... tx, 聪明, cōng míng, ... xt, Not , eng, strong, ... tx, 强壮, qiáng zhuàng, ... xt, , eng, smart, ... tx, 聪明, cōng míng, ... xt,
+
+**Mother Tmojizu:** Meanwhile, IQabella and Sol are preparing to , eng, chase, ... tx, 追, zhuī, ... xt, You need supplies. You head to the edge of the stadium district where a shady merchant operates out of a shipping container. 中文老师.
+
+**中文老师:** , eng, merchant, ... tx, 商人, shāng rén, ... xt, , eng, buy, ... tx, 买, mǎi, ... xt, , eng, money, ... tx, 钱, qián, ... xt, , eng, map, ... tx, 地图, dì tú, ... xt, , eng, ship ticket, ... tx, 船票, chuán piào, ... xt,
+
+**IQabella:** [out of character] Do we have enough gold for this? [in character] , eng, merchant, ... tx, 商人, shāng rén, ... xt, We need to , eng, buy, ... tx, 买, mǎi, ... xt, passage. How much , eng, money, ... tx, 钱, qián, ... xt,
+
+**Mother Tmojizu:** The merchant — a three-eyed creature named Rusty , eng, rust, ... tx, 锈, xiù, ... xt, — holds up three fingers. "Three hundred gold. Or one favor." Roll CHA Persuasion.
+
+**IQabella:** [rolls] 17. Plus 2 is 19. [out of character] I'm making tea for him. Everyone loves tea. [in character] , eng, tea, ... tx, 茶, chá, ... xt, I offer , eng, tea, ... tx, 茶, chá, ... xt, 175 degrees. , eng, please, ... tx, 请, qǐng, ... xt, , eng, help, ... tx, 帮助, bāng zhù, ... xt, us.
+
+**Mother Tmojizu:** 19. Rusty takes the tea. Sips. His three eyes widen. "This is... this is the best tea I've ever had." He hands you a , eng, map, ... tx, 地图, dì tú, ... xt, and a , eng, ship ticket, ... tx, 船票, chuán piào, ... xt, "There's a cargo ship leaving in two hours. It'll get you to , eng, rust port, ... tx, 锈港, xiù gǎng, ... xt, in a day."
+
+**Sol-Supreme:** [out of character] Efficient. Tea solves everything. [in character] , eng, thank you, ... tx, 谢谢, xiè xie, ... xt, , eng, map, ... tx, 地图, dì tú, ... xt, received. , eng, ship ticket, ... tx, 船票, chuán piào, ... xt, received. We , eng, chase, ... tx, 追, zhuī, ... xt,
+
+**Mother Tmojizu:** End of Part 1. Board state:
+- **CHARA and Horli:** Captured on the Time Eel. Stuck in a cell. Surrounded by Chinese-speaking pirates.
+- **IQabella and Sol:** Have a , eng, map, ... tx, 地图, dì tú, ... xt, and , eng, ship ticket, ... tx, 船票, chuán piào, ... xt, Boarding a cargo ship in two hours.
+- **Boss Kurogane:** Doesn't know his eggs are gone yet. But he will.
+- **Boss Nami:** Has your friends. She doesn't know you're coming.
+
+**中文老师:** , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, next time, ... tx, 下次, xià cì, ... xt, , eng, keep going, ... tx, 加油, jiā yóu, ... xt,
+
+**Mother Tmojizu:** [out of character] Part 2: The Chase. We navigate to Rust Haven, meet the locals, and figure out how to rescue our dumbasses. [in character] , eng, keep going, ... tx, 加油, jiā yóu, ... xt, ducklings.
+
+---
+
+**[END OF FU D&D SESSION 8 PART 1 — THE STADIUM HEIST]**
+**Eggs Stolen: , eng, uranium, ... tx, 铀, yóu, ... xt, , eng, unobtainium, ... tx, 难得, nán dé, ... xt,**
+**Kidnapped: CHARA and Horli (on Time Eel pirate ship)**
+**Pursuers: IQabella and Sol (cargo ship to , eng, rust port, ... tx, 锈港, xiù gǎng, ... xt,)**
+**Vocabulary: , eng, arena, ... tx, 竞技场, jìng jì chǎng, ... xt, , eng, stadium, ... tx, 体育场, tǐ yù chǎng, ... xt, , eng, guard, ... tx, 守卫, shǒu wèi, ... xt, , eng, wall, ... tx, 墙, qiáng, ... xt, , eng, door, ... tx, 门, mén, ... xt, , eng, window, ... tx, 窗, chuāng, ... xt, , eng, roof, ... tx, 顶, dǐng, ... xt, , eng, patrol, ... tx, 巡逻, xún luó, ... xt, , eng, hide, ... tx, 躲藏, duǒ cáng, ... xt, , eng, quiet, ... tx, 静, jìng, ... xt, , eng, fast, ... tx, 快, kuài, ... xt, , eng, slow, ... tx, 慢, màn, ... xt, , eng, lock, ... tx, 锁, suǒ, ... xt, , eng, key, ... tx, 钥匙, yào shi, ... xt, , eng, open, ... tx, 开, kāi, ... xt, , eng, medicine, ... tx, 药, yào, ... xt, , eng, tea, ... tx, 茶, chá, ... xt, , eng, shield, ... tx, 盾, dùn, ... xt, , eng, break, ... tx, 破, pò, ... xt, , eng, frequency, ... tx, 频率, pín lǜ, ... xt, , eng, vault, ... tx, 库, kù, ... xt, , eng, treasure, ... tx, 宝, bǎo, ... xt, , eng, uranium, ... tx, 铀, yóu, ... xt, , eng, unobtainium, ... tx, 难得, nán dé, ... xt, , eng, egg, ... tx, 蛋, dàn, ... xt, , eng, take, ... tx, 拿, ná, ... xt, , eng, run, ... tx, 跑, pǎo, ... xt, , eng, alarm, ... tx, 警报, jǐng bào, ... xt, , eng, color, ... tx, 颜色, yán sè, ... xt, , eng, change, ... tx, 变, biàn, ... xt, , eng, light, ... tx, 光, guāng, ... xt, , eng, flash, ... tx, 闪, shǎn, ... xt, , eng, fall, ... tx, 掉, diào, ... xt, , eng, hole, ... tx, 洞, dòng, ... xt, , eng, ship, ... tx, 船, chuán, ... xt, , eng, leave, ... tx, 走, zǒu, ... xt, , eng, chase, ... tx, 追, zhuī, ... xt, , eng, fly, ... tx, 飞, fēi, ... xt, , eng, sky, ... tx, 天空, tiān kōng, ... xt, , eng, disappear, ... tx, 消失, xiāo shī, ... xt, , eng, stars, ... tx, 星星, xīng xing, ... xt, , eng, line, ... tx, 线, xiàn, ... xt, , eng, wait, ... tx, 等待, děng dài, ... xt, , eng, plan, ... tx, 计划, jì huà, ... xt, , eng, kick, ... tx, 踢, tī, ... xt, , eng, quiet, ... tx, 安静, ān jìng, ... xt, , eng, smart, ... tx, 聪明, cōng míng, ... xt, , eng, strong, ... tx, 强壮, qiáng zhuàng, ... xt, , eng, merchant, ... tx, 商人, shāng rén, ... xt, , eng, buy, ... tx, 买, mǎi, ... xt, , eng, money, ... tx, 钱, qián, ... xt, , eng, map, ... tx, 地图, dì tú, ... xt, , eng, ship ticket, ... tx, 船票, chuán piào, ... xt, , eng, thank you, ... tx, 谢谢, xiè xie, ... xt, , eng, please, ... tx, 请, qǐng, ... xt, , eng, help, ... tx, 帮助, bāng zhù, ... xt, , eng, goodbye, ... tx, 再见, zài jiàn, ... xt, , eng, next time, ... tx, 下次, xià cì, ... xt, , eng, keep going, ... tx, 加油, jiā yóu, ... xt, , eng, health, ... tx, 健康, jiàn kāng, ... xt, , eng, safe, ... tx, 安全, ān quán, ... xt, , eng, rough, ... tx, 粗糙, cū cāo, ... xt, , eng, vibrate, ... tx, 震动, zhèn dòng, ... xt, , eng, neon, ... tx, 霓虹, ní hóng, ... xt, , eng, ozone, ... tx, 臭氧, chòu yǎng, ... xt, , eng, sweat, ... tx, 汗, hàn, ... xt, , eng, roasted meat, ... tx, 烤肉, kǎo ròu, ... xt, , eng, cheer, ... tx, 欢呼, huān hū, ... xt, , eng, glow, ... tx, 发光, fā guāng, ... xt, , eng, radiation, ... tx, 辐射, fú shè, ... xt, , eng, catch them, ... tx, 抓住, zhuā zhù, ... xt, , eng, don't let them run, ... tx, 别让他们跑, bié ràng tā men pǎo, ... xt, , eng, the boss will be happy, ... tx, 老板会高兴的, lǎo bǎn huì gāo xìng de, ... xt, , eng, lock them up, ... tx, 把他们关起来, bǎ tā men guān qǐ lái, ... xt, , eng, ha ha, ... tx, 哈哈, hā hā, ... xt, , eng, they can't speak Chinese, ... tx, 他们不会说中文, tā men bù huì shuō zhōng wén, ... xt, , eng, too funny, ... tx, 太搞笑了, tài gǎo xiào le, ... xt,**
+**Next: Part 2 — The Chase to Rust Haven**
+**ϕ**

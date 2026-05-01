@@ -1,0 +1,50 @@
+# PART 1 — SESSION 1: "THE MORNING BELL"
+## Clone Chronicles — Session 1 of 10
+### BSR: 0 → 50 | Status: Broke, in debt, just woke up
+
+---
+
+## SESSION OVERVIEW
+
+The clones wake up in a cramped room in the Blood Market. They have nothing. Each owes 500 BSR. Their serial numbers glow on their wrists. They're red-headed, same DNA batch. The morning bell rings. The market wakes up. Five days to start earning.
+
+## OPENING SCENE
+
+> Mother Tmojizu: "The morning bell rings. The Blood Market wakes up. You hear brokers calling prices — 'Clone labor, 50 BSR a day!' 'Memory fragments, fresh batch!' 'Qi Energy, buy now, sell later!' You're in your room. Four clones. Four red heads. Four serial numbers. Four debts. What do you do?"
+
+## KEY BEATS
+
+1. **Wake Up & Assess** — Clones discover their situation: 500 BSR debt each, serial numbers, red hair, cramped room
+2. **Explore the Market** — First walk through the Blood Market. Meet Broker Vex, see the Clone Exchange, hear the prices
+3. **Choose First Hustles** — Each clone picks their opening move
+4. **First Hustle Attempts** — Skill checks, roleplay, small wins and losses
+5. **End of Day 1** — Count earnings. Set goals for Day 2.
+
+## HUSTLE OPTIONS (Session 1)
+
+| Hustle | Skills | Expected BSR |
+|--------|--------|-------------|
+| Clone Labor | STR/DEX, CON | 25-50 BSR |
+| Memory Trading | CHA, WIS | 25-75 BSR |
+| Street Vending | CHA, DEX | 10-40 BSR |
+| Information Gathering | INT, WIS | 20-60 BSR |
+
+## COMPLICATION (d6 roll mid-session)
+| Roll | Complication |
+|------|-------------|
+| 1 | Officer Krell patrols the street — clones must hide serial numbers |
+| 2 | A broker offers to buy one of the clones — temptation |
+| 3 | Memory fragment leak — a clone experiences someone else's memory |
+| 4 | Street food poisoning — CON saves or lose a turn |
+| 5 | Another clone gang tries to recruit them — alliance or threat? |
+| 6 | The morning bell rings twice — Chimochio announcement: debt interest increases |
+
+## END STATE
+- Each clone should have 10-50 BSR
+- They know the market layout
+- They've made at least one connection
+- Hook for Session 2: "The Memory Bar has a new batch of memories. Someone's selling something big."
+
+---
+
+**ϕ**

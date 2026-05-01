@@ -1,0 +1,165 @@
+# 4 Remaining Books — TTS Conversion Plan
+
+## Voice Assignments
+
+| Book | Voice | edge-tts Voice | Chapters | Format |
+|------|-------|---------------|----------|--------|
+| **MyChara (CHAR.A.NON)** | CHARA | en-US-AriaNeural | 15 ch (BOOK]1010%) | Multi-page (page_N.txt) |
+| **NGL MPYRE (Angler Empire)** | SOL | en-US-GuyNeural | 20 ch | Multi-page (page_N.txt) |
+| **Tear-It Accidental Witch** | IQA | en-US-AnaNeural | 13 ch | Single-file (chapter_N.txt) |
+| **RedWhiteAndU (CYOA)** | Horli | en-US-RogerNeural | 4 books, page-based | CYOA — SPECIAL (see below) |
+
+---
+
+## Book 1: MyChara (CHAR.A.NON) — CHARA Voice
+
+**Base Path:** `SP.all-writeez28-a1/-1.MyChara+21]b1/CHAR.A.NON]c3]++/`
+
+Contains **4 distinct books** across versioned folders, all read by CHARA (en-US-AriaNeural):
+
+### Book 1010% (15 chapters)
+- **Path:** `-1.CHAR.A.NON]1111111111111011]a0/BOOK]1010%/`
+- **15 chapters** (`Chapter_1` through `Chapter_15`) — CAPITAL C
+- Each chapter has **10 page files** (`page_1.txt` through `page_10.txt`)
+- ~30K chars per chapter
+- **Output prefix:** `ca1010.chapter`
+
+### Book 1100 (15 chapters)
+- **Path:** `-1.CHAR.A.NON]1111111111111100]a1-fixed/book_template.scp]1100/`
+- **15 chapters** (`chapter_1` through `chapter_15`) — lowercase c
+- Each chapter has **10 page files**
+- **Output prefix:** `ca1100.chapter`
+
+### Book 101 (18 chapters)
+- **Path:** `-1.CHAR.A.NON]1111111111111101a0-fixed/#.book_template.scp]101/`
+- **18 chapters** (`chapter_1` through `chapter_18`)
+- Each chapter has **8 page files**
+- **Output prefix:** `ca101.chapter`
+
+### Book 110 (8 chapters)
+- **Path:** `-1.CHAR.A.NON]1111111111111110/#.book_template.scp]110]fix/`
+- **8 chapters** (`chapter_1` through `chapter_8`)
+- Each chapter has **10 page files**
+- **Output prefix:** `ca110.chapter`
+
+### Skipped:
+- **Book 111** (`1111111111111111/#.book_template.scp]111/`) — only 2 pages per chapter, incomplete draft
+
+**Total CHAR.A.NON: 56 chapters, all CHARA voice**
+
+---
+
+## Book 2: NGL MPYRE (Angler Empire) — SOL Voice
+
+**Path:** `SP.all-writeez28-a1/100.%.NGL.MPYRE]bk0/14.book]nglr.mpyre]FULL]b1/`
+
+- **20 chapters** (`chapter_1` through `chapter_20`)
+- Each chapter has **10 page files** (`page_1.txt` through `page_10.txt`)
+- ~29.5K chars per chapter
+- **Script:** `batch_convert_nglmpyre_edge_tts.py`
+- **Output prefix:** `ngl.chapter`
+- **Suffix:** `-v1.0.mp3`
+
+### Notes:
+- Standard multi-page format — same as Geminii/RedRock/DeathKryo
+- Root has 30 `#+Scene_N_*.txt` screenplay files (ignore — use chapterized version)
+
+---
+
+## Book 3: Tear-It Accidental Witch — IQA Voice
+
+**Path:** `SP.all-writeez28-a1/111.tear-it]accidental.witch]y3/book_template.scp/`
+
+- **13 chapters** (`chapter_1` through `chapter_13`)
+- Each chapter has a **single file** (`chapter_N.txt`) — NOT split into pages
+- ~9.3K chars per chapter (shorter)
+- **Script:** `batch_convert_tearit_edge_tts.py`
+- **Output prefix:** `tearit.chapter`
+- **Suffix:** `-v1.0.mp3`
+
+### Notes:
+- Single-file format — same as Book 0 (Sol Pen) and Metal Sun/Footrace
+- Root has 19 screenplay scene files (ignore — use chapterized version)
+- Also has `1.tearit]full]smol.txt` (compiled all chapters)
+
+---
+
+## Book 4: RedWhiteAndU (CYOA) — Horli Voice — SPECIAL HANDLING
+
+**Path:** `SP.all-writeez28-a1/#.1-13.sp.redwhiteandU]🇺🇸️🇬🇱️b2/`
+
+### This is NOT a normal book. It's CYOA (Choose Your Own Adventure).
+
+**Structure:**
+| Book | Path | Pages | Chars | Notes |
+|------|------|-------|-------|-------|
+| **Book 0** | `00_book]kOT]a0]gmii/rb&u.CYOA_Book.0/` | 55 | ~29K | Clone graduation |
+| **Book 1** | `01]ugem&]gmii/rb&u.CYOA_Book]01/` | 100 | ~? | Continuation |
+| **Book 3** | `3&4.cd&cclonesdrones&crx/3.rb&u.CYO_book.3]CD&C.X/` | 297 | ~536K | Massive branching |
+| **Book 4** | `3&4.cd&cclonesdrones&crx/4.rb&u.cdc.2.book.4]BEST/rb&u.cyoa_book4]cd&c2/` | 150 | ~164K | Best version |
+
+### CYOA Format:
+- Second-person narrative: "You are Clone 734..."
+- Pages contain **choices** that branch to other pages
+- Pages reference each other by number (e.g., "Go to page 42")
+
+### CYOA Audio Strategy — "Choose Audio File":
+Instead of one linear audio file, create **one MP3 per page**:
+- `rb&u.book0.page01.mp3`, `rb&u.book0.page02.mp3`, etc.
+- Each page's audio is independent
+- Player listens to page audio, then manually selects next page's audio file
+- Can be assembled into a simple HTML/CLI player later with clickable choices
+
+### Script: `batch_convert_cyoa_edge_tts.py`
+- Iterates all `page_NN.txt` files in a CYOA book dir
+- Converts each page independently (no aggregation)
+- Output: `rb&u.book{N}.page{NN}-v1.0.mp3`
+- Run once per book (0, 1, 3, 4)
+
+### Notes:
+- Book 3 has pages going up to `page_1001.txt` — massive
+- Page files use zero-padded naming: `page_01.txt`, `page_100.txt`
+- Some pages may be very short (choice nodes) or very long (story segments)
+- Has `outline.txt` and `navigation_guide.txt` files for reference
+
+---
+
+## Execution Order
+
+1. **CHAR.A.NON Book 1010%** (15 ch, CHARA voice)
+2. **CHAR.A.NON Book 1100** (15 ch, CHARA voice)
+3. **CHAR.A.NON Book 101** (18 ch, CHARA voice)
+4. **CHAR.A.NON Book 110** (8 ch, CHARA voice)
+5. **NGL MPYRE** (20 ch, SOL voice)
+6. **Tear-It** (13 ch, IQA voice)
+7. **CYOA Book 0** (55 pages, Horli voice)
+8. **CYOA Book 1** (100 pages, Horli voice)
+9. **CYOA Book 4** (150 pages, Horli voice)
+10. **CYOA Book 3** (297 pages, Horli voice)
+
+**Total: 280 linear chapters + 602 CYOA pages = ~882 audio files**
+
+---
+
+## Script Templates Needed
+
+| Script | Based On | Key Difference |
+|--------|----------|----------------|
+| `batch_convert_charanon_1010_edge_tts.py` | Geminii template | Capital `Chapter_N` dirs, CHARA voice |
+| `batch_convert_charanon_1100_edge_tts.py` | Geminii template | CHARA voice, 15 ch |
+| `batch_convert_charanon_101_edge_tts.py` | Geminii template | CHARA voice, 18 ch, 8 pages/ch |
+| `batch_convert_charanon_110_edge_tts.py` | Geminii template | CHARA voice, 8 ch |
+| `batch_convert_nglmpyre_edge_tts.py` | Geminii template | SOL voice, 20 chapters |
+| `batch_convert_tearit_edge_tts.py` | Book 0 template | IQA voice, single-file chapters |
+| `batch_convert_cyoa_edge_tts.py` | NEW — per-page conversion | No aggregation, one MP3 per page, Horli voice |
+
+---
+
+## Voice Reference
+
+| Speaker | edge-tts Voice | Character |
+|---------|---------------|-----------|
+| CHARA | en-US-AriaNeural | Female, confident — paranoid rogue |
+| SOL | en-US-GuyNeural | Male, deep — artificer, distorted |
+| IQA | en-US-AnaNeural | Female, cute — cheerful cyborg cleric |
+| Horli | en-US-RogerNeural | Male, energetic — Tabaxi bard |

@@ -1,0 +1,24 @@
+
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+ > i want to use the                                                                    
+   @^.TPMOS_c_+rmmp_67.00+cyoa/TPMOSTEXTBOOK_v03.01/TPMOS_TEXTBOOK_v03.01_CONSOLIDATED. 
+   txt principles (we can even make the whole program as a 'project'[look at the        
+   existing working code for how u would do this] or do it seperate) that lets u select 
+   which choose your own adventure book (there are currently 4 , starting at            
+   00.book\]klone-0/ and going to                                                       
+   @3\&4.cd\&cclonesdrones\&crx/4.rb\&u.cdc.2.book.4\]BEST/ ,                           
+   @3\&4.cd\&cclonesdrones\&crx/4.rb\&u.cdc.2.book.4\]BEST/generate_tree_diagram.py has 
+   a helper file but basically we want it to play the corresponding mp3 file, then      
+   prompt user for which to go to next in cli, user will pick and it can play next.     
+   maybe better to use mpg123 , since vlc will loop the file played , which is          
+   undesired. look over the code, then make a plan in cyoa-softtware/cyoa-soft-plan.txt 
+   for how we will do this , for my approval 2 start coding. when u are done i will     
+   test it and give feedback. we wont hardcode anything , each file dir can have its    
+   own story map. and list of availiable books can populate on startup (u can rearrange 
+   the files if u need, to be in a more scalable standardized format )      
+
+▀▀▀▀▀▀▀
+the scene file names are all numerical only , and generic.  
+  can we put the scene names in the .txt along with their  number?      
+refer to @screenplay_outline.txt   4 ez naming coventions
+▀▀▀▀▀▀▀

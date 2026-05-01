@@ -1,0 +1,12 @@
+**Page 120: Breaching the Basement Wall**
+
+You use your strength and silk to probe the basement wall the drones are targeting. Behind the stones, you discover a hidden chamber. The drones' lights are focused on a large, cylindrical object humming with contained energy. It appears to be a power source or a core component.
+
+Hydration: 8/10 (Adequate)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 5/10 (Discovered a hidden chamber containing a humming energy core)
+
+What do you do?
+
+*   If you attempt to interact with the energy core, turn to page 137.
+*   If you decide to observe the drones' behavior more closely, turn to page 31.

@@ -1,0 +1,328 @@
+=== NEW SESSION at 2026-04-16 21:56:27 ===
+
+--- FRAME UPDATE at 2026-04-16 21:56:27 ---
++===========================================================+
+|                                                           |
+|           C H T P M + O S   C L I   v2.0                 |
+|                                                           |
+|  CHTPM+OS Main Menu                                      |
+|                                                           |
+|  [>] 1. [Project Loader]                             |
+|  [ ] 2. [App Store (Fondu)]                          |
+|  [ ] 3. [Status]  [ ] 4. [GL-OS]                                          |
+|  [ ] 5. [Process Monitor]                            |
+|  [ ] 6. [Toggle Frame History (Current: )]                                         |
+|  [ ] 7. [Help]                                            |
+|                                                           |
++===========================================================+
+|  Running Applications: None                               |
+|  System Time: 08:00:00 | Turn: 0 | Key: None |
++===========================================================+
+|                                                           |
+|  $ | [ ] 8. [****]                                                 |                                                 |
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:30 ---
+╔══════════════ P I E C E M A R K   L O A D E R ════════════╗
+║ LAYOUT ID: playrm/loader.chtpm                            ║
+║                                                           ║
+║  Select a project to begin:                               ║
+║                                                           ║
+║  [>] 1. [404-test]
+[ ] 2. [ai-labs]
+[ ] 3. [cyoa-engine]
+[ ] 4. [demo_1]
+[ ] 5. [fuzz-op]
+[ ] 6. [gitlet]
+[ ] 7. [lsr]
+[ ] 8. [man-add]
+[ ] 9. [man-ops]
+[ ] 10. [man-pal]
+[ ] 11. [op-ed]
+[ ] 12. [p2p-net]
+[ ] 13. [template]
+[ ] 14. [test_fondu]
+[ ] 15. [user]
+ ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 16. [Back to Main Menu]                                  ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:30 ---
+╔══════════════ P I E C E M A R K   L O A D E R ════════════╗
+║ LAYOUT ID: playrm/loader.chtpm                            ║
+║                                                           ║
+║  Select a project to begin:                               ║
+║                                                           ║
+║  [>] 1. [404-test]
+[ ] 2. [ai-labs]
+[ ] 3. [cyoa-engine]
+[ ] 4. [demo_1]
+[ ] 5. [fuzz-op]
+[ ] 6. [gitlet]
+[ ] 7. [lsr]
+[ ] 8. [man-add]
+[ ] 9. [man-ops]
+[ ] 10. [man-pal]
+[ ] 11. [op-ed]
+[ ] 12. [p2p-net]
+[ ] 13. [template]
+[ ] 14. [test_fondu]
+[ ] 15. [user]
+ ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 16. [Back to Main Menu]                                  ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:31 ---
+╔══════════════ P I E C E M A R K   L O A D E R ════════════╗
+║ LAYOUT ID: playrm/loader.chtpm                            ║
+║                                                           ║
+║  Select a project to begin:                               ║
+║                                                           ║
+║  [ ] 1. [404-test]
+[>] 2. [ai-labs]
+[ ] 3. [cyoa-engine]
+[ ] 4. [demo_1]
+[ ] 5. [fuzz-op]
+[ ] 6. [gitlet]
+[ ] 7. [lsr]
+[ ] 8. [man-add]
+[ ] 9. [man-ops]
+[ ] 10. [man-pal]
+[ ] 11. [op-ed]
+[ ] 12. [p2p-net]
+[ ] 13. [template]
+[ ] 14. [test_fondu]
+[ ] 15. [user]
+ ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 16. [Back to Main Menu]                                  ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:31 ---
+╔══════════════ P I E C E M A R K   L O A D E R ════════════╗
+║ LAYOUT ID: playrm/loader.chtpm                            ║
+║                                                           ║
+║  Select a project to begin:                               ║
+║                                                           ║
+║  [ ] 1. [404-test]
+[ ] 2. [ai-labs]
+[>] 3. [cyoa-engine]
+[ ] 4. [demo_1]
+[ ] 5. [fuzz-op]
+[ ] 6. [gitlet]
+[ ] 7. [lsr]
+[ ] 8. [man-add]
+[ ] 9. [man-ops]
+[ ] 10. [man-pal]
+[ ] 11. [op-ed]
+[ ] 12. [p2p-net]
+[ ] 13. [template]
+[ ] 14. [test_fondu]
+[ ] 15. [user]
+ ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 16. [Back to Main Menu]                                  ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:31 ---
+╔═══════════════════════════════════════════════════════════╗
+║             RED WHITE AND U: CYOA PLAYER                          ║
+╠═══════════════════════════════════════════════════════════╣
+║ Book: Select a Book ║
+║ Page: 0 ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  Please select a book from the menu below:      ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║ Choices:                                                  ║
+║  Use Arrows to navigate, ENTER to select        ║
+╠═══════════════════════════════════════════════════════════╣
+║  [>] 1. [1.fuzpet-lab-cyoa]
+[ ] 2. [book_0]
+[ ] 3. [book_1]
+[ ] 4. [book_2]
+[ ] 5. [book_3]
+[ ] 6. [nGL-CYOA-BOOK1]
+[ ] 7. [sp-cyoa-maxe]
+[ ] 8. [Audio: PLAY]
+[ ] 9. [Audio: STOP]
+ ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 10. [Back to Book List (ESC)]                     ║
+║  [ ] 11. [Exit to Menu]                          ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:34 ---
+╔═══════════════════════════════════════════════════════════╗
+║             RED WHITE AND U: CYOA PLAYER                          ║
+╠═══════════════════════════════════════════════════════════╣
+║ Book: Select a Book ║
+║ Page: 0 ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  Please select a book from the menu below:      ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║ Choices:                                                  ║
+║  Use Arrows to navigate, ENTER to select        ║
+╠═══════════════════════════════════════════════════════════╣
+║  [>] 1. [1.fuzpet-lab-cyoa]
+[ ] 2. [book_0]
+[ ] 3. [book_1]
+[ ] 4. [book_2]
+[ ] 5. [book_3]
+[ ] 6. [nGL-CYOA-BOOK1]
+[ ] 7. [sp-cyoa-maxe]
+[ ] 8. [Audio: PLAY]
+[ ] 9. [Audio: STOP]
+ ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 10. [Back to Book List (ESC)]                     ║
+║  [ ] 11. [Exit to Menu]                          ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:34 ---
+╔═══════════════════════════════════════════════════════════╗
+║             RED WHITE AND U: CYOA PLAYER                          ║
+╠═══════════════════════════════════════════════════════════╣
+║ Book: 1.fuzpet-lab-cyoa ║
+║ Page: 1 ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  You are a castaway, waking up on a pristine, yet          ║\n║  unnervingly quiet, beach. The last thing you remember is  ║\n║  a deafening roar, the tearing of metal, and then…       ║\n║  nothing. Your head throbs, and a chilling amnesia has     ║\n║  wiped your slate clean. Who are you? How did you get      ║\n║  here? The questions swirl in your mind like the waves     ║\n║  lapping at your feet. The sun beats down, and the air is  ║\n║  thick with the scent of salt and unfamiliar blossoms.     ║\n║  Before you lies the vast, indifferent ocean, and behind   ║\n║  you, a dense, impenetrable jungle. Your survival, and     ║\n║  perhaps your sanity, depends on your next move. What do   ║\n║  you do?                                                   ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║ Choices:                                                  ║
+║  See dynamic menu below for choices             ║
+╠═══════════════════════════════════════════════════════════╣
+║  [>] 1. [If you decide to explore the immediate area of the beach for clues or resources, (Page 2)]
+[ ] 2. [If you feel drawn inland, towards the dense jungle and the strange, distant sounds, (Page 3)]
+[ ] 3. [Audio: PLAY]
+[ ] 4. [Audio: STOP]
+ ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 5. [Back to Book List (ESC)]                     ║
+║  [ ] 6. [Exit to Menu]                          ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:43 ---
+╔═══════════════════════════════════════════════════════════╗
+║             RED WHITE AND U: CYOA PLAYER                          ║
+╠═══════════════════════════════════════════════════════════╣
+║ Book: 1.fuzpet-lab-cyoa ║
+║ Page: 1 ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  You are a castaway, waking up on a pristine, yet          ║\n║  unnervingly quiet, beach. The last thing you remember is  ║\n║  a deafening roar, the tearing of metal, and then…       ║\n║  nothing. Your head throbs, and a chilling amnesia has     ║\n║  wiped your slate clean. Who are you? How did you get      ║\n║  here? The questions swirl in your mind like the waves     ║\n║  lapping at your feet. The sun beats down, and the air is  ║\n║  thick with the scent of salt and unfamiliar blossoms.     ║\n║  Before you lies the vast, indifferent ocean, and behind   ║\n║  you, a dense, impenetrable jungle. Your survival, and     ║\n║  perhaps your sanity, depends on your next move. What do   ║\n║  you do?                                                   ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║ Choices:                                                  ║
+║  See dynamic menu below for choices             ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 1. [If you decide to explore the immediate area of the beach for clues or resources, (Page 2)]
+[>] 2. [If you feel drawn inland, towards the dense jungle and the strange, distant sounds, (Page 3)]
+[ ] 3. [Audio: PLAY]
+[ ] 4. [Audio: STOP]
+ ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 5. [Back to Book List (ESC)]                     ║
+║  [ ] 6. [Exit to Menu]                          ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:44 ---
+╔═══════════════════════════════════════════════════════════╗
+║             RED WHITE AND U: CYOA PLAYER                          ║
+╠═══════════════════════════════════════════════════════════╣
+║ Book: 1.fuzpet-lab-cyoa ║
+║ Page: 1 ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  You are a castaway, waking up on a pristine, yet          ║\n║  unnervingly quiet, beach. The last thing you remember is  ║\n║  a deafening roar, the tearing of metal, and then…       ║\n║  nothing. Your head throbs, and a chilling amnesia has     ║\n║  wiped your slate clean. Who are you? How did you get      ║\n║  here? The questions swirl in your mind like the waves     ║\n║  lapping at your feet. The sun beats down, and the air is  ║\n║  thick with the scent of salt and unfamiliar blossoms.     ║\n║  Before you lies the vast, indifferent ocean, and behind   ║\n║  you, a dense, impenetrable jungle. Your survival, and     ║\n║  perhaps your sanity, depends on your next move. What do   ║\n║  you do?                                                   ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║ Choices:                                                  ║
+║  See dynamic menu below for choices             ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 1. [If you decide to explore the immediate area of the beach for clues or resources, (Page 2)]
+[>] 2. [If you feel drawn inland, towards the dense jungle and the strange, distant sounds, (Page 3)]
+[ ] 3. [Audio: PLAY]
+[ ] 4. [Audio: STOP]
+ ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 5. [Back to Book List (ESC)]                     ║
+║  [ ] 6. [Exit to Menu]                          ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+
+
+--- FRAME UPDATE at 2026-04-16 21:56:44 ---
+╔═══════════════════════════════════════════════════════════╗
+║             RED WHITE AND U: CYOA PLAYER                          ║
+╠═══════════════════════════════════════════════════════════╣
+║ Book: 1.fuzpet-lab-cyoa ║
+║ Page: 3 ║
+╠═══════════════════════════════════════════════════════════╣
+║                                                           ║
+║  You cautiously venture into the dense jungle, the thick   ║\n║  canopy immediately swallowing the sunlight. Strange       ║\n║  chirps and rustles echo around you, amplifying your       ║\n║  disorientation. The air grows humid and heavy. You push   ║\n║  aside large, unfamiliar leaves and step over gnarled      ║\n║  roots, a primal instinct urging you deeper. After a       ║\n║  short while, you hear a faint, rhythmic sound —         ║\n║  perhaps the distant crash of waves, or something else     ║\n║  entirely. It seems to be coming from deeper within the    ║\n║  verdant maze. What do you do?                             ║
+║                                                           ║
+╠═══════════════════════════════════════════════════════════╣
+║ Choices:                                                  ║
+║  See dynamic menu below for choices             ║
+╠═══════════════════════════════════════════════════════════╣
+║  [>] 1. [If you decide to cautiously follow the sound, (Page 6)]
+[ ] 2. [If you feel this is too dangerous and decide to head back towards the relative openness of the beach, (Page 5)]
+[ ] 3. [Audio: PLAY]
+[ ] 4. [Audio: STOP]
+ ║
+╠═══════════════════════════════════════════════════════════╣
+║  [ ] 5. [Back to Book List (ESC)]                     ║
+║  [ ] 6. [Exit to Menu]                          ║
+╚═══════════════════════════════════════════════════════════╝
+
++=========================================================+
+Nav > _
+

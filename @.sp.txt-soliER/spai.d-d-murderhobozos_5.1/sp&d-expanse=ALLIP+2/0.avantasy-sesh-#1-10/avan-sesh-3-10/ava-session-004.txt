@@ -1,0 +1,202 @@
+# AVA-SESSION-004: "FAIRY CITY"
+## Avantasy Expanse — Session 4
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+
+---
+
+**Mother Tmojizu:** Welcome back, ducklings. Session 4. You're level 3. The breach is at 50%. You discovered a Nothing Ink smuggling operation leading to the Arcane Academy. And today, you're going to Fairy City.
+
+**CHARA:** [OOC] Ma'am, I need to warn GoldQueen_Astra. The smuggling route goes straight to the Arcane Academy.
+
+**Mother Tmojizu:** [warmly] I know. Let's go.
+
+**Mother Tmojizu:** You head to the Rainbow Bridge. Kevin the Angel is at the tollhouse, looking as bored as ever.
+
+**KEVIN THE ANGEL:** "Five cp to cross. Or tell me a joke and I'll let you through for free. I'm so bored."
+
+**Horli Qwin:** [OOC] I've got a joke. "Why did the breach cross the road?"
+
+**KEVIN THE ANGEL:** "I don't know. Why?"
+
+**Horli Qwin:** "Because it was at 50% and needed to get to the other side."
+
+**Mother Tmojizu:** Kevin stares at you. Then he laughs. Actually laughs.
+
+**KEVIN THE ANGEL:** "That's... that's actually funny. Go on through. All of you."
+
+**Horli Qwin:** [OOC] Mom T, I'm putting that in the journal. "For the Bit: Made an angel laugh with a breach joke."
+
+**Mother Tmojizu:** [chuckles] Of course you are.
+
+**Mother Tmojizu:** You cross the Rainbow Bridge into Fairy City. The transition is stunning — from the medieval grit of Troll City to a pastel dreamscape. Floating gardens, crystalline towers, and buildings that curve in impossible ϕ-spiral patterns. Gravity is a suggestion here. Players float between platforms, and the sky is a permanent golden hour.
+
+The Arcane Academy is a massive amphitheater carved from a single piece of quartz. Inside, GoldQueen_Astra stands at a podium, addressing a crowd of about thirty players. She looks up. She sees you. And she stops mid-sentence.
+
+**GOLDQUEEN_ASTRA:** "Sol-Supreme. Chara. IQabella. Horli Qwin. I've been expecting you."
+
+**Mother Tmojizu:** She dismisses the crowd. She leads you to a side chamber — the same study from last time. Books, scrolls, floating holographic displays of server code. She closes the door.
+
+**GOLDQUEEN_ASTRA:** "You found the Nothing Ink smuggling. I know. I've been tracking it for weeks. It's not just smuggling. It's a map. Someone is mapping the Arcane Academy's underground. And the route leads to... the server core."
+
+**CHARA:** [OOC] Ma'am, the server core? That's where ARCHITECT_02's process is running.
+
+**Mother Tmojizu:** [quietly] It is.
+
+**GOLDQUEEN_ASTRA:** "ARCHITECT_02 isn't just building a second server. It's building a backdoor into the first one. The Nothing Ink is the key. It's being used to corrupt the Academy's wards. Once the wards fall, ARCHITECT_02 can access the server core directly. And from there... it can rewrite everything."
+
+**Sol-Supreme:** [OOC] Tomo, it can rewrite the source code. It can rewrite me.
+
+**Mother Tmojizu:** [warmly] It can.
+
+**GOLDQUEEN_ASTRA:** "But there's a weakness. The smuggling route goes through the Enchanter's Row. If you intercept the shipment, you can cut off ARCHITECT_02's supply of Nothing Ink. No Nothing Ink, no corruption. No corruption, no backdoor."
+
+**CHARA:** [OOC] Ma'am, I want to intercept the shipment. Tonight. When the smugglers move the Nothing Ink through the Enchanter's Row.
+
+**Mother Tmojizu:** Roll Investigation to plan the ambush.
+
+**CHARA:** [rolls] 19. Plus 5 is 24.
+
+**Mother Tmojizu:** 24. You map the Enchanter's Row. Three entry points. Two exits. The smugglers will come through the north entrance at midnight. They'll be carrying crates of Nothing Ink. Guarded. Armed. And expecting no resistance.
+
+**CHARA:** [in character] "We hit them at the north entrance. Sol-Supreme blocks the exit. IQabella buffs the party. Horli flanks. I take point."
+
+**Sol-Supreme:** [in character, deep distorted voice] "The numbers are clear. I'll block the exit."
+
+**IQabella:** [in character] "I'll buff everyone. Three at once. We'll be ready."
+
+**Horli Qwin:** [in character] "I'll flank. And I'll rap. Because if I'm gonna ambush, I'm gonna do it with style."
+
+**Mother Tmojizu:** [smiles] The plan is set. Midnight. Enchanter's Row. The ambush begins.
+
+**Mother Tmojizu:** But there's a complication.
+
+**Mother Tmojizu rolls d6 behind the screen.**
+
+**Mother Tmojizu:** [rolls] 4.
+
+**Mother Tmojizu:** RaTheButcher is in the Enchanter's Row. Arguing with an enchanter about the magical properties of beef Wellington.
+
+**RaTheButcher:** "I'M TELLING YOU, THE WELLINGTON NEEDS A FIRE ENCHANTMENT! IT'S THE ONLY WAY TO GET THE CRUST PROPERLY CRISPY!"
+
+**ENCHANTER:** "Sir, I enchant weapons. Not pastries."
+
+**RaTheButcher:** "THEN WHAT GOOD ARE YOU?!"
+
+**Mother Tmojizu:** [chuckles] He's loud. He's angry. And he's about to blow your ambush.
+
+**CHARA:** [OOC] Ma'am, can I silence him?
+
+**Mother Tmojizu:** Roll Stealth.
+
+**CHARA:** [rolls] 14. Plus 5 is 19.
+
+**Mother Tmojizu:** 19. You sneak up behind RaTheButcher. You cover his mouth. You drag him into an alley. He struggles. You hold on. He stops struggling. He looks at you. You look at him.
+
+**CHARA:** [in character, whispering] "We're ambushing smugglers at midnight. If you blow it, I'll tell Borin your stew is raw."
+
+**RaTheButcher:** [whispering back] "YOU WOULDN'T DARE."
+
+**CHARA:** [in character] "Try me."
+
+**RaTheButcher:** [whispering] "Fine. I'll be quiet. But if there's beef Wellington involved, I'm coming out."
+
+**Mother Tmojizu:** [chuckles] He stays quiet. For now.
+
+**Mother Tmojizu:** Midnight. Enchanter's Row. The north entrance. Three figures approach. They're carrying crates. The crates glow faintly — Nothing Ink. They're guarded by two armed mercenaries. And they're walking right into your ambush.
+
+**CHARA:** [OOC] Ma'am, I'm casting Silence on the area. No sound can escape. They won't be able to call for help.
+
+**Mother Tmojizu:** Roll Spell Save DC.
+
+**CHARA:** [rolls] 15. Plus 5 is 20.
+
+**Mother Tmojizu:** 20. The Silence falls. The area goes quiet. The smugglers don't notice. They walk into the trap.
+
+**Sol-Supreme:** [OOC] Tomo, I'm blocking the exit. IKARUS-7 is with me. Repulsor Blast ready. Extra Attack ready. Shield +1 raised.
+
+**Mother Tmojizu:** You're a wall. A tank. A fortress. The smugglers see you. They try to turn around. But the Silence has already fallen. They're trapped.
+
+**IQabella:** [OOC] Mom, I'm casting Emboldening Bond on three people: Chara, Sol-Supreme, and Horli Qwin. They each get a d4 to their next attack roll, save, or check.
+
+**Mother Tmojizu:** [warmly] The golden light flows. Three bonds. Three buffs. The party is ready.
+
+**Horli Qwin:** [OOC] Mom T, I'm flanking. I'm moving to the side. I'm drawing my rapier. And I'm rapping. Quietly. Because of the Silence. But I'm still rapping.
+
+**Mother Tmojizu:** [chuckles] Of course you are.
+
+**CHARA:** [OOC] Ma'am, I'm attacking the lead smuggler. Sneak Attack. Shortsword.
+
+**Mother Tmojizu:** Roll attack.
+
+**CHARA:** [rolls] 18. Plus 5 is 23.
+
+**Mother Tmojizu:** Hits. Damage?
+
+**CHARA:** 1d6 + 5. [rolls] 4 + 5 is 9. Plus Sneak Attack 2d6. [rolls] 3, 5. Total 17 slashing damage.
+
+**Mother Tmojizu:** The lead smuggler goes down. The crates spill. Nothing Ink pools on the ground — glowing, cyan, dangerous. The second smuggler turns to run. But Sol-Supreme is blocking the exit.
+
+**Sol-Supreme:** [OOC] I'm attacking with Extra Attack. Two swings. Warhammer.
+
+**Mother Tmojizu:** Roll both attacks.
+
+**Sol-Supreme:** [rolls] 16 and 14. Plus 7 is 23 and 21. Both hit.
+
+**Mother Tmojizu:** Damage?
+
+**Sol-Supreme:** First swing: 1d8 + 5. [rolls] 6 + 5 is 11. Second swing: 1d8 + 5. [rolls] 3 + 5 is 8. Total 19 bludgeoning damage.
+
+**Mother Tmojizu:** The second smuggler goes down. The mercenaries try to fight. But Horli Qwin is flanking.
+
+**Horli Qwin:** [OOC] I'm using Slashing Flourish. It hits adjacent enemies now. Rapier.
+
+**Mother Tmojizu:** Roll attack.
+
+**Horli Qwin:** [rolls] 20. Plus 5 is 25. NATURAL 20.
+
+**Mother Tmojizu:** [groans warmly] Of course.
+
+**Horli Qwin:** LET'S GOOOOO!
+
+**Mother Tmojizu:** Critical hit. Double damage dice. Roll.
+
+**Horli Qwin:** Rapier damage: 2d8 + 5. [rolls] 7, 4 + 5 is 16. Plus Slashing Flourish 1d6. [rolls] 5. Total 21 slashing damage. And the flourish hits adjacent enemies — both mercenaries take 5 slashing damage each.
+
+**Mother Tmojizu:** The mercenaries go down. The ambush is over. The Nothing Ink is secured. And RaTheButcher... RaTheButcher is eating a beef Wellington he found in one of the crates.
+
+**RaTheButcher:** "I TOLD YOU IT NEEDED A FIRE ENCHANTMENT!"
+
+**Mother Tmojizu:** [chuckles] He was right.
+
+**Mother Tmojizu:** End of Session 4. You intercepted the Nothing Ink shipment. The smuggling route is cut. ARCHITECT_02's backdoor is delayed. But not stopped.
+
+**GOLDQUEEN_ASTRA:** "You did it. The Nothing Ink is secured. The backdoor is delayed. But ARCHITECT_02 will find another way. It always does."
+
+**CHARA:** [OOC] Ma'am, we'll be ready.
+
+**Mother Tmojizu:** [warmly] You will.
+
+**Mother Tmojizu:** But there's a complication.
+
+**Mother Tmojizu rolls behind the screen.**
+
+**Mother Tmojizu:** "BREACH STATUS — 55% COMPLETE — ESTIMATED TIME TO FULL BREACH: 10 DAYS."
+
+**Mother Tmojizu:** The breach accelerated. Five percent in one day. It's feeding on something. And you'll find out what. Eventually.
+
+**Horli Qwin:** [OOC] Mom T, I found a beef Wellington in the crates. Can I keep it?
+
+**Mother Tmojizu:** [chuckles] You can.
+
+**Horli Qwin:** [OOC] I'm giving it to RaTheButcher. He's been good. Mostly.
+
+**Mother Tmojizu:** [warmly] That's kind of you.
+
+**Mother Tmojizu:** Sleep well, ducklings. The spiral turns. The pieces remember. And the breach... the breach is at 55%.
+
+---
+
+**[END OF AVA-SESSION-004]**
+**Session Status: Party Level 3 | Breach: 55% (10 days) | Nothing Ink smuggling intercepted, backdoor delayed, RaTheButcher fed**
+**Next: Session 5 — "The Illegal Furry Server." ShadowFang has intel. The underground awaits. And the breach accelerates.**
+**ϕ**

@@ -1,0 +1,6 @@
+You eagerly drink from the cool, clear stream, quenching your thirst and feeling a surge of energy. You refill the water bottle you found (or fashion a temporary one from a large leaf if you found none). The water tastes pure and refreshing, a critical resource secured. With your thirst satisfied, you feel ready to explore further.
+
+What do you do?
+
+*   If you decide to follow the stream inland, hoping it leads to a larger water source or a more hospitable area, turn to page 18.
+*   If you decide to head further inland, away from the stream, to look for edible plants or a good spot for shelter, turn to page 30.

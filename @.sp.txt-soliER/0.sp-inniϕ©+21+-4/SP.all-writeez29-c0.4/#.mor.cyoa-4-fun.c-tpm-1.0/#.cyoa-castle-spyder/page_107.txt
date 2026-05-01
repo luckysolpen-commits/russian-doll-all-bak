@@ -1,0 +1,12 @@
+**Page 107: Reading the Ancient Journal**
+
+The journal's pages are brittle, but you manage to decipher some of the faded ink. It speaks of experiments with "bio-luminescent compounds" and "energy transference" conducted by a recluse scientist generations ago. The scientist mentions a "dormant core" hidden deep within the castle, pulsating with power.
+
+Hydration: 9/10 (Near water source)
+Silk Reserves: 8/10 (Plenty for exploration)
+Intel: 3/10 (Found journal entries about energy experiments and a hidden core)
+
+What do you do?
+
+*   If you try to find the "dormant core" mentioned in the journal, turn to page 125.
+*   If you decide to investigate the ticking device, turn to page 81.

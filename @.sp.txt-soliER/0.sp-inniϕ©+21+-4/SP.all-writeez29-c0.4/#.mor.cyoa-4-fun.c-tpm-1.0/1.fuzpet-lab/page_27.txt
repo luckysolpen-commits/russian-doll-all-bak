@@ -1,0 +1,6 @@
+You carefully open the waterproof bag and pull out the tattered journal. The pages are water-damaged, but some entries are still legible. It seems to be the log of another castaway, detailing their struggle for survival, encounters with strange phenomena, and mentions of a hidden faction on the island that keeps to itself. The last entry is frantic, speaking of being watched and a desperate need to escape.
+
+What do you do?
+
+*   If you decide to try and find this hidden faction mentioned in the journal, turn to page 47.
+*   If you dismiss the journal as the ramblings of a desperate soul and focus on immediate survival tasks, turn to page 48.

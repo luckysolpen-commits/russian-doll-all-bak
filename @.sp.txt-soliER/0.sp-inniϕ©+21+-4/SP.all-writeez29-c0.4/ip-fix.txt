@@ -1,0 +1,58 @@
+# IP VIOLATION FIX — "Harry Potter" / "Hogwarts" / "Chrono Cross"
+# Date: 2026-04-13
+# Status: ✅ COMPLETE — ALL 3 BOOKS CLEAN
+
+## SUMMARY
+Three books contained IP-violating references to "Harry Potter", "Hogwarts", and "Chrono Cross".
+All violations have been fixed in text files and corresponding audio has been regenerated.
+
+## REPLACEMENTS USED
+
+| Original | Replacement | Rationale |
+|----------|-------------|-----------|
+| Hogwarts | **The Time Academy** / **星学院** | Already used in-universe for Footrace |
+| Harry Potter | **a young apprentice at a magical academy** | Generic fantasy reference |
+| Harry Potter-esque | **an enchanted academy** / **a magical boarding school** | Describes the vibe without naming IP |
+| Chrono Cross | **Temporal Cross** / **时元 (Shí Yuán)** | In-universe system name |
+| Diagonal Alley | **Spiral Quarter** | Already noted as "fake — but similar vibe" |
+| JK Rowling | **a master storyteller** | Generic reference |
+
+## BOOK 11: FOOTRACE.FU]HUGE — 13 fixes, NO audio regeneration needed
+- `ffu++chinese-learning/ff2do.txt` — 7 refs fixed (title, HP comparison, Chrono Cross in session table)
+- `ffu++chinese-learning/1.ffu-ez_learnd&d+chem/mental-fu/mental-fu.txt` — 3 refs fixed (title, system name, quiz)
+- `ffu++chinese-learning/1.ffu-ez_learnd&d+chem/mental-fu/chrono-sub-elements.txt` — title + external URLs removed
+- `ffu++chinese-learning/ffuture-redo/ff-sesh01-welcome-time-academy.txt` — 1 ref fixed (line 436)
+
+## BOOK 12: centroid.u.ϕ]2xvsp]big]b1 — 15 fixes, 1 audio regenerated
+- `worldbuilding.txt` — "Harry Potter-esque" → "enchanted academy"
+- `themes.txt` — "similar to Harry Potter" → "classic magical boarding school tale"
+- `12.centroid.uni.txt` — 3 refs in AI prompt (lines 54, 68, 163)
+- `screenplay_outline.txt` — synopsis fixed + "Diagonal Alley" → "Spiral Quarter"
+- `xdb2/screenplay_outline.txt` — same synopsis fix
+- `cent-book.bigword]a0/12.centroid.uni]ϕFRZN📔️+.txt` — 3 refs in frozen draft
+- `cent-book.bigword]a0/screenplay_outline.txt` — synopsis fix
+- `4.d&party-centroid/session-2-centroid-tour.txt` — **AUDIO SOURCE** — "Hogwarts" + "Diagonal Alley" fixed
+- `4.d&party-centroid/worldbuilding-centroid.txt` — "Harry Potter-esque" fixed
+- `4.d&party-centroid/transition-plan.txt` — "Harry Potter-esque" fixed
+- **Audio regenerated:** `4.d&party-centroid/session-2-centroid-tour.mp3` (6.9 MB, 20 min)
+
+## FULLBIBLE-KIDS_BOOK — 21 fixes, 5 audio files regenerated
+- `session-6-moonshine.txt` — "chrono-cross" → "Temporal Cross"
+- `session-9-xo-files.txt` — "chrono-cross" → "Temporal Cross"
+- `session-11-centroid.txt` — "Harry Potter-esque" → "enchanted academy"
+- `session-12-extremophiles.txt` — 4× "Chrono-Cross" → "Temporal Cross"
+- `session-13-dnd-table.txt` — "Chrono-Cross" → "Temporal Cross"
+- `kids-bible-full-story.txt` — compiled master doc, all refs fixed (6 occurrences)
+- `kids-bible-plan.txt` — 2 refs fixed
+- `kids-bible-gameplay-plan.txt` — 1 ref fixed
+- `X20X.v4.txt` — 2 refs fixed ("chronocross/chronotrigger" → "temporal cross/temporal trigger")
+- **Audio regenerated (5 files):**
+  - `audio/kids-bible-session-6-moonshine.mp3` (3.9 MB)
+  - `audio/kids-bible-session-9-xo-files.mp3` (3.2 MB)
+  - `audio/kids-bible-session-11-centroid.mp3` (3.1 MB)
+  - `audio/kids-bible-session-12-extremophiles.mp3` (2.9 MB)
+  - `audio/kids-bible-session-13-dnd-table.mp3` (2.7 MB)
+- **Scripts fixed:** All 5 convert_session_*.py scripts updated to use dynamic `os.path.dirname(os.path.abspath(__file__))` paths
+
+## VERIFICATION
+grep across all 3 books: **ZERO matches** for "hogwarts", "harry potter", or "chrono cross"

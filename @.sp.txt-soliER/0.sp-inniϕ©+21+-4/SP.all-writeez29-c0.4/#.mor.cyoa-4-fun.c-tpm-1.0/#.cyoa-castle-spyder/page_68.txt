@@ -1,0 +1,12 @@
+**Page 68: Interpreting Energy Signatures**
+
+The energy signatures on the security map are fascinating. The East Wing lab shows a steady, high output, consistent with advanced research. The West Wing vault, however, pulses with intermittent, extreme energy spikes, suggesting a powerful, possibly volatile, device or experiment is housed within.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 6/10 (Interpreted energy signatures indicating lab research and a powerful vault experiment)
+
+What do you do?
+
+*   If you decide to investigate the West Wing vault, turn to page 87.
+*   If you decide to follow the spy as he leaves the office, turn to page 69.

@@ -1,0 +1,12 @@
+**Page 64: Investigating the Safe**
+
+You cautiously approach the now-open safe. It's empty, save for a faint metallic scent and a small, almost imperceptible etching on the back wall: a stylized spider symbol. It seems someone with knowledge of your kind, or perhaps a similar entity, has been here before.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 7/10 (Found a stylized spider symbol etched inside the safe)
+
+What do you do?
+
+*   If you try to decipher the meaning of the spider symbol, turn to page 94.
+*   If you decide to follow the spy as he exits the library, turn to page 42.

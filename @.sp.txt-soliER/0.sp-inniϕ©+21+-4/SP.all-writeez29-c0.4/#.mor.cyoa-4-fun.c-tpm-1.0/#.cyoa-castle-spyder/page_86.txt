@@ -1,0 +1,12 @@
+**Page 86: Locating Thorne in the West Wing**
+
+You track Aris Thorne through the secured West Wing. He bypasses several security checkpoints with seemingly authorized access, heading towards a heavily reinforced vault door. The hum of machinery is loudest here, suggesting the source of the high energy signatures seen on his display.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 7/10 (Thorne is heading towards a heavily reinforced vault)
+
+What do you do?
+
+*   If you attempt to follow Thorne into the vault, turn to page 109.
+*   If you decide to investigate the source of the humming machinery nearby, turn to page 87.

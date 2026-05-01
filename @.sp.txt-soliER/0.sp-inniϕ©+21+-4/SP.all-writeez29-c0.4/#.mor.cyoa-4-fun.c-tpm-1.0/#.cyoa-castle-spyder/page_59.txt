@@ -1,0 +1,12 @@
+**Page 59: Exploring Nova's Vehicle**
+
+You explore the interior of the private vehicle. It's luxurious, with plush leather seats and advanced, though discreet, technology integrated into the dashboard. You find a small, unmarked vial tucked into a side pocket, containing a shimmering, viscous liquid that faintly glows.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 8/10 (Found a vial of glowing liquid in Nova's vehicle)
+
+What do you do?
+
+*   If you cautiously investigate the glowing liquid, turn to page 53.
+*   If you decide to maintain your position and wait to see where you are taken, turn to page 60.

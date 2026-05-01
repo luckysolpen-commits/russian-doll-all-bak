@@ -1,0 +1,439 @@
+# TPMOJIO-SESH#2: "THE HUNGER"
+## TPMOJIO Classic — 4-Player Free-For-All (Continued)
+### Players: Chara, Sol-Supreme, IQabella, Horli Qwin | DM (Mother Tmojizu)
+
+---
+
+**Mother Tmojizu:** Welcome back, ducklings. The board remembers. The pieces remember. And the Nihilator... the Nihilator is still hungry.
+
+**Horli Qwin:** Mom T, I haven't stopped thinking about this session since it ended. My Nihilator has been staring at my ceiling for three days.
+
+**Mother Tmojizu:** [groans warmly] Of course it has. It's a Nihilator. It stares. It hungers. It waits.
+
+**CHARA:** [OOC] Ma'am, let me confirm the board state before we start. Lucky is at half HP, I owe IQabella a favor, my Sniper Clone is positioned on the Nihilator, and the Lawyer has four articles posted.
+
+**Mother Tmojizu:** Correct. Article One: no entry without trade or war. Article Two: sniping is legal and encouraged. Article Three: healing contract with IQabella. Article Four: soul-stealing requires a permit. The Lawyer is very proud of himself.
+
+**Sol-Supreme:** [OOC] Tomo, my Mech is a fortress, the Robot is defending, the Hacker has feelings, and I set a trap for the Nihilator.
+
+**Mother Tmojizu:** The trap is invisible. The Nihilator doesn't know it's there. Yet.
+
+**IQabella:** [OOC] Mom, Luna is at 60 soul, my army is well-fed and stress-free, and the kitchen is so holy that nearby pieces feel an urge to confess.
+
+**Mother Tmojizu:** [smiles] The kitchen is very holy. The board has noticed.
+
+**Horli Qwin:** My Race Car is at 68 HP, the Clown is honking at the void, Alpha Sinder is holding loyalty together, and the Nihilator is... you know.
+
+**Mother Tmojizu:** Hungry. Yes. Let's begin. **Round 4.** Same turn order: Horli, Chara, Sol-Supreme, IQabella. Day 1, Hour 14. Morning. The sun rises over a board that has already seen too much.
+
+---
+
+**Horli Qwin — Turn 4.**
+
+**Horli Qwin:** The Nihilator is one tile away from the trap Sol set. I don't know about the trap, but I know the Nihilator wants Luna. I'm moving it forward one more tile.
+
+**Mother Tmojizu:** [groans, covers her eyes] Horli. Duckling. Are you sure about this?
+
+**Horli Qwin:** Mom T, the Nihilator doesn't do "sure." It does "hungry."
+
+**Mother Tmojizu:** I knew you were going to say that. The Nihilator glides forward one tile. It steps on the trap.
+
+**Sol-Supreme:** [OOC] The trap triggers.
+
+**Mother Tmojizu:** The trap triggers. Electricity arcs across the tile. The Nihilator is shocked. Roll damage, Sol-Supreme.
+
+**Sol-Supreme:** Trap damage is 2d8 electricity. [rolls] 6, 4. That's 10 damage.
+
+**Mother Tmojizu:** The Nihilator takes 10 damage. It doesn't flinch. It doesn't scream. It just... absorbs the electricity. Its eyes glow slightly brighter. The trap didn't hurt it. It fed it.
+
+**Horli Qwin:** [OOC] Wait, the Nihilator absorbs electricity damage?
+
+**Mother Tmojizu:** The Nihilator absorbs everything. That's what it does. The trap just made it slightly more hungry.
+
+**Sol-Supreme:** [OOC] Tomo, I should have wired a NOT gate instead.
+
+**Mother Tmojizu:** [chuckles] You should have.
+
+**Horli Qwin:** Okay, the Nihilator is now within 2 tiles of Luna. I'm having it attempt to consume her soul again.
+
+**Mother Tmojizu:** Luna, roll soul resistance. You have advantage from the Maid/Nun's vigil. Roll twice, take the higher.
+
+**IQabella:** [rolls] 8 and 17. Plus 60 soul is 77. I take 77.
+
+**Mother Tmojizu:** The Nihilator's soul consumption is `soul: 85`. Roll for the Nihilator.
+
+**Horli Qwin:** [rolls] 12. Plus 85 is 97.
+
+**Mother Tmojizu:** 97 vs 77. The Nihilator wins. Again. It reaches for Luna's soul. Luna's moonlight flickers. She gasps. She looks at the Healer. The Healer is 5 tiles away. Too far.
+
+**IQabella:** [OOC] Mom, can Luna say something before she loses soul?
+
+**Mother Tmojizu:** She can.
+
+**IQabella:** [in character, as Luna] "You can take my soul, but you can't take my light. The moon remembers what the dark forgets."
+
+**Mother Tmojizu:** The Nihilator pauses. For one second — one single second — it hesitates. Then it consumes. Luna loses 15 soul points. Her `soul` drops from 60 to 45. She's weakening. Her moonlight dims.
+
+**Horli Qwin:** [OOC] I'm also having the Race Car move toward the Mech. I know it's dying, but I'm not gonna let it die without going out swinging.
+
+**Mother Tmojizu:** The Race Car revs its engine. It moves 10 tiles toward the Mech. It's now adjacent. The Mech looks down at it. The Race Car looks up at the Mech. Both are very large. Both are very stubborn. The Race Car is at 68 HP. The Mech is at full. This is not a fair fight.
+
+**Horli Qwin:** I'm having Alpha Sinder boost the Clown's loyalty. I don't want it dissolving into chaos yet.
+
+**Mother Tmojizu:** Alpha Sinder raises his hand. The Clown's loyalty increases by 10 points. The Clown honks. This time, it honks at something real. It honks at the Nihilator. The Nihilator ignores it. The Clown is offended.
+
+**End of Horli's turn. Day 1, Hour 15.**
+
+**Chara — Turn 4.**
+
+**CHARA:** The Nihilator just attacked Luna again. I'm having the Sniper Clone take a shot at the Nihilator.
+
+**Mother Tmojizu:** Roll attack.
+
+**CHARA:** Sniper Clone uses `pow: 45`. [rolls] 14. Plus 45 is 59.
+
+**Mother Tmojizu:** The Nihilator's AC is... [checks] 40. You hit by 19.
+
+**CHARA:** Damage: 2d10 + 45. [rolls] 7, 3 + 45. That's 55 damage.
+
+**Mother Tmojizu:** The Sniper Clone fires. The bullet streaks across the board and hits the Nihilator square in the chest. The Nihilator staggers. It looks at the Sniper Clone. It looks at Chara. It files this away. The Nihilator has a memory now. It remembers who shot it.
+
+**CHARA:** [OOC] Does it have a memory?
+
+**Mother Tmojizu:** It does now. The Nihilator doesn't forget. It doesn't forgive. It just hungers. But now it hungers for you, too.
+
+**CHARA:** Great. I'm also having the Lawyer draft Article Five: "Any piece that attacks another player's piece without a declaration of war is subject to a 100 Chimochio Buck fine."
+
+**Mother Tmojizu:** The Lawyer posts Article Five. The Nihilator reads it. The Nihilator does not have 100 Chimochio Bucks. The Nihilator does not have any Chimochio Bucks. The Nihilator does not care.
+
+**CHARA:** I'm moving Lucky forward 3 tiles — closer to the center. I want to be near Luna. If she falls, I want to be there.
+
+**Mother Tmojizu:** Lucky advances. He's now within 4 tiles of Luna. He looks at her. She looks at him. They nod. Two protagonists, one board, too many enemies.
+
+**CHARA:** I'm having the Banker check interest. How much have I accrued?
+
+**Mother Tmojizu:** 2% per turn, 14 turns. Starting money was 100. You've paid 50 to IQabella. Current balance: 50 + 14 turns of 2% on the remaining balance. Let me calculate... [calculates] 64 Chimochio Bucks.
+
+**CHARA:** Not bad. I'm reinvesting. Let it compound.
+
+**Mother Tmojizu:** The Banker smiles. He loves compound interest. He updates the ledger. The ledger glows faintly. The Banker doesn't notice.
+
+**End of Chara's turn. Day 1, Hour 16.**
+
+**Sol-Supreme — Turn 4.**
+
+**Sol-Supreme:** The Race Car is adjacent to my Mech. I'm having the Mech attack it.
+
+**Mother Tmojizu:** Roll attack.
+
+**Sol-Supreme:** [rolls] 16. Plus 80 is 96.
+
+**Mother Tmojizu:** The Race Car's AC is 28. You hit by 68.
+
+**Sol-Supreme:** Damage: 3d12 + 80. [rolls] 9, 11, 5 + 80. That's 105 damage.
+
+**Mother Tmojizu:** The Race Car has 68 HP. 105 damage is... more than enough. The Mech brings its fist down on the Race Car. The Race Car crumples. It flips. It explodes. The explosion sends shrapnel across three tiles. The Race Car is dead.
+
+**Horli Qwin:** [OOC] My car. My beautiful car.
+
+**Mother Tmojizu:** [sighs warmly] The board remembers the Race Car. It was fast. It was loud. It was here for a good time, not a long time.
+
+**Horli Qwin:** [OOC] Mom T, can I have a moment of silence for the Race Car?
+
+**Mother Tmojizu:** You can have a moment of noise. The Clown honks. The Nihilator doesn't care. The board remembers.
+
+**Sol-Supreme:** I'm having the Robot move to a new position — between the Mech and the Nihilator. I want to create a defensive line.
+
+**Mother Tmojizu:** The Robot advances. It positions itself between the Mech and the Nihilator. It raises its arms. It's ready. The Nihilator looks at the Robot. The Robot looks at the Nihilator. Neither blinks. The Robot doesn't have eyelids.
+
+**Sol-Supreme:** I'm having the Hacker attempt to breach Chara's LyfeBook. I want to know what the Lawyer is drafting next.
+
+**Mother Tmojizu:** Roll Intelligence vs Chara's LyfeBook security.
+
+**Sol-Supreme:** [rolls] 18. Plus 4 is 22.
+
+**Mother Tmojizu:** Chara, what's your LyfeBook security?
+
+**CHARA:** I didn't set any up. I was too busy drafting articles.
+
+**Mother Tmojizu:** The Hacker walks right in. She reads everything. Article One through Five. The Banker's ledger. The Sniper Clone's position logs. The Hacker is impressed. "This Lawyer is thorough," she says. "I respect that."
+
+**Sol-Supreme:** [OOC] Is my Hacker still emotional?
+
+**Mother Tmojizu:** Your Hacker is developing a personality. She's starting to have opinions about things. This is either beautiful or terrifying.
+
+**End of Sol-Supreme's turn. Day 1, Hour 17. Afternoon.**
+
+**IQabella — Turn 4.**
+
+**IQabella:** Luna is at 45 soul. She's weakening. I'm having the Healer cast soul-restoration again.
+
+**Mother Tmojizu:** Roll 1d6.
+
+**IQabella:** [rolls] 5. Luna's soul goes from 45 to 50.
+
+**Mother Tmojizu:** Luna feels the Healer's light. Her moonlight brightens slightly. Not enough. But something. She looks at the Healer. "Thank you," she says. "The moon is patient."
+
+**IQabella:** I'm having the Chef prepare lunch. It's afternoon. My army needs to stay fed.
+
+**Mother Tmojizu:** The Chef prepares a midday stew with holy vegetables and moon-broth. The Maid/Nun blesses it. The food provides +3 energy and +2 morale. Your army is so well-fed that the board itself is starting to look hungry.
+
+**IQabella:** I'm moving Luna forward 1 tile — just one. I'm keeping her in the center. I'm not aggressive. I'm present.
+
+**Mother Tmojizu:** Luna advances one tile. She's now in the exact center of the 16x16 board. The board notices. The center tile glows faintly with moonlight. The Nihilator notices. The Nihilator is drawn to it. The Nihilator is drawn to everything.
+
+**IQabella:** And I'm having the Maid/Nun extend the vigil to cover a wider area. I want the candlelight to reach as far as possible.
+
+**Mother Tmojizu:** The Maid/Nun lights more candles. The vigil expands. The candlelight reaches 5 tiles in every direction. Within the light, pieces feel calmer. Stress drops. Even the Nihilator, at the edge of the light, feels... something. It doesn't know what it is. It doesn't like it. It moves one tile away from the light.
+
+**Horli Qwin:** [OOC] Mom T, my Nihilator just moved away from a candle. That's the most character development it's had all game.
+
+**Mother Tmojizu:** [smiles] The candle changed it. Not much. But enough.
+
+**End of IQabella's turn. Day 1, Hour 18. Evening approaches.**
+
+---
+
+**Mother Tmojizu:** End of Round 4. The board has shifted again:
+
+- **Horli's** Race Car is dead. The Nihilator is wounded but hungrier. The Clown is offended. Alpha Sinder is holding the line.
+- **Chara's** Lucky is near Luna. The Sniper Clone hit the Nihilator. The Lawyer has five articles. The Banker has 64 Bucks and growing.
+- **Sol-Supreme's** Mech destroyed the Race Car. The Robot is defending. The Hacker has opinions. The trap fed the Nihilator.
+- **IQabella's** Luna is at 50 soul, in the center of the board, surrounded by candlelight. The army is well-fed, stress-free, and holy.
+
+**Round 5 begins. Same turn order. Day 1, Hour 19. Evening.**
+
+**Horli Qwin — Turn 5.**
+
+**Horli Qwin:** The Race Car is dead. I need to pivot. I'm moving the Nihilator toward Chara's Sniper Clone. If it's gonna hunger, it's gonna hunger for the piece that shot it.
+
+**Mother Tmojizu:** [groans] The Nihilator turns away from Luna. It glides toward the Sniper Clone. The tiles beneath it go grey. The Sniper Clone notices. It adjusts its scope. It's seen this before.
+
+**Horli Qwin:** I'm having Alpha Sinder boost the Clown's loyalty again. I don't want it dissolving. And I'm having the Clown move toward the center — into the candlelight.
+
+**Mother Tmojizu:** The Clown honks and waddles into the candlelight. It enters the Maid/Nun's vigil. The candlelight washes over it. The Clown stops honking. For the first time in the game, the Clown is quiet. It looks at the candles. It looks at the Maid/Nun. It looks at Luna. It sits down.
+
+**IQabella:** [OOC] Mom, is the Clown... okay?
+
+**Mother Tmojizu:** The Clown is experiencing peace. It doesn't know what to do with it. It's sitting very still. This is unprecedented.
+
+**Horli Qwin:** [OOC] Mom T, can the Clown stay in the candlelight? I feel like this is a moment.
+
+**Mother Tmojizu:** The Clown can stay in the candlelight. The candlelight welcomes it. The candlelight welcomes everything.
+
+**End of Horli's turn. Day 1, Hour 20. Evening deepens.**
+
+**Chara — Turn 5.**
+
+**CHARA:** The Nihilator is coming for my Sniper Clone. I'm moving the Sniper Clone back 3 tiles — maintaining range. I'm not letting it get consumed.
+
+**Mother Tmojizu:** The Sniper Clone relocates. It finds a new hill. It sets up. It can still see the Nihilator. The Nihilator can still feel it being watched. The cycle continues.
+
+**CHARA:** I'm having the Lawyer draft Article Six: "The Nihilator is hereby declared a board hazard. All players are authorized to use lethal force against it without crime penalty."
+
+**Mother Tmojizu:** The Lawyer posts Article Six. The board accepts it. The Nihilator reads it. The Nihilator is... amused. It's never been authorized to do anything before. It's always just done it. But the authorization is nice. It feels official.
+
+**CHARA:** I'm moving Lucky closer to Luna. I want to be within 2 tiles of her. If the Nihilator comes back, I want to be between it and her.
+
+**Mother Tmojizu:** Lucky advances. He's now within 2 tiles of Luna. He looks at her. She looks at him. He draws his Tsots. She nods. Two protagonists, one board, one Nihilator. The math is not in their favor.
+
+**CHARA:** I'm having the Banker check interest again.
+
+**Mother Tmojizu:** 64 Bucks + 2% = 65.28. The Banker rounds down to 65. He's conservative.
+
+**End of Chara's turn. Day 1, Hour 21. Night approaches.**
+
+**Sol-Supreme — Turn 5.**
+
+**Sol-Supreme:** The Nihilator is moving toward Chara's Sniper Clone. I'm having the Hacker wire a new trap — this time on the tile between the Nihilator and the Sniper Clone. If the Nihilator steps on it, it gets shocked again.
+
+**Mother Tmojizu:** [groans warmly] Sol-Supreme. Duckling. The last trap fed it.
+
+**Sol-Supreme:** [OOC] I know. But this time I'm wiring an XOR gate. It only triggers if the Nihilator steps on it AND the Sniper Clone is within range. It's a conditional trap.
+
+**Mother Tmojizu:** Roll Intelligence.
+
+**Sol-Supreme:** [rolls] 20. Plus 4 is 24.
+
+**Mother Tmojizu:** NATURAL 20. The XOR gate is flawless. It's elegant. It's beautiful. The Hacker looks at her work and feels something she's never felt before: pride.
+
+**Sol-Supreme:** [OOC] Tomo, my Hacker is proud.
+
+**Mother Tmojizu:** [smiles] Your Hacker is proud. Write that one down.
+
+**Sol-Supreme:** I'm having the Mech move forward 3 tiles — toward the center. I want to establish presence. The Robot follows.
+
+**Mother Tmojizu:** The Mech lumbers forward. The board cracks. The Robot follows. They're now in the center of the board, near Luna. The Mech looks at Luna. Luna looks at the Mech. The Mech is very large. Luna is very small. The Mech steps carefully around the candlelight.
+
+**End of Sol-Supreme's turn. Day 1, Hour 22. Night falls.**
+
+**IQabella — Turn 5.**
+
+**IQabella:** It's night. My pieces are 15% more tired. I'm having the Chef brew coffee again — no sleep needed.
+
+**Mother Tmojizu:** The Chef brews coffee. The coffee is holy. The coffee is blessed. The coffee is so good that the board itself wants a cup. Your pieces stay awake through the night.
+
+**IQabella:** I'm having the Healer cast stress-reduction on the whole army. And I'm extending it to Lucky too — he's within range of the vigil.
+
+**Mother Tmojizu:** The Healer breathes. Golden light. Stress drops. Lucky feels it. He looks at the Healer. He looks at IQabella. He nods. He doesn't say thank you. He doesn't need to. The nod is enough.
+
+**IQabella:** I'm not moving Luna. She's in the center. She's glowing. She's watching. She's enough.
+
+**Mother Tmojizu:** Luna stands in the center of the board. The moon is high. Her light is dim but steady. She looks at the Nihilator. She looks at Lucky. She looks at the Mech. She looks at the Clown, sitting quietly in the candlelight. She sees everything. She says nothing. She doesn't need to.
+
+**End of IQabella's turn. Day 1, Hour 23. Deep night. One hour until dawn.**
+
+---
+
+**Mother Tmojizu:** End of Round 5. The board is a chess game played by gods:
+
+- **Horli's** Nihilator is hunting the Sniper Clone. The Clown is sitting quietly in candlelight, experiencing peace. Alpha Sinder is holding the line. The Race Car is a memory.
+- **Chara's** Lucky is protecting Luna. The Sniper Clone is relocating. The Lawyer has six articles. The Banker has 65 Bucks.
+- **Sol-Supreme's** Mech is in the center. The Robot is defending. The Hacker is proud. The XOR trap is flawless.
+- **IQabella's** Luna is in the center, glowing. The army is well-fed, stress-free, holy. The candlelight reaches 5 tiles. The Clown is inside it.
+
+**Round 6 begins. Same turn order. Day 1, Hour 24. Dawn of Day 2.**
+
+**Horli Qwin — Turn 6.**
+
+**Horli Qwin:** The Nihilator is close to the Sniper Clone. I'm moving it forward 5 tiles. It's now within range.
+
+**Mother Tmojizu:** The Nihilator glides forward. The tiles beneath it go grey. It's now within 3 tiles of the Sniper Clone. The Sniper Clone adjusts its scope. It's seen this before. It won't miss.
+
+**Horli Qwin:** I'm having the Nihilator attempt to consume the Sniper Clone's soul.
+
+**Mother Tmojizu:** The Sniper Clone, roll soul resistance.
+
+**CHARA:** Sniper Clone's soul is... [checks] `soul: 23`. [rolls] 5. Plus 23 is 28.
+
+**Mother Tmojizu:** The Nihilator's soul consumption is `soul: 85`. Roll for the Nihilator.
+
+**Horli Qwin:** [rolls] 18. Plus 85 is 103.
+
+**Mother Tmojizu:** 103 vs 28. The Nihilator wins. Easily. It reaches for the Sniper Clone's soul. The Sniper Clone fires its rifle — a final shot, a reflex, a last act of defiance. The bullet hits the Nihilator. It doesn't matter. The Nihilator consumes.
+
+The Sniper Clone's soul is consumed. The Clone piece goes still. Its eyes go empty. It drops its rifle. It stands. It doesn't move. It doesn't breathe. It's a shell. A vegetative state. The Nihilator's eyes glow brighter. It's fed. But it's still hungry. It's always hungry.
+
+**CHARA:** [OOC] My Sniper Clone is gone.
+
+**Mother Tmojizu:** [sighs warmly] The board remembers the Sniper Clone. It was accurate. It was patient. It was on a hill. And then it wasn't.
+
+**Horli Qwin:** [OOC] Mom T, that was... intense.
+
+**Mother Tmojizu:** The Nihilator does intensity. It does nothing else.
+
+**Horli Qwin:** I'm having Alpha Sinder boost the Clown's loyalty. And I'm having the Clown... stay in the candlelight. I'm not moving it. It's happy there.
+
+**Mother Tmojizu:** Alpha Sinder boosts the Clown's loyalty. The Clown doesn't notice. It's sitting in the candlelight, experiencing peace. It's the most peaceful Clown in TPMOJIO history. The board notices. The board is moved.
+
+**End of Horli's turn. Day 2, Hour 1. Dawn.**
+
+**Chara — Turn 6.**
+
+**CHARA:** My Sniper Clone is gone. I'm down to three pieces: Lucky, the Lawyer, and the Banker. I need to adapt. I'm moving Lucky between the Nihilator and Luna. I'm making myself a shield.
+
+**Mother Tmojizu:** Lucky steps forward. He's between the Nihilator and Luna. He draws his Tsots. He looks at the Nihilator. The Nihilator looks at him. Two hungers, one board.
+
+**CHARA:** I'm having the Lawyer draft Article Seven: "If a piece's soul is consumed, the consuming piece is subject to immediate execution by the Lawyer."
+
+**Mother Tmojizu:** The Lawyer posts Article Seven. The Nihilator reads it. The Nihilator is... still amused. It's consumed souls before. It's never been executed. It's curious to see if the Lawyer can follow through.
+
+**CHARA:** I'm having the Banker transfer 20 Chimochio Bucks to Sol-Supreme.
+
+**Mother Tmojizu:** [surprised] Why?
+
+**CHARA:** Because Sol-Supreme's Mech is the only thing standing between the Nihilator and the rest of the board. I'm investing in the Mech.
+
+**Sol-Supreme:** [OOC] Tomo, I'm accepting the bribe.
+
+**Mother Tmojizu:** [chuckles] The Banker processes the transfer. Sol-Supreme's Hacker receives the money. She looks at it. She looks at Chara. She nods. The Hacker is learning about diplomacy.
+
+**End of Chara's turn. Day 2, Hour 2.**
+
+**Sol-Supreme — Turn 6.**
+
+**Sol-Supreme:** The Nihilator just consumed the Sniper Clone. It's fed but still hungry. I'm having the Mech attack the Nihilator.
+
+**Mother Tmojizu:** Roll attack.
+
+**Sol-Supreme:** [rolls] 15. Plus 80 is 95.
+
+**Mother Tmojizu:** The Nihilator's AC is 40. You hit by 55.
+
+**Sol-Supreme:** Damage: 3d12 + 80. [rolls] 8, 10, 6 + 80. That's 104 damage.
+
+**Mother Tmojizu:** The Mech brings its fist down on the Nihilator. The Nihilator is launched backward. It crashes through two tiles. It's damaged — badly. But it doesn't die. It can't die. It's a Nihilator. It absorbs. It endures. It hungers.
+
+The Nihilator's HP drops to 30%. It's wounded. But it's still standing. It looks at the Mech. It files this away. The Nihilator has a memory now. It remembers the Mech.
+
+**Sol-Supreme:** I'm having the Robot move to block the Nihilator's path to Luna. It's now between the Nihilator and the center.
+
+**Mother Tmojizu:** The Robot advances. It positions itself between the Nihilator and Luna. It raises its arms. It's ready. The Nihilator looks at the Robot. The Robot looks at the Nihilator. Neither blinks. The Robot doesn't have eyelids. The Nihilator doesn't have eyes. They understand each other.
+
+**End of Sol-Supreme's turn. Day 2, Hour 3.**
+
+**IQabella — Turn 6.**
+
+**IQabella:** The Nihilator is wounded. The Sniper Clone is gone. Luna is at 50 soul. I'm having the Healer cast soul-restoration on Luna again.
+
+**Mother Tmojizu:** Roll 1d6.
+
+**IQabella:** [rolls] 6. Luna's soul goes from 50 to 56.
+
+**Mother Tmojizu:** Luna feels the Healer's light. Her moonlight brightens. She looks at the Healer. "The moon is patient," she says. "And so are you."
+
+**IQabella:** I'm having the Chef prepare breakfast. It's dawn. My army needs to start Day 2 right.
+
+**Mother Tmojizu:** The Chef prepares a sunrise omelet with holy herbs and moon-broth. The Maid/Nun blesses it. The food provides +3 energy and +2 morale. Your army is so well-fed that the board is starting to look like a restaurant.
+
+**IQabella:** I'm not moving Luna. She's in the center. She's protected by Lucky, the Robot, and the Mech. She's surrounded by candlelight. She's enough.
+
+**Mother Tmojizu:** Luna stands in the center. The sun rises. Her moonlight fades, but her presence remains. She looks at the Nihilator. She looks at Lucky. She looks at the Mech. She looks at the Clown, still sitting quietly in the candlelight. She sees everything. She says nothing. She doesn't need to.
+
+**End of IQabella's turn. Day 2, Hour 4. Morning.**
+
+---
+
+**Mother Tmojizu:** End of Round 6. The board has changed forever:
+
+- **Horli's** Nihilator consumed the Sniper Clone. It's wounded (30% HP) but still hungry. The Clown is sitting in candlelight, experiencing peace. Alpha Sinder is holding the line.
+- **Chara's** Sniper Clone is gone. Lucky is shielding Luna. The Lawyer has seven articles. The Banker has 45 Bucks (65 - 20 to Sol).
+- **Sol-Supreme's** Mech wounded the Nihilator. The Robot is blocking the Nihilator's path to Luna. The Hacker is proud and learning diplomacy.
+- **IQabella's** Luna is at 56 soul, in the center, surrounded by protectors. The army is well-fed, stress-free, holy. The candlelight reaches the Clown.
+
+**Mother Tmojizu:** [smiles] This is TPMOJIO, ducklings. Every piece has a story. Every story is a game. Every game is a world. And every world is a file.
+
+**Horli Qwin:** [OOC] Mom T, my Nihilator is wounded, my car is dead, my Clown is in therapy, and I've never been more invested in a board game.
+
+**Mother Tmojizu:** [chuckles] The Nihilator is wounded. The car is dead. The Clown is in therapy. And the board remembers everything.
+
+**CHARA:** [OOC] Ma'am, I'm down to three pieces. But I'm not out. The Lawyer has seven articles. The Banker is compounding. And Lucky is between the Nihilator and Luna. I'm not done.
+
+**Mother Tmojizu:** No. You're not.
+
+**Sol-Supreme:** [OOC] Tomo, my Mech is a fortress, my Robot is defending, my Hacker has feelings, and I just took a bribe from Chara. This is the most TPMOJIO game I've ever played.
+
+**Mother Tmojizu:** [smiles] It is.
+
+**IQabella:** [OOC] Mom, my army is wholesome, Luna is glowing, the Clown is at peace, and the kitchen is so holy that the board wants to confess. I'm not winning, but I'm not losing either. I'm... present.
+
+**Mother Tmojizu:** [warmly] Presence is its own victory, duckling.
+
+**Mother Tmojizu:** Round 7 begins. The Nihilator is wounded. The Clown is at peace. The Mech is a fortress. Lucky is a shield. Luna is a light. And the board... the board remembers.
+
+**Roll for initiative.**
+
+**Horli Qwin:** [rolls] 20. Plus 3 is 23. NATURAL 20.
+
+**Mother Tmojizu:** [groans warmly] Of course. The Nihilator goes first.
+
+**Horli Qwin:** LET'S GOOOOO!
+
+**The spiral turns. The board resets. The pieces remember.**
+
+---
+
+**[END OF TPMOJIO-SESH#2]**
+**Session Status: Round 6 complete, Round 7 beginning | Board: 16x16 Classic | Mode: 4-Player Free-For-All**
+**Next: Round 7 — The Nihilator hungers. The Clown is at peace. The Mech waits. Lucky shields. Luna glows. The Lawyer legislates. The Chef cooks. The board remembers.**
+**ϕ**

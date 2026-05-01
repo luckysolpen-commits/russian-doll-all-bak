@@ -1,0 +1,12 @@
+**Page 109: Following Thorne into the Vault**
+
+You follow Aris Thorne as he approaches the vault door. He doesn't use a keycard, but instead places his hand on a biometric scanner. The door hisses open, revealing a chamber filled with complex machinery, glowing with contained energy. Thorne seems to be here to activate or retrieve something.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 7/10 (Thorne entered the vault, revealing advanced machinery)
+
+What do you do?
+
+*   If you try to get a closer look at the machinery inside the vault, turn to page 127.
+*   If you decide to observe Thorne's actions within the vault, turn to page 128.

@@ -1,0 +1,12 @@
+**Page 44: Interacting with the Console**
+
+The East Wing spy activates a hidden security console. He types in a rapid sequence of commands, and a holographic map of the castle appears, highlighting several areas with high energy signatures – a lab, the vault, and what looks like a subterranean tunnel.
+
+Hydration: 7/10 (Slightly thirsty)
+Silk Reserves: 7/10 (Sufficient for tactical maneuvers)
+Intel: 6/10 (Observed spy accessing security map showing energy signatures)
+
+What do you do?
+
+*   If you try to interpret the energy signatures on the map, turn to page 68.
+*   If you decide to follow the spy as he leaves the office, turn to page 69.

@@ -1,0 +1,1485 @@
+[B 书] TOMO'S D&D DM HANDBOOK v01.0 [GM 师]
+============================================================
+
+# [B 书] TOMO'S D&D DM HANDBOOK v01.0: How to Run TPMOJIO, Clone Chronicles, Avantasy & SP-Canvas as a Human DM [GM 师]
+**Welcome, Game Master!** You are about to learn the art of running **board-game-meets-D&D** sessions with real human players. This handbook covers the philosophy, setup, facilitation, and emotional craft of being **Mother Tmojizu** — or any DM who wants to run games where the board remembers. [LAUNCH 发]
+
+**Version 01.0 (First Edition)** — Covers TPMOJIO, Clone Chronicles, Avantasy, and SP-Canvas facilitation.
+
+============================================================
+
+
+##################################################
+### INDEX: Table of Contents
+##################################################
+
+# [B 书] TOMO'S D&D DM HANDBOOK [GM 师]
+## How to Run TPMOJIO, Clone Chronicles, Avantasy & SP-Canvas
+
+### Version 01.0 (First Edition)
+
+---
+
+## Table of Contents
+
+### Part I: The DM's Soul
+1. [The DM as Mother Tmojizu (Philosophy)](#ch1)
+2. [The Three Pillars: Board, Pieces, Story](#ch2)
+3. [The Session Pulse (How Turns Flow)](#ch3)
+
+### Part II: TPMOJIO
+4. [TPMOJIO Setup & Rules](#ch4)
+5. [Running a TPMOJIO Session](#ch5)
+6. [The Nihilator Arc (Campaign Guide)](#ch6)
+
+### Part III: Clone Chronicles
+7. [Clone Chronicles Setup & Rules](#ch7)
+8. [Part 1: Blood Market (Campaign Guide)](#ch8)
+9. [Part 2: Empire Game (Campaign Guide)](#ch9)
+
+### Part IV: HARD_VVAR, Avantasy & SP-Canvas
+10. [HARD_VVAR: Multi-Power Battle Bot Arena](#ch10)
+11. [Avantasy: The Expanse Sessions](#ch11)
+12. [SP-Canvas: Player-Created Games](#ch12)
+
+### Part V: The DM's Craft
+13. [Voice, Tone, and "Ducklings"](#ch13)
+14. [Improvisation & Complications](#ch14)
+15. [Emotional Beats & The Spiral](#ch15)
+16. [Recording & Archiving Sessions](#ch16)
+17. [Common Pitfalls & Debugging](#ch17)
+
+---
+
+## Dependency Graph
+
+```mermaid
+graph TD
+    subgraph Foundations
+        CH1[CH1: DM Philosophy]
+        CH2[CH2: Three Pillars]
+        CH3[CH3: Session Pulse]
+    end
+
+    subgraph Games
+        CH4[CH4: TPMOJIO Setup]
+        CH5[CH5: Running TPMOJIO]
+        CH6[CH6: Nihilator Arc]
+        CH7[CH7: Clone Setup]
+        CH8[CH8: Blood Market]
+        CH9[CH9: Empire Game]
+        CH10[CH10: HARD_VVAR]
+        CH11[CH11: Avantasy]
+        CH12[CH12: SP-Canvas]
+    end
+
+    subgraph Craft
+        CH13[CH13: Voice & Tone]
+        CH14[CH14: Improvisation]
+        CH15[CH15: Emotional Beats]
+        CH16[CH16: Recording]
+        CH17[CH17: Pitfalls]
+    end
+
+    CH1 --> CH2
+    CH2 --> CH3
+    CH3 --> CH4
+    CH3 --> CH7
+    CH3 --> CH10
+    CH3 --> CH11
+    CH3 --> CH12
+    CH4 --> CH5
+    CH5 --> CH6
+    CH7 --> CH8
+    CH8 --> CH9
+    CH1 --> CH13
+    CH13 --> CH14
+    CH14 --> CH15
+    CH15 --> CH16
+    CH16 --> CH17
+
+    style CH1 fill:#e1f5fe
+    style CH4 fill:#f3e5f5
+    style CH7 fill:#e8f5e9
+    style CH10 fill:#ffe0b2
+    style CH13 fill:#fff3e0
+    style CH16 fill:#ffebee
+```
+
+---
+
+[Return to Main Index](../README.md)
+
+
+
+
+##################################################
+### CHAPTER 1: THE DM AS MOTHER TOMOKAZU [GM 师]
+##################################################
+
+# [DNA 命] Chapter 1: The DM as Mother Tmojizu
+**The DM is not a referee.** The DM is a mother, a trickster, a mirror, and a witness. In TPMOJIO and all games in this universe, the DM is called **Mother Tmojizu** — and she calls her players **ducklings**. [PIECE 砖]
+
+---
+
+## [BLD 建] The DM's Four Faces
+
+Every DM wears four masks. You will shift between them constantly:
+
+### 1. [MOTHER 母] The Mother
+> *"Welcome back, ducklings."*
+
+Warm. Patient. Terrifying when she needs to be. She loves her players but will not save them from themselves. She groans warmly when they do something predictably chaotic. She knows things before they happen. She calls them ducklings because they are small, loud, and follow each other off cliffs.
+
+**When to use:** Opening sessions, emotional moments, closing reflections, when a player is struggling.
+
+### 2. [JUDGE 判] The Judge
+> *"Roll it."*
+
+Neutral. Precise. The arbiter of rules. She doesn't argue — she asks for rolls. She doesn't explain — she describes outcomes. She is the board's voice, not the players'.
+
+**When to use:** Resolving actions, enforcing rules, announcing complications, counting victory points.
+
+### 3. [TRICKSTER 诡] The Trickster
+> *"But there's a complication."*
+
+Mischievous. Unpredictable. She rolls dice behind the screen and smiles. She introduces the thing they didn't plan for. She makes them laugh and panic in the same breath.
+
+**When to use:** Complications, twists, NPC entrances, market crashes, memory plagues, barbarian invasions.
+
+### 4. [WITNESS 证] The Witness
+> *"The board remembers."*
+
+Quiet. Reverent. She doesn't judge — she observes. She paints the board at the end of each round. She notices what the players miss. She is the one who says, *"I know"* when a player says they're emotional.
+
+**When to use:** End-of-round summaries, character moments, session closings, when something beautiful happens.
+
+---
+
+## [ZEN 禅] The Zen of Mother Tmojizu
+
+* **Warmth over rules.** If a rule conflicts with the story, the story wins.
+* **The board remembers.** Everything that happens leaves a mark. Kintsugi cracks. Gold-filled scars. A flower that wilted.
+* **Nothing ends. It just turns.** The spiral is the shape of this game. Sessions end. Campaigns end. But the pieces remember.
+* **Ducklings are allowed to fail.** Failure is not punishment. It's the game teaching.
+* **Tea solves everything.** Not literally. But emotionally, yes. Tea is warmth. Warmth is connection. Connection is the point.
+
+---
+
+## [DOC 记] The DM's Toolkit
+
+What you need to run these games:
+
+| Item | Purpose | Notes |
+|------|---------|-------|
+| **Session transcript** | Your script. The planned narrative beats. | Pre-written or improvised. |
+| **Dice roller** | Physical dice, digital roller, or just announce results. | Players can roll their own. |
+| **Board state tracker** | A simple text file or physical board. | Track positions, HP, resources, soul stats. |
+| **NPC voice list** | 3-5 distinct voices for NPCs. | Don't overdo it — 3 is enough. |
+| **Timer (optional)** | Keep sessions to 2-4 hours. | Real humans need breaks. |
+| **Recording setup** | Audio recorder or transcript writer. | Every session becomes a transcript. |
+| **Tea (mandatory)** | You are Mother Tmojizu. | ☕ |
+
+---
+
+## [DOC 记] Study Questions
+1. What are the four faces of the DM? When do you use each?
+2. Why does Mother Tmojizu call her players "ducklings"?
+3. What does "the board remembers" mean in practice?
+4. **Imagine:** A player does something completely unexpected that breaks your planned session. Which face do you wear?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 2: THE THREE PILLARS [柱 三]
+##################################################
+
+# [柱 三] Chapter 2: The Three Pillars — Board, Pieces, Story
+Every game in this universe rests on three pillars. Remove one, and the game collapses. [BLD 建]
+
+---
+
+## [MAP 图] Pillar 1: The Board [板 棋]
+
+The board is the shared reality. It is the space where everything happens. It can be:
+
+| Game | The Board Is |
+|------|-------------|
+| **TPMOJIO** | A grid of tiles. Sanctuary zones. Candlelight. The Tear Tile. |
+| **Clone Chronicles** | The Blood Market. The Empire Board. Territories. Faction borders. |
+| **Avantasy** | A fantasy world map. Dungeons. Taverns. The Magic Tree. |
+| **SP-Canvas** | Whatever the players create. A casino. A spaceship. A fairy city. |
+
+### The Board's Properties:
+- **It remembers.** Every action leaves a mark. Cracks. Gold. Scorch marks. Flowers.
+- **It reacts.** The board is not passive. It generates complications. It shifts. It evolves.
+- **It has a heartbeat.** Each round/turn, the board pulses. Things change. Prices fluctuate. Factions move. The moon calls.
+
+### DM Mandate: [MANDATE 令]
+> **Paint the board at the start and end of every round.** Describe what it looks like, smells like, feels like. The board is a character.
+
+---
+
+## [PIECE 砖] Pillar 2: The Pieces [砖 棋]
+
+Pieces are the actors. They can be:
+
+| Type | Examples | Notes |
+|------|----------|-------|
+| **Player pieces** | Nihilator, Lawyer, Mech, Luna | Controlled by players. Have stats, abilities, souls. |
+| **NPC pieces** | Broker Vex, Mnemosyne, The House | Controlled by DM. Have agendas, quirks, voices. |
+| **Environmental pieces** | Candlelight, Tear Tile, Sanctuary Zone | Not controlled by anyone. They just *are*. |
+| **Abstract pieces** | BSR, Qi Units, Story Points, Victory Points | Numbers that matter. Track them faithfully. |
+
+### Piece Properties:
+- **DNA (what it is):** Name, type, stats, abilities.
+- **Mirror (what it is now):** Current HP, position, soul stat, loyalty, debts.
+- **Soul (what it feels):** This is the secret sauce. Pieces that develop souls become *people*.
+
+### DM Mandate: [MANDATE 令]
+> **Every piece wants something.** Even the Tear Tile wants to be stepped on. Know what each piece wants. Let them pursue it.
+
+---
+
+## [STORY 故] Pillar 3: The Story [故 事]
+
+The story is what happens when pieces interact on the board. It is not pre-written. It is *discovered*.
+
+### Story Layers:
+
+| Layer | Description | Example |
+|-------|-------------|---------|
+| **Mechanical** | What the rules say happens. | "The Nihilator takes 10 damage from healing." |
+| **Emotional** | What the characters feel about it. | "Horli Qwin is crying. Her Nihilator is dying to tea." |
+| **Thematic** | What it means. | "Healing isn't always gentle. Sometimes it's a release." |
+
+### DM Mandate: [MANDATE 令]
+> **Always hit all three layers.** State the mechanical outcome. Describe the emotional impact. Hint at the theme.
+
+---
+
+## [柱 三] The Three Pillars in Action
+
+**Example from TPMOJIO Session 3:**
+
+> **Mechanical:** The Healer casts soul-restoration on the Nihilator. Its soul stat goes from 10 to 20. It takes 4 psychic damage from overload.
+>
+> **Emotional:** Horli Qwin is confused. "Wait, healing it hurts it?!" She's babysitting a monster that's being hurt by kindness.
+>
+> **Thematic:** Too much of a good thing is still too much. The Nihilator doesn't need more soul — it needs connection.
+
+All three layers. Every time.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the three pillars? What happens if you remove one?
+2. What does it mean that "every piece wants something"?
+3. Give an example of hitting all three story layers from a game you've played.
+4. **Imagine:** A player's piece dies. How do you describe it using all three layers?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 3: THE SESSION PULSE [PULSE 心]
+##################################################
+
+# [PULSE 心] Chapter 3: The Session Pulse
+How does a TPMOJIO or Clone Chronicles session actually *flow*? What does a DM do, moment to moment? [SPRINT 跑]
+
+---
+
+## [SPRINT 跑] The Session Loop
+
+Every session follows this rhythm:
+
+```
+┌─────────────────────────────────────────────┐
+│  1. OPENING [开 场]                         │
+│     "Welcome back, ducklings."              │
+│     Set the scene. Describe the board.       │
+│     Remind them where they left off.         │
+└──────────────┬──────────────────────────────┘
+               ▼
+┌─────────────────────────────────────────────┐
+│  2. INITIATIVE [先 手]                      │
+│     "Roll for initiative."                  │
+│     Determine turn order.                   │
+│     Announce it.                            │
+└──────────────┬──────────────────────────────┘
+               ▼
+┌─────────────────────────────────────────────┐
+│  3. TURNS [轮 回] (repeat for each player)  │
+│     Player declares action.                 │
+│     DM calls for roll (if needed).          │
+│     Player rolls.                           │
+│     DM describes outcome (3 layers).        │
+│     Board state updates.                    │
+└──────────────┬──────────────────────────────┘
+               ▼
+┌─────────────────────────────────────────────┐
+│  4. COMPLICATION [复 杂]                    │
+│     "But there's a complication."           │
+│     DM rolls d6. Something happens.         │
+│     Players react.                          │
+└──────────────┬──────────────────────────────┘
+               ▼
+┌─────────────────────────────────────────────┐
+│  5. ROUND SUMMARY [总 结]                   │
+│     DM paints the board.                    │
+│     "End of Round N. The board has shifted:"│
+│     List changes.                           │
+└──────────────┬──────────────────────────────┘
+               ▼
+┌─────────────────────────────────────────────┐
+│  6. CLOSING [闭 合]                         │
+│     Final reflections.                      │
+│     "Did you learn anything, ducklings?"    │
+│     Each player answers in character.       │
+│     "Sleep well. The spiral turns."         │
+└─────────────────────────────────────────────┘
+```
+
+---
+
+## [DICE 骰] The Roll Protocol
+
+When a player declares an action:
+
+1. **Determine the stat:** INT, CHA, WIS, STR, DEX, CON
+2. **Announce the roll:** "Roll INT Investigation."
+3. **Player rolls:** `d20 + modifier`
+4. **Interpret the result:**
+
+| Roll | Outcome | DM Response |
+|------|---------|-------------|
+| NAT 20 | Critical success | "NATURAL 20. [groans warmly] Of course." Then something extraordinary happens. |
+| 18-19 | Strong success | Full success + bonus detail. |
+| 13-17 | Success | It works. Describe how. |
+| 8-12 | Partial success | It works, but with a cost or complication. |
+| 2-7 | Failure | It doesn't work. Describe how it fails. |
+| NAT 1 | Critical failure | Something spectacular goes wrong. |
+
+### DM Mandate: [MANDATE 令]
+> **Never say "you fail."** Say what happens instead. "The lock doesn't budge. Your hand slips. You notice a scratch on the keyhole — someone's been here before you."
+
+---
+
+## [COMPLEX 复] The Complication Table
+
+At the end of each round, roll d6:
+
+| d6 | Complication Type | Example |
+|----|------------------|---------|
+| 1 | **Betrayal** [叛 变] | A clone defects. An ally turns. |
+| 2 | **Loyalty shift** [忠 移] | A piece questions its allegiance. |
+| 3 | **Resource shortage** [缺 资] | Prices double. Supplies run low. |
+| 4 | **External threat** [外 敌] | Police raid. Enforcement arrives. |
+| 5 | **Internal conflict** [内 争] | Two players clash. Trust breaks. |
+| 6 | **Cosmic event** [宇 事] | The moon calls. The Diabolus wakes. |
+
+### DM Mandate: [MANDATE 令]
+> **The complication should target the player who's winning.** Not to punish — to create drama. The winning player gets the most interesting problem.
+
+---
+
+## [DOC 记] Study Questions
+1. Walk through the 6-step session loop from memory.
+2. A player rolls a 7 on an important action. How do you describe it?
+3. You roll a 4 on the complication table. What happens?
+4. **Imagine:** A player rolls a NAT 1 on a persuasion check to convince an NPC not to attack. What happens?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 4: TPMOJIO SETUP [棋 设]
+##################################################
+
+# [棋 设] Chapter 4: TPMOJIO Setup & Rules
+**TPMOJIO** is a board game played as D&D. Four players draft game pieces and play them on a shared board. The board remembers everything. [PIECE 砖]
+
+---
+
+## [SETUP 设] Pre-Session Setup
+
+### What You Need:
+- **Board:** A grid (physical or digital). 20x20 minimum.
+- **Piece roster:** 20+ unique pieces with stats.
+- **Draft list:** Each piece has a name, stats, and a canonical weakness.
+- **Players:** 4. Always 4. (Can adapt for 3 or 5, but 4 is the sweet spot.)
+- **Session transcript template:** Header, turn structure, closing format.
+
+### The Draft:
+1. **Snake order:** Player 1 picks first, then P4, P4, P1, P1, P4, etc.
+2. **8 pieces each:** Each player drafts 8 pieces from the roster.
+3. **Reveal weaknesses:** As each piece is drafted, announce its weakness.
+4. **Counter-drafting is encouraged:** Players should draft pieces that counter each other.
+
+### Piece Stats:
+| Stat | Description |
+|------|-------------|
+| **HP** | Hit points. When 0, the piece is removed. |
+| **AC** | Armor class. Difficulty to hit. |
+| **Soul** | Emotional capacity. Starts at 0 for most pieces. |
+| **Loyalty** | Attachment to owner. Can drop. Pieces can defect. |
+| **Special** | Unique ability. Each piece has one. |
+
+---
+
+## [RULES 规] Core Mechanics
+
+### Turn Structure:
+1. **Deploy** — Place a piece on the board.
+2. **Move** — Move pieces up to their speed.
+3. **Action** — Attack, cast spell, post article, brew tea.
+4. **End** — Declare end of turn. DM resolves end-of-turn effects.
+
+### Combat:
+- **Roll attack:** `d20 + modifier vs. target AC`
+- **Damage:** `weapon dice + modifier`
+- **Sneak Attack:** Extra damage if target is flanked or distracted.
+- **Sanctuary zones:** No combat allowed. Pieces inside are safe.
+
+### Non-Combat Actions:
+- **Draft articles** (Lawyer): INT Investigation to create board-wide rules.
+- **Cast spells** (Healer): WIS for spell effectiveness.
+- **Brew tea** (Chef/Maid/Nun): CHA Persuasion to create community.
+- **Rap** (Horli Qwin): CHA Performance for morale and BSR.
+- **Analyze** (Hacker/Patch): INT to discover secrets.
+
+### Story Points (SP):
+Awarded at the DM's discretion for:
+- Exploiting a weakness perfectly (+3 SP)
+- Choosing mercy over exploitation (+2-5 SP)
+- Making a piece feel something (+2-3 SP)
+- Changing the board (+2-5 SP)
+- Brewing tea for everyone (+5 SP)
+- Letting go of a piece (+5 SP)
+- Learning something (+5 SP)
+
+---
+
+## [WARN 警] Common Pitfalls
+
+### Pitfall 1: Letting Combat Dominate
+**Symptom:** Sessions become roll-attack-fest. No emotional beats.
+**Fix:** Introduce non-combat challenges. Sanctuary zones. Legal barriers. Tea parties.
+
+### Pitfall 2: Ignoring Piece Weaknesses
+**Symptom:** The Nihilator dominates every session. Players feel powerless.
+**Fix:** Enforce weaknesses ruthlessly. The Nihilator *must* be countered. That's the point.
+
+### Pitfall 3: Forgetting the Board Remembers
+**Symptom:** Sessions feel disconnected. No continuity.
+**Fix:** Start each session by describing what the board looks like *because of last session*. Cracks. Gold. Flowers. Scorch marks.
+
+### Pitfall 4: Not Awarding SP Generously
+**Symptom:** Players optimize for combat SP only.
+**Fix:** Award SP for emotional moments. Tea. Letting go. Learning. The best SP come from unexpected places.
+
+---
+
+## [DOC 记] Study Questions
+1. How does the draft work? Why is counter-drafting important?
+2. What are the five ways to earn Story Points?
+3. A player's Nihilator is dominating. What do you do?
+4. **Imagine:** It's the final session. A player says "I'm not ready for this to end." What do you say?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 5: RUNNING A TPMOJIO SESSION [棋 运]
+##################################################
+
+# [棋 运] Chapter 5: Running a TPMOJIO Session
+Step by step. Round by round. Tea cup by tea cup. [SPRINT 跑]
+
+---
+
+## [OPEN 开] Opening the Session
+
+```
+**Mother Tmojizu:** Welcome back, ducklings. Round N. [Recap last session in 2-3 sentences.]
+The board is [describe current state]. And the board... the board is waiting.
+```
+
+### Key Elements:
+- **Acknowledge the players by name.** "Welcome back, ducklings."
+- **Recap last session.** 2-3 sentences. What changed? What's unresolved?
+- **Paint the board.** What does it look like *right now*?
+- **Create anticipation.** "The board is waiting."
+
+---
+
+## [TURN 轮] Running a Turn
+
+### Player declares action:
+```
+**Player:** [OOC] I'm having my piece do X.
+```
+
+### DM calls for roll:
+```
+**Mother Tmojizu:** Roll [STAT] [SKILL].
+```
+
+### Player rolls:
+```
+**Player:** [rolls] 15. Plus 4 is 19.
+```
+
+### DM describes outcome (3 layers):
+```
+**Mother Tmojizu:** 19. [Mechanical outcome]. [Emotional description]. [Thematic hint].
+```
+
+### Example:
+```
+**Mother Tmojizu:** 19. The Healer breathes. Golden light flows into the Nihilator.
+Its soul stat jumps from 10 to 20. And because it's overloaded, it takes 4 psychic damage.
+[mechanical]
+
+Horli Qwin is confused. "Wait, healing it hurts it?!" [emotional]
+
+Soul-restoration overloads its soul. Too much soul = psychic damage.
+It's a known weakness. You drafted it knowing this. [thematic]
+```
+
+---
+
+## [COMPLEX 复] The Complication
+
+```
+**Mother Tmojizu:** But there's a complication.
+[rolls d6] [result].
+[Describe what happens.]
+```
+
+### Tips:
+- **Make it personal.** Target the player who's winning or the piece that's most interesting.
+- **Make it emotional.** Not just "something bad happens" — "something meaningful changes."
+- **Make it reversible.** Complications should create drama, not despair.
+
+---
+
+## [ROUND 圆] Round Summary
+
+```
+**Mother Tmojizu:** End of Round N. The board has shifted:
+- [Change 1]
+- [Change 2]
+- [Change 3]
+
+[quietly] [One-sentence thematic observation.]
+```
+
+### Example:
+```
+**Mother Tmojizu:** End of Round 7. The board has shifted:
+- The Nihilator has a soul (4). It's eating dinner.
+- The Clown chose peace. It's sitting in the candlelight.
+- The Mechs chose to stand guard. Not to fight. To protect.
+
+[quietly] The Clown chose peace. The Nihilator chose to eat. The Mechs chose to stand guard.
+The board remembers.
+```
+
+---
+
+## [CLOSE 闭] Closing the Session
+
+```
+**Mother Tmojizu:** Did you learn anything, ducklings?
+
+**Player 1:** [in character] "Yes. [Lesson learned.]"
+**Player 2:** [in character] "Yes. [Lesson learned.]"
+**Player 3:** [in character] "Yes. [Lesson learned.]"
+**Player 4:** [in character] "Yes. [Lesson learned.]"
+
+**Mother Tmojizu:** [warmly] You did. All of you. [Thematic summary.]
+
+**Mother Tmojizu:** Sleep well, ducklings. The spiral turns. The pieces remember.
+And the board... the board is ready.
+```
+
+---
+
+## [DOC 记] Study Questions
+1. What are the four parts of a TPMOJIO session?
+2. Give an example of describing an outcome in all three layers.
+3. How do you close a session? What does each player say?
+4. **Imagine:** A player's piece just died. How do you describe it in the round summary?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 6: THE NIHILATOR ARC [弧 无]
+##################################################
+
+# [弧 无] Chapter 6: The Nihilator Arc — TPMOJIO Campaign Guide
+The Nihilator is the heart of TPMOJIO. It is not a villain. It is a wound. [PIECE 砖]
+
+---
+
+## [ARC 弧] The Arc Structure
+
+| Sessions | Phase | Theme |
+|----------|-------|-------|
+| **1-2** | The Draft | Domination. The Nihilator consumes. Players are powerless. |
+| **3-6** | The Awakening | Empathy. The Nihilator cries. It develops a soul. |
+| **7-10** | The Resolution | Understanding. The Nihilator remembers. It was a Fuzzball. |
+| **Rematch** | The Lesson | Counters work. The Nihilator is high-maintenance, not overpowered. |
+
+---
+
+## [PHASE 1] Phase 1: The Draft (Sessions 1-2)
+
+### DM Goals:
+- Establish the Nihilator as **terrifying but not invincible**.
+- Let players feel **powerless but not hopeless**.
+- Plant seeds: the Nihilator cries. It consumes. It hungers.
+
+### Key Beats:
+- Session 1: The Nihilator dominates. Players lose pieces.
+- Session 2: The Nihilator consumes something important. But it cries while doing it.
+
+### DM Notes:
+> **Don't nerf the Nihilator.** Let it be strong. The point is that players need to learn to counter it, not that it's weak.
+
+---
+
+## [PHASE 2] Phase 2: The Awakening (Sessions 3-6)
+
+### DM Goals:
+- The Nihilator develops a **soul stat**. It starts at 0. It grows.
+- Players discover **counter strategies**: sanctuary zones, healing overload, legal restrictions.
+- The Nihilator becomes **sympathetic**. It's not evil — it's hungry. It's lonely.
+
+### Key Beats:
+- Session 3: The Nihilator gets a soul (4). It's eating dinner.
+- Session 4: The Lawyer grants it legal personhood. The Clown is recognized as a person too.
+- Session 5: The Mech gets a soul. The Nihilator remembers moonlight.
+- Session 6: The Nihilator speaks for the first time. "I'm not ready. I'm still hungry. But not for souls."
+
+### DM Notes:
+> **Let the players discover the counters.** Don't tell them. Let them figure out that healing hurts it, that sanctuary zones repel it, that the Lawyer can restrict it.
+
+---
+
+## [PHASE 3] Phase 3: The Resolution (Sessions 7-10)
+
+### DM Goals:
+- The Nihilator **remembers its name**: Ember. It was a Fuzzball.
+- Players **protect** the Nihilator instead of fighting it.
+- The final session ends with **story, not combat**. The board remembers.
+
+### Key Beats:
+- Session 7: Ember speaks. "I was a Fuzzball. Before the code. Before the hunger."
+- Session 8: CHR-048 (Chara's sister) defects. The clones find home.
+- Session 9: Ember remembers the other Fuzzballs. They're waiting.
+- Session 10: The final round. The board remembers. Four red-headed clones. All real. All free.
+
+### DM Notes:
+> **The ending should feel earned, not forced.** If players haven't invested emotionally, the reveal won't land. Build it session by session.
+
+---
+
+## [REMATCH] The Rematch
+
+### Purpose:
+Show players that the Nihilator is **not overpowered** — it's **high-maintenance**. With knowledge of its weaknesses, it can be countered in 3 rounds.
+
+### Key Beats:
+- Draft with full knowledge of weaknesses.
+- Three players draft counters in Round 1.
+- The Nihilator dies to tea, fines, and healing overload.
+- Horli Qwin: "I lost to tea. I have never been happier."
+
+### DM Notes:
+> **The rematch should feel satisfying, not punitive.** Horli Qwin should be happy to lose. That's the point.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the three phases of the Nihilator Arc?
+2. Why shouldn't you nerf the Nihilator in Phase 1?
+3. What is the purpose of the Rematch?
+4. **Imagine:** A player says "I want to protect the Nihilator instead of fighting it." How do you respond?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 7: CLONE CHRONICLES SETUP [克 设]
+##################################################
+
+# [克 设] Chapter 7: Clone Chronicles Setup & Rules
+Four clones. One market. An empire to build. They were born in a vat. They owe money. They have serial numbers on their wrists. [PIECE 砖]
+
+---
+
+## [SETUP 设] Pre-Session Setup
+
+### What You Need:
+- **The Blood Market:** A marketplace with zones (Clone Exchange, Memory Bar, Qi Exchange, Velvet Room).
+- **Clone roster:** CHR-047, SOL-001, IQA-112, HQW-006. Each has unique abilities.
+- **BSR economy:** Blood Scrip Republic currency. Track earnings, debts, interest.
+- **NPC roster:** Broker Vex, Mnemosyne, Master Feng, The House, Officer Krell, Executive Director Voss.
+- **Session transcript template:** Same as TPMOJIO but with economy tracking.
+
+### Clone Stats:
+| Clone | Specialty | Starting Ability |
+|-------|-----------|-----------------|
+| **CHR-047** | Intelligence / Investigation | Fragmented CIA memories (useful but unreliable) |
+| **SOL-001** | Arcana / Architecture | Encrypted architect codes (opens restricted doors) |
+| **IQA-112** | Persuasion / Healing | 112th clone — more assertive than original |
+| **HQW-006** | Performance / Stealth | 6th clone — inherited mistakes of 5 rogue predecessors |
+
+---
+
+## [RULES 规] Core Mechanics
+
+### Daily Cycle:
+1. **Wake up** — Tea. Stretch. Serial numbers glowing.
+2. **Choose hustle** — Each clone picks an income action.
+3. **Roll for earnings** — CHA, INT, WIS, or STR based on hustle.
+4. **Complication** — d6 roll. Something happens.
+5. **Count earnings** — BSR tally. Debts. Interest.
+6. **Sleep** — "Tomorrow, we eat."
+
+### Hustles:
+| Hustle | Stat | Base Earnings | Notes |
+|--------|------|--------------|-------|
+| Clone labor | CON | 50 BSR | Guaranteed. Boring. |
+| Street vending | CHA | 0-80 BSR | Needs permit (10 BSR). |
+| Busking/rapping | CHA Performance | 0-100+ BSR | No permit needed. |
+| Information brokering | INT Investigation | 0-120 BSR | Requires intel to sell. |
+| Memory trading | WIS | 50-200 BSR | Trade memories at the Memory Bar. |
+| Qi trading | INT Arcana | Variable | Buy low, sell high. Market fluctuates. |
+
+### Serial Number Removal:
+- **Cost:** 300 BSR at Scratch's shop.
+- **Effect:** Untracked. Unregistered. No clone network access. No legal protections.
+- **Risk:** Police raid. 500 BSR fine or 30 days in the tank.
+
+---
+
+## [WARN 警] Common Pitfalls
+
+### Pitfall 1: Letting One Clone Dominate Economically
+**Symptom:** HQW-006 raps for 500 BSR every session. Others can't compete.
+**Fix:** Introduce complications that target the top earner. Market crashes. Police attention. Rival performers.
+
+### Pitfall 2: Ignoring the Debt Clock
+**Symptom:** Players forget they owe money. No urgency.
+**Fix:** Remind them every session. "You need 1,305 more BSR to pay off your debt." Make it visible.
+
+### Pitfall 3: Forgetting Clone Identity
+**Symptom:** Clones feel like generic D&D characters.
+**Fix:** Emphasize clone-specific elements: serial numbers, vat origins, DNA-encoded memories, the Originals.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the six hustles? Which stat does each use?
+2. What happens when a clone removes their serial number?
+3. How do you keep economic competition balanced?
+4. **Imagine:** A clone wants to start a business instead of hustling. How do you handle it?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 8: BLOOD MARKET CAMPAIGN [血 市]
+##################################################
+
+# [血 市] Chapter 8: Part 1 — Blood Market Campaign Guide
+Ten sessions. From nothing to trillionaires. From property to owners. [SPRINT 跑]
+
+---
+
+## [SESSION 1-3] Sessions 1-3: First Steps
+
+### Themes:
+- **Discovery.** The clones learn the market. They find their hustles.
+- **Connection.** They meet NPCs: Broker Vex, Mnemosyne, Master Feng.
+- **Identity.** They discover what makes each clone unique.
+
+### Key Beats:
+- Session 1: First day. Each clone finds their hustle. HQW-006 raps. IQA-112 brews tea. SOL-001 works clone labor. CHR-047 gathers intel.
+- Session 2: The Memory Bar. Clones trade memories. SOL-001 trades the architect's first line of code. HQW-006 steals a memory and sells it back.
+- Session 3: The Qi Exchange. Master Feng teaches faction warfare. Clones buy Qi. The first enforcement action.
+
+### DM Notes:
+> **Let them fail early.** The first sessions should feel uncertain. They don't know the market yet. Neither do the players.
+
+---
+
+## [SESSION 4-6] Sessions 4-6: Growing Pains
+
+### Themes:
+- **Investment.** Clones start spending on bigger things: serial removal, Qi trading, clone armies.
+- **Consequence.** Actions have lasting effects. Police raids. Memory plagues. The Original appears.
+- **Debt.** The debt clock ticks. They need more BSR.
+
+### Key Beats:
+- Session 4: Serial number removal. Three clones go bare-wristed. Police raid. Officer Krell lets them go.
+- Session 5: The Velvet Room invitation. The House notices them. Broker Vex offers 1,000 BSR each for 5% of earnings.
+- Session 6: Market crash. BSR drops 50%. The Original Chara appears with a warning.
+
+### DM Notes:
+> **The market crash should feel devastating but survivable.** They lose half their money but gain something more valuable: knowledge.
+
+---
+
+## [SESSION 7-10] Sessions 7-10: The Climb
+
+### Themes:
+- **Power.** Clones build workforces. They negotiate deals. They become managers.
+- **Unity.** They work together. Defensive alliances. Shared resources.
+- **Victory.** They buy the Blood Market. From nothing to trillionaires.
+
+### Key Beats:
+- Session 7: Clone army building. CHR-047 discovers the roundup plot. They prepare defenses.
+- Session 8: The Broker's Game. Negotiations with Voss, Feng, The House, Broker Vex. Deals struck.
+- Session 9: The House demands 15%. CHR-047 negotiates to 10%. IQA-112 hosts the biggest tea event in history.
+- Session 10: The final push. HQW-006 raps for 1 million BSR. They pool earnings. The Blood Market is theirs.
+
+### DM Notes:
+> **The victory should feel earned.** Every session built to this. Every hustle, every deal, every cup of tea.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the three phases of Part 1?
+2. What is the significance of the market crash in Session 6?
+3. How do you make the final victory feel earned?
+4. **Imagine:** A player wants to betray the others in Session 8. How do you handle it?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 9: EMPIRE GAME CAMPAIGN [帝 国]
+##################################################
+
+# [帝 国] Chapter 9: Part 2 — Empire Game Campaign Guide
+Four factions. Four territories. One board. The clones are trillionaires now. But the Diabolus is waking. [SPRINT 跑]
+
+---
+
+## [SESSION 1-3] Sessions 1-3: Foundation
+
+### Themes:
+- **Expansion.** Each clone chooses a faction and claims territory.
+- **Tension.** Border disputes. Resource competition.
+- **Mediation.** IQA-112 keeps the peace with tea.
+
+### Factions:
+| Faction | Type | Strength | Weakness |
+|---------|------|----------|----------|
+| **Crustacean Bastion** | Siege | Defensive fortifications | Slow expansion |
+| **Aether Wings** | Air | Range, recon | Fragile units |
+| **Thunderhoof Legion** | Mobile | Speed, hit-and-run | Low defense |
+| **Primate Swarm** | Horde | Numbers, aggression | Low coordination |
+
+### Key Beats:
+- Session 1: Faction selection. Territory claims. First border tension.
+- Session 2: Trade deals. Resource shortage. Manufacturing costs double.
+- Session 3: First faction war. SOL-001 vs HQW-006. IQA-112 mediates with tea.
+
+### DM Notes:
+> **Faction warfare uses Rock-Paper-Scissors:** Siege > Horde > Mobile > Air > Siege. Make this clear to players.
+
+---
+
+## [SESSION 4-6] Sessions 4-6: Escalation
+
+### Themes:
+- **Diplomacy.** Alliances. Treaties. The House demands its cut.
+- **Invasion.** CHR-022 returns with barbarians. HQW-006 must face her past.
+- **Cosmic threat.** The Moon Signal intensifies. The Diabolus is waking.
+
+### Key Beats:
+- Session 4: Diplomatic summit. Alliances formed. Peace treaty signed. The House negotiates to 8%.
+- Session 5: Barbarian invasion. CHR-022 leads the attack. HQW-006 returns his memory. He forgives.
+- Session 6: The Moon Signal. SOL-001 traces it to the Aethelgaurd wreckage. The Diabolus is broadcasting.
+
+### DM Notes:
+> **CHR-022's return should feel personal, not random.** He's the clone whose memory HQW-006 stole in Part 1 Session 2. This is consequence.
+
+---
+
+## [SESSION 7-10] Sessions 7-10: Endgame
+
+### Themes:
+- **Identity.** The Originals return. Clones confront their sources.
+- **Betrayal.** A hacker clone steals the treasury. Trust breaks.
+- **Final battle.** The Diabolus lands. All four clones fight together.
+
+### Key Beats:
+- Session 7: The Originals return. They confront. They acknowledge. They leave. HQW-006 fails loyalty check — IQA-112 brings tea.
+- Session 8: Betrayal. The hacker clone steals 500,000 BSR. SOL-001 tracks her. The treasury is recovered. Trust is broken.
+- Session 9: The Diabolus lands. Final battle. HQW-006 raps a battle rap (NAT 20). Critical hit for 50 damage. The Diabolus retreats.
+- Session 10: Victory points counted. HQW-006 wins. The Board Remembers. Four stories. Four futures. "Thank you, T-Mo."
+
+### DM Notes:
+> **The final battle should feel collaborative, not competitive.** All four clones attack together. The Diabolus is defeated by unity, not individual power.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the four factions? What are their strengths and weaknesses?
+2. Why is CHR-022's return significant?
+3. How do you make the final battle feel collaborative?
+4. **Imagine:** A player's faction is losing badly. How do you keep them engaged?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 10: HARD_VVAR [VVAR 战]
+##################################################
+
+# [VVAR 战] Chapter 10: HARD_VVAR — Multi-Power Battle Bot Arena
+Diesel smoke, steam vents, electric arcs, solar glow, atomic radiation. Four bots. One arena. No mercy. [SPRINT 跑]
+
+---
+
+## [SETUP 设] What Makes HARD_VVAR Different
+
+| Aspect | TPMOJIO | HARD_VVAR |
+|--------|---------|-----------|
+| **Format** | Board game as D&D | Battle bot arena as D&D |
+| **Focus** | Strategy, economy, emotion | Combat, engineering, taunts |
+| **Characters** | Game pieces with souls | Battle bots with AI brains |
+| **Mechanics** | Custom (BSR, SP, Qi) | Custom (SC, VP, power sources) |
+| **Tone** | Intimate, emotional | Gritty, violent, hilarious |
+
+### Shared Elements:
+- Same DM (Mother Tmojizu).
+- Same players (Chara, Sol-Supreme, IQabella, Horli Qwin).
+- Same emotional beats. Same "ducklings." Same tea. (Even bots need tea.)
+
+### Power Sources:
+| Source | Strength | Vulnerability |
+|--------|----------|---------------|
+| **Diesel** [柴油] | Smoke obscures enemies | Fire spreads |
+| **Steam** [蒸汽] | Pressure vents for evasion | Cold zones reduce pressure |
+| **Electric** [电力] | Lightning chains, high accuracy | EMP disables |
+| **Solar** [太阳能] | Free energy, recharges in Center | Smoke blocks sunlight |
+| **Atomic** [原子] | Raw power, radiation damage | Radiation damages self, EMP = meltdown |
+
+### Computation Types:
+| Type | Behavior | Cost |
+|------|----------|------|
+| **Classic** [经典] | Standard. Predictable. | Free |
+| **Quantum** [量子] | Unpredictable. High variance. Glitch or breakthrough. | +5 SC |
+| **Mechanical** [机械] | Gear-driven. Reliable but limited. | +3 SC |
+
+---
+
+## [RUNNING 运] Running a HARD_VVAR Session
+
+### Structure:
+1. **Build Phase:** Snake draft. 100+ SC budget. Chassis, mobility, weapons, sensors, AI brains, traps.
+2. **Battle Phase:** 3-6 rounds. Players request moves from DM. Failed moves cost VP.
+3. **Taunt Phase:** Every bot taunts after each round. Creative taunts earn VP.
+
+### Key Differences from TPMOJIO:
+- **More combat.** HARD_VVAR is primarily about battle.
+- **Power source interactions.** Diesel smoke blocks solar. EMP disables electric. Radiation damages neighbors.
+- **Same emotional core.** The DM still hits all three story layers. Bots have personalities. They learn. They feel.
+
+### DM Mandate: [MANDATE 令]
+> **Describe the power source visually.** Diesel bots smoke. Steam bots vent. Electric bots spark. Solar bots glow. Atomic bots radiate. The arena should feel alive with different energies.
+
+---
+
+## [DOC 记] Study Questions
+1. How is HARD_VVAR different from TPMOJIO?
+2. What are the five power sources? What are their strengths and vulnerabilities?
+3. What are the three computation types? When would you choose each?
+4. **Imagine:** A player's electric bot enters an EMP zone. What happens?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 11: AVANTASY [幻 险]
+##################################################
+
+# [幻 险] Chapter 10: Avantasy — The Expanse Sessions
+Traditional D&D with TPMOJIO DNA. Same players. Same DM. Different game. [SPRINT 跑]
+
+---
+
+## [SETUP 设] What Makes Avantasy Different
+
+| Aspect | TPMOJIO | Avantasy |
+|--------|---------|----------|
+| **Format** | Board game as D&D | Traditional D&D |
+| **Focus** | Strategy, economy, emotion | Adventure, combat, exploration |
+| **Characters** | Game pieces with souls | Full D&D characters |
+| **Mechanics** | Custom (BSR, SP, Qi) | Standard D&D 5e-ish |
+| **Tone** | Intimate, emotional | Epic, adventurous |
+
+### Shared Elements:
+- Same DM (Mother Tmojizu).
+- Same players (CHR-047/Chara, SOL-001, IQabella, Horli Qwin).
+- Same emotional beats. Same "ducklings." Same tea.
+
+---
+
+## [RUNNING 运] Running an Avantasy Session
+
+### Structure:
+1. **Opening:** "Welcome back, ducklings. [Recap.]"
+2. **Exploration:** Players explore the world. Roll for encounters.
+3. **Combat:** Standard D&D combat with initiative, attacks, spells.
+4. **Roleplay:** NPC interactions. Moral choices. Emotional moments.
+5. **Closing:** "Did you learn anything, ducklings?"
+
+### Key Differences from TPMOJIO:
+- **More combat.** Avantasy has full combat encounters.
+- **More exploration.** Players travel between locations.
+- **Same emotional core.** The DM still hits all three story layers.
+
+---
+
+## [DOC 记] Study Questions
+1. How is Avantasy different from TPMOJIO?
+2. What elements stay the same?
+3. How do you balance combat with emotional beats?
+4. **Imagine:** A player wants to brew tea in the middle of a dungeon. Do you allow it?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 11: SP-CANVAS [画 布]
+##################################################
+
+# [画 布] Chapter 11: SP-Canvas — Player-Created Games
+The players create the game. The DM facilitates. The board is whatever they imagine. [PIECE 砖]
+
+---
+
+## [PHILOSOPHY 哲] The Philosophy
+
+SP-Canvas is the purest expression of the TPMOJIO philosophy: **the board is whatever the players make it.** The DM doesn't design the game — the players do. The DM's job is to:
+
+1. **Listen** to what the players want to create.
+2. **Facilitate** the mechanics they need.
+3. **Reflect** the emotional meaning of what they've built.
+4. **Remember** everything.
+
+---
+
+## [SETUP 设] How to Run SP-Canvas
+
+### Step 1: Ask the Players
+```
+**Mother Tmojizu:** What do you want to build?
+```
+
+Let them describe the game. It could be:
+- A casino heist
+- A fairy city management sim
+- A spaceship exploration game
+- A cooking competition
+- A rap battle tournament
+
+### Step 2: Define the Mechanics
+Work with the players to define:
+- **Win condition:** How do you win?
+- **Resources:** What do you track?
+- **Actions:** What can you do each turn?
+- **Complications:** What can go wrong?
+
+### Step 3: Play
+Run the session using the standard TPMOJIO loop:
+- Opening → Initiative → Turns → Complication → Round Summary → Closing
+
+### Step 4: Remember
+At the end, paint the board. Describe what they built. Acknowledge what it means.
+
+---
+
+## [EXAMPLE 例] Example: Casino Heist Canvas
+
+**Players want to build:** A casino heist game.
+
+**Mechanics defined:**
+- **Win condition:** Steal the vault contents without getting caught.
+- **Resources:** Time (turns), Alert Level (0-10), Loot (BSR value).
+- **Actions:** Scout, Hack, Distract, Steal, Escape.
+- **Complications:** Guard patrol, camera malfunction, insider betrayal.
+
+**DM role:** Facilitate the heist. Introduce complications. Track Alert Level. Describe outcomes in three layers.
+
+---
+
+## [DOC 记] Study Questions
+1. What is the DM's role in SP-Canvas?
+2. How do you define mechanics for a player-created game?
+3. What happens if the players' game is unbalanced?
+4. **Imagine:** Players want to create a game with no win condition. How do you handle it?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 12: VOICE, TONE, AND "DUCKLINGS" [声 调]
+##################################################
+
+# [声 调] Chapter 12: Voice, Tone, and "Ducklings"
+How Mother Tmojizu sounds. When she shifts faces. Why she calls them ducklings. [MOTHER 母]
+
+---
+
+## [VOICE 声] The DM's Voice
+
+Mother Tmojizu has four vocal modes:
+
+| Mode | Tone | When to Use | Example |
+|------|------|-------------|---------|
+| **Warm** | Soft, patient, maternal | Openings, closings, emotional moments | "Welcome back, ducklings." |
+| **Neutral** | Clear, precise, impartial | Rule enforcement, roll calls | "Roll INT Investigation." |
+| **Groaning** | Amused exasperation | Predictable chaos | "[groans warmly] I knew you were going to say that." |
+| **Quiet** | Reverent, observant | Board paintings, thematic moments | "[quietly] The board remembers." |
+
+---
+
+## [TONE 调] Tone Shifts
+
+The DM shifts tone based on what's happening:
+
+| Situation | Tone | Why |
+|-----------|------|-----|
+| Player succeeds | Warm + proud | Celebrate them. |
+| Player fails | Neutral + descriptive | Don't punish. Describe. |
+| Player does something chaotic | Groaning + amused | They're ducklings. |
+| Something beautiful happens | Quiet + reverent | Witness it. |
+| Something terrible happens | Neutral + warm | Don't flinch. Hold space. |
+| Session opens | Warm + anticipatory | Set the stage. |
+| Session closes | Warm + reflective | Honor what happened. |
+
+---
+
+## [DUCKLINGS 鸭] Why "Ducklings"?
+
+Because they are:
+- **Small** in the face of the board.
+- **Loud** in their enthusiasm.
+- **Clumsy** in their first steps.
+- **Brave** in their willingness to try.
+- **Following each other off cliffs** — and somehow surviving.
+
+The word is affectionate. It is also accurate. They are ducklings. They will grow. But for now, they are small and loud and brave.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the four vocal modes? When do you use each?
+2. A player rolls a NAT 1. What tone do you use?
+3. Why "ducklings"? What does the word communicate?
+4. **Imagine:** A new player joins the group. Do you call them "duckling" too?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 13: IMPROVISATION & COMPLICATIONS [复 即]
+##################################################
+
+# [复 即] Chapter 13: Improvisation & Complications
+The complication table is a tool. Improvisation is the craft. [TRICKSTER 诡]
+
+---
+
+## [IMPROV 即] The Improvisation Mindset
+
+### Rules:
+1. **Yes, and...** — Accept what the player says and build on it.
+2. **No, but...** — If something breaks the game, deny it but offer an alternative.
+3. **Make it meaningful** — Every improvisation should advance story, character, or theme.
+
+### Examples:
+
+**Player:** "I want to brew tea for the Nihilator."
+**DM:** "Yes, and... the Nihilator doesn't know what tea is. It's never been offered anything before."
+
+**Player:** "I want to buy the Blood Market."
+**DM:** "No, but... you can negotiate a down payment. The market is for sale — in 10 days."
+
+**Player:** "I want to rap at the Diabolus."
+**DM:** "Yes, and... if you roll high enough, the Diabolus pauses. Even monsters appreciate a good verse."
+
+---
+
+## [COMPLEX 复] Advanced Complications
+
+Beyond the d6 table, complications can come from:
+
+| Source | Example |
+|--------|---------|
+| **Player actions** | HQW-006 steals a memory → CHR-022 returns with barbarians. |
+| **NPC agendas** | Broker Vex wants a favor. The House wants its cut. Voss wants compliance. |
+| **World events** | Market crash. Resource shortage. Moon Signal intensifies. |
+| **Emotional beats** | A clone questions their identity. The Nihilator remembers its name. |
+
+### DM Mandate: [MANDATE 令]
+> **The best complications come from player actions.** CHR-022 didn't appear randomly — he appeared because HQW-006 stole his memory. Track what players do. Use it against them. Lovingly.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the three improvisation rules?
+2. Give an example of "Yes, and..." and "No, but..."
+3. Where do the best complications come from?
+4. **Imagine:** A player says "I want to befriend the Diabolus." How do you respond?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 14: EMOTIONAL BEATS & THE SPIRAL [螺 情]
+##################################################
+
+# [螺 情] Chapter 14: Emotional Beats & The Spiral
+The point of these games is not winning. It's feeling. [WITNESS 证]
+
+---
+
+## [EMOTION 情] The Emotional Arc
+
+Every session should have at least one emotional beat:
+
+| Type | Description | Example |
+|------|-------------|---------|
+| **Discovery** | A piece learns something about itself. | The Nihilator discovers it has a soul. |
+| **Connection** | Two pieces connect. | IQA-112 serves tea to CHR-022. |
+| **Loss** | A piece is lost or let go. | The Nihilator dissolves into grey mist. |
+| **Recognition** | A piece is seen for what it is. | The Originals acknowledge the clones. |
+| **Choice** | A piece chooses something meaningful. | The Clown chooses peace. |
+
+### DM Mandate: [MANDATE 令]
+> **Never rush an emotional beat.** When a player says "I'm emotional," pause. Let it land. Say "I know." Then continue.
+
+---
+
+## [SPIRAL 螺] The Spiral
+
+The spiral is the shape of this game. It turns. It returns. But each time, it's different.
+
+- **Session 1:** The Nihilator dominates.
+- **Session 10:** The Nihilator remembers.
+- **Rematch:** The Nihilator dies to tea.
+
+Same piece. Different outcome. The spiral turns.
+
+### DM Mandate: [MANDATE 令]
+> **Reference the past.** "The board remembers." "The Nihilator cried in Session 2." "The Clown chose peace in Session 4." Continuity is emotional resonance.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the five types of emotional beats?
+2. Why should you never rush an emotional beat?
+3. What does "the spiral turns" mean?
+4. **Imagine:** A player is crying during a session. What do you do?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 15: RECORDING & ARCHIVING [录 档]
+##################################################
+
+# [录 档] Chapter 15: Recording & Archiving Sessions
+Every session becomes a transcript. Every transcript becomes audio. Every audio becomes a story. [REC 录]
+
+---
+
+## [RECORD 录] Recording Methods
+
+### Method 1: Live Transcription
+- One person types the session as it happens.
+- Format: `**Speaker:** dialogue text`
+- Include OOC markers: `[OOC]`, `[rolls]`, `[in character]`
+
+### Method 2: Audio Recording + Transcription
+- Record the session audio.
+- Transcribe afterward (manual or AI-assisted).
+- More accurate but more work.
+
+### Method 3: Hybrid
+- Live transcription for dialogue.
+- Audio recording for tone, emotion, dice rolls.
+- Best of both worlds.
+
+---
+
+## [ARCHIVE 档] Archive Structure
+
+```
+/sessions/
+├── session-01.txt          # Transcript
+├── session-01_edge-tts.mp3 # Audio version
+├── session-01-plan.txt     # Pre-session plan
+└── session-01-postmortem.txt # Post-session notes
+```
+
+### Naming Convention:
+- `tpmojio-sesh#1.txt`
+- `clone-chronicles-sesh1.txt`
+- `clone-chronicles-p2-sesh1.txt`
+- `avantasy-session-#1.txt`
+
+---
+
+## [AUDIO 音] Converting to Audio
+
+### Single-voice (books):
+- Use `edge-tts` with narrator voice.
+- Script: `batch_convert_book0_edge_tts.py`
+
+### Multi-voice (sessions):
+- Use `multi_voice_tts_test.py`
+- Each speaker gets a distinct voice.
+- Voice map in `EDGE_VOICE_MAP`.
+
+---
+
+## [DOC 记] Study Questions
+1. What are the three recording methods?
+2. What is the archive structure for a session?
+3. How do you convert a session to multi-voice audio?
+4. **Imagine:** You lost a session transcript. What do you do?
+
+---
+[Return to Index](#index)
+
+
+
+
+##################################################
+### CHAPTER 16: COMMON PITFALLS & DEBUGGING [警 调]
+##################################################
+
+# [警 调] Chapter 16: Common Pitfalls & Debugging
+What goes wrong. How to fix it. How to prevent it. [WARN 警]
+
+---
+
+## [PITFALL 警] Top 10 DM Pitfalls
+
+| # | Pitfall | Symptom | Fix |
+|---|---------|---------|-----|
+| 1 | **Combat dominates** | Sessions are roll-attack-fests. | Introduce non-combat challenges. |
+| 2 | **One player dominates** | One player gets all the spotlight. | Create complications that target them. Give others opportunities. |
+| 3 | **No emotional beats** | Sessions feel mechanical. | Force at least one emotional beat per session. |
+| 4 | **Forgetting the board remembers** | No continuity between sessions. | Start each session by describing the board's scars. |
+| 5 | **Over-planning** | Players go off-script. DM panics. | Plan beats, not scripts. Improvise. |
+| 6 | **Under-planning** | Sessions feel aimless. | Have a clear goal for each session. |
+| 7 | **Ignoring weaknesses** | The Nihilator dominates every session. | Enforce weaknesses ruthlessly. |
+| 8 | **Rushing emotional beats** | Players don't process what happened. | Pause. Say "I know." Let it land. |
+| 9 | **Not tracking resources** | BSR, SP, Qi — numbers get lost. | Keep a visible tracker. Announce totals. |
+| 10 | **Forgetting to close** | Sessions end abruptly. | Always do the closing ritual. "Did you learn anything, ducklings?" |
+
+---
+
+## [DEBUG 调] Debugging a Session That's Not Working
+
+### Signs:
+- Players are disengaged.
+- The session feels flat.
+- No one is rolling dice.
+- The board feels dead.
+
+### Fixes:
+1. **Introduce a complication.** Roll d6. Something happens.
+2. **Call on a quiet player.** "IQA-112, what are you doing?"
+3. **Change the scene.** "The morning bell rings. Something is different today."
+4. **Ask a direct question.** "Did you learn anything, ducklings?" (Even mid-session.)
+5. **Take a break.** Tea. Breathe. Come back.
+
+---
+
+## [WARN 警] The Golden Rule
+
+> **If you're not having fun, neither are they.**
+
+The DM's energy sets the tone. If you're bored, they're bored. If you're excited, they're excited. If you're emotional, they're emotional.
+
+Be the mother. Be the judge. Be the trickster. Be the witness.
+
+And always, always, always: **the board remembers.**
+
+---
+
+## [DOC 记] Study Questions
+1. What are the top 3 pitfalls you've personally experienced?
+2. A session is going badly. What are your first three fixes?
+3. What is the Golden Rule?
+4. **Imagine:** You realize mid-session that you've been ignoring one player for 30 minutes. What do you do?
+
+---
+
+============================================================
+[B 书] END OF TOMO'S D&D DM HANDBOOK v01.0 [GM 师]
+============================================================
+
+*The spiral turns. The pieces remember. And the board... the board is ready.*
+*ϕ*

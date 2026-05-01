@@ -1,0 +1,28 @@
+────────
+> good, now 
+
+i also  want to make a 3 minute trailer for each individual
+  screenplays (the ones with books, not d&d games)
+   , in this same folder, in the subfolder of the screenplay names +"trailer"
+   ie <02.gem&i_trailer/  ​
+
+(this isn't like the other trailer. these have nothing to do with d&d
+so dont include that stuff, were more looking for a summary of the local
+screenplay, but as a movie trailer. get it? (very short 3 minute ) 
+
+heres the screenplays : you will find them if u look for them : 
+| 0 | Sol Pen (scenes) | 31 | `0.scenes]ALL+named/` |
+| 1 | Geminii Part 1 | 22 | `1.GEMINI_PART_1]Tarantin0/` |
+| 2 | Red Rock (scenes) | 20 | root |
+| 3 | Death-Kryo (scenes) | 18 | root |
+| 4 | Moonshine | 20 | root |
+| 5 | Superwar | 22 | root |
+| 6 | Hellride | 20 | root |
+| 7 | Avanta.C | 19 | root |
+| 8 | Digi_Sol (scenes) | 20 | root |
+| 9 | Metal Sun (scenes) | 20 | root |
+| 10 | XO Files | 14 | root |
+| 11 | Footrace.FU | 22 | root |
+| 12 | Centroid (scenes) | 20 | root |
+| 111 | Tear-It | 19 | root |
+| 100 | NGL Mpyre (scenes) | 30 | root |

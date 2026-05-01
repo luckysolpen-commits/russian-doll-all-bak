@@ -1,0 +1,431 @@
+# [B 书] RPG-CANVAS-SP BIBLE — The Level Editor Rulebook [GRAD 学]
+## AKA: RMMP-OP-ED — The Editor That Is The Game
+### Version 1.0 — The Spiral Edition
+
+---
+
+## 0. IDENTITY & PURPOSE
+
+**Name:** RPG-CANVAS-SP (SoulPen Edition)
+**Also Known As:** RMMP-OP-ED, The Op-Editor, "The Editor That Is The Game"
+**Tagline:** "Place the piece. Wire the Op. Play the world."
+
+### What Is RPG-CANVAS-SP?
+RPG-CANVAS-SP is a **level editor and game engine** built on the TPMOS (True Piece Method Operating System) architecture. It's like RPG Maker MV — but instead of starting from blank tiles and building everything from scratch, **every piece is already alive**. Chefs cook. Lawyers legislate. Soldiers patrol. Cars drive. Buildings function. Banks accrue interest. Rockets launch. Planets orbit. You place them, wire their Ops (events), and the world runs itself.
+
+**Two Rendering Theaters:**
+- **ASCII-OS (CHTPM):** Terminal-based, classic, grid view
+- **GL-OS (OpenGL):** Desktop 3D visualizer — same data, different lens. Like Linux and Windows running on the same kernel.
+
+**The Frame Bridge:** You can copy a frame from ASCII-OS and open it in GL-OS. Same format, different rendering. The data is sovereign. The view is optional.
+
+### Relationship to TPMOJIO
+TPMOJIO is the **board game** — pieces on a grid, turn-based, competitive.
+RPG-CANVAS-SP is the **level editor** — you design the worlds those pieces live in.
+
+Every TPMOJIO piece can be placed in RPG-CANVAS-SP. Every level you design can be played as a TPMOJIO match, a D&D session, or a standalone SoulPen level. The pieces are the same. The context changes.
+
+---
+
+## 1. THE EDITOR INTERFACE
+
+### 1.1 The Main Screen (op-ed.chtpm)
+
+```
+╔══════════════ O P - E D   A D V A N C E D ════════════╗
+PROJECT: moon_battle | LAYOUT: op-ed.chtpm
+
+ GAME MAP:
+[Control Map]
+[The map renders here — ASCII grid or GL viewport]
+
+╠═══════════════════════════════════════════════════════════╣
+[RESP]: Piece Placed: Lucky @ (8,12,z0)
+[POS]: (8,12,0) | [ARMED]: [ @ ] | [KEY]: ENTER
+
+╠═══════════════════════════════════════════════════════════╣
+MAPS:    [ADD] [map_0001_z0.txt] [map_0002_z1.txt] [...]
+GLYPHS:  [#] [.] [R] [T] [@] [&] [Z] [X] [?] [!]
+
+╠═══════════════════════════════════════════════════════════╣
+║ [TOGGLE EMOJI] [DB] ║ [PROJECT] [EVENT]                 ║
+║ [FILE] [LOADER] [EXIT]                                   ║
+╚═══════════════════════════════════════════════════════════╝
+[1]: Grid | [2/3]: Palettes | [4]: Emoji Toggle | [ESC]: Nav
+```
+
+### 1.2 Controls
+
+| Key | Action |
+|-----|--------|
+| **Arrow Keys / WASD** | Move the Xlector (selector cursor) across the grid |
+| **ENTER** | Place the currently ARMED glyph at the Xlector's position |
+| **SPACE** | Open Context Menu on the piece at Xlector's position |
+| **X** | Move Xlector UP one Z-level (sky/higher floor) |
+| **Z** | Move Xlector DOWN one Z-level (ground/lower floor) |
+| **1** | Toggle grid overlay |
+| **2** | Cycle map palette (previous map) |
+| **3** | Cycle glyph palette (previous glyph) |
+| **4** | Toggle Emoji Mode (ASCII ↔ Emoji glyphs) |
+| **5** | Open Debug panel |
+| **6** | Open Project browser |
+| **8** | Open Event/PAL editor for selected piece |
+| **ESC** | Return to Xlector (deselect current piece) |
+| **9** | Return to Xlector from piece selection |
+
+### 1.3 Context Menu (SPACE on a piece)
+
+When you press SPACE on an existing piece, you get:
+- **[OPS]** — Open the PAL/Event editor for this piece
+- **[COPY]** — Copy this piece to clipboard (can paste elsewhere)
+- **[CUT]** — Cut this piece (copy + delete)
+- **[DELETE]** — Remove this piece from the map
+
+### 1.4 Map Management
+
+- **[ADD]** in the map palette creates a new blank map file (`map_0001.txt`, `map_0002.txt`, etc.)
+- Clicking an existing map opens a sub-menu: **[RENAME]**, **[RESIZE]**
+- **RESIZE** changes the map's scrollable area (width/height metadata), not the viewport
+- Z-levels are separate map files: `map_0001_z0.txt`, `map_0001_z1.txt`, `map_0001_z2.txt`
+
+### 1.5 File Menu
+
+- **[SAVE]** — Save current project (all maps, pieces, Ops)
+- **[SAVE AS]** — Clone project to a new name (timestamp suffix)
+- **[LOAD]** — Browse and load existing projects
+
+---
+
+## 2. PIECES — ALREADY ALIVE
+
+### 2.1 The Core Difference from RPG Maker MV
+
+In RPG Maker MV, you place a blank event and build it from scratch.
+In RPG-CANVAS-SP, **every piece is already defined**. It has:
+- `piece.pdl` — DNA (traits, methods, capabilities)
+- `state.txt` — Mirror (current position, HP, status, inventory)
+- `.asm` files — PAL scripts (Ops/events that run on triggers)
+
+When you place a **Chef**, it already knows how to cook. When you place a **Banker**, it already accrues interest. When you place a **Mech**, it already has combat stats. You don't build the piece — you **wire its behavior** to the level.
+
+### 2.2 Piece Categories (Pre-Fleshed Templates)
+
+| Category | Examples | What They Already Do |
+|----------|----------|---------------------|
+| **Humans** | Lucky, Sol, Luna, Chef, Lawyer, Banker, Hacker, Soldier, CEO | Move, act, think, carry LyfeBooks |
+| **Animals** | Cat, Dog, Cacajao, Bat | Instinct-driven, no LyfeBook |
+| **Spirits** | Fairy, God Delusion, Death, Loki | Non-corporeal, magical |
+| **Undead** | Vampire clones, Zombies | No sleep needed, hunger-free |
+| **Machines** | Robot, Mech, Race Car, Aibot | Programmable via LyfeBook |
+| **Buildings** | Clone Factory, Farm, Bank, Shop, Library, Gas Station | Function autonomously, produce resources |
+| **Vehicles** | Race Car, Rocket, Ship | Transport, combat, exploration |
+| **Planets** | Moon, Metal Sun, Earth | Environmental, lore, gravity |
+| **Items** | Seeds, Food, Water, Blood, LyfeBook, Logic Gates | Consumable, equippable, wireable |
+
+### 2.3 Placing a Piece
+
+1. **Select the glyph** from the palette (arrow keys or number keys)
+2. **Move the Xlector** to the desired position (WASD/arrows)
+3. **Press ENTER** — the piece is placed
+4. The editor automatically:
+   - Creates a piece directory in `projects/{project}/pieces/`
+   - Copies the template `piece.pdl` and `state.txt`
+   - Sets position to the Xlector's coordinates
+   - Triggers a render update
+
+### 2.4 The Glyph Palette
+
+**ASCII Mode:** `#` (wall), `.` (floor), `R` (road), `T` (tree), `@` (human), `&` (spirit), `Z` (zombie), `X` (xlector), `?` (mystery), `!` (danger)
+
+**Emoji Mode:** 🧱 (wall), 🟩 (grass), 🌲 (tree), 🏰 (castle), 🎯 (target), 🐶 (animal), 🧟 (undead), 💰 (merchant), 🏠 (building), 🔥 (danger)
+
+---
+
+## 3. OPS — THE EVENT SYSTEM
+
+### 3.1 What Are Ops?
+
+In RPG Maker MV, they're called "Events." In RPG-CANVAS-SP, they're called **Ops** (Operations). An Op is a **PAL script** (`.asm` file) that runs when triggered.
+
+**Triggers include:**
+- **On Interact** — player walks into the piece
+- **On Turn** — executes every game turn
+- **On Parallel** — runs continuously in the background
+- **On Death** — triggers when the piece dies
+- **On KO** — triggers when the piece is knocked out
+- **Custom** — any trigger you define
+
+### 3.2 The PAL Editor (CLI-Scratch)
+
+Instead of writing raw assembly, you use a **hierarchical navigation menu**:
+
+1. Select a piece → Press SPACE → Select **[OPS]**
+2. Choose **Add Op** → See categorized list:
+   - **Movement:** `move_to`, `patrol`, `chase`, `flee`, `teleport`
+   - **Flow:** `if`, `else`, `loop`, `wait`, `branch`
+   - **Stats:** `change_hp`, `change_soul`, `change_loyalty`, `change_stress`
+   - **Dialogue:** `message`, `choices`, `show_face`
+   - **Combat:** `attack`, `defend`, `use_skill`, `summon`
+   - **World:** `change_map`, `change_weather`, `change_time`, `spawn_piece`
+   - **System:** `save_game`, `load_game`, `quit`, `debug`
+3. Select an Op → Enter arguments (target, value, map ID, etc.)
+4. The editor **serializes** it into a `.asm` file automatically
+
+### 3.3 Example: Boss Fight Op
+
+```asm
+; Diabolus_Boss_Fight.asm
+; Trigger: On Interact
+
+MESSAGE "The Diabolus rises from the asteroid shell. Its eyes burn with ancient hunger."
+CHOICES "Fight" "Flee"
+  IF choice == "Fight":
+    CHANGE_WEATHER "fire_storm"
+    SPAWN_PIECE "reptilian_elite" AT (10, 10, z0)
+    SPAWN_PIECE "reptilian_elite" AT (12, 10, z0)
+    SPAWN_PIECE "reptilian_elite" AT (14, 10, z0)
+    CHANGE_HP "Diabolus" SET 9999
+    MESSAGE "The Aethelgaurd shakes. The battle begins."
+  IF choice == "Flee":
+    TELEPORT_PLAYER TO (0, 0, z0)
+    MESSAGE "You run. The Diabolus laughs. It will remember."
+```
+
+### 3.4 Common Events (Global Ops)
+
+Stored in `projects/{project}/events/common/`. These run across all maps:
+- **Day/Night Cycle Op** — changes lighting, tiredness, vampire strength
+- **Weather Op** — fire storms, moonlight, asteroid debris
+- **Economy Op** — banker interest, merchant prices, Chimochio Bucks
+- **Spawn Op** — periodic enemy spawns, clone production
+
+### 3.5 Piece Events (Local Ops)
+
+Each piece can have its own `.asm` files:
+- `on_interact.asm` — runs when player interacts
+- `on_turn.asm` — runs every game turn
+- `on_parallel.asm` — runs continuously in background
+- `on_death.asm` — runs when piece dies
+- `on_ko.asm` — runs when piece is KO'd
+
+---
+
+## 4. Z-LEVELS — THE THIRD DIMENSION
+
+### 4.1 How Z-Levels Work
+
+Every map has multiple Z-levels:
+- **Z0** — Ground level (surface, terrain, buildings)
+- **Z1** — Sky level (flying pieces, asteroids, orbital)
+- **Z2** — Underground (tunnels, bunkers, dungeons)
+- **Z3+** — Custom levels (space, moon surface, etc.)
+
+### 4.2 Navigating Z-Levels in the Editor
+
+- **X key** — Move Xlector UP one Z-level
+- **Z key** — Move Xlector DOWN one Z-level
+- The map palette shows all Z-levels: `map_0001_z0.txt`, `map_0001_z1.txt`, `map_0001_z2.txt`
+
+### 4.3 Z-Level Interactions
+
+Pieces on different Z-levels can interact if:
+- They have **vertical reach** (flying, climbing, teleporting)
+- An Op explicitly **crosses Z-levels** (`teleport`, `spawn_piece`, `attack_range`)
+- A **staircase/elevator piece** connects the levels
+
+### 4.4 GL-OS 3D View
+
+In GL-OS, Z-levels are rendered as actual vertical space:
+- Z0 = ground plane
+- Z1 = floating platforms, asteroids, ships
+- Z2 = underground caverns (visible through transparent ground)
+- You can **rotate the camera**, **zoom**, and **fly around** in 3D
+
+---
+
+## 5. PLAYTESTING
+
+### 5.1 From Editor to Game
+
+Every level you design in RPG-CANVAS-SP is **immediately playable**:
+1. Press **LOADER** → Select the playrm (player) layout
+2. The game loads your maps, pieces, and Ops
+3. You play the level in real-time
+
+### 5.2 Playtest Modes
+
+- **ASCII Playtest** — Terminal-based, grid view, classic feel
+- **GL-OS Playtest** — 3D visualizer, full camera control, cinematic
+- **3D Playtest** — Full 3D mode with Z-levels rendered as actual verticality
+
+### 5.3 Debug Panel (Key 5)
+
+During playtest, the debug panel shows:
+- Piece stats (HP, soul, loyalty, stress)
+- Op execution log (which Ops fired, when, with what results)
+- Frame rate and pipeline timing
+- Variable values (game variables, piece states)
+
+---
+
+## 6. PROJECT STRUCTURE
+
+```
+projects/{project_id}/
+├── project.pdl          # Project DNA (metadata, starting map, entry layout)
+├── maps/
+│   ├── map_0001_z0.txt  # Ground level
+│   ├── map_0001_z1.txt  # Sky level
+│   └── map_0002_z0.txt  # Second map, ground level
+├── pieces/
+│   ├── lucky/
+│   │   ├── piece.pdl    # Lucky's DNA
+│   │   ├── state.txt    # Lucky's current state
+│   │   └── on_interact.asm  # Lucky's interaction Op
+│   ├── diabolus/
+│   │   ├── piece.pdl
+│   │   ├── state.txt
+│   │   └── on_interact.asm  # Boss fight Op
+│   └── xlector/
+│       └── state.txt    # Selector position
+├── events/
+│   └── common/
+│       ├── day_night.asm
+│       └── weather.asm
+├── manager/
+│   ├── op-ed_manager.c  # The editor's brain
+│   └── state.txt        # Editor state (cursor, armed glyph, etc.)
+└── layouts/
+    ├── op-ed.chtpm      # Editor layout
+    ├── file_menu.chtpm  # File menu layout
+    └── playrm.chtpm     # Player layout (for playtesting)
+```
+
+---
+
+## 7. THE 12-STEP PIPELINE (How It All Runs)
+
+Every action in RPG-CANVAS-SP follows the TPMOS 12-Step Pulse:
+
+1. **INPUT** — Key pressed (WASD, ENTER, SPACE)
+2. **ROUTING** — Parser routes to editor module
+3. **RELAY** — Key relayed to editor history
+4. **TICK** — Editor module wakes up, decides action
+5. **TRAIT/OP** — Muscle Op executes (place piece, move cursor, open menu)
+6. **SOVEREIGNTY** — Piece owns its state change
+7. **MIRROR SYNC** — state.txt flushed to disk
+8. **STAGE** — render_map reads all pieces, produces view
+9. **SYNC** — App state updated
+10. **COMPOSITION** — Parser swaps variables
+11. **RENDER** — Frame written to current_frame.txt
+12. **DISPLAY** — ASCII or GL renderer blasts to screen
+
+**The entire loop happens in ~16ms.** The editor is real-time.
+
+---
+
+## 8. GL-OS — THE 3D VISUALIZER
+
+### 8.1 How It Works
+
+GL-OS is **not a separate game**. It's a visualizer for the ASCII world:
+1. **The Watcher** — GL-OS watches `current_frame.txt`
+2. **The Parser** — Maps ASCII characters to 3D models/sprites
+3. **The Projection** — Renders in OpenGL with full camera control
+4. **The Pulse** — Stays in sync with the 12-step pipeline
+
+### 8.2 Character-to-Model Mapping
+
+| ASCII | Emoji | 3D Model |
+|-------|-------|----------|
+| `#` | 🧱 | Stone wall mesh |
+| `.` | 🟩 | Grass plane |
+| `@` | 🧑 | Human character model |
+| `&` | ✨ | Spirit particle effect |
+| `Z` | 🧟 | Zombie model |
+| `T` | 🌲 | Tree model |
+| `R` | 🛤️ | Road plane |
+
+### 8.3 Camera Controls (GL-OS)
+
+- **Mouse drag** — Rotate camera
+- **Scroll wheel** — Zoom in/out
+- **Right-click drag** — Pan camera
+- **F key** — Fly mode (free camera)
+- **Home key** — Reset to default view
+
+---
+
+## 9. SCRIPTING ADVANCED BEHAVIORS
+
+### 9.1 Conditional Ops
+
+```asm
+; Clone_Loyalty_Check.asm
+; Trigger: On Parallel (runs every turn)
+
+GET_LOYALTY "clone_01" INTO var_loyalty
+IF var_loyalty < 30:
+  SWAP_PIECE "clone_01" TO "clown_01"
+  MESSAGE "Clone 01's loyalty dropped below 30%. It has become a Clown."
+```
+
+### 9.2 Combat Ops
+
+```asm
+; Boss_Phase_2.asm
+; Trigger: On HP < 50%
+
+MESSAGE "The Diabolus sheds its asteroid shell. Phase 2 begins."
+CHANGE_WEATHER "meteor_shower"
+SPAWN_PIECE "reptilian_elite" AT (5, 5, z1)
+SPAWN_PIECE "reptilian_elite" AT (15, 5, z1)
+CHANGE_HP "Diabolus" ADD 2000
+MESSAGE "The Aethelgaurd rains fire. The moon trembles."
+```
+
+### 9.3 Multi-Z-Level Ops
+
+```asm
+; Asteroid_Descent.asm
+; Trigger: On Turn 10
+
+MESSAGE "The Aethelgaurd descends from orbit."
+MOVE_PIECE "Aethelgaurd" TO (8, 8, z0) FROM (8, 8, z2)
+CHANGE_WEATHER "fire_rain"
+SPAWN_PIECE "reptilian_scout" AT (3, 3, z0)
+SPAWN_PIECE "reptilian_scout" AT (13, 3, z0)
+```
+
+---
+
+## 10. QUICK REFERENCE — KEY DIFFERENCES FROM RPG MAKER MV
+
+| Feature | RPG Maker MV | RPG-CANVAS-SP |
+|---------|-------------|---------------|
+| **Events** | Built from scratch | Pre-fleshed pieces with DNA |
+| **Terminology** | Events, Switches, Variables | Ops, PAL scripts, state.txt |
+| **Z-Levels** | Not native | Built-in (Z0, Z1, Z2, Z3+) |
+| **Rendering** | 2D sprite-based | ASCII + GL-OS (3D OpenGL) |
+| **Data Storage** | JSON/RGSS3 | Text files (piece.pdl, state.txt, .asm) |
+| **Philosophy** | "Build everything" | "Place the piece. Wire the Op. Play the world." |
+| **Pieces** | Blank events | Already alive (chefs cook, bankers bank) |
+| **Scripting** | Ruby/JavaScript | PAL (CLI-Scratch hierarchical menu) |
+| **Persistence** | Save files | Filesystem IS the database |
+
+---
+
+## 11. THE RPG-CANVAS-SP CREED
+
+> Every piece is alive.
+> Every Op is a story.
+> Every map is a world.
+> Every world is a file.
+> And if it's not in a file — it's a lie.
+
+**Place the piece. Wire the Op. Play the world.**
+
+---
+
+**[HALT 止] THE RPG-CANVAS-SP BIBLE IS SEALED. THE PIECE IS SET.**
+**Amen. 🙏 ϕ**
