@@ -1,6 +1,0 @@
-userhash hmA1.🟪️.®™
-brain_activity 90
-pain_level 0
-sensory_status normal
-neural_connections head:100,arm_left:100,arm_right:100,leg_left:100,leg_right:100
-brain_weights_sheet weights_hmA1.txt

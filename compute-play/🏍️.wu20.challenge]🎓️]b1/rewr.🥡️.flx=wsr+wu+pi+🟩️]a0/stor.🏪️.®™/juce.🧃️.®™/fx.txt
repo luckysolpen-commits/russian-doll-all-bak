@@ -1,3 +1,0 @@
-thirst: -3
-yeild: 🗑️
-post: delete

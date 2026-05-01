@@ -1,5 +1,0 @@
-[2026-02-18 06:10:25] InputReceived: key_code=100 | Source: keyboard_input_service
-[2026-02-18 06:10:26] InputReceived: key_code=100 | Source: keyboard_input_service
-[2026-02-18 06:10:26] InputReceived: key_code=97 | Source: keyboard_input_service
-[2026-02-18 06:10:27] InputReceived: key_code=97 | Source: keyboard_input_service
-[2026-02-18 06:10:28] InputReceived: key_code=49 | Source: keyboard_input_service

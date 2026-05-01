@@ -1,3 +1,0 @@
-eat: ./+x/1.eat_this.+x -2
-yeild: ./+x/2.yeild_this.+x 🥜️
-post: ./+x/3.delete_this.+x 

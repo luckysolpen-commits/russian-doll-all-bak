@@ -1,9 +1,0 @@
-## 3. 🐛 Known Bugs & Limitations
-- **Invalid Inputs (8–15)**: Cause “Invalid input” errors. Use 0, 1, 5, 6, 7, or >15. 🚨
-- **File I/O Errors**: Missing `ram_output_address.txt` or `cli_tape.txt` may skip writes. 📁
-- **Single-Bit Logic**: Only 1-bit operations; multi-bit needs multiple instructions. 🔢
-- **Sequential Execution**: Instructions run one-by-one, not parallel like real hardware. ⏳
-- **Fixes**:
-  ✅
-  - `modem_in`/`modem_out` create `modem/` and handle missing files. 🗂️
-

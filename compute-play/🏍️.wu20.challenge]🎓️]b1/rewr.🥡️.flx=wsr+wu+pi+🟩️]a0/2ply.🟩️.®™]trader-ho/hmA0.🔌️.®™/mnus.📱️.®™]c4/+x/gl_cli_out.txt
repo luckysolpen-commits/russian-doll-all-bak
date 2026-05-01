@@ -1,3 +1,0 @@
-Failed to open ../🔐️.txt, using fallback: No such file or directory
-Using fallback menu file: menu_kvp.txt
-Failed to open menu file: No such file or directory

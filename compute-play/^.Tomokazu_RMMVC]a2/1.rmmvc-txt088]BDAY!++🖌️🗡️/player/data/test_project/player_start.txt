@@ -1,3 +1,0 @@
-# Player starting position
-# Format: x,y,map_id
-5,5,0
